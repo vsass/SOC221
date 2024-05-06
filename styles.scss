@@ -32,29 +32,31 @@ $ivory: #F5F5F4;
 $light-green: #c7cdac;
 $dark-green: #99a486;
 $blue: #1e4655; 
-
-// Colors pulled from CSSS website documentation - not sure they're correct though
-//#31708f
-//#286090
-//#23527c
-//#337ab7
-//#2b542c
-//#3c763d
+// UW Colors (https://www.washington.edu/brand/brand-elements/colors/)
+$husky-purple: #32006e;
+$spirit-purple: #4b2e83;
+$husky-gold: #e8e3d3;
+$heritage-gold: #85754d;
+$spirit-gold: #ffc700;
+$accent-green: #aadb1e;
+$accent-teal: #2ad2c9;
+$accent-pink: #e93cac;
+$accent-lavender: #c5b4e3;
 
 // Base document colors
 $navbar-bg: $cultured; // navbar
-$navbar-fg: $blue; // navbar foreground elements
-$navbar-hl: $dark-green; // highlight color when hovering over navbar links
+$navbar-fg: $husky-purple; // navbar foreground elements
+$navbar-hl: $heritage-gold; // highlight color when hovering over navbar links
 $body-bg: $cultured; // page background 
 $body-color: $black; // page text 
 $headings-color: $blue; // heading text
-$footer-bg: $ivory; // footer 
-$link-color: $blue; // hyperlinks 
-$link-color-hover: $dark-green; 
+$footer-bg: $husky-gold; // footer 
+$link-color: $husky-purple; // hyperlinks 
+$link-color-hover: $heritage-gold; 
 
 // Inline code
-$code-bg: $light-green; // inline code background color
-$code-color: $blue; // inline code text color
+$code-bg: $accent-lavender; // inline code background color
+$code-color: $husky-purple; // inline code text color
 
 // Code blocks
 //$code-block-bg: $silver-pink;  // code block background color
