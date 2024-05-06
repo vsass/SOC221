@@ -1,0 +1,55 @@
+version: 1.2
+
+# Links
+website: 
+  asis: "[https://vsass.github.io/SOC221](https://vsass.github.io/SOC221)"
+  linked: "[course website](https://vsass.github.io/SOC221)"
+slack: 
+  short: "[Slack](https://csss-508-spring-2024.slack.com)"
+  medium: "[Slack Workspace](https://csss-508-spring-2024.slack.com)"
+  long: "[CS&SS 508 Slack Workspace](https://csss-508-spring-2024.slack.com)"
+message: "[message me](https://csss-508-spring-2024.slack.com/archives/D06PVT8BC8P)"
+canvas: "[Canvas](https://canvas.uw.edu/courses/1718470)"
+lecture: "Tuesdays 4:30-6:20pm"
+location: "[Savery 132](https://www.washington.edu/maps/#!/SAV)"
+# anonymous: "[here]()"
+
+# Scheduling variables
+lectures:
+  one: "17 June 2024"
+  two: "24 June 2024"
+  three: "26 June 2024"
+  four: "1 July 2024"
+  five: "3 July 2024"
+  six: "8 July 2024"
+  seven: "10 July 2024"
+  eight: "15 July 2024"
+  nine: "17 July 2024"
+  ten: "22 July 2024"
+  eleven: "24 July 2024"
+  twelve: "29 July 2024"
+  thirteen: "31 July 2024"
+  fourteen: "5 August 2024"
+  fifteen: "7 August 2024"
+  sixteen: "12 August 2024"
+  seventeen: "14 August 2024"
+homework:
+  one: ""
+  two: ""
+  three: ""
+  four: ""
+  five: ""
+  six: ""
+  seven: ""
+  eight: ""
+  nine: ""
+peer_review:
+  one: ""
+  two: ""
+  three: ""
+  four: ""
+  five: ""
+  six: ""
+  seven: ""
+  eight: ""
+  nine: ""

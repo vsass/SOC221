@@ -1,0 +1,32 @@
+---
+title: "Sociology 221"
+subtitle: "Statistical Concepts and Methods for the Social Sciences"
+image: images/stats_pic.jpeg
+sidebar: false
+about:
+  template: trestles
+  image-shape: rectangle
+  image-width: 40m
+  links: 
+    - text: Canvas
+      icon: upload
+      href: https://canvas.uw.edu/courses/1729249
+    - text: Slack
+      icon: slack
+      href: https://soc-221-summer-2024.slack.com
+    - text: Message me
+      icon: chat-dots
+      href: https://soc-221-summer-2024.slack.com/archives/D0727GMUKEE
+---
+
+#### Instructor:
+Victoria (Vic) Sass
+
+#### Lecture:
+{{< var lecture >}}
+
+#### Location: 
+{{< var location >}}
+
+#### Office Hours:
+Wednesdays 11am-1pm on Zoom <br> (link on {{< var canvas >}})
