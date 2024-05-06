@@ -42,16 +42,17 @@ $accent-green: #aadb1e;
 $accent-teal: #2ad2c9;
 $accent-pink: #e93cac;
 $accent-lavender: #c5b4e3;
+$white: #ffffff;
 
 // Base document colors
-$navbar-bg: $cultured; // navbar
+$navbar-bg: $white; // navbar
 $navbar-fg: $husky-purple; // navbar foreground elements
-$navbar-hl: $heritage-gold; // highlight color when hovering over navbar links
-$body-bg: $cultured; // page background 
+$navbar-hl: $accent-teal; // highlight color when hovering over navbar links
+$body-bg: $white; // page background 
 $body-color: $black; // page text 
-$headings-color: $blue; // heading text
+$headings-color: $spirit-purple; // heading text
 $footer-bg: $husky-gold; // footer 
-$link-color: $husky-purple; // hyperlinks 
+$link-color: $heritage-gold; // hyperlinks 
 $link-color-hover: $heritage-gold; 
 
 // Inline code

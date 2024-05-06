@@ -1,5 +1,14 @@
 ---
 title: "Syllabus"
+sidebar: false
 format: html
 ---
 
+*This syllabus is subject to change. All changes will be announced both in class, on {{< var slack.short >}}, and on this page.*
+
+### **Course Info:**
+
+**Instructor:** Victoria (Vic) Sass\
+**Lecture:** {{< var lecture >}}\
+**Location:** {{< var location >}}\
+**Office Hours:** Tuesdays 10am-12pm on Zoom (link on {{< var canvas >}})

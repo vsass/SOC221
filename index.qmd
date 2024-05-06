@@ -4,7 +4,7 @@ subtitle: "Statistical Concepts and Methods for the Social Sciences"
 image: images/stats_pic.jpeg
 sidebar: false
 about:
-  template: trestles
+  template: broadside
   image-shape: rectangle
   image-width: 40m
   links: 
@@ -29,4 +29,4 @@ Victoria (Vic) Sass
 {{< var location >}}
 
 #### Office Hours:
-Wednesdays 11am-1pm on Zoom <br> (link on {{< var canvas >}})
+{{< var office_hours >}} on Zoom (link on {{< var canvas >}})

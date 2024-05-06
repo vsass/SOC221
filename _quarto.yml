@@ -6,7 +6,7 @@ website:
   reader-mode: true
   page-footer: 
     left: "Created with [Quarto](https://quarto.org/) • [License](https://creativecommons.org/licenses/by-nc/4.0/)" 
-    center: "Copyright © 2023 Victoria Sass <br> Course content adapted from [Kyle Crowder's](https://soc.washington.edu/people/kyle-crowder) Winter 2020 class"
+    center: "Copyright © 2024 Victoria Sass <br> Course content adapted from [Kyle Crowder's](https://soc.washington.edu/people/kyle-crowder) Winter 2020 class"
     right: 
     - icon: envelope-at
       href: mailto:vsass@uw.edu
