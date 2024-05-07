@@ -11,4 +11,38 @@ format: html
 **Instructor:** Victoria (Vic) Sass\
 **Lecture:** {{< var lecture >}}\
 **Location:** {{< var location >}}\
-**Office Hours:** Tuesdays 10am-12pm on Zoom (link on {{< var canvas >}})
+**Office Hours:** {{< var office_hours >}} on Zoom (link on {{< var canvas >}})\
+**Website:** {{< var website.asis >}}[The [course website](https://vsass.github.io/SOC221) provides access/updates to the syllabus, scheduling changes, assignments, and other course-related materials. **Make sure to check the site often to stay up-to-date.**]{.aside}\
+**Canvas:** We will only be using the course {{< var canvas >}} site to upload assignments. **Don't message me on Canvas.**\
+**Contact:** We'll use {{< var slack.short >}} to communicate with each other and you can directly {{< var message >}} there.\
+
+### **Overview and Learning Objectives:**
+
+This course is intended to provide an introduction to basic statistical techniques used by social scientists to better understand the world. We are all bombarded every day with information from all sorts of sources – television, online media, marketers, news outlets, and regular interactions with other people in a variety of settings. Figuring out how to organize, consolidate, analyze, and understand these data is at the core of the art and science of statistics. Statistics represent a set of tools that are not only useful for us, as citizens, to understand and interact with the social world, but are also extremely useful in a professional sense; mastery of the art of statistics is a great way to enhance your contributions to employers and the community organizations you serve.
+
+The overall objective is to provide you with the ability to use basic statistical tools to critically evaluate data and to be an effective analytical consumer of information. Successful completion of the course will allow you to:
+
+1. Define real world questions and problems in statistical terms.
+2. Analyze data and solve statistical problems.
+3. Interpret the meaning of statistical solutions in relation to real world issues.
+
+### **Overview and Learning Objectives:**
+
+There are no prerequisites for this course. This is not a mathematics course, but you are expected to be capable of doing arithmetic and very basic algebra. You will also be expected to be able to think through problems clearly and communicate your results. This course is designed to help you practice these skills.
+
+### **Required materials:**
+
+::: {.column-margin}
+![](images/introductory_statistics_texbook.jpg)
+:::
+
+1. *Textbook*: [Introductory Statistics](https://openstaxcollege.org/textbooks/introductory-statistics) from OpenStax College
+
+- The book is available in a wide variety of free online formats via the website listed above. You can use the book in whichever format(s) you like. I recommend that you download the entire PDF so that you always have access to your book.
+- If you prefer a physical book, printed copies at a significantly reduced textbook rate are also for sale [here](https://openstax.org/).
+- Although the textbook is completely free, if you have the means, I strongly encourage you to [donate to support](https://riceconnect.rice.edu/donation/support-openstax-header?_gl=1*18rb5v7*_ga*MTI4MjYwMzM3Mi4xNzE1MDQwNDcx*_ga_T746F8B0QC*MTcxNTA0MDQ3MC4xLjEuMTcxNTA0MTMxNi43LjAuMA..*_ga_0Q5H4FDCL3*MTcxNTA0MDQ3MS4xLjEuMTcxNTA0MTMxNS44LjAuMA..) their efforts to reduce the cost of textbooks.
+
+2. *Calculator*: You will need a calculator that can add, subtract, multiply, divide, and take square roots. Bring this device to class every day. **During quizzes you cannot use a device that communicates with other devices (such as a cell phone) as your calculator.**
+
+
+
