@@ -2,6 +2,8 @@
 title: "Syllabus"
 sidebar: false
 format: html
+message: false
+warning: false
 ---
 
 *This syllabus is subject to change. All changes will be announced both in class, on {{< var slack.short >}}, and on this page.*
@@ -38,11 +40,72 @@ There are no prerequisites for this course. This is not a mathematics course, bu
 
 1. *Textbook*: [Introductory Statistics](https://openstaxcollege.org/textbooks/introductory-statistics) from OpenStax College
 
-- The book is available in a wide variety of free online formats via the website listed above. You can use the book in whichever format(s) you like. I recommend that you download the entire PDF so that you always have access to your book.
+- The book is available in a wide variety of free online formats via the website linked above. You can use the book in whichever format(s) you like. I recommend that you download the entire PDF so that you always have access to your book.
 - If you prefer a physical book, printed copies at a significantly reduced textbook rate are also for sale [here](https://openstax.org/).
 - Although the textbook is completely free, if you have the means, I strongly encourage you to [donate to support](https://riceconnect.rice.edu/donation/support-openstax-header?_gl=1*18rb5v7*_ga*MTI4MjYwMzM3Mi4xNzE1MDQwNDcx*_ga_T746F8B0QC*MTcxNTA0MDQ3MC4xLjEuMTcxNTA0MTMxNi43LjAuMA..*_ga_0Q5H4FDCL3*MTcxNTA0MDQ3MS4xLjEuMTcxNTA0MTMxNS44LjAuMA..) their efforts to reduce the cost of textbooks.
 
 2. *Calculator*: You will need a calculator that can add, subtract, multiply, divide, and take square roots. Bring this device to class every day. **During quizzes you cannot use a device that communicates with other devices (such as a cell phone) as your calculator.**
 
+### **Accessibility & Accommodations:**
+
+Your experience in this class is important to me. If you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to me at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (conditions include but not limited to; mental health, attention-related, learning, vision, hearing, physical or health impacts), you are welcome to contact DRS at 206-543-8924, uwdrs\@uw.edu, or through their [website](https://depts.washington.edu/uwdrs/). DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, me (your instructor), and DRS. It is the policy and practice of the University of Washington to create inclusive and accessible learning environments consistent with federal and state law.
+
+### **Religious Accommodations:** 
+
+Washington state law requires that UW develop a policy for accommodation of student absences or significant hardship due to reasons of faith or conscience, or for organized religious activities. The UW\'s policy, including more information about how to request an accommodation, is available at [Religious Accommodations Policy](https://registrar.washington.edu/staffandfaculty/religious-accommodations-policy/). Accommodations must be requested within the first two weeks of this course using the [Religious Accommodations Request form](https://registrar.washington.edu/students/religious-accommodations-request/).
 
 
+### **Schedule:**
+
+```{r}
+#| echo: false
+library(gt)
+library(tidyverse)
+
+schedule_summer <- tibble(date = c("Tuesday<br>June 17th", "Thursday<br>June 19th", "Tuesday<br>June 24th", "Thursday<br>June 26th",
+                                   "Tuesday<br>July 1st", "Thursday<br>July 3rd", "Tuesday<br>July 8th", "Thursday<br>July 10th", 
+                                   "Tuesday<br>July 15th", "Thursday<br>July 17th", "Tuesday<br>July 22nd", "Thursday<br>July 24th", 
+                                   "Tuesday<br>July 29th", "Thursday<br>July 31st", "Tuesday<br>August 5th", "Thursday<br>August 7th", 
+                                   "Tuesday<br>August 12th", "Thursday<br>August 14th"), 
+                         topic = c("▪ Introductions to the course<br>▪ Overview of statistics", "NO CLASS: JUNETEENTH HOLIDAY", 
+                                   "▪ Producing data: surveys and sampling", "▪ Frequency tables<br>▪ Graphical techniques", 
+                                   "▪ Measures of central tendency<br>▪ Measures of variability", "❔Review<br>📊 Quiz 1", 
+                                   "▪ Probability and probability distributions<br>▪ Normal distributions", 
+                                   "▪ Sampling distributions<br>▪ Central limit theorem<br>▪ Logic of inference", 
+                                   "▪ Estimation: confidence intervals for means<br>▪ Estimation: confidence intervals for proportions", 
+                                   "❔Review<br>📊 Quiz 2", "▪ Hypothesis testing for one sample<br>▪ Hypothesis testing for two samples", 
+                                   "▪ Two-way tables and chi-square<br>▪ Scatterplots and correlation", "❔Review<br>📊 Quiz 3", 
+                                   "▪ Bivariate regression<br>▪ Inference for regression", "▪ Multivariate regression", "❔Review<br>📊 Quiz 4", "", ""), 
+                         reading = c("Syllabus", "", "Chapter 1 (sections 1.1 - 1.2)", 
+                                                "Chapter 1 (sections 1.3 - 1.4)<br>Chapter 2 (sections 2.1 - 2.4)", 
+                                                "Chapter 2 (sections 2.5 - 2.6)<br>Chapter 2 (sections 2.7 - 2.8)", 
+                                                 "", "Chapter 3 (sections 3.1 to 3.3)<br>Chapter 4 (section 4.1)<br>Chapter 5 (section 5.1)<br>Chapter 6 (sections 6.1 to 6.2)", 
+                                                 "Chapter 7 (sections 7.1 & 7.3)", "Chapter 8 (sections 8.1 to 8.2)<br>Chapter 8 (section 8.3)", "", 
+                                                 "Chapter 9 (sections 9.1 to 9.6)<br>Chapter 10 (sections 10.1 to 10.3 plus 10.5)", 
+                                                 "Chapter 11 (sections 11.1 to 11.3)<br>Chapter 12 (sections 12.1 to 12.3)", "", 
+                                                 "Chapter 12 (section 12.4 and 12.5)", "Primer for multivariate regression LINK WEBSITE HERE", "", "NO CLASS", "NO CLASS"))
+
+schedule_summer |> 
+gt() |> 
+fmt_markdown(columns = everything()) |> 
+cols_align(align = "center", columns = c(date)) |> 
+cols_label(date = "Class Date",
+           topic = "Topic",
+           reading = "Required Reading") |> 
+tab_options(table.align = "center", table.font.names = c("Quattrocento", "Raleway"), 
+                table.font.size = pct(100), table.border.top.style = "hidden") |> 
+cols_width(date ~ px(100),
+           topic ~ px(150), 
+           reading ~ px(150)) |> 
+tab_style(style = cell_fill(color = "#b3e2cd"),
+              locations = list(cells_body(columns = c(date, topic, reading), 
+                                          rows = date %in% c("Thursday<br>July 3rd", "Thursday<br>July 17th", "Tuesday<br>July 29th", "Thursday<br>August 7th")))) |> 
+
+
+```
+
+
+::: {.callout-tip}
+## Feedback
+If you have feedback on any part of this course or the classroom environment I want to hear it! You can {{< var message >}} directly on Slack or send me an anonymous message {{< var anonymous >}}.
+:::
