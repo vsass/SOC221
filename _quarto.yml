@@ -25,41 +25,44 @@ website:
         href: index.qmd
       - syllabus.qmd
       - text: "Lectures"
-        file: Lectures/lectures.qmd
+        menu: 
+          - text: "Lecture 1:<br>Introductions<br>Overview of statistics<br>Producting data: surveys and sampling"
+            href: lectures/lecture1.qmd
+          - text: "Lecture 2:<br>Frequency tables<br>Graphical techniques"
+            href: lectures/lecture2.qmd
+          - text: "Lecture 3:<br>Measures of central tendency<br>Measures of variability"
+            href: lectures/lecture3.qmd
+          - text: "Lecture 4:<br>Probability and probability distributions<br>Normal distributions"
+            href: lectures/lecture4.qmd
+          - text: "Lecture 5:<br>Sampling distributions<br>Central limit theorem<br>Logic of inference"
+            href: lectures/lecture5.qmd
+          - text: "Lecture 6:<br>Estimation: confidence intervals for means<br>Estimation: confidence intervals for proportions"
+            href: lectures/lecture6.qmd
+          - text: "Lecture 7:<br>Hypothesis testing for one sample<br>Hypothesis testing for two samples"
+            href: lectures/lecture7.qmd
+          - text: "Lecture 8:<br>Two-way tables and chi-square<br>Scatterplots and correlation"
+            href: lectures/lecture8.qmd
+          - text: "Lecture 9:<br>Bivariate regression<br>Inference for regression"
+            href: lectures/lecture9.qmd
+          - text: "Lecture 10:<br>Multivariate regression"
+            href: lectures/lecture10.qmd
       - text: "Homework"
-        file: Homework/homework.qmd
-  sidebar: 
-    - title: "Lectures"
-      style: "docked"
-      contents: 
-        - Lectures/lectures.qmd
-        - Lectures/Lecture1/CSSS508_Lecture1_index.qmd
-        - Lectures/Lecture2/CSSS508_Lecture2_index.qmd
-        - Lectures/Lecture3/CSSS508_Lecture3_index.qmd
-        - Lectures/Lecture4/CSSS508_Lecture4_index.qmd
-        - Lectures/Lecture5/CSSS508_Lecture5_index.qmd
-        - Lectures/Lecture6/CSSS508_Lecture6_index.qmd
-        - Lectures/Lecture7/CSSS508_Lecture7_index.qmd
-        - Lectures/Lecture8/CSSS508_Lecture8_index.qmd
-        - Lectures/Lecture9/CSSS508_Lecture9_index.qmd
-        - Lectures/Lecture10/CSSS508_Lecture10_index.qmd
-        - Lectures/Lecture11/CSSS508_Lecture11_index.qmd
-        - Lectures/Lecture12/CSSS508_Lecture12_index.qmd
-        - Lectures/Lecture13/CSSS508_Lecture13_index.qmd
-        - Lectures/Lecture14/CSSS508_Lecture14_index.qmd
-
-    - title: "Homework"
-      contents: 
-        - Homework/homework.qmd
-        - Homework/HW1/homework1.qmd
-        - Homework/HW2/homework2.qmd
-        - Homework/HW3/homework3.qmd
-        - Homework/HW4/homework4.qmd
-        - Homework/HW5/homework5.qmd
-        - Homework/HW6/homework6.qmd
-        - Homework/HW7/homework7.qmd
-        - Homework/HW8/homework8.qmd
-
+        menu: 
+          - text: "Homework 1"
+            href: homework/homework1.qmd
+          - text: "Homework 2"
+            href: homework/homework2.qmd
+          - text: "Homework 3"
+            href: homework/homework3.qmd
+          - text: "Homework 4"
+            href: homework/homework4.qmd
+          - text: "Homework 5"
+            href: homework/homework5.qmd
+          - text: "Homework 6"
+            href: homework/homework6.qmd
+          - text: "Homework 7"
+            href: homework/homework7.qmd
+        
 format:
   html:
     highlight-style: a11y-dark

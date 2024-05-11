@@ -13,7 +13,7 @@ canvas: "[Canvas](https://canvas.uw.edu/courses/1729249)"
 lecture: "Mondays & Wednesdays, 9:10-11:20am"
 office_hours: "Tuesdays 10am-12pm, or by appointment,"
 location: "[Savery 132](https://www.washington.edu/maps/#!/SAV)"
-# anonymous: "[here]()"
+anonymous: "[here](https://web.polly.ai/vorgrw)"
 
 # Scheduling variables
 lectures:
@@ -32,8 +32,6 @@ lectures:
   thirteen: "31 July 2024"
   fourteen: "5 August 2024"
   fifteen: "7 August 2024"
-  sixteen: "12 August 2024"
-  seventeen: "14 August 2024"
 homework:
   one: ""
   two: ""
@@ -42,8 +40,6 @@ homework:
   five: ""
   six: ""
   seven: ""
-  eight: ""
-  nine: ""
 peer_review:
   one: ""
   two: ""

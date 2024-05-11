@@ -8,7 +8,7 @@ warning: false
 
 *This syllabus is subject to change. All changes will be announced both in class, on {{< var slack.short >}}, and on this page.*
 
-### **Course Info:**
+### Course info
 
 **Instructor:** Victoria (Vic) Sass\
 **Lecture:** {{< var lecture >}}\
@@ -16,9 +16,9 @@ warning: false
 **Office Hours:** {{< var office_hours >}} on Zoom (link on {{< var canvas >}})\
 **Website:** {{< var website.asis >}}[The [course website](https://vsass.github.io/SOC221) provides access/updates to the syllabus, scheduling changes, assignments, and other course-related materials. **Make sure to check the site often to stay up-to-date.**]{.aside}\
 **Canvas:** We will only be using the course {{< var canvas >}} site to upload assignments. **Don't message me on Canvas.**\
-**Contact:** We'll use {{< var slack.short >}} to communicate with each other and you can directly {{< var message >}} there.\
+**Contact:** We'll use {{< var slack.short >}} to communicate with each other and you can directly {{< var message >}} there.[You can find the invitation to our private Slack on our {{< var canvas >}} homepage]{.aside}\
 
-### **Overview and Learning Objectives:**
+### Overview and learning objectives
 
 This course is intended to provide an introduction to basic statistical techniques used by social scientists to better understand the world. We are all bombarded every day with information from all sorts of sources – television, online media, marketers, news outlets, and regular interactions with other people in a variety of settings. Figuring out how to organize, consolidate, analyze, and understand these data is at the core of the art and science of statistics. Statistics represent a set of tools that are not only useful for us, as citizens, to understand and interact with the social world, but are also extremely useful in a professional sense; mastery of the art of statistics is a great way to enhance your contributions to employers and the community organizations you serve.
 
@@ -28,11 +28,11 @@ The overall objective is to provide you with the ability to use basic statistica
 2. Analyze data and solve statistical problems.
 3. Interpret the meaning of statistical solutions in relation to real world issues.
 
-### **Overview and Learning Objectives:**
+### Prerequisites
 
 There are no prerequisites for this course. This is not a mathematics course, but you are expected to be capable of doing arithmetic and very basic algebra. You will also be expected to be able to think through problems clearly and communicate your results. This course is designed to help you practice these skills.
 
-### **Required materials:**
+### Required materials
 
 ::: {.column-margin}
 ![](images/introductory_statistics_texbook.jpg)
@@ -46,64 +46,196 @@ There are no prerequisites for this course. This is not a mathematics course, bu
 
 2. *Calculator*: You will need a calculator that can add, subtract, multiply, divide, and take square roots. Bring this device to class every day. **During quizzes you cannot use a device that communicates with other devices (such as a cell phone) as your calculator.**
 
-### **Accessibility & Accommodations:**
+### Ungrading and course structure
+
+There is a disconnect between what grades are designed to do and what truly supports student learning.[You can read more about the problem with using grades as an assessment for learning [here](https://www.alfiekohn.org/article/degrading-de-grading/) and [here](https://www.jessestommel.com/why-i-dont-grade/).]{.aside} In an effort to focus on your education, assignments and quizzes will not receive a letter-grade or points. Rather, as you answer the questions for each assignment, you will also provide your own assessment of how well-prepared you felt to answer that particular question. At the core of the philosophy behind ungrading is the fact that each of us possesses the best information about our own learning - both *what* works and *if* it's working. As such, I want you to be in control of reflecting on your own learning process throughout this class. 
+
+- **For homework assignments** you will receive written feedback from me about whether you've sufficiently demonstrated mastery of a topic and if not, where you can find assistance in answering that particular question. You'll then have two additional days to revise any questions for resubmission. 
+- **For quiz assignments** you'll spend the first part of class taking the quiz and after a break we'll reconvene to go over the assignment together. If there were any questions you were less sure about, this is a great time to ask questions, and more fully articulate your answers. 
+
+This class is still being taught within the context of a university that assigns grades so I will be required to assign a final grade at the end of the quarter. What that grade ultimately is will be determined by you through your engagement with your assignment self-assessments, revisions on assignments, and the two learning assessment meetings we will have (one during week 4 and another our last week of class)[Specifics on how to prepare for these 10-minute meetings will be provided later in the quarter]{.aside}. During these two one-on-one meetings we will have a chance to discuss your learning process, what's worked/what's been challenging, how we can both suport the outcomes you desire, and what grade you feel reflects your process. 
+
+For this process to work effectively we are both required to **attend every class** and participate in ways that engage your learning[If something comes up and you cannot make it to class, message me as soon as possible on {{< var slack.short >}}.{.aside}. I will do my best to meet you where you are when you come to class and I ask that you engage in class and with assignments in ways that prioritize your learning.
+
+### Schedule
+
+```{r}
+#| echo: false
+#| column: page
+library(gt)
+library(tidyverse)
+
+#devtools::install_github("gadenbuie/ggweekly")
+
+
+# events <- rep(NA, 92)
+# events[c(21, 28, 35, 42, 49, 56, 63)] <- "Homework due"
+# events[c(24, 31, 38, 45, 52, 59, 66)] <- "Homework returned"
+# events[c(26, 33, 40, 47, 54, 61, 68)] <- "Homework resubmission due"
+# events[c(19, 77, 79)] <- "No class"
+# calendR(from = "2024-06-01", to = "2024-08-31", start = "M", orientation = "portrait",
+#                  special.days = events, special.col = c("#cbd5e8", "#fdcdac", "#b3e2cd", "#f4cae4"), legend.pos = "top", 
+#                  title = "Class schedule", papersize = "A1", text = "boo", text.pos = c(1, 4, 7))
+
+# june_events <- rep(NA, 30)
+# june_events[c(21, 28)] <- "Homework due"
+# june_events[24] <- "Homework returned"
+# june_events[26] <- "Homework resubmission due"
+# june_events[19] <- "No class"
+# calendR(year = 2024, month = 6, start = "M", orientation = "landscape",
+#                  special.days = june_events, special.col = c("#cbd5e8", "#fdcdac", "#b3e2cd", "#f4cae4"), legend.pos = "none", 
+#                  title = "Class Schedule", subtitle = "June", subtitle.size = 15, 
+#                  text = c("- Introductions\n- Overview of statistics\n- Producing data:\nsurveys and sampling", "Juneteenth Holiday", "- Frequency tables\n- Graphical techniques",
+#                           "- Measures of central tendency\n- Measures of variability"), 
+#                  text.pos = c(17, 19, 24, 26), text.size = 3.5, day.size = 3, margin = 0.05)
+# 
+# 
+# # calendR(year = 2024, month = 6,
+# #         start = "M", 
+# #         text = c())
+# # calendR(year = 2024, month = 7,
+# #         start = "M")
+# # calendR(year = 2024, month = 8,
+# #         start = "M")
+
+
+
+schedule_summer <- tribble(
+~week, ~date, ~topic, ~reading, ~due,
+# week 1
+"1", "Monday<br>June 17th", "▪ Introductions to the course<br>▪ Overview of statistics<br>▪ Producing data: surveys and sampling", "Syllabus<br>Chapter 1 (sections 1.1 - 1.2)", "",
+"1", "Wednesday<br>June 19th", "NO CLASS:", "Juneteenth Holiday", "", 
+"1", "Friday<br>June 21st", "", "", "Homework 1",
+# week 2
+"2", "Monday<br>June 24th", "▪ Frequency tables<br>▪ Graphical techniques", "Chapter 1 (sections 1.3 - 1.4)<br>Chapter 2 (sections 2.1 - 2.4)", "<i>Homework 1 returned</i>",
+"2", "Wednesday<br>June 26th", "▪ Measures of central tendency<br>▪ Measures of variability", "Chapter 2 (sections 2.5 - 2.6)<br>Chapter 2 (sections 2.7 - 2.8)", "Homework 1 w/ revisions",
+"2", "Friday<br>June 28th", "", "", "Homework 2",
+# week 3
+"3", "Monday<br>July 1st", "▪ Probability and probability distributions<br>▪ Normal distributions", "Chapter 3 (sections 3.1 to 3.3)<br>Chapter 4 (section 4.1)<br>Chapter 5 (section 5.1)<br>Chapter 6 (sections 6.1 to 6.2)", "<i>Homework 2 returned</i>",
+"3", "Wednesday<br>July 3rd", "✍️🙋💡Quiz 1 & Review", "","Homework 2 w/ revisions",
+"3", "Friday<br>July 5th", "", "", "Homework 3",
+# week 4 
+"4", "Monday<br>July 8th", "▪ Sampling distributions<br>▪ Central limit theorem<br>▪ Logic of inference", "Chapter 7 (sections 7.1 & 7.3)", "<i>Homework 3 returned</i>",
+"4", "Wednesday<br>July 10th", "▪ Estimation: confidence intervals for means<br>▪ Estimation: confidence intervals for proportions", "Chapter 8 (sections 8.1 to 8.2)<br>Chapter 8 (section 8.3)", "Homework 3 w/ revisions",
+"4", "Thursday<br>July 11th", "Individual Learning Assessment Meetings<br>(via Zoom)", "", "",
+"4", "Friday<br>July 12th", "Individual Learning Assessment Meetings<br>(via Zoom)", "", "Homework 4",
+# week 5
+"5", "Monday<br>July 15th", "▪ Hypothesis testing for one sample<br>▪ Hypothesis testing for two samples", "Chapter 9 (sections 9.1 to 9.6)<br>Chapter 10 (sections 10.1 to 10.3 plus 10.5)", "<i>Homework 4 returned</i>",
+"5", "Wednesday<br>July 17th", "✍️🙋💡Quiz 2 & Review", "", "Homework 4 w/ revisions",
+"5", "Friday<br>July 19th", "", "", "Homework 5",
+# week 6
+"6", "Monday<br>July 22nd", "▪ Two-way tables and chi-square<br>▪ Scatterplots and correlation", "Chapter 11 (sections 11.1 to 11.3<br>Chapter 12 (sections 12.1 to 12.3)", "<i>Homework 5 returned</i>",
+"6", "Wednesday<br>July 24th", "▪ Bivariate regression<br>▪ Inference for regression", "Chapter 12 (section 12.4 and 12.5)", "Homework 5 w/ revisions",
+"6", "Friday<br>July 26th", "", "", "Homework 6",
+# week 7
+"7", "Monday<br>July 29th", "▪ Multivariate regression", "Primer for multivariate regression", "<i>Homework 6 returned</i>",
+"7", "Wednesday<br>July 31st", "▪ Multivariate regression", "", "Homework 6 w/ revisions",
+"7", "Friday<br>August 2nd", "", "", "Homework 7",
+# week 8
+"8", "Monday<br>August 5th", "Individual Learning Assessment Meetings<br>(in-person)", "", "<i>Homework 7 returned</i>",
+"8", "Wednesday<br>August 7th", "✍️🙋💡Quiz 3 & Review", "", "", 
+"8", "Friday<br>August 9th", "", "", "Homework 7 w/ revisions")
+
+schedule_summer |>
+gt() |>
+fmt_markdown(columns = everything()) |>
+cols_align(align = "center", columns = c(week, date)) |>
+cols_label(week = "Week", 
+           date = "Date",
+           topic = "Topic",
+           reading = "Required Reading", 
+           due = "Assignment Due (by 11:59pm)") |>
+tab_options(table.align = "center", table.font.names = c("Quattrocento", "Raleway"),
+                table.font.size = pct(100)) |>
+cols_width(week ~ px(100), 
+           date ~ px(150),
+           topic ~ px(350),
+           reading ~ px(350), 
+           due ~ px(350)) |>
+# homework due
+tab_style(style = cell_fill(color = "#ccebc5"), # homework due
+              locations = list(cells_body(columns = c(due),
+                                          rows = date %in% c("Friday<br>June 21st", "Friday<br>June 28th", "Friday<br>July 5th", "Friday<br>July 12th", "Friday<br>July 19th", "Friday<br>July 26th", "Friday<br>August 2nd")))) |> 
+# homework returned
+tab_style(style = cell_fill(color = "#fddaec"),
+              locations = list(cells_body(columns = c(due),
+                                          rows = date %in% c("Monday<br>June 24th", "Monday<br>July 1st", "Monday<br>July 8th", "Monday<br>July 15th", "Monday<br>July 22nd", "Monday<br>July 29th", "Monday<br>August 5th")))) |> 
+tab_style(style = cell_text(color = "#e7298a"),
+              locations = list(cells_body(columns = c(due),
+                                          rows = date %in% c("Monday<br>June 24th", "Monday<br>July 1st", "Monday<br>July 8th", "Monday<br>July 15th", "Monday<br>July 22nd", "Monday<br>July 29th", "Monday<br>August 5th")))) |> 
+# homework w/ revisions due
+tab_style(style = cell_fill(color = "#fed9a6"),
+              locations = list(cells_body(columns = c(due),
+                                          rows = date %in% c("Wednesday<br>June 26th", "Wednesday<br>July 3rd", "Wednesday<br>July 10th", "Wednesday<br>July 17th", "Wednesday<br>July 24th", "Wednesday<br>July 31st", "Friday<br>August 9th")))) |> 
+# quiz & review day
+tab_style(style = cell_fill(color = "#b3cde3"),
+              locations = list(cells_body(columns = c(topic),
+                                          rows = date %in% c("Wednesday<br>July 3rd", "Wednesday<br>July 17th", "Wednesday<br>August 7th")))) |> 
+tab_style(style = cell_fill(color = "#decbe4"),
+              locations = list(cells_body(columns = c(topic),
+                                          rows = date %in% c("Thursday<br>July 11th", "Friday<br>July 12th", "Monday<br>August 5th")))) |> 
+# no class - holiday
+tab_style(style = cell_fill(color = "#cccccc"),
+              locations = list(cells_body(columns = c(week, date, topic, reading, due),
+                                          rows = date == "Wednesday<br>June 19th"))) |> 
+tab_style(style = cell_text(stretch = "ultra-expanded", align = "right", style = "oblique", weight = "bolder"),
+              locations = list(cells_body(columns = c(topic),
+                                          rows = date == "Wednesday<br>June 19th"))) |> 
+tab_style(style = cell_text(stretch = "ultra-expanded", align = "left", style = "oblique", weight = "bolder"),
+              locations = list(cells_body(columns = c(reading),
+                                          rows = date == "Wednesday<br>June 19th"))) |> 
+tab_style(style = cell_fill(color = "#f2f2f2"),
+              locations = list(cells_body(columns = c(week, date, topic, reading, due),
+                                          rows = date == "Monday<br>June 17th"), 
+                               cells_body(columns = c(week, date, topic, reading),
+                                          rows = date %in% c("Friday<br>June 21st", "Monday<br>June 24th", "Wednesday<br>June 26th", "Friday<br>June 28th", "Monday<br>July 1st", "Friday<br>July 5th", "Monday<br>July 8th", "Wednesday<br>July 10th", "Monday<br>July 15th", "Friday<br>July 19th", "Monday<br>July 22nd", "Wednesday<br>July 24th", "Friday<br>July 26th", "Monday<br>July 29th", "Wednesday<br>July 31st", "Friday<br>August 2nd", "Friday<br>August 9th")), 
+                                cells_body(columns = c(week, date, reading),
+                                          rows = date %in% c("Wednesday<br>July 3rd", "Friday<br>July 12th", "Wednesday<br>July 17th", "Monday<br>August 5th")), 
+                                cells_body(columns = c(week, date, reading, due),
+                                          rows = date %in% c("Thursday<br>July 11th", "Wednesday<br>August 7th")))) |> 
+opt_table_font(font = "PT Sans") |> 
+tab_options(column_labels.background.color = "#fbb4ae", column_labels.font.size = "20px", column_labels.font.weight = "bold", 
+column_labels.border.bottom.color = "#e41a1c", column_labels.border.top.color = "#e41a1c", quarto.disable_processing = TRUE) |> # had to add last argument otherwise row stipping was added and couln't be removed
+as_raw_html()
+
+```
+
+### Accessibility and accommodations
 
 Your experience in this class is important to me. If you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to me at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (conditions include but not limited to; mental health, attention-related, learning, vision, hearing, physical or health impacts), you are welcome to contact DRS at 206-543-8924, uwdrs\@uw.edu, or through their [website](https://depts.washington.edu/uwdrs/). DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, me (your instructor), and DRS. It is the policy and practice of the University of Washington to create inclusive and accessible learning environments consistent with federal and state law.
 
-### **Religious Accommodations:** 
+### Religious accommodations
 
 Washington state law requires that UW develop a policy for accommodation of student absences or significant hardship due to reasons of faith or conscience, or for organized religious activities. The UW\'s policy, including more information about how to request an accommodation, is available at [Religious Accommodations Policy](https://registrar.washington.edu/staffandfaculty/religious-accommodations-policy/). Accommodations must be requested within the first two weeks of this course using the [Religious Accommodations Request form](https://registrar.washington.edu/students/religious-accommodations-request/).
 
 
-### **Schedule:**
+### Academic honesty
 
-```{r}
-#| echo: false
-library(gt)
-library(tidyverse)
-
-schedule_summer <- tibble(date = c("Tuesday<br>June 17th", "Thursday<br>June 19th", "Tuesday<br>June 24th", "Thursday<br>June 26th",
-                                   "Tuesday<br>July 1st", "Thursday<br>July 3rd", "Tuesday<br>July 8th", "Thursday<br>July 10th", 
-                                   "Tuesday<br>July 15th", "Thursday<br>July 17th", "Tuesday<br>July 22nd", "Thursday<br>July 24th", 
-                                   "Tuesday<br>July 29th", "Thursday<br>July 31st", "Tuesday<br>August 5th", "Thursday<br>August 7th", 
-                                   "Tuesday<br>August 12th", "Thursday<br>August 14th"), 
-                         topic = c("▪ Introductions to the course<br>▪ Overview of statistics", "NO CLASS: JUNETEENTH HOLIDAY", 
-                                   "▪ Producing data: surveys and sampling", "▪ Frequency tables<br>▪ Graphical techniques", 
-                                   "▪ Measures of central tendency<br>▪ Measures of variability", "❔Review<br>📊 Quiz 1", 
-                                   "▪ Probability and probability distributions<br>▪ Normal distributions", 
-                                   "▪ Sampling distributions<br>▪ Central limit theorem<br>▪ Logic of inference", 
-                                   "▪ Estimation: confidence intervals for means<br>▪ Estimation: confidence intervals for proportions", 
-                                   "❔Review<br>📊 Quiz 2", "▪ Hypothesis testing for one sample<br>▪ Hypothesis testing for two samples", 
-                                   "▪ Two-way tables and chi-square<br>▪ Scatterplots and correlation", "❔Review<br>📊 Quiz 3", 
-                                   "▪ Bivariate regression<br>▪ Inference for regression", "▪ Multivariate regression", "❔Review<br>📊 Quiz 4", "", ""), 
-                         reading = c("Syllabus", "", "Chapter 1 (sections 1.1 - 1.2)", 
-                                                "Chapter 1 (sections 1.3 - 1.4)<br>Chapter 2 (sections 2.1 - 2.4)", 
-                                                "Chapter 2 (sections 2.5 - 2.6)<br>Chapter 2 (sections 2.7 - 2.8)", 
-                                                 "", "Chapter 3 (sections 3.1 to 3.3)<br>Chapter 4 (section 4.1)<br>Chapter 5 (section 5.1)<br>Chapter 6 (sections 6.1 to 6.2)", 
-                                                 "Chapter 7 (sections 7.1 & 7.3)", "Chapter 8 (sections 8.1 to 8.2)<br>Chapter 8 (section 8.3)", "", 
-                                                 "Chapter 9 (sections 9.1 to 9.6)<br>Chapter 10 (sections 10.1 to 10.3 plus 10.5)", 
-                                                 "Chapter 11 (sections 11.1 to 11.3)<br>Chapter 12 (sections 12.1 to 12.3)", "", 
-                                                 "Chapter 12 (section 12.4 and 12.5)", "Primer for multivariate regression LINK WEBSITE HERE", "", "NO CLASS", "NO CLASS"))
-
-schedule_summer |> 
-gt() |> 
-fmt_markdown(columns = everything()) |> 
-cols_align(align = "center", columns = c(date)) |> 
-cols_label(date = "Class Date",
-           topic = "Topic",
-           reading = "Required Reading") |> 
-tab_options(table.align = "center", table.font.names = c("Quattrocento", "Raleway"), 
-                table.font.size = pct(100), table.border.top.style = "hidden") |> 
-cols_width(date ~ px(100),
-           topic ~ px(150), 
-           reading ~ px(150)) |> 
-tab_style(style = cell_fill(color = "#b3e2cd"),
-              locations = list(cells_body(columns = c(date, topic, reading), 
-                                          rows = date %in% c("Thursday<br>July 3rd", "Thursday<br>July 17th", "Tuesday<br>July 29th", "Thursday<br>August 7th")))) |> 
+Students are expected to abide by established regulations on student conduct. Any student found in violation of rules of student conduct will be removed from the class in accordance with state policy and appropriate disciplinary action will be pursued.[You can read more about the University of Washington Student Code [here](http://www.washington.edu/cssc/student-conduct-overview/student-code-of-conduct/ ).]{.aside} 
 
 
-```
+### Basic needs statement	
 
+If you find yourself in need of health services, housing, food, or other basic resources, please use the resources listed below and/or visit the Resources page on the Sociology Department’s website.  If you feel comfortable doing so, please contact me about any other unmet needs so that we can brainstorm other resources. 
+Concerned with your own safety or the safety of others? Call SafeCampus at 206-685-7233
+
+- [Emergency Aid](http://www.washington.edu/emergencyaid/seattle/)
+- [Campus Food Pantry](http://www.washington.edu/anyhungryhusky/get-food/)
+- [Counseling Center](https://www.washington.edu/counseling/about/)
+- [Short Term Loans](http://www.washington.edu/financialaid/types-of-aid/loans/short-term-loans/)
+- [Office of Student Financial Aid](https://www.washington.edu/financialaid/contact-us/)
+- [Health and Wellness Office](http://depts.washington.edu/livewell/)
+- [Hall Health](http://depts.washington.edu/hhpccweb/)
+- [Hall Health Mental Health](http://depts.washington.edu/hhpccweb/project/mental-health-clinic/)
+- [Sexual Assault Resources](http://www.washington.edu/sexualassault/)
+- [Q Center](http://depts.washington.edu/qcenter/wordpress/) (for queer community, including questioning)  
+- [Disability Resources for Students](http://depts.washington.edu/uwdrs/)
+- [wǝɫǝbʔaltxʷ](https://www.washington.edu/diversity/tribal-relations/intellectual-house/) – Intellectual House (for indigenous community) 
+- [Office of Minority Affairs & Diversity](http://www.washington.edu/omad/)
+- [International Student Center](https://iss.washington.edu/)
+- [Undocumented Student Resources](https://www.washington.edu/admissions/undocumented/) 
+
+<br>
 
 ::: {.callout-tip}
 ## Feedback

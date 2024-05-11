@@ -4,9 +4,9 @@ subtitle: "Statistical Concepts and Methods for the Social Sciences"
 image: images/stats_pic.jpeg
 sidebar: false
 about:
-  template: broadside
+  template: solana
   image-shape: rectangle
-  image-width: 40m
+  image-width: 650px
   links: 
     - text: Canvas
       icon: upload
