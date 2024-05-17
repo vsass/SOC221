@@ -1,0 +1,51 @@
+// LECTURE 1 //
+/*-- scss:defaults --*/
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&family=Roboto+Mono&display=swap');
+
+$font-family-sans-serif: Quattrocento, sans-serif;
+$font-family-monospace: 'Roboto Mono', monospace;
+$presentation-heading-font: $font-family-sans-serif;
+
+//formating stuff
+
+$presentation-heading-line-height: 1.3;
+$presentation-font-smaller: 0.8;
+$presentation-heading-font-weight: 400;
+$presentation-font-size-root: 32px;
+
+// UW Colors (https://www.washington.edu/brand/brand-elements/colors/)
+$husky-purple: #32006e;
+$spirit-purple: #4b2e83;
+$husky-gold: #e8e3d3;
+$heritage-gold: #85754d;
+$spirit-gold: #ffc700;
+$accent-green: #aadb1e;
+$accent-teal: #2ad2c9;
+$accent-pink: #e93cac;
+$accent-lavender: #c5b4e3;
+$white: #ffffff;
+$black: #020202; 
+
+$body-color: $black;
+$presentation-heading-color: $spirit-purple;
+$body-bg: $husky-gold;
+$link-color: $accent-pink; 
+$link-hover-color: $accent-pink;
+$btn-link-hover-color: $accent-teal;
+$tabset-border-color: $heritage-gold;
+$light-bg-text-color: $husky-purple;
+
+// class selectors
+.section-title {
+  font-family: $font-family-sans-serif;
+  color: $heritage-gold;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+}
+      
+.reveal section h1 {
+  color: $white;
+}

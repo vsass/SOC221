@@ -1,0 +1,64 @@
+---
+title: '<h1 style="font-size:2.4em; "> Introductions<br>Overview of statistics<br>Producing data: surveys and sampling </h1>'
+title-slide-attributes:
+  data-background-image: ../images/abstract_statistics_playful.jpeg
+  data-background-size: cover
+  data-background-opacity: "0.33"
+subtitle: "SOC 221 • Lecture 1"
+author: "Victoria Sass"
+date: "June 17, 2024"
+date-format: full
+execute: 
+  echo: true
+  message: false
+  warning: false
+format: 
+  revealjs:
+    reference-location: margin
+    theme: lecture_styles.scss
+    controls: true
+    slide-number: true
+    chalkboard: true
+    incremental: false 
+    smaller: true
+    preview-links: true
+    history: false
+    progress: true
+    link-external-icon: true 
+---
+
+# Introductions & Syllabus {.section-title background-color="#c5b4e3"}
+
+## Welcome to SOC/STAT/CSSS 221!
+
+<br>
+
+::: {.fragment .incremental}
+### Plan for today:
+
+- Introductions
+- Syllabus & course overview
+- Overview of statistics
+- Producing data: surveys and sampling
+:::
+
+## Who are you??
+
+::: {.fragment .incremental}
+### Hi! 👋🏻 I'm Vic!
+
+- I'm the instructor for this course and a PhD Candidate in the Sociology department
+- I employ statistical methods in my own research on health disparities and the relationship between mental and physical health outcomes
+- I use any/all pronouns
+- I have a very sweet & silly pitbull named Margo (short for Marigold)
+:::
+
+::: {.fragment}
+
+![](images/margo.jpeg){.absolute width="250" right=-20 bottom=60}
+
+![](images/margo2.png){.absolute width="300" right=350 bottom=30}
+
+![](images/margo3.png){.absolute width="300" left=5 bottom=10}
+
+:::

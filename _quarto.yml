@@ -76,3 +76,20 @@ format:
     toc: false
 
 
+# Scheduling variables
+lectures:
+  one: "17 June 2024"
+  two: "24 June 2024"
+  three: "26 June 2024"
+  four: "1 July 2024"
+  five: "3 July 2024"
+  six: "8 July 2024"
+  seven: "10 July 2024"
+  eight: "15 July 2024"
+  nine: "17 July 2024"
+  ten: "22 July 2024"
+  eleven: "24 July 2024"
+  twelve: "29 July 2024"
+  thirteen: "31 July 2024"
+  fourteen: "5 August 2024"
+  fifteen: "7 August 2024"
