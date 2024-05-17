@@ -1,5 +1,5 @@
 ---
-title: '<h1 style="font-size:3em; "> Frequency tables<br>Graphical Techniques </h1>'
+title: '<h1 style="font-size:3em; "> Frequency tables &<br>Graphical techniques </h1>'
 title-slide-attributes:
   data-background-image: ../images/abstract_statistics_playful.jpeg
   data-background-size: cover

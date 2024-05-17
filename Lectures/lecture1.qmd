@@ -1,5 +1,5 @@
 ---
-title: '<h1 style="font-size:2.4em; "> Introductions<br>Overview of statistics<br>Producing data: surveys and sampling </h1>'
+title: '<h1 style="font-size:2.4em;"> Introductions,<br>Overview of statistics, &<br>Producing data: surveys and sampling </h1>'
 title-slide-attributes:
   data-background-image: ../images/abstract_statistics_playful.jpeg
   data-background-size: cover
@@ -55,10 +55,26 @@ format:
 
 ::: {.fragment}
 
-![](images/margo.jpeg){.absolute width="250" right=-20 bottom=60}
+![](images/margo.jpeg){.absolute width="300" right=-50 bottom=40}
 
-![](images/margo2.png){.absolute width="300" right=350 bottom=30}
+![](images/margo2.png){.absolute width="370" right=300 bottom=30}
 
-![](images/margo3.png){.absolute width="300" left=5 bottom=10}
+![](images/margo3.png){.absolute width="350" left=-50 bottom=10}
 
 :::
+
+## Who are you??
+
+### Get in pairs! 👩🏼‍🤝‍👨🏽 👩🏿‍🤝‍👩🏽 👨🏾‍🤝‍👨🏻
+
+::: {.incremental}
+
+- Name
+- Major/interest if undecided
+- Pronouns
+- One-word description of how you feel about taking this class
+- Favorite summer activity/food/memory
+
+:::
+
+
