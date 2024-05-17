@@ -1,0 +1,28 @@
+---
+title: '<h1 style="font-size:3em; "> Bivariate regression &<br>Inference for regression </h1>'
+title-slide-attributes:
+  data-background-image: ../images/abstract_statistics_playful2.jpeg
+  data-background-size: cover
+  data-background-opacity: "0.33"
+subtitle: "SOC 221 • Lecture 9"
+author: "Victoria Sass"
+date: "July 24, 2024"
+date-format: full
+execute: 
+  echo: true
+  message: false
+  warning: false
+format: 
+  revealjs:
+    reference-location: margin
+    theme: lecture_styles.scss
+    controls: true
+    slide-number: true
+    chalkboard: true
+    incremental: false 
+    smaller: true
+    preview-links: true
+    history: false
+    progress: true
+    link-external-icon: true 
+---

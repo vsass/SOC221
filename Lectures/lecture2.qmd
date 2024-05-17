@@ -1,7 +1,7 @@
 ---
 title: '<h1 style="font-size:3em; "> Frequency tables &<br>Graphical techniques </h1>'
 title-slide-attributes:
-  data-background-image: ../images/abstract_statistics_playful.jpeg
+  data-background-image: ../images/abstract_statistics_playful2.jpeg
   data-background-size: cover
   data-background-opacity: "0.33"
 subtitle: "SOC 221 • Lecture 2"
