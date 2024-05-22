@@ -161,9 +161,9 @@ We try to make the math easy<br>so we can focus on the concepts,<br>interpretati
 <br>
 
 ::: {.fragment}
-::: {.callout-note icon=false appearance="simple"}
+
 [{{< fa thumbs-up size=lg >}} &ensp; What is the relative number of red, blue, green, and yellow M&Ms in a bag?]{style="color:#023858"}
-:::
+
 
 ::: {.callout-note icon=false appearance="simple"}
 [{{< fa calculator >}} What is the probability of pulling 2 red M&Ms in a row out of a bag of 100 M&Ms?]{style="color:#023858"}
