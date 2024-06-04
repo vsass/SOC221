@@ -36,10 +36,10 @@ format:
 ::: {.fragment .incremental}
 ### Plan for today:
 
-- Introductions
-- Syllabus & course overview
-- Overview of statistics
-- Producing data: surveys and sampling
+-   Introductions
+-   Syllabus & course overview
+-   Overview of statistics
+-   Producing data: surveys and sampling
 :::
 
 ## Who are you??
@@ -47,90 +47,92 @@ format:
 ::: {.fragment .incremental}
 ### Hi! 👋🏻 I'm Vic!
 
-- I'm the instructor for this course and a PhD Candidate in the Sociology department
-- I employ statistical methods in my own research on health disparities and the relationship between mental and physical health outcomes
-- I use any/all pronouns
-- I have a very sweet & silly pitbull named Margo (short for Marigold)
+-   I'm the instructor for this course and a PhD Candidate in the Sociology department
+-   I employ statistical methods in my own research on health disparities and the relationship between mental and physical health outcomes
+-   I use any/all pronouns
+-   I parent a very sweet & silly pitbull named Margo (aka Marigold)
 :::
 
-::: {.fragment}
+::: fragment
+![](images/margo.jpeg){.absolute width="300" right="-70" bottom="0"}
 
-![](images/margo.jpeg){.absolute width="300" right=-50 bottom=40}
+![](images/margo2.png){.absolute width="370" right="300" bottom="30"}
 
-![](images/margo2.png){.absolute width="370" right=300 bottom=30}
-
-![](images/margo3.png){.absolute width="350" left=-50 bottom=10}
-
+![](images/margo3.png){.absolute width="350" left="-50" bottom="0"}
 :::
+
+## Who are you??
+
+### Hi! 👋🏻 I'm Vic!
+
+-   I'm the instructor for this course and a PhD Candidate in the Sociology department
+-   I employ statistical methods in my own research on health disparities and the relationship between mental and physical health outcomes
+-   I use any/all pronouns
+-   I also step-parent an easy-going but goofy golden retriever\
+    named Lemon (aka Clementine)
+
+![](images/lemon3.jpg){.absolute width="350" right="-75" bottom="10"}
+
+![](images/lemon1.jpg){.absolute width="300" right="325" bottom="20"}
+
+![](images/lemon2.jpg){.absolute width="450" left="-75" bottom="10"}
 
 ## Who are you??
 
 ### Get in pairs! 👩🏼‍🤝‍👨🏽 👩🏿‍🤝‍👩🏽 👨🏾‍🤝‍👨🏻
 
-::: {.incremental}
-
-- Name
-- Major/interest if undecided
-- Pronouns
-- One-word description of how you feel about taking this class
-- Favorite summer activity/food/memory
-
+::: incremental
+-   Name
+-   Major/interest if undecided
+-   Pronouns
+-   One-word description of how you feel about taking this class
+-   Favorite summer activity/food/memory
 :::
 
 # Syllabus {.section-title background-color="#c5b4e3"}
 
-## {data-menu-title="Syllabus" background-iframe="https://vsass.github.io/SOC221/syllabus.html" background-interactive=TRUE}
+##  {data-menu-title="Syllabus" background-iframe="https://vsass.github.io/SOC221/syllabus.html" background-interactive="TRUE"}
 
 # Overview of statistics {.section-title background-color="#c5b4e3"}
 
 ## Some things we know about this class
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
-
 <br>
 
-::: {.fragment fragment-index=1}
-- Not a class that most students look forward to
-  - Students sometimes have a lot of anxiety about the course
-  - Anxiety is often rooted in apprehension about math
+::: {.fragment fragment-index="1"}
+-   Not a class that most students look forward to
+    -   Students sometimes have a lot of anxiety about the course
+    -   Anxiety is often rooted in apprehension about math
 :::
 
 <br>
 
-::: {.fragment fragment-index=2}
-
-### Good news! 
+::: {.fragment fragment-index="2"}
+### Good news!
 
 Statistics is NOT math...
 :::
 
-::: {.fragment fragment-index=3}
+::: {.fragment fragment-index="3"}
+<br>
 
-<br> 
-
-<p> &emsp; &emsp; ...but it looks a lot like math 😑 </p>
+<p>    ...but it looks a lot like math 😑</p>
 :::
-
 :::
 
 ::: {.column width="50%"}
-
+:::
 :::
 
-::::
-
-
-::: {.fragment fragment-index=3}
-
+::: {.fragment fragment-index="3"}
 <br>
 
-![](images/statistics-review.webp){.absolute width="600" right=-100 top=75}
-
+![](images/statistics-review.webp){.absolute width="600" right="-100" top="75"}
 :::
 
----
+------------------------------------------------------------------------
 
 <br>
 
@@ -140,61 +142,98 @@ Statistics is NOT math...
 
 <br>
 
-::: {.r-fit-text}
-We try to make the math easy<br>so we can focus on the concepts,<br>interpretation, and implications! 
+::: r-fit-text
+We try to make the math easy<br>so we can focus on the concepts,<br>interpretation, and implications!
 :::
 
----
+------------------------------------------------------------------------
 
-:::: {.columns}
-
+:::: columns
 ::: {.column width="40%"}
-
-::: {.r-fit-text}
+::: r-fit-text
 > Social<br>statistics<br>are <font color="#2ad2c9">**tools**</font> that <br>allow us to<br>quantify<br>observations<br>(<font color="#e93cac">**data**</font>) about<br>the world
 :::
-
 :::
 
 ::: {.column width="60%"}
 
+::: fragment
+|                                                       |                                                                                                     |
+|:-----------------------------------------------------:|-----------------------------------------------------------------------------------------------------|
+| <br> [{{< fa thumbs-up size=2xl >}}]{style="color:#e15759"} | [What is the relative number of red, blue, green, and yellow M&Ms in a bag?]{style="color:#e15759"} |
+| <br> [{{< fa calculator size=2xl >}}]{style="color:#e15759"} | [What is the probability of pulling 2 red M&Ms in a row out of a bag of 100 M&Ms?]{style="color:#e15759"} |
+| <br> [{{< fa venus-mars size=2xl >}}]{style="color:#e15759"} | [Are there gender differences in preference for red M&Ms?]{style="color:#e15759"} |
+:::
+
 <br>
 
-::: {.fragment}
-
-[{{< fa thumbs-up size=lg >}} &ensp; What is the relative number of red, blue, green, and yellow M&Ms in a bag?]{style="color:#023858"}
-
-
-::: {.callout-note icon=false appearance="simple"}
-[{{< fa calculator >}} What is the probability of pulling 2 red M&Ms in a row out of a bag of 100 M&Ms?]{style="color:#023858"}
+::: fragment
+|                                                       |                                                                                                     |
+|:-----------------------------------------------------:|-----------------------------------------------------------------------------------------------------|
+| <br> [{{< fa user-doctor size=2xl >}}]{style="color:#4e79a7"} | [What percentage of people have access to health insurance through work?]{style="color:#4e79a7"} |
+| <br> [{{< fa heart-pulse size=2xl >}}]{style="color:#4e79a7"} | [How did access to health care affect levels of stress during the coronavirus pandemic?]{style="color:#4e79a7"} |
+| <br> [{{< fa syringe size=2xl >}}]{style="color:#4e79a7"} | [What percentage of Americans approved of Biden’s handling of the vaccine rollout?]{style="color:#4e79a7"} |
 :::
 
-::: {.callout-note icon=false appearance="simple"}
-[{{< fa venus-mars >}} Are there gender differences in preference for red M&Ms?]{style="color:#023858"}
+:::
+::::
+
+## Statistics are [tools]{style="color:#2ad2c9"} that allow us to quantify [observations]{style="color:#e93cac"} about the world
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: fragment
+
+```{mermaid}
+%%| echo: false
+%%| fig-responsive: false
+%%| fig-height: 10
+
+stateDiagram-v2
+    s1 : Interesting real-world question
+    s2 : Collect data
+    s3 : Analyze data\n(calculate statistics)
+    s4: Develop an answer to your\nquestion (interpret statistics)
+    
+    s1 --> s2
+    s2 --> s3
+    s3 --> s4
+
+    s4 --> s1
+    
+```
+
 :::
 :::
 
-::: {.fragment}
-::: {.callout-tip icon=false appearance="simple"}
-[{{< fa user-doctor >}} What percentage of people have access to health insurance through work?]{style="color:#0E540E"}
+::: {.column width="50%"}
+::: fragment
+```{mermaid}
+%%| echo: false
+flowchart TB
+    id1(Interesting real-world question) --> id2(Collect data) --> id3("Analyze data\n(calculate statistics)") --> id4("Develop an answer to your\nquestion (interpret statistics)")
+    id4 --> id1
+```
 :::
-
-::: {.callout-tip icon=false appearance="simple"}
-[{{< fa heart-pulse >}} How did access to health care affect levels of stress during the coronavirus pandemic?]{style="color:#0E540E"}
-:::
-
-::: {.callout-tip icon=false appearance="simple"}
-[{{< fa syringe >}} What percentage of Americans approved of Biden’s handling of the vaccine rollout?]{style="color:#0E540E"}
-:::
-:::
-
-
-
-
 :::
 
 ::::
 
+## check {.r-stretch}
+
+```{mermaid}
+%%| echo: false
+%%| fig-width: 20
+%%| fig-align: center
+flowchart LR
+    id1(Interesting real-world question) --> id2(Collect data) --> id3("Analyze data\n(calculate statistics)") --> id4("Develop an answer to your\nquestion (interpret statistics)")
+    id4 --> id1
+```
+
 # Break! {.section-title background-color="#2ad2c9"}
 
 # Producing data:<br>surveys and sampling {.section-title background-color="#c5b4e3"}
+
+
+
