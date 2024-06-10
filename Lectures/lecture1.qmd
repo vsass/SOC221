@@ -25,7 +25,19 @@ format:
     history: false
     progress: true
     link-external-icon: true 
+    mermaid-format: svg
+filters: 
+  - roughnotation
 ---
+
+```{r}
+#| echo: false
+#| cache: false
+require(tidyverse)
+require(gt)
+
+knitr::opts_chunk$set(comment = ">")
+```
 
 # Introductions {.section-title background-color="#c5b4e3"}
 
@@ -92,6 +104,8 @@ format:
 # Syllabus {.section-title background-color="#c5b4e3"}
 
 ##  {data-menu-title="Syllabus" background-iframe="https://vsass.github.io/SOC221/syllabus.html" background-interactive="TRUE"}
+
+# Any questions? {.section-title background-color="#2ad2c9"}
 
 # Overview of statistics {.section-title background-color="#c5b4e3"}
 
@@ -178,62 +192,430 @@ We try to make the math easy<br>so we can focus on the concepts,<br>interpretati
 :::
 ::::
 
-## Statistics are [tools]{style="color:#2ad2c9"} that allow us to quantify [observations]{style="color:#e93cac"} about the world
+---
+
+### Statistics are [tools]{style="color:#2ad2c9"} that allow us to quantify [observations]{style="color:#e93cac"} about the world
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-::: fragment
-
 ```{mermaid}
 %%| echo: false
-%%| fig-responsive: false
-%%| fig-height: 10
-
-stateDiagram-v2
-    s1 : Interesting real-world question
-    s2 : Collect data
-    s3 : Analyze data\n(calculate statistics)
-    s4: Develop an answer to your\nquestion (interpret statistics)
-    
-    s1 --> s2
-    s2 --> s3
-    s3 --> s4
-
-    s4 --> s1
-    
-```
-
-:::
-:::
-
-::: {.column width="50%"}
-::: fragment
-```{mermaid}
-%%| echo: false
+%%| fig-height: 6
+%%| fig-width: 5
+%%| fig-align: left
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'background': '#e8e3d3',
+      'primaryColor': '#c5b4e3',
+      'primaryTextColor': '#4b2e83'
+    }
+  }
+}%%
 flowchart TB
     id1(Interesting real-world question) --> id2(Collect data) --> id3("Analyze data\n(calculate statistics)") --> id4("Develop an answer to your\nquestion (interpret statistics)")
     id4 --> id1
 ```
 :::
+
+::: {.column width="50%"}
+::: fragment
+```{mermaid}
+%%| echo: false
+%%| fig-height: 6
+%%| fig-width: 5
+%%| fig-align: right
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'background': '#e8e3d3',
+      'primaryColor': '#85754d',
+      'primaryTextColor': '#e8e3d3'
+    }
+  }
+}%%
+flowchart TB
+    id1("How does access to healthcare affect\nlevels of stress") --> id2("Collect information about individuals'\naccess to healthcare & level of stress") --> id3("Quantify levels of stress for those\nwith and without healthcare") --> id4("Draw a conclusion about relationship\nbetween healthcare access and stress")
+```
+:::
+
+
 :::
 
 ::::
 
-## check {.r-stretch}
+
+---
+
+### Statistics are [tools]{style="color:#2ad2c9"} that allow us to quantify [observations]{style="color:#e93cac"} about the world
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{mermaid}
+%%| echo: false
+%%| fig-height: 6
+%%| fig-width: 5
+%%| fig-align: left
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'background': '#e8e3d3',
+      'primaryColor': '#c5b4e3',
+      'primaryTextColor': '#4b2e83'
+    }
+  }
+}%%
+flowchart TB
+      id1(Interesting real-world question) --> id2(Collect data) --> id3("Analyze data\n(calculate statistics)") --> id4("Develop an answer to your\nquestion (interpret statistics)")
+      id4 --> id1
+      style id3 fill:#aadb1e,color:#4b2e83
+      style id4 fill:#aadb1e,color:#4b2e83
+```
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
 
 ```{mermaid}
 %%| echo: false
-%%| fig-width: 20
-%%| fig-align: center
-flowchart LR
-    id1(Interesting real-world question) --> id2(Collect data) --> id3("Analyze data\n(calculate statistics)") --> id4("Develop an answer to your\nquestion (interpret statistics)")
-    id4 --> id1
+%%| fig-height: 2.5
+%%| fig-width: 5
+%%| fig-align: right
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'background': '#e8e3d3',
+      'primaryColor': '#aadb1e',
+      'primaryTextColor': '#4b2e83'
+    }
+  }
+}%%
+flowchart TB
+    id1{{"Main focus of\nour course"}}
 ```
+
+:::
+
+::::
+
+---
+
+### Statistics are [tools]{style="color:#2ad2c9"} that allow us to quantify [observations]{style="color:#e93cac"} about the world
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{mermaid}
+%%| echo: false
+%%| fig-height: 6
+%%| fig-width: 5
+%%| fig-align: left
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'background': '#e8e3d3',
+      'primaryColor': '#c5b4e3',
+      'primaryTextColor': '#4b2e83'
+    }
+  }
+}%%
+flowchart TB
+      id1(Interesting real-world question) --> id2(Collect data) --> id3("Analyze data\n(calculate statistics)") --> id4("Develop an answer to your\nquestion (interpret statistics)")
+      id4 --> id1
+      style id2 fill:#aadb1e,color:#4b2e83
+      style id3 fill:#aadb1e,color:#4b2e83
+```
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+<br>
+
+```{mermaid}
+%%| echo: false
+%%| fig-height: 4
+%%| fig-width: 5.5
+%%| fig-align: right
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'background': '#e8e3d3',
+      'primaryColor': '#aadb1e',
+      'primaryTextColor': '#4b2e83', 
+      'fontSize': '.225em'
+      }
+  }
+}%%
+flowchart TB
+    id1["In order to use and\ninterpret statistics\nwe need to understand\nwhere our data come from."]
+```
+
+:::
+
+::::
 
 # Break! {.section-title background-color="#2ad2c9"}
 
 # Producing data:<br>surveys and sampling {.section-title background-color="#c5b4e3"}
 
+## What are data/where do they come from?
+
+::: incremental
+- Data = information, often in large quantities
+  - [Characteristics of 47,000+ students at UW-Seattle]{style="color:#666666"}
+  - [Conditions in 65,000 neighborhoods in the U.S.]{style="color:#666666"}
+  - [Attributes of 128,580,000 households in the U.S.]{style="color:#666666"}
+- From any source we choose
+  - [Newspapers, books, internet]{style="color:#666666"}
+  - [Court filings, public records]{style="color:#666666"}
+  - [Cell phone call records, twitter, Reddit]{style="color:#666666"}
+- Much social data comes from [**SURVEYS**]{style="color:#e93cac"}…
+:::
+
+## Surveys
+
+:::: columns
+::: {.column width="40%"}
+::: fragment
+::: r-fit-text
+> [**Survey**]{style="color:#e93cac"}<br>A tool used to ask<br>people question(s)<br>in order to gather<br>information about<br>what the subject<br>does, feels,<br>or thinks.
+:::
+:::
+:::
+
+::: {.column width="60%"}
+
+::: {.r-stack}
+![](images/survey1.jpeg){.fragment .absolute bottom=10 right=-50  width="600"}
+
+![](images/survey2.jpeg){.fragment}
+:::
+
+:::
+::::
+
+## Examples of survey questions
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+1. In what year were you born?
+<br>
+(enter a 4-digit number; i.e. 2005)
+<br>
+
+   **_________** 
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+2. With which gender do you most identify?\
+  ☐ Female\
+  ☐ Male\
+  ☐ Non-binary\
+  ☐ Other\
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+3. Are you of Hispanic, Latino, or of Spanish origin?\
+  ☐ Yes
+  ☐ No
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+4. How would you describe your race?
+<br>
+(select all that apply)
+<br>
+  ☐ American Indian or Alask Native\
+  ☐ Asian\
+  ☐ Black or African American\
+  ☐ Native Hawaiian and/or Pacific Islander\
+  ☐ White or Caucasian\
+  ☐ Middle Eastern or North African
+:::
+:::
+
+::::
+
+## What do we do with the results of a survey? {auto-animate=true}
+
+## What do we do with the results of a survey? {auto-animate=true}
+
+::: {style="margin-top: 200px; margin-left: 200px; font-size: 3em;"}
+[Turn them into DATA...]{.shadow10}
+:::
+
+## Survey DATA
+
+A survey with produce a dataset for analyses
+
+::: {.fragment fragment-index=1}
+
+```{r}
+#| echo: false
+survey_table <- tibble(`Person #` = c(1:12), 
+                       birth_year = c(1992, 1993, 1995, 1980, 1991, 1975, 1960, 1952, 2000, 1990, 1993, 1992), 
+                       gender = c(1, 2, 2, 2, 1, 4, 1, 1, 3, 1, 2, 3), 
+                       ethnicity = c(1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0), 
+                       race = c(5, 5, 2, 3, 5, 1, 6, 5, 3, 2, 4, 4))
+survey_table |> 
+gt() |> 
+tab_options(table.width = pct(90), table.font.size = pct(90), table.align = "center", table.background.color = "#f2f2f2")
+
+```
+
+:::
+
+::: {.fragment fragment-index=2 data-id="box1" style="background: rgba(255, 255, 255, 0); border: 6px solid #e93cac; width: 150px; height: 25px; margin: 10px; position: absolute; top: 170px; left: 160px"}
+
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 375px; height: 125px; padding: 10px 20px 10px 20px; position: absolute; top: 160px; left: 350px"}
+Each [row]{.underlined-text} in the dataset contains information on one [data unit]{.underlined-text} (i.e. individual or [case]{.underlined-text})
+:::
+
+::: {.fragment fragment-index=3 data-id="box3" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; height: 100px; padding: 5px 10px 20px 10px; position: absolute; top: 320px; left: 350px"}
+**Units** are the objects described by a set of data. May be people, animals, businesses, events, etc. – whatever you collect data about.
+:::
+
+::: {.fragment fragment-index=4 data-id="box4" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 200px; height: 160px; padding: 5px 10px 20px 10px; position: absolute; top: 119px; right: 40px"}
+People that you survey become [units]{.underlined-text}, [cases]{.underlined-text}, or [individuals]{.underlined-text} in a data set.
+:::
+
+## Survey DATA
+
+A survey with produce a dataset for analyses
+
+```{r}
+#| echo: false
+survey_table <- tibble(`Person #` = c(1:12), 
+                       birth_year = c(1992, 1993, 1995, 1980, 1991, 1975, 1960, 1952, 2000, 1990, 1993, 1992), 
+                       gender = c(1, 2, 2, 2, 1, 4, 1, 1, 3, 1, 2, 3), 
+                       ethnicity = c(1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0), 
+                       race = c(5, 5, 2, 3, 5, 1, 6, 5, 3, 2, 4, 4))
+survey_table |> 
+gt() |> 
+tab_options(table.width = pct(90), table.font.size = pct(90), table.align = "center", table.background.color = "#f2f2f2")
+
+```
+
+::: {data-id="box1" style="background: rgba(255, 255, 255, 0); border: 6px solid #e93cac; width: 150px; height: 25px; margin: 10px; position: absolute; top: 128px; left: 354px"}
+
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 375px; height: 80px; padding: 0px 0px 10px 10px; position: absolute; top: 183px; left: 350px"}
+Each [column]{.underlined-text} in the dataset contains data for one [variable]{.underlined-text}
+:::
+
+::: {.fragment fragment-index=1 data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 200px; height: 100px; padding: 0px 10px 20px 10px; position: absolute; top: 170px; right: 70px"}
+Questions in the survey become variables.
+:::
+
+::: {.fragment fragment-index=2 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; height: 140px; padding: 0px 10px 20px 10px; position: absolute; top: 288px; left: 350px"}
+A [**variable**]{.underlined-text} is a characteristic of units (cases or observations) that can take on different values or attributes.
+:::
+
+::: {.fragment fragment-index=2 data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 160px; padding: 0px 0px 20px 10px; position: absolute; top: 305px; right: 85px"}
+Antonym to “variable” is a [**CONSTANT**]{style="color: white"} (same value for all cases)
+:::
+
+## Survey DATA
+
+A survey with produce a dataset for analyses
+
+```{r}
+#| echo: false
+survey_table <- tibble(`Person #` = c(1:12), 
+                       birth_year = c(1992, 1993, 1995, 1980, 1991, 1975, 1960, 1952, 2000, 1990, 1993, 1992), 
+                       gender = c(1, 2, 2, 2, 1, 4, 1, 1, 3, 1, 2, 3), 
+                       ethnicity = c(1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0), 
+                       race = c(5, 5, 2, 3, 5, 1, 6, 5, 3, 2, 4, 4))
+survey_table |> 
+gt() |> 
+tab_options(table.width = pct(90), table.font.size = pct(90), table.align = "center", table.background.color = "#f2f2f2")
+
+```
+
+::: {data-id="box1" style="background: rgba(255, 255, 255, 0); border: 6px solid #e93cac; width: 150px; height: 25px; margin: 10px; position: absolute; top: 259px; left: 380px"}
+
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px; height: 150px; padding: 0px 0px 10px 10px; position: absolute; top: 320px; left: 360px"}
+Each [cell]{.underlined-text} in the dataset refers to the [value]{.underlined-text} on a particular variable for a particular case/unit
+:::
+
+::: {.fragment fragment-index=2 data-id="box3" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 200px; height: 280px; padding: 0px 10px 20px 10px; position: absolute; top: 288px; left: 690px"}
+A [**value**]{.underlined-text} is a number, word, or symbol that represents a characteristic of a particular case on a particular variable.
+
+:::
+
+## Levels of Measurement
+
+The [level of measurement]{style="color: #e93cac"} of a variable refers to the type of information represented in the VALUES of that variable.
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: fragment
+#### This includes:\
+
+- The level of DETAIL conveyed by the potential values
+- The extent to which the values refer to QUANTIFIABLE differences between cases with different values
+:::
+
+:::
+
+::: {.column width="50%"}
+
+::: fragment
+#### Usually determined by:\
+
+1. The nature of the characteristic we are trying to measure.
+2. How we ask the question.
+
+:::
+
+:::
+
+::::
+
+## Levels of Measurement
+
+The [level of measurement]{style="color: #e93cac"} of a variable refers to the type of information represented in the VALUES of that variable.
+
+<br>
+
+::: fragment
+
+:::
 
 

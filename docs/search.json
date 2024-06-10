@@ -46,14 +46,14 @@
     "href": "lectures/lecture1.html#who-are-you",
     "title": "",
     "section": "Who are you??",
-    "text": "Who are you??\n\n\nHi! 👋🏻 I’m Vic!\n\nI’m the instructor for this course and a PhD Candidate in the Sociology department\nI employ statistical methods in my own research on health disparities and the relationship between mental and physical health outcomes\nI use any/all pronouns\nI have a very sweet & silly pitbull named Margo (short for Marigold)"
+    "text": "Who are you??\n\n\nHi! 👋🏻 I’m Vic!\n\nI’m the instructor for this course and a PhD Candidate in the Sociology department\nI employ statistical methods in my own research on health disparities and the relationship between mental and physical health outcomes\nI use any/all pronouns\nI parent a very sweet & silly pitbull named Margo (aka Marigold)"
   },
   {
     "objectID": "lectures/lecture1.html#who-are-you-1",
     "href": "lectures/lecture1.html#who-are-you-1",
     "title": "",
     "section": "Who are you??",
-    "text": "Who are you??\nGet in pairs! 👩🏼‍🤝‍👨🏽 👩🏿‍🤝‍👩🏽 👨🏾‍🤝‍👨🏻\n\n\nName\nMajor/interest if undecided\nPronouns\nOne-word description of how you feel about taking this class\nFavorite summer activity/food/memory"
+    "text": "Who are you??\nHi! 👋🏻 I’m Vic!\n\nI’m the instructor for this course and a PhD Candidate in the Sociology department\nI employ statistical methods in my own research on health disparities and the relationship between mental and physical health outcomes\nI use any/all pronouns\nI also step-parent an easy-going but goofy golden retriever\nnamed Lemon (aka Clementine)"
   },
   {
     "objectID": "Lectures/lecture1.html#welcome-to-socstatcsss-221",
@@ -110,5 +110,103 @@
     "title": "",
     "section": "check",
     "text": "check\n\n\n\n\n\nflowchart LR\n    id1(Interesting real-world question) --&gt; id2(Collect data) --&gt; id3(\"Analyze data\\n(calculate statistics)\") --&gt; id4(\"Develop an answer to your\\nquestion (interpret statistics)\")\n    id4 --&gt; id1"
+  },
+  {
+    "objectID": "lectures/lecture1.html#who-are-you-2",
+    "href": "lectures/lecture1.html#who-are-you-2",
+    "title": "",
+    "section": "Who are you??",
+    "text": "Who are you??\nGet in pairs! 👩🏼‍🤝‍👨🏽 👩🏿‍🤝‍👩🏽 👨🏾‍🤝‍👨🏻\n\n\nName\nMajor/interest if undecided\nPronouns\nOne-word description of how you feel about taking this class\nFavorite summer activity/food/memory"
+  },
+  {
+    "objectID": "lectures/lecture1.html#some-things-we-know-about-this-class",
+    "href": "lectures/lecture1.html#some-things-we-know-about-this-class",
+    "title": "",
+    "section": "Some things we know about this class",
+    "text": "Some things we know about this class\n\n\n\n\n\nNot a class that most students look forward to\n\nStudents sometimes have a lot of anxiety about the course\nAnxiety is often rooted in apprehension about math\n\n\n\n\n\n\nGood news!\nStatistics is NOT math…\n\n\n\n\n    …but it looks a lot like math 😑"
+  },
+  {
+    "objectID": "lectures/lecture1.html#statistics-are-tools-that-allow-us-to-quantify-observations-about-the-world",
+    "href": "lectures/lecture1.html#statistics-are-tools-that-allow-us-to-quantify-observations-about-the-world",
+    "title": "",
+    "section": "Statistics are tools that allow us to quantify observations about the world",
+    "text": "Statistics are tools that allow us to quantify observations about the world"
+  },
+  {
+    "objectID": "lectures/lecture1.html#check",
+    "href": "lectures/lecture1.html#check",
+    "title": "",
+    "section": "check",
+    "text": "check"
+  },
+  {
+    "objectID": "lectures/lecture1.html#what-are-data-and-where-do-they-come-from",
+    "href": "lectures/lecture1.html#what-are-data-and-where-do-they-come-from",
+    "title": "",
+    "section": "What are data and where do they come from?",
+    "text": "What are data and where do they come from?\n\n\nData = information, often in large quantities\n\nCharacteristics of 47,000+ students at UW-Seattle\nConditions in 65,000 neighborhoods in the U.S.\nAttributes of 128,580,000 households in the U.S.\n\nFrom any source we choose\n\nNewspapers, books, internet\nCourt filings, public records\nCell phone call records, twitter, Reddit\n\nMuch social data comes from SURVEYS…"
+  },
+  {
+    "objectID": "lectures/lecture1.html#what-are-datawhere-do-they-come-from",
+    "href": "lectures/lecture1.html#what-are-datawhere-do-they-come-from",
+    "title": "",
+    "section": "What are data/where do they come from?",
+    "text": "What are data/where do they come from?\n\n\nData = information, often in large quantities\n\nCharacteristics of 47,000+ students at UW-Seattle\nConditions in 65,000 neighborhoods in the U.S.\nAttributes of 128,580,000 households in the U.S.\n\nFrom any source we choose\n\nNewspapers, books, internet\nCourt filings, public records\nCell phone call records, twitter, Reddit\n\nMuch social data comes from SURVEYS…"
+  },
+  {
+    "objectID": "lectures/lecture1.html#surveys",
+    "href": "lectures/lecture1.html#surveys",
+    "title": "",
+    "section": "Surveys",
+    "text": "Surveys\n\n\n\n\n\nSurveyA tool used to askpeople question(s)in order to gatherinformation aboutwhat the subjectdoes, feels,or thinks."
+  },
+  {
+    "objectID": "lectures/lecture1.html#examples-of-survey-questions",
+    "href": "lectures/lecture1.html#examples-of-survey-questions",
+    "title": "",
+    "section": "Examples of survey questions",
+    "text": "Examples of survey questions\n\n\n\n\n\nIn what year were you born?  (enter a 4-digit number; i.e. 2005) \n_________\n\n\n\n\nWith which gender do you most identify?\n☐ Female\n☐ Male\n☐ Non-binary\n☐ Other\n\n\n\n\n\nAre you of Hispanic, Latino, or of Spanish origin?\n☐ Yes ☐ No\n\n\n\n\n\nHow would you describe your race?  (select all that apply)  ☐ American Indian or Alask Native\n☐ Asian\n☐ Black or African American\n☐ Native Hawaiian and/or Pacific Islander\n☐ White or Caucasian\n☐ Middle Eastern or North African"
+  },
+  {
+    "objectID": "lectures/lecture1.html#what-do-we-do-with-the-results-of-a-survey",
+    "href": "lectures/lecture1.html#what-do-we-do-with-the-results-of-a-survey",
+    "title": "",
+    "section": "What do we do with the results of a survey?",
+    "text": "What do we do with the results of a survey?"
+  },
+  {
+    "objectID": "lectures/lecture1.html#what-do-we-do-with-the-results-of-a-survey-1",
+    "href": "lectures/lecture1.html#what-do-we-do-with-the-results-of-a-survey-1",
+    "title": "",
+    "section": "What do we do with the results of a survey?",
+    "text": "What do we do with the results of a survey?\n\nTurn them into DATA…"
+  },
+  {
+    "objectID": "lectures/lecture1.html#survey-data",
+    "href": "lectures/lecture1.html#survey-data",
+    "title": "",
+    "section": "Survey DATA",
+    "text": "Survey DATA\nA survey with produce a dataset for analyses\n\n\n\n\n\n\n\n\n\nPerson #\nbirth_year\ngender\nethnicity\nrace\n\n\n\n\n1\n1992\n1\n1\n5\n\n\n2\n1993\n2\n0\n5\n\n\n3\n1995\n2\n0\n2\n\n\n4\n1980\n2\n0\n3\n\n\n5\n1991\n1\n1\n5\n\n\n6\n1975\n4\n1\n1\n\n\n7\n1960\n1\n0\n6\n\n\n8\n1952\n1\n0\n5\n\n\n9\n2000\n3\n0\n3\n\n\n10\n1990\n1\n1\n2\n\n\n11\n1993\n2\n1\n4\n\n\n12\n1992\n3\n0\n4\n\n\n\n\n\n\n\n\n\n\n\n\nEach row in the dataset contains information on one data unit (i.e. individual or case)\n\n\nUnits are the objects described by a set of data. May be people, animals, businesses, events, etc. – whatever you collect data about.\n\n\nPeople that you survey become units, cases, or individuals in a data set."
+  },
+  {
+    "objectID": "lectures/lecture1.html#survey-data-1",
+    "href": "lectures/lecture1.html#survey-data-1",
+    "title": "",
+    "section": "Survey DATA",
+    "text": "Survey DATA\nA survey with produce a dataset for analyses\n\n\n\n\n\n\n\n\nPerson #\nbirth_year\ngender\nethnicity\nrace\n\n\n\n\n1\n1992\n1\n1\n5\n\n\n2\n1993\n2\n0\n5\n\n\n3\n1995\n2\n0\n2\n\n\n4\n1980\n2\n0\n3\n\n\n5\n1991\n1\n1\n5\n\n\n6\n1975\n4\n1\n1\n\n\n7\n1960\n1\n0\n6\n\n\n8\n1952\n1\n0\n5\n\n\n9\n2000\n3\n0\n3\n\n\n10\n1990\n1\n1\n2\n\n\n11\n1993\n2\n1\n4\n\n\n12\n1992\n3\n0\n4\n\n\n\n\n\n\n\n\n\n\n\nEach column in the dataset contains data for one variable\n\n\nQuestions in the survey become variables.\n\n\nA variable is a characteristic of units (cases or observations) that can take on different values or attributes.\n\n\nAntonym to “variable” is a CONSTANT (same value for all cases)"
+  },
+  {
+    "objectID": "lectures/lecture1.html#survey-data-2",
+    "href": "lectures/lecture1.html#survey-data-2",
+    "title": "",
+    "section": "Survey DATA",
+    "text": "Survey DATA\nA survey with produce a dataset for analyses\n\n\n\n\n\n\n\n\nPerson #\nbirth_year\ngender\nethnicity\nrace\n\n\n\n\n1\n1992\n1\n1\n5\n\n\n2\n1993\n2\n0\n5\n\n\n3\n1995\n2\n0\n2\n\n\n4\n1980\n2\n0\n3\n\n\n5\n1991\n1\n1\n5\n\n\n6\n1975\n4\n1\n1\n\n\n7\n1960\n1\n0\n6\n\n\n8\n1952\n1\n0\n5\n\n\n9\n2000\n3\n0\n3\n\n\n10\n1990\n1\n1\n2\n\n\n11\n1993\n2\n1\n4\n\n\n12\n1992\n3\n0\n4\n\n\n\n\n\n\n\n\n\n\n\nEach cell in the dataset refers to the value on a particular variable for a particular case/unit\n\n\nA value is a number, word, or symbol that represents a characteristic of a particular case on a particular variable."
+  },
+  {
+    "objectID": "lectures/lecture1.html#levels-of-measurement",
+    "href": "lectures/lecture1.html#levels-of-measurement",
+    "title": "",
+    "section": "Levels of Measurement",
+    "text": "Levels of Measurement\nThe level of measurement of a variable refers to the type of information represented in the VALUES of that variable.\n\n\n\n\n\nThis includes:\n\n\nThe level of DETAIL conveyed by the potential values\nThe extent to which the values refer to QUANTIFIABLE differences between cases with different values\n\n\n\n\n\nUsually determined by:\n\n\nThe nature of the characteristic we are trying to measure.\nHow we ask the question.\n\n\n\n\nThe level of measurement of a variable refers to the type of information represented in the VALUES of that variable."
   }
 ]

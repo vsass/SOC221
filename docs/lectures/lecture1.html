@@ -8,12 +8,14 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
+<script src="../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.551">
+  <meta name="generator" content="quarto-1.5.43">
 
   <meta name="author" content="Victoria Sass">
-  <title></title>
+  <title> Introductions, Overview of statistics, &amp; Producing data: surveys and sampling </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -324,9 +326,7 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+  <script src="../site_libs/quarto-diagram/mermaid-postprocess-shim.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -420,6 +420,11 @@ named Lemon (aka Clementine)</li>
 <section id="section" class="slide level2" data-menu-title="Syllabus" data-background-iframe="https://vsass.github.io/SOC221/syllabus.html" data-background-interactive="TRUE">
 <h2></h2>
 </section></section>
+<section id="any-questions" class="title-slide slide level1 section-title center" data-background-color="#2ad2c9">
+<h1>Any questions?</h1>
+
+</section>
+
 <section>
 <section id="overview-of-statistics" class="title-slide slide level1 section-title center" data-background-color="#c5b4e3">
 <h1>Overview of statistics</h1>
@@ -481,7 +486,7 @@ named Lemon (aka Clementine)</li>
 </div>
 </div><div class="column" style="width:60%;">
 <div class="fragment">
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 35%">
 <col style="width: 64%">
@@ -504,7 +509,7 @@ named Lemon (aka Clementine)</li>
 </div>
 <p><br></p>
 <div class="fragment">
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 35%">
 <col style="width: 64%">
@@ -528,46 +533,96 @@ named Lemon (aka Clementine)</li>
 </div>
 </div>
 </section>
-<section id="statistics-are-tools-that-allow-us-to-quantify-observations-about-the-world" class="slide level2">
-<h2>Statistics are <span style="color:#2ad2c9">tools</span> that allow us to quantify <span style="color:#e93cac">observations</span> about the world</h2>
+<section class="slide level2">
+
+<h3 id="statistics-are-tools-that-allow-us-to-quantify-observations-about-the-world">Statistics are <span style="color:#2ad2c9">tools</span> that allow us to quantify <span style="color:#e93cac">observations</span> about the world</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="fragment">
-<div class="cell" data-reveal="true" data-fig-responsive="false" data-fig-height="10" data-layout-align="default">
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<pre class="mermaid mermaid-js">stateDiagram-v2
-    s1 : Interesting real-world question
-    s2 : Collect data
-    s3 : Analyze data\n(calculate statistics)
-    s4: Develop an answer to your\nquestion (interpret statistics)
-    
-    s1 --&gt; s2
-    s2 --&gt; s3
-    s3 --&gt; s4
-
-    s4 --&gt; s1
-    
-</pre>
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="-8 -8 273.23828125 337" style="; display: block; margin: auto auto auto 0" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-1" height="576">
+<style>#mermaid-figure-1{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#4b2e83;}#mermaid-figure-1 .error-icon{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);}#mermaid-figure-1 .error-text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);stroke:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-1 .marker.cross{stroke:#171c2c;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-1 .cluster-label text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 .cluster-label span,#mermaid-figure-1 p{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 .label text,#mermaid-figure-1 span,#mermaid-figure-1 p{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-1 .node rect,#mermaid-figure-1 .node circle,#mermaid-figure-1 .node ellipse,#mermaid-figure-1 .node polygon,#mermaid-figure-1 .node path{fill:#c5b4e3;stroke:hsl(261.7021276596, 5.6310679612%, 69.8039215686%);stroke-width:1px;}#mermaid-figure-1 .flowchart-label text{text-anchor:middle;}#mermaid-figure-1 .node .label{text-align:center;}#mermaid-figure-1 .node.clickable{cursor:pointer;}#mermaid-figure-1 .arrowheadPath{fill:#171c2c;}#mermaid-figure-1 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-1 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-1 .edgeLabel{background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);text-align:center;}#mermaid-figure-1 .edgeLabel rect{opacity:0.5;background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);fill:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);}#mermaid-figure-1 .cluster rect{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);stroke:hsl(81.7021276596, 5.6310679612%, 74.8039215686%);stroke-width:1px;}#mermaid-figure-1 .cluster text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 .cluster span,#mermaid-figure-1 p{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);border:1px solid hsl(81.7021276596, 5.6310679612%, 74.8039215686%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-1 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="10" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id1 LE-id2" id="L-id1-id2-0" d="M115.33462761976048,33.5L109.56140843313374,37.666666666666664C103.78818924650699,41.833333333333336,92.24175087325348,50.166666666666664,86.46853168662675,58.5C80.6953125,66.83333333333333,80.6953125,75.16666666666667,80.6953125,79.33333333333333L80.6953125,83.5"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id2 LE-id3" id="L-id2-id3-0" d="M80.6953125,117L80.6953125,121.16666666666667C80.6953125,125.33333333333333,80.6953125,133.66666666666666,80.6953125,142C80.6953125,150.33333333333334,80.6953125,158.66666666666666,80.6953125,162.83333333333334L80.6953125,167"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id3 LE-id4" id="L-id3-id4-0" d="M80.6953125,219L80.6953125,223.16666666666666C80.6953125,227.33333333333334,80.6953125,235.66666666666666,85.42142820669933,244C90.14754391339869,252.33333333333334,99.59977532679738,260.6666666666667,104.32589103349672,264.8333333333333L109.05200674019608,269"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id4 LE-id1" id="L-id4-id1-0" d="M168.03393075980392,269L172.76004646650327,264.8333333333333C177.48616217320262,260.6666666666667,186.93839358660134,252.33333333333334,191.66450929330065,239.66666666666666C196.390625,227,196.390625,210,196.390625,193C196.390625,176,196.390625,159,196.390625,143.54166666666666C196.390625,128.08333333333334,196.390625,114.16666666666667,196.390625,100.25C196.390625,86.33333333333333,196.390625,72.41666666666667,190.61740581337324,61.291666666666664C184.8441866267465,50.166666666666664,173.29774825349304,41.833333333333336,167.52452906686628,37.666666666666664L161.75130988023952,33.5"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(138.54296875, 16.75)" id="flowchart-id1-12" class="node default default flowchart-label"><rect height="33.5" width="237.390625" y="-16.75" x="-118.6953125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-111.1953125, -9.25)" style="" class="label"><rect></rect><foreignobject height="18.5" width="222.390625">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Interesting real-world question</span>
+</div>
+</foreignobject></g></g><g transform="translate(80.6953125, 100.25)" id="flowchart-id2-13" class="node default default flowchart-label"><rect height="33.5" width="102.4765625" y="-16.75" x="-51.23828125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-43.73828125, -9.25)" style="" class="label"><rect></rect><foreignobject height="18.5" width="87.4765625">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Collect data</span>
+</div>
+</foreignobject></g></g><g transform="translate(80.6953125, 193)" id="flowchart-id3-14" class="node default default flowchart-label"><rect height="52" width="161.390625" y="-26" x="-80.6953125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-73.1953125, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="146.390625">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Analyze data<br>(calculate statistics)</span>
+</div>
+</foreignobject></g></g><g transform="translate(138.54296875, 295)" id="flowchart-id4-15" class="node default default flowchart-label"><rect height="52" width="226.1953125" y="-26" x="-113.09765625" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-105.59765625, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="211.1953125">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Develop an answer to your<br>question (interpret statistics)</span>
+</div>
+</foreignobject></g></g></g></g></g>
+</svg>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
-</div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell" data-layout-align="right">
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart TB
-    id1(Interesting real-world question) --&gt; id2(Collect data) --&gt; id3("Analyze data\n(calculate statistics)") --&gt; id4("Develop an answer to your\nquestion (interpret statistics)")
-    id4 --&gt; id1
-</pre>
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="-8 -8 302.03125 374" style="; display: block; margin: auto 0 auto auto" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-6" height="576">
+<style>#mermaid-figure-6{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#e8e3d3;}#mermaid-figure-6 .error-icon{fill:hsl(222.8571428571, 26.6666666667%, 46.1764705882%);}#mermaid-figure-6 .error-text{fill:rgb(168.6500000001, 150.7071428572, 105.8500000001);stroke:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-6 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-6 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-6 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-6 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-6 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-6 .marker.cross{stroke:#171c2c;}#mermaid-figure-6 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-6 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#e8e3d3;}#mermaid-figure-6 .cluster-label text{fill:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 .cluster-label span,#mermaid-figure-6 p{color:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 .label text,#mermaid-figure-6 span,#mermaid-figure-6 p{fill:#e8e3d3;color:#e8e3d3;}#mermaid-figure-6 .node rect,#mermaid-figure-6 .node circle,#mermaid-figure-6 .node ellipse,#mermaid-figure-6 .node polygon,#mermaid-figure-6 .node path{fill:#85754d;stroke:hsl(42.8571428571, 0%, 31.1764705882%);stroke-width:1px;}#mermaid-figure-6 .flowchart-label text{text-anchor:middle;}#mermaid-figure-6 .node .label{text-align:center;}#mermaid-figure-6 .node.clickable{cursor:pointer;}#mermaid-figure-6 .arrowheadPath{fill:#171c2c;}#mermaid-figure-6 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-6 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-6 .edgeLabel{background-color:hsl(-77.1428571429, 26.6666666667%, 41.1764705882%);text-align:center;}#mermaid-figure-6 .edgeLabel rect{opacity:0.5;background-color:hsl(-77.1428571429, 26.6666666667%, 41.1764705882%);fill:hsl(-77.1428571429, 26.6666666667%, 41.1764705882%);}#mermaid-figure-6 .cluster rect{fill:hsl(222.8571428571, 26.6666666667%, 46.1764705882%);stroke:hsl(222.8571428571, 0%, 36.1764705882%);stroke-width:1px;}#mermaid-figure-6 .cluster text{fill:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 .cluster span,#mermaid-figure-6 p{color:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(222.8571428571, 26.6666666667%, 46.1764705882%);border:1px solid hsl(222.8571428571, 0%, 36.1764705882%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-6 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#e8e3d3;}#mermaid-figure-6 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="10" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id1 LE-id2" id="L-id1-id2-0" d="M143.015625,52L143.015625,56.166666666666664C143.015625,60.333333333333336,143.015625,68.66666666666667,143.015625,77C143.015625,85.33333333333333,143.015625,93.66666666666667,143.015625,97.83333333333333L143.015625,102"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id2 LE-id3" id="L-id2-id3-0" d="M143.015625,154L143.015625,158.16666666666666C143.015625,162.33333333333334,143.015625,170.66666666666666,143.015625,179C143.015625,187.33333333333334,143.015625,195.66666666666666,143.015625,199.83333333333334L143.015625,204"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id3 LE-id4" id="L-id3-id4-0" d="M143.015625,256L143.015625,260.1666666666667C143.015625,264.3333333333333,143.015625,272.6666666666667,143.015625,281C143.015625,289.3333333333333,143.015625,297.6666666666667,143.015625,301.8333333333333L143.015625,306"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(143.015625, 26)" id="flowchart-id1-8" class="node default default flowchart-label"><rect height="52" width="283.8046875" y="-26" x="-141.90234375" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-134.40234375, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="268.8046875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">How does access to healthcare affect<br>levels of stress</span>
+</div>
+</foreignobject></g></g><g transform="translate(143.015625, 128)" id="flowchart-id2-9" class="node default default flowchart-label"><rect height="52" width="283.9765625" y="-26" x="-141.98828125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-134.48828125, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="268.9765625">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Collect information about individuals’<br>access to healthcare &amp; level of stress</span>
+</div>
+</foreignobject></g></g><g transform="translate(143.015625, 230)" id="flowchart-id3-10" class="node default default flowchart-label"><rect height="52" width="256.53125" y="-26" x="-128.265625" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-120.765625, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="241.53125">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Quantify levels of stress for those<br>with and without healthcare</span>
+</div>
+</foreignobject></g></g><g transform="translate(143.015625, 332)" id="flowchart-id4-11" class="node default default flowchart-label"><rect height="52" width="286.03125" y="-26" x="-143.015625" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-135.515625, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="271.03125">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Draw a conclusion about relationship<br>between healthcare access and stress</span>
+</div>
+</foreignobject></g></g></g></g></g>
+</svg>
 </div>
 <p></p></figure><p></p>
 </div>
@@ -577,19 +632,156 @@ named Lemon (aka Clementine)</li>
 </div>
 </div>
 </section>
-<section id="check" class="slide level2 r-stretch">
-<h2>check</h2>
-<div class="cell" data-reveal="true" data-fig-width="20" data-layout-align="center">
+<section class="slide level2">
+
+<h3 id="statistics-are-tools-that-allow-us-to-quantify-observations-about-the-world-1">Statistics are <span style="color:#2ad2c9">tools</span> that allow us to quantify <span style="color:#e93cac">observations</span> about the world</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart LR
-    id1(Interesting real-world question) --&gt; id2(Collect data) --&gt; id3("Analyze data\n(calculate statistics)") --&gt; id4("Develop an answer to your\nquestion (interpret statistics)")
-    id4 --&gt; id1
-</pre>
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="-8 -8 273.23828125 337" style="; display: block; margin: auto auto auto 0" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-5" height="576">
+<style>#mermaid-figure-5{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#4b2e83;}#mermaid-figure-5 .error-icon{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);}#mermaid-figure-5 .error-text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);stroke:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-5 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-5 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-5 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-5 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-5 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-5 .marker.cross{stroke:#171c2c;}#mermaid-figure-5 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-5 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-5 .cluster-label text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 .cluster-label span,#mermaid-figure-5 p{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 .label text,#mermaid-figure-5 span,#mermaid-figure-5 p{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-5 .node rect,#mermaid-figure-5 .node circle,#mermaid-figure-5 .node ellipse,#mermaid-figure-5 .node polygon,#mermaid-figure-5 .node path{fill:#c5b4e3;stroke:hsl(261.7021276596, 5.6310679612%, 69.8039215686%);stroke-width:1px;}#mermaid-figure-5 .flowchart-label text{text-anchor:middle;}#mermaid-figure-5 .node .label{text-align:center;}#mermaid-figure-5 .node.clickable{cursor:pointer;}#mermaid-figure-5 .arrowheadPath{fill:#171c2c;}#mermaid-figure-5 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-5 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-5 .edgeLabel{background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);text-align:center;}#mermaid-figure-5 .edgeLabel rect{opacity:0.5;background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);fill:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);}#mermaid-figure-5 .cluster rect{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);stroke:hsl(81.7021276596, 5.6310679612%, 74.8039215686%);stroke-width:1px;}#mermaid-figure-5 .cluster text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 .cluster span,#mermaid-figure-5 p{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);border:1px solid hsl(81.7021276596, 5.6310679612%, 74.8039215686%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-5 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-5 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="10" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id1 LE-id2" id="L-id1-id2-0" d="M115.33462761976048,33.5L109.56140843313374,37.666666666666664C103.78818924650699,41.833333333333336,92.24175087325348,50.166666666666664,86.46853168662675,58.5C80.6953125,66.83333333333333,80.6953125,75.16666666666667,80.6953125,79.33333333333333L80.6953125,83.5"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id2 LE-id3" id="L-id2-id3-0" d="M80.6953125,117L80.6953125,121.16666666666667C80.6953125,125.33333333333333,80.6953125,133.66666666666666,80.6953125,142C80.6953125,150.33333333333334,80.6953125,158.66666666666666,80.6953125,162.83333333333334L80.6953125,167"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id3 LE-id4" id="L-id3-id4-0" d="M80.6953125,219L80.6953125,223.16666666666666C80.6953125,227.33333333333334,80.6953125,235.66666666666666,85.42142820669933,244C90.14754391339869,252.33333333333334,99.59977532679738,260.6666666666667,104.32589103349672,264.8333333333333L109.05200674019608,269"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id4 LE-id1" id="L-id4-id1-0" d="M168.03393075980392,269L172.76004646650327,264.8333333333333C177.48616217320262,260.6666666666667,186.93839358660134,252.33333333333334,191.66450929330065,239.66666666666666C196.390625,227,196.390625,210,196.390625,193C196.390625,176,196.390625,159,196.390625,143.54166666666666C196.390625,128.08333333333334,196.390625,114.16666666666667,196.390625,100.25C196.390625,86.33333333333333,196.390625,72.41666666666667,190.61740581337324,61.291666666666664C184.8441866267465,50.166666666666664,173.29774825349304,41.833333333333336,167.52452906686628,37.666666666666664L161.75130988023952,33.5"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(138.54296875, 16.75)" id="flowchart-id1-16" class="node default default flowchart-label"><rect height="33.5" width="237.390625" y="-16.75" x="-118.6953125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-111.1953125, -9.25)" style="" class="label"><rect></rect><foreignobject height="18.5" width="222.390625">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Interesting real-world question</span>
+</div>
+</foreignobject></g></g><g transform="translate(80.6953125, 100.25)" id="flowchart-id2-17" class="node default default flowchart-label"><rect height="33.5" width="102.4765625" y="-16.75" x="-51.23828125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-43.73828125, -9.25)" style="" class="label"><rect></rect><foreignobject height="18.5" width="87.4765625">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Collect data</span>
+</div>
+</foreignobject></g></g><g transform="translate(80.6953125, 193)" id="flowchart-id3-18" class="node default default flowchart-label"><rect height="52" width="161.390625" y="-26" x="-80.6953125" ry="5" rx="5" style="fill:#aadb1e;" class="basic label-container"></rect><g transform="translate(-73.1953125, -18.5)" style="color:#4b2e83;" class="label"><rect></rect><foreignobject height="37" width="146.390625">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(75, 46, 131); display: inline-block; white-space: nowrap;">
+<span class="nodeLabel" style="color:#4b2e83;">Analyze data<br>(calculate statistics)</span>
+</div>
+</foreignobject></g></g><g transform="translate(138.54296875, 295)" id="flowchart-id4-19" class="node default default flowchart-label"><rect height="52" width="226.1953125" y="-26" x="-113.09765625" ry="5" rx="5" style="fill:#aadb1e;" class="basic label-container"></rect><g transform="translate(-105.59765625, -18.5)" style="color:#4b2e83;" class="label"><rect></rect><foreignobject height="37" width="211.1953125">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(75, 46, 131); display: inline-block; white-space: nowrap;">
+<span class="nodeLabel" style="color:#4b2e83;">Develop an answer to your<br>question (interpret statistics)</span>
+</div>
+</foreignobject></g></g></g></g></g>
+</svg>
 </div>
 <p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<div class="cell" data-layout-align="right">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="-8 -8 151.84375 68" style="; display: block; margin: auto 0 auto auto" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-4" height="240">
+<style>#mermaid-figure-4{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#4b2e83;}#mermaid-figure-4 .error-icon{fill:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);}#mermaid-figure-4 .error-text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);stroke:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-4 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-4 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-4 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-4 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-4 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-4 .marker.cross{stroke:#171c2c;}#mermaid-figure-4 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-4 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-4 .cluster-label text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 .cluster-label span,#mermaid-figure-4 p{color:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 .label text,#mermaid-figure-4 span,#mermaid-figure-4 p{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-4 .node rect,#mermaid-figure-4 .node circle,#mermaid-figure-4 .node ellipse,#mermaid-figure-4 .node polygon,#mermaid-figure-4 .node path{fill:#aadb1e;stroke:hsl(75.5555555556, 35.9036144578%, 38.8235294118%);stroke-width:1px;}#mermaid-figure-4 .flowchart-label text{text-anchor:middle;}#mermaid-figure-4 .node .label{text-align:center;}#mermaid-figure-4 .node.clickable{cursor:pointer;}#mermaid-figure-4 .arrowheadPath{fill:#171c2c;}#mermaid-figure-4 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-4 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-4 .edgeLabel{background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);text-align:center;}#mermaid-figure-4 .edgeLabel rect{opacity:0.5;background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);fill:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);}#mermaid-figure-4 .cluster rect{fill:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);stroke:hsl(255.5555555556, 35.9036144578%, 43.8235294118%);stroke-width:1px;}#mermaid-figure-4 .cluster text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 .cluster span,#mermaid-figure-4 p{color:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);border:1px solid hsl(255.5555555556, 35.9036144578%, 43.8235294118%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-4 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-4 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="10" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g transform="translate(67.921875, 26)" id="flowchart-id1-2" class="node default default flowchart-label"><polygon style="" transform="translate(-67.921875,26)" class="label-container" points="13,0 122.84375,0 135.84375,-26 122.84375,-52 13,-52 0,-26"></polygon><g transform="translate(-47.421875, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="94.84375">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Main focus of<br>our course</span>
+</div>
+</foreignobject></g></g></g></g></g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="statistics-are-tools-that-allow-us-to-quantify-observations-about-the-world-2">Statistics are <span style="color:#2ad2c9">tools</span> that allow us to quantify <span style="color:#e93cac">observations</span> about the world</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="-8 -8 273.23828125 337" style="; display: block; margin: auto auto auto 0" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-3" height="576">
+<style>#mermaid-figure-3{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#4b2e83;}#mermaid-figure-3 .error-icon{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);}#mermaid-figure-3 .error-text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);stroke:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-3 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-3 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-3 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-3 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-3 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-3 .marker.cross{stroke:#171c2c;}#mermaid-figure-3 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-3 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-3 .cluster-label text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 .cluster-label span,#mermaid-figure-3 p{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 .label text,#mermaid-figure-3 span,#mermaid-figure-3 p{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-3 .node rect,#mermaid-figure-3 .node circle,#mermaid-figure-3 .node ellipse,#mermaid-figure-3 .node polygon,#mermaid-figure-3 .node path{fill:#c5b4e3;stroke:hsl(261.7021276596, 5.6310679612%, 69.8039215686%);stroke-width:1px;}#mermaid-figure-3 .flowchart-label text{text-anchor:middle;}#mermaid-figure-3 .node .label{text-align:center;}#mermaid-figure-3 .node.clickable{cursor:pointer;}#mermaid-figure-3 .arrowheadPath{fill:#171c2c;}#mermaid-figure-3 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-3 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-3 .edgeLabel{background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);text-align:center;}#mermaid-figure-3 .edgeLabel rect{opacity:0.5;background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);fill:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);}#mermaid-figure-3 .cluster rect{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);stroke:hsl(81.7021276596, 5.6310679612%, 74.8039215686%);stroke-width:1px;}#mermaid-figure-3 .cluster text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 .cluster span,#mermaid-figure-3 p{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);border:1px solid hsl(81.7021276596, 5.6310679612%, 74.8039215686%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-3 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-3 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="10" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id1 LE-id2" id="L-id1-id2-0" d="M115.33462761976048,33.5L109.56140843313374,37.666666666666664C103.78818924650699,41.833333333333336,92.24175087325348,50.166666666666664,86.46853168662675,58.5C80.6953125,66.83333333333333,80.6953125,75.16666666666667,80.6953125,79.33333333333333L80.6953125,83.5"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id2 LE-id3" id="L-id2-id3-0" d="M80.6953125,117L80.6953125,121.16666666666667C80.6953125,125.33333333333333,80.6953125,133.66666666666666,80.6953125,142C80.6953125,150.33333333333334,80.6953125,158.66666666666666,80.6953125,162.83333333333334L80.6953125,167"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id3 LE-id4" id="L-id3-id4-0" d="M80.6953125,219L80.6953125,223.16666666666666C80.6953125,227.33333333333334,80.6953125,235.66666666666666,85.42142820669933,244C90.14754391339869,252.33333333333334,99.59977532679738,260.6666666666667,104.32589103349672,264.8333333333333L109.05200674019608,269"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id4 LE-id1" id="L-id4-id1-0" d="M168.03393075980392,269L172.76004646650327,264.8333333333333C177.48616217320262,260.6666666666667,186.93839358660134,252.33333333333334,191.66450929330065,239.66666666666666C196.390625,227,196.390625,210,196.390625,193C196.390625,176,196.390625,159,196.390625,143.54166666666666C196.390625,128.08333333333334,196.390625,114.16666666666667,196.390625,100.25C196.390625,86.33333333333333,196.390625,72.41666666666667,190.61740581337324,61.291666666666664C184.8441866267465,50.166666666666664,173.29774825349304,41.833333333333336,167.52452906686628,37.666666666666664L161.75130988023952,33.5"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(138.54296875, 16.75)" id="flowchart-id1-16" class="node default default flowchart-label"><rect height="33.5" width="237.390625" y="-16.75" x="-118.6953125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-111.1953125, -9.25)" style="" class="label"><rect></rect><foreignobject height="18.5" width="222.390625">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Interesting real-world question</span>
+</div>
+</foreignobject></g></g><g transform="translate(80.6953125, 100.25)" id="flowchart-id2-17" class="node default default flowchart-label"><rect height="33.5" width="102.4765625" y="-16.75" x="-51.23828125" ry="5" rx="5" style="fill:#aadb1e;" class="basic label-container"></rect><g transform="translate(-43.73828125, -9.25)" style="color:#4b2e83;" class="label"><rect></rect><foreignobject height="18.5" width="87.4765625">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(75, 46, 131); display: inline-block; white-space: nowrap;">
+<span class="nodeLabel" style="color:#4b2e83;">Collect data</span>
+</div>
+</foreignobject></g></g><g transform="translate(80.6953125, 193)" id="flowchart-id3-18" class="node default default flowchart-label"><rect height="52" width="161.390625" y="-26" x="-80.6953125" ry="5" rx="5" style="fill:#aadb1e;" class="basic label-container"></rect><g transform="translate(-73.1953125, -18.5)" style="color:#4b2e83;" class="label"><rect></rect><foreignobject height="37" width="146.390625">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(75, 46, 131); display: inline-block; white-space: nowrap;">
+<span class="nodeLabel" style="color:#4b2e83;">Analyze data<br>(calculate statistics)</span>
+</div>
+</foreignobject></g></g><g transform="translate(138.54296875, 295)" id="flowchart-id4-19" class="node default default flowchart-label"><rect height="52" width="226.1953125" y="-26" x="-113.09765625" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-105.59765625, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="211.1953125">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Develop an answer to your<br>question (interpret statistics)</span>
+</div>
+</foreignobject></g></g></g></g></g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><br></p>
+<p><br></p>
+<div class="cell" data-layout-align="right">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="-8 -8 105.109375 59" style="; display: block; margin: auto 0 auto auto" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="528" id="mermaid-figure-2" height="384">
+<style>#mermaid-figure-2{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:.225em;fill:#4b2e83;}#mermaid-figure-2 .error-icon{fill:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);}#mermaid-figure-2 .error-text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);stroke:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-2 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-2 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-2 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-2 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-2 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-2 .marker.cross{stroke:#171c2c;}#mermaid-figure-2 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:.225em;}#mermaid-figure-2 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-2 .cluster-label text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 .cluster-label span,#mermaid-figure-2 p{color:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 .label text,#mermaid-figure-2 span,#mermaid-figure-2 p{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-2 .node rect,#mermaid-figure-2 .node circle,#mermaid-figure-2 .node ellipse,#mermaid-figure-2 .node polygon,#mermaid-figure-2 .node path{fill:#aadb1e;stroke:hsl(75.5555555556, 35.9036144578%, 38.8235294118%);stroke-width:1px;}#mermaid-figure-2 .flowchart-label text{text-anchor:middle;}#mermaid-figure-2 .node .label{text-align:center;}#mermaid-figure-2 .node.clickable{cursor:pointer;}#mermaid-figure-2 .arrowheadPath{fill:#171c2c;}#mermaid-figure-2 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-2 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-2 .edgeLabel{background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);text-align:center;}#mermaid-figure-2 .edgeLabel rect{opacity:0.5;background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);fill:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);}#mermaid-figure-2 .cluster rect{fill:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);stroke:hsl(255.5555555556, 35.9036144578%, 43.8235294118%);stroke-width:1px;}#mermaid-figure-2 .cluster text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 .cluster span,#mermaid-figure-2 p{color:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);border:1px solid hsl(255.5555555556, 35.9036144578%, 43.8235294118%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-2 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-2 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="10" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g transform="translate(44.5546875, 21.5)" id="flowchart-id1-2" class="node default default flowchart-label"><rect height="43" width="89.109375" y="-21.5" x="-44.5546875" ry="0" rx="0" style="" class="basic label-container"></rect><g transform="translate(-37.0546875, -14)" style="" class="label"><rect></rect><foreignobject height="28" width="74.109375">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">In order to use and<br>interpret statistics<br>we need to understand<br>where our data come from.</span>
+</div>
+</foreignobject></g></g></g></g></g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -599,15 +791,1820 @@ named Lemon (aka Clementine)</li>
 
 </section>
 
+<section>
 <section id="producing-data-surveys-and-sampling" class="title-slide slide level1 section-title center" data-background-color="#c5b4e3">
 <h1>Producing data:<br>surveys and sampling</h1>
+
+</section>
+<section id="what-are-datawhere-do-they-come-from" class="slide level2">
+<h2>What are data/where do they come from?</h2>
+<div>
+<ul>
+<li class="fragment">Data = information, often in large quantities
+<ul>
+<li class="fragment"><span style="color:#666666">Characteristics of 47,000+ students at UW-Seattle</span></li>
+<li class="fragment"><span style="color:#666666">Conditions in 65,000 neighborhoods in the U.S.</span></li>
+<li class="fragment"><span style="color:#666666">Attributes of 128,580,000 households in the U.S.</span></li>
+</ul></li>
+<li class="fragment">From any source we choose
+<ul>
+<li class="fragment"><span style="color:#666666">Newspapers, books, internet</span></li>
+<li class="fragment"><span style="color:#666666">Court filings, public records</span></li>
+<li class="fragment"><span style="color:#666666">Cell phone call records, twitter, Reddit</span></li>
+</ul></li>
+<li class="fragment">Much social data comes from <span style="color:#e93cac"><strong>SURVEYS</strong></span>…</li>
+</ul>
+</div>
+</section>
+<section id="surveys" class="slide level2">
+<h2>Surveys</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="fragment">
+<div class="r-fit-text">
+<blockquote>
+<p><span style="color:#e93cac"><strong>Survey</strong></span><br>A tool used to ask<br>people question(s)<br>in order to gather<br>information about<br>what the subject<br>does, feels,<br>or thinks.</p>
+</blockquote>
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="r-stack">
+<p><img data-src="images/survey1.jpeg" class="fragment absolute" style="bottom: 10px; right: -50px; width: 600px; "></p>
+<p><img data-src="images/survey2.jpeg" class="fragment"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="examples-of-survey-questions" class="slide level2">
+<h2>Examples of survey questions</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment fade-in-then-semi-out">
+<ol type="1">
+<li><p>In what year were you born? <br> (enter a 4-digit number; i.e.&nbsp;2005) <br></p>
+<p><strong>_________</strong></p></li>
+</ol>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ol start="2" type="1">
+<li>With which gender do you most identify?<br>
+☐ Female<br>
+☐ Male<br>
+☐ Non-binary<br>
+☐ Other<br>
+</li>
+</ol>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ol start="3" type="1">
+<li>Are you of Hispanic, Latino, or of Spanish origin?<br>
+☐ Yes ☐ No</li>
+</ol>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment fade-in-then-semi-out">
+<ol start="4" type="1">
+<li>How would you describe your race? <br> (select all that apply) <br> ☐ American Indian or Alask Native<br>
+☐ Asian<br>
+☐ Black or African American<br>
+☐ Native Hawaiian and/or Pacific Islander<br>
+☐ White or Caucasian<br>
+☐ Middle Eastern or North African</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="what-do-we-do-with-the-results-of-a-survey" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">What do we do with the results of a survey?</h2>
+</section>
+<section id="what-do-we-do-with-the-results-of-a-survey-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">What do we do with the results of a survey?</h2>
+<div style="margin-top: 200px; margin-left: 200px; font-size: 3em;">
+<p><span class="shadow10">Turn them into DATA…</span></p>
+</div>
+</section>
+<section id="survey-data" class="slide level2">
+<h2>Survey DATA</h2>
+<p>A survey with produce a dataset for analyses</p>
+<div class="fragment" data-fragment-index="1">
+<div class="cell">
+<div class="cell-output-display">
+<div id="qnedphhnpz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qnedphhnpz table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#qnedphhnpz thead, #qnedphhnpz tbody, #qnedphhnpz tfoot, #qnedphhnpz tr, #qnedphhnpz td, #qnedphhnpz th {
+  border-style: none;
+}
+
+#qnedphhnpz p {
+  margin: 0;
+  padding: 0;
+}
+
+#qnedphhnpz .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 90%;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #F2F2F2;
+  width: 90%;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#qnedphhnpz .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#qnedphhnpz .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #F2F2F2;
+  border-bottom-width: 0;
+}
+
+#qnedphhnpz .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #F2F2F2;
+  border-top-width: 0;
+}
+
+#qnedphhnpz .gt_heading {
+  background-color: #F2F2F2;
+  text-align: center;
+  border-bottom-color: #F2F2F2;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qnedphhnpz .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qnedphhnpz .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qnedphhnpz .gt_col_heading {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#qnedphhnpz .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#qnedphhnpz .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#qnedphhnpz .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#qnedphhnpz .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#qnedphhnpz .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#qnedphhnpz .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#qnedphhnpz .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#qnedphhnpz .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#qnedphhnpz .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#qnedphhnpz .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#qnedphhnpz .gt_stub {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qnedphhnpz .gt_stub_row_group {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#qnedphhnpz .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#qnedphhnpz .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#qnedphhnpz .gt_summary_row {
+  color: #333333;
+  background-color: #F2F2F2;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qnedphhnpz .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#qnedphhnpz .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#qnedphhnpz .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qnedphhnpz .gt_grand_summary_row {
+  color: #333333;
+  background-color: #F2F2F2;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qnedphhnpz .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#qnedphhnpz .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qnedphhnpz .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#qnedphhnpz .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qnedphhnpz .gt_footnotes {
+  color: #333333;
+  background-color: #F2F2F2;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qnedphhnpz .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qnedphhnpz .gt_sourcenotes {
+  color: #333333;
+  background-color: #F2F2F2;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qnedphhnpz .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qnedphhnpz .gt_left {
+  text-align: left;
+}
+
+#qnedphhnpz .gt_center {
+  text-align: center;
+}
+
+#qnedphhnpz .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#qnedphhnpz .gt_font_normal {
+  font-weight: normal;
+}
+
+#qnedphhnpz .gt_font_bold {
+  font-weight: bold;
+}
+
+#qnedphhnpz .gt_font_italic {
+  font-style: italic;
+}
+
+#qnedphhnpz .gt_super {
+  font-size: 65%;
+}
+
+#qnedphhnpz .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#qnedphhnpz .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#qnedphhnpz .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#qnedphhnpz .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#qnedphhnpz .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#qnedphhnpz .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#qnedphhnpz .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Person #" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Person #</th>
+<th id="birth_year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">birth_year</th>
+<th id="gender" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">gender</th>
+<th id="ethnicity" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ethnicity</th>
+<th id="race" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">race</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">1</td>
+<td class="gt_row gt_right" headers="birth_year">1992</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">5</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">2</td>
+<td class="gt_row gt_right" headers="birth_year">1993</td>
+<td class="gt_row gt_right" headers="gender">2</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">5</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">3</td>
+<td class="gt_row gt_right" headers="birth_year">1995</td>
+<td class="gt_row gt_right" headers="gender">2</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">4</td>
+<td class="gt_row gt_right" headers="birth_year">1980</td>
+<td class="gt_row gt_right" headers="gender">2</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">5</td>
+<td class="gt_row gt_right" headers="birth_year">1991</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">5</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">6</td>
+<td class="gt_row gt_right" headers="birth_year">1975</td>
+<td class="gt_row gt_right" headers="gender">4</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">7</td>
+<td class="gt_row gt_right" headers="birth_year">1960</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">6</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">8</td>
+<td class="gt_row gt_right" headers="birth_year">1952</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">5</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">9</td>
+<td class="gt_row gt_right" headers="birth_year">2000</td>
+<td class="gt_row gt_right" headers="gender">3</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">10</td>
+<td class="gt_row gt_right" headers="birth_year">1990</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">11</td>
+<td class="gt_row gt_right" headers="birth_year">1993</td>
+<td class="gt_row gt_right" headers="gender">2</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">12</td>
+<td class="gt_row gt_right" headers="birth_year">1992</td>
+<td class="gt_row gt_right" headers="gender">3</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">4</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 6px solid #e93cac; width: 150px; height: 25px; margin: 10px; position: absolute; top: 170px; left: 160px">
+
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 375px; height: 125px; padding: 10px 20px 10px 20px; position: absolute; top: 160px; left: 350px">
+<p>Each <span class="underlined-text">row</span> in the dataset contains information on one <span class="underlined-text">data unit</span> (i.e.&nbsp;individual or <span class="underlined-text">case</span>)</p>
+</div>
+<div class="fragment" data-fragment-index="3" data-id="box3" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; height: 100px; padding: 5px 10px 20px 10px; position: absolute; top: 320px; left: 350px">
+<p><strong>Units</strong> are the objects described by a set of data. May be people, animals, businesses, events, etc. – whatever you collect data about.</p>
+</div>
+<div class="fragment" data-fragment-index="4" data-id="box4" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 200px; height: 160px; padding: 5px 10px 20px 10px; position: absolute; top: 119px; right: 40px">
+<p>People that you survey become <span class="underlined-text">units</span>, <span class="underlined-text">cases</span>, or <span class="underlined-text">individuals</span> in a data set.</p>
+</div>
+</section>
+<section id="survey-data-1" class="slide level2">
+<h2>Survey DATA</h2>
+<p>A survey with produce a dataset for analyses</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="wvtnfygmfw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wvtnfygmfw table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#wvtnfygmfw thead, #wvtnfygmfw tbody, #wvtnfygmfw tfoot, #wvtnfygmfw tr, #wvtnfygmfw td, #wvtnfygmfw th {
+  border-style: none;
+}
+
+#wvtnfygmfw p {
+  margin: 0;
+  padding: 0;
+}
+
+#wvtnfygmfw .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 90%;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #F2F2F2;
+  width: 90%;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#wvtnfygmfw .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#wvtnfygmfw .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #F2F2F2;
+  border-bottom-width: 0;
+}
+
+#wvtnfygmfw .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #F2F2F2;
+  border-top-width: 0;
+}
+
+#wvtnfygmfw .gt_heading {
+  background-color: #F2F2F2;
+  text-align: center;
+  border-bottom-color: #F2F2F2;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wvtnfygmfw .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wvtnfygmfw .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wvtnfygmfw .gt_col_heading {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#wvtnfygmfw .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#wvtnfygmfw .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#wvtnfygmfw .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#wvtnfygmfw .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#wvtnfygmfw .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#wvtnfygmfw .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#wvtnfygmfw .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#wvtnfygmfw .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#wvtnfygmfw .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#wvtnfygmfw .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wvtnfygmfw .gt_stub {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wvtnfygmfw .gt_stub_row_group {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#wvtnfygmfw .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#wvtnfygmfw .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#wvtnfygmfw .gt_summary_row {
+  color: #333333;
+  background-color: #F2F2F2;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wvtnfygmfw .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#wvtnfygmfw .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#wvtnfygmfw .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wvtnfygmfw .gt_grand_summary_row {
+  color: #333333;
+  background-color: #F2F2F2;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wvtnfygmfw .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#wvtnfygmfw .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wvtnfygmfw .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#wvtnfygmfw .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wvtnfygmfw .gt_footnotes {
+  color: #333333;
+  background-color: #F2F2F2;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wvtnfygmfw .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wvtnfygmfw .gt_sourcenotes {
+  color: #333333;
+  background-color: #F2F2F2;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wvtnfygmfw .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wvtnfygmfw .gt_left {
+  text-align: left;
+}
+
+#wvtnfygmfw .gt_center {
+  text-align: center;
+}
+
+#wvtnfygmfw .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#wvtnfygmfw .gt_font_normal {
+  font-weight: normal;
+}
+
+#wvtnfygmfw .gt_font_bold {
+  font-weight: bold;
+}
+
+#wvtnfygmfw .gt_font_italic {
+  font-style: italic;
+}
+
+#wvtnfygmfw .gt_super {
+  font-size: 65%;
+}
+
+#wvtnfygmfw .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#wvtnfygmfw .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#wvtnfygmfw .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#wvtnfygmfw .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#wvtnfygmfw .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#wvtnfygmfw .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#wvtnfygmfw .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Person #" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Person #</th>
+<th id="birth_year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">birth_year</th>
+<th id="gender" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">gender</th>
+<th id="ethnicity" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ethnicity</th>
+<th id="race" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">race</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">1</td>
+<td class="gt_row gt_right" headers="birth_year">1992</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">5</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">2</td>
+<td class="gt_row gt_right" headers="birth_year">1993</td>
+<td class="gt_row gt_right" headers="gender">2</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">5</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">3</td>
+<td class="gt_row gt_right" headers="birth_year">1995</td>
+<td class="gt_row gt_right" headers="gender">2</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">4</td>
+<td class="gt_row gt_right" headers="birth_year">1980</td>
+<td class="gt_row gt_right" headers="gender">2</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">5</td>
+<td class="gt_row gt_right" headers="birth_year">1991</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">5</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">6</td>
+<td class="gt_row gt_right" headers="birth_year">1975</td>
+<td class="gt_row gt_right" headers="gender">4</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">7</td>
+<td class="gt_row gt_right" headers="birth_year">1960</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">6</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">8</td>
+<td class="gt_row gt_right" headers="birth_year">1952</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">5</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">9</td>
+<td class="gt_row gt_right" headers="birth_year">2000</td>
+<td class="gt_row gt_right" headers="gender">3</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">10</td>
+<td class="gt_row gt_right" headers="birth_year">1990</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">11</td>
+<td class="gt_row gt_right" headers="birth_year">1993</td>
+<td class="gt_row gt_right" headers="gender">2</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">12</td>
+<td class="gt_row gt_right" headers="birth_year">1992</td>
+<td class="gt_row gt_right" headers="gender">3</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">4</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div data-id="box1" style="background: rgba(255, 255, 255, 0); border: 6px solid #e93cac; width: 150px; height: 25px; margin: 10px; position: absolute; top: 128px; left: 354px">
+
+</div>
+<div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 375px; height: 80px; padding: 0px 0px 10px 10px; position: absolute; top: 183px; left: 350px">
+<p>Each <span class="underlined-text">column</span> in the dataset contains data for one <span class="underlined-text">variable</span></p>
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 200px; height: 100px; padding: 0px 10px 20px 10px; position: absolute; top: 170px; right: 70px">
+<p>Questions in the survey become variables.</p>
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; height: 140px; padding: 0px 10px 20px 10px; position: absolute; top: 288px; left: 350px">
+<p>A <span class="underlined-text"><strong>variable</strong></span> is a characteristic of units (cases or observations) that can take on different values or attributes.</p>
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 160px; padding: 0px 0px 20px 10px; position: absolute; top: 305px; right: 85px">
+<p>Antonym to “variable” is a <span style="color: white"><strong>CONSTANT</strong></span> (same value for all cases)</p>
+</div>
+</section>
+<section id="survey-data-2" class="slide level2">
+<h2>Survey DATA</h2>
+<p>A survey with produce a dataset for analyses</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="rkbgksxckm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rkbgksxckm table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#rkbgksxckm thead, #rkbgksxckm tbody, #rkbgksxckm tfoot, #rkbgksxckm tr, #rkbgksxckm td, #rkbgksxckm th {
+  border-style: none;
+}
+
+#rkbgksxckm p {
+  margin: 0;
+  padding: 0;
+}
+
+#rkbgksxckm .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 90%;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #F2F2F2;
+  width: 90%;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#rkbgksxckm .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#rkbgksxckm .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #F2F2F2;
+  border-bottom-width: 0;
+}
+
+#rkbgksxckm .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #F2F2F2;
+  border-top-width: 0;
+}
+
+#rkbgksxckm .gt_heading {
+  background-color: #F2F2F2;
+  text-align: center;
+  border-bottom-color: #F2F2F2;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#rkbgksxckm .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rkbgksxckm .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#rkbgksxckm .gt_col_heading {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#rkbgksxckm .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#rkbgksxckm .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#rkbgksxckm .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#rkbgksxckm .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#rkbgksxckm .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#rkbgksxckm .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#rkbgksxckm .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#rkbgksxckm .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#rkbgksxckm .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#rkbgksxckm .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#rkbgksxckm .gt_stub {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rkbgksxckm .gt_stub_row_group {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#rkbgksxckm .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#rkbgksxckm .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#rkbgksxckm .gt_summary_row {
+  color: #333333;
+  background-color: #F2F2F2;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rkbgksxckm .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#rkbgksxckm .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#rkbgksxckm .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rkbgksxckm .gt_grand_summary_row {
+  color: #333333;
+  background-color: #F2F2F2;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rkbgksxckm .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#rkbgksxckm .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rkbgksxckm .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#rkbgksxckm .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rkbgksxckm .gt_footnotes {
+  color: #333333;
+  background-color: #F2F2F2;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#rkbgksxckm .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rkbgksxckm .gt_sourcenotes {
+  color: #333333;
+  background-color: #F2F2F2;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#rkbgksxckm .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rkbgksxckm .gt_left {
+  text-align: left;
+}
+
+#rkbgksxckm .gt_center {
+  text-align: center;
+}
+
+#rkbgksxckm .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#rkbgksxckm .gt_font_normal {
+  font-weight: normal;
+}
+
+#rkbgksxckm .gt_font_bold {
+  font-weight: bold;
+}
+
+#rkbgksxckm .gt_font_italic {
+  font-style: italic;
+}
+
+#rkbgksxckm .gt_super {
+  font-size: 65%;
+}
+
+#rkbgksxckm .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#rkbgksxckm .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#rkbgksxckm .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#rkbgksxckm .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#rkbgksxckm .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#rkbgksxckm .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#rkbgksxckm .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Person #" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Person #</th>
+<th id="birth_year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">birth_year</th>
+<th id="gender" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">gender</th>
+<th id="ethnicity" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ethnicity</th>
+<th id="race" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">race</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">1</td>
+<td class="gt_row gt_right" headers="birth_year">1992</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">5</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">2</td>
+<td class="gt_row gt_right" headers="birth_year">1993</td>
+<td class="gt_row gt_right" headers="gender">2</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">5</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">3</td>
+<td class="gt_row gt_right" headers="birth_year">1995</td>
+<td class="gt_row gt_right" headers="gender">2</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">4</td>
+<td class="gt_row gt_right" headers="birth_year">1980</td>
+<td class="gt_row gt_right" headers="gender">2</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">5</td>
+<td class="gt_row gt_right" headers="birth_year">1991</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">5</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">6</td>
+<td class="gt_row gt_right" headers="birth_year">1975</td>
+<td class="gt_row gt_right" headers="gender">4</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">7</td>
+<td class="gt_row gt_right" headers="birth_year">1960</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">6</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">8</td>
+<td class="gt_row gt_right" headers="birth_year">1952</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">5</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">9</td>
+<td class="gt_row gt_right" headers="birth_year">2000</td>
+<td class="gt_row gt_right" headers="gender">3</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">10</td>
+<td class="gt_row gt_right" headers="birth_year">1990</td>
+<td class="gt_row gt_right" headers="gender">1</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Person #">11</td>
+<td class="gt_row gt_right" headers="birth_year">1993</td>
+<td class="gt_row gt_right" headers="gender">2</td>
+<td class="gt_row gt_right" headers="ethnicity">1</td>
+<td class="gt_row gt_right" headers="race">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Person #">12</td>
+<td class="gt_row gt_right" headers="birth_year">1992</td>
+<td class="gt_row gt_right" headers="gender">3</td>
+<td class="gt_row gt_right" headers="ethnicity">0</td>
+<td class="gt_row gt_right" headers="race">4</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div data-id="box1" style="background: rgba(255, 255, 255, 0); border: 6px solid #e93cac; width: 150px; height: 25px; margin: 10px; position: absolute; top: 259px; left: 380px">
+
+</div>
+<div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px; height: 150px; padding: 0px 0px 10px 10px; position: absolute; top: 320px; left: 360px">
+<p>Each <span class="underlined-text">cell</span> in the dataset refers to the <span class="underlined-text">value</span> on a particular variable for a particular case/unit</p>
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box3" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 200px; height: 280px; padding: 0px 10px 20px 10px; position: absolute; top: 288px; left: 690px">
+<p>A <span class="underlined-text"><strong>value</strong></span> is a number, word, or symbol that represents a characteristic of a particular case on a particular variable.</p>
+</div>
+</section>
+<section id="levels-of-measurement" class="slide level2">
+<h2>Levels of Measurement</h2>
+<p>The <span style="color: #e93cac">level of measurement</span> of a variable refers to the type of information represented in the VALUES of that variable.</p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<!-- -->
+<h4 id="this-includes">This includes:<br>
+</h4>
+<ul>
+<li>The level of DETAIL conveyed by the potential values</li>
+<li>The extent to which the values refer to QUANTIFIABLE differences between cases with different values</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<!-- -->
+<h4 id="usually-determined-by">Usually determined by:<br>
+</h4>
+<ol type="1">
+<li>The nature of the characteristic we are trying to measure.</li>
+<li>How we ask the question.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>The <span style="color: #e93cac">level of measurement</span> of a variable refers to the type of information represented in the VALUES of that variable.</p>
+<div class="fragment">
+<p><br></p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+</div>
+</section></section>
     </div>
   </div>
 
@@ -820,6 +2817,44 @@ named Lemon (aka Clementine)</li>
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -852,18 +2887,7 @@ named Lemon (aka Clementine)</li>
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -895,7 +2919,29 @@ named Lemon (aka Clementine)</li>
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -903,7 +2949,7 @@ named Lemon (aka Clementine)</li>
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
