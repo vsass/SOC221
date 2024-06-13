@@ -26,3 +26,65 @@ format:
     progress: true
     link-external-icon: true 
 ---
+
+```{r}
+#| echo: false
+#| cache: false
+require(tidyverse)
+require(gt)
+
+knitr::opts_chunk$set(comment = ">")
+```
+
+
+# Frequency tables {.section-title background-color="#c5b4e3"}
+
+## Descriptive statistics
+
+## Distribution
+
+## Frequency tables: overview
+
+## Step 1: Record raw data
+
+## Step 2: Count the number of cases for each category
+
+## Step 3: Place in raw frequency table
+
+## Step 4: Add a percentage (relative frequency) column
+
+## Step 4.1: Make comparisons across categories
+## Step 4.2: Make comparisons across groups
+
+## Step 5: Add a cumulative frequency column
+## Step 6: Add a cumulative percentage column
+
+## Things to watch out for
+
+1. Reverse ordering of categories
+2. Level of measurement makes some columns inappropriate
+3. Missing information
+
+# Break! {.section-title background-color="#2ad2c9"}
+
+# Graphical techniques {.section-title background-color="#c5b4e3"}
+
+## Overview
+
+## Rule 1: Choose the right kind of graph
+
+1. Nominal & ordinal
+2. Interval
+3. Time plots
+
+## Rule 2: Clearly label the nature of the information
+
+## Rule 3: Focus on your perspective
+
+## Rule 4: Keep it simple
+
+## Rule 5: Be objective
+
+# Homework{.section-title background-color="#e8e3d3"}
+
+## {data-menu-title="Homework 2" background-iframe="https://vsass.github.io/SOC221/homework/homework2.html" background-interactive=TRUE}

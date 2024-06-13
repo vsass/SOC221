@@ -26,8 +26,6 @@ format:
     progress: true
     link-external-icon: true 
     mermaid-format: svg
-filters: 
-  - roughnotation
 ---
 
 ```{r}
@@ -1140,8 +1138,17 @@ Which do you think people found [*most*]{style="color:#e93cac"} sensitive?
 
 ::: 
 
-# Homework{.section-title background-color="#c5b4e3"}
+## Key takeways
 
-## {data-menu-title="Homework 5" background-iframe="https://vsass.github.io/SOC221/homework/homework1.html" background-interactive=TRUE}
+<br>
+
+::: incremental
+- [Wide range of factors that occur in the collection of data that might limit our ability to accurately characterize reality]{style="font-size:1.5em"} 
+- [We need to be cognizant of these potential sources of [BIAS]{style="color:#e93cac"} as we analyze data]{style="font-size:1.5em"}
+:::
+
+# Homework{.section-title background-color="#e8e3d3"}
+
+## {data-menu-title="Homework 1" background-iframe="https://vsass.github.io/SOC221/homework/homework1.html" background-interactive=TRUE}
 
 

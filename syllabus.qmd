@@ -4,6 +4,8 @@ sidebar: false
 format: html
 message: false
 warning: false
+reference-location: margin
+citation-location: margin
 ---
 
 *This syllabus is subject to change. All changes will be announced both in class, on {{< var slack.short >}}, and on this page.*
@@ -14,9 +16,10 @@ warning: false
 **Lecture:** {{< var lecture >}}\
 **Location:** {{< var location >}}\
 **Office Hours:** {{< var office_hours >}} on Zoom (link on {{< var canvas >}})\
-**Website:** {{< var website.asis >}}[The [course website](https://vsass.github.io/SOC221) provides access/updates to the syllabus, scheduling changes, assignments, and other course-related materials. **Make sure to check the site often to stay up-to-date.**]{.aside}\
+**Website:** {{< var website.asis >}}^[The [course website](https://vsass.github.io/SOC221) provides access/updates to the syllabus, scheduling changes, assignments, and other course-related materials. **Make sure to check the site often to stay up-to-date.**
+] \
 **Canvas:** We will only be using the course {{< var canvas >}} site to upload assignments. **Don't message me on Canvas.**\
-**Contact:** We'll use {{< var slack.short >}} to communicate with each other and you can directly {{< var message >}} there.[You can find the invitation to our private Slack on our {{< var canvas >}} homepage]{.aside}\
+**Contact:** We'll use {{< var slack.short >}} to communicate with each other and you can directly {{< var message >}} there.^[You can find the invitation to our private Slack on our {{< var canvas >}} homepage}.]\
 
 ### Overview and learning objectives
 
@@ -48,14 +51,14 @@ There are no prerequisites for this course. This is not a mathematics course, bu
 
 ### Ungrading and course structure
 
-There is a disconnect between what grades are designed to do and what truly supports student learning.[You can read more about the problem with using grades as an assessment for learning [here](https://www.alfiekohn.org/article/degrading-de-grading/) and [here](https://www.jessestommel.com/why-i-dont-grade/).]{.aside} In an effort to focus on your education, assignments and quizzes will not receive a letter-grade or points. Rather, as you answer the questions for each assignment, you will also provide your own assessment of how well-prepared you felt to answer that particular question (see example in the margin). At the core of the philosophy behind ungrading is the fact that each of us possesses the best information about our own learning - both *what* works and *if* it's working. As such, I want you to be in control of reflecting on your own learning process throughout this class. 
+There is a disconnect between what grades are designed to do and what truly supports student learning.^[You can read more about the problem with using grades as an assessment for learning [here](https://www.alfiekohn.org/article/degrading-de-grading/) and [here](https://www.jessestommel.com/why-i-dont-grade/).] In an effort to focus on your education, assignments and quizzes will not receive a letter-grade or points. Rather, as you answer the questions for each assignment, you will also provide your own assessment of how well-prepared you felt to answer that particular question. At the core of the philosophy behind ungrading is the fact that each of us possesses the best information about our own learning - both *what* works and *if* it's working. As such, I want you to be in control of reflecting on your own learning process throughout this class. 
 
-- **For homework assignments** you will receive written feedback from me about whether you've sufficiently demonstrated mastery of a topic and if not, where you can find assistance in answering that particular question. You'll then have two additional days to revise any questions for resubmission. 
+- **For homework assignments** you will receive written feedback from me about whether you've sufficiently demonstrated mastery of a topic and if not, where you can find assistance in answering that particular question. You'll then have two additional days to revise any questions for re-submission. 
 - **For quiz assignments** you'll spend the first part of class taking the quiz and after a break we'll reconvene to go over the assignment together. If there were any questions you were less sure about, this is a great time to ask questions, and more fully articulate your answers. 
 
-This class is still being taught within the context of a university that assigns grades so I will be required to assign a final grade at the end of the quarter. What that grade ultimately is will be determined by you through your engagement with your assignment self-assessments, revisions on assignments, and the two learning assessment meetings we will have (one during week 4 and another our last week of class)[Specifics on how to prepare for these 10-minute meetings will be provided later in the quarter.]{.aside}. During these two one-on-one meetings we will have a chance to discuss your learning process, what's worked/what's been challenging, how we can both suport the outcomes you desire, and what grade you feel reflects your process. 
+This class is still being taught within the context of a university that assigns grades so I will be required to assign a final grade at the end of the quarter. What that grade ultimately is will be determined by you through your engagement with your assignment self-assessments, revisions on assignments, and the two learning assessment meetings we will have (one during week 4 and another our last week of class)^[Specifics on how to prepare for these 10-minute meetings will be provided later in the quarter.]. During these two one-on-one meetings we will have a chance to discuss your learning process, what's worked/what's been challenging, how we can both support the outcomes you desire, and what grade you feel reflects your process. 
 
-For this process to work effectively we are both required to **attend every class** and participate in ways that engage your learning[If something comes up and you cannot make it to class, message me as soon as possible on {{< var slack.short >}}.]{.aside}. I will do my best to meet you where you are when you come to class and I ask that you engage in class and with assignments in ways that prioritize your learning.
+For this process to work effectively we are both required to **attend every class** and participate in ways that engage your learning^[If something comes up and you cannot make it to class, message me as soon as possible on {{< var slack.short >}}.]. I will do my best to meet you where you are when you come to class and I ask that you engage in class and with assignments in ways that prioritize your learning.
 
 ### Schedule
 
@@ -211,7 +214,7 @@ Washington state law requires that UW develop a policy for accommodation of stud
 
 ### Academic honesty
 
-Students are expected to abide by established regulations on student conduct. Any student found in violation of rules of student conduct will be removed from the class in accordance with state policy and appropriate disciplinary action will be pursued.[You can read more about the University of Washington Student Code [here](http://www.washington.edu/cssc/student-conduct-overview/student-code-of-conduct/ ).]{.aside} 
+Students are expected to abide by established regulations on student conduct. Any student found in violation of rules of student conduct will be removed from the class in accordance with state policy and appropriate disciplinary action will be pursued.^[You can read more about the University of Washington Student Code [here](http://www.washington.edu/cssc/student-conduct-overview/student-code-of-conduct/ ).] 
 
 
 ### Basic needs statement	

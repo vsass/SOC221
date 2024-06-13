@@ -26,3 +26,80 @@ format:
     progress: true
     link-external-icon: true 
 ---
+
+```{r}
+#| echo: false
+#| cache: false
+require(tidyverse)
+require(gt)
+
+knitr::opts_chunk$set(comment = ">")
+```
+
+# Two way tables and chi-square {.section-title background-color="#c5b4e3"}
+
+## Overview
+
+## Association
+
+## Independent v dependent variables
+
+## Two-way (contingency/bivariate) tables
+
+Conditional distributions
+
+## Key characteristics of an association
+
+Strength
+Direction
+Statistical significance
+
+## Risk ratio
+
+## Chi-square test
+
+## Calculation of chi-square
+
+## Hypothesis test for two-way Chi-square
+
+## Another example 
+
+## Chi-square and strength of an association
+
+# Break! {.section-title background-color="#2ad2c9"}
+
+# Scatterplots and correlation {.section-title background-color="#c5b4e3"}
+
+## Correlation 
+
+## Scatterplots
+
+## Correlation and regression
+
+## Correlation coefficient
+
+1. Why it's cool
+2. Why you need to be careful
+3. Interpretation
+
+## Practice
+
+## Scatterplot visuals
+
+## Making a scatterplot
+
+## Calculating correlation coefficient
+
+## Hypothesis test for correlation
+
+1. Check assumptions
+2. State the hypothesis
+3. Identify alpha and the critical value of r
+4. Calculate the test statistic
+5. Make a decision
+
+## Examples 
+
+# Homework{.section-title background-color="#e8e3d3"}
+
+## {data-menu-title="Homework 8" background-iframe="https://vsass.github.io/SOC221/homework/homework8.html" background-interactive=TRUE}

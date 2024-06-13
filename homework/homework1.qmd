@@ -1,0 +1,151 @@
+---
+title: "Homework 1"
+sidebar: false
+format: html
+message: false
+warning: false
+reference-location: margin
+citation-location: margin
+---
+
+## Instructions
+(@) Print out this form and record your answers directly in the space provided. 
+(@) For problems requiring additional written work, use the allotted work space. 
+(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.\
+
+<br>
+
+::: {.panel-tabset}
+
+### Confidence-level assessment
+
+![](../images/confidence_level_assessment.png){fig-align="center" width="50%"}
+
+### [Confident]{style="color: #e93cac"}
+
+![I knew the answer to that question](../images/confidence_level_assessment1.png){fig-align="center" width="50%"}
+
+### [Unsure]{style="color: #e93cac"}
+
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){fig-align="center" width="50%"}
+
+### [Don't Know]{style="color: #e93cac"}
+
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){fig-align="center" width="50%"}
+
+:::
+
+(@) Scan (or take pictures of) your completed homework and upload it to the course {{< var canvas >}} site
+<br> 
+
+### Questions
+
+*For this assignment, you will help to collect the data to be used for some of the analyses we do in class. You will also assess the nature of the sample we are drawing as we collect these data and think about the nature of some variables in the data.*
+
+#### Question 1
+
+Complete the class survey and ask [**at least three (3)**]{style="color:#e93cac"} other people to do the same. The class survey can be accessed [here](survey.qmd). You are free to invite anyone else – friends, family members, co-workers, etc. – to complete the survey but every respondent (including you!) should complete the survey only once. [You will receive credit for this problem if you complete the survey yourself and at least **three (3) others** enter your **student number** at the end of the survey]{style="color:#e93cac"}. Here is an email invitation that you can send out to get your people to complete the survey:
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+::: {style="color:#666666"}
+
+> Dear [**[ insert name of person here ]**]{style="color:#2ad2c9"},<br>
+<br>
+The members of my statistics class at the University of Washington have put together an online
+survey to collect data that we will use to practice our new statistics skills this term. I am writing
+to ask you to please complete the survey. The survey will take about 20 minutes to complete and
+your responses will be kept completely confidential; we will not ask for your name or any other
+identifying information, so no one in the class will know who you are, and no one outside of our
+class will see the survey responses.<br>
+<br>
+If you are willing to participate, please click on this link:
+<https://vsass.github.io/SOC221/homework/survey.html>. <br>
+<br>
+When you are asked about who referred you to the survey, please enter my student number:<br>
+[**[ insert your student number here ]**]{style="color:#2ad2c9"}. <br>
+<br>
+Please complete the survey only once, even if you receive another invitation from another student.
+Thanks very much for your help with this!<br>
+<br>
+Best wishes,<br>
+[**[ insert your name here ]**]{style="color:#2ad2c9"}
+
+:::
+
+#### Question 2
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+How many people did you invite to complete the survey?^[Note that this information will be useful for calculating our response rate to the survey.]<br>
+<br>
+<br>
+Answer: 
+
+::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 200px; height: 50px; position: absolute; top: 1850px; left: 380px"}
+
+:::
+
+<br>
+
+#### Question 3
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+What is the unit of analysis for the data collected with our class survey?<br>
+<br>
+<br>
+Answer: 
+
+::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 300px; height: 50px; position: absolute; top: 2075px; left: 380px"}
+
+:::
+
+#### Question 4
+
+What is the level of measurement (nominal, ordinal, or interval) for each of the variables collected with the following items in [our survey](survey.qmd)? 
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+|   | Item | Level of<br>measurement  |
+|---|--------|--------|
+| a. | Where did you live for most of the years when you were growing up (before age 18)?  |   |
+| b. | What is your college major right now?   |   |
+| c. | On average, how many hours per week did you study by yourself last quarter or semester? |   |
+| d. | Which of the following categories best describes how much income your family makes in a year? |  |
+| e. | If you had a serious problem in your life, how many friends do you have with whom you could talk to about it? |  |
+| f. | In general, how would you rate your overall health? |  |
+| g. | Did you participate in any sports teams or groups during your high school years? |  |
+
+: Survey items {tbl-colwidths="[5,60,35]"}
+
+#### Question 5
+
+Does our class survey use a simple random sample? Explain your answer and describe how the results of our survey might be affected by the sampling technique we have used. *Please limit your response to this question to 300 words or less.*
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+Answer: 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 700px; height: 300px; position: absolute; top: 2975px; left: 380px"}
+
+:::

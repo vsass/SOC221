@@ -29,3 +29,57 @@ revealjs-plugins:
   - attribution
 ---
 
+```{r}
+#| echo: false
+#| cache: false
+require(tidyverse)
+require(gt)
+
+knitr::opts_chunk$set(comment = ">")
+```
+
+# Estimation: confidence intervals for means {.section-title background-color="#c5b4e3"}
+
+## Sampling distribution
+
+## Central limit theorem
+
+## The BIG idea behind confidence intervals
+
+## Confidence intervals
+
+## Calculating confidence intervals
+
+## Step 1: Decide on a confidence level and corresponding z-score
+
+## Step 2: Calculate the standard error
+
+## Step 3: Calculate the margin of error
+
+## Step 4: Calculate the confidence interval
+
+## Step 5: Interpret the results
+
+## Confidence interval example
+
+## Factors affecting precision (width) of the confidence interval
+
+# Break! {.section-title background-color="#2ad2c9"}
+
+# Estimation: confidence intervals for proportions {.section-title background-color="#c5b4e3"}
+
+## Estimating Population Proportions (or percentages)
+
+## Step 1: Decide on a confidence level and corresponding z-score
+
+## Step 2: Calculate the standard error
+
+## Step 3: Calculate the margin of error
+
+## Step 4: Calculate the confidence interval
+
+## Step 5: Interpret the results
+
+# Homework{.section-title background-color="#e8e3d3"}
+
+## {data-menu-title="Homework 6" background-iframe="https://vsass.github.io/SOC221/homework/homework6.html" background-interactive=TRUE}

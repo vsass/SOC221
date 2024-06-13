@@ -26,3 +26,50 @@ format:
     progress: true
     link-external-icon: true 
 ---
+
+```{r}
+#| echo: false
+#| cache: false
+require(tidyverse)
+require(gt)
+
+knitr::opts_chunk$set(comment = ">")
+```
+
+# Bivariate regression {.section-title background-color="#c5b4e3"}
+
+## Correlation coefficient
+
+## Correlation matrix
+
+## Correlation & bivariate regression
+
+## Correlation vs bivariate regression
+
+## Bivariate regression
+
+## Deterministic association
+
+## Non-deterministic association
+
+# Break! {.section-title background-color="#2ad2c9"}
+
+# Inference for regression {.section-title background-color="#c5b4e3"}
+
+## Calculating the least squares regression line
+
+## Step 1: Calculate the slope
+
+## Step 2: Calculate the y-intercept
+
+## Coefficient of determination
+
+## Coefficient of determination interpretations
+
+## Example
+
+## Statistical significance of regression componenets
+
+# Homework{.section-title background-color="#e8e3d3"}
+
+## {data-menu-title="Homework 9" background-iframe="https://vsass.github.io/SOC221/homework/homework9.html" background-interactive=TRUE}

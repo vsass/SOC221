@@ -26,3 +26,75 @@ format:
     progress: true
     link-external-icon: true 
 ---
+
+```{r}
+#| echo: false
+#| cache: false
+require(tidyverse)
+require(gt)
+
+knitr::opts_chunk$set(comment = ">")
+```
+
+# Probability and probability distributions {.section-title background-color="#c5b4e3"}
+
+## Inferential statistics
+
+## The challenge of making inferences
+
+## Probability
+
+## Random
+
+## Myths about randomness and probability
+
+## Probability distribution
+
+## Probability rules
+
+Rule 1: The probability P(A) of any event A satisfies 0 ≤ P(A) ≤ 1
+Rule 2: If S is the sample space in a probability model, then P(S) = 1
+Rule 3: Addition Rule 
+Rule 4: Multiplication Rule
+
+## Discrete versus continuous probability distribution
+
+## Probability density function
+
+# Break! {.section-title background-color="#2ad2c9"}
+
+# Normal distributions {.section-title background-color="#c5b4e3"}
+
+## Normal distribution
+
+## Consistent areas under the normal curve
+
+## Standard normal distribution
+
+## Normal distribution and standardized z-scores
+
+## Steps for finding area under the normal curve
+
+*Note: these steps can happen out of order!*
+
+1. Draw the picture, roughly showing the area under the curve that you are looking for (highly recommended)
+2. Convert value(s) of interest into z-score(s)
+3. Use standard normal table (linked in the back of the book) to find proportion of cases between the mean and the z-score
+4. Subtract or add areas under the curve to get the total proportion you are looking for (see the picture from step 1)
+5. Convert to percentages or probabilities as required by the problem
+
+## Step 1
+
+## Step 2
+
+## Step 3
+
+## Step 4
+
+## Step 5
+
+## Examples
+
+# Homework{.section-title background-color="#e8e3d3"}
+
+## {data-menu-title="Homework 4" background-iframe="https://vsass.github.io/SOC221/homework/homework4.html" background-interactive=TRUE}

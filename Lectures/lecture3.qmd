@@ -26,3 +26,80 @@ format:
     progress: true
     link-external-icon: true 
 ---
+
+```{r}
+#| echo: false
+#| cache: false
+require(tidyverse)
+require(gt)
+
+knitr::opts_chunk$set(comment = ">")
+```
+
+# Measures of central tendency {.section-title background-color="#c5b4e3"}
+
+## Overview of descriptive statistics / summary measures
+
+## Overview of central tendency
+
+## Mean
+
+## Calculating the mean from a frequency distribution
+
+## Important properties of the mean
+
+1. Appropriate only for interval-ratio variables
+2. Mathematical balancing point of the distribution
+3. Sensitive to extremes
+
+## Median
+
+## Calculating the median from a frequency distribution
+
+## Important properties of the median
+
+## Mode
+
+## Important properties of the mode
+
+## Choosing a measure of central tendency
+
+3 criteria: 
+1. Level of measurement
+2. Amount of information incorporated into the measure
+3. Shape of the distribution
+
+## Practice
+
+# Break! {.section-title background-color="#2ad2c9"}
+
+# Measures of variability {.section-title background-color="#c5b4e3"}
+
+## Overview of variability
+
+## Range
+
+## IQR
+
+## Variance
+
+## Standard deviation
+
+## Calculating the variance & standard deviation
+
+1. Calculate the mean of the distribution
+2. Subtract the mean from each score to get the deviation
+3. Square each deviation
+4. Sum the squared deviations
+5. Divide the sum by n-1 to get the variance
+6. Take the square root of the variance to get the standard deviation
+
+## Interpreting the standard deviation
+
+## Comparing data 
+
+## Calculating the standard deviation from a frequency distribution
+
+# Homework{.section-title background-color="#e8e3d3"}
+
+## {data-menu-title="Homework 3" background-iframe="https://vsass.github.io/SOC221/homework/homework3.html" background-interactive=TRUE}

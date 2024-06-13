@@ -26,3 +26,51 @@ format:
     progress: true
     link-external-icon: true 
 ---
+
+```{r}
+#| echo: false
+#| cache: false
+require(tidyverse)
+require(gt)
+
+knitr::opts_chunk$set(comment = ">")
+```
+
+# Sampling distributions {.section-title background-color="#c5b4e3"}
+
+## Inferential statistics
+
+## The challenge of making inferences
+
+## sample statistic --> population parameter
+
+## Estimating Population Parameters: TWO OPTIONS
+
+## Sampling error
+
+## Confidence interval
+
+## Confidence level
+
+## Sampling distribution
+
+## Sampling distribution visual
+
+## Three types of distributions 
+
+## Important facts about sampling distributions
+
+# Break! {.section-title background-color="#2ad2c9"}
+
+# Central limit theorem {.section-title background-color="#c5b4e3"}
+
+## Central limit theorem
+
+## Implication of central limit theorem
+
+## Sampling distribution of sample means distribution
+
+
+# Homework{.section-title background-color="#e8e3d3"}
+
+## {data-menu-title="Homework 5" background-iframe="https://vsass.github.io/SOC221/homework/homework5.html" background-interactive=TRUE}
