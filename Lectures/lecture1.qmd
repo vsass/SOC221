@@ -269,10 +269,10 @@ flowchart TB
   }
 }%%
 flowchart TB
-      id1(Interesting real-world question) --> id2(Collect data) --> id3("Analyze data\n(calculate statistics)") --> id4("Develop an answer to your\nquestion (interpret statistics)")
-      id4 --> id1
-      style id3 fill:#aadb1e,color:#4b2e83
-      style id4 fill:#aadb1e,color:#4b2e83
+    id1(Interesting real-world question) --> id2(Collect data) --> id3("Analyze data\n(calculate statistics)") --> id4("Develop an answer to your\nquestion (interpret statistics)")
+    id4 --> id1
+    style id3 fill:#aadb1e,color:#4b2e83
+    style id4 fill:#aadb1e,color:#4b2e83
 ```
 :::
 
@@ -473,7 +473,7 @@ flowchart TB
 
 ## Survey DATA
 
-A survey with produce a dataset for analyses
+A survey will produce a dataset for analyses
 
 ::: {.fragment fragment-index=1}
 

@@ -36,13 +36,133 @@ require(gt)
 knitr::opts_chunk$set(comment = ">")
 ```
 
+## Today's Topics
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.fragment fragment-index="1"}
+
+#### Measures of central tendency
+
+:::
+
+::: {.fragment fragment-index="2"}
+
+* Calculation and properties
+  * Mean
+  * Median
+  * Mode
+* How to choose
+:::
+
+::: 
+
+::: {.column width="50%"}
+
+::: {.fragment fragment-index="1"}
+#### Measures of variability
+:::
+
+::: {.fragment fragment-index="3"}
+* Range
+* Interquartile range (IQR)
+* Variance
+  * Standard deviation
+
+:::
+:::
+
+::::
+
 # Measures of central tendency {.section-title background-color="#c5b4e3"}
 
 ## Overview of descriptive statistics / summary measures
 
-## Overview of central tendency
+::: {.fragment fragment-index=1}
+* Purpose of descriptive statistics?
+* Purpose of summary measures?
+    * Summarize a characteristic of a [distribution]{.underline} using a single number/score
+        * Contrast to frequency distributions and graphs showing whole distribution
+    * Advantage: efficient
+    * Potential disadvantage: could obscure important information about the distribution
+:::
 
-## Mean
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=2}
+::: r-fit-text
+> [**Measure of central tendency**]{style="color:#e93cac"}<br>single numbers used to convey<br>what is typical, common, usual, or<br>average in a distribution of scores
+:::
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=3}
+::: r-fit-text
+> [**Measure of variability**]{style="color:#e93cac"}<br>single numbers used to convey the<br>diversity or heterogeneity in a<br>distribution of scores
+:::
+:::
+:::
+
+::::
+
+## Measures of central tendency
+
+<br>
+
+::: {.fragment fragment-index=1}
+#### Purpose
+
+* *convey what is typical, common, usual, or average in a distribution of scores using a single number*
+:::
+
+<br>
+
+::: {.fragment fragment-index=2}
+#### Most common measures
+
+* Mean
+* Median
+* Mode
+:::
+
+## Measure of central tendency: Mean
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+<br>
+<br>
+
+::: {.fragment fragment-index=2 style="font-size: 3em"}
+
+$$
+\bar{X} = \frac{\Sigma  X_i}{N}
+$$
+
+:::
+:::
+
+::: {.column width="40%"}
+
+<br>
+
+::: {.fragment fragment-index=1}
+::: r-fit-text
+> [**Mean**]{style="color:#e93cac"}<br>The [arithmetic average]{.underline}<br>of the scores in a<br>distribution equal to<br>the sum of all scores<br>divided by the<br>number of scores<br>in the distribution
+:::
+:::
+:::
+
+::::
+
+
 
 ## Calculating the mean from a frequency distribution
 

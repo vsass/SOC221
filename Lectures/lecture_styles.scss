@@ -51,6 +51,10 @@ $mermaid-node-bg-color: rgba($heritage-gold, 0.1);
 $mermaid-node-fg-color: $heritage-gold;
 
 // class selectors
+.smaller {
+  font-size: 0.8em;
+}
+
 .section-title {
   font-family: $font-family-sans-serif;
   color: $spirit-purple;
