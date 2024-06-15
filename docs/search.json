@@ -858,14 +858,14 @@
     "href": "lectures/lecture3.html#overview-of-variability",
     "title": "",
     "section": "Overview of variability",
-    "text": "Overview of variability"
+    "text": "Overview of variability\n\n\n\n\nSynonyms: diversity, heterogeneity, dispersion\n\n\n\n\nCommon measures\n\nRange\nInterquartile range (IQR)\nVariance and Standard Deviation\n\n\n\n\n\nMost measures of variability appropriate for interval-level variables only\n\nRange can be used for ordinal variables\nFor nominal variables, describe diversity by examining frequencies in each category\n\n\n\n\n\n\n\nMeasure of variabilitysingle numbers usedto convey thediversity orheterogeneityin a distributionof scores."
   },
   {
     "objectID": "lectures/lecture3.html#range",
     "href": "lectures/lecture3.html#range",
     "title": "",
     "section": "Range",
-    "text": "Range"
+    "text": "Range\n\nDifference between the highest and lowest value appearing in the distribution\n\n\n\\[\nRange = X_{max} - X_{min}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(20 - 0 = 20\\)\n\n\n\\(20 - 0 = 20\\)\n\n\nSame range, but are the two distributions equally diverse?\n\n\nProblem with the range: ignores lots of information so can be a misleading measure of diversity."
   },
   {
     "objectID": "lectures/lecture3.html#iqr",
@@ -879,7 +879,7 @@
     "href": "lectures/lecture3.html#variance",
     "title": "",
     "section": "Variance",
-    "text": "Variance"
+    "text": "Variance\n\n\nClosely related measures of variability for interval-level variables\n\nTakes into consideration all scores in the distribution\nIndicates the spread of cases from the mean\n\n\n\n\n\n\nVarianceA measure of variability for interval level variables equal to the  average of the squared deviations from the mean\n\n\n\n\n\n\nStandard deviationA measure of variability for interval level variables equal to thesquare root of the variance"
   },
   {
     "objectID": "lectures/lecture3.html#standard-deviation",
@@ -893,21 +893,21 @@
     "href": "lectures/lecture3.html#calculating-the-variance-standard-deviation",
     "title": "",
     "section": "Calculating the variance & standard deviation",
-    "text": "Calculating the variance & standard deviation\n\nCalculate the mean of the distribution\nSubtract the mean from each score to get the deviation\nSquare each deviation\nSum the squared deviations\nDivide the sum by n-1 to get the variance\nTake the square root of the variance to get the standard deviation"
+    "text": "Calculating the variance & standard deviation\nSix steps\n\n\nCalculate the mean of the distribution\nSubtract the mean from each score to get the deviation\nSquare each deviation\nSum the squared deviations\nDivide the sum by n-1 to get the variance\nTake the square root of the variance to get the standard deviation\n\n\n\n\n\nExample: Quiz scores for 8 students:\n\n\n43, 50, 75, 77, 80, 82, 85, 92"
   },
   {
     "objectID": "lectures/lecture3.html#interpreting-the-standard-deviation",
     "href": "lectures/lecture3.html#interpreting-the-standard-deviation",
     "title": "",
     "section": "Interpreting the standard deviation",
-    "text": "Interpreting the standard deviation"
+    "text": "Interpreting the standard deviation\n\n\nROUGHLY equal to the average deviation of scores in the distribution from the mean of the distribution\n\nsquaring and square-rooting leads to some slippage\n\nMinimum value = 0 = no variation in scores\nUseful for comparing the level of diversity or heterogeneity of two or more different distributions\n\nExample: Quiz scores from 3 classes:\n\nClass 1: Mean = 75, standard deviation = 5\nClass 2: Mean = 75, standard deviation = 15\nClass 3: Mean = 75, standard deviation = 0\n\n\nImportant as the unit of measurement to determine how unusual or extreme a particular score is\n\nQuestion: In which class is a score of 90 most unusual?\nQuestion: In which class is a score of 90 more typical?\n\nUseful in combination with the normal curve"
   },
   {
     "objectID": "lectures/lecture3.html#comparing-data",
     "href": "lectures/lecture3.html#comparing-data",
     "title": "",
     "section": "Comparing data",
-    "text": "Comparing data"
+    "text": "Comparing data\nStatistics from two populations of women show the following information about the number of children born:\n\n\n\n\n\n\n\n\n\nColdlandia\nTropicana\n\n\n\n\nMean\n3.15\n4.05\n\n\nMedian\n2.50\n4.00\n\n\nMode\n2.00\n4.00\n\n\nRange\n18.00\n12.00\n\n\n\\(S_x\\)\n4.75\n2.85\n\n\n\n\n\n\nAccording to these statistics, which of the populations has greater levels of childbearing? (interpret the key statistics)\nWhich one has greater diversity in childbearing experiences? (interpret the key statistics)\nWhat can you tell about the shape of the distributions?"
   },
   {
     "objectID": "lectures/lecture3.html#calculating-the-standard-deviation-from-a-frequency-distribution",
@@ -1538,5 +1538,173 @@
     "title": "",
     "section": "Practice",
     "text": "Practice\nChoose the “best” measure of central tendency for the following\n\nMeasure of number of dollars donated to charity with central tendency scores:\n\nMode = $0\nMedian = $150\nMean = $1,200\n\n\n\n\nCriteria\n\n\n\nInterval level of measurement so could use mode, median, or mean\nMean uses more information than either median or mode\nShape of the distribution is clearly skewed (based on relative values of the measures) so mean may be misleading picture of what is typical\n\n\n\n\nDecision: MEDIAN (plus mean?)"
+  },
+  {
+    "objectID": "lectures/lecture3.html#range-1",
+    "href": "lectures/lecture3.html#range-1",
+    "title": "",
+    "section": "Range",
+    "text": "Range\n\nSame range, but are the two distributions equally diverse?\nProblem with the range:\n\nIgnores lots of information so can be a misleading measure of diversity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(20 - 0 = 20\\)\n\n\n\\(20 - 0 = 20\\)"
+  },
+  {
+    "objectID": "lectures/lecture3.html#interquartile-range-iqr",
+    "href": "lectures/lecture3.html#interquartile-range-iqr",
+    "title": "",
+    "section": "Interquartile Range (IQR)",
+    "text": "Interquartile Range (IQR)\n\nDifference between the 75th and 25th percentiles in the distribution\n\n\n\\[\nIQR = X_{75th} - X_{25th}\n\\]\n\n\n\n\n\nFirst quartile: 25th percentile\n\n25% of the observations are smaller than the 1st quartile, 75% are larger\n\n\n\n\n\nSecond quartile: 50th percentile, the median\n\n50% of the observations are smaller, 50% larger\n\n\n\n\n\nThird quartile: 75th percentile\n\n75% of the observations are smaller than the 3rd quartile, 25% are larger\n\n\n\n\n\n\n\nQuartilesSections of thedistribution in which¼ of the observations/cases are located"
+  },
+  {
+    "objectID": "lectures/lecture3.html#how-to-calculate-the-quartiles",
+    "href": "lectures/lecture3.html#how-to-calculate-the-quartiles",
+    "title": "",
+    "section": "How to calculate the quartiles",
+    "text": "How to calculate the quartiles\n\n\nArrange the observations in increasing order and locate the median, M.\nThe first quartile Q1 is the median (midpoint) of the observations located to the left of the median in the ordered list.\nThe third quartile Q3 is the median (midpoint) of the observations located to the right of the median in the ordered list."
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-1",
+    "href": "lectures/lecture3.html#iqr-example-1",
+    "title": "",
+    "section": "IQR example 1",
+    "text": "IQR example 1"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-1-1",
+    "href": "lectures/lecture3.html#iqr-example-1-1",
+    "title": "",
+    "section": "IQR example 1",
+    "text": "IQR example 1\n\n\nScore at 25th percentile = 5"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-1-2",
+    "href": "lectures/lecture3.html#iqr-example-1-2",
+    "title": "",
+    "section": "IQR example 1",
+    "text": "IQR example 1\n\n\nScore at 25th percentile = 5\n\n\nScore at 75th percentile = 15"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-1-iqr-15---5-10",
+    "href": "lectures/lecture3.html#iqr-example-1-iqr-15---5-10",
+    "title": "",
+    "section": "IQR example 1 (IQR = 15 - 5 = 10)",
+    "text": "IQR example 1 (IQR = 15 - 5 = 10)\n\n\nScore at 25th percentile = 5"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-1-iqr-15---5-10-1",
+    "href": "lectures/lecture3.html#iqr-example-1-iqr-15---5-10-1",
+    "title": "",
+    "section": "IQR example 1 [(IQR = 15 - 5 = 10)]",
+    "text": "IQR example 1 [(IQR = 15 - 5 = 10)]\n\n\nScore at 25th percentile = 5\n\n\nScore at 75th percentile = 15"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-1-15---5-10",
+    "href": "lectures/lecture3.html#iqr-example-1-15---5-10",
+    "title": "",
+    "section": "IQR example 1 (15 - 5 = 10)",
+    "text": "IQR example 1 (15 - 5 = 10)\n\n\nScore at 25th percentile = 5"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-1-15---5-10-1",
+    "href": "lectures/lecture3.html#iqr-example-1-15---5-10-1",
+    "title": "",
+    "section": "IQR example 1 (15 - 5 = 10)",
+    "text": "IQR example 1 (15 - 5 = 10)\n\n\nScore at 25th percentile = 5\n\n\nScore at 75th percentile = 15"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-1-15.75---5-10",
+    "href": "lectures/lecture3.html#iqr-example-1-15.75---5-10",
+    "title": "",
+    "section": "IQR example 1 (15.75 - 5 = 10)",
+    "text": "IQR example 1 (15.75 - 5 = 10)\n\n\nScore at 25th percentile = 5"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-1-15.75---5-10-1",
+    "href": "lectures/lecture3.html#iqr-example-1-15.75---5-10-1",
+    "title": "",
+    "section": "IQR example 1 (15.75 - 5 = 10)",
+    "text": "IQR example 1 (15.75 - 5 = 10)\n\n\nScore at 25th percentile = 5\n\n\nScore at 75th percentile = 15.75"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-2",
+    "href": "lectures/lecture3.html#iqr-example-2",
+    "title": "",
+    "section": "IQR example 2",
+    "text": "IQR example 2"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-2-13---9-4",
+    "href": "lectures/lecture3.html#iqr-example-2-13---9-4",
+    "title": "",
+    "section": "IQR example 2 (13 - 9 = 4)",
+    "text": "IQR example 2 (13 - 9 = 4)\n\n\nScore at 25th percentile = 5"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-2-13---9-10",
+    "href": "lectures/lecture3.html#iqr-example-2-13---9-10",
+    "title": "",
+    "section": "IQR example 2 (13 - 9 = 10)",
+    "text": "IQR example 2 (13 - 9 = 10)\n\n\nScore at 25th percentile = 9\n\n\nScore at 75th percentile = 13"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-2-13---9-4-1",
+    "href": "lectures/lecture3.html#iqr-example-2-13---9-4-1",
+    "title": "",
+    "section": "IQR example 2 (13 - 9 = 4)",
+    "text": "IQR example 2 (13 - 9 = 4)\n\n\nScore at 25th percentile = 9\n\n\nScore at 75th percentile = 13"
+  },
+  {
+    "objectID": "lectures/lecture3.html#whats-the-use-of-the-iqr",
+    "href": "lectures/lecture3.html#whats-the-use-of-the-iqr",
+    "title": "",
+    "section": "What’s the use of the IQR?",
+    "text": "What’s the use of the IQR?\n\n\nIn what situations would the IQR be helpful?\n\nWhat kinds of problems does it solve?\n\nHow much information does the IQR really consider?\n\n\n\n\n\n\n\nOutliersAn extremelyhigh valueor extremelylow valuein a distribution(that may skewthe results of ourstatistical analysis)\n\n\n\n\n\n\nMeasure of spread: Are the individuals in our data set very different on this variable or not?\nUseful for finding possible outliers\n\nRule of thumb for identifying outliers = call an observation an outlier if it falls more than 1.5 × IQR above the third quartile or below the first quartile"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-7",
+    "href": "lectures/lecture3.html#practice-7",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\n\n\nAge at 1st birth:\n\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-8",
+    "href": "lectures/lecture3.html#practice-8",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\nAre the values of 13 or 27 outliers in this distribution?\n\n\n\nCall an observation an outlier if it falls more than 1.5 × IQR above the third quartile or below the first quartile"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-9",
+    "href": "lectures/lecture3.html#practice-9",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\n\n\n\nStart by finding the median:  Median case = \\[\n\\frac{N + 1}{2} = \\frac{10 + 1}{5} = 5.5\n\\]  Median = value halfway betweenvalues for the 5th and 6th cases\n\n\n\n\n\n\n\n\\(M = 21\\)"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-10",
+    "href": "lectures/lecture3.html#practice-10",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\n\n\n\\(M = 21\\)\n\n\n\n\n\n\nFind the first quartile (\\(X_{25th}\\))and third quartile (\\(X_{75th}\\))   Find the Interquartile Range =\\(X_{75th}\\) - \\(X_{25th}\\) = 24 – 17 = 7   Multiply the Interquartile Range by 1.5 to get outlier-defining distance: (7)(1.5) = 10.5"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-11",
+    "href": "lectures/lecture3.html#practice-11",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\n\n\n\\(M = 21\\)\n\n\n\n\n\n\nFind the first quartile (\\(X_{25th}\\))and third quartile (\\(X_{75th}\\))   Find the Interquartile Range =\\(X_{75th}\\) - \\(X_{25th}\\) = 24 – 17 = 7   Multiply the Interquartile Range by 1.5 to get outlier-defining distance: (7)(1.5) = 10.5\n\n\n\n\n\\(X_{25th} = 17\\)  \\(X_{25th} =\\) midpoint of  the lower half\n\n\n\\(X_{75th} = 24\\)  \\(X_{75th} =\\) midpoint of  the upper half"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-12",
+    "href": "lectures/lecture3.html#practice-12",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\nValues of 13 and 27 are NOToutliers in this distribution\n\n\n\n\n\n\nFind outlier thresholds:values 10.5 units below \\(X_{25th}\\)and 10.5 units above \\(X_{75th}\\)   \\(X_{25th}\\) - 10.5 = 17 - 10.5 = 6.5  \\(X_{75th}\\) + 10.5 = 24 + 10.5 = 34.5   First births at age 6.5 or younger and 34.5 or older wouldbe considered outliers\n\n\n\n\n\\(X_{25th} = 17\\)  \\(X_{25th} =\\) midpoint of  the lower half\n\n\n\\(X_{75th} = 24\\)  \\(X_{75th} =\\) midpoint of  the upper half"
+  },
+  {
+    "objectID": "lectures/lecture3.html#variance-and-standard-deviation-equations",
+    "href": "lectures/lecture3.html#variance-and-standard-deviation-equations",
+    "title": "",
+    "section": "Variance and standard deviation equations",
+    "text": "Variance and standard deviation equations\n\n\nVariance: A measure of variability for interval level variables equal to the average of the squared deviations from the mean\n\n\n\n\\[\ns_x^2 = \\frac{\\Sigma(X_i - \\bar{X})^2}{n - 1}\n\\]\n\n\n\nStandard deviation: A measure of variability for interval level variables equal to the square root of the variance\n\n\n\n\\[\ns_x = \\sqrt{\\frac{\\Sigma(X_i - \\bar{X})^2}{n - 1}}\n\\]\n\n\n\n\n\nVariance for a variable called \\(X\\)\n\n\n\n\n\nSum of squared deviations from the mean for each score\n\n\n\n\n\nStandard deviation for a variable called \\(X\\)\n\n\n\n\n\nFunkiness alert: Some texts show the denominator as \\(n\\). Here we are presuming that we will ultimately calculate \\(s_x\\) in the context of inference."
   }
 ]

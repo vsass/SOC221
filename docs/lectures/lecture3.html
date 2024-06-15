@@ -525,16 +525,16 @@ Victoria Sass
 <div class="fragment r-fit-text" data-fragment-index="1">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>&gt;  [1]  9  3  9  3  7  8  4  7  8  3  4  5  9  5  3  0
-&gt; [17]  6  7  1  3  8  5  0  5  9  5  5  8  0  4  4  5
-&gt; [33]  4  6  8  8  8 10  7  3 10  4  4  6  8  5  7  6
-&gt; [49]  8  9  5  3  4  3 10  5  4  8  4  5  7  9  1 10
-&gt; [65]  4  5  7</code></pre>
+<pre><code>&gt;  [1]  9  3  9  3  7  8  4  7  8  3  4  5  9  5  3
+&gt; [16]  0  6  7  1  3  8  5  0  5  9  5  5  8  0  4
+&gt; [31]  4  5  4  6  8  8  8 10  7  3 10  4  4  6  8
+&gt; [46]  5  7  6  8  9  5  3  4  3 10  5  4  8  4  5
+&gt; [61]  7  9  1 10  4  5  7</code></pre>
 </div>
 </div>
 </div>
 <div class="fragment" data-fragment-index="3" style="font-size: 1.5em">
-<p>We could apply <span class="math inline">\(\bar{X} = \frac{\Sigma  X_i}{N}\)</span></p>
+<p>We could apply <span style="color:#e93cac"><span class="math inline">\(\bar{X} = \frac{\Sigma  X_i}{N}\)</span></span></p>
 <p><br></p>
 </div>
 <div class="fragment" data-fragment-index="4" style="font-size: 1.5em">
@@ -1886,21 +1886,435 @@ Victoria Sass
 </section>
 <section id="overview-of-variability" class="slide level2">
 <h2>Overview of variability</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="fragment" data-fragment-index="2">
+<ul>
+<li>Synonyms: diversity, heterogeneity, dispersion</li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="3">
+<ul>
+<li>Common measures
+<ul>
+<li><span style="color:#e93cac">Range</span></li>
+<li><span style="color:#e93cac">Interquartile range (IQR)</span></li>
+<li><span style="color:#e93cac">Variance and Standard Deviation</span></li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="4">
+<ul>
+<li>Most measures of variability appropriate for interval-level variables only
+<ul>
+<li><span style="color:#4b2e83">Range can be used for ordinal variables</span></li>
+<li><span style="color:#4b2e83">For nominal variables, describe diversity by examining frequencies in each category</span></li>
+</ul></li>
+</ul>
+</div>
+</div><div class="column" style="width:55%;">
+<div class="fragment" data-fragment-index="1">
+<div class="r-fit-text">
+<blockquote>
+<p><span style="color:#e93cac">Measure of variability</span><br>single numbers used<br>to convey the<br>diversity or<br>heterogeneity<br>in a distribution<br>of scores.</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="range" class="slide level2">
 <h2>Range</h2>
+<ul>
+<li>Difference between the highest and lowest value appearing in the distribution</li>
+</ul>
+<div class="fragment" data-fragment-index="1" style="font-size:1.5em;">
+<p><span class="math display">\[
+Range = X_{max} - X_{min}
+\]</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="2">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture3_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="3">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture3_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="4" data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 125px; height: 35px; padding: 0px 10px 20px 10px; position: absolute; top: 225px; right: 175px">
+<p><span class="math inline">\(20 - 0 = 20\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="4" data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 125px; height: 35px; padding: 0px 10px 20px 10px; position: absolute; top: 225px; left: 175px">
+<p><span class="math inline">\(20 - 0 = 20\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="5" data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 200px; height: 130px; padding: 0px 0px 10px 10px; position: absolute; top: 150px; left: -75px; font-size:0.85em">
+<p>Same range, but are the two distributions equally diverse?</p>
+</div>
+<div class="fragment" data-fragment-index="5" data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px; height: 125px; padding: 0px 0px 10px 10px; position: absolute; bottom: 0px; right: 350px; font-size:0.85em">
+<p>Problem with the range: ignores lots of information so can be a misleading measure of diversity.</p>
+</div>
 </section>
-<section id="iqr" class="slide level2">
-<h2>IQR</h2>
+<section id="interquartile-range-iqr" class="slide level2">
+<h2>Interquartile Range (IQR)</h2>
+<ul>
+<li>Difference between the 75th and 25th percentiles in the distribution</li>
+</ul>
+<div class="fragment" data-fragment-index="1" style="font-size:1.5em;">
+<p><span class="math display">\[
+IQR = X_{75th} - X_{25th}
+\]</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="2">
+<ul>
+<li>First quartile: 25th percentile
+<ul>
+<li>25% of the observations are smaller than the 1st quartile, 75% are larger</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="3">
+<ul>
+<li>Second quartile: 50th percentile, the median
+<ul>
+<li>50% of the observations are smaller, 50% larger</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="4">
+<ul>
+<li>Third quartile: 75th percentile
+<ul>
+<li>75% of the observations are smaller than the 3rd quartile, 25% are larger</li>
+</ul></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<div class="r-fit-text">
+<blockquote>
+<p><span style="color:#e93cac"><strong>Quartiles</strong></span><br>Sections of the<br>distribution in which<br>¼ of the observations/<br>cases are located</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-to-calculate-the-quartiles" class="slide level2">
+<h2>How to calculate the quartiles</h2>
+<div>
+<ol type="1">
+<li class="fragment">Arrange the observations in increasing order and locate the median, M.</li>
+<li class="fragment">The <span style="color:#2ad2c9"><strong>first quartile Q1</strong></span> is the median (midpoint) of the observations located to the left of the median in the ordered list.</li>
+<li class="fragment">The <span style="color:#e93cac"><strong>third quartile Q3</strong></span> is the median (midpoint) of the observations located to the right of the median in the ordered list.</li>
+</ol>
+</div>
+</section>
+<section id="iqr-example-1" class="slide level2">
+<h2>IQR example 1</h2>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"></section>
+<section id="iqr-example-1-15.75---5-10" class="slide level2">
+<h2>IQR example 1 (<span style="color:#2ad2c9">15.75</span> - <span style="color:#e93cac">5</span> = 10)</h2>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"><div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 340px; height: 35px; padding: 0px 0px 20px 20px; position: absolute; bottom: -25px; left: 75px">
+<p>Score at 25th percentile = 5</p>
+</div>
+</section>
+<section id="iqr-example-1-15.75---5-10-1" class="slide level2">
+<h2>IQR example 1 (<span style="color:#2ad2c9">15.75</span> - <span style="color:#e93cac">5</span> = 10)</h2>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"><div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 340px; height: 35px; padding: 0px 0px 20px 20px; position: absolute; bottom: -25px; left: 75px">
+<p>Score at 25th percentile = 5</p>
+</div>
+<div data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 360px; height: 35px; padding: 0px 0px 20px 20px; position: absolute; bottom: -25px; right: 75px">
+<p>Score at 75th percentile = 15.75</p>
+</div>
+</section>
+<section id="iqr-example-2" class="slide level2">
+<h2>IQR example 2</h2>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"></section>
+<section id="iqr-example-2-13---9-4" class="slide level2">
+<h2>IQR example 2 (<span style="color:#2ad2c9">13</span> - <span style="color:#e93cac">9</span> = 4)</h2>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-16-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"><div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 340px; height: 35px; padding: 0px 0px 20px 20px; position: absolute; bottom: -25px; left: 75px">
+<p>Score at 25th percentile = 5</p>
+</div>
+</section>
+<section id="iqr-example-2-13---9-4-1" class="slide level2">
+<h2>IQR example 2 (<span style="color:#2ad2c9">13</span> - <span style="color:#e93cac">9</span> = 4)</h2>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-17-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"><div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 340px; height: 35px; padding: 0px 0px 20px 20px; position: absolute; bottom: -25px; left: 75px">
+<p>Score at 25th percentile = 9</p>
+</div>
+<div data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 340px; height: 35px; padding: 0px 0px 20px 20px; position: absolute; bottom: -25px; right: 75px">
+<p>Score at 75th percentile = 13</p>
+</div>
+</section>
+<section id="whats-the-use-of-the-iqr" class="slide level2">
+<h2>What’s the use of the IQR?</h2>
+<div class="fragment" data-fragment-index="1">
+<ul>
+<li>In what situations would the IQR be helpful?
+<ul>
+<li>What kinds of problems does it solve?</li>
+</ul></li>
+<li>How much information does the IQR really consider?</li>
+</ul>
+</div>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="fragment" data-fragment-index="3">
+<div class="r-fit-text">
+<blockquote>
+<p><span style="color:#e93cac"><strong>Outliers</strong></span><br>An extremely<br>high value<br>or extremely<br>low value<br>in a distribution<br>(that may skew<br>the results of our<br>statistical analysis)</p>
+</blockquote>
+</div>
+</div>
+</div><div class="column" style="width:65%;">
+<div class="fragment" data-fragment-index="2">
+<ul>
+<li>Measure of spread: Are the individuals in our data set very different on this variable or not?</li>
+<li>Useful for finding possible <u><strong>outliers</strong></u>
+<ul>
+<li>Rule of thumb for identifying outliers = <span style="color:#e93cac">call an observation an outlier if it falls more than 1.5 × IQR above the third quartile or below the first quartile</span></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3" style="width: 55%; position: absolute; bottom: -25px; right: 0px">
+<p><a href="https://tinystats.github.io/teacups-giraffes-and-statistics/04_variance.html"><img data-src="images/outliers.png" style="width:80.0%"></a></p>
+</div>
+</section>
+<section id="practice-7" class="slide level2">
+<h2>Practice</h2>
+<p>Calculate the IQR and identify any <span style="color:#e93cac">outliers</span> in the age at first birth data for a sample of women in rural India.</p>
+<div class="fragment" data-fragment-index="1">
+<!-- -->
+<h4 id="age-at-1st-birth">Age at 1st birth:</h4>
+</div>
+<div class="fragment" data-fragment-index="1" style="font-size:1.5em;">
+<p>13, 17, 17, 18, 20, 22, 22, 24, 24, 27</p>
+</div>
+</section>
+<section id="practice-8" class="slide level2">
+<h2>Practice</h2>
+<p>Calculate the IQR and identify any <span style="color:#e93cac">outliers</span> in the age at first birth data for a sample of women in rural India.</p>
+<h4 id="age-at-1st-birth-1">Age at 1st birth:</h4>
+<div style="font-size:1.5em;">
+<p><span style="color:#e93cac;">13</span>, 17, 17, 18, 20, 22, 22, 24, 24, <span style="color:#e93cac;">27</span></p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="1" style="font-size:1.5em; text-align: center">
+<p>Are the values of <span style="color:#e93cac;">13</span> or <span style="color:#e93cac;">27</span> outliers in this distribution?</p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="2" style="font-size:1.5em; text-align: center;">
+<p>Call an observation an outlier if it falls <span style="color:#4b2e83"><strong>more than 1.5 × IQR</strong></span> <span style="color:#4b2e83"><u>above the third quartile</u></span> or <span style="color:#4b2e83"><u>below the first quartile</u></span></p>
+</div>
+</section>
+<section id="practice-9" class="slide level2">
+<h2>Practice</h2>
+<p>Calculate the IQR and identify any <span style="color:#e93cac">outliers</span> in the age at first birth data for a sample of women in rural India.</p>
+<h4 id="age-at-1st-birth-2">Age at 1st birth:</h4>
+<div style="font-size:1.5em;">
+<p><span style="color:#e93cac;">13</span>, 17, 17, 18, 20, 22, 22, 24, 24, <span style="color:#e93cac;">27</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:40%;">
+
+</div><div class="column" style="width:60%;">
+<div style="font-size:1.25em; text-align: center;">
+<p><u>Start by finding the median:</u><br> <br> <span style="color:#e93cac"><strong>Median case</strong></span> = <span class="math display">\[
+\frac{N + 1}{2} = \frac{10 + 1}{5} = 5.5
+\]</span> <br> Median = value halfway between<br>values for the 5th and 6th cases</p>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 2px solid #e93cac; width: 0px; height: 50px; margin: 10px; position: absolute; top: 190px; left: 245px">
+
+</div>
+<div class="fragment" data-fragment-index="1" style="position: absolute; top: 160px; left: 215px; color:#e93cac">
+<p><span class="math inline">\(M = 21\)</span></p>
+</div>
+</section>
+<section id="practice-10" class="slide level2">
+<h2>Practice</h2>
+<p>Calculate the IQR and identify any <span style="color:#e93cac">outliers</span> in the age at first birth data for a sample of women in rural India.</p>
+<h4 id="age-at-1st-birth-3">Age at 1st birth:</h4>
+<div style="font-size:1.5em;">
+<p><span style="color:#1b8883;">13</span>, <span style="color:#1b8883;">17</span>, <span style="color:#1b8883;">17</span>, <span style="color:#1b8883;">18</span>, <span style="color:#1b8883;">20</span>, <span style="color:#a68100;">22</span>, <span style="color:#a68100;">22</span>, <span style="color:#a68100;">24</span>, <span style="color:#a68100;">24</span>, <span style="color:#a68100;">27</span></p>
+</div>
+<div data-id="box1" style="background: rgba(255, 255, 255, 0); border: 2px solid #e93cac; width: 0px; height: 50px; margin: 10px; position: absolute; top: 190px; left: 245px">
+
+</div>
+<div style="position: absolute; top: 160px; left: 215px; color:#e93cac">
+<p><span class="math inline">\(M = 21\)</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:45%;">
+
+</div><div class="column" style="width:55%;">
+<div style="font-size:1.15em; text-align: center;">
+<p>Find the <span style="color:#1b8883">first quartile (<span class="math inline">\(X_{25th}\)</span>)</span><br>and <span style="color:#a68100">third quartile (<span class="math inline">\(X_{75th}\)</span>)</span> <br> <br> Find the <span style="color:#4b2e83">Interquartile Range</span> =<br><span style="color:#a68100"><span class="math inline">\(X_{75th}\)</span></span> - <span style="color:#1b8883"><span class="math inline">\(X_{25th}\)</span></span> = <span style="color:#a68100">24</span> – <span style="color:#1b8883">17</span> = <span style="color:#4b2e83">7</span> <br> <br> Multiply the <span style="color:#4b2e83">Interquartile Range</span> by 1.5 to get outlier-defining distance: (<span style="color:#4b2e83">7</span>)(1.5) = <span style="color:#6e8e13">10.5</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="practice-11" class="slide level2">
+<h2>Practice</h2>
+<p>Calculate the IQR and identify any <span style="color:#e93cac">outliers</span> in the age at first birth data for a sample of women in rural India.</p>
+<h4 id="age-at-1st-birth-4">Age at 1st birth:</h4>
+<div style="font-size:1.5em;">
+<p>13, 17, <span style="color:#1b8883;">17</span>, 18, 20, 22, 22, <span style="color:#a68100;">24</span>, 24, 27</p>
+</div>
+<div data-id="box1" style="background: rgba(255, 255, 255, 0); border: 2px solid #e93cac; width: 0px; height: 50px; margin: 10px; position: absolute; top: 190px; left: 245px">
+
+</div>
+<div style="position: absolute; top: 160px; left: 215px; color:#e93cac">
+<p><span class="math inline">\(M = 21\)</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:45%;">
+
+</div><div class="column" style="width:55%;">
+<div style="font-size:1.15em; text-align: center;">
+<p>Find the <span style="color:#1b8883">first quartile (<span class="math inline">\(X_{25th}\)</span>)</span><br>and <span style="color:#a68100">third quartile (<span class="math inline">\(X_{75th}\)</span>)</span> <br> <br> Find the <span style="color:#4b2e83">Interquartile Range</span> =<br><span style="color:#a68100"><span class="math inline">\(X_{75th}\)</span></span> - <span style="color:#1b8883"><span class="math inline">\(X_{25th}\)</span></span> = <span style="color:#a68100">24</span> – <span style="color:#1b8883">17</span> = <span style="color:#4b2e83">7</span> <br> <br> Multiply the <span style="color:#4b2e83">Interquartile Range</span> by 1.5 to get outlier-defining distance: (<span style="color:#4b2e83">7</span>)(1.5) = <span style="color:#6e8e13">10.5</span></p>
+</div>
+</div>
+</div>
+<div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 255px; height: 125px; padding: 0px 0px 10px 10px; position: absolute; bottom: 275px; left: -20px; font-size:1.1em; text-align: center">
+<p><span class="math inline">\(X_{25th} = 17\)</span> <br> <span class="math inline">\(X_{25th} =\)</span> midpoint of <br> the lower half</p>
+</div>
+<div data-id="box2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 255px; height: 125px; padding: 0px 0px 10px 10px; position: absolute; bottom: 275px; left: 260px; font-size:1.1em; text-align: center">
+<p><span class="math inline">\(X_{75th} = 24\)</span> <br> <span class="math inline">\(X_{75th} =\)</span> midpoint of <br> the upper half</p>
+</div>
+</section>
+<section id="practice-12" class="slide level2">
+<h2>Practice</h2>
+<p>Calculate the IQR and identify any <span style="color:#e93cac">outliers</span> in the age at first birth data for a sample of women in rural India.</p>
+<h4 id="age-at-1st-birth-5">Age at 1st birth:</h4>
+<div style="font-size:1.5em;">
+<p><span style="color:#e93cac;">13</span>, 17, <span style="color:#1b8883;">17</span>, 18, 20, 22, 22, <span style="color:#a68100;">24</span>, 24, <span style="color:#e93cac;">27</span></p>
+</div>
+<div data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 350px; height: 70px; padding: 0px 0px 20px 10px; position: absolute; top: 150px; right: 100px">
+<p>Values of 13 and 27 are <strong>NOT</strong><br>outliers in this distribution</p>
+</div>
+<div class="columns">
+<div class="column" style="width:45%;">
+
+</div><div class="column" style="width:55%;">
+<div style="font-size:1.15em; text-align: center;">
+<p><u>Find outlier thresholds:</u><br>values <span style="color:#6e8e13">10.5</span> units below <span style="color:#1b8883"><span class="math inline">\(X_{25th}\)</span></span><br>and <span style="color:#6e8e13">10.5</span> units above <span style="color:#a68100"><span class="math inline">\(X_{75th}\)</span></span> <br> <br> <span style="color:#1b8883"><span class="math inline">\(X_{25th}\)</span></span> - <span style="color:#6e8e13">10.5</span> = <span style="color:#1b8883">17</span> - <span style="color:#6e8e13">10.5</span> = 6.5 <br> <span style="color:#a68100"><span class="math inline">\(X_{75th}\)</span></span> + <span style="color:#6e8e13">10.5</span> = <span style="color:#a68100">24</span> + <span style="color:#6e8e13">10.5</span> = 34.5 <br> <br> First births at age <span style="color:#e93cac">6.5</span> or younger<br> and <span style="color:#e93cac">34.5</span> or older would<br>be considered <span style="color:#e93cac">outliers</span></p>
+</div>
+</div>
+</div>
+<div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 255px; height: 125px; padding: 0px 0px 10px 10px; position: absolute; bottom: 275px; left: -20px; font-size:1.1em; text-align: center">
+<p><span class="math inline">\(X_{25th} = 17\)</span> <br> <span class="math inline">\(X_{25th} =\)</span> midpoint of <br> the lower half</p>
+</div>
+<div data-id="box2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 255px; height: 125px; padding: 0px 0px 10px 10px; position: absolute; bottom: 275px; left: 260px; font-size:1.1em; text-align: center">
+<p><span class="math inline">\(X_{75th} = 24\)</span> <br> <span class="math inline">\(X_{75th} =\)</span> midpoint of <br> the upper half</p>
+</div>
 </section>
 <section id="variance" class="slide level2">
 <h2>Variance</h2>
+<div class="fragment" data-fragment-index="1">
+<ul>
+<li>Closely related measures of variability for interval-level variables
+<ul>
+<li>Takes into consideration <u>all scores</u> in the distribution</li>
+<li>Indicates the spread of cases <u>from the mean</u></li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="2">
+<div class="r-fit-text">
+<blockquote>
+<p><span style="color:#e93cac"><strong>Variance</strong></span><br>A measure of variability for interval level variables equal to the <br> <u><strong>average of the squared deviations from the mean</strong></u></p>
+</blockquote>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3">
+<div class="r-fit-text">
+<blockquote>
+<p><span style="color:#e93cac"><strong>Standard deviation</strong></span><br>A measure of variability for interval level variables equal to the<br><u><strong>square root of the variance</strong></u></p>
+</blockquote>
+</div>
+</div>
 </section>
-<section id="standard-deviation" class="slide level2">
-<h2>Standard deviation</h2>
+<section id="variance-and-standard-deviation-equations" class="slide level2">
+<h2>Variance and standard deviation equations</h2>
+<div class="fragment" data-fragment-index="2">
+<ul>
+<li>Variance: <em>A measure of variability for interval level variables equal to the <span style="color:#e93cac"><strong>average of the squared deviations from the mean</strong></span></em></li>
+</ul>
+</div>
+<div style="font-size:1.5em">
+<p><span class="math display">\[
+s_x^2 = \frac{\Sigma(X_i - \bar{X})^2}{n - 1}
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="2">
+<ul>
+<li>Standard deviation: <em>A measure of variability for interval level variables equal to the <span style="color:#e93cac"><strong>square root of the variance</strong></span></em></li>
+</ul>
+</div>
+<div style="font-size:1.5em">
+<p><span class="math display">\[
+s_x = \sqrt{\frac{\Sigma(X_i - \bar{X})^2}{n - 1}}
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="3" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 60px; height: 50px; margin: 10px; position: absolute; top: 223px; left: 360px">
+
+</div>
+<div class="fragment" data-fragment-index="3" data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 210px; height: 70px; padding: 0px 0px 20px 10px; position: absolute; top: 170px; left: 100px">
+<p>Variance for a variable called <span class="math inline">\(X\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="5" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #754cbc; width: 55px; height: 50px; margin: 10px; position: absolute; bottom: 115px; left: 340px">
+
+</div>
+<div class="fragment" data-fragment-index="5" data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 125px; padding: 0px 0px 20px 10px; position: absolute; bottom: 100px; left: 85px">
+<p>Sum of squared deviations from the mean for each score</p>
+</div>
+<div class="fragment" data-fragment-index="4" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #6e8e13; width: 210px; height: 115px; margin: 10px; position: absolute; top: 185px; left: 450px">
+
+</div>
+<div class="fragment" data-fragment-index="4" data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 200px; height: 100px; padding: 0px 10px 20px 10px; position: absolute; top: 170px; right: 70px">
+<p>Standard deviation for a variable called <span class="math inline">\(X\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="6" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #ffc700; width: 250px; height: 150px; margin: 10px; position: absolute; bottom: 65px; left: 435px">
+
+</div>
+<div class="fragment" data-fragment-index="6" data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 275px; height: 240px; padding: 0px 10px 20px 10px; position: absolute; bottom: 0px; right: -25px">
+<p><strong>Funkiness alert</strong>: Some texts show the denominator as <span class="math inline">\(n\)</span>. Here we are presuming that we will ultimately calculate <span class="math inline">\(s_x\)</span> in the context of inference.</p>
+</div>
 </section>
 <section id="calculating-the-variance-standard-deviation" class="slide level2">
 <h2>Calculating the variance &amp; standard deviation</h2>
+<h4 id="six-steps">Six steps</h4>
+<div class="fragment" data-fragment-index="1">
 <ol type="1">
 <li>Calculate the mean of the distribution</li>
 <li>Subtract the mean from each score to get the deviation</li>
@@ -1909,15 +2323,1910 @@ Victoria Sass
 <li>Divide the sum by n-1 to get the variance</li>
 <li>Take the square root of the variance to get the standard deviation</li>
 </ol>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="2">
+<!-- -->
+<h4 id="example-quiz-scores-for-8-students">Example: Quiz scores for 8 students:</h4>
+</div>
+<div class="fragment" data-fragment-index="2" style="font-size:1.5em;">
+<p>43, 50, 75, 77, 80, 82, 85, 92</p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="step-1">STEP 1</h3>
+<h4 id="calculate-the-mean-of-the-distribution"><span style="color:#e93cac;">Calculate the mean of the distribution</span></h4>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Student</th>
+<th style="text-align: center;">Quiz Score (X)</th>
+<th style="text-align: center;"><span class="math inline">\(X - \bar{X}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((X - \bar{X})^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">a</td>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">c</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">d</td>
+<td style="text-align: center;">77</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">e</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">f</td>
+<td style="text-align: center;">82</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">g</td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">h</td>
+<td style="text-align: center;">92</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>SUM</strong></td>
+<td style="text-align: center;"><strong>584</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>MEAN</strong></td>
+<td style="text-align: center;"><strong>73</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h3 id="step-1-1">STEP 1</h3>
+<h4 id="calculate-the-mean-of-the-distribution-1"><span style="color:#e93cac">Calculate the mean of the distribution</span></h4>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Student</th>
+<th style="text-align: center;">Quiz Score (X)</th>
+<th style="text-align: center;"><span class="math inline">\(X - \bar{X}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((X - \bar{X})^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">a</td>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">c</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">d</td>
+<td style="text-align: center;">77</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">e</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">f</td>
+<td style="text-align: center;">82</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">g</td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">h</td>
+<td style="text-align: center;">92</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>SUM</strong></td>
+<td style="text-align: center;"><strong>584</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>MEAN</strong></td>
+<td style="text-align: center;"><span style="color:#e93cac;"><strong>73</strong></span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 325px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; bottom: 75px; right: 175px; font-size:1.25em;">
+<p><span class="math display">\[
+\bar{X} = \frac{\Sigma X_i}{n} = \frac{584}{8} = 73
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="step-2">STEP 2</h3>
+<h4 id="subtract-the-mean-from-each-score-to-get-the-deviation-x_i---barx"><span style="color:#e93cac;">Subtract the mean from each score to get the <em>deviation</em> (<em><span class="math inline">\(X_i - \bar{X}\)</span>)</em></span></h4>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Student</th>
+<th style="text-align: center;">Quiz Score (X)</th>
+<th style="text-align: center;"><span class="math inline">\(X - \bar{X}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((X - \bar{X})^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span style="color:#e93cac;">a</span></td>
+<td style="text-align: center;"><span style="color:#e93cac;">43</span></td>
+<td style="text-align: center;"><span style="color:#e93cac;">-30</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">-23</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">c</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">d</td>
+<td style="text-align: center;">77</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">e</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">f</td>
+<td style="text-align: center;">82</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">g</td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">h</td>
+<td style="text-align: center;">92</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>SUM</strong></td>
+<td style="text-align: center;"><strong>584</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>MEAN</strong></td>
+<td style="text-align: center;"><span style="color:#e93cac;"><strong>73</strong></span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 325px; height: 250px; padding: 0px 0px 20px 10px; position: absolute; top: 175px; right: 0px;">
+<p><u>Student a:</u> <br> <br> <span class="math inline">\(Deviation = 43 - 73 = -30\)</span> <br> <br> Student a’s score on the quiz is 30 points below the average</p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="step-2-1">STEP 2</h3>
+<h4 id="subtract-the-mean-from-each-score-to-get-the-deviation-x_i---barx-1"><span style="color:#e93cac;">Subtract the mean from each score to get the <em>deviation</em> (<em><span class="math inline">\(X_i - \bar{X}\)</span>)</em></span></h4>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Student</th>
+<th style="text-align: center;">Quiz Score (X)</th>
+<th style="text-align: center;"><span class="math inline">\(X - \bar{X}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((X - \bar{X})^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span style="color:#e93cac;">a</span></td>
+<td style="text-align: center;"><span style="color:#e93cac;">43</span></td>
+<td style="text-align: center;"><span style="color:#e93cac;">-30</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">-23</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">c</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">d</td>
+<td style="text-align: center;">77</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">e</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">f</td>
+<td style="text-align: center;">82</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">g</td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">h</td>
+<td style="text-align: center;">92</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>SUM</strong></td>
+<td style="text-align: center;"><strong>584</strong></td>
+<td style="text-align: center;"><span style="color:#1b8883;"><strong>0</strong></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>MEAN</strong></td>
+<td style="text-align: center;"><span style="color:#e93cac;"><strong>73</strong></span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 325px; height: 250px; padding: 0px 0px 20px 10px; position: absolute; top: 175px; right: 0px;">
+<p><u>Student a:</u> <br> <br> <span class="math inline">\(Deviation = 43 - 73 = -30\)</span> <br> <br> Student a’s score on the quiz is 30 points below the average</p>
+</div>
+<div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 225px; height: 50px; padding: 0px 0px 10px 10px; position: absolute; bottom: 135px; right: 125px;">
+<p>Why is the sum 0?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="step-3">STEP 3</h3>
+<h4 id="square-all-of-the-deviations-from-the-mean"><span style="color:#e93cac;">Square all of the deviations from the mean</span></h4>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Student</th>
+<th style="text-align: center;">Quiz Score (X)</th>
+<th style="text-align: center;"><span class="math inline">\(X - \bar{X}\)</span></th>
+<th style="text-align: center;"><span style="color:#e93cac;"><span class="math inline">\((X - \bar{X})^2\)</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">a</td>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;">-30</td>
+<td style="text-align: center;">900</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">-23</td>
+<td style="text-align: center;">529</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">c</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">d</td>
+<td style="text-align: center;">77</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">e</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">49</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">f</td>
+<td style="text-align: center;">82</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">81</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">g</td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">144</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">h</td>
+<td style="text-align: center;">92</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">361</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>SUM</strong></td>
+<td style="text-align: center;"><strong>584</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>MEAN</strong></td>
+<td style="text-align: center;"><strong>73</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment" data-fragment-index="1" data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 375px; height: 150px; padding: 0px 0px 10px 20px; position: absolute; top: 175px; right: 300px;">
+<p>Squaring the deviations is just a way to make sure that positive and negative deviations don’t cancel each other out</p>
+</div>
+
+<aside><div>
+<p>You can read more about the reason we use squared deviations <a href="https://stats.stackexchange.com/questions/118/why-square-the-difference-instead-of-taking-the-absolute-value-in-standard-devia">here</a>.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="step-4">STEP 4</h3>
+<h4 id="sum-all-of-the-squared-deviations"><span style="color:#e93cac;">Sum all of the squared deviations</span></h4>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Student</th>
+<th style="text-align: center;">Quiz Score (X)</th>
+<th style="text-align: center;"><span class="math inline">\(X - \bar{X}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((X - \bar{X})^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">a</td>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;">-30</td>
+<td style="text-align: center;">900</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">-23</td>
+<td style="text-align: center;">529</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">c</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">d</td>
+<td style="text-align: center;">77</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">e</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">49</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">f</td>
+<td style="text-align: center;">82</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">81</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">g</td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">144</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">h</td>
+<td style="text-align: center;">92</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">361</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>SUM</strong></td>
+<td style="text-align: center;"><strong>584</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><span style="color:#e93cac;"><strong>2084</strong></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>MEAN</strong></td>
+<td style="text-align: center;"><strong>73</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment" data-fragment-index="1" data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 375px; height: 150px; padding: 0px 0px 10px 20px; position: absolute; top: 175px; right: 300px;">
+<p>Squaring the deviations is just a way to make sure that positive and negative deviations don’t cancel each other out</p>
+</div>
+
+<aside><div>
+<p>You can read more about the reason we use squared deviations <a href="https://stats.stackexchange.com/questions/118/why-square-the-difference-instead-of-taking-the-absolute-value-in-standard-devia">here</a>.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="step-5">STEP 5</h3>
+<h4 id="divide-the-sum-by-n-1-to-get-the-variance"><span style="color:#e93cac;">Divide the sum by <span class="math inline">\(n-1\)</span> to get the variance</span></h4>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Student</th>
+<th style="text-align: center;">Quiz Score (X)</th>
+<th style="text-align: center;"><span class="math inline">\(X - \bar{X}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((X - \bar{X})^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">a</td>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;">-30</td>
+<td style="text-align: center;">900</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">-23</td>
+<td style="text-align: center;">529</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">c</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">d</td>
+<td style="text-align: center;">77</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">e</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">49</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">f</td>
+<td style="text-align: center;">82</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">81</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">g</td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">144</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">h</td>
+<td style="text-align: center;">92</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">361</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>SUM</strong></td>
+<td style="text-align: center;"><strong>584</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><span style="color:#e93cac;"><strong>2084</strong></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>MEAN</strong></td>
+<td style="text-align: center;"><strong>73</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 500px; height: 110px; padding: 0px 0px 20px 10px; position: absolute; bottom: 100px; left: 200px; font-size:1.25em;">
+<p><span class="math display">\[
+s_x^2 = \frac{\Sigma(X_i - \bar{X})^2}{n - 1} = \frac{2084}{7} = 297.71
+\]</span></p>
+</div>
+
+<aside><div>
+<p>Variance = average <u>squared</u> deviation from the mean</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="step-6">STEP 6</h3>
+<h4 id="take-the-square-root-of-the-variance-to-get-the-standard-deviation"><span style="color:#e93cac;">Take the square root of the variance to get the <u>standard deviation</u></span></h4>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Student</th>
+<th style="text-align: center;">Quiz Score (X)</th>
+<th style="text-align: center;"><span class="math inline">\(X - \bar{X}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((X - \bar{X})^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">a</td>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;">-30</td>
+<td style="text-align: center;">900</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">-23</td>
+<td style="text-align: center;">529</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">c</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">d</td>
+<td style="text-align: center;">77</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">e</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">49</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">f</td>
+<td style="text-align: center;">82</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">81</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">g</td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">144</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">h</td>
+<td style="text-align: center;">92</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">361</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>SUM</strong></td>
+<td style="text-align: center;"><strong>584</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><span style="color:#e93cac;"><strong>2084</strong></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>MEAN</strong></td>
+<td style="text-align: center;"><strong>73</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 300px; height: 300px; padding: 0px 0px 20px 10px; position: absolute; top: 200px; left: 350px; font-size:1.25em; text-align:center;">
+<p><span class="math display">\[
+s_x = \sqrt{\frac{\Sigma(X_i - \bar{X})^2}{n - 1}}
+\]</span> <span class="math display">\[
+= \sqrt{297.71}
+\]</span> <span class="math display">\[
+= 17.25
+\]</span></p>
+</div>
 </section>
 <section id="interpreting-the-standard-deviation" class="slide level2">
 <h2>Interpreting the standard deviation</h2>
+<div>
+<ul>
+<li class="fragment"><u>ROUGHLY</u> equal to the <u>average deviation</u> of scores in the distribution from the mean of the distribution
+<ul>
+<li class="fragment">squaring and square-rooting leads to some <em>slippage</em></li>
+</ul></li>
+<li class="fragment">Minimum value = 0 = no variation in scores</li>
+<li class="fragment">Useful for comparing the level of diversity or heterogeneity of two or more different distributions
+<ul>
+<li class="fragment">Example: Quiz scores from 3 classes:
+<ul>
+<li class="fragment">Class 1: Mean = 75, standard deviation = 5</li>
+<li class="fragment">Class 2: Mean = 75, standard deviation = 15</li>
+<li class="fragment">Class 3: Mean = 75, standard deviation = 0</li>
+</ul></li>
+</ul></li>
+<li class="fragment">Important as the unit of measurement to determine how unusual or extreme a particular score is
+<ul>
+<li class="fragment">Question: In which class is a score of 90 most unusual?</li>
+<li class="fragment">Question: In which class is a score of 90 more typical?</li>
+</ul></li>
+<li class="fragment">Useful in combination with the normal curve</li>
+</ul>
+</div>
 </section>
 <section id="comparing-data" class="slide level2">
 <h2>Comparing data</h2>
+<h4 id="statistics-from-two-populations-of-women-show-the-following-information-about-the-number-of-children-born">Statistics from two populations of women show the following information about the number of children born:</h4>
+<table class="caption-top" style="width:75%;">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><u>Coldlandia</u></th>
+<th style="text-align: center;"><u>Tropicana</u></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Mean</td>
+<td style="text-align: center;">3.15</td>
+<td style="text-align: center;">4.05</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Median</td>
+<td style="text-align: center;">2.50</td>
+<td style="text-align: center;">4.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Mode</td>
+<td style="text-align: center;">2.00</td>
+<td style="text-align: center;">4.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Range</td>
+<td style="text-align: center;">18.00</td>
+<td style="text-align: center;">12.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(S_x\)</span></td>
+<td style="text-align: center;">4.75</td>
+<td style="text-align: center;">2.85</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<div>
+<ul>
+<li class="fragment">According to these statistics, which of the populations has greater <u>levels</u> of childbearing? <span style="color:#e93cac;">(interpret the key statistics)</span></li>
+<li class="fragment">Which one has greater <u>diversity</u> in childbearing experiences? <span style="color:#e93cac;">(interpret the key statistics)</span></li>
+<li class="fragment">What can you tell about the shape of the distributions?</li>
+</ul>
+</div>
 </section>
-<section id="calculating-the-standard-deviation-from-a-frequency-distribution" class="slide level2">
-<h2>Calculating the standard deviation from a frequency distribution</h2>
+<section class="slide level2">
+
+<h3 id="calculating-the-standard-deviation-from-a-frequency-distribution"><span style="font-size:0.85em">Calculating the standard deviation from a <span style="color:#e93cac;">frequency distribution</span></span></h3>
+<h4 id="step-1-calculate-the-mean"><span style="color:#e8e3d3;">Step 1: Calculate the mean</span></h4>
+<div class="smaller">
+<table class="caption-top">
+<caption>Frequency distribution of the number of paper cups<br>used per week by a sample of students</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number of cups<br>(X)</th>
+<th style="text-align: center;"><br>f</th>
+<th style="text-align: center;"></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total (n)</strong></td>
+<td style="text-align: center;"><strong>67</strong></td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-id="box5" style="position: absolute; top: 50px; right: -50px;">
+<p><span class="math display">\[
+s_x = \sqrt{\frac{\Sigma(X_i - \bar{X})^2}{n - 1}}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-standard-deviation-from-a-frequency-distribution-1"><span style="font-size:0.85em">Calculating the standard deviation from a <span style="color:#e93cac;">frequency distribution</span></span></h3>
+<h4 id="step-1-calculate-the-mean-1">Step 1: <span style="color:#e93cac;">Calculate the mean</span></h4>
+<div class="smaller">
+<table class="caption-top">
+<caption>Frequency distribution of the number of paper cups<br>used per week by a sample of students</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number of cups<br>(X)</th>
+<th style="text-align: center;"><br>f</th>
+<th style="text-align: center;"><br>f(x)</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">24</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">44</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">60</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">24</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">49</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">80</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">54</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">40</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total (n)</strong></td>
+<td style="text-align: center;"><strong>67</strong></td>
+<td style="text-align: center;"><strong>377</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-id="box5" style="position: absolute; top: 50px; right: -50px;">
+<p><span class="math display">\[
+s_x = \sqrt{\frac{\Sigma(X_i - \bar{X})^2}{n - 1}}
+\]</span></p>
+</div>
+<div data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 25px; height: 30px; margin: 10px; position: absolute; top: 70px; right: -37px">
+
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box3" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; height: 225px; padding: 0px 10px 20px 10px; position: absolute; top: 300px; right: 0px; text-align: center">
+<p><span class="math display">\[
+\bar{X} = \frac{\Sigma f X}{n}
+\]</span> <span class="math display">\[
+= \frac{377}{67}
+\]</span> <span class="math display">\[
+= 5.63
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 15px; height: 30px; margin: 10px; position: absolute; top: 314px; right: 44px">
+
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box3" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 200px; height: 140px; padding: 0px 10px 20px 10px; position: absolute; bottom: 200px; right: 200px; text-align: center">
+<p>Multiplying each value of X by the number of times it appears</p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-standard-deviation-from-a-frequency-distribution-2"><span style="font-size:0.85em">Calculating the standard deviation from a <span style="color:#e93cac;">frequency distribution</span></span></h3>
+<h4 id="step-2-get-the-deviation-of-each-score-from-the-mean">Step 2: <span style="color:#e93cac;">Get the deviation of each score from the mean</span></h4>
+<div class="smaller">
+<table class="caption-top">
+<caption>Frequency distribution of the number of paper cups<br>used per week by a sample of students</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number of cups<br>(X)</th>
+<th style="text-align: center;"><br>f</th>
+<th style="text-align: center;"><br>f(x)</th>
+<th style="text-align: center;"><br><span class="math inline">\(X_i - \bar{X}\)</span></th>
+<th style="text-align: center;"></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-5.63</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-4.63</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-3.63</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">-2.63</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">-1.63</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">-0.63</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">0.37</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">1.37</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">2.37</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">54</td>
+<td style="text-align: center;">3.37</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">4.37</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total (n)</strong></td>
+<td style="text-align: center;"><strong>67</strong></td>
+<td style="text-align: center;"><strong>377</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-id="box5" style="position: absolute; top: 50px; right: -50px;">
+<p><span class="math display">\[
+s_x = \sqrt{\frac{\Sigma(X_i - \bar{X})^2}{n - 1}}
+\]</span></p>
+</div>
+<div data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 75px; height: 30px; margin: 10px; position: absolute; top: 70px; right: -35px">
+
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-standard-deviation-from-a-frequency-distribution-3"><span style="font-size:0.85em">Calculating the standard deviation from a <span style="color:#e93cac;">frequency distribution</span></span></h3>
+<h4 id="step-3-square-all-of-the-deviations-from-the-mean">Step 3: <span style="color:#e93cac;">Square all of the deviations from the mean</span></h4>
+<div class="smaller">
+<table class="caption-top">
+<caption>Frequency distribution of the number of paper cups<br>used per week by a sample of students</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number of cups<br>(X)</th>
+<th style="text-align: center;"><br>f</th>
+<th style="text-align: center;"><br>f(x)</th>
+<th style="text-align: center;"><br><span class="math inline">\(X_i - \bar{X}\)</span></th>
+<th style="text-align: center;"><br><span class="math inline">\((X_i -\bar{X})^2\)</span></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-5.63</td>
+<td style="text-align: center;">31.666</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-4.63</td>
+<td style="text-align: center;">21.41</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-3.63</td>
+<td style="text-align: center;">13.15</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">-2.63</td>
+<td style="text-align: center;">6.90</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">-1.63</td>
+<td style="text-align: center;">2.65</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">-0.63</td>
+<td style="text-align: center;">0.39</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">0.37</td>
+<td style="text-align: center;">0.14</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">1.37</td>
+<td style="text-align: center;">1.89</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">2.37</td>
+<td style="text-align: center;">5.63</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">54</td>
+<td style="text-align: center;">3.37</td>
+<td style="text-align: center;">11.38</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">4.37</td>
+<td style="text-align: center;">19.12</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total (n)</strong></td>
+<td style="text-align: center;"><strong>67</strong></td>
+<td style="text-align: center;"><strong>377</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-id="box5" style="position: absolute; top: 50px; right: -50px;">
+<p><span class="math display">\[
+s_x = \sqrt{\frac{\Sigma(X_i - \bar{X})^2}{n - 1}}
+\]</span></p>
+</div>
+<div data-id="box1" style="background: rgba(255, 255, 255, 0); border: 2px solid #e93cac; width: 20px; height: 20px; margin: 10px; position: absolute; top: 71px; right: -54px">
+
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-standard-deviation-from-a-frequency-distribution-4"><span style="font-size:0.85em">Calculating the standard deviation from a <span style="color:#e93cac;">frequency distribution</span></span></h3>
+<h4 id="step-4-sum-all-of-the-squared-deviations-sigmax_i---barx2">Step 4: <span style="color:#e93cac;">Sum all of the squared deviations (<span class="math inline">\(\Sigma(X_i - \bar{X})^2\)</span>)</span></h4>
+<div class="smaller">
+<table class="caption-top">
+<caption>Frequency distribution of the number of paper cups<br>used per week by a sample of students</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number of cups<br>(X)</th>
+<th style="text-align: center;"><br>f</th>
+<th style="text-align: center;"><br>f(x)</th>
+<th style="text-align: center;"><br><span class="math inline">\(X_i - \bar{X}\)</span></th>
+<th style="text-align: center;"><br><span class="math inline">\((X_i -\bar{X})^2\)</span></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-5.63</td>
+<td style="text-align: center;">31.666</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-4.63</td>
+<td style="text-align: center;">21.41</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-3.63</td>
+<td style="text-align: center;">13.15</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">-2.63</td>
+<td style="text-align: center;">6.90</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">-1.63</td>
+<td style="text-align: center;">2.65</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">-0.63</td>
+<td style="text-align: center;">0.39</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">0.37</td>
+<td style="text-align: center;">0.14</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">1.37</td>
+<td style="text-align: center;">1.89</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">2.37</td>
+<td style="text-align: center;">5.63</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">54</td>
+<td style="text-align: center;">3.37</td>
+<td style="text-align: center;">11.38</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">4.37</td>
+<td style="text-align: center;">19.12</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total (n)</strong></td>
+<td style="text-align: center;"><strong>67</strong></td>
+<td style="text-align: center;"><strong>377</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-id="box5" style="position: absolute; top: 50px; right: -50px;">
+<p><span class="math display">\[
+s_x = \sqrt{\frac{\Sigma(X_i - \bar{X})^2}{n - 1}}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-standard-deviation-from-a-frequency-distribution-5"><span style="font-size:0.85em">Calculating the standard deviation from a <span style="color:#e93cac;">frequency distribution</span></span></h3>
+<h4 id="step-4-sum-all-of-the-squared-deviations-sigmax_i---barx2-1">Step 4: <span style="color:#e93cac;">Sum all of the squared deviations (<span class="math inline">\(\Sigma(X_i - \bar{X})^2\)</span>)</span></h4>
+<div class="smaller">
+<table class="caption-top">
+<caption>Frequency distribution of the number of paper cups<br>used per week by a sample of students</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number of cups<br>(X)</th>
+<th style="text-align: center;"><br>f</th>
+<th style="text-align: center;"><br>f(x)</th>
+<th style="text-align: center;"><br><span class="math inline">\(X_i - \bar{X}\)</span></th>
+<th style="text-align: center;"><br><span class="math inline">\((X_i -\bar{X})^2\)</span></th>
+<th style="text-align: center;"><br><span class="math inline">\(f(X_i - \bar{X})^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-5.63</td>
+<td style="text-align: center;">31.666</td>
+<td style="text-align: center;">94.98</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-4.63</td>
+<td style="text-align: center;">21.41</td>
+<td style="text-align: center;">42.82</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-3.63</td>
+<td style="text-align: center;">13.15</td>
+<td style="text-align: center;">0.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">-2.63</td>
+<td style="text-align: center;">6.90</td>
+<td style="text-align: center;">55.20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">-1.63</td>
+<td style="text-align: center;">2.65</td>
+<td style="text-align: center;">29.11</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">-0.63</td>
+<td style="text-align: center;">0.39</td>
+<td style="text-align: center;">4.72</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">0.37</td>
+<td style="text-align: center;">0.14</td>
+<td style="text-align: center;">0.56</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">1.37</td>
+<td style="text-align: center;">1.89</td>
+<td style="text-align: center;">13.20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">2.37</td>
+<td style="text-align: center;">5.63</td>
+<td style="text-align: center;">56.32</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">54</td>
+<td style="text-align: center;">3.37</td>
+<td style="text-align: center;">11.38</td>
+<td style="text-align: center;">68.27</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">4.37</td>
+<td style="text-align: center;">19.12</td>
+<td style="text-align: center;">76.50</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total (n)</strong></td>
+<td style="text-align: center;"><strong>67</strong></td>
+<td style="text-align: center;"><strong>377</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>441.67</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-id="box5" style="position: absolute; top: 50px; right: -50px;">
+<p><span class="math display">\[
+s_x = \sqrt{\frac{\Sigma f (X_i - \bar{X})^2}{n - 1}}
+\]</span></p>
+</div>
+<div data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 350px; height: 190px; padding: 0px 10px 20px 10px; position: absolute; top: 288px; left: 350px">
+<p>But we must take into consideration the number of times (frequency) each squared deviation appears</p>
+<p><span class="math display">\[
+\Sigma f (X_i - \bar{X})^2
+\]</span></p>
+</div>
+<div data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 35px; height: 30px; margin: 10px; position: absolute; top: 71px; right: 43px">
+
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-standard-deviation-from-a-frequency-distribution-6"><span style="font-size:0.85em">Calculating the standard deviation from a <span style="color:#e93cac;">frequency distribution</span></span></h3>
+<h4 id="step-5-divide-by-n---1-to-get-the-variance">Step 5: <span style="color:#e93cac;">Divide by <span class="math inline">\(n - 1\)</span> to get the variance</span></h4>
+<div class="smaller">
+<table class="caption-top">
+<caption>Frequency distribution of the number of paper cups<br>used per week by a sample of students</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number of cups<br>(X)</th>
+<th style="text-align: center;"><br>f</th>
+<th style="text-align: center;"><br>f(x)</th>
+<th style="text-align: center;"><br><span class="math inline">\(X_i - \bar{X}\)</span></th>
+<th style="text-align: center;"><br><span class="math inline">\((X_i -\bar{X})^2\)</span></th>
+<th style="text-align: center;"><br><span class="math inline">\(f(X_i - \bar{X})^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-5.63</td>
+<td style="text-align: center;">31.666</td>
+<td style="text-align: center;">94.98</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-4.63</td>
+<td style="text-align: center;">21.41</td>
+<td style="text-align: center;">42.82</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-3.63</td>
+<td style="text-align: center;">13.15</td>
+<td style="text-align: center;">0.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">-2.63</td>
+<td style="text-align: center;">6.90</td>
+<td style="text-align: center;">55.20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">-1.63</td>
+<td style="text-align: center;">2.65</td>
+<td style="text-align: center;">29.11</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">-0.63</td>
+<td style="text-align: center;">0.39</td>
+<td style="text-align: center;">4.72</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">0.37</td>
+<td style="text-align: center;">0.14</td>
+<td style="text-align: center;">0.56</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">1.37</td>
+<td style="text-align: center;">1.89</td>
+<td style="text-align: center;">13.20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">2.37</td>
+<td style="text-align: center;">5.63</td>
+<td style="text-align: center;">56.32</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">54</td>
+<td style="text-align: center;">3.37</td>
+<td style="text-align: center;">11.38</td>
+<td style="text-align: center;">68.27</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">4.37</td>
+<td style="text-align: center;">19.12</td>
+<td style="text-align: center;">76.50</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total (n)</strong></td>
+<td style="text-align: center;"><strong>67</strong></td>
+<td style="text-align: center;"><strong>377</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>441.67</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-id="box5" style="position: absolute; top: 50px; right: -50px;">
+<p><span class="math display">\[
+s_x = \sqrt{\frac{\Sigma f (X_i - \bar{X})^2}{n - 1}}
+\]</span></p>
+</div>
+<div data-id="box4" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 225px; height: 225px; padding: 0px 10px 20px 10px; position: absolute; top: 288px; left: 400px">
+<p><span class="math display">\[
+s_x^2 = \frac{\Sigma f (X_i - \bar{X})^2}{n - 1}
+\]</span> <span class="math display">\[
+= \frac{441.67}{67 - 1}
+\]</span> <span class="math display">\[
+= 6.69
+\]</span></p>
+</div>
+<div data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 75px; height: 30px; margin: 10px; position: absolute; top: 110px; right: -25px">
+
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-standard-deviation-from-a-frequency-distribution-7"><span style="font-size:0.85em">Calculating the standard deviation from a <span style="color:#e93cac;">frequency distribution</span></span></h3>
+<h4 id="step-6-take-the-square-root-of-the-variance-to-get-the-standard-deviation">Step 6: <span style="color:#e93cac;">Take the square root of the variance to get the standard deviation</span></h4>
+<div class="smaller">
+<table class="caption-top">
+<caption>Frequency distribution of the number of paper cups<br>used per week by a sample of students</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number of cups<br>(X)</th>
+<th style="text-align: center;"><br>f</th>
+<th style="text-align: center;"><br>f(x)</th>
+<th style="text-align: center;"><br><span class="math inline">\(X_i - \bar{X}\)</span></th>
+<th style="text-align: center;"><br><span class="math inline">\((X_i -\bar{X})^2\)</span></th>
+<th style="text-align: center;"><br><span class="math inline">\(f(X_i - \bar{X})^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-5.63</td>
+<td style="text-align: center;">31.666</td>
+<td style="text-align: center;">94.98</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-4.63</td>
+<td style="text-align: center;">21.41</td>
+<td style="text-align: center;">42.82</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-3.63</td>
+<td style="text-align: center;">13.15</td>
+<td style="text-align: center;">0.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">-2.63</td>
+<td style="text-align: center;">6.90</td>
+<td style="text-align: center;">55.20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">-1.63</td>
+<td style="text-align: center;">2.65</td>
+<td style="text-align: center;">29.11</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">-0.63</td>
+<td style="text-align: center;">0.39</td>
+<td style="text-align: center;">4.72</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">0.37</td>
+<td style="text-align: center;">0.14</td>
+<td style="text-align: center;">0.56</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">1.37</td>
+<td style="text-align: center;">1.89</td>
+<td style="text-align: center;">13.20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">2.37</td>
+<td style="text-align: center;">5.63</td>
+<td style="text-align: center;">56.32</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">54</td>
+<td style="text-align: center;">3.37</td>
+<td style="text-align: center;">11.38</td>
+<td style="text-align: center;">68.27</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">4.37</td>
+<td style="text-align: center;">19.12</td>
+<td style="text-align: center;">76.50</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total (n)</strong></td>
+<td style="text-align: center;"><strong>67</strong></td>
+<td style="text-align: center;"><strong>377</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>441.67</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-id="box5" style="position: absolute; top: 50px; right: -50px;">
+<p><span class="math display">\[
+s_x = \sqrt{\frac{\Sigma f (X_i - \bar{X})^2}{n - 1}}
+\]</span></p>
+</div>
+<div data-id="box4" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 225px; height: 225px; padding: 0px 10px 20px 10px; position: absolute; top: 288px; left: 400px">
+<p><span class="math display">\[
+s_x = \sqrt{\frac{\Sigma f (X_i - \bar{X})^2}{n - 1}}
+\]</span> <span class="math display">\[
+= \sqrt{6.69}
+\]</span> <span class="math display">\[
+= 2.59
+\]</span></p>
+</div>
+<div data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 190px; height: 100px; margin: 10px; position: absolute; top: 52px; right: -75px">
+
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box4" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 440px; height: 140px; padding: 0px 10px 20px 10px; position: absolute; top: 450px; left: -75px">
+<p><u><strong>Interpretation</strong></u>: On average, the number of cups used by the students in the sample differed from the average (mean) by almost 2.6 cups.</p>
+</div>
 </section></section>
 <section>
 <section id="homework" class="title-slide slide level1 section-title center" data-background-color="#e8e3d3">
