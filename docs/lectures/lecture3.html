@@ -447,14 +447,14 @@ Victoria Sass
 <h2>Measure of central tendency: Mean</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p><br> <br></p>
+<p><br> <br> <br></p>
 <div class="fragment" data-fragment-index="2" style="font-size: 3em">
 <p><span class="math display">\[
 \bar{X} = \frac{\Sigma  X_i}{N}
 \]</span></p>
 </div>
 </div><div class="column" style="width:40%;">
-<p><br></p>
+<p><br> <br></p>
 <div class="fragment" data-fragment-index="1">
 <div class="r-fit-text">
 <blockquote>
@@ -464,39 +464,1415 @@ Victoria Sass
 </div>
 </div>
 </div>
+<div class="fragment" data-fragment-index="3" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 90px; height: 85px; margin: 10px; position: absolute; top: 290px; left: 115px">
+
+</div>
+<div class="fragment" data-fragment-index="3" data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 210px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; top: 430px; left: -50px">
+<p><u><strong><em>X Bar</em></strong></u> refers to the mean of a variable called <strong><em>X</em></strong></p>
+</div>
+<div class="fragment" data-fragment-index="4" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #1b8883; width: 70px; height: 80px; margin: 10px; position: absolute; top: 240px; left: 277px">
+
+</div>
+<div class="fragment" data-fragment-index="4" data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; top: 100px; left: 0px">
+<p><u><strong><em>Sigma</em></strong></u>: summation sign meaning <em>add up everything that follows</em></p>
+</div>
+<div class="fragment" data-fragment-index="5" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #a68100; width: 72px; height: 80px; margin: 10px; position: absolute; top: 240px; left: 352px">
+
+</div>
+<div class="fragment" data-fragment-index="5" data-id="box2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 300px; height: 75px; padding: 0px 0px 20px 10px; position: absolute; top: 120px; left: 322px">
+<p><u><strong><em><span class="math inline">\(X_i\)</span></em></strong></u> refers to the individual values of the variable <strong><em>X</em></strong></p>
+</div>
+<div class="fragment" data-fragment-index="6" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #6e8e13; width: 72px; height: 80px; margin: 10px; position: absolute; top: 350px; left: 320px">
+
+</div>
+<div class="fragment" data-fragment-index="6" data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 225px; height: 60px; padding: 0px 0px 20px 10px; position: absolute; bottom: 130px; left: 322px">
+<p><u><strong><em><span class="math inline">\(N\)</span></em></strong></u> = total number of cases</p>
+</div>
 </section>
-<section id="calculating-the-mean-from-a-frequency-distribution" class="slide level2">
-<h2>Calculating the mean from a frequency distribution</h2>
+<section id="example-calculation" class="slide level2">
+<h2>Example calculation</h2>
+<div class="fragment" data-fragment-index="1">
+<!-- -->
+<h3 id="mean-of-age-for-a-group-of-10-individuals">Mean of age for a group of 10 individuals</h3>
+<p>Ages of sample members: 21, 34, 19, 20, 25, 41, 21, 23, 20, 18</p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="2" style="font-size: 1.5em">
+<!-- -->
+<h4 id="calculating-the-mean"><u>Calculating the mean</u></h4>
+<p><span class="math display">\[
+\bar{X} = \frac{\Sigma X_i}{N} = \frac{X_1 + X_2 + X_3 + ... +X_n}{N}
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="3" style="font-size: 1.5em">
+<p><span class="math display">\[
+       = \frac{(21 + 34 + 19 + 20 + 25 + 41 + 21 + 23 + 20 + 18)}{10}
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="4" style="font-size: 1.5em">
+<p><span class="math display">\[
+       = \frac{242}{10} = 24.2years
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-mean-from-a-frequency-distribution">Calculating the mean from a frequency distribution</h3>
+<div class="fragment" data-fragment-index="1">
+<!-- -->
+<h4 id="number-of-paper-cups-used-per-week-by-a-sample-of-67-college-students">Number of paper cups used per week by a sample of 67 college students</h4>
+</div>
+<div class="fragment r-fit-text" data-fragment-index="1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>&gt;  [1]  9  3  9  3  7  8  4  7  8  3  4  5  9  5  3  0
+&gt; [17]  6  7  1  3  8  5  0  5  9  5  5  8  0  4  4  5
+&gt; [33]  4  6  8  8  8 10  7  3 10  4  4  6  8  5  7  6
+&gt; [49]  8  9  5  3  4  3 10  5  4  8  4  5  7  9  1 10
+&gt; [65]  4  5  7</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3" style="font-size: 1.5em">
+<p>We could apply <span class="math inline">\(\bar{X} = \frac{\Sigma  X_i}{N}\)</span></p>
+<p><br></p>
+</div>
+<div class="fragment" data-fragment-index="4" style="font-size: 1.5em">
+<p><span class="math display">\[
+= \frac{(9 + 3 + 9 + 7 + 8 + ... + 7)}{67}
+\]</span></p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="4" style="font-size: 1.5em; position: absolute; bottom: 0px; right: 0px">
+<p>…but this would be inefficient</p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-mean-from-a-frequency-distribution-1">Calculating the mean from a frequency distribution</h3>
+<div class="smaller">
+<table class="caption-top">
+<caption>Frequency distribution of the number of paper cups used per week by a sample of students</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number of cups<br>(X)</th>
+<th style="text-align: center;">Frequency<br>(f)</th>
+<th style="text-align: center;">Percent<br>(%)</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4.48</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2.99</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.00</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">11.94</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">16.42</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">17.91</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5.97</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">10.45</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">14.93</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">8.96</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5.97</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total (N)</strong></td>
+<td style="text-align: center;"><strong>67</strong></td>
+<td style="text-align: center;"><strong>100.00</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 140px; padding: 0px 0px 20px 10px; position: absolute; top: 275px; right: 0px; font-size: 1.75em">
+<p><span class="math display">\[
+\bar{X} = \frac{\Sigma  X_i}{N}
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 140px; padding: 0px 0px 20px 10px; position: absolute; top: 275px; right: 0px; font-size: 1.75em">
+<p><span class="math display">\[
+\bar{X} = \frac{\Sigma  fX}{N}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-mean-from-a-frequency-distribution-2">Calculating the mean from a frequency distribution</h3>
+<div class="smaller">
+<table class="caption-top">
+<caption>Frequency distribution of the number of paper cups used per week by a sample of students</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number of cups<br>(X)</th>
+<th style="text-align: center;">Frequency<br>(f)</th>
+<th style="text-align: center;">Percent<br>(%)</th>
+<th><br>f(x)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4.48</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2.99</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.00</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">11.94</td>
+<td>24</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">16.42</td>
+<td>44</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">17.91</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5.97</td>
+<td>24</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">10.45</td>
+<td>49</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">14.93</td>
+<td>80</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">8.96</td>
+<td>54</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5.97</td>
+<td>40</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total (N)</strong></td>
+<td style="text-align: center;"><strong>67</strong></td>
+<td style="text-align: center;"><strong>100.00</strong></td>
+<td><strong>377</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 140px; padding: 0px 0px 20px 10px; position: absolute; top: 275px; right: 0px; font-size: 1.75em">
+<p><span class="math display">\[
+\bar{X} = \frac{\Sigma  fX}{N}
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="1" style="font-size: 1.5em; position: absolute; bottom: 25px; right: 100px">
+<p>= <span class="math inline">\(\frac{377}{67}\)</span> = <span style="color:#e93cac"><strong>5.63</strong></span></p>
+</div>
 </section>
 <section id="important-properties-of-the-mean" class="slide level2">
 <h2>Important properties of the mean</h2>
 <ol type="1">
-<li>Appropriate only for interval-ratio variables</li>
-<li>Mathematical balancing point of the distribution</li>
+<li>Appropriate only for interval-ratio variables
+<ul>
+<li>must be able to assume consistent units/values for mathematical operations</li>
+</ul></li>
+</ol>
+</section>
+<section id="important-properties-of-the-mean-1" class="slide level2">
+<h2>Important properties of the mean</h2>
+<ol type="1">
+<li>Appropriate only for interval-ratio variables
+<ul>
+<li>must be able to assume consistent units/values for mathematical operations</li>
+</ul></li>
+<li>Mathematical balancing point of the distribution
+<ul>
+<li>magnitude of scores below the mean balance the magnitude of scores above the mean</li>
+<li>Example: Annual salary of a sample of teachers ($1000’s)</li>
+</ul></li>
+</ol>
+</section>
+<section id="important-properties-of-the-mean-2" class="slide level2">
+<h2>Important properties of the mean</h2>
+<ol type="1">
+<li>Appropriate only for interval-ratio variables
+<ul>
+<li>must be able to assume consistent units/values for mathematical operations</li>
+</ul></li>
+<li>Mathematical balancing point of the distribution
+<ul>
+<li><span style="color:#e93cac">magnitude of scores below the mean balance the magnitude of scores above the mean</span></li>
+<li>Example: Annual salary of a sample of teachers ($1000’s)</li>
+</ul></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://brilliant.org/wiki/arithmetic-mean/"><img data-src="images/mean_balance.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></a></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://bookdown.org/pkaldunn/Book/ComputeAverage.html"><img data-src="images/mean_balance.gif" class="quarto-figure quarto-figure-center" style="width:90.0%"></a></p>
+</figure>
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 500px; height: 125px; padding: 0px 0px 20px 10px; position: absolute; bottom: 50px; left: 0px">
+<p>Note that the numbers of cases on each side of the mean don’t match but their <u>relative magnitudes</u> balance out (the mean remains the only balancing point)</p>
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 325px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; bottom: 75px; right: 0px">
+<p>The mean value does not always appear in the distribution</p>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="mathematical-implications-of-the-balancing-point-property">Mathematical implications of the balancing-point property</h4>
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><a href="https://www.onlinemathlearning.com/mean-balance-point.html#google_vignette"><img data-src="images/mean_deviations.png" class="quarto-figure quarto-figure-left" style="width:80.0%"></a></p>
+</figure>
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; height: 515px; padding: 0px 0px 20px 20px; position: absolute; top: 100px; right: -75px">
+<p><span style="color:#e93cac; font-size:2em"><strong>Deviation</strong></span><br><span style="font-size:1.5em"><em>(from the mean)</em> <br>The difference<br>between an<br>individual<br>score/value<br>in the<br>distribution<br>and the mean of<br>the distribution</span></p>
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 290px; height: 25px; margin: 10px; position: absolute; top: 160px; left: 20px">
+
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="mathematical-implications-of-the-balancing-point-property-1">Mathematical implications of the balancing-point property</h4>
+<div class="fragment" data-fragment-index="1">
+<ul>
+<li><em>The sum of the differences between the scores in a distribution and the mean of the distribution always equals zero.</em></li>
+</ul>
+<div style="font-size:1.9em">
+<p><span class="math display">\[
+\Sigma(X_i -\bar{X}) = 0
+\]</span></p>
+</div>
+</div>
+<div class="fragment" data-fragment-index="2">
+<ul>
+<li><em>The sum of the <u>squared differences</u> between the scores and the mean is smaller than the squared difference between the scores and any other point / value in the distribution.</em>
+<ul>
+<li><span class="fragment" data-fragment-index="3" style="color:#e93cac"><em>scores in any distribution are more clustered around the mean than around any other point</em></span></li>
+<li><span class="fragment" data-fragment-index="3" style="color:#e93cac"><em>in the absence of any other information, the mean is typically the best estimate of the score for any single case in the distribution</em></span></li>
+</ul></li>
+</ul>
+<div style="font-size:1.9em">
+<p><span class="math display">\[
+\Sigma(X_i -\bar{X})^2 = minimum
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="important-properties-of-the-mean-3" class="slide level2">
+<h2>Important properties of the mean</h2>
+<ol type="1">
+<li>Appropriate only for interval-ratio variables
+<ul>
+<li>must be able to assume consistent units/values for mathematical operations</li>
+</ul></li>
+<li>Mathematical balancing point of the distribution
+<ul>
+<li>magnitude of scores below the mean balance the magnitude of scores above the mean</li>
+<li>Example: Annual salary of a sample of teachers ($1000’s)</li>
+</ul></li>
 <li>Sensitive to extremes</li>
 </ol>
 </section>
-<section id="median" class="slide level2">
-<h2>Median</h2>
+<section class="slide level2">
+
+<h4 id="self-reported-male-heights-inches">Self-reported male heights (inches)</h4>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="864"></section>
+<section class="slide level2">
+
+<h4 id="adding-cases-at-the-mean-has-no-effect-on-the-mean"><span style="color:#e93cac">Adding cases at the mean has no effect on the mean</span></h4>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="864"></section>
+<section class="slide level2">
+
+<h4 id="similarly-adding-cases-close-to-the-mean-has-little-effect-on-the-mean"><span style="color:#e93cac">Similarly, adding cases close to the mean has little effect on the mean</span></h4>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="864"></section>
+<section class="slide level2">
+
+<h4 id="but-adding-an-extreme-score-changes-the-mean-much-more"><span style="color:#e93cac">But adding an extreme score changes the mean much more</span></h4>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="864"></section>
+<section id="important-properties-of-the-mean-4" class="slide level2">
+<h2>Important properties of the mean</h2>
+<ol type="1">
+<li>Appropriate only for interval-ratio variables
+<ul>
+<li>must be able to assume consistent units/values for mathematical operations</li>
+</ul></li>
+<li>Mathematical balancing point of the distribution
+<ul>
+<li>magnitude of scores below the mean balance the magnitude of scores above the mean</li>
+<li>Example: Annual salary of a sample of teachers ($1000’s)</li>
+</ul></li>
+<li>Sensitive to extremes
+<ul>
+<li><span style="color:#e93cac">questionable measure of what is <u><strong>typical</strong></u> when the distribution contains extreme values (skewed distributions)</span></li>
+<li><span style="color:#e93cac">but the mean retains usefulness in many statistical techniques, even when the distribution is skewed</span></li>
+</ul></li>
+</ol>
 </section>
-<section id="calculating-the-median-from-a-frequency-distribution" class="slide level2">
-<h2>Calculating the median from a frequency distribution</h2>
+<section id="measure-of-central-tendency-median" class="slide level2">
+<h2>Measure of central tendency: Median</h2>
+<div class="fragment" data-fragment-index="1">
+<div class="r-fit-text">
+<blockquote>
+<p><span style="color:#e93cac"><strong>Median</strong></span><br> • The score for the case in the exact middle of the distribution<br>• The point in the distribution at which half of cases fall above<br>that score and half of the cases fall below that score<br>• 50th percentile of the distribution</p>
+</blockquote>
+</div>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="2">
+<!-- -->
+<h4 id="calculation"><u>Calculation</u></h4>
+<ol type="1">
+<li><span style="color:#e93cac"><u><strong>Order</strong></u></span> cases by score (low-to-high or high-to-low)</li>
+<li>Find the <span style="color:#e93cac"><u><strong>median case</strong></u></span> (i.e., “median rank”)
+<ul>
+<li><span style="color:#e93cac"><strong>MEDIAN CASE = <span class="math inline">\(\frac{N + 1}{2}\)</span></strong></span></li>
+</ul></li>
+<li>Identify the <span style="color:#e93cac"><u>score</u></span> associated with the median case.</li>
+</ol>
+</div>
+</section>
+<section id="example-calculation-with-an-odd-number-of-cases" class="slide level2">
+<h2>Example calculation <span style="font-size:0.75em"><em>(with an odd number of cases)</em></span></h2>
+<p><br></p>
+<div class="fragment" data-fragment-index="1">
+<!-- -->
+<h4 id="hours-of-tv-watch-for-a-group-of-inmates">Hours of TV watch for a group of inmates</h4>
+<p><span style="font-size:1.5em">4, 2, 7, 6, 0, 6, 1, 3, 5</span></p>
+</div>
+<div class="fragment" data-fragment-index="2">
+<!-- -->
+<h4 id="order-the-scores">Order the scores</h4>
+<p><span style="font-size:1.5em">0, 1, 2, 3, 4, 5, 6, 6, 7</span></p>
+</div>
+<div class="fragment" data-fragment-index="3">
+<!-- -->
+<h4 id="median-case">Median case</h4>
+<p><span style="font-size:1.5em"><span class="math inline">\(\frac{N + 1}{2} = \frac{9 + 1}{2} =\)</span></span> <span style="color:#e93cac; font-size:1.5em">5th case</span></p>
+</div>
+<div class="fragment" data-fragment-index="3" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 35px; height: 35px; margin: 10px; position: absolute; top: 270px; left: 130px">
+
+</div>
+<div class="fragment" data-fragment-index="4" data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; height: 125px; padding: 0px 10px 20px 10px; position: absolute; top: 225px; left: 350px">
+<p>Note that there are <strong>four</strong> cases with scores higher than the median and <strong>four</strong> with scores lower than the median</p>
+</div>
+<div class="fragment" data-fragment-index="5" data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 275px; height: 125px; padding: 0px 10px 20px 10px; position: absolute; bottom: 90px; left: 150px">
+<p>The median for this distribution is the <u>score</u> for the <u>case</u> in the fifth ordered position</p>
+</div>
+</section>
+<section id="example-calculation-with-an-even-number-of-cases" class="slide level2">
+<h2>Example calculation <span style="font-size:0.75em"><em>(with an even number of cases)</em></span></h2>
+<p><br></p>
+<div class="fragment" data-fragment-index="1">
+<!-- -->
+<h4 id="hours-of-tv-watch-for-a-group-of-inmates-1">Hours of TV watch for a group of inmates</h4>
+<p><span style="font-size:1.5em">4, 2, 7, 6, 0, 6, 1, 3, 5, 0</span></p>
+</div>
+<div class="fragment" data-fragment-index="2">
+<!-- -->
+<h4 id="order-the-scores-1">Order the scores</h4>
+<p><span style="font-size:1.5em">0, 0, 1, 2, 3,</span><span class="fragment" data-fragment-index="3" style="color:#e93cac; font-size:1.5em">|</span><span style="font-size:1.5em">4, 5, 6, 6, 7</span></p>
+</div>
+<div class="fragment" data-fragment-index="3">
+<!-- -->
+<h4 id="median-case-1">Median case</h4>
+<p><span style="font-size:1.5em"><span class="math inline">\(\frac{N + 1}{2} = \frac{10 + 1}{2} =\)</span></span> <span style="color:#e93cac; font-size:1.5em">5.5th case</span></p>
+</div>
+<div class="fragment" data-fragment-index="3" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 77px; height: 35px; margin: 10px; position: absolute; top: 269px; left: 134px">
+
+</div>
+<div class="fragment" data-fragment-index="4" data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; height: 125px; padding: 0px 10px 20px 10px; position: absolute; top: 225px; left: 400px">
+<p>Note that there are <strong>five</strong> cases with scores higher than the median and <strong>five</strong> with scores lower than the median</p>
+</div>
+<div class="fragment" data-fragment-index="5" data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 475px; height: 200px; padding: 0px 10px 20px 10px; position: absolute; bottom: 0px; left: 150px">
+<p>Median = score for the point halfway<br>between the 5th and 6th case. <br> Score for 5th case = 3 <br> Score for 6th case = 4 <br> halfway between = <span style="font-size:1.5em"><span class="math inline">\(\frac{3 + 4}{2} = 3.5\)</span></span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-median-from-a-frequency-distribution">Calculating the median from a frequency distribution</h3>
+<div class="smaller">
+<table class="caption-top">
+<caption>Frequency distribution of the number of paper cups used per week by a sample of students</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number of cups<br>(X)</th>
+<th style="text-align: center;">Frequency<br>(f)</th>
+<th style="text-align: center;">Percent<br>(%)</th>
+<th><br>Cf</th>
+<th><br>C%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4.48</td>
+<td>3</td>
+<td>4.48</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2.99</td>
+<td>5</td>
+<td>7.46</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.00</td>
+<td>5</td>
+<td>7.46</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">11.94</td>
+<td>13</td>
+<td>19.40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">16.42</td>
+<td>24</td>
+<td>35.82</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">17.91</td>
+<td>36</td>
+<td>53.73</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5.97</td>
+<td>40</td>
+<td>59.70</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">10.45</td>
+<td>47</td>
+<td>70.15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">14.93</td>
+<td>57</td>
+<td>85.07</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">8.96</td>
+<td>63</td>
+<td>94.03</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5.97</td>
+<td>67</td>
+<td>100.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total (N)</strong></td>
+<td style="text-align: center;"><strong>67</strong></td>
+<td style="text-align: center;"><strong>100.00</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="1" data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; top: 100px; right: -75px">
+<p>Option 1: Find the median case in the Cf column</p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="1" data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; height: 120px; padding: 0px 0px 20px 10px; position: absolute; bottom: -25px; right: 50px">
+<p>Median at the <span style="font-size:1.5em"><span class="math inline">\(\frac{67 + 1}{2}=\)</span></span> 34th case. <br> Category <strong><em>5</em></strong> contains everything from the 25th to the 36th case.</p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #754cbc; width: 75px; height: 25px; margin: 10px; position: absolute; top: 342px; left: 583px">
+
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box5" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 225px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; top: 100px; right: -75px">
+<p>Option 2: Find the <em>50</em>th percentile in the C% column</p>
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box5" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 400px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; bottom: -25px; right: 50px">
+<p>Category <strong><em>5</em></strong> contains everything from the <em>35.83</em>rd to the <em>53.73</em>rd percentiles</p>
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #1b8883; width: 75px; height: 25px; margin: 10px; position: absolute; top: 342px; right: 177px">
+
+</div>
 </section>
 <section id="important-properties-of-the-median" class="slide level2">
 <h2>Important properties of the median</h2>
+<ol type="1">
+<li>Appropriate for interval-ratio or ordinal variables must be able to order scores</li>
+</ol>
 </section>
-<section id="mode" class="slide level2">
-<h2>Mode</h2>
+<section class="slide level2">
+
+<h3 id="calculating-the-median-for-an-ordinal-variable">Calculating the median for an ordinal variable</h3>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="smaller">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Person number</th>
+<th style="text-align: center;">How satisfied are you with your statistics course?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">very satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column" style="width:35%;">
+
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-median-for-an-ordinal-variable-1">Calculating the median for an ordinal variable</h3>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="smaller">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Person number</th>
+<th style="text-align: center;">How satisfied are you with your statistics course?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">very satisfied</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column" style="width:35%;">
+<p>Step 1: Put the cases in order by the score on the variable of interest</p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="calculating-the-median-for-an-ordinal-variable-2">Calculating the median for an ordinal variable</h3>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="smaller">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Person number</th>
+<th style="text-align: center;">How satisfied are you with your statistics course?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">very satisfied</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column" style="width:35%;">
+<p>Step 1: Put the cases in order by the score on the variable of interest <br> Step 2: Find the median case:<br> <span class="math display">\[
+\frac{N + 1}{2}
+\]</span> <br> Median is the score associated with the median case</p>
+<div>
+<ul>
+<li class="fragment"><span style="color:#e93cac">Q: What do you do if the median case is between two different ordinal values?</span> <br></li>
+<li class="fragment"><span style="color:#4b2e83">A: Describe the median as between the categories</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="important-properties-of-the-median-1" class="slide level2">
+<h2>Important properties of the median</h2>
+<ol type="1">
+<li>Appropriate for interval-ratio or ordinal variables must be able to order scores</li>
+<li>In comparison to the mean, the median is less affected by extreme scores
+<ul>
+<li>but not completely unaffected</li>
+<li><span style="color:#e93cac"><strong>number of scores</strong></span>, not their magnitude, at different parts of the distribution <span style="color:#e93cac"><strong>is what matters</strong></span>…</li>
+</ul></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h4 id="self-reported-male-heights-inches-1">Self-reported male heights (inches)</h4>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="864"></section>
+<section class="slide level2">
+
+<h4 id="tripling-the-top-score-has-no-effect-on-the-median"><span style="color:#e93cac">Tripling the top score has no effect on the median</span></h4>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" width="864"></section>
+<section class="slide level2">
+
+<h4 id="however-adding-multiple-cases-will-affect-the-median"><span style="color:#e93cac">However, adding multiple cases <em>will</em> affect the median</span></h4>
+
+<img data-src="lecture3_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" width="864"></section>
+<section id="measure-of-central-tendency-mode" class="slide level2">
+<h2>Measure of central tendency: Mode</h2>
+<div class="fragment" data-fragment-index="1">
+<div class="r-fit-text">
+<blockquote>
+<p><span style="color:#e93cac"><strong>Mode</strong></span><br> The most frequently occurring score in the distribution</p>
+</blockquote>
+</div>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="2">
+<ul>
+<li>most in line with the <u><em>most typical</em></u> meaning of central tendency</li>
+<li>Single score most likely to occur = most likely to be selected at random
+<ul>
+<li>but may be far from some (or many) cases</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="example-calculation-1" class="slide level2">
+<h2>Example calculation</h2>
+<p><br></p>
+<h4 id="ages-of-group-members">Ages of group members</h4>
+<div style="font-size:1.5em;">
+<p>21, 34, 19, 20, 25, 41, 21, 23, 21, 18</p>
+</div>
+</section>
+<section id="example-calculation-2" class="slide level2">
+<h2>Example calculation</h2>
+<p><br></p>
+<h4 id="ages-of-group-members-1">Ages of group members</h4>
+<div style="font-size:1.5em;">
+<p><span style="color:#e93cac;">21</span>, 34, 19, 20, 25, 41, <span style="color:#e93cac;">21</span>, 23, <span style="color:#e93cac;">21</span>, 18</p>
+</div>
+<p><br> <br></p>
+<div class="fragment" style="font-size:3em; text-align: center">
+<p>Mode is <span style="color:#e93cac;">21</span></p>
+</div>
+</section>
+<section id="example-calculation-3" class="slide level2">
+<h2>Example calculation</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="smaller">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Person number</th>
+<th style="text-align: center;">How satisfied are you with your statistics course?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">very satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">somewhat satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">somewhat dissatisfied</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column" style="width:35%;">
+
+</div>
+</div>
+</section>
+<section id="example-calculation-4" class="slide level2">
+<h2>Example calculation</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="smaller">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Person number</th>
+<th style="text-align: center;">How satisfied are you with your statistics course?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span style="color:#e93cac">somewhat satisfied</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span style="color:#e93cac">somewhat satisfied</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span style="color:#4b2e83">somewhat dissatisfied</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span style="color:#4b2e83">somewhat dissatisfied</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">very satisfied</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"><span style="color:#4b2e83">somewhat dissatisfied</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;"><span style="color:#e93cac">somewhat satisfied</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">very dissatisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;"><span style="color:#e93cac">somewhat satisfied</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;"><span style="color:#4b2e83">somewhat dissatisfied</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column" style="width:35%;">
+<div style="font-size:1.5em;">
+<ul>
+<li class="fragment">Two different values are tied for the most frequent</li>
+<li class="fragment">Two modes: <span style="color:#e93cac">somewhat satisfied</span> AND <span style="color:#4b2e83">somewhat dissatisfied</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="example-calculation-5" class="slide level2">
+<h2>Example calculation</h2>
+<p><br></p>
+<table class="caption-top">
+<caption>Racial distribution for sample of 50 small business owners</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Race</th>
+<th style="text-align: center;">f</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">African American/Black</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Asian/Pacific Islander</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Native American</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">White</td>
+<td style="text-align: center;">22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Other</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total (N)</strong></td>
+<td style="text-align: center;"><strong>50</strong></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="important-properties-of-the-mode" class="slide level2">
 <h2>Important properties of the mode</h2>
+<div>
+<ol type="1">
+<li class="fragment">Appropriate for any level of measurement</li>
+<li class="fragment">A distribution may have multiple modes
+<ul>
+<li class="fragment">bimodal, trimodal, etc.</li>
+<li class="fragment">mode less useful in these situations (no longer a single number to convey what is typical)</li>
+</ul></li>
+</ol>
+</div>
 </section>
 <section id="choosing-a-measure-of-central-tendency" class="slide level2">
 <h2>Choosing a measure of central tendency</h2>
-<p>3 criteria: 1. Level of measurement 2. Amount of information incorporated into the measure 3. Shape of the distribution</p>
+<h4 id="criteria">3 criteria:</h4>
+<div>
+<ol type="1">
+<li class="fragment"><span style="background:#6e8e13">Level of measurement</span>
+<ul>
+<li class="fragment">Limits options for central tendency
+<ul>
+<li class="fragment">Interval variable: mode, median, or mean</li>
+<li class="fragment">Ordinal variable: mode or median</li>
+<li class="fragment">Nominal variable: mode</li>
+</ul></li>
+</ul></li>
+<li class="fragment"><span style="background:#1b8883">Amount of information incorporated into the measure</span>
+<ul>
+<li class="fragment">Mean uses most information, median the second most</li>
+</ul></li>
+<li class="fragment"><span style="background:#a68100">Shape of the distribution</span>
+<ul>
+<li class="fragment">Mean can give misleading picture of what is <em>common</em> or <em>typical</em> in a skewed distribution</li>
+<li class="fragment">But the mean is so commonly understood that, <u>with a skewed distribution</u>, we often use <strong>BOTH</strong> the <span style="color:#e93cac">median</span> and <span style="color:#e93cac">mean</span></li>
+</ul></li>
+</ol>
+</div>
 </section>
 <section id="practice" class="slide level2">
 <h2>Practice</h2>
+<h4 id="choose-the-best-measure-of-central-tendency-for-the-following">Choose the “best” measure of central tendency for the following</h4>
+<ul>
+<li>Measure of job satisfaction using a Likert scale
+<ul>
+<li>very satisfied, somewhat satisfied, neutral, somewhat dissatisfied, very dissatisfied</li>
+</ul></li>
+<li>Measure of the race/ethnicity of individual survey respondents
+<ul>
+<li>African American/black, Asian/PI, Native American, White/EA, other</li>
+</ul></li>
+<li>Two measures of ethnic composition of neighborhoods
+<ul>
+<li>Latino concentration: low (&lt;15%), medium (15 to 40%), high (&gt;40%)</li>
+<li>Percent Latino: (Latino Population/Total Population)*100</li>
+</ul></li>
+<li>Measure of number of dollars donated to charity</li>
+<li>Measure of number of dollars donated to charity with central tendency scores:
+<ul>
+<li>Mode = $0</li>
+<li>Median = $150</li>
+<li>Mean = $1,200</li>
+</ul></li>
+</ul>
+</section>
+<section id="practice-1" class="slide level2">
+<h2>Practice</h2>
+<h4 id="choose-the-best-measure-of-central-tendency-for-the-following-1">Choose the “best” measure of central tendency for the following</h4>
+<ul>
+<li>Measure of job satisfaction using a Likert scale
+<ul>
+<li>very satisfied, somewhat satisfied, neutral, somewhat dissatisfied, very dissatisfied</li>
+</ul></li>
+</ul>
+<p><br></p>
+<div class="fragment">
+<!-- -->
+<h4 id="criteria-1">Criteria</h4>
+</div>
+<div>
+<ol type="1">
+<li class="fragment"><span style="color:#6e8e13"><strong>Ordinal</strong></span> level of measurement so could use <span style="color:#6e8e13"><strong>mode</strong></span> or <span style="color:#6e8e13"><strong>median</strong></span></li>
+<li class="fragment"><span style="color:#1b8883"><strong>Median</strong></span> uses <span style="color:#1b8883">more information</span> than the <span style="color:#1b8883"><strong>mode</strong></span></li>
+<li class="fragment"><span style="color:#a68100"><strong>Shape</strong></span> of the distribution <span style="color:#a68100"><strong>not relevant</strong></span> since <span style="color:#a68100"><strong>median not greatly affected</strong></span></li>
+</ol>
+</div>
+<div class="fragment">
+<div class="r-fit-text">
+<p>Decision: <span style="color:#e93cac">MEDIAN</span></p>
+</div>
+</div>
+</section>
+<section id="practice-2" class="slide level2">
+<h2>Practice</h2>
+<h4 id="choose-the-best-measure-of-central-tendency-for-the-following-2">Choose the “best” measure of central tendency for the following</h4>
+<ul>
+<li>Measure of the race/ethnicity of individual survey respondents
+<ul>
+<li>African American/black, Asian/PI, Native American, White/EA, other</li>
+</ul></li>
+</ul>
+<p><br></p>
+<div class="fragment">
+<!-- -->
+<h4 id="criteria-2">Criteria</h4>
+</div>
+<div>
+<ol type="1">
+<li class="fragment"><span style="color:#6e8e13"><strong>Nominal level</strong></span> of measurement so can only use <span style="color:#6e8e13"><strong>mode</strong></span></li>
+</ol>
+</div>
+<div class="fragment">
+<div class="r-fit-text">
+<p>Decision: <span style="color:#e93cac">MODE</span></p>
+</div>
+</div>
+</section>
+<section id="practice-3" class="slide level2">
+<h2>Practice</h2>
+<h4 id="choose-the-best-measure-of-central-tendency-for-the-following-3">Choose the “best” measure of central tendency for the following</h4>
+<ul>
+<li>Two measures of ethnic composition of neighborhoods
+<ul>
+<li><span style="color:#e93cac">Latino concentration: low (&lt;15%), medium (15 to 40%), high (&gt;40%)</span></li>
+<li>Percent Latino: (Latino Population/Total Population)*100</li>
+</ul></li>
+</ul>
+<p><br></p>
+<div class="fragment">
+<!-- -->
+<h4 id="criteria-3">Criteria</h4>
+</div>
+<div>
+<ol type="1">
+<li class="fragment"><span style="color:#6e8e13"><strong>Ordinal level</strong></span> of measurement so could use <span style="color:#6e8e13"><strong>mode or median</strong></span></li>
+<li class="fragment"><span style="color:#1b8883"><strong>Median</strong></span> uses <span style="color:#1b8883"><strong>more information</strong></span></li>
+<li class="fragment"><span style="color:#a68100"><strong>Shape</strong></span> of the distribution <span style="color:#a68100"><strong>not relevant</strong></span> since <span style="color:#a68100"><strong>median not greatly affected</strong></span></li>
+</ol>
+</div>
+<div class="fragment">
+<div class="r-fit-text">
+<p>Decision: <span style="color:#e93cac">MEDIAN</span></p>
+</div>
+</div>
+</section>
+<section id="practice-4" class="slide level2">
+<h2>Practice</h2>
+<h4 id="choose-the-best-measure-of-central-tendency-for-the-following-4">Choose the “best” measure of central tendency for the following</h4>
+<ul>
+<li>Two measures of ethnic composition of neighborhoods
+<ul>
+<li>Latino concentration: low (&lt;15%), medium (15 to 40%), high (&gt;40%)</li>
+<li><span style="color:#e93cac">Percent Latino: (Latino Population/Total Population)*100</span></li>
+</ul></li>
+</ul>
+<p><br></p>
+<div class="fragment">
+<!-- -->
+<h4 id="criteria-4">Criteria</h4>
+</div>
+<div>
+<ol type="1">
+<li class="fragment"><span style="color:#6e8e13"><strong>Interval level</strong></span> of measurement so could use <span style="color:#6e8e13"><strong>mode, median, or mean</strong></span></li>
+<li class="fragment"><span style="color:#1b8883"><strong>Mean</strong></span> uses <span style="color:#1b8883"><strong>more information</strong></span> than either median or mode</li>
+<li class="fragment"><span style="color:#a68100"><strong>No evidence of a skewed shape</strong></span>, so stick with mean</li>
+</ol>
+</div>
+<div class="fragment">
+<div class="r-fit-text">
+<p>Decision: <span style="color:#e93cac">MEAN</span></p>
+</div>
+</div>
+</section>
+<section id="practice-5" class="slide level2">
+<h2>Practice</h2>
+<h4 id="choose-the-best-measure-of-central-tendency-for-the-following-5">Choose the “best” measure of central tendency for the following</h4>
+<ul>
+<li>Measure of number of dollars donated to charity</li>
+</ul>
+<p><br></p>
+<div class="fragment">
+<!-- -->
+<h4 id="criteria-5">Criteria</h4>
+</div>
+<div>
+<ol type="1">
+<li class="fragment"><span style="color:#6e8e13"><strong>Interval level</strong></span> of measurement so could use <span style="color:#6e8e13"><strong>mode, median, or mean</strong></span></li>
+<li class="fragment"><span style="color:#1b8883"><strong>Mean</strong></span> uses <span style="color:#1b8883"><strong>more information</strong></span> than either median or mode</li>
+<li class="fragment"><span style="color:#a68100"><strong>No evidence of a skewed shape</strong></span>, so stick with mean</li>
+</ol>
+</div>
+<div class="fragment">
+<div class="r-fit-text">
+<p>Decision: <span style="color:#e93cac">MEAN</span></p>
+</div>
+</div>
+</section>
+<section id="practice-6" class="slide level2">
+<h2>Practice</h2>
+<h4 id="choose-the-best-measure-of-central-tendency-for-the-following-6">Choose the “best” measure of central tendency for the following</h4>
+<ul>
+<li>Measure of number of dollars donated to charity with central tendency scores:
+<ul>
+<li>Mode = $0</li>
+<li>Median = $150</li>
+<li>Mean = $1,200</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<!-- -->
+<h4 id="criteria-6">Criteria</h4>
+</div>
+<div>
+<ol type="1">
+<li class="fragment"><span style="color:#6e8e13"><strong>Interval level</strong></span> of measurement so could use <span style="color:#6e8e13"><strong>mode, median, or mean</strong></span></li>
+<li class="fragment"><span style="color:#1b8883"><strong>Mean</strong></span> uses <span style="color:#1b8883"><strong>more information</strong></span> than either median or mode</li>
+<li class="fragment"><span style="color:#a68100"><strong>Shape of the distribution is clearly skewed</strong></span> (based on relative values of the measures) so <span style="color:#a68100"><strong>mean may be misleading</strong></span> picture of what is typical</li>
+</ol>
+</div>
+<div class="fragment">
+<div class="r-fit-text">
+<p>Decision: <span style="color:#e93cac">MEDIAN</span> <span style="font-size:0.75em; color:#e93cac">(plus mean?)</span></p>
+</div>
+</div>
 </section></section>
 <section id="break" class="title-slide slide level1 section-title center" data-background-color="#2ad2c9">
 <h1>Break!</h1>

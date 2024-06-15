@@ -139,18 +139,19 @@ knitr::opts_chunk$set(comment = ">")
 
 <br>
 <br>
+<br>
 
 ::: {.fragment fragment-index=2 style="font-size: 3em"}
 
 $$
 \bar{X} = \frac{\Sigma  X_i}{N}
 $$
-
 :::
 :::
 
 ::: {.column width="40%"}
 
+<br>
 <br>
 
 ::: {.fragment fragment-index=1}
@@ -162,34 +163,1052 @@ $$
 
 ::::
 
+::: {.fragment fragment-index=3 data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 90px; height: 85px; margin: 10px; position: absolute; top: 290px; left: 115px"}
+
+:::
+
+::: {.fragment fragment-index=3 data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 210px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; top: 430px; left: -50px"}
+[***X Bar***]{.underline} refers to the mean of a variable called ***X***
+:::
 
 
-## Calculating the mean from a frequency distribution
+::: {.fragment fragment-index=4 data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #1b8883; width: 70px; height: 80px; margin: 10px; position: absolute; top: 240px; left: 277px"}
+
+:::
+
+::: {.fragment fragment-index=4 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; top: 100px; left: 0px"}
+[***Sigma***]{.underline}: summation sign meaning *add up everything that follows*
+:::
+
+::: {.fragment fragment-index=5 data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #a68100; width: 72px; height: 80px; margin: 10px; position: absolute; top: 240px; left: 352px"}
+
+:::
+
+::: {.fragment fragment-index=5 data-id="box2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 300px; height: 75px; padding: 0px 0px 20px 10px; position: absolute; top: 120px; left: 322px"}
+[***$X_i$***]{.underline} refers to the individual values of the variable ***X***
+:::
+
+::: {.fragment fragment-index=6 data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #6e8e13; width: 72px; height: 80px; margin: 10px; position: absolute; top: 350px; left: 320px"}
+
+:::
+
+::: {.fragment fragment-index=6 data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 225px; height: 60px; padding: 0px 0px 20px 10px; position: absolute; bottom: 130px; left: 322px"}
+[***$N$***]{.underline} = total number of cases
+:::
+
+## Example calculation
+
+::: {.fragment fragment-index=1}
+### Mean of age for a group of 10 individuals
+
+Ages of sample members: 21, 34, 19, 20, 25, 41, 21, 23, 20, 18
+
+:::
+
+<br>
+
+::: {.fragment fragment-index=2 style="font-size: 1.5em"}
+#### [Calculating the mean]{.underline}
+
+$$
+\bar{X} = \frac{\Sigma X_i}{N} = \frac{X_1 + X_2 + X_3 + ... +X_n}{N}
+$$
+
+:::
+
+::: {.fragment fragment-index=3 style="font-size: 1.5em"}
+
+$$
+       = \frac{(21 + 34 + 19 + 20 + 25 + 41 + 21 + 23 + 20 + 18)}{10}
+$$
+
+
+:::
+
+::: {.fragment fragment-index=4 style="font-size: 1.5em"}
+
+$$
+       = \frac{242}{10} = 24.2years
+$$
+
+:::
+
+
+---
+
+### Calculating the mean from a frequency distribution
+
+::: {.fragment fragment-index=1}
+#### Number of paper cups used per week by a sample of 67 college students
+:::
+
+::: {.fragment fragment-index=1 .r-fit-text}
+```{r}
+#| echo: false
+options(width = 54)
+cups <- c(9, 3,	9,	3,	7,	8,	4,	7,	8,	3,	4,	5,	9,	5,	3,	0,	6,	7,	1,	3,	8,	5,	0,	5,	9,	5,	5,	8,	0,	4,	4,	5,	4,	6,	8,	8,	8,	10,	7,	3,	10,	4,	4,	6,	8,	5,	7,	6,	8,	9,	5,	3,	4,	3,	10,	5,	4,	8,	4,	5,	7,	9,	1,	10,	4,	5,	7)
+cups
+```
+:::
+
+::: {.fragment fragment-index=3 style="font-size: 1.5em"}
+We could apply 
+$\bar{X} = \frac{\Sigma  X_i}{N}$
+
+<br> 
+:::
+
+::: {.fragment fragment-index=4 style="font-size: 1.5em"}
+$$
+= \frac{(9 + 3 + 9 + 7 + 8 + ... + 7)}{67}
+$$
+:::
+
+<br> 
+
+::: {.fragment fragment-index=4 style="font-size: 1.5em; position: absolute; bottom: 0px; right: 0px"}
+...but this would be inefficient
+
+:::
+
+---
+
+### Calculating the mean from a frequency distribution
+
+::: {.smaller}
+| Number of cups<br>(X)  | Frequency<br>(f)  | Percent<br>(%) |  |  |
+|:--------:|:------:|:---:|---|---|
+| 0 | 3 | 4.48 |  |  |
+| 1 | 2 | 2.99 |  |  |
+| 2 | 0 | 0.00 |  |  |
+| 3 | 8  | 11.94 |  |  |
+| 4 | 11 | 16.42 |  |  |
+| 5 | 12 | 17.91  |  |  |
+| 6 | 4 | 5.97  |  |  |
+| 7 | 7 | 10.45  |  |  |
+| 8 | 10 | 14.93  |  |  |
+| 9 | 6 | 8.96 |  |  |
+| 10 | 4 | 5.97  |  |  |
+| **Total (N)** | **67** | **100.00** |  |  | 
+
+: Frequency distribution of the number of paper cups used per week by a sample of students {tbl-colwidths="[20,20,20,20,20]"}
+:::
+
+::: {.fragment fragment-index=1 data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 140px; padding: 0px 0px 20px 10px; position: absolute; top: 275px; right: 0px; font-size: 1.75em"}
+$$
+\bar{X} = \frac{\Sigma  X_i}{N}
+$$
+:::
+
+::: {.fragment fragment-index=2 data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 140px; padding: 0px 0px 20px 10px; position: absolute; top: 275px; right: 0px; font-size: 1.75em"}
+$$
+\bar{X} = \frac{\Sigma  fX}{N}
+$$
+:::
+
+---
+
+### Calculating the mean from a frequency distribution
+
+::: {.smaller}
+| Number of cups<br>(X)  | Frequency<br>(f)  | Percent<br>(%) | <br>f(x) |  |
+|:--------:|:------:|:---:|---|---|
+| 0 | 3 | 4.48 | 0 |  |
+| 1 | 2 | 2.99 | 2  |  |
+| 2 | 0 | 0.00 | 0  |  |
+| 3 | 8  | 11.94 | 24  |  |
+| 4 | 11 | 16.42 | 44  |  |
+| 5 | 12 | 17.91  | 60 |  |
+| 6 | 4 | 5.97  | 24 |  |
+| 7 | 7 | 10.45  | 49  |  |
+| 8 | 10 | 14.93  | 80 |  |
+| 9 | 6 | 8.96 | 54  | |
+| 10 | 4 | 5.97  | 40  |  |
+| **Total (N)** | **67** | **100.00** | **377** |  | 
+
+: Frequency distribution of the number of paper cups used per week by a sample of students {tbl-colwidths="[20,20,20,20,20]"}
+:::
+
+::: {data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 140px; padding: 0px 0px 20px 10px; position: absolute; top: 275px; right: 0px; font-size: 1.75em"}
+$$
+\bar{X} = \frac{\Sigma  fX}{N}
+$$
+:::
+
+::: {.fragment fragment-index=1 style="font-size: 1.5em; position: absolute; bottom: 25px; right: 100px"}
+= $\frac{377}{67}$ = [**5.63**]{style="color:#e93cac"}
+:::
+
 
 ## Important properties of the mean
 
 1. Appropriate only for interval-ratio variables
+    * must be able to assume consistent units/values for mathematical operations
+    
+## Important properties of the mean
+
+1. Appropriate only for interval-ratio variables
+    * must be able to assume consistent units/values for mathematical operations
 2. Mathematical balancing point of the distribution
+    * magnitude of scores below the mean balance the magnitude of scores above the mean
+    * Example: Annual salary of a sample of teachers ($1000’s)
+    
+## Important properties of the mean
+
+1. Appropriate only for interval-ratio variables
+    * must be able to assume consistent units/values for mathematical operations
+2. Mathematical balancing point of the distribution
+    * [magnitude of scores below the mean balance the magnitude of scores above the mean]{style="color:#e93cac"}
+    * Example: Annual salary of a sample of teachers ($1000’s)
+
+[![](images/mean_balance.png){fig-align="center" width="85%"}](https://brilliant.org/wiki/arithmetic-mean/)
+
+---
+
+[![](images/mean_balance.gif){fig-align="center" width="90%"}](https://bookdown.org/pkaldunn/Book/ComputeAverage.html)
+
+::: {.fragment fragment-index=1 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 500px; height: 125px; padding: 0px 0px 20px 10px; position: absolute; bottom: 50px; left: 0px"}
+Note that the numbers of cases on each side of the mean don’t match but their [relative magnitudes]{.underline} balance out (the mean remains the only balancing point)
+
+:::
+  
+::: {.fragment fragment-index=2 data-id="box2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 325px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; bottom: 75px; right: 0px"}
+The mean value does not always appear in the distribution
+:::
+ 
+--- 
+
+#### Mathematical implications of the balancing-point property  
+
+[![](images/mean_deviations.png){fig-align="left" width="80%"}](https://www.onlinemathlearning.com/mean-balance-point.html#google_vignette)
+
+::: {.fragment fragment-index=1 data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; height: 515px; padding: 0px 0px 20px 20px; position: absolute; top: 100px; right: -75px"}
+[**Deviation**]{style="color:#e93cac; font-size:2em"}<br>[*(from the mean)* <br>The difference<br>between an<br>individual<br>score/value<br>in the<br>distribution<br>and the mean of<br>the distribution]{style="font-size:1.5em"}
+:::
+
+::: {.fragment fragment-index=1 data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 290px; height: 25px; margin: 10px; position: absolute; top: 160px; left: 20px"}
+
+:::
+
+--- 
+
+#### Mathematical implications of the balancing-point property 
+
+::: {.fragment fragment-index=1}
+* *The sum of the differences between the scores in a distribution and the mean of the distribution always equals zero.*
+
+::: {style="font-size:1.9em"}
+$$
+\Sigma(X_i -\bar{X}) = 0
+$$
+:::
+:::
+
+::: {.fragment fragment-index=2}
+* *The sum of the [squared differences]{.underline} between the scores and the mean is smaller than the squared difference between the scores and any other point / value in the distribution.*
+    * [*scores in any distribution are more clustered around the mean than around any other point*]{.fragment fragment-index=3 style="color:#e93cac"}
+    *  [*in the absence of any other information, the mean is typically the best estimate of the score for any single case in the distribution*]{.fragment fragment-index=3 style="color:#e93cac"}
+
+::: {style="font-size:1.9em"}
+$$
+\Sigma(X_i -\bar{X})^2 = minimum
+$$
+:::
+:::
+
+## Important properties of the mean
+
+1. Appropriate only for interval-ratio variables
+    * must be able to assume consistent units/values for mathematical operations
+2. Mathematical balancing point of the distribution
+    * magnitude of scores below the mean balance the magnitude of scores above the mean
+    * Example: Annual salary of a sample of teachers ($1000’s)
 3. Sensitive to extremes
 
-## Median
+---
 
-## Calculating the median from a frequency distribution
+#### Self-reported male heights (inches) 
+
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 6
+#| fig-align: center
+
+library(dslabs)
+library(ggthemes)
+library(ggrepel)
+
+set.seed(725)
+heights_subset <- heights |> filter(sex == "Male") |> slice_sample(n = 10, replace = FALSE)
+
+heights_subset |> 
+ggplot(aes(y = height, x = sex)) +
+geom_point(position = position_jitter(seed = 725), size = 2) +
+geom_hline(data = (heights_subset |> filter(sex == "Male") |> summarise(mean_height = mean(height), .by = sex)), aes(yintercept = mean_height), color = "#e93cac") +
+geom_label_repel(data = (heights_subset |> filter(sex == "Male") |> summarise(mean_height = round(mean(height), 2), .by = sex)), aes(x = sex, y = mean_height, label = mean_height), color = "#e93cac") +
+ylim(65, 91) +
+labs(x = "Sex", y = "Height (inches)") +
+theme_tufte(base_size = 18) + 
+theme(legend.position = "none")
+```
+
+--- 
+
+#### [Adding cases at the mean has no effect on the mean]{style="color:#e93cac"}
+
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 6
+#| fig-align: center
+
+set.seed(725)
+mean_point <- tibble(sex = rep("Male", 1), height = mean(heights_subset$height))
+heights1 <- bind_rows(mean_point, heights_subset)
+heights_subset |> 
+ggplot(aes(y = height, x = sex)) +
+geom_point(position = position_jitter(seed = 725), size = 2) +
+geom_point(data = mean_point, aes(y = height, x = sex), color = "#2ad2c9", size = 3, alpha = 0.75) +
+geom_hline(data = (heights1 |> filter(sex == "Male") |> summarise(mean_height = mean(height), .by = sex)), aes(yintercept = mean_height), color = "#e93cac") +
+ylim(65, 91) +
+labs(x = "Sex", y = "Height (inches)") +
+geom_label_repel(data = (heights1 |> filter(sex == "Male") |> summarise(mean_height = round(mean(height), 2), .by = sex)), aes(x = sex, y = mean_height, label = mean_height), color = "#e93cac") +
+theme_tufte(base_size = 18) + 
+theme(legend.position = "none")
+```
+
+---
+
+#### [Similarly, adding cases close to the mean has little effect on the mean]{style="color:#e93cac"}
+
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 6
+#| fig-align: center
+close_points <- tibble(sex = rep("Male", 1), height = c(73))
+heights2 <- bind_rows(close_points, heights_subset)
+heights_subset |> 
+filter(sex == "Male") |> 
+ggplot(aes(y = height, x = sex)) +
+geom_point(position = position_jitter(seed = 725), size = 2) +
+geom_point(data = close_points, aes(y = height, x = sex), color = "#2ad2c9", size = 3, alpha = 0.75, position = position_jitter(seed = 725)) +
+geom_hline(data = (heights2 |> filter(sex == "Male") |> summarise(mean_height = mean(height), .by = sex)), aes(yintercept = mean_height), color = "#e93cac") +
+geom_label_repel(data = (heights2 |> filter(sex == "Male") |> summarise(mean_height = round(mean(height), 2), .by = sex)), aes(x = sex, y = mean_height, label = mean_height), color = "#e93cac") +
+ylim(65, 91) +
+labs(x = "Sex", y = "Height (inches)") +
+theme_tufte(base_size = 18) + 
+theme(legend.position = "none")
+```
+
+---
+
+#### [But adding an extreme score changes the mean much more]{style="color:#e93cac"}
+
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 6
+#| fig-align: center
+far_points <- tibble(sex = rep("Male", 1), height = c(90))
+heights3 <- bind_rows(far_points, heights_subset)
+heights_subset |> 
+filter(sex == "Male") |> 
+ggplot(aes(y = height, x = sex)) +
+geom_point(position = position_jitter(seed = 725), size = 2) +
+geom_point(data = far_points, aes(y = height, x = sex), color = "#2ad2c9", size = 3, alpha = 0.75, position = position_jitter(seed = 725)) +
+geom_hline(data = (heights3 |> filter(sex == "Male") |> summarise(mean_height = mean(height), .by = sex)), aes(yintercept = mean_height), color = "#e93cac") +
+geom_label_repel(data = (heights3 |> filter(sex == "Male") |> summarise(mean_height = round(mean(height), 2), .by = sex)), aes(x = sex, y = mean_height, label = mean_height), color = "#e93cac") +
+ylim(65, 91) +
+labs(x = "Sex", y = "Height (inches)") +
+theme_tufte(base_size = 18) + 
+theme(legend.position = "none")
+```
+
+## Important properties of the mean
+
+1. Appropriate only for interval-ratio variables
+    * must be able to assume consistent units/values for mathematical operations
+2. Mathematical balancing point of the distribution
+    * magnitude of scores below the mean balance the magnitude of scores above the mean
+    * Example: Annual salary of a sample of teachers ($1000’s)
+3. Sensitive to extremes
+    * [questionable measure of what is [**typical**]{.underline} when the distribution contains extreme values (skewed distributions)]{style="color:#e93cac"}
+    * [but the mean retains usefulness in many statistical techniques, even when the distribution is skewed]{style="color:#e93cac"}
+
+## Measure of central tendency: Median
+
+::: {.fragment fragment-index=1}
+::: r-fit-text
+> [**Median**]{style="color:#e93cac"}<br> • The score for the case in the exact middle of the distribution<br>• The point in the distribution at which half of cases fall above<br>that score and half of the cases fall below that score<br>• 50th percentile of the distribution
+:::
+:::
+
+<br>
+
+::: {.fragment fragment-index=2}
+#### [Calculation]{.underline}
+
+1. [**Order**]{.underline style="color:#e93cac"} cases by score (low-to-high or high-to-low)
+2. Find the [**median case**]{.underline style="color:#e93cac"} (i.e., “median rank”)
+    * [**MEDIAN CASE = $\frac{N + 1}{2}$**]{style="color:#e93cac"}
+3. Identify the [score]{.underline style="color:#e93cac"} associated with the median case.
+
+:::
+
+## Example calculation [*(with an odd number of cases)*]{style="font-size:0.75em"}
+
+<br>
+
+::: {.fragment fragment-index=1}
+#### Hours of TV watch for a group of inmates 
+
+[4, 2, 7, 6, 0, 6, 1, 3, 5]{style="font-size:1.5em"}
+:::
+
+::: {.fragment fragment-index=2}
+#### Order the scores
+
+[0, 1, 2, 3, 4, 5, 6, 6, 7]{style="font-size:1.5em"}
+:::
+
+::: {.fragment fragment-index=3}
+#### Median case
+
+[$\frac{N + 1}{2} = \frac{9 + 1}{2} =$]{style="font-size:1.5em"} [5th case]{style="color:#e93cac; font-size:1.5em"}
+:::
+
+::: {.fragment fragment-index=3 data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 35px; height: 35px; margin: 10px; position: absolute; top: 270px; left: 130px"}
+
+:::
+
+::: {.fragment fragment-index=4 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; height: 125px; padding: 0px 10px 20px 10px; position: absolute; top: 225px; left: 350px"}
+Note that there are **four** cases with scores higher than the median and **four** with scores lower than the median
+:::
+
+::: {.fragment fragment-index=5 data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 275px; height: 125px; padding: 0px 10px 20px 10px; position: absolute; bottom: 90px; left: 150px"}
+The median for this distribution is the [score]{.underline} for the [case]{.underline} in the fifth ordered position
+:::
+
+## Example calculation [*(with an even number of cases)*]{style="font-size:0.75em"}
+
+<br>
+
+::: {.fragment fragment-index=1}
+#### Hours of TV watch for a group of inmates 
+
+[4, 2, 7, 6, 0, 6, 1, 3, 5, 0]{style="font-size:1.5em"}
+:::
+
+::: {.fragment fragment-index=2}
+#### Order the scores
+
+[0, 0, 1, 2, 3,]{style="font-size:1.5em"}[|]{.fragment fragment-index=3 style="color:#e93cac; font-size:1.5em"}[4, 5, 6, 6, 7]{style="font-size:1.5em"}
+:::
+
+::: {.fragment fragment-index=3}
+#### Median case
+
+[$\frac{N + 1}{2} = \frac{10 + 1}{2} =$]{style="font-size:1.5em"} [5.5th case]{style="color:#e93cac; font-size:1.5em"}
+:::
+
+::: {.fragment fragment-index=3 data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 77px; height: 35px; margin: 10px; position: absolute; top: 269px; left: 134px"}
+
+:::
+
+::: {.fragment fragment-index=4 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; height: 125px; padding: 0px 10px 20px 10px; position: absolute; top: 225px; left: 400px"}
+Note that there are **five** cases with scores higher than the median and **five** with scores lower than the median
+:::
+
+::: {.fragment fragment-index=5 data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 475px; height: 200px; padding: 0px 10px 20px 10px; position: absolute; bottom: 0px; left: 150px"}
+Median = score for the point halfway<br>between the 5th and 6th case. <br>
+Score for 5th case = 3 <br>
+Score for 6th case = 4 <br>
+halfway between = [$\frac{3 + 4}{2} = 3.5$]{style="font-size:1.5em"}
+
+::: 
+
+---
+
+### Calculating the median from a frequency distribution
+
+::: {.smaller}
+| Number of cups<br>(X)  | Frequency<br>(f)  | Percent<br>(%) | <br>Cf | <br>C%  |
+|:--------:|:------:|:---:|---|---|
+| 0 | 3 | 4.48 | 3 | 4.48 |
+| 1 | 2 | 2.99 | 5 | 7.46  |
+| 2 | 0 | 0.00 | 5  | 7.46 |
+| 3 | 8  | 11.94 | 13  | 19.40  |
+| 4 | 11 | 16.42 | 24  | 35.82  |
+| 5 | 12 | 17.91  | 36 | 53.73  |
+| 6 | 4 | 5.97  | 40 | 59.70  |
+| 7 | 7 | 10.45  | 47  | 70.15  |
+| 8 | 10 | 14.93  | 57 | 85.07  |
+| 9 | 6 | 8.96 | 63  | 94.03  |
+| 10 | 4 | 5.97  | 67  | 100.00   |
+| **Total (N)** | **67** | **100.00** |  |  | 
+
+: Frequency distribution of the number of paper cups used per week by a sample of students {tbl-colwidths="[20,20,20,20,20]"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=1 data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; top: 100px; right: -75px"}
+Option 1: Find the median case in the Cf column
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=1 data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; height: 120px; padding: 0px 0px 20px 10px; position: absolute; bottom: -25px; right: 50px"}
+Median at the [$\frac{67 + 1}{2}=$]{style="font-size:1.5em"} 34th case. <br> Category ***5*** contains everything from the 25th to the 36th case. 
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=1 data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #754cbc; width: 75px; height: 25px; margin: 10px; position: absolute; top: 342px; left: 583px"}
+
+:::
+
+::: {.fragment fragment-index=2 data-id="box5" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 225px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; top: 100px; right: -75px"}
+Option 2: Find the *50*th percentile in the C% column
+:::
+
+::: {.fragment fragment-index=2 data-id="box5" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 400px; height: 100px; padding: 0px 0px 20px 10px; position: absolute; bottom: -25px; right: 50px"}
+Category ***5*** contains everything from the *35.83*rd to the *53.73*rd percentiles
+:::
+
+::: {.fragment fragment-index=2 data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #1b8883; width: 75px; height: 25px; margin: 10px; position: absolute; top: 342px; right: 177px"}
+
+:::
 
 ## Important properties of the median
 
-## Mode
+1. Appropriate for interval-ratio or ordinal variables must be able to order scores
+
+---
+
+### Calculating the median for an ordinal variable
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="65%"}
+::: {.smaller}
+| Person number | How satisfied are you with your statistics course?  |
+|:--------:|:------:|
+| 1 | somewhat satisfied |
+| 2 | very dissatisfied |    
+| 3 |  somewhat satisfied |   
+| 4 | somewhat dissatisfied |   
+| 5 | somewhat dissatisfied |   
+| 6 | very dissatisfied |    
+| 7 | very satisfied |     
+| 8 | somewhat dissatisfied |    
+| 9 | somewhat satisfied | 
+| 10 | very dissatisfied |
+| 11 | somewhat satisfied |  
+| 12 | somewhat dissatisfied | 
+
+: {tbl-colwidths="[50,50]"}
+:::
+:::
+
+::: {.column width="35%"}
+
+:::
+
+::::
+
+---
+
+### Calculating the median for an ordinal variable
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="65%"}
+::: {.smaller}
+| Person number | How satisfied are you with your statistics course?  |
+|:--------:|:------:|
+| 2 | very dissatisfied |
+| 6 | very dissatisfied |    
+| 10 |  very dissatisfied |   
+| 4 | somewhat dissatisfied |   
+| 5 | somewhat dissatisfied |   
+| 8 | somewhat dissatisfied |    
+| 12 | somewhat dissatisfied |     
+| 1 | somewhat satisfied |    
+| 3 | somewhat satisfied | 
+| 9 | somewhat satisfied |
+| 11 | somewhat satisfied |  
+| 7 | very satisfied | 
+
+: {tbl-colwidths="[50,50]"}
+:::
+:::
+
+::: {.column width="35%"}
+Step 1: Put the cases in order by the score on the variable of interest
+:::
+
+::::
+
+---
+
+### Calculating the median for an ordinal variable
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="65%"}
+::: {.smaller}
+| Person number | How satisfied are you with your statistics course?  |
+|:--------:|:------:|
+| 2 | very dissatisfied |
+| 6 | very dissatisfied |    
+| 10 |  very dissatisfied |   
+| 4 | somewhat dissatisfied |   
+| 5 | somewhat dissatisfied |   
+| 8 | somewhat dissatisfied |    
+| 12 | somewhat dissatisfied |     
+| 1 | somewhat satisfied |    
+| 3 | somewhat satisfied | 
+| 9 | somewhat satisfied |
+| 11 | somewhat satisfied |  
+| 7 | very satisfied | 
+
+: {tbl-colwidths="[50,50]"}
+:::
+:::
+
+::: {.column width="35%"}
+Step 1: Put the cases in order by the score on the variable of interest
+<br>
+Step 2: Find the median case:<br>
+$$
+\frac{N + 1}{2}
+$$
+<br>
+Median is the score associated with the median case
+
+::: {.incremental}
+* [Q: What do you do if the median case is between two different ordinal values?]{style="color:#e93cac"} <br>
+* [A: Describe the median as between the categories]{style="color:#4b2e83"}
+
+:::
+:::
+
+::::
+
+## Important properties of the median
+
+1. Appropriate for interval-ratio or ordinal variables must be able to order scores
+2. In comparison to the mean, the median is less affected by extreme scores 
+    * but not completely unaffected
+    * [**number of scores**]{style="color:#e93cac"}, not their magnitude, at different parts of the distribution [**is what matters**]{style="color:#e93cac"}…
+
+---
+
+#### Self-reported male heights (inches) 
+
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 6
+#| fig-align: center
+
+set.seed(725)
+heights_subset <- heights |> filter(sex == "Male") |> slice_sample(n = 10, replace = FALSE)
+
+heights_subset |> 
+ggplot(aes(y = height, x = sex)) +
+geom_point(size = 2) +
+geom_hline(data = (heights_subset |> filter(sex == "Male") |> summarise(median_height = median(height), .by = sex)), aes(yintercept = median_height), color = "#e93cac", linetype = 2) +
+geom_label_repel(data = (heights_subset |> filter(sex == "Male") |> summarise(median_height = round(median(height), 2), .by = sex)), aes(x = sex, y = median_height, label = median_height), color = "#e93cac") +
+ylim(65, 91) +
+labs(x = "Sex", y = "Height (inches)") +
+theme_tufte(base_size = 18) + 
+theme(legend.position = "none")
+```
+
+--- 
+
+#### [Tripling the top score has no effect on the median]{style="color:#e93cac"}
+
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 6
+#| fig-align: center
+
+set.seed(725)
+triple_top <- tibble(sex = rep("Male", 1), height = (73.2200*3))
+heights1 <- bind_rows(triple_top, heights_subset)
+heights_subset |> 
+ggplot(aes(y = height, x = sex)) +
+geom_point(size = 2) +
+geom_point(data = triple_top, aes(y = height, x = sex), color = "#2ad2c9", size = 3, alpha = 0.75) +
+geom_hline(data = (heights1 |> filter(sex == "Male") |> summarise(median_height = median(height), .by = sex)), aes(yintercept = median_height), color = "#e93cac", linetype = 2) +
+ylim(65, 221) +
+labs(x = "Sex", y = "Height (inches)") +
+geom_label_repel(data = (heights1 |> filter(sex == "Male") |> summarise(median_height = round(median(height), 2), .by = sex)), aes(x = sex, y = median_height, label = median_height), color = "#e93cac") +
+theme_tufte(base_size = 18) + 
+theme(legend.position = "none")
+```
+
+---
+
+#### [However, adding multiple cases *will* affect the median]{style="color:#e93cac"}
+
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 6
+#| fig-align: center
+two_cases <- tibble(sex = rep("Male", 2), height = c(78, 74))
+heights2 <- bind_rows(two_cases, heights_subset)
+heights_subset |> 
+filter(sex == "Male") |> 
+ggplot(aes(y = height, x = sex)) +
+geom_point(size = 2) +
+geom_point(data = two_cases, aes(y = height, x = sex), color = "#2ad2c9", size = 3, alpha = 0.75) +
+geom_hline(data = (heights2 |> filter(sex == "Male") |> summarise(median_height = median(height), .by = sex)), aes(yintercept = median_height), color = "#e93cac", linetype = 2) +
+geom_label_repel(data = (heights2 |> filter(sex == "Male") |> summarise(median_height = round(median(height), 2), .by = sex)), aes(x = sex, y = median_height, label = median_height), color = "#e93cac") +
+ylim(65, 91) +
+labs(x = "Sex", y = "Height (inches)") +
+theme_tufte(base_size = 18) + 
+theme(legend.position = "none")
+```
+
+
+## Measure of central tendency: Mode
+
+::: {.fragment fragment-index=1}
+::: r-fit-text
+> [**Mode**]{style="color:#e93cac"}<br> The most frequently occurring score in the distribution
+:::
+:::
+
+<br>
+
+::: {.fragment fragment-index=2}
+* most in line with the [*most typical*]{.underline} meaning of central tendency
+* Single score most likely to occur = most likely to be selected at random    
+    * but may be far from some (or many) cases
+:::
+
+## Example calculation 
+
+<br>
+
+#### Ages of group members
+
+::: {style="font-size:1.5em;"}
+21, 34, 19, 20, 25, 41, 21, 23, 21, 18
+:::
+
+## Example calculation 
+
+<br>
+
+#### Ages of group members
+
+::: {style="font-size:1.5em;"}
+<span style="color:#e93cac;">21</span>, 34, 19, 20, 25, 41, <span style="color:#e93cac;">21</span>, 23, <span style="color:#e93cac;">21</span>, 18
+:::
+
+<br>
+<br>
+
+::: {.fragment style="font-size:3em; text-align: center"}
+Mode is <span style="color:#e93cac;">21</span>
+:::
+
+## Example calculation
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="65%"}
+::: {.smaller}
+| Person number | How satisfied are you with your statistics course?  |
+|:--------:|:------:|
+| 1 | somewhat satisfied |
+| 2 | very dissatisfied |    
+| 3 |  somewhat satisfied|   
+| 4 | somewhat dissatisfied |   
+| 5 |somewhat dissatisfied |   
+| 6 | very dissatisfied |    
+| 7 | very satisfied |     
+| 8 | somewhat dissatisfied |    
+| 9 | somewhat satisfied | 
+| 10 | very dissatisfied |
+| 11 | somewhat satisfied |  
+| 12 | somewhat dissatisfied | 
+
+: {tbl-colwidths="[50,50]"}
+:::
+:::
+
+::: {.column width="35%"}
+
+:::
+
+::::
+
+## Example calculation
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="65%"}
+::: {.smaller}
+| Person number | How satisfied are you with your statistics course?  |
+|:--------:|:------:|
+| 1 | [somewhat satisfied]{style="color:#e93cac"} |
+| 2 | very dissatisfied |    
+| 3 |  [somewhat satisfied]{style="color:#e93cac"} |   
+| 4 | [somewhat dissatisfied]{style="color:#4b2e83"} |   
+| 5 | [somewhat dissatisfied]{style="color:#4b2e83"} |   
+| 6 | very dissatisfied |    
+| 7 | very satisfied |     
+| 8 | [somewhat dissatisfied]{style="color:#4b2e83"} |    
+| 9 | [somewhat satisfied]{style="color:#e93cac"} | 
+| 10 | very dissatisfied |
+| 11 | [somewhat satisfied]{style="color:#e93cac"} |  
+| 12 | [somewhat dissatisfied]{style="color:#4b2e83"} | 
+
+: {tbl-colwidths="[50,50]"}
+:::
+:::
+
+::: {.column width="35%"}
+::: {.incremental style="font-size:1.5em;"}
+* Two different values are tied for the most frequent
+* Two modes: [somewhat satisfied]{style="color:#e93cac"} AND [somewhat dissatisfied]{style="color:#4b2e83"}
+:::
+:::
+
+::::
+
+## Example calculation
+
+<br>
+
+| Race | f  |
+|:--------:|:------:|
+| African American/Black | 16 |
+| Asian/Pacific Islander | 7 |    
+| Native American |  3 |   
+| White | 22 |   
+| Other | 2 |   
+| **Total (N)** | **50** |    
+
+
+: Racial distribution for sample of 50 small business owners {tbl-colwidths="[50,50]"}
+
+
 
 ## Important properties of the mode
 
+::: {.incremental}
+1. Appropriate for any level of measurement
+2. A distribution may have multiple modes
+    * bimodal, trimodal, etc.
+    * mode less useful in these situations (no longer a single number to convey what is typical)
+:::
+
 ## Choosing a measure of central tendency
 
-3 criteria: 
-1. Level of measurement
-2. Amount of information incorporated into the measure
-3. Shape of the distribution
+#### 3 criteria: 
+
+::: {.incremental}
+1. [Level of measurement]{style="background:#6e8e13"}
+    * Limits options for central tendency
+        * Interval variable: mode, median, or mean
+        * Ordinal variable: mode or median
+        * Nominal variable: mode
+2. [Amount of information incorporated into the measure]{style="background:#1b8883"}
+    * Mean uses most information, median the second most
+3. [Shape of the distribution]{style="background:#a68100"}
+    * Mean can give misleading picture of what is *common* or *typical* in a skewed distribution
+    * But the mean is so commonly understood that, [with a skewed distribution]{.underline}, we often use **BOTH** the [median]{style="color:#e93cac"} and [mean]{style="color:#e93cac"}
+:::
 
 ## Practice
+
+#### Choose the “best” measure of central tendency for the following
+
+* Measure of job satisfaction using a Likert scale
+    * very satisfied, somewhat satisfied, neutral, somewhat dissatisfied,  very dissatisfied
+* Measure of the race/ethnicity of individual survey respondents
+    * African American/black, Asian/PI, Native American, White/EA, other
+* Two measures of ethnic composition of neighborhoods
+    * Latino concentration: low (<15%), medium (15 to 40%), high (>40%)
+    * Percent Latino: (Latino Population/Total Population)*100
+* Measure of number of dollars donated to charity
+* Measure of number of dollars donated to charity with central tendency scores:
+  * Mode = $0
+  * Median = $150
+  * Mean = $1,200
+  
+## Practice 
+
+#### Choose the “best” measure of central tendency for the following
+
+* Measure of job satisfaction using a Likert scale
+    * very satisfied, somewhat satisfied, neutral, somewhat dissatisfied,  very dissatisfied
+  
+<br>  
+
+::: {.fragment}
+#### Criteria
+:::
+  
+::: {.incremental}
+1. [**Ordinal**]{style="color:#6e8e13"} level of measurement so could use [**mode**]{style="color:#6e8e13"} or [**median**]{style="color:#6e8e13"}
+2. [**Median**]{style="color:#1b8883"} uses [more information]{style="color:#1b8883"} than the [**mode**]{style="color:#1b8883"}
+3. [**Shape**]{style="color:#a68100"} of the distribution [**not relevant**]{style="color:#a68100"} since [**median not greatly affected**]{style="color:#a68100"}
+:::
+
+::: {.fragment}
+::: r-fit-text
+Decision: [MEDIAN]{style="color:#e93cac"}
+:::
+:::
+
+## Practice 
+
+#### Choose the “best” measure of central tendency for the following
+
+* Measure of the race/ethnicity of individual survey respondents
+    * African American/black, Asian/PI, Native American, White/EA, other
+  
+<br>  
+  
+::: {.fragment}
+#### Criteria
+:::
+  
+::: {.incremental}
+1. [**Nominal level**]{style="color:#6e8e13"} of measurement so can only use [**mode**]{style="color:#6e8e13"}
+:::
+
+::: {.fragment}
+::: r-fit-text
+Decision: [MODE]{style="color:#e93cac"}
+:::
+:::
+
+## Practice 
+
+#### Choose the “best” measure of central tendency for the following
+
+* Two measures of ethnic composition of neighborhoods
+    * [Latino concentration: low (<15%), medium (15 to 40%), high (>40%)]{style="color:#e93cac"}
+    * Percent Latino: (Latino Population/Total Population)*100
+  
+<br>  
+
+::: {.fragment}
+#### Criteria
+:::
+  
+::: {.incremental}
+1. [**Ordinal level**]{style="color:#6e8e13"} of measurement so could use [**mode or median**]{style="color:#6e8e13"}
+2. [**Median**]{style="color:#1b8883"} uses [**more information**]{style="color:#1b8883"}
+3. [**Shape**]{style="color:#a68100"} of the distribution [**not relevant**]{style="color:#a68100"} since [**median not greatly affected**]{style="color:#a68100"}
+:::
+
+::: {.fragment}
+::: r-fit-text
+Decision: [MEDIAN]{style="color:#e93cac"}
+:::
+:::
+
+## Practice 
+
+#### Choose the “best” measure of central tendency for the following
+
+* Two measures of ethnic composition of neighborhoods
+    * Latino concentration: low (<15%), medium (15 to 40%), high (>40%)
+    * [Percent Latino: (Latino Population/Total Population)*100]{style="color:#e93cac"}
+  
+<br>  
+
+::: {.fragment}
+#### Criteria
+:::
+  
+::: {.incremental}
+1. [**Interval level**]{style="color:#6e8e13"} of measurement so could use [**mode, median, or mean**]{style="color:#6e8e13"}
+2. [**Mean**]{style="color:#1b8883"} uses [**more information**]{style="color:#1b8883"} than either median or mode
+3. [**No evidence of a skewed shape**]{style="color:#a68100"}, so stick with mean
+:::
+
+::: {.fragment}
+::: r-fit-text
+Decision: [MEAN]{style="color:#e93cac"}
+:::
+:::
+
+## Practice 
+
+#### Choose the “best” measure of central tendency for the following
+
+* Measure of number of dollars donated to charity
+  
+<br>  
+
+::: {.fragment}
+#### Criteria
+:::
+  
+::: {.incremental}
+1. [**Interval level**]{style="color:#6e8e13"} of measurement so could use [**mode, median, or mean**]{style="color:#6e8e13"}
+2. [**Mean**]{style="color:#1b8883"} uses [**more information**]{style="color:#1b8883"} than either median or mode
+3. [**No evidence of a skewed shape**]{style="color:#a68100"}, so stick with mean
+:::
+
+::: {.fragment}
+::: r-fit-text
+Decision: [MEAN]{style="color:#e93cac"}
+:::
+:::
+
+## Practice 
+
+#### Choose the “best” measure of central tendency for the following
+
+* Measure of number of dollars donated to charity with central tendency scores:
+    * Mode = $0
+    * Median = $150
+    * Mean = $1,200
+
+::: {.fragment}
+#### Criteria
+:::
+  
+::: {.incremental}
+1. [**Interval level**]{style="color:#6e8e13"} of measurement so could use [**mode, median, or mean**]{style="color:#6e8e13"}
+2. [**Mean**]{style="color:#1b8883"} uses [**more information**]{style="color:#1b8883"} than either median or mode
+3. [**Shape of the distribution is clearly skewed**]{style="color:#a68100"} (based on relative values of the measures) so [**mean may be misleading**]{style="color:#a68100"} picture of what is typical
+
+:::
+
+::: {.fragment}
+::: r-fit-text
+Decision: [MEDIAN]{style="color:#e93cac"} [(plus mean?)]{style="font-size:0.75em; color:#e93cac"}
+:::
+:::
+
+
+
+
+
+
+
+
 
 # Break! {.section-title background-color="#2ad2c9"}
 

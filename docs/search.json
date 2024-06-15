@@ -844,14 +844,14 @@
     "href": "lectures/lecture3.html#important-properties-of-the-mean",
     "title": "",
     "section": "Important properties of the mean",
-    "text": "Important properties of the mean\n\nAppropriate only for interval-ratio variables\nMathematical balancing point of the distribution\nSensitive to extremes"
+    "text": "Important properties of the mean\n\nAppropriate only for interval-ratio variables\n\nmust be able to assume consistent units/values for mathematical operations"
   },
   {
     "objectID": "lectures/lecture3.html#choosing-a-measure-of-central-tendency",
     "href": "lectures/lecture3.html#choosing-a-measure-of-central-tendency",
     "title": "",
     "section": "Choosing a measure of central tendency",
-    "text": "Choosing a measure of central tendency\n3 criteria: 1. Level of measurement 2. Amount of information incorporated into the measure 3. Shape of the distribution"
+    "text": "Choosing a measure of central tendency\n3 criteria:\n\n\nLevel of measurement\n\nLimits options for central tendency\n\nInterval variable: mode, median, or mean\nOrdinal variable: mode or median\nNominal variable: mode\n\n\nAmount of information incorporated into the measure\n\nMean uses most information, median the second most\n\nShape of the distribution\n\nMean can give misleading picture of what is common or typical in a skewed distribution\nBut the mean is so commonly understood that, with a skewed distribution, we often use BOTH the median and mean"
   },
   {
     "objectID": "lectures/lecture3.html#overview-of-variability",
@@ -1320,7 +1320,7 @@
     "href": "lectures/lecture3.html#calculating-the-mean-from-a-frequency-distribution",
     "title": "",
     "section": "Calculating the mean from a frequency distribution",
-    "text": "Calculating the mean from a frequency distribution"
+    "text": "Calculating the mean from a frequency distribution\n\n\nNumber of paper cups used per week by a sample of 67 college students\n\n\n&gt;  [1]  9  3  9  3  7  8  4  7  8  3  4  5  9  5  3  0  6  7  1  3  8  5  0  5  9\n&gt; [26]  5  5  8  0  4  4  5  4  6  8  8  8 10  7  3 10  4  4  6  8  5  7  6  8  9\n&gt; [51]  5  3  4  3 10  5  4  8  4  5  7  9  1 10  4  5  7"
   },
   {
     "objectID": "lectures/lecture3.html#median",
@@ -1341,7 +1341,7 @@
     "href": "lectures/lecture3.html#important-properties-of-the-median",
     "title": "",
     "section": "Important properties of the median",
-    "text": "Important properties of the median"
+    "text": "Important properties of the median\n\nAppropriate for interval-ratio or ordinal variables must be able to order scores"
   },
   {
     "objectID": "lectures/lecture3.html#mode",
@@ -1355,14 +1355,14 @@
     "href": "lectures/lecture3.html#important-properties-of-the-mode",
     "title": "",
     "section": "Important properties of the mode",
-    "text": "Important properties of the mode"
+    "text": "Important properties of the mode\n\n\nAppropriate for any level of measurement\nA distribution may have multiple modes\n\nbimodal, trimodal, etc.\nmode less useful in these situations (no longer a single number to convey what is typical)"
   },
   {
     "objectID": "lectures/lecture3.html#practice",
     "href": "lectures/lecture3.html#practice",
     "title": "",
     "section": "Practice",
-    "text": "Practice"
+    "text": "Practice\nChoose the “best” measure of central tendency for the following\n\nMeasure of job satisfaction using a Likert scale\n\nvery satisfied, somewhat satisfied, neutral, somewhat dissatisfied, very dissatisfied\n\nMeasure of the race/ethnicity of individual survey respondents\n\nAfrican American/black, Asian/PI, Native American, White/EA, other\n\nTwo measures of ethnic composition of neighborhoods\n\nLatino concentration: low (&lt;15%), medium (15 to 40%), high (&gt;40%)\nPercent Latino: (Latino Population/Total Population)*100\n\nMeasure of number of dollars donated to charity\nMeasure of number of dollars donated to charity with central tendency scores:\n\nMode = $0\nMedian = $150\nMean = $1,200"
   },
   {
     "objectID": "lectures/lecture3.html#measures-of-central-tendency-2",
@@ -1376,6 +1376,167 @@
     "href": "lectures/lecture3.html#measure-of-central-tendency-mean",
     "title": "",
     "section": "Measure of central tendency: Mean",
-    "text": "Measure of central tendency: Mean\n\n\n \n\n\\[\n\\bar{X} = \\frac{\\Sigma  X_i}{N}\n\\]\n\n\n\n\n\n\nMeanThe arithmetic averageof the scores in adistribution equal tothe sum of all scoresdivided by thenumber of scoresin the distribution"
+    "text": "Measure of central tendency: Mean\n\n\n  \n\n\\[\n\\bar{X} = \\frac{\\Sigma  X_i}{N}\n\\]\n\n\n \n\n\n\nMeanThe arithmetic averageof the scores in adistribution equal tothe sum of all scoresdivided by thenumber of scoresin the distribution\n\n\n\n\n\n\n\n\n\nX Bar refers to the mean of a variable called X\n\n\n\n\n\nSigma: summation sign meaning add up everything that follows\n\n\n\n\n\n\\(X_i\\) refers to the individual values of the variable X\n\n\n\n\n\n\\(N\\) = total number of cases"
+  },
+  {
+    "objectID": "lectures/lecture3.html#example-calculation",
+    "href": "lectures/lecture3.html#example-calculation",
+    "title": "",
+    "section": "Example calculation",
+    "text": "Example calculation\n\n\nMean of age for a group of 10 individuals\nAges of sample members: 21, 34, 19, 20, 25, 41, 21, 23, 20, 18\n\n\n\n\nCalculating the mean\n\\[\n\\bar{X} = \\frac{\\Sigma X_i}{N} = \\frac{X_1 + X_2 + X_3 + ... +X_n}{N}\n\\]\n\n\n\\[\n       = \\frac{(21 + 34 + 19 + 20 + 25 + 41 + 21 + 23 + 20 + 18)}{10}\n\\]\n\n\n\\[\n       = \\frac{242}{10} = 24.2years\n\\]"
+  },
+  {
+    "objectID": "lectures/lecture3.html#mean-of-age-for-a-group-of-10-individuals",
+    "href": "lectures/lecture3.html#mean-of-age-for-a-group-of-10-individuals",
+    "title": "",
+    "section": "Mean of age for a group of 10 individuals",
+    "text": "Mean of age for a group of 10 individuals\nAges of sample members: 21, 34, 19, 20, 25, 41, 21, 23, 20, 18"
+  },
+  {
+    "objectID": "lectures/lecture3.html#important-properties-of-the-mean-1",
+    "href": "lectures/lecture3.html#important-properties-of-the-mean-1",
+    "title": "",
+    "section": "Important properties of the mean",
+    "text": "Important properties of the mean\n\nAppropriate only for interval-ratio variables\n\nmust be able to assume consistent units/values for mathematical operations\n\nMathematical balancing point of the distribution\n\nmagnitude of scores below the mean balance the magnitude of scores above the mean\nExample: Annual salary of a sample of teachers ($1000’s)"
+  },
+  {
+    "objectID": "lectures/lecture3.html#important-properties-of-the-mean-2",
+    "href": "lectures/lecture3.html#important-properties-of-the-mean-2",
+    "title": "",
+    "section": "Important properties of the mean",
+    "text": "Important properties of the mean\n\nAppropriate only for interval-ratio variables\n\nmust be able to assume consistent units/values for mathematical operations\n\nMathematical balancing point of the distribution\n\nmagnitude of scores below the mean balance the magnitude of scores above the mean\nExample: Annual salary of a sample of teachers ($1000’s)"
+  },
+  {
+    "objectID": "lectures/lecture3.html#important-properties-of-the-mean-3",
+    "href": "lectures/lecture3.html#important-properties-of-the-mean-3",
+    "title": "",
+    "section": "Important properties of the mean",
+    "text": "Important properties of the mean\n\nAppropriate only for interval-ratio variables\n\nmust be able to assume consistent units/values for mathematical operations\n\nMathematical balancing point of the distribution\n\nmagnitude of scores below the mean balance the magnitude of scores above the mean\nExample: Annual salary of a sample of teachers ($1000’s)\n\nSensitive to extremes"
+  },
+  {
+    "objectID": "lectures/lecture3.html#important-properties-of-the-mean-4",
+    "href": "lectures/lecture3.html#important-properties-of-the-mean-4",
+    "title": "",
+    "section": "Important properties of the mean",
+    "text": "Important properties of the mean\n\nAppropriate only for interval-ratio variables\n\nmust be able to assume consistent units/values for mathematical operations\n\nMathematical balancing point of the distribution\n\nmagnitude of scores below the mean balance the magnitude of scores above the mean\nExample: Annual salary of a sample of teachers ($1000’s)\n\nSensitive to extremes\n\nquestionable measure of what is typical when the distribution contains extreme values (skewed distributions)\nbut the mean retains usefulness in many statistical techniques, even when the distribution is skewed"
+  },
+  {
+    "objectID": "lectures/lecture3.html#measure-of-central-tendency-median",
+    "href": "lectures/lecture3.html#measure-of-central-tendency-median",
+    "title": "",
+    "section": "Measure of central tendency: Median",
+    "text": "Measure of central tendency: Median\n\n\n\nMedian • The score for the case in the exact middle of the distribution• The point in the distribution at which half of cases fall abovethat score and half of the cases fall below that score• 50th percentile of the distribution\n\n\n\n\n\n\nCalculation\n\nOrder cases by score (low-to-high or high-to-low)\nFind the median case (i.e., “median rank”)\n\nMEDIAN CASE = \\(\\frac{N + 1}{2}\\)\n\nIdentify the score associated with the median case."
+  },
+  {
+    "objectID": "lectures/lecture3.html#example-calculation-1",
+    "href": "lectures/lecture3.html#example-calculation-1",
+    "title": "",
+    "section": "Example calculation",
+    "text": "Example calculation\n\nAges of group members\n\n21, 34, 19, 20, 25, 41, 21, 23, 21, 18"
+  },
+  {
+    "objectID": "lectures/lecture3.html#example-calculation-2",
+    "href": "lectures/lecture3.html#example-calculation-2",
+    "title": "",
+    "section": "Example calculation",
+    "text": "Example calculation\n\nAges of group members\n\n21, 34, 19, 20, 25, 41, 21, 23, 21, 18\n\n \n\nMode is 21"
+  },
+  {
+    "objectID": "lectures/lecture3.html#example-calculation-with-an-odd-number-of-cases",
+    "href": "lectures/lecture3.html#example-calculation-with-an-odd-number-of-cases",
+    "title": "",
+    "section": "Example calculation (with an odd number of cases)",
+    "text": "Example calculation (with an odd number of cases)\n\n\n\nHours of TV watch for a group of inmates\n4, 2, 7, 6, 0, 6, 1, 3, 5\n\n\n\nOrder the scores\n0, 1, 2, 3, 4, 5, 6, 6, 7\n\n\n\nMedian case\n\\(\\frac{N + 1}{2} = \\frac{9 + 1}{2} =\\) 5th case\n\n\n\n\n\nNote that there are four cases with scores higher than the median and four with scores lower than the median\n\n\nThe median for this distribution is the score for the case in the fifth ordered position"
+  },
+  {
+    "objectID": "lectures/lecture3.html#example-calculation-with-an-even-number-of-cases",
+    "href": "lectures/lecture3.html#example-calculation-with-an-even-number-of-cases",
+    "title": "",
+    "section": "Example calculation (with an even number of cases)",
+    "text": "Example calculation (with an even number of cases)\n\n\n\nHours of TV watch for a group of inmates\n4, 2, 7, 6, 0, 6, 1, 3, 5, 0\n\n\n\nOrder the scores\n0, 0, 1, 2, 3,|4, 5, 6, 6, 7\n\n\n\nMedian case\n\\(\\frac{N + 1}{2} = \\frac{10 + 1}{2} =\\) 5.5th case\n\n\n\n\n\nNote that there are five cases with scores higher than the median and five with scores lower than the median\n\n\nMedian = score for the point halfwaybetween the 5th and 6th case.  Score for 5th case = 3  Score for 6th case = 4  halfway between = \\(\\frac{3 + 4}{2} = 3.5\\)"
+  },
+  {
+    "objectID": "lectures/lecture3.html#calculating-the-median-for-an-ordinal-variable",
+    "href": "lectures/lecture3.html#calculating-the-median-for-an-ordinal-variable",
+    "title": "",
+    "section": "Calculating the median for an ordinal variable",
+    "text": "Calculating the median for an ordinal variable\n\n\n\n\n\n\n\n\n\nPersonnumber\nHow satisfied are youwith your statistics course?\n\n\n\n\n\n1\nsomewhat satisfied\n\n\n\n2\nvery dissatisfied\n\n\n\n3\nsomewhat satisfied\n\n\n\n4\nsomewhat dissatisfied\n\n\n\n5\nsomewhat dissatisfied\n\n\n\n6\nvery dissatisfied\n\n\n\n7\nvery satisfied\n\n\n\n8\nsomewhat dissatisfied\n\n\n\n9\nsomewhat satisfied\n\n\n\n10\nvery dissatisfied\n\n\n\n11\nsomewhat satisfied\n\n\n\n12\nsomewhat dissatisfied"
+  },
+  {
+    "objectID": "lectures/lecture3.html#important-properties-of-the-median-1",
+    "href": "lectures/lecture3.html#important-properties-of-the-median-1",
+    "title": "",
+    "section": "Important properties of the median",
+    "text": "Important properties of the median\n\nAppropriate for interval-ratio or ordinal variables must be able to order scores\nIn comparison to the mean, the median is less affected by extreme scores\n\nbut not completely unaffected\nnumber of scores, not their magnitude, at different parts of the distribution is what matters…"
+  },
+  {
+    "objectID": "lectures/lecture3.html#measure-of-central-tendency-mode",
+    "href": "lectures/lecture3.html#measure-of-central-tendency-mode",
+    "title": "",
+    "section": "Measure of central tendency: Mode",
+    "text": "Measure of central tendency: Mode\n\n\n\nMode The most frequently occurring score in the distribution\n\n\n\n\n\n\nmost in line with the most typical meaning of central tendency\nSingle score most likely to occur = most likely to be selected at random\n\nbut may be far from some (or many) cases"
+  },
+  {
+    "objectID": "lectures/lecture3.html#example-calculation-3",
+    "href": "lectures/lecture3.html#example-calculation-3",
+    "title": "",
+    "section": "Example calculation",
+    "text": "Example calculation\n\n\n\n\n\n\n\n\n\n\n\nPerson number\nHow satisfied are you with your statistics course?\n\n\n\n\n1\nsomewhat satisfied\n\n\n2\nvery dissatisfied\n\n\n3\nsomewhat satisfied\n\n\n4\nsomewhat dissatisfied\n\n\n5\nsomewhat dissatisfied\n\n\n6\nvery dissatisfied\n\n\n7\nvery satisfied\n\n\n8\nsomewhat dissatisfied\n\n\n9\nsomewhat satisfied\n\n\n10\nvery dissatisfied\n\n\n11\nsomewhat satisfied\n\n\n12\nsomewhat dissatisfied"
+  },
+  {
+    "objectID": "lectures/lecture3.html#example-calculation-4",
+    "href": "lectures/lecture3.html#example-calculation-4",
+    "title": "",
+    "section": "Example calculation",
+    "text": "Example calculation\n\n\n\n\n\n\n\n\n\n\n\nPerson number\nHow satisfied are you with your statistics course?\n\n\n\n\n1\nsomewhat satisfied\n\n\n2\nvery dissatisfied\n\n\n3\nsomewhat satisfied\n\n\n4\nsomewhat dissatisfied\n\n\n5\nsomewhat dissatisfied\n\n\n6\nvery dissatisfied\n\n\n7\nvery satisfied\n\n\n8\nsomewhat dissatisfied\n\n\n9\nsomewhat satisfied\n\n\n10\nvery dissatisfied\n\n\n11\nsomewhat satisfied\n\n\n12\nsomewhat dissatisfied\n\n\n\n\n\n\n\nTwo different values are tied for the most frequent\nTwo modes: somewhat satisfied AND somewhat dissatisfied"
+  },
+  {
+    "objectID": "lectures/lecture3.html#example-calculation-5",
+    "href": "lectures/lecture3.html#example-calculation-5",
+    "title": "",
+    "section": "Example calculation",
+    "text": "Example calculation\n\n\nRacial distribution for sample of 50 small business owners\n\n\n\n\n\n\nRace\nf\n\n\n\n\nAfrican American/Black\n16\n\n\nAsian/Pacific Islander\n7\n\n\nNative American\n3\n\n\nWhite\n22\n\n\nOther\n2\n\n\nTotal (N)\n50"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-1",
+    "href": "lectures/lecture3.html#practice-1",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nChoose the “best” measure of central tendency for the following\n\nMeasure of job satisfaction using a Likert scale\n\nvery satisfied, somewhat satisfied, neutral, somewhat dissatisfied, very dissatisfied\n\n\n\n\n\nCriteria\n\n\n\nOrdinal level of measurement so could use mode or median\nMedian uses more information than the mode\nShape of the distribution not relevant since median not greatly affected\n\n\n\n\nDecision: MEDIAN"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-2",
+    "href": "lectures/lecture3.html#practice-2",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nChoose the “best” measure of central tendency for the following\n\nMeasure of the race/ethnicity of individual survey respondents\n\nAfrican American/black, Asian/PI, Native American, White/EA, other\n\n\n\n\n\nCriteria\n\n\n\nNominal level of measurement so can only use mode\n\n\n\n\nDecision: MODE"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-3",
+    "href": "lectures/lecture3.html#practice-3",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nChoose the “best” measure of central tendency for the following\n\nTwo measures of ethnic composition of neighborhoods\n\nLatino concentration: low (&lt;15%), medium (15 to 40%), high (&gt;40%)\nPercent Latino: (Latino Population/Total Population)*100\n\n\n\n\n\nCriteria\n\n\n\nOrdinal level of measurement so could use mode or median\nMedian uses more information\nShape of the distribution not relevant since median not greatly affected\n\n\n\n\nDecision: MEDIAN"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-4",
+    "href": "lectures/lecture3.html#practice-4",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nChoose the “best” measure of central tendency for the following\n\nTwo measures of ethnic composition of neighborhoods\n\nLatino concentration: low (&lt;15%), medium (15 to 40%), high (&gt;40%)\nPercent Latino: (Latino Population/Total Population)*100\n\n\n\n\n\nCriteria\n\n\n\nInterval level of measurement so could use mode, median, or mean\nMean uses more information than either median or mode\nNo evidence of a skewed shape, so stick with mean\n\n\n\n\nDecision: MEAN"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-5",
+    "href": "lectures/lecture3.html#practice-5",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nChoose the “best” measure of central tendency for the following\n\nMeasure of number of dollars donated to charity\n\n\n\n\nCriteria\n\n\n\nInterval level of measurement so could use mode, median, or mean\nMean uses more information than either median or mode\nNo evidence of a skewed shape, so stick with mean\n\n\n\n\nDecision: MEAN"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-6",
+    "href": "lectures/lecture3.html#practice-6",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nChoose the “best” measure of central tendency for the following\n\nMeasure of number of dollars donated to charity with central tendency scores:\n\nMode = $0\nMedian = $150\nMean = $1,200\n\n\n\n\nCriteria\n\n\n\nInterval level of measurement so could use mode, median, or mean\nMean uses more information than either median or mode\nShape of the distribution is clearly skewed (based on relative values of the measures) so mean may be misleading picture of what is typical\n\n\n\n\nDecision: MEDIAN (plus mean?)"
   }
 ]
