@@ -1,0 +1,292 @@
+---
+title: "Homework 2"
+sidebar: false
+format:
+  html: 
+    theme: ../styles.scss
+message: false
+warning: false
+reference-location: margin
+citation-location: margin
+---
+
+## Instructions
+(@) Download a printable version of this assignment [here](https://vsass.github.io/SOC221/homework/pdfs/homework2.pdf). Print it out and record your answers directly in the space provided. 
+(@) For problems requiring additional written work, use the allotted work space. 
+(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.\
+
+::: {.panel-tabset}
+
+### Confidence-level assessment
+
+![](../images/confidence_level_assessment.png){fig-align="center" width="25%"}
+
+### [Confident]{style="color: #e93cac"}
+
+![I knew the answer to that question](../images/confidence_level_assessment1.png){fig-align="center" width="25%"}
+
+### [Unsure]{style="color: #e93cac"}
+
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){fig-align="center" width="25%"}
+
+### [Don't Know]{style="color: #e93cac"}
+
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){fig-align="center" width="25%"}
+
+:::
+
+(@) Scan (or take pictures of) your completed homework and upload it to the course {{< var canvas >}} site
+
+### Questions
+
+#### Question 1
+
+The following table provides chart data for the patients in a particular hospital ward:
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+<br>
+
+| Patient | Room  | Physician | Condition | Length of stay
+|:--------:|:------:|:--------:|:------:|:--------:|
+| Carter, M.   | 202 | Pollock | Critical | 8 days
+| Levin, J.    | 203 | McClare | Fair     | 4 days
+| Fox, J.      | 203 | Lench   | Good     | 5 days
+| Garcia, L.   | 205 | Lench   | Fair     | 7 days
+| Arluke, A.   | 201 | Pollock | Serious  | 2 days
+| Parodi, A.   | 203 | McClare | Good     | 9 days
+| Stark, D.    | 204 | Lench   | Fair     | 5 days
+| Chow, F.     | 202 | Pollock | Critical | 1 day
+| McDevitt, J. | 204 | Loftus  | Serious  | 2 days
+
+: {tbl-colwidths="[20, 20, 20, 20, 20]"}
+
+<br>
+
+Name and calculate the most appropriate measure of central tendency and variability for each of the following variables. Feel free to provide a justification for your choice of measure as you see fit.
+
+<br>
+
+[**Room number**]{.underline}
+<br>
+<br>
+Measure of central tendency: _____________________________________
+<br>
+<br>
+Measure of variability: ____________________________________________
+<br>
+<br>
+[**Physician**]{.underline}
+<br>
+<br>
+Measure of central tendency: _____________________________________
+<br>
+<br>
+Measure of variability: ____________________________________________
+<br>
+<br>
+[**Patient condition**]{.underline}
+<br>
+<br>
+Measure of central tendency: _____________________________________
+<br>
+<br>
+Measure of variability: ____________________________________________
+<br>
+<br>
+[**Length of hospital stay**]{.underline}
+<br>
+<br>
+Measure of central tendency: _____________________________________
+<br>
+<br>
+Measure of variability: ____________________________________________
+<br>
+<br>
+
+#### Question 2
+
+A researcher collected information on the number of text messages sent over an 8-hour period by a group of teenagers and a group of parents. The data collected are as follows:
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+:::: {.columns}
+
+::: {.column width="45%"}
+| Case # | Number of Texts | 
+|:--------:|:------:|
+| 1 | 4 | 
+| 2 | 27 | 
+| 3 | 10 |
+| 4 | 8 |
+| 5 | 5 | 
+| 6 | 4 | 
+| 7 | 11 |
+| 8 | 7 | 
+| 9 | 9 |
+| 10 | 5 |
+
+: TEENAGERS {tbl-colwidths="[50, 50]"}
+:::
+
+:::{.column width="10%"}
+:::
+
+::: {.column width="45%"}
+| Case # | Number of Texts | 
+|:--------:|:------:|
+| 1 | 0 | 
+| 2 | 6 | 
+| 3 | 5 |
+| 4 | 2 |
+| 5 | 9 | 
+| 6 | 10 | 
+| 7 | 7 |
+| 8 | 9 | 
+| 9 | 6 |
+
+: PARENTS {tbl-colwidths="[50, 50]"}
+:::
+
+::::
+
+<br>
+
+a. Find the mode, median, mean, range, and standard deviation for the number of texts sent by each group (teenagers and parents).
+
+:::: {.columns}
+
+::: {.column width="45%"}
+[**TEENAGERS**]{.underline}
+<br>
+<br>
+MEAN        ____________________
+<br>
+<br>
+MEDIAN        ____________________
+<br>
+<br>
+MODE        ____________________
+<br>
+<br>
+RANGE       ____________________
+<br>
+<br>
+STANDARD
+DEVIATION       ____________________
+:::
+
+:::{.column width="10%"}
+:::
+
+::: {.column width="45%"}
+[**PARENTS**]{.underline}
+<br>
+<br>
+MEAN        ____________________
+<br>
+<br>
+MEDIAN        ____________________
+<br>
+<br>
+MODE        ____________________
+<br>
+<br>
+RANGE       ____________________
+<br>
+<br>
+STANDARD
+DEVIATION       ____________________
+:::
+
+::::
+
+<br>
+
+b. Which group – teenagers or parents – tended to send more texts? Support your answer using statistics you calculated for Part a. [Choose the most useful statistics for making your case].
+
+[Answer:]{.underline}
+
+::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 300px; height: 50px; position: static"}
+
+:::
+
+<br>
+
+c. Which group – teenagers or parents – had the greatest diversity in the number of texts sent? Support your answer using statistics you calculated for Part a. [Choose the most useful statistics for making your
+case].
+
+[Answer:]{.underline}
+
+::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 300px; height: 50px; position: static"}
+
+:::
+
+<br>
+
+d. What do your calculations indicate about the shape (symmetrical, negatively/left skewed, or positively/right skewed) of the distributions for the two groups?
+
+{{< pagebreak >}}
+
+[Answer:]{.underline} 
+
+::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 700px; height: 300px; position: static"}
+
+:::
+
+<br>
+
+e. If you removed the most extreme case (the person with the most text messages) from each of the distributions, would your answers to Parts b and c change?
+
+[Answer:]{.underline} 
+
+::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 700px; height: 300px; position: static"}
+
+:::
+
+{{< pagebreak >}}
+
+#### Question 3
+
+A teacher asked a sample of 18 junior high school students how many hours of television they watched during the previous weekend. The results of the survey are summarized in the following frequency distribution.
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+<br>
+
+| Hours of TV | Frequency | 
+|:--------:|:------:|
+| 5 | 3 | 
+| 4 | 5 | 
+| 3 | 6 |
+| 2 | 2 |
+| 1 | 2 | 
+| 0 | 0 | 
+
+: {tbl-colwidths="[50, 50]"}
+
+<br>
+
+Calculate the following statistics to describe these data:
+
+<br>
+MEAN        ____________________
+<br>
+<br>
+MEDIAN        ____________________
+<br>
+<br>
+MODE        ____________________
+<br>
+<br>
+RANGE       ____________________
+<br>
+<br>
+STANDARD
+DEVIATION       ____________________
