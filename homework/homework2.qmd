@@ -11,7 +11,8 @@ citation-location: margin
 ---
 
 ## Instructions
-(@) Download a printable version of this assignment [here](https://vsass.github.io/SOC221/homework/pdfs/homework2.pdf). Print it out and record your answers directly in the space provided. 
+(@) Download a printable version of this assignment [here](https://vsass.github.io/SOC221/homework/pdfs/homework2.pdf). Print it out and record your answers directly in the space provided.
+(@) Write your **name** and **student number** on the top of the assignment. 
 (@) For problems requiring additional written work, use the allotted work space. 
 (@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.\
 

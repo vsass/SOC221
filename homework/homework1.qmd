@@ -9,29 +9,28 @@ citation-location: margin
 ---
 
 ## Instructions
-(@) Print out this form and record your answers directly in the space provided. 
+(@) Download a printable version of this assignment [here](https://vsass.github.io/SOC221/homework/pdfs/homework1.pdf). Print it out and record your answers directly in the space provided. 
+(@) Write your **name** and **student number** on the top of the assignment. 
 (@) For problems requiring additional written work, use the allotted work space. 
 (@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.\
-
-<br>
 
 ::: {.panel-tabset}
 
 ### Confidence-level assessment
 
-![](../images/confidence_level_assessment.png){fig-align="center" width="50%"}
+![](../images/confidence_level_assessment.png){fig-align="center" width="25%"}
 
 ### [Confident]{style="color: #e93cac"}
 
-![I knew the answer to that question](../images/confidence_level_assessment1.png){fig-align="center" width="50%"}
+![I knew the answer to that question](../images/confidence_level_assessment1.png){fig-align="center" width="25%"}
 
 ### [Unsure]{style="color: #e93cac"}
 
-![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){fig-align="center" width="50%"}
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){fig-align="center" width="25%"}
 
 ### [Don't Know]{style="color: #e93cac"}
 
-![I don’t know the answer for this question](../images/confidence_level_assessment3.png){fig-align="center" width="50%"}
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){fig-align="center" width="25%"}
 
 :::
 
@@ -81,16 +80,13 @@ Best wishes,<br>
 ![](../images/confidence_level_assessment.png)
 :::
 
-How many people did you invite to complete the survey?^[Note that this information will be useful for calculating our response rate to the survey.]<br>
-<br>
+How many people did you invite to complete the survey?^[Note that this information will be useful for calculating our response rate to the survey.]
 <br>
 Answer: 
 
-::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 200px; height: 50px; position: absolute; top: 1850px; left: 380px"}
+::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 200px; height: 50px; position: static"}
 
 :::
-
-<br>
 
 #### Question 3
 
@@ -98,12 +94,11 @@ Answer:
 ![](../images/confidence_level_assessment.png)
 :::
 
-What is the unit of analysis for the data collected with our class survey?<br>
-<br>
+What is the unit of analysis for the data collected with our class survey?
 <br>
 Answer: 
 
-::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 300px; height: 50px; position: absolute; top: 2075px; left: 380px"}
+::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 300px; height: 50px; position: static"}
 
 :::
 
@@ -127,6 +122,8 @@ What is the level of measurement (nominal, ordinal, or interval) for each of the
 
 : Survey items {tbl-colwidths="[5,60,35]"}
 
+{{< pagebreak >}}
+
 #### Question 5
 
 Does our class survey use a simple random sample? Explain your answer and describe how the results of our survey might be affected by the sampling technique we have used. *Please limit your response to this question to 300 words or less.*
@@ -137,15 +134,6 @@ Does our class survey use a simple random sample? Explain your answer and descri
 
 Answer: 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 700px; height: 300px; position: absolute; top: 2975px; left: 380px"}
+::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 700px; height: 300px; position: static"}
 
 :::
