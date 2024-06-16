@@ -42,7 +42,7 @@ citation-location: margin
 
 #### Question 1
 
-The following table provides chart data for the patients in a particular hospital ward:
+**The following table provides chart data for the patients in a particular hospital ward:**
 
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png)
@@ -66,7 +66,7 @@ The following table provides chart data for the patients in a particular hospita
 
 <br>
 
-Name and calculate the most appropriate measure of central tendency and variability for each of the following variables. Feel free to provide a justification for your choice of measure as you see fit.
+**Name and calculate the most appropriate measure of central tendency and variability for each of the following variables. Feel free to provide a justification for your choice of measure as you see fit.**
 
 <br>
 
@@ -109,7 +109,7 @@ Measure of variability: ____________________________________________
 
 #### Question 2
 
-A researcher collected information on the number of text messages sent over an 8-hour period by a group of teenagers and a group of parents. The data collected are as follows:
+**A researcher collected information on the number of text messages sent over an 8-hour period by a group of teenagers and a group of parents. The data collected are as follows:**
 
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png)
@@ -177,7 +177,7 @@ MODE        ____________________
 RANGE       ____________________
 <br>
 <br>
-STANDARD
+STANDARD<br>
 DEVIATION       ____________________
 :::
 
@@ -200,7 +200,7 @@ MODE        ____________________
 RANGE       ____________________
 <br>
 <br>
-STANDARD
+STANDARD<br>
 DEVIATION       ____________________
 :::
 
@@ -253,7 +253,7 @@ e. If you removed the most extreme case (the person with the most text messages)
 
 #### Question 3
 
-A teacher asked a sample of 18 junior high school students how many hours of television they watched during the previous weekend. The results of the survey are summarized in the following frequency distribution.
+**A teacher asked a sample of 18 junior high school students how many hours of television they watched during the previous weekend. The results of the survey are summarized in the following frequency distribution.**
 
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png)
@@ -274,7 +274,7 @@ A teacher asked a sample of 18 junior high school students how many hours of tel
 
 <br>
 
-Calculate the following statistics to describe these data:
+**Calculate the following statistics to describe these data:**
 
 <br>
 MEAN        ____________________

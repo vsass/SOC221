@@ -24,7 +24,8 @@ format:
     preview-links: true
     history: false
     progress: true
-    link-external-icon: true 
+    link-external-icon: true
+    mermaid-format: svg 
 ---
 
 ```{r}
@@ -38,15 +39,363 @@ knitr::opts_chunk$set(comment = ">")
 
 # Probability and probability distributions {.section-title background-color="#c5b4e3"}
 
-## Inferential statistics
+## Descriptive --> Inferential statistics
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.fragment fragment-index=1}
+#### Where are we?
+
+* So far: Worked on descriptive statistics – tools to describe distributions
+* NEXT: Building the tools for [**inferential statistics**]{.underline}
+:::
+
+<br>
+
+::: {.fragment fragment-index=3}
+* Example: Want to know about the average study time for the population of UW students.
+* NEXT: Building the tools for inferential statistics
+:::
+
+:::
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=2 style="font-size: 1.4em"}
+> [**Inferential statistics**]{style="color:#e93cac"}<br>Statistical procedures used<br>to draw conclusions<br>(or inferences) about<br>a population based on<br>data drawn from a sample
+:::
+
+:::
+
+::::
+
+::: {.fragment fragment-index=4 style="position: absolute; bottom: 175px; right: 0px; font-size: 2em"}
+$\bar{X}$ ---INFERENCE--> $\mu_x$
+:::
+
+## Descriptive --> Inferential statistics
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+#### Where are we?
+
+* So far: Worked on descriptive statistics – tools to describe distributions
+* NEXT: Building the tools for [**inferential statistics**]{.underline}
+
+<br>
+
+* Example: Want to know about the average study time for the population of UW students.
+* NEXT: Building the tools for inferential statistics
+
+:::
+
+::: {.column width="50%"}
+::: {style="font-size: 1.4em"}
+> [**Inferential statistics**]{style="color:#e93cac"}<br>Statistical procedures used<br>to draw conclusions<br>(or inferences) about<br>a population based on<br>data drawn from a sample
+:::
+
+:::
+
+::::
+
+::: {style="position: absolute; bottom: 175px; right: 0px; font-size: 2em"}
+[$\bar{X}$]{style="color:#1b8883"} ---INFERENCE--> [$\mu_x$]{style="color:#a68100"}
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 350px; height: 150px; padding: 0px 10px 20px 10px; position: absolute; bottom: 0px; right: -75px; font-size: 0.9em"}
+Population parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 375px; height: 125px; padding: 0px 0px 10px 10px; position: absolute; bottom: 20px; right: 325px; font-size: 0.9em"}
+Sample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)
+:::
 
 ## The challenge of making inferences
 
+::: {.fragment fragment-index=1}
+#### Drawing inferences entails uncertainty
+Even with a good sample, the sample is likely to differ from the population (sample statistic is likely to be different from our population parameter, just by chance)
+:::
+
+<br>
+
+::: {.fragment fragment-index=2}
+#### Challenge
+Assessing the risk of being wrong (being way off) in making an inference from observed sample statistics to unknown population parameters.
+:::
+
+<br>
+
+::: {.fragment fragment-index=3}
+#### [Key questions]{style="color: #e93cac;"}
+1. How often would this procedure (drawing a sample, inferring about the population) give us something close to the correct answer if I used it over and over?<br>
+[**or**]{.r-stack}
+2. What is the probability that the inference I draw from one sample is wrong (way off from the population characteristic of interest)?
+:::
+
+::: {.fragment fragment-index=4 data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 575px; height: 125px; padding: 0px 0px 10px 10px; position: absolute; top: 250px; right: 200px; font-size: 1.5em"}
+The answers to these questions rely on concepts of [**probability**]{.underline}
+:::
+
+
+
 ## Probability
+
+::: r-fit-text
+> [**Probability**]{style="color:#e93cac"}<br>The **probability** of any outcome of a *random* process is the proportion<br>of times the outcome would occur [in a very long series of repetitions]{.underline}
+:::
+
+::: {.fragment fragment-index=1}
+$$ 
+P = \frac{\text{# of times the outcome of interest could occur in one trial}}{\text{total # of possible outcomes or events}}
+$$
+:::
+
+:::: {.columns}
+
+::: {.column width="30%"}
+::: {.fragment fragment-index=1}
+<br>
+
+:::r-fit-text
+Probabilities<br>are simply the<br>relative frequency<br>of an outcome
+:::
+:::
+:::
+
+::: {.column width="70%"}
+::: {.fragment fragment-index=2}
+### [Examples]{style="font-size: 0.75em"}
+
+* Probability of flipping a HEAD with a fair coin:
+    * [$P(H) = \frac{1}{2} = .50$]{style="color:#e93cac; font-size: 1.25em;"}
+
+* Probability of rolling a 3 with a 6-sided die
+    * [$P(3) = \frac{1}{6} = .1667$]{style="color:#e93cac; font-size: 1.25em;"}
+:::
+:::
+
+::::
+
+::: {.fragment fragment-index=2 style="position: absolute; bottom: 150px; right: 0px;font-size: 5em;"}
+🪙
+:::
+
+::: {.fragment fragment-index=2 style="position: absolute; bottom: 0px; right: 0px; font-size: 5em;"}
+🎲
+::: 
 
 ## Random
 
+::: r-fit-text
+> [**Random**]{style="color:#e93cac"}<br>We call a phenomenon **random** if individual outcomes<br>are uncertain but there is nonetheless a regular<br>distribution of outcomes in a large number of repetitions.
+:::
+
+<br>
+
+::: {.fragment }
+### Random = 
+::: 
+
+::: incremental
+
+* On any one trial, we don’t know what the outcome will be.
+* But there is pattern to the outcomes, so we can guess what will happen if we do something many times (over the long run).
+* Random is not the same as haphazard, unpredictable, or unexplained.
+* The different possible outcomes of the trial = values of the random variable
+
+:::
+
+## Random
+
+::: r-fit-text
+> [**Random**]{style="color:#e93cac"}<br>We call a phenomenon **random** if individual outcomes<br>are uncertain but there is nonetheless a regular<br>distribution of outcomes in a large number of repetitions.
+:::
+
+#### [Some random phenomena]{.underline}
+
+::: incremental
+
+* Flipping a coin [(**random variable**: whether result is head or tail)]{style="color:#e93cac"}
+* Selecting a single marble from a bag [(**random variable**: color of the marble)]{style="color:#e93cac"}
+* Selecting an individual person from a larger group [(**random variable**: level of education (or any other attribute) for the individual)]{style="color:#e93cac"}
+* Selecting a random sample from the set of all possible samples [(**random variable**: the value of some statistic (mean, or variance, or correlation, slope, etc.) calculated for the sample)]{style="color:#e93cac"}
+
+:::
+
 ## Myths about randomness and probability
+
+### The myth of short-run regularity
+
+:::: {.columns}
+
+::: {.column width="30%"}
+::: {.fragment fragment-index=1 style="color:#1b8883"}
+[**Myth**]{.underline}: If I flip a coin 10 times I should get 5 heads.
+:::
+
+::: {.fragment fragment-index=2 style="color:#6e8e13"}
+[**Reality**]{.underline}: Over a short number of flips, you  might get lots of heads or lots of tails.  Probabilities express expectations only over the long run.
+:::
+:::
+
+::: {.column width="70%"}
+
+::: {.fragment fragment-index=3"}
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 6
+#| fig-align: center
+
+library(gganimate)
+library(ggthemes)
+
+set.seed(725)
+dice_longrun <- tibble(trial = 1:6000, roll = sample(1:6, size = 6000, replace = TRUE), count_three = NA) 
+x <- 0
+for(i in 1:6000) {
+  if (dice_longrun$roll[i] == 3){
+    x = x + 1
+  }
+  dice_longrun$count_three[i] <- x
+}
+dice_longrun <- dice_longrun |> mutate(prop_three = count_three/trial)
+
+roll_3 <- ggplot(dice_longrun, aes(x = trial, y = prop_three)) + 
+geom_line(color = "#4b2e83") + 
+geom_hline(aes(yintercept = 1/6), color = "#e93cac", linetype = 2) + 
+annotate(geom = "label", x = 6000, y = 0.2, label = "1/6", color = "#e93cac") + 
+labs(title = "Proportion of 3s over 6000 rolls of 6-sided die", x = "Trial #", y = "Proportion of Dice Rolls = 3") +
+theme_tufte(base_size = 18) 
+# animate(roll_3 + transition_reveal(trial), height = 6, width = 9, units = "in", res = 150)
+# anim_save(filename = "lectures/images/dice.gif", animation = last_animation(), duration = 6)
+```
+
+![](images/dice.gif)
+:::
+:::
+
+::::
+
+::: {.fragment fragment-index=3 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 475px; height: 75px; padding: 0px 10px 20px 10px; position: absolute; top: 300px; right: -75px; font-size: 0.75em"}
+Example:  Tossing a die to get a 3<br>
+• In the short-run, might get very few or very many 3s<br>
+• In the long-run 1/6 of the observations will be 3s
+:::
+
+
+## Myths about randomness and probability
+
+### The myth of short-run regularity
+
+:::: {.columns}
+
+::: {.column width="30%"}
+::: {style="color:#1b8883"}
+[**Myth**]{.underline}: If I flip a coin 10 times I should get 5 heads.
+:::
+
+::: {style="color:#6e8e13"}
+[**Reality**]{.underline}: Over a short number of flips, you  might get lots of heads or lots of tails.  Probabilities express expectations only over the long run.
+:::
+
+::: r-fit-text
+There is a difference between [theoretical]{.underline} probability (long run) and [short-run experimental]{.underline} probability
+:::
+
+:::
+
+::: {.column width="70%"}
+
+```{r}
+#| echo: false
+#| eval: false
+#| fig-width: 9
+#| fig-height: 6
+#| fig-align: center
+#| 
+zoom_die <- roll_3 + coord_cartesian(xlim = c(0, 100), ylim = c(0, 1) ,expand = TRUE, default = FALSE, clip = "on") + labs(title = "Zoomed in plot of the first 100 trials")
+
+ggsave("lectures/images/dice.jpeg", zoom_die, height = 6, width = 9, units = "in")
+
+```
+
+![](images/dice.jpeg)
+
+:::
+
+::::
+
+
+## Myths about randomness and probability
+
+### The myth of short-run regularity
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=1 style="color:#1b8883"}
+[**Myth**]{.underline}: I’ve flipped eight heads in a row, so I’m “due” for a tail.
+:::
+
+::: {.fragment fragment-index=2 style="color:#6e8e13"}
+[**Reality**]{.underline}: Since each new flip (trial) is independent, the outcome of the next flip is not affected by what happened in past flips.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=1 style="font-size: 7em"}
+🪙
+:::
+
+:::
+
+::::
+
+::: {.fragment fragment-index=3 style="font-size: 1.4em"}
+
+> [**Independence**]{style="color:#e93cac"}<br>In probability, two events are independent if the incidence of<br>one event does not affect the probability of the other event.
+
+:::
+
+--- 
+
+:::: {.columns}
+
+::: {.column width="45%"}
+<br>
+
+
+### [Must think about probabilities over<br>the [**long**]{.underline} run]{style="font-size: 1em"}
+Our inferences will be based on theoretical probabilities over a huge number of repeated trials
+
+<br>
+
+::: {.fragment fragment-index=2}
+### Recall the key questions
+What is the probability that the inference I draw from one sample is wrong (i.e. way off from the population characteristic of interest)?
+:::
+:::
+
+::: {.column width="55%"}
+::: {.fragment fragment-index=1}
+<br>
+
+### [Implications for [inferential]{style="color:#e93cac"} statistics]{style="font-size: 0.84em"}
+* We typically use [one]{.underline} sample (very small number of trials) so may get a funky result.
+* In the short-run (over a small number of trials) we might get sample results that do not represent the population very well.
+* Won’t know how far off our one sample statistic is from the population parameter.
+* Have to rely on probability [theory]{.underline} about how things would end up [over the long run]{.underline} (if we looked at a huge number of samples) to assess the probability of getting our one result.
+
+:::
+:::
+
+::::
+
 
 ## Probability distribution
 

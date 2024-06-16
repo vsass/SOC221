@@ -43,7 +43,7 @@ citation-location: margin
 
 #### Question 1
 
-Complete the class survey and ask [**at least three (3)**]{style="color:#e93cac"} other people to do the same. The class survey can be accessed [here](survey.qmd). You are free to invite anyone else – friends, family members, co-workers, etc. – to complete the survey but every respondent (including you!) should complete the survey only once. [You will receive credit for this problem if you complete the survey yourself and at least **three (3) others** enter your **student number** at the end of the survey]{style="color:#e93cac"}. Here is an email invitation that you can send out to get your people to complete the survey:
+**Complete the class survey and ask [**at least three (3)**]{style="color:#e93cac"} other people to do the same. The class survey can be accessed [here](survey.qmd). You are free to invite anyone else – friends, family members, co-workers, etc. – to complete the survey but every respondent (including you!) should complete the survey only once. [You will receive credit for this problem if you complete the survey yourself and at least **three (3) others** enter your **student number** at the end of the survey]{style="color:#e93cac"}. Here is an email invitation that you can send out to get your people to complete the survey:**
 
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png)
@@ -80,7 +80,7 @@ Best wishes,<br>
 ![](../images/confidence_level_assessment.png)
 :::
 
-How many people did you invite to complete the survey?^[Note that this information will be useful for calculating our response rate to the survey.]
+**How many people did you invite to complete the survey?**^[Note that this information will be useful for calculating our response rate to the survey.]
 <br>
 Answer: 
 
@@ -94,7 +94,7 @@ Answer:
 ![](../images/confidence_level_assessment.png)
 :::
 
-What is the unit of analysis for the data collected with our class survey?
+**What is the unit of analysis for the data collected with our class survey?**
 <br>
 Answer: 
 
@@ -104,7 +104,7 @@ Answer:
 
 #### Question 4
 
-What is the level of measurement (nominal, ordinal, or interval) for each of the variables collected with the following items in [our survey](survey.qmd)? 
+**What is the level of measurement (nominal, ordinal, or interval) for each of the variables collected with the following items in [our survey](survey.qmd)?**
 
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png)
@@ -126,7 +126,7 @@ What is the level of measurement (nominal, ordinal, or interval) for each of the
 
 #### Question 5
 
-Does our class survey use a simple random sample? Explain your answer and describe how the results of our survey might be affected by the sampling technique we have used. *Please limit your response to this question to 300 words or less.*
+**Does our class survey use a simple random sample? Explain your answer and describe how the results of our survey might be affected by the sampling technique we have used. *Please limit your response to this question to 300 words or less.***
 
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png)

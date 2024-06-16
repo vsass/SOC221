@@ -70,3 +70,25 @@ $font-family-sans-serif: 'Raleway', sans-serif;
 $font-family-monospace: 'Cutive', monospace;
 
 $headings-font-family: $font-family-serif;
+
+/* print.css */
+
+/* target all pages */
+@page {
+  margin: 2cm;
+}
+
+/* target the first page only */
+@page :first {
+  margin-top: 2cm;
+}
+
+/* target left (even-numbered) pages only */
+@page :left {
+  margin-right: 2cm;
+}
+
+/* target right (odd-numbered) pages only */
+@page :right {
+  margin-left: 2cm;
+}

@@ -1,0 +1,261 @@
+---
+title: "Homework 5"
+sidebar: false
+format: html
+message: false
+warning: false
+reference-location: margin
+citation-location: margin
+---
+
+## Instructions
+(@) Download a printable version of this assignment [here](pdfs/homework3.pdf). Print it out and record your answers directly in the space provided.
+(@) Write your **name** and **student number** on the top of the assignment. 
+(@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
+(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.\
+
+::: {.panel-tabset}
+
+### Confidence-level assessment
+
+![](../images/confidence_level_assessment.png){fig-align="center" width="25%"}
+
+### [Confident]{style="color: #e93cac"}
+
+![I knew the answer to that question](../images/confidence_level_assessment1.png){fig-align="center" width="25%"}
+
+### [Unsure]{style="color: #e93cac"}
+
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){fig-align="center" width="25%"}
+
+### [Don't Know]{style="color: #e93cac"}
+
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){fig-align="center" width="25%"}
+
+:::
+
+(@) Turn in your assignment in class on the due date. 
+
+<br>
+
+### Questions
+
+#### Question 1
+
+**Your boastful roommate claims that fans for the Seattle Seahawks (the city’s football team) are simply more intelligent than the average person. With your newly-developed statistical tools, you decide to put this hypothesis to the test. You know that the standard intelligence quotient (IQ) score has a population mean of 100 with a standard deviation of 15. You find that a random sample of 121 Seahawks fans has an average IQ score of 103. Use this evidence to test your roommate’s argument that Seahawks fans are more intelligent than the general population.**
+
+{{< pagebreak >}}
+
+a. What is the null hypothesis for this test?
+<br>
+<br>
+<br>
+<br>
+b. What is the alternative hypothesis for this test?
+<br>
+<br>
+<br>
+<br>
+c. Is this a one-sided or two-sided test? How do you know?
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+d. Will you use a z-test or a t-test in this situation? Why?
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+e. What is the critical value of the test statistic?
+<br>
+<br>
+<br>
+<br>
+f. What is the value of the test statistic calculated from the sample results?
+<br>
+<br>
+<br>
+<br>
+g. What decision about the null hypothesis does your test lead to?
+<br>
+<br>
+<br>
+<br>
+h. What does this indicate about the intelligence of Seahawks fans relative to the average person?
+<br>
+<br>
+<br>
+<br>
+i. Would your decision be different if you used an alpha level of .01? Explain.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+#### Question 2
+
+**Through careful genetic engineering, you have produced what you call the Super Tree – a tree that can absorb extraordinary amounts of carbon dioxide (CO2), thereby helping to slow the process of global warming. Past research has shown that a regular tree absorbs 48 pounds of (CO2) per year but you find that in a random sample of 36 of your own trees, the average amount of CO2 absorbed is 54.3 pounds with a standard deviation of 18. Using an alpha level of .05, test the hypothesis that the average CO2 absorption in your population of Super Trees is better than the typical tree.**
+
+a. What is the null hypothesis for this test?
+<br>
+<br>
+<br>
+<br>
+b. What is the alternative hypothesis for this test?
+<br>
+<br>
+<br>
+<br>
+c. Is this a one-sided or two-sided test? How do you know?
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+d. Will you use a z-test or a t-test in this situation? Why?
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+e. What is the critical value of the test statistic?<br>
+<br>
+<br>
+<br>
+<br>
+f. What is the value of the test statistic calculated from the sample results?
+<br>
+<br>
+<br>
+<br>
+g. What decision about the null hypothesis does your test lead to?
+<br>
+<br>
+<br>
+<br>
+h. What does this indicate about the CO2 absorption of your Super Trees?
+<br>
+<br>
+<br>
+<br>
+i. Would your decision be different if you used an alpha level of .01? Explain.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{{< pagebreak >}}
+
+#### Question 3
+
+**A criminologist is interested in whether there was any disparity in sentencing based on the race of the defendant. She selected a random sample of 18 burglary convictions and recorded the prison terms given to the 10 white defendants and the 8 black defendants sampled. The sentence lengths (in years) for individuals in the two groups are shown below. Using these data and a .05 alpha level, test the null hypothesis that whites and blacks convicted of burglary in this jurisdiction do not differ with respect to prison sentence length.**
+
+| White defendants | Black defendants | 
+|:--------:|:------:|
+| 3 | 4 | 
+| 5 | 8 | 
+| 4 | 7 |
+| 7 | 3 |
+| 4 | 5 | 
+| 5 | 4 |
+| 6 | 5 |
+| 4 | 4 |
+| 3 |  | 
+| 4 |  | 
+
+: {tbl-colwidths="[50, 50]"}
+
+<br>
+<br>
+
+a. What is the null hypothesis for this test?
+<br>
+<br>
+<br>
+<br>
+b. What is the alternative hypothesis for this test?
+<br>
+<br>
+<br>
+<br>
+
+{{< pagebreak >}}
+
+c. Is this a one-sided or two-sided test? How do you know?
+<br>
+<br>
+<br>
+<br>
+d. Will you use a z-test or a t-test in this situation? Why?
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+e. What is the critical value of the test statistic?
+<br>
+<br>
+<br>
+<br>
+f. What is the value of the test statistic calculated from the sample results?
+<br>
+<br>
+<br>
+<br>
+g. What decision about the null hypothesis does your test lead to?
+<br>
+<br>
+<br>
+<br>
+h. Is the observed racial difference in sentence length statistically significant? Explain.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+i. Would your decision be different if you used an alpha level of .01? Explain.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+j. If you increased the size of your sample by five times so that you had 50 white defendants and 40 black defendants, but the group means and variances remained the same, would you reach the same conclusion about the statistical significance of the racial difference in sentencing? Report the numbers used to make your decision.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

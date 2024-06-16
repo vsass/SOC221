@@ -1,0 +1,171 @@
+---
+title: "Homework 4"
+sidebar: false
+format: html
+message: false
+warning: false
+reference-location: margin
+citation-location: margin
+---
+
+## Instructions
+(@) Download a printable version of this assignment [here](pdfs/homework3.pdf). Print it out and record your answers directly in the space provided.
+(@) Write your **name** and **student number** on the top of the assignment. 
+(@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
+(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.\
+
+::: {.panel-tabset}
+
+### Confidence-level assessment
+
+![](../images/confidence_level_assessment.png){fig-align="center" width="25%"}
+
+### [Confident]{style="color: #e93cac"}
+
+![I knew the answer to that question](../images/confidence_level_assessment1.png){fig-align="center" width="25%"}
+
+### [Unsure]{style="color: #e93cac"}
+
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){fig-align="center" width="25%"}
+
+### [Don't Know]{style="color: #e93cac"}
+
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){fig-align="center" width="25%"}
+
+:::
+
+(@) Turn in your assignment in class on the due date. 
+
+### Questions
+
+#### Question 1
+
+**A recent magazine article claimed that “our survey results using a random sample indicate that, on average, American adults watch between 75 and 77 minutes of television per day.”**
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+{{< pagebreak >}}
+
+a. What is the population of interest in this example?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+b. Based on the reported confidence interval, what is the average amount of time spent watching TV for the sample?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+c. What is the margin of error?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+d. What other information is needed to assess the quality of the inference made in this statement?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+e. Name at least two factors that might help to explain the high precision (i.e., small margin of error) for the confidence interval.
+
+#### Question 2
+
+**A social researcher is interested in estimating the number of friends that college students typically made during their first year of school. Questioning a random sample of 50 students at the end of their freshman year, he finds a mean of 3 friends. Assume that the sample comes from a population with a standard deviation of 1.0.**
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+a. Calculate the standard error.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+b. Construct a 95% confidence interval to estimate the mean number of friends made by the population of students during their first year on campus.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+c. Provide an interpretation of the confidence interval.
+
+{{< pagebreak >}}
+
+#### Question 3
+
+**A school principal is interested in assessing the performance of her students on the Totally Oppressive Standardized test (TOST). She selects a simple random sample of 16 of her students and finds the following set of scores:**
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+&emsp;&emsp;6&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;12&emsp;&emsp;5&emsp;&emsp;10&emsp;&emsp;11&emsp;&emsp;13
+<br>
+&ensp;&emsp;12&emsp;&emsp;10&emsp;&emsp;9&emsp;&emsp;20&emsp;&emsp;23&emsp;&emsp;20&emsp;&emsp;28&emsp;&emsp;18
+
+<br>
+
+**Assume that the sample is drawn from a population with a standard deviation $\sigma = 7.20$.**
+
+a. What is the average score for the sample of students?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+b. Calculate the standard error.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+c. Find and interpret the 95% confidence interval for the mean.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+d. Find and interpret the 99% confidence interval for the mean.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+e. Why is the margin of error smaller for the 95% confidence interval in question c than for the 99% confidence interval in question d?
+
+{{< pagebreak >}}
+
+#### Question 4
+
+**A mayor of a big city finds that 212 of 400 randomly selected city residents believe that that believes that the city should spend more money on road maintenance. Use this information for a large-sample inference of the proportion of all city residents who believe that the city should be spending more.**
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+a. What percentage of the sample members believe the city should be spending more?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+b. Calculate the standard error of the proportion.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+c. Find and interpret the 95% confidence interval for the population proportion.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+d. Based on your findings, is it safe to say that a majority of the city’s population wants more spent on roads? Explain your answer.

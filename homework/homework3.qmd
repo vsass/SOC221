@@ -40,7 +40,7 @@ citation-location: margin
 
 #### Question 1
 
-The following students are enrolled in a course in Introductory Sociology. They are listed along with their year in school and whether or not they are majoring in sociology.
+**The following students are enrolled in a course in Introductory Sociology. They are listed along with their year in school and whether or not they are majoring in sociology.**
 
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png)
@@ -95,7 +95,7 @@ _____________________________________
 
 #### Question 2
 
-A student taking a midterm exam in Ancient History comes to two questions pertaining to a lecture that he missed, and so he decides to take a random guess on both questions. One question is true-false and the other is multiple choice with five possible answers. What is the probability of guessing...
+**A student taking a midterm exam in Ancient History comes to two questions pertaining to a lecture that he missed, and so he decides to take a random guess on both questions. One question is true-false and the other is multiple choice with five possible answers. What is the probability of guessing...**
 
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png)
@@ -143,7 +143,7 @@ _____________________________________
 
 #### Question 3
 
-Research has shown that 6 out of 10 marriages end in divorce. What is the probability that... 
+**Research has shown that 6 out of 10 marriages end in divorce. What is the probability that...**
 
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png)
@@ -169,7 +169,7 @@ _____________________________________
 
 #### Question 4
 
-The Superior Test of Achievement (STA) is standardized to be normally distributed with a mean μ = 500 and a standard deviation σ = 100. What percentage of STA scores falls...
+**The Superior Test of Achievement (STA) is standardized to be normally distributed with a mean μ = 500 and a standard deviation σ = 100. What percentage of STA scores falls...**
 
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png)
@@ -209,7 +209,7 @@ f. below 300?
 
 #### Question 5
 
-Suppose that at a large state university, statistics tutors are paid by the hour. Data from the personnel office show the distribution of hourly wages paid to statistics tutors across the campus to be roughly normal with a mean of $12.00 and a standard deviation of $2.50. Determine...
+**Suppose that at a large state university, statistics tutors are paid by the hour. Data from the personnel office show the distribution of hourly wages paid to statistics tutors across the campus to be roughly normal with a mean of $12.00 and a standard deviation of $2.50. Determine...**
 
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png)
