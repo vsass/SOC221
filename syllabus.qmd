@@ -15,11 +15,10 @@ citation-location: margin
 **Instructor:** Victoria (Vic) Sass\
 **Lecture:** {{< var lecture >}}\
 **Location:** {{< var location >}}\
-**Office Hours:** {{< var office_hours >}} on Zoom (link on {{< var canvas >}})\
+**Office Hours:** {{< var office_hours >}} on Zoom (link on {{< var slack.short >}})\
 **Website:** {{< var website.asis >}}^[The [course website](https://vsass.github.io/SOC221) provides access/updates to the syllabus, scheduling changes, assignments, and other course-related materials. **Make sure to check the site often to stay up-to-date.**
 ] \
-**Canvas:** We will only be using the course {{< var canvas >}} site to upload assignments. **Don't message me on Canvas.**\
-**Contact:** We'll use {{< var slack.short >}} to communicate with each other and you can directly {{< var message >}} there.^[You can find the invitation to our private Slack on our {{< var canvas >}} homepage}.]\
+**Contact:** We'll use {{< var slack.short >}}  to communicate with each other and you can directly {{< var message >}} there.^[The invitation to our private Slack has been emailed to everyone registered for the course.]\
 
 ### Overview and learning objectives
 
@@ -47,18 +46,18 @@ There are no prerequisites for this course. This is not a mathematics course, bu
 - If you prefer a physical book, printed copies at a significantly reduced textbook rate are also for sale [here](https://openstax.org/).
 - Although the textbook is completely free, if you have the means, I strongly encourage you to [donate to support](https://riceconnect.rice.edu/donation/support-openstax-header?_gl=1*18rb5v7*_ga*MTI4MjYwMzM3Mi4xNzE1MDQwNDcx*_ga_T746F8B0QC*MTcxNTA0MDQ3MC4xLjEuMTcxNTA0MTMxNi43LjAuMA..*_ga_0Q5H4FDCL3*MTcxNTA0MDQ3MS4xLjEuMTcxNTA0MTMxNS44LjAuMA..) their efforts to reduce the cost of textbooks.
 
-2. *Calculator*: You will need a calculator that can add, subtract, multiply, divide, and take square roots. Bring this device to class every day. **During quizzes you cannot use a device that communicates with other devices (such as a cell phone) as your calculator.**
+2. *Calculator*: You will need a calculator that can add, subtract, multiply, divide, and take square roots. Bring this device to class every day.
 
 ### Ungrading and course structure
 
 There is a disconnect between what grades are designed to do and what truly supports student learning.^[You can read more about the problem with using grades as an assessment for learning [here](https://www.alfiekohn.org/article/degrading-de-grading/) and [here](https://www.jessestommel.com/why-i-dont-grade/).] In an effort to focus on your education, assignments and quizzes will not receive a letter-grade or points. Rather, as you answer the questions for each assignment, you will also provide your own assessment of how well-prepared you felt to answer that particular question. At the core of the philosophy behind ungrading is the fact that each of us possesses the best information about our own learning - both *what* works and *if* it's working. As such, I want you to be in control of reflecting on your own learning process throughout this class. 
 
 - **For homework assignments** you will receive written feedback from me about whether you've sufficiently demonstrated mastery of a topic and if not, where you can find assistance in answering that particular question. You'll then have two additional days to revise any questions for re-submission. 
-- **For quiz assignments** you'll spend the first part of class taking the quiz and after a break we'll reconvene to go over the assignment together. If there were any questions you were less sure about, this is a great time to ask questions, and more fully articulate your answers. 
+- **For quiz assignments** you'll receive a take-home exam that you'll be given 24 hours to complete. The next day we will use our class time together to go over the questions. If there were any problems you were less sure about, this is a great time to ask questions, and more fully articulate your answers on your assignment before turning in your completed quiz.  
 
-This class is still being taught within the context of a university that assigns grades so I will be required to assign a final grade at the end of the quarter. What that grade ultimately is will be determined by you through your engagement with your assignment self-assessments, revisions on assignments, and the two learning assessment meetings we will have (one during week 4 and another our last week of class)^[Specifics on how to prepare for these 10-minute meetings will be provided later in the quarter.]. During these two one-on-one meetings we will have a chance to discuss your learning process, what's worked/what's been challenging, how we can both support the outcomes you desire, and what grade you feel reflects your process. 
+This class is still being taught within the context of a university that assigns grades so I will be required to assign a final grade at the end of the quarter. What that grade ultimately is will be determined by you through your engagement with your assignment self-assessments, revisions on homeworks and quizes, and the two learning assessment meetings we will have (one during week 4 and another our last week of class)^[Specifics on how to prepare for these 15-minute meetings will be provided later in the quarter.]. During these two one-on-one meetings we will have a chance to discuss your learning process, what's worked/what's been challenging, how we can both support the outcomes you desire, and what grade you feel reflects your process. 
 
-For this process to work effectively we are both required to **attend every class** and participate in ways that engage your learning^[If something comes up and you cannot make it to class, message me as soon as possible on {{< var slack.short >}}.]. I will do my best to meet you where you are when you come to class and I ask that you engage in class and with assignments in ways that prioritize your learning.
+For this process to work effectively we are both required to **attend every class** and participate in ways that engage your learning^[If something comes up and you cannot make it to class, message me as soon as possible on {{< var slack.short >}}.]. This means **you are expected to complete and submit all homework and quiz assignments** (***with revisions if applicable***). I will do my best to meet you where you are when you come to class and I ask that you engage in class and with assignments in ways that prioritize your learning.
 
 ### Schedule
 
@@ -108,36 +107,32 @@ schedule_summer <- tribble(
 # week 1
 "1", "Monday<br>June 17th", "▪ Introductions to the course<br>▪ Overview of statistics<br>▪ Producing data: surveys and sampling", "Syllabus<br>Chapter 1 (sections 1.1 - 1.2)", "",
 "1", "Wednesday<br>June 19th", "NO CLASS:", "Juneteenth Holiday", "", 
-"1", "Friday<br>June 21st", "", "", "Homework 1",
 # week 2
-"2", "Monday<br>June 24th", "▪ Frequency tables<br>▪ Graphical techniques", "Chapter 1 (sections 1.3 - 1.4)<br>Chapter 2 (sections 2.1 - 2.4)", "<i>Homework 1 returned</i>",
-"2", "Wednesday<br>June 26th", "▪ Measures of central tendency<br>▪ Measures of variability", "Chapter 2 (sections 2.5 - 2.6)<br>Chapter 2 (sections 2.7 - 2.8)", "Homework 1 w/ revisions",
-"2", "Friday<br>June 28th", "", "", "Homework 2",
+"2", "Monday<br>June 24th", "▪ Frequency tables<br>▪ Graphical techniques", "Chapter 1 (sections 1.3 - 1.4)<br>Chapter 2 (sections 2.1 - 2.4)", "Homework 1",
+"2", "Wednesday<br>June 26th", "▪ Measures of central tendency<br>▪ Measures of variability", "Chapter 2 (sections 2.5 - 2.6)<br>Chapter 2 (sections 2.7 - 2.8)", "<i>Homework 1 returned</i>",
 # week 3
-"3", "Monday<br>July 1st", "▪ Probability and probability distributions<br>▪ Normal distributions", "Chapter 3 (sections 3.1 to 3.3)<br>Chapter 4 (section 4.1)<br>Chapter 5 (section 5.1)<br>Chapter 6 (sections 6.1 to 6.2)", "<i>Homework 2 returned</i>",
-"3", "Wednesday<br>July 3rd", "✍️🙋💡Quiz 1 & Review", "","Homework 2 w/ revisions",
-"3", "Friday<br>July 5th", "", "", "Homework 3",
+"3", "Monday<br>July 1st", "▪ Probability and probability distributions<br>▪ Normal distributions", "Chapter 3 (sections 3.1 to 3.3)<br>Chapter 4 (section 4.1)<br>Chapter 5 (section 5.1)<br>Chapter 6 (sections 6.1 to 6.2)", "Homework 2<br>Homework 1 w/ revisions",
+"3", "Wednesday<br>July 3rd", "✍️🙋💡Quiz 1 Review", "", "<i>Homework 2 returned</i>",
 # week 4 
-"4", "Monday<br>July 8th", "▪ Sampling distributions<br>▪ Central limit theorem<br>▪ Logic of inference", "Chapter 7 (sections 7.1 & 7.3)", "<i>Homework 3 returned</i>",
-"4", "Wednesday<br>July 10th", "▪ Estimation: confidence intervals for means<br>▪ Estimation: confidence intervals for proportions", "Chapter 8 (sections 8.1 to 8.2)<br>Chapter 8 (section 8.3)", "Homework 3 w/ revisions",
+"4", "Monday<br>July 8th", "▪ Sampling distributions<br>▪ Central limit theorem<br>▪ Logic of inference", "Chapter 7 (sections 7.1 & 7.3)", "Homework 3<br>Homework 2 w/ revisions",
+"4", "Wednesday<br>July 10th", "▪ Estimation: confidence intervals for means<br>▪ Estimation: confidence intervals for proportions", "Chapter 8 (sections 8.1 to 8.2)<br>Chapter 8 (section 8.3)", "<i>Homework 3 returned</i>",
 "4", "Thursday<br>July 11th", "Individual Learning Assessment Meetings<br>(via Zoom)", "", "",
-"4", "Friday<br>July 12th", "Individual Learning Assessment Meetings<br>(via Zoom)", "", "Homework 4",
+"4", "Friday<br>July 12th", "Individual Learning Assessment Meetings<br>(via Zoom)", "", "",
 # week 5
-"5", "Monday<br>July 15th", "▪ Hypothesis testing for one sample<br>▪ Hypothesis testing for two samples", "Chapter 9 (sections 9.1 to 9.6)<br>Chapter 10 (sections 10.1 to 10.3 plus 10.5)", "<i>Homework 4 returned</i>",
-"5", "Wednesday<br>July 17th", "✍️🙋💡Quiz 2 & Review", "", "Homework 4 w/ revisions",
-"5", "Friday<br>July 19th", "", "", "Homework 5",
+"5", "Monday<br>July 15th", "▪ Hypothesis testing for one sample<br>▪ Hypothesis testing for two samples", "Chapter 9 (sections 9.1 to 9.6)<br>Chapter 10 (sections 10.1 to 10.3 plus 10.5)", "Homework 4<br>Homework 3 w/ revisions",
+"5", "Wednesday<br>July 17th", "✍️🙋💡Quiz 2 Review", "", "<i>Homework 4 returned</i>",
 # week 6
-"6", "Monday<br>July 22nd", "▪ Two-way tables and chi-square<br>▪ Scatterplots and correlation", "Chapter 11 (sections 11.1 to 11.3<br>Chapter 12 (sections 12.1 to 12.3)", "<i>Homework 5 returned</i>",
-"6", "Wednesday<br>July 24th", "▪ Bivariate regression<br>▪ Inference for regression", "Chapter 12 (section 12.4 and 12.5)", "Homework 5 w/ revisions",
-"6", "Friday<br>July 26th", "", "", "Homework 6",
+"6", "Monday<br>July 22nd", "▪ Two-way tables and chi-square<br>▪ Scatterplots and correlation", "Chapter 11 (sections 11.1 to 11.3<br>Chapter 12 (sections 12.1 to 12.3)", "Homework 5<br>Homework 4 w/ revisions",
+"6", "Wednesday<br>July 24th", "▪ Bivariate regression<br>▪ Inference for regression", "Chapter 12 (section 12.4 and 12.5)", "<i>Homework 5 returned</i>",
 # week 7
-"7", "Monday<br>July 29th", "▪ Multivariate regression", "Primer for multivariate regression", "<i>Homework 6 returned</i>",
-"7", "Wednesday<br>July 31st", "▪ Multivariate regression", "", "Homework 6 w/ revisions",
-"7", "Friday<br>August 2nd", "", "", "Homework 7",
+"7", "Monday<br>July 29th", "▪ Multivariate regression", "Primer for multivariate regression", "Homework 6<br>Homework 5 w/ revisions",
+"7", "Wednesday<br>July 31st", "▪ Multivariate regression", "", "<i>Homework 6 returned</i>",
 # week 8
-"8", "Monday<br>August 5th", "Individual Learning Assessment Meetings<br>(in-person)", "", "<i>Homework 7 returned</i>",
-"8", "Wednesday<br>August 7th", "✍️🙋💡Quiz 3 & Review", "", "", 
-"8", "Friday<br>August 9th", "", "", "Homework 7 w/ revisions")
+"8", "Monday<br>August 5th", "Individual Learning Assessment Meetings<br>(in-person)", "", "Homework 7<br>Homework 6 w/ revisions<br><i>Homework 7 returned (via Slack)</i>",
+"8", "Wednesday<br>August 7th", "✍️🙋💡Quiz 3 Review", "", "",
+# week 9
+"9", "Monday<br>August 12th", "NO CLASS:", "Vic @ a conference", "Homework 7 w/ revisions<br>(in Sociology main office)", 
+"9", "Wednesday<br>August 14th", "NO CLASS:", "Vic @ a conference", "")
 
 schedule_summer |>
 gt() |>
@@ -147,7 +142,7 @@ cols_label(week = "Week",
            date = "Date",
            topic = "Topic",
            reading = "Required Reading", 
-           due = "Assignment Due (by 11:59pm)") |>
+           due = "Assignment Due (in class)") |>
 tab_options(table.align = "center", table.font.names = c("Quattrocento", "Raleway"),
                 table.font.size = pct(100)) |>
 cols_width(week ~ px(100), 
@@ -158,18 +153,9 @@ cols_width(week ~ px(100),
 # homework due
 tab_style(style = cell_fill(color = "#ccebc5"), # homework due
               locations = list(cells_body(columns = c(due),
-                                          rows = date %in% c("Friday<br>June 21st", "Friday<br>June 28th", "Friday<br>July 5th", "Friday<br>July 12th", "Friday<br>July 19th", "Friday<br>July 26th", "Friday<br>August 2nd")))) |> 
-# homework returned
-tab_style(style = cell_fill(color = "#fddaec"),
-              locations = list(cells_body(columns = c(due),
-                                          rows = date %in% c("Monday<br>June 24th", "Monday<br>July 1st", "Monday<br>July 8th", "Monday<br>July 15th", "Monday<br>July 22nd", "Monday<br>July 29th", "Monday<br>August 5th")))) |> 
-tab_style(style = cell_text(color = "#e7298a"),
-              locations = list(cells_body(columns = c(due),
-                                          rows = date %in% c("Monday<br>June 24th", "Monday<br>July 1st", "Monday<br>July 8th", "Monday<br>July 15th", "Monday<br>July 22nd", "Monday<br>July 29th", "Monday<br>August 5th")))) |> 
-# homework w/ revisions due
-tab_style(style = cell_fill(color = "#fed9a6"),
-              locations = list(cells_body(columns = c(due),
-                                          rows = date %in% c("Wednesday<br>June 26th", "Wednesday<br>July 3rd", "Wednesday<br>July 10th", "Wednesday<br>July 17th", "Wednesday<br>July 24th", "Wednesday<br>July 31st", "Friday<br>August 9th")))) |> 
+                                          rows = date %in% c("Monday<br>June 24th", "Wednesday<br>June 26th", "Monday<br>July 1st", "Wednesday<br>July 3rd", "Monday<br>July 8th", "Wednesday<br>July 10th",
+                                                             "Monday<br>July 15th", "Wednesday<br>July 17th", "Monday<br>July 22nd", "Wednesday<br>July 24th", "Monday<br>July 29th", "Wednesday<br>July 31st", 
+                                                             "Monday<br>August 5th", "Monday<br>August 12th")))) |> 
 # quiz & review day
 tab_style(style = cell_fill(color = "#b3cde3"),
               locations = list(cells_body(columns = c(topic),
@@ -180,22 +166,23 @@ tab_style(style = cell_fill(color = "#decbe4"),
 # no class - holiday
 tab_style(style = cell_fill(color = "#cccccc"),
               locations = list(cells_body(columns = c(week, date, topic, reading, due),
-                                          rows = date == "Wednesday<br>June 19th"))) |> 
+                                          rows = date  %in% c("Wednesday<br>June 19th", "Monday<br>August 12th", "Wednesday<br>August 14th")))) |> 
 tab_style(style = cell_text(stretch = "ultra-expanded", align = "right", style = "oblique", weight = "bolder"),
               locations = list(cells_body(columns = c(topic),
-                                          rows = date == "Wednesday<br>June 19th"))) |> 
+                                          rows = date %in% c("Wednesday<br>June 19th", "Monday<br>August 12th", "Wednesday<br>August 14th")))) |> 
 tab_style(style = cell_text(stretch = "ultra-expanded", align = "left", style = "oblique", weight = "bolder"),
               locations = list(cells_body(columns = c(reading),
-                                          rows = date == "Wednesday<br>June 19th"))) |> 
+                                          rows = date %in% c("Wednesday<br>June 19th", "Monday<br>August 12th", "Wednesday<br>August 14th")))) |> 
 tab_style(style = cell_fill(color = "#f2f2f2"),
-              locations = list(cells_body(columns = c(week, date, topic, reading, due),
-                                          rows = date == "Monday<br>June 17th"), 
-                               cells_body(columns = c(week, date, topic, reading),
-                                          rows = date %in% c("Friday<br>June 21st", "Monday<br>June 24th", "Wednesday<br>June 26th", "Friday<br>June 28th", "Monday<br>July 1st", "Friday<br>July 5th", "Monday<br>July 8th", "Wednesday<br>July 10th", "Monday<br>July 15th", "Friday<br>July 19th", "Monday<br>July 22nd", "Wednesday<br>July 24th", "Friday<br>July 26th", "Monday<br>July 29th", "Wednesday<br>July 31st", "Friday<br>August 2nd", "Friday<br>August 9th")), 
-                                cells_body(columns = c(week, date, reading),
-                                          rows = date %in% c("Wednesday<br>July 3rd", "Friday<br>July 12th", "Wednesday<br>July 17th", "Monday<br>August 5th")), 
-                                cells_body(columns = c(week, date, reading, due),
-                                          rows = date %in% c("Thursday<br>July 11th", "Wednesday<br>August 7th")))) |> 
+          locations = list(cells_body(columns = c(week, date, topic, reading, due),
+                                      rows = date == "Monday<br>June 17th"), 
+                           cells_body(columns = c(week, date, topic, reading),
+                                      rows = date %in% c("Monday<br>June 24th", "Wednesday<br>June 26th", "Monday<br>July 1st", "Monday<br>July 8th", "Wednesday<br>July 10th",
+                                                         "Monday<br>July 15th", "Monday<br>July 22nd", "Wednesday<br>July 24th", "Monday<br>July 29th", "Wednesday<br>July 31st")), 
+                            cells_body(columns = c(week, date, reading),
+                                          rows = date %in% c("Wednesday<br>July 3rd", "Wednesday<br>July 17th", "Monday<br>August 5th")), 
+                            cells_body(columns = c(week, date, reading, due),
+                                          rows = date %in% c("Thursday<br>July 11th", "Friday<br>July 12th", "Wednesday<br>August 7th")))) |> 
 opt_table_font(font = "PT Sans") |> 
 tab_options(column_labels.background.color = "#fbb4ae", column_labels.font.size = "20px", column_labels.font.weight = "bold", 
 column_labels.border.bottom.color = "#e41a1c", column_labels.border.top.color = "#e41a1c", quarto.disable_processing = TRUE) |> # had to add last argument otherwise row stipping was added and couln't be removed
