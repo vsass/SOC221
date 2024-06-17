@@ -35,6 +35,17 @@ require(tidyverse)
 require(gt)
 
 knitr::opts_chunk$set(comment = ">")
+
+# set transparent background in base
+knitr::opts_chunk$set(dev.args=list(bg='transparent'))
+
+# set transparent background in ggplot
+ggplot2::theme_set(ggplot2::theme_bw(base_size=12))
+ggplot2::theme_update(panel.background=ggplot2::element_blank(),
+    plot.background=ggplot2::element_blank(),
+    legend.background=ggplot2::element_blank())
+
+options(width=80, show.signif.stars=FALSE)
 ```
 
 # Probability and probability distributions {.section-title background-color="#c5b4e3"}
@@ -399,14 +410,471 @@ What is the probability that the inference I draw from one sample is wrong (i.e.
 
 ## Probability distribution
 
+:::: {.columns}
+
+::: {.column width="45%"}
+::: r-fit-text
+> [**Probability distribution**]{style="color:#e93cac"}<br>For a [random variable]{.underline},<br>this specifies its<br>possible values<br> and their probabilities. 
+:::
+
+<br>
+
+::: {.fragment fragment-index=1}
+A discrete random variable X has separate values (such as 1,2, 3…) as its possible outcomes
+:::
+
+<br>
+
+::: {.fragment fragment-index=2}
+Its probability distribution assigns a probability P(x) to each possible value of X
+:::
+:::
+
+::: {.column width="55%"}
+::: {.fragment fragment-index=4}
+The sum of the probabilities for all the possible x values equals 1
+:::
+
+::: {.fragment fragment-index=2}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: right
+prob_dist <- tibble(x = 1:6, prob = rep(1/6, 6))
+
+ggplot(prob_dist, aes(x = x, y = prob)) + 
+  geom_col(fill = "#1b8883") + 
+  ylim(0, 0.2) + 
+  labs(x = "x = result of die role", y = "p(x)") + 
+  theme_tufte(base_size = 18)
+```
+
+:::
+
+::: {.fragment fragment-index=3 style="font-size: 0.95em"}
+For each x, the probability P(x) falls between 0 and 1
+:::
+:::
+
+::::
+
+## Example: Probability distribution
+
+#### What is the probability of a correct guess (choosing randomly) on a five-choice test question? 
+
+:::: {.columns}
+
+::: {.column width="60%"}
+::: {.fragment fragment-index=1}
+Probability distribution of guess outcomes
+
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: left
+prob_dist2 <- tibble(x = c("Correct", "Incorrect"), prob = c(0.2, 0.8))
+
+ggplot(prob_dist2, aes(x = x, y = prob)) + 
+  geom_col(fill = "#1b8883") + 
+  ylim(0, 1) + 
+  labs(x = "x = whether the guessed answer is correct", y = "p(x)") + 
+  theme_tufte(base_size = 18)
+```
+
+:::
+:::
+
+::: {.column width="40%"}
+
+
+::: {.fragment fragment-index=1 style="font-size: 1.5em"}
+$$
+P(C) = \frac{1}{5} = 0.2
+$$
+
+$$
+P(I) = \frac{4}{5} = 0.8
+$$
+
+:::
+
+<br>
+
+::: {.fragment fragment-index=2 style="font-size: 1.25em"}
+Note (again!):<br>[Probabilities = Proportions]{style="color: e93cac"}
+:::
+:::
+
+::::
+
+## Example: Probability distribution
+
+#### Probability distributions are reflected in frequency distributions
+
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+#| fig-align: left
+prob_dist3 <- tibble(x = fct(c("No work", "Part time", "Full time", "More than\nfull time")), prob = c(25, 55, 17, 3))
+
+work_example <- ggplot(prob_dist3, aes(x = x, y = prob, label = paste0(prob, "%"))) + 
+  geom_col(fill = "#1b8883") + 
+  geom_text(vjust = -0.5, size = 5) + 
+  ylim(0, 60) + 
+  labs(title = "Work status for sample of students", x = "", y = "") + 
+  theme_tufte(base_size = 18) + 
+  theme(axis.line.y = element_blank(), 
+        axis.title.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.ticks.y = element_blank())
+ggsave(filename = "images/work_dist.png", plot = work_example, width = 10, height = 6, units = "in")
+```
+
+::: {.fragment fragment-index=1 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; height: 140px; padding: 0px 10px 20px 10px; position: absolute; top: 275px; right: 0px"}
+As long as every possible outcome is included, we can think of this as a probability distribution
+:::
+
+## Example: Probability distribution
+
+#### Probability distributions are reflected in frequency distributions
+
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+#| fig-align: left
+prob_dist4 <- tibble(x = fct(c("No work", "Part time", "Full time", "More than\nfull time")), prob = c(.25, .55, .17, .03))
+
+ggplot(prob_dist4, aes(x = x, y = prob, label = prob)) + 
+  geom_col(fill = c("#1b8883", "#1b8883", "#1b8883", "#754cbc")) + 
+  geom_text(vjust = -0.5, size = 5) + 
+  ylim(0, .60) + 
+  labs(title = "Probability distribution of student work status", x = "", y = "p(x)") + 
+  theme_tufte(base_size = 18) + 
+  theme(axis.line.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.ticks.y = element_blank(), 
+        legend.position = "none")
+```
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; height: 140px; padding: 0px 10px 20px 10px; position: absolute; top: 275px; right: 0px"}
+As long as every possible outcome is included, we can think of this as a probability distribution
+:::
+
+::: {.fragment fragment-index=2 data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 210px; height: 125px; padding: 0px 0px 20px 10px; position: absolute; bottom: 0px; right: -85px; font-size: 0.75em"}
+For example: The<br>probability of randomly selecting a student who works more than full time is .03
+:::
+
 ## Probability rules
 
-Rule 1: The probability P(A) of any event A satisfies 0 ≤ P(A) ≤ 1
-Rule 2: If S is the sample space in a probability model, then P(S) = 1
-Rule 3: Addition Rule 
-Rule 4: Multiplication Rule
+<br>
 
-## Discrete versus continuous probability distribution
+:::: {.columns}
+
+::: {.column width="50%"}
+### **Rule 1**
+#### The probability $P(A)$ of any event A<br>satisfies **$0 \leq P(A) \leq 1$**
+
+<br>
+
+[The probability of any single event, is always between 0 and 1.0 ]{style="font-size: 1.25em"}
+
+* [An event, or outcome, with probability 0 never happens]{style="color: #e93cac"}
+* [An event, or outcome, with probability 1 is a certainty]{style="color: #e93cac"}
+
+:::
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=1}
+### **Rule 2**
+#### If $S$ is the sample space in a<br>probability model, then **$P(S) = 1$**
+
+<br>
+
+[Add up the probabilities of all these possible outcomes and the result will be 1.0]{style="font-size: 1.25em"}
+
+* [Sample space is just the list of all possible outcomes]{style="color: #e93cac"}
+* [A list of all the possibilities equals 100% of possibilities and one of them has to happen as a result of the trial]{style="color: #e93cac"}
+
+:::
+:::
+
+::::
+
+## Probability rules
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+<br>
+
+### **Rule 3**: Addition Rule
+#### The probability of [any]{.underline} of several different mutually exclusive outcomes is equal to the sum of their separate probabilities
+<br>
+[i.e., the probability of [**either**]{style="color: #e93cac"} outcome A [**or**]{style="color: #e93cac"} outcome B on [one single trial]{.underline}:]{style="font-size: 1.25em"}
+
+<br>
+
+[$$
+P(\text{A or B}) = P(A) + P(B)
+$$]{style="font-size: 1.25em"}
+
+:::
+
+::: {.column width="55%"}
+::: {.fragment fragment-index=2}
+#### Examples
+
+* Probability of rolling a *5* or a *6* with a fair six-sided die?
+
+$$
+P(\text{5 or 6}) = \frac{1}{6} + \frac{1}{6} = 0.167 + 0.167 = 0.334
+$$
+
+* Probability of rolling any value below *4* with a fair six-sided die?
+
+$$
+P(\text{1 or 2 or 3}) = \frac{1}{6} + \frac{1}{6} + \frac{1}{6} = 0.167 + 0.167 + 0.167 = 0.50
+$$
+:::
+
+::: {.fragment fragment-index=3 data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 575px; height: 100px; padding: 0px 10px 20px 10px; position: absolute; bottom: 25px; right: -50px"}
+The probability of [any]{.underline} of multiple outcomes happening is always [larger]{.underline} than the probability of any one of the outcomes alone.
+:::
+
+:::
+
+::::
+
+## Probability rules
+
+:::: {.columns}
+
+::: {.column width="60%"}
+::: {.fragment fragment-index=2}
+#### Examples
+
+* Probability of rolling a *5* and a *6* on consecutive roles of a fair six-sided die?
+
+$$
+P(\text{5 and 6}) = \frac{1}{6} \times \frac{1}{6} = (0.167)(0.167) = 0.028
+$$
+
+* Probability of flipping 3 heads in a row?
+
+$$
+P(\text{H, H, H}) = \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = (0.5)(0.5)(0.5)= 0.125
+$$
+:::
+
+
+::: {.fragment fragment-index=3 data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 475px; height: 140px; padding: 0px 10px 20px 10px; position: absolute; bottom: 25px; left: 0px"}
+The probability of a combination of [multiple]{.underline} outcomes happening is always [smaller]{.underline} than the probability of one of the outcomes happening independently.
+
+:::
+:::
+
+::: {.column width="40%"}
+
+### **Rule 4**:<br>Multiplication Rule
+#### The probability of a combination of [independent]{.underline} outcomes is equal to the product of their separate probabilities
+<br>
+[i.e., the probability of outcome A [**and**]{style="color: #e93cac"} outcome B on [two independent trials]{.underline}:]{style="font-size: 1.25em"}
+
+<br>
+
+[$$
+P(\text{A and B}) = P(A) \times P(B)
+$$]{style="font-size: 1.25em"}
+
+:::
+
+::::
+
+---
+
+### [[Examples]{style="color: #e93cac"}: What is the probability of randomly selecting…]{style="font-size: 0.95em"}
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+#### A single student who does not work?
+:::
+
+::: {.column width="33.33%"}
+#### Two consecutive students who do not work?
+:::
+
+::: {.column width="33.33%"}
+#### A single student who works at least full time?
+:::
+
+::::
+
+![](images/work_dist.png){.absolute bottom=-50 left=100 width="800"}
+
+---
+
+### [[Examples]{style="color: #e93cac"}: What is the probability of randomly selecting…]{style="font-size: 0.95em"}
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+#### A single student who does not work?
+
+$P(nw) = 0.25$
+:::
+
+::: {.column width="33.33%"}
+
+
+
+:::
+
+::: {.column width="33.33%"}
+
+
+
+:::
+
+::::
+
+![](images/work_dist.png){.absolute bottom=-50 left=100 width="800"}
+
+---
+
+### [[Examples]{style="color: #e93cac"}: What is the probability of randomly selecting…]{style="font-size: 0.95em"}
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+
+
+
+:::
+
+::: {.column width="33.33%"}
+#### Two consecutive students who do not work?
+
+$P(\text{nw, nw}) = (0.25)(0.25) = 0.0625$
+:::
+
+::: {.column width="33.33%"}
+
+
+
+:::
+
+::::
+
+![](images/work_dist.png){.absolute bottom=-50 left=100 width="800"}
+
+---
+
+### [[Examples]{style="color: #e93cac"}: What is the probability of randomly selecting…]{style="font-size: 0.95em"}
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+
+
+
+:::
+
+::: {.column width="33.33%"}
+
+
+
+:::
+
+::: {.column width="33.33%"}
+#### A single student who works at least full time?
+
+$P(\text{ft or mft}) = 0.17 + 0.03 = 0.20$
+:::
+
+::::
+
+![](images/work_dist.png){.absolute bottom=-50 left=100 width="800"}
+
+---
+
+### Examples: [Probability distribution]{style="color: #e93cac"}
+
+<br>
+
+#### Probability distributions are reflected in frequency distribution
+
+![](images/work_dist.png){.absolute bottom=-50 left=100 width="800"}
+
+::: {.fragment fragment-index=1 data-id="box1" style="width: 500px; height: 250px; margin: 10px; position: absolute; top: 175px; right: -75px"}
+::: r-fit-text
+>[Discrete probability distribution]{style="color: #e93cac"}<br>Shows the probability of<br>a set of distinct,<br>separable outcomes.
+:::
+:::
+
+---
+
+### Examples: [Continuous probability distribution]{style="color: #e93cac"}
+
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+#| fig-align: left
+
+prob_dist5 <- tibble(hours = 0:45, perc = c(1, 1.25, 1.5, 1.75, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.6, 3.7, 3.9, 4, 4.25, 4.5, 4.75, 4.75, 4.5, 4, 3.75, 3.5, 3.25, 3, 2.75, 2.5, 2.25, 2, 1.75, 1.5, 1.25, 1.1, 1, 0.75, 0.5, 0.25, 0.5, 0.75, 1, 1.25, 1, 0.75, 0.5, 0.25, 0.25, 0.25))
+
+ggplot(prob_dist5, aes(x = hours, y = perc)) + 
+  geom_histogram(color = "black", fill = "#1b8883", stat = "identity") + 
+  #geom_density(color = "red", stat = "identity")
+  ylim(0, 5) + 
+  labs(title = "Study time for sample of students", x = "Hours studied per week", y = "% of students") + 
+  theme_tufte(base_size = 18) 
+```
+
+::: {.fragment fragment-index=1 data-id="box1" style="width: 500px; height: 100px; margin: 10px; position: absolute; top: 50px; right: -75px"}
+::: r-fit-text
+>[Probability density function]{style="color: #e93cac"}<br>Shows the probability of a<br>set of continuous outcomes.
+:::
+:::
+
+::: {.fragment fragment-index=1 data-id="box1" style="width: 500px; height: 50px; margin: 10px; position: absolute; top: 250px; right: -75px"}
+Can use a histogram to create a continuous probability distribution
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 500px; height: 110px; padding: 0px 0px 10px 10px; position: absolute; top: 350px; right: -75px"}
+**Note**: Continuous random variables have an infinite continuum of possible values in an interval (e.g., time, age, height, weight...)
+:::
+
+::: {.fragment fragment-index=2 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 450px; height: 60px; padding: 0px 10px 20px 10px; position: absolute; top: 500px; right: -75px"}
+Contrast to a discrete random variable (limited number of possible values)
+:::
+
+---
+
+### Examples: [Continuous probability distribution]{style="color: #e93cac"}
+
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+#| fig-align: left
+
+prob_dist5 <- tibble(hours = 0:45, perc = c(1, 1.25, 1.5, 1.75, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.6, 3.7, 3.9, 4, 4.25, 4.5, 4.75, 4.75, 4.5, 4, 3.75, 3.5, 3.25, 3, 2.75, 2.5, 2.25, 2, 1.75, 1.5, 1.25, 1.1, 1, 0.75, 0.5, 0.25, 0.5, 0.75, 1, 1.25, 1, 0.75, 0.5, 0.25, 0.25, 0.25))
+
+ggplot(prob_dist5, aes(x = hours, y = perc)) + 
+  geom_histogram(color = "black", fill = "#1b8883", stat = "identity") + 
+  #geom_density(color = "red", stat = "identity")
+  ylim(0, 5) + 
+  labs(title = "Study time for sample of students", x = "Hours studied per week", y = "% of students") + 
+  theme_tufte(base_size = 18) 
+```
+
 
 ## Probability density function
 

@@ -1867,5 +1867,222 @@
     "title": "",
     "section": "Myths about randomness and probability",
     "text": "Myths about randomness and probability\nThe myth of short-run regularity\n\n\n\nMyth: I’ve flipped eight heads in a row, so I’m “due” for a tail.\n\n\nReality: Since each new flip (trial) is independent, the outcome of the next flip is not affected by what happened in past flips.\n\n\n\n🪙\n\n\n\n\n\nIndependenceIn probability, two events are independent if the incidence ofone event does not affect the probability of the other event."
+  },
+  {
+    "objectID": "Lectures/lecture4.html#descriptive-inferential-statistics",
+    "href": "Lectures/lecture4.html#descriptive-inferential-statistics",
+    "title": "",
+    "section": "Descriptive –> Inferential statistics",
+    "text": "Descriptive –&gt; Inferential statistics\n\n\n\n\nWhere are we?\n\nSo far: Worked on descriptive statistics – tools to describe distributions\nNEXT: Building the tools for inferential statistics\n\n\n\n\n\nExample: Want to know about the average study time for the population of UW students.\nNEXT: Building the tools for inferential statistics\n\n\n\n\n\nInferential statisticsStatistical procedures usedto draw conclusions(or inferences) abouta population based ondata drawn from a sample\n\n\n\n\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#descriptive-inferential-statistics-1",
+    "href": "Lectures/lecture4.html#descriptive-inferential-statistics-1",
+    "title": "",
+    "section": "Descriptive –> Inferential statistics",
+    "text": "Descriptive –&gt; Inferential statistics\n\n\nWhere are we?\n\nSo far: Worked on descriptive statistics – tools to describe distributions\nNEXT: Building the tools for inferential statistics\n\n\n\nExample: Want to know about the average study time for the population of UW students.\nNEXT: Building the tools for inferential statistics\n\n\n\n\nInferential statisticsStatistical procedures usedto draw conclusions(or inferences) abouta population based ondata drawn from a sample\n\n\n\n\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)\n\n\nPopulation parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)\n\n\nSample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#the-challenge-of-making-inferences",
+    "href": "Lectures/lecture4.html#the-challenge-of-making-inferences",
+    "title": "",
+    "section": "The challenge of making inferences",
+    "text": "The challenge of making inferences\n\n\nDrawing inferences entails uncertainty\nEven with a good sample, the sample is likely to differ from the population (sample statistic is likely to be different from our population parameter, just by chance)\n\n\n\n\nChallenge\nAssessing the risk of being wrong (being way off) in making an inference from observed sample statistics to unknown population parameters.\n\n\n\n\nKey questions\n\nHow often would this procedure (drawing a sample, inferring about the population) give us something close to the correct answer if I used it over and over? or\nWhat is the probability that the inference I draw from one sample is wrong (way off from the population characteristic of interest)?\n\n\n\nThe answers to these questions rely on concepts of probability"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#probability",
+    "href": "Lectures/lecture4.html#probability",
+    "title": "",
+    "section": "Probability",
+    "text": "Probability\n\n\nProbabilityThe probability of any outcome of a random process is the proportionof times the outcome would occur in a very long series of repetitions\n\n\n\n\\[\nP = \\frac{\\text{# of times the outcome of interest could occur in one trial}}{\\text{total # of possible outcomes or events}}\n\\]\n\n\n\n\n\n\nProbabilitiesare simply therelative frequencyof an outcome\n\n\n\n\n\nExamples\n\nProbability of flipping a HEAD with a fair coin:\n\n\\(P(H) = \\frac{1}{2} = .50\\)\n\nProbability of rolling a 3 with a 6-sided die\n\n\\(P(3) = \\frac{1}{6} = .1667\\)\n\n\n\n\n\n\n🪙\n\n\n🎲"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#random",
+    "href": "Lectures/lecture4.html#random",
+    "title": "",
+    "section": "Random",
+    "text": "Random\n\n\nRandomWe call a phenomenon random if individual outcomesare uncertain but there is nonetheless a regulardistribution of outcomes in a large number of repetitions.\n\n\n\n\n\nRandom =\n\n\n\nOn any one trial, we don’t know what the outcome will be.\nBut there is pattern to the outcomes, so we can guess what will happen if we do something many times (over the long run).\nRandom is not the same as haphazard, unpredictable, or unexplained.\nThe different possible outcomes of the trial = values of the random variable"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#random-2",
+    "href": "Lectures/lecture4.html#random-2",
+    "title": "",
+    "section": "Random",
+    "text": "Random\n\n\nRandomWe call a phenomenon random if individual outcomesare uncertain but there is nonetheless a regulardistribution of outcomes in a large number of repetitions.\n\n\nSome random phenomena\n\n\nFlipping a coin (random variable: whether result is head or tail)\nSelecting a single marble from a bag (random variable: color of the marble)\nSelecting an individual person from a larger group (random variable: level of education (or any other attribute) for the individual)\nSelecting a random sample from the set of all possible samples (random variable: the value of some statistic (mean, or variance, or correlation, slope, etc.) calculated for the sample)"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#myths-about-randomness-and-probability",
+    "href": "Lectures/lecture4.html#myths-about-randomness-and-probability",
+    "title": "",
+    "section": "Myths about randomness and probability",
+    "text": "Myths about randomness and probability\nThe myth of short-run regularity\n\n\n\nMyth: If I flip a coin 10 times I should get 5 heads.\n\n\nReality: Over a short number of flips, you might get lots of heads or lots of tails. Probabilities express expectations only over the long run.\n\n\n\n\n\n\n\n\nExample: Tossing a die to get a 3 • In the short-run, might get very few or very many 3s • In the long-run 1/6 of the observations will be 3s"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#myths-about-randomness-and-probability-1",
+    "href": "Lectures/lecture4.html#myths-about-randomness-and-probability-1",
+    "title": "",
+    "section": "Myths about randomness and probability",
+    "text": "Myths about randomness and probability\nThe myth of short-run regularity\n\n\n\nMyth: If I flip a coin 10 times I should get 5 heads.\n\n\nReality: Over a short number of flips, you might get lots of heads or lots of tails. Probabilities express expectations only over the long run.\n\n\nThere is a difference between theoretical probability (long run) and short-run experimental probability"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#myths-about-randomness-and-probability-2",
+    "href": "Lectures/lecture4.html#myths-about-randomness-and-probability-2",
+    "title": "",
+    "section": "Myths about randomness and probability",
+    "text": "Myths about randomness and probability\nThe myth of short-run regularity\n\n\n\nMyth: I’ve flipped eight heads in a row, so I’m “due” for a tail.\n\n\nReality: Since each new flip (trial) is independent, the outcome of the next flip is not affected by what happened in past flips.\n\n\n\n🪙\n\n\n\n\n\nIndependenceIn probability, two events are independent if the incidence ofone event does not affect the probability of the other event."
+  },
+  {
+    "objectID": "Lectures/lecture4.html#probability-distribution",
+    "href": "Lectures/lecture4.html#probability-distribution",
+    "title": "",
+    "section": "Probability distribution",
+    "text": "Probability distribution\n\n\n\n\nProbability distributionFor a random variable,this specifies itspossible values and their probabilities.\n\n\n\n\nA discrete random variable X has separate values (such as 1,2, 3…) as its possible outcomes\n\n\n\nIts probability distribution assigns a probability P(x) to each possible value of X\n\n\n\nThe sum of the probabilities for all the possible x values equals 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nFor each x, the probability P(x) falls between 0 and 1"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#probability-rules",
+    "href": "Lectures/lecture4.html#probability-rules",
+    "title": "",
+    "section": "Probability rules",
+    "text": "Probability rules\n\n\n\nRule 1\nThe probability \\(P(A)\\) of any event Asatisfies \\(0 \\leq P(A) \\leq 1\\)\n\nThe probability of any single event, is always between 0 and 1.0\n\nAn event, or outcome, with probability 0 never happens\nAn event, or outcome, with probability 1 is a certainty\n\n\n\n\nRule 2\nIf \\(S\\) is the sample space in aprobability model, then \\(P(S) = 1\\)\n\nAdd up the probabilities of all these possible outcomes and the result will be 1.0\n\nSample space is just the list of all possible outcomes\nA list of all the possibilities equals 100% of possibilities and one of them has to happen as a result of the trial"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#discrete-versus-continuous-probability-distribution",
+    "href": "Lectures/lecture4.html#discrete-versus-continuous-probability-distribution",
+    "title": "",
+    "section": "Discrete versus continuous probability distribution",
+    "text": "Discrete versus continuous probability distribution"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#probability-density-function",
+    "href": "Lectures/lecture4.html#probability-density-function",
+    "title": "",
+    "section": "Probability density function",
+    "text": "Probability density function"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#normal-distribution",
+    "href": "Lectures/lecture4.html#normal-distribution",
+    "title": "",
+    "section": "Normal distribution",
+    "text": "Normal distribution"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#consistent-areas-under-the-normal-curve",
+    "href": "Lectures/lecture4.html#consistent-areas-under-the-normal-curve",
+    "title": "",
+    "section": "Consistent areas under the normal curve",
+    "text": "Consistent areas under the normal curve"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#standard-normal-distribution",
+    "href": "Lectures/lecture4.html#standard-normal-distribution",
+    "title": "",
+    "section": "Standard normal distribution",
+    "text": "Standard normal distribution"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#normal-distribution-and-standardized-z-scores",
+    "href": "Lectures/lecture4.html#normal-distribution-and-standardized-z-scores",
+    "title": "",
+    "section": "Normal distribution and standardized z-scores",
+    "text": "Normal distribution and standardized z-scores"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#steps-for-finding-area-under-the-normal-curve",
+    "href": "Lectures/lecture4.html#steps-for-finding-area-under-the-normal-curve",
+    "title": "",
+    "section": "Steps for finding area under the normal curve",
+    "text": "Steps for finding area under the normal curve\nNote: these steps can happen out of order!\n\nDraw the picture, roughly showing the area under the curve that you are looking for (highly recommended)\nConvert value(s) of interest into z-score(s)\nUse standard normal table (linked in the back of the book) to find proportion of cases between the mean and the z-score\nSubtract or add areas under the curve to get the total proportion you are looking for (see the picture from step 1)\nConvert to percentages or probabilities as required by the problem"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#step-1",
+    "href": "Lectures/lecture4.html#step-1",
+    "title": "",
+    "section": "Step 1",
+    "text": "Step 1"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#step-2",
+    "href": "Lectures/lecture4.html#step-2",
+    "title": "",
+    "section": "Step 2",
+    "text": "Step 2"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#step-3",
+    "href": "Lectures/lecture4.html#step-3",
+    "title": "",
+    "section": "Step 3",
+    "text": "Step 3"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#step-4",
+    "href": "Lectures/lecture4.html#step-4",
+    "title": "",
+    "section": "Step 4",
+    "text": "Step 4"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#step-5",
+    "href": "Lectures/lecture4.html#step-5",
+    "title": "",
+    "section": "Step 5",
+    "text": "Step 5"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#examples-1",
+    "href": "Lectures/lecture4.html#examples-1",
+    "title": "",
+    "section": "Examples",
+    "text": "Examples"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#example-probability-distribution",
+    "href": "Lectures/lecture4.html#example-probability-distribution",
+    "title": "",
+    "section": "Example: Probability distribution",
+    "text": "Example: Probability distribution\nWhat is the probability of a correct guess (choosing randomly) on a five-choice test question?\n\n\n\nProbability distribution of guess outcomes\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\nP(C) = \\frac{1}{5} = 0.2\n\\]\n\\[\nP(I) = \\frac{4}{5} = 0.8\n\\]\n\n\n\nNote (again!):Probabilities = Proportions"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#example-probability-distribution-1",
+    "href": "Lectures/lecture4.html#example-probability-distribution-1",
+    "title": "",
+    "section": "Example: Probability distribution",
+    "text": "Example: Probability distribution\nProbability distributions are reflected in frequency distributions\n\nAs long as every possible outcome is included, we can think of this as a probability distribution"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#example-probability-distribution-2",
+    "href": "Lectures/lecture4.html#example-probability-distribution-2",
+    "title": "",
+    "section": "Example: Probability distribution",
+    "text": "Example: Probability distribution\nProbability distributions are reflected in frequency distributions\n\n\nAs long as every possible outcome is included, we can think of this as a probability distribution\n\n\nFor example: Theprobability of randomly selecting a student who works more than full time is .03"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#probability-rules-1",
+    "href": "Lectures/lecture4.html#probability-rules-1",
+    "title": "",
+    "section": "Probability rules",
+    "text": "Probability rules\n\n\n\nRule 3: Addition Rule\nThe probability of any of several different mutually exclusive outcomes is equal to the sum of their separate probabilities\n i.e., the probability of either outcome A or outcome B on one single trial:\n\n\\[\nP(\\text{A or B}) = P(A) + P(B)\n\\]\n\n\n\nExamples\n\nProbability of rolling a 5 or a 6 with a fair six-sided die?\n\n\\[\nP(\\text{5 or 6}) = \\frac{1}{6} + \\frac{1}{6} = 0.167 + 0.167 = 0.334\n\\]\n\nProbability of rolling any value below 4 with a fair six-sided die?\n\n\\[\nP(\\text{1 or 2 or 3}) = \\frac{1}{6} + \\frac{1}{6} + \\frac{1}{6} = 0.167 + 0.167 + 0.167 = 0.50\n\\]\n\n\nThe probability of any of multiple outcomes happening is always larger than the probability of any one of the outcomes alone."
+  },
+  {
+    "objectID": "Lectures/lecture4.html#probability-rules-2",
+    "href": "Lectures/lecture4.html#probability-rules-2",
+    "title": "",
+    "section": "Probability rules",
+    "text": "Probability rules\n\n\n\n\nExamples\n\nProbability of rolling a 5 and a 6 on consecutive roles of a fair six-sided die?\n\n\\[\nP(\\text{5 and 6}) = \\frac{1}{6} \\times \\frac{1}{6} = (0.167)(0.167) = 0.028\n\\]\n\nProbability of flipping 3 heads in a row?\n\n\\[\nP(\\text{H, H, H}) = \\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2} = (0.5)(0.5)(0.5)= 0.125\n\\]\n\n\nThe probability of a combination of multiple outcomes happening is always smaller than the probability of one of the outcomes happening independently.\n\n\nRule 4:Multiplication Rule\nThe probability of a combination of independent outcomes is equal to the product of their separate probabilities\n i.e., the probability of outcome A and outcome B on two independent trials:\n\n\\[\nP(\\text{A and B}) = P(A) \\times P(B)\n\\]"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#examples-2",
+    "href": "Lectures/lecture4.html#examples-2",
+    "title": "",
+    "section": "Examples",
+    "text": "Examples"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#examples-3",
+    "href": "Lectures/lecture4.html#examples-3",
+    "title": "",
+    "section": "Examples",
+    "text": "Examples"
   }
 ]

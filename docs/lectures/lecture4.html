@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.43">
+  <meta name="generator" content="quarto-1.4.551">
 
   <meta name="author" content="Victoria Sass">
-  <title> Probability and probability distributions &amp; Normal distributions </title>
+  <title></title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -611,14 +611,289 @@ P = \frac{\text{# of times the outcome of interest could occur in one trial}}{\t
 </section>
 <section id="probability-distribution" class="slide level2">
 <h2>Probability distribution</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="r-fit-text">
+<blockquote>
+<p><span style="color:#e93cac"><strong>Probability distribution</strong></span><br>For a <u>random variable</u>,<br>this specifies its<br>possible values<br> and their probabilities.</p>
+</blockquote>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="1">
+<p>A discrete random variable X has separate values (such as 1,2, 3…) as its possible outcomes</p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="2">
+<p>Its probability distribution assigns a probability P(x) to each possible value of X</p>
+</div>
+</div><div class="column" style="width:55%;">
+<div class="fragment" data-fragment-index="4">
+<p>The sum of the probabilities for all the possible x values equals 1</p>
+</div>
+<div class="fragment" data-fragment-index="2">
+<div class="cell" data-layout-align="right">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="lecture4_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-right" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3" style="font-size: 0.95em">
+<p>For each x, the probability P(x) falls between 0 and 1</p>
+</div>
+</div>
+</div>
+</section>
+<section id="example-probability-distribution" class="slide level2">
+<h2>Example: Probability distribution</h2>
+<h4 id="what-is-the-probability-of-a-correct-guess-choosing-randomly-on-a-five-choice-test-question">What is the probability of a correct guess (choosing randomly) on a five-choice test question?</h4>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="fragment" data-fragment-index="1">
+<p>Probability distribution of guess outcomes</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="lecture4_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-left" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="fragment" data-fragment-index="1" style="font-size: 1.5em">
+<p><span class="math display">\[
+P(C) = \frac{1}{5} = 0.2
+\]</span></p>
+<p><span class="math display">\[
+P(I) = \frac{4}{5} = 0.8
+\]</span></p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="2" style="font-size: 1.25em">
+<p>Note (again!):<br><span style="color: e93cac">Probabilities = Proportions</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="example-probability-distribution-1" class="slide level2">
+<h2>Example: Probability distribution</h2>
+<h4 id="probability-distributions-are-reflected-in-frequency-distributions">Probability distributions are reflected in frequency distributions</h4>
+<div class="fragment" data-fragment-index="1" data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; height: 140px; padding: 0px 10px 20px 10px; position: absolute; top: 275px; right: 0px">
+<p>As long as every possible outcome is included, we can think of this as a probability distribution</p>
+</div>
+</section>
+<section id="example-probability-distribution-2" class="slide level2">
+<h2>Example: Probability distribution</h2>
+<h4 id="probability-distributions-are-reflected-in-frequency-distributions-1">Probability distributions are reflected in frequency distributions</h4>
+
+<img data-src="lecture4_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-left r-stretch" width="960"><div data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; height: 140px; padding: 0px 10px 20px 10px; position: absolute; top: 275px; right: 0px">
+<p>As long as every possible outcome is included, we can think of this as a probability distribution</p>
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 210px; height: 125px; padding: 0px 0px 20px 10px; position: absolute; bottom: 0px; right: -85px; font-size: 0.75em">
+<p>For example: The<br>probability of randomly selecting a student who works more than full time is .03</p>
+</div>
 </section>
 <section id="probability-rules" class="slide level2">
 <h2>Probability rules</h2>
-<p>Rule 1: The probability P(A) of any event A satisfies 0 ≤ P(A) ≤ 1 Rule 2: If S is the sample space in a probability model, then P(S) = 1 Rule 3: Addition Rule Rule 4: Multiplication Rule</p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="rule-1"><strong>Rule 1</strong></h3>
+<h4 id="the-probability-pa-of-any-event-a-satisfies-0-leq-pa-leq-1">The probability <span class="math inline">\(P(A)\)</span> of any event A<br>satisfies <strong><span class="math inline">\(0 \leq P(A) \leq 1\)</span></strong></h4>
+<p><br></p>
+<p><span style="font-size: 1.25em">The probability of any single event, is always between 0 and 1.0</span></p>
+<ul>
+<li><span style="color: #e93cac">An event, or outcome, with probability 0 never happens</span></li>
+<li><span style="color: #e93cac">An event, or outcome, with probability 1 is a certainty</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<!-- -->
+<h3 id="rule-2"><strong>Rule 2</strong></h3>
+<h4 id="if-s-is-the-sample-space-in-a-probability-model-then-ps-1">If <span class="math inline">\(S\)</span> is the sample space in a<br>probability model, then <strong><span class="math inline">\(P(S) = 1\)</span></strong></h4>
+<p><br></p>
+<p><span style="font-size: 1.25em">Add up the probabilities of all these possible outcomes and the result will be 1.0</span></p>
+<ul>
+<li><span style="color: #e93cac">Sample space is just the list of all possible outcomes</span></li>
+<li><span style="color: #e93cac">A list of all the possibilities equals 100% of possibilities and one of them has to happen as a result of the trial</span></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
-<section id="discrete-versus-continuous-probability-distribution" class="slide level2">
-<h2>Discrete versus continuous probability distribution</h2>
+<section id="probability-rules-1" class="slide level2">
+<h2>Probability rules</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><br></p>
+<h3 id="rule-3-addition-rule"><strong>Rule 3</strong>: Addition Rule</h3>
+<h4 id="the-probability-of-any-of-several-different-mutually-exclusive-outcomes-is-equal-to-the-sum-of-their-separate-probabilities">The probability of <u>any</u> of several different mutually exclusive outcomes is equal to the sum of their separate probabilities</h4>
+<p><br> <span style="font-size: 1.25em">i.e., the probability of <span style="color: #e93cac"><strong>either</strong></span> outcome A <span style="color: #e93cac"><strong>or</strong></span> outcome B on <u>one single trial</u>:</span></p>
+<p><br></p>
+<p><span style="font-size: 1.25em"><span class="math display">\[
+P(\text{A or B}) = P(A) + P(B)
+\]</span></span></p>
+</div><div class="column" style="width:55%;">
+<div class="fragment" data-fragment-index="2">
+<!-- -->
+<h4 id="examples-1">Examples</h4>
+<ul>
+<li>Probability of rolling a <em>5</em> or a <em>6</em> with a fair six-sided die?</li>
+</ul>
+<p><span class="math display">\[
+P(\text{5 or 6}) = \frac{1}{6} + \frac{1}{6} = 0.167 + 0.167 = 0.334
+\]</span></p>
+<ul>
+<li>Probability of rolling any value below <em>4</em> with a fair six-sided die?</li>
+</ul>
+<p><span class="math display">\[
+P(\text{1 or 2 or 3}) = \frac{1}{6} + \frac{1}{6} + \frac{1}{6} = 0.167 + 0.167 + 0.167 = 0.50
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="3" data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 575px; height: 100px; padding: 0px 10px 20px 10px; position: absolute; bottom: 25px; right: -50px">
+<p>The probability of <u>any</u> of multiple outcomes happening is always <u>larger</u> than the probability of any one of the outcomes alone.</p>
+</div>
+</div>
+</div>
 </section>
+<section id="probability-rules-2" class="slide level2">
+<h2>Probability rules</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="fragment" data-fragment-index="2">
+<!-- -->
+<h4 id="examples-2">Examples</h4>
+<ul>
+<li>Probability of rolling a <em>5</em> and a <em>6</em> on consecutive roles of a fair six-sided die?</li>
+</ul>
+<p><span class="math display">\[
+P(\text{5 and 6}) = \frac{1}{6} \times \frac{1}{6} = (0.167)(0.167) = 0.028
+\]</span></p>
+<ul>
+<li>Probability of flipping 3 heads in a row?</li>
+</ul>
+<p><span class="math display">\[
+P(\text{H, H, H}) = \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = (0.5)(0.5)(0.5)= 0.125
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="3" data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 475px; height: 140px; padding: 0px 10px 20px 10px; position: absolute; bottom: 25px; left: 0px">
+<p>The probability of a combination of <u>multiple</u> outcomes happening is always <u>smaller</u> than the probability of one of the outcomes happening independently.</p>
+</div>
+</div><div class="column" style="width:40%;">
+<h3 id="rule-4-multiplication-rule"><strong>Rule 4</strong>:<br>Multiplication Rule</h3>
+<h4 id="the-probability-of-a-combination-of-independent-outcomes-is-equal-to-the-product-of-their-separate-probabilities">The probability of a combination of <u>independent</u> outcomes is equal to the product of their separate probabilities</h4>
+<p><br> <span style="font-size: 1.25em">i.e., the probability of outcome A <span style="color: #e93cac"><strong>and</strong></span> outcome B on <u>two independent trials</u>:</span></p>
+<p><br></p>
+<p><span style="font-size: 1.25em"><span class="math display">\[
+P(\text{A and B}) = P(A) \times P(B)
+\]</span></span></p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="examples-what-is-the-probability-of-randomly-selecting"><span style="font-size: 0.95em"><span style="color: #e93cac">Examples</span>: What is the probability of randomly selecting…</span></h3>
+<div class="columns">
+<div class="column" style="width:33.33%;">
+<h4 id="a-single-student-who-does-not-work">A single student who does not work?</h4>
+</div><div class="column" style="width:33.33%;">
+<h4 id="two-consecutive-students-who-do-not-work">Two consecutive students who do not work?</h4>
+</div><div class="column" style="width:33.33%;">
+<h4 id="a-single-student-who-works-at-least-full-time">A single student who works at least full time?</h4>
+</div>
+</div>
+<p><img data-src="images/work_dist.png" class="absolute" style="left: 100px; bottom: -50px; width: 800px; "></p>
+</section>
+<section class="slide level2">
+
+<h3 id="examples-what-is-the-probability-of-randomly-selecting-1"><span style="font-size: 0.95em"><span style="color: #e93cac">Examples</span>: What is the probability of randomly selecting…</span></h3>
+<div class="columns">
+<div class="column" style="width:33.33%;">
+<h4 id="a-single-student-who-does-not-work-1">A single student who does not work?</h4>
+<p><span class="math inline">\(P(nw) = 0.25\)</span></p>
+</div><div class="column" style="width:33.33%;">
+
+</div><div class="column" style="width:33.33%;">
+
+</div>
+</div>
+<p><img data-src="images/work_dist.png" class="absolute" style="left: 100px; bottom: -50px; width: 800px; "></p>
+</section>
+<section class="slide level2">
+
+<h3 id="examples-what-is-the-probability-of-randomly-selecting-2"><span style="font-size: 0.95em"><span style="color: #e93cac">Examples</span>: What is the probability of randomly selecting…</span></h3>
+<div class="columns">
+<div class="column" style="width:33.33%;">
+
+</div><div class="column" style="width:33.33%;">
+<h4 id="two-consecutive-students-who-do-not-work-1">Two consecutive students who do not work?</h4>
+<p><span class="math inline">\(P(\text{nw, nw}) = (0.25)(0.25) = 0.0625\)</span></p>
+</div><div class="column" style="width:33.33%;">
+
+</div>
+</div>
+<p><img data-src="images/work_dist.png" class="absolute" style="left: 100px; bottom: -50px; width: 800px; "></p>
+</section>
+<section class="slide level2">
+
+<h3 id="examples-what-is-the-probability-of-randomly-selecting-3"><span style="font-size: 0.95em"><span style="color: #e93cac">Examples</span>: What is the probability of randomly selecting…</span></h3>
+<div class="columns">
+<div class="column" style="width:33.33%;">
+
+</div><div class="column" style="width:33.33%;">
+
+</div><div class="column" style="width:33.33%;">
+<h4 id="a-single-student-who-works-at-least-full-time-1">A single student who works at least full time?</h4>
+<p><span class="math inline">\(P(\text{ft or mft}) = 0.17 + 0.03 = 0.20\)</span></p>
+</div>
+</div>
+<p><img data-src="images/work_dist.png" class="absolute" style="left: 100px; bottom: -50px; width: 800px; "></p>
+</section>
+<section class="slide level2">
+
+<h3 id="examples-probability-distribution">Examples: <span style="color: #e93cac">Probability distribution</span></h3>
+<p><br></p>
+<h4 id="probability-distributions-are-reflected-in-frequency-distribution">Probability distributions are reflected in frequency distribution</h4>
+<p><img data-src="images/work_dist.png" class="absolute" style="left: 100px; bottom: -50px; width: 800px; "></p>
+<div class="fragment" data-fragment-index="1" data-id="box1" style="width: 500px; height: 250px; margin: 10px; position: absolute; top: 175px; right: -75px">
+<div class="r-fit-text">
+<blockquote>
+<p><span style="color: #e93cac">Discrete probability distribution</span><br>Shows the probability of<br>a set of distinct,<br>separable outcomes.</p>
+</blockquote>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="examples-continuous-probability-distribution">Examples: <span style="color: #e93cac">Continuous probability distribution</span></h3>
+
+<img data-src="lecture4_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-left r-stretch" width="960"><div class="fragment" data-fragment-index="1" data-id="box1" style="width: 500px; height: 100px; margin: 10px; position: absolute; top: 50px; right: -75px">
+<div class="r-fit-text">
+<blockquote>
+<p><span style="color: #e93cac">Probability density function</span><br>Shows the probability of a<br>set of continuous outcomes.</p>
+</blockquote>
+</div>
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box1" style="width: 500px; height: 50px; margin: 10px; position: absolute; top: 250px; right: -75px">
+<p>Can use a histogram to create a continuous probability distribution</p>
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 500px; height: 110px; padding: 0px 0px 10px 10px; position: absolute; top: 350px; right: -75px">
+<p><strong>Note</strong>: Continuous random variables have an infinite continuum of possible values in an interval (e.g., time, age, height, weight…)</p>
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 450px; height: 60px; padding: 0px 10px 20px 10px; position: absolute; top: 500px; right: -75px">
+<p>Contrast to a discrete random variable (limited number of possible values)</p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="examples-continuous-probability-distribution-1">Examples: <span style="color: #e93cac">Continuous probability distribution</span></h3>
+
+<img data-src="lecture4_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-left r-stretch" width="960"></section>
 <section id="probability-density-function" class="slide level2">
 <h2>Probability density function</h2>
 </section></section>
@@ -670,7 +945,7 @@ P = \frac{\text{# of times the outcome of interest could occur in one trial}}{\t
 <section id="step-5" class="slide level2">
 <h2>Step 5</h2>
 </section>
-<section id="examples-1" class="slide level2">
+<section id="examples-3" class="slide level2">
 <h2>Examples</h2>
 </section></section>
 <section>
@@ -969,7 +1244,18 @@ P = \frac{\text{# of times the outcome of interest could occur in one trial}}{\t
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1001,29 +1287,7 @@ P = \frac{\text{# of times the outcome of interest could occur in one trial}}{\t
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1031,7 +1295,7 @@ P = \frac{\text{# of times the outcome of interest could occur in one trial}}{\t
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
