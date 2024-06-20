@@ -32,7 +32,9 @@ format:
 #| echo: false
 #| cache: false
 require(tidyverse)
+require(ggthemes)
 require(gt)
+require(gganimate)
 
 knitr::opts_chunk$set(comment = ">")
 
@@ -40,9 +42,9 @@ knitr::opts_chunk$set(comment = ">")
 knitr::opts_chunk$set(dev.args=list(bg='transparent'))
 
 # set transparent background in ggplot
-ggplot2::theme_set(ggplot2::theme_bw(base_size=12))
-ggplot2::theme_update(panel.background=ggplot2::element_blank(),
-    plot.background=ggplot2::element_blank(),
+ggplot2::theme_set(ggthemes::theme_tufte(base_size=12))
+ggplot2::theme_update(panel.background = ggplot2::element_blank(),
+                      plot.background=ggplot2::element_blank(),
     legend.background=ggplot2::element_blank())
 
 options(width=80, show.signif.stars=FALSE)
@@ -261,10 +263,6 @@ Probabilities<br>are simply the<br>relative frequency<br>of an outcome
 #| fig-width: 9
 #| fig-height: 6
 #| fig-align: center
-
-library(gganimate)
-library(ggthemes)
-
 set.seed(725)
 dice_longrun <- tibble(trial = 1:6000, roll = sample(1:6, size = 6000, replace = TRUE), count_three = NA) 
 x <- 0
@@ -281,12 +279,19 @@ geom_line(color = "#4b2e83") +
 geom_hline(aes(yintercept = 1/6), color = "#e93cac", linetype = 2) + 
 annotate(geom = "label", x = 6000, y = 0.2, label = "1/6", color = "#e93cac") + 
 labs(title = "Proportion of 3s over 6000 rolls of 6-sided die", x = "Trial #", y = "Proportion of Dice Rolls = 3") +
-theme_tufte(base_size = 18) 
-# animate(roll_3 + transition_reveal(trial), height = 6, width = 9, units = "in", res = 150)
-# anim_save(filename = "lectures/images/dice.gif", animation = last_animation(), duration = 6)
+theme_tufte(base_size = 18) +
+theme(legend.background = element_rect(fill = "transparent"), 
+        legend.box.background = element_rect(fill = "transparent"), 
+        panel.background = element_rect(fill = "transparent", color = NA), 
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(), 
+        plot.background = element_rect(fill = "transparent", 
+                                       color = NA)) 
+#animate(roll_3 + transition_reveal(trial), height = 6, width = 9, units = "in", res = 150)
+#anim_save(filename = "lectures/images/dice.gif", animation = last_animation(), duration = 6, bg = "transparent")
 ```
 
-![](images/dice.gif)
+
 :::
 :::
 
@@ -324,18 +329,15 @@ There is a difference between [theoretical]{.underline} probability (long run) a
 
 ```{r}
 #| echo: false
-#| eval: false
 #| fig-width: 9
 #| fig-height: 6
 #| fig-align: center
 #| 
-zoom_die <- roll_3 + coord_cartesian(xlim = c(0, 100), ylim = c(0, 1) ,expand = TRUE, default = FALSE, clip = "on") + labs(title = "Zoomed in plot of the first 100 trials")
+roll_3 + coord_cartesian(xlim = c(0, 100), ylim = c(0, 1) ,expand = TRUE, default = FALSE, clip = "on") + labs(title = "Zoomed in plot of the first 100 trials")
 
-ggsave("lectures/images/dice.jpeg", zoom_die, height = 6, width = 9, units = "in")
+#ggsave("lectures/images/dice.jpeg", zoom_die, height = 6, width = 9, units = "in", bg = "transparent")
 
 ```
-
-![](images/dice.jpeg)
 
 :::
 
@@ -869,30 +871,524 @@ prob_dist5 <- tibble(hours = 0:45, perc = c(1, 1.25, 1.5, 1.75, 2.25, 2.5, 2.75,
 
 ggplot(prob_dist5, aes(x = hours, y = perc)) + 
   geom_histogram(color = "black", fill = "#1b8883", stat = "identity") + 
-  #geom_density(color = "red", stat = "identity")
+  geom_density(size = 1.5, color = "#e93cac", stat = "identity") + 
   ylim(0, 5) + 
   labs(title = "Study time for sample of students", x = "Hours studied per week", y = "% of students") + 
   theme_tufte(base_size = 18) 
 ```
 
+::: {data-id="box1" style="width: 500px; height: 100px; margin: 10px; position: absolute; top: 150px; right: -75px"}
+Just smooth out the distribution
+:::
 
-## Probability density function
+::: {.fragment fragment-index=1 data-id="box1" style="width: 500px; height: 50px; margin: 10px; position: absolute; top: 225px; right: -75px"}
+Can describe probabilities of observing values within a range [**under the curve**]{style="color: #e93cac"}
+:::
+
+---
+
+### Examples: [Continuous probability distribution]{style="color: #e93cac"}
+
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+#| fig-align: left
+
+prob_dist5 <- tibble(hours = 0:45, perc = c(1, 1.25, 1.5, 1.75, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.6, 3.7, 3.9, 4, 4.25, 4.5, 4.75, 4.75, 4.5, 4, 3.75, 3.5, 3.25, 3, 2.75, 2.5, 2.25, 2, 1.75, 1.5, 1.25, 1.1, 1, 0.75, 0.5, 0.25, 0.5, 0.75, 1, 1.25, 1, 0.75, 0.5, 0.25, 0.25, 0.25))
+
+ggplot(prob_dist5, aes(x = hours, y = perc)) + 
+  geom_histogram(color = "black", fill = c(rep("#1b8883", 9), rep("#ffc700", 7), rep("#1b8883", 30)), stat = "identity") + 
+  geom_density(size = 1.5, color = "#e93cac", stat = "identity") + 
+  ylim(0, 5) + 
+  labs(title = "Study time for sample of students", x = "Hours studied per week", y = "% of students") + 
+  theme_tufte(base_size = 18) 
+```
+
+::: {data-id="box1" style="width: 500px; height: 100px; margin: 10px; position: absolute; top: 150px; right: -75px"}
+Just smooth out the distribution
+:::
+
+::: {data-id="box1" style="width: 500px; height: 50px; margin: 10px; position: absolute; top: 225px; right: -75px"}
+Can describe probabilities of observing values within a range [**under the curve**]{style="color: #e93cac"}
+:::
+
+::: {data-id="box1" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 225px; height: 155px; margin: 10px; padding: 0px 10px 20px 10px; position: absolute; top: 250px; left: -50px; font-size: 0.75em"}
+EXAMPLE: If we know that 28.39% of students study between 9 and 15 hours, the probability of selecting a student from this range is .2839
+:::
+
+---
+
+### [Takeaway: Probability Distribution of a Continuous Random Variable]{style="font-size: 0.8em"}
+
+::: {.fragment fragment-index=1}
+* A continuous random variable has possible values that form a curve (smoothing a histogram)
+    * Sometimes called a [[probability density function]{.underline} (pdf)]{style="color: #e93cac"}
+:::
+
+::: {.fragment fragment-index=2}
+* Can think about probability of outcomes within a specific interval (range or a section under the curve)
+    * Probability = area under the curve for that interval
+    * Each interval has probability between 0 and 1
+    * The interval containing all possible values has probability equal to 1
+:::  
+
+[![](images/pdfs.svg){fig-align="center"}](https://www.nagwa.com/en/explainers/307125379850/)
+    
 
 # Break! {.section-title background-color="#2ad2c9"}
 
 # Normal distributions {.section-title background-color="#c5b4e3"}
 
+## How does this help us?
+
+:::: {.columns}
+
+::: {.column width="40%"}
+::: {.fragment fragment-index=1}
+
+<br>
+
+In inferential statistics, we have to make use of distributions we don’t actually observe
+:::
+
+::: {.fragment fragment-index=2 style="font-size: 3em; text-align: center"}
+↓
+:::
+
+::: {.fragment fragment-index=2}
+If we know enough about the **SHAPE** of the distribution, we can still make **PROBABILITY STATEMENTS** from the distribution without actually observing the distribution.
+:::
+
+:::
+
+::: {.column width="5%"}
+::: {.fragment fragment-index=3 style="font-size: 3em; position: absolute; top: 400px; left: 350px"}
+→
+:::
+:::
+
+::: {.column width="55%"}
+::: {.fragment fragment-index=3 style="font-size: 1.25em"}
+
+>[**NORMAL DISTRIBUTION**]{style="color: #e93cac"}<br>Continuous probability distribution<br>frequently used in inferentialstatistics<br> 
+• Theoretical model<br> 
+• But useful because:
+<br>&emsp;1) its shape is well known<br>&emsp;(familiar pdf); and
+<br>&emsp;2) under certain conditions,<br>&emsp;distributions that we need to<br>&emsp;knowabout follow a normal curve
+
+:::
+:::
+
+::::
+
+## [How does this help us?]{style="color: #e8e3d3"}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: center
+set.seed(1)
+df <- data.frame(PF = rnorm(100000))
+ggplot(df, aes(x = PF)) + stat_function(fun = dnorm, args = list(mean = mean(df$PF), sd = sd(df$PF)), size=2.5) + 
+theme_tufte() + theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank())
+```
+
+**Characteristics of the<br>[Normal Distribution]{.underline}**
+
+* Bell shaped
+* Symmetric around the mean (and median and single mode)
+* Declining frequencies on tails
+    * [Both tails continue infinitely ever closer to 0 but without touching the baseline]{style="font-size: 0.75em"}
+:::
+
+::: {.column width="5%"}
+::: {style="font-size: 3em; position: absolute; top: 325px; left: 350px"}
+←
+:::
+:::
+
+::: {.column width="55%"}
+::: {style="font-size: 1.25em"}
+
+>[**NORMAL DISTRIBUTION**]{style="color: #e93cac"}<br>Continuous probability distribution<br>frequently used in inferentialstatistics<br> 
+• Theoretical model<br> 
+• But useful because:
+<br>&emsp;1) its shape is well known<br>&emsp;(familiar pdf); and
+<br>&emsp;2) under certain conditions,<br>&emsp;distributions that we need to<br>&emsp;knowabout follow a normal curve
+
+:::
+:::
+
+::::
+
 ## Normal distribution
 
-## Consistent areas under the normal curve
+<br>
 
-## Standard normal distribution
+We describe the specific shape of the normal distribution using its **mean** and **standard deviation**
 
-## Normal distribution and standardized z-scores
+<br> 
+
+::: {.fragment fragment-index=1 style="font-size: 1.25em"}
+
+* Mean = [$\mu$]{style="color: #a68100"}
+
+* Standard deviation = [$\sigma$]{style="color: #a68100"}
+:::
+
+::: {.fragment fragment-index=1 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 200px; height: 35px; padding: 0px 10px 20px 10px; position: absolute; top: 220px; left: 175px"}
+Greek letter *mew*
+:::
+
+::: {.fragment fragment-index=1 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 210px; height: 35px; padding: 0px 10px 20px 10px; position: absolute; top: 300px; left: 375px"}
+Greek letter *sigma*
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 510px; height: 150px; padding: 0px 0px 10px 10px; position: absolute; bottom: 50px; right: 50px"}
+Note that we are using Greek symbols to highlight that we are thinking of the normal distribution as a theoretical distribution of all possible values in a population. 
+:::
+
+::: {.fragment fragment-index=1 data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 375px; height: 190px; padding: 0px 0px 10px 10px; position: absolute; bottom: 100px; left: 0px"}
+[$N(\mu, \sigma)$]{.center style="font-size: 2em"}
+Read as: A normal distribution with mean mew and standard deviation sigma
+:::
+
+## Normal distribution
+
+#### The mean ($\mu$) and the standard deviation ($\sigma$) completely describe the density curve for a normal distribution
+
+* Increasing/decreasing $\mu$ moves the curve along the horizontal axis
+* Increasing/decreasing $\sigma$ determines the spread of the curve
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+heights <- data.frame(x = c(52, 86))
+ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = 65, sd = 3.5), color = "#a68100", size = 1.75) + 
+  stat_function(fun = dnorm, n = 101, args = list(mean = 70, sd = 4), color = "#754cbc", size = 1.75) + 
+  labs(x = "Height") + theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL)  
+```
+
+::: {.fragment fragment-index=1 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 150px; height: 75px; padding: 0px 10px 20px 10px; position: absolute; top: 300px; left: 100px; text-align: center;"}
+[**Women**]{.underline}
+[$N(65, 3.5)$]{.center}
+:::
+  
+::: {.fragment fragment-index=1 data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; height: 75px; padding: 0px 0px 20px 10px; position: absolute; top: 425px; left: 150px; text-align: center;"}
+[**Men**]{.underline}
+[$N(70, 4.0)$]{.center}
+:::
+
+---
+
+### Consistent areas under the normal curve
+
+[![](images/empirical_rule.jpeg){fig-align="center"}](https://tinystats.github.io/teacups-giraffes-and-statistics/04_variance.html)
+
+::: {.fragment fragment-index=1 style="text-align: center"}
+### Empirical (68-95-99) Rule
+
+#### For ANY Normal Curve
+
+* **68.26%** of the observations fall within one $\sigma$ of the mean ($\mu$)
+* **95.44%** of the observations fall within two $\sigma$ of the mean ($\mu$)
+* **99.73%** of the observations fall within three $\sigma$ of the mean ($\mu$)
+
+:::
+
+---
+
+### Example of consistent areas under the normal curve
+
+[![](images/empirical_rule.jpeg){fig-align="center"}](https://tinystats.github.io/teacups-giraffes-and-statistics/04_variance.html)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=1 style="text-align: center"}
+* Heights of adult women
+  * Roughly follow a normal distribution
+  * $\mu$ = 65 inches; $\sigma$ = 3.5 inches
+:::
+
+::: {.fragment fragment-index=3 style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; text-align: center"}
+Also, [**probability**]{.underline} of randomly selecting a woman who is between 54.5 and 75.5 inches is 99.73/100 = .9973
+:::
+:::
+
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=2 style="text-align: center; font-size: 0.9em"}
+* Apply 68-95-99.7 Rule for women’s heights
+    * 68.26% are between 61.5 and 68.5 in.
+        *  $\mu \pm \sigma$  =  65 ± 3.5 ]
+    * 95.44% are between 58 and 72 inches
+        * [ $\mu \pm \sigma$  =  65 ± 2(3.5)  = 65 ± 7 ]
+    * 99.73% are between 54.5 and 75.5 inches
+        * [ $\mu \pm \sigma$  =  65 ± 3(3.5)  = 65 ± 10.5 ]
+        
+:::
+:::
+
+::::
+
+::: {.fragment fragment-index=1 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 150px; height: 75px; padding: 0px 10px 20px 10px; position: absolute; top: 325px; left: -50px; text-align: center;"}
+[**Women**]{.underline}
+[$N(65, 3.5)$]{.center}
+:::
+
+---
+
+### Example of consistent areas under the normal curve
+
+[![](images/empirical_rule.jpeg){fig-align="center"}](https://tinystats.github.io/teacups-giraffes-and-statistics/04_variance.html)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {style="text-align: center; font-size: 1.35em"}
+Notice that when we are finding areas under the normal curve, we are always thinking [**in terms of standard deviation units**]{style="color: #a68100"}
+:::
+:::
+
+
+::: {.column width="50%"}
+
+::: {style="text-align: center;"}
+e.g., how many standard deviations away from the mean of the distribution are we?
+:::
+
+<br>
+
+::: {.fragment fragment-index=1 style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; text-align: center;"}
+Called a **standard normal distribution**
+:::
+:::
+
+::::
+
+---
+
+### Standard normal distribution
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<br>
+
+Can find the percentage of cases under [ANY]{.underline} part of the normal curve by thinking of the normal distribution as a [standard normal distribution]{style="color: #e93cac"}
+
+<br>
+<br>
+
+::: {.fragment fragment-index=2 style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; text-align: center;"}
+We can convert [any normal distribution]{.underline} into a standard normal distribution . . .  
+:::
+
+<br>
+
+::: {.fragment fragment-index=3 style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; text-align: center;"}
+. . . just need to convert all scores to standard deviation units
+:::
+
+:::
+
+::: {.column width="50%"}
+::: r-fit-text
+> [**STANDARD<br>&emsp;&emsp;&emsp;NORMAL<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;DISTRIBUTION**]{style="color:#e93cac"}<br><br>A normal distribution<br>(symmetrical, bell-shaped,<br>single peak) with…
+<br>&emsp;• Mean = 0
+<br>&emsp;• Standard deviation = 1<br>
+<br>
+                      [$N(0,1)$]{.center}
+
+:::
+:::
+
+::::
+
+---
+
+### Normal distribution and [**standardized z-scores**]{style="color:#e93cac"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<br>
+
+Can find the percentage of cases under [ANY]{.underline} part of the normal curve by thinking of the normal distribution as a [standard normal distribution]{style="color: #e93cac"}
+
+<br>
+
+::: {style="border: 4px solid black; border-radius: 15px; text-align: center; font-size: 2em"}
+$$
+z = \frac{X - \mu}{\sigma}
+$$
+:::
+
+::: {.fragment fragment-index=2}
+where
+<br>&emsp;• $\mu$ = mean of a distribution
+<br>&emsp;• $\sigma$ = standard deviation of a distribution
+<br>&emsp;• $z$ = standard score
+:::
+:::
+
+::: {.column width="50%"}
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; text-align: center;"}
+Convert any normal distribution into a standard normal distribution by converting scores to **standardized (Z) scores**
+:::
+
+<br>
+
+::: {.fragment fragment-index=1}
+::: r-fit-text
+> [**standardized ($Z$) score**]{style="color:#e93cac"}<br>A score indicating<br>the direction and degree<br>that any raw score<br>deviates from the mean<br>in standard deviation units
+:::
+:::
+:::
+
+::::
+
+## Think for a moment
+
+#### Distribution of height for women, $N(65, 3.5)$
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+[• Z-score for a woman that is 69 inches?]{style="color:#754cbc; font-size: 1.25em"}
+<br><br><br><br><br>
+[• Z-score for a woman that is 55 inches?]{style="color:#6e8e13; font-size: 1.25em"}
+<br><br><br><br><br>
+[• Z-score for a woman that is 5 feet tall?]{style="color:#1b8883; font-size: 1.25em"}
+
+:::
+
+::: {.column width="30%"}
+
+[$$z = \frac{69-65}{3.5} = 1.14$$]{style="color:#754cbc; font-size: 1.7em"}
+
+[$$z = \frac{55-65}{3.5} = -2.86$$]{style="color:#6e8e13; font-size: 1.7em"}
+
+[$$z = \frac{60-65}{3.5} = -1.43$$]{style="color:#1b8883; font-size: 1.7em"}
+
+:::
+
+:::: 
+
+## Think for a moment
+
+#### Distribution of height for women, $N(65, 3.5)$
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+[• Z-score for a woman that is 69 inches?]{style="color:#754cbc; font-size: 1.25em"}
+<br><br>
+A woman 69 inches tall is just over one standard deviation above average.
+<br><br>
+[• Z-score for a woman that is 55 inches?]{style="color:#6e8e13; font-size: 1.25em"}
+<br><br>
+[A woman 55 inches tall is almost three standard deviations below average.]{.fragment fragment-index=1}
+<br><br>
+[• Z-score for a woman that is 5 feet tall?]{style="color:#1b8883; font-size: 1.25em"}
+<br><br>
+[A woman 5 feet tall is almost one and a half standard deviations below average.]{.fragment fragment-index=2}
+:::
+
+::: {.column width="30%"}
+
+[$$z = \frac{69-65}{3.5} = 1.14$$]{style="color:#754cbc; font-size: 1.7em"}
+
+[$$z = \frac{55-65}{3.5} = -2.86$$]{style="color:#6e8e13; font-size: 1.7em"}
+
+[$$z = \frac{60-65}{3.5} = -1.43$$]{style="color:#1b8883; font-size: 1.7em"}
+
+:::
+
+:::: 
+
+## Standard Normal distribution
+
+### How does this help us?
+
+#### [Allows us to find proportions, percentages, or probabilities associated with more specific areas under the normal curve]{style="color:#e93cac;"}
+
+::: incremental
+* Already know, for example, that about 34% (half of 68%) falls between the mean and a z-score of 1 (one standard deviation above the mean)
+* We will be able to do this more precisely
+* Will be able to tell the percentage of cases falling…
+    * between the mean and 1.25 standard deviations
+    * below -3.30 standard deviations
+    * between z-scores of -1.96 and 1.96
+    * etc.
+* Can convert all to proportions and probabilities
+:::
+
+## Standard Normal distribution
+
+### How does this help us?
+
+#### [Allows us to find proportions, percentages, or probabilities associated with more specific areas under the normal curve]{style="color:#e93cac;"}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+:::
+
+::: {.column width="60%"}
+::: {.fragment data-id="box2" style="background: black; color: white; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center;"}
+For example, if we know that the distribution of height for women is N(65,3.5) . . . 
+:::
+:::
+
+::: {.column width="20%"}
+
+:::
+
+::::
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+:::
+
+::: {.column width="60%"}
+::: {.fragment data-id="box2" style="background: rgba(255, 255, 255, 0); border: 3px solid black; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center;"}
+. . . we can figure out the percentage of women in the distribution who are shorter than 5 feet tall (or the probability of selecting such a woman) [without actually looking at the individual women making up the distribution]{.underline}
+:::
+:::
+
+::::
 
 ## Steps for finding area under the normal curve
 
-*Note: these steps can happen out of order!*
+<br>
+
+[*Note: these steps can happen out of order!*]{.underline style="color:#a68100;"}
 
 1. Draw the picture, roughly showing the area under the curve that you are looking for (highly recommended)
 2. Convert value(s) of interest into z-score(s)
@@ -900,17 +1396,604 @@ ggplot(prob_dist5, aes(x = hours, y = perc)) +
 4. Subtract or add areas under the curve to get the total proportion you are looking for (see the picture from step 1)
 5. Convert to percentages or probabilities as required by the problem
 
-## Step 1
+---
 
-## Step 2
+### STEP 1
 
-## Step 3
+#### [Draw the picture (highly recommended)]{style="color:#e93cac;"}
 
-## Step 4
 
-## Step 5
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+heights <- data.frame(x = c(52, 78))
+ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = 65, sd = 3.5), color = "#a68100", size = 1) + 
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 65, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(55, 60, 65, 70, 75)) 
 
-## Examples
+```
+
+::: {.fragment fragment-index=1 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 150px; right: 0px; width: 275px"}
+If height for women is **$N(65,3.5)$** what percentage of women are shorter than 5 feet tall (i.e., 60 inches)?
+:::
+
+---
+
+### STEP 1
+
+#### [Draw the picture (highly recommended)]{style="color:#e93cac;"}
+
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+
+mu <- 65
+sigma <- 3.5
+height <- 60
+
+# function to shade lower part of distribution
+funcShaded_lower <- function(x, upper_bound) {
+    y = dnorm(x, mean = mu, sd = sigma)
+    y[x > upper_bound] <- NA
+    return(y)
+}
+
+# function to shade middle part of distribution
+funcShaded_middle <- function(x, upper_bound, lower_bound) {
+    y = dnorm(x, mean = mu, sd = sigma)
+    y[x > upper_bound] <- NA
+    y[x < lower_bound] <- NA
+    return(y)
+}
+
+# function to shade upper part of distribution
+funcShaded_upper <- function(x, lower_bound) {
+    y = dnorm(x, mean = mu, sd = sigma)
+    y[x < lower_bound] <- NA
+    return(y)
+}
+
+ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), color = "#a68100", size = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = height), 
+                  geom = "area", fill = "#1b8883", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(55, 60, 65, 70, 75)) 
+
+```
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 150px; right: 0px; width: 275px"}
+If height for women is **$N(65,3.5)$** what percentage of women are shorter than 5 feet tall (i.e., 60 inches)?
+:::
+
+::: {.fragment fragment-index=1 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; bottom: 200px; left:-50px; width: 350px"}
+*5 feet is 60 inches. I know that is somewhere below the mean, and I’m interested in the area below that point.*
+:::
+
+---
+
+### STEP 2
+
+#### [Convert value(s) of interest into z-score(s)]{style="color:#e93cac;"}
+
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+
+ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), color = "#a68100", size = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = height), 
+                  geom = "area", fill = "#1b8883", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(55, 60, 65, 70, 75)) 
+
+```
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 150px; right: 0px; width: 275px"}
+If height for women is **$N(65,3.5)$** what percentage of women are shorter than 5 feet tall (i.e., 60 inches)?
+:::
+
+::: {data-id="box4" style="text-align: center; position: absolute; top: 150px; left: 0px; width: 275px; font-size: 1.5em"}
+$$
+z = \frac{60 - 65}{3.5} = -1.43
+$$
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; bottom: 200px; left:-50px; width: 300px"}
+5 feet is **1.43 standard deviations** below average.
+:::
+
+---
+
+### STEP 2
+
+#### [Convert value(s) of interest into z-score(s)]{style="color:#e93cac;"}
+
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+
+ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), color = "#a68100", size = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = height), 
+                  geom = "area", fill = "#1b8883", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(55, 60, 65, 70, 75), labels = c(-2.86, -1.43, 0, 1.43, 2.86)) 
+
+```
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 150px; right: 0px; width: 275px"}
+If height for women is **$N(65,3.5)$** what percentage of women are shorter than 5 feet tall (i.e., 60 inches)?
+:::
+
+::: {data-id="box4" style="text-align: center; position: absolute; top: 150px; left: 0px; width: 275px; font-size: 1.5em"}
+$$
+z = \frac{60 - 65}{3.5} = -1.43
+$$
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; bottom: 200px; left:-50px; width: 300px"}
+5 feet is **1.43 standard deviations** below average.
+:::
+
+---
+
+### STEP 3
+
+#### [Use standard normal table$^1$ to find proportion of cases between the mean and the z-score]{style="color:#e93cac;"}
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+
+# remotes::install_github("coolbutuseless/ggpattern")
+library(ggpattern)
+
+ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), color = "#a68100", size = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = height), 
+                  geom = "area", fill = "#1b8883", alpha = .75) +
+  stat_function(fun = funcShaded_middle, args = list(lower_bound = height -0.4, upper_bound = mu), 
+                  geom = "area", fill = "#6e8e13", alpha = .5) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(55, 60, 65, 70, 75), labels = c(-2.86, -1.43, 0, 1.43, 2.86)) 
+
+```
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 150px; right: 0px; width: 275px"}
+If height for women is **$N(65,3.5)$** what percentage of women are shorter than 5 feet tall (i.e., 60 inches)?
+:::
+
+::: {data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; bottom: 350px; left: 50px; width: 300px"}
+Table will give us this area
+:::
+
+::: {data-id="box4" style="text-align: center; position: absolute; bottom: 0px; left: 0px; width: 600px; font-size: 1em"}
+$^1$A standard normal table can be found [here](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3671.htm)
+:::
+
+---
+
+### How to use a standard normal (z-score) table
+
+<br>
+<br>
+
+```{r}
+#| echo: false
+
+u <- seq(-3.49, 0, by = 0.01)
+p <- rev(0.500000000 - pnorm(u))
+m <- matrix(p, ncol = 10, byrow = TRUE)
+options(digits = 4)
+
+rownames(m) <- seq(0, 3.4, b = .1)
+colnames(m) <- seq(0, .09, by = .01)
+
+table <- as.data.frame(t(m))
+
+z_score <- table |> 
+  gt(rownames_to_stub = TRUE, rowname_col = "rowname") |>  
+  tab_options(table.background.color = "#FFFFFF00", container.width = 1200)
+z_score
+```
+
+::: {.fragment fragment-index=1}
+a. Use the table to look up (the absolute value) of your z-score
+:::
+
+::: {.fragment fragment-index=2}
+b. Our z-score is -1.43, so we use the table to look up -1.43
+:::
+
+---
+
+### How to use a standard normal (z-score) table
+
+<br>
+<br>
+
+```{r}
+#| echo: false
+
+z_score |> 
+  tab_style(style = cell_fill(color = "#2ad2c9"), 
+              locations = list(cells_column_labels(columns = `1.4`), 
+                               cells_stub(rows = "0.03")))
+```
+
+::: {style="font-size: 1.75em; position: absolute; top: 70px; right: 25px;"}
+⬇️
+:::
+
+::: {style="font-size: 1.75em; position: absolute; top: 275px; left: -75px;"}
+➡️
+:::
+
+c. Combine the numbers at the beginning of the row and the top of the column to find z. Columns gives us the 1.4 part and the row 0.03 gives us the last decimal place for 1.43. So, we are looking for the number at the intersection of the *1.4 column* and the *0.03 row*.
+
+---
+
+### How to use a standard normal (z-score) table
+
+```{r}
+#| echo: false
+#| eval: false
+visual <- ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), color = "#a68100", size = 1) + 
+  stat_function(fun = funcShaded_middle, args = list(lower_bound = mu, upper_bound = 70), 
+                  geom = "area", fill = "#1b8883", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) + 
+  theme(panel.background = element_rect(fill = "white", color = "white"),
+        plot.background = element_rect(fill = "white", color = "white"))
+# ggsave("images/zscore_ggplot.png", visual)
+```
+
+<br>
+<br>
+
+```{r}
+#| echo: false
+
+z_score |> 
+  tab_style(style = cell_fill(color = "#2ad2c9"), 
+              locations = list(cells_body(columns = `1.4`, rows = "0.03")))
+```
+
+d. Number in the body of the table gives us the **PROPORTION** of cases between the mean and our positive z-value. [*Since the z-distribution is symmetrical, this is the same as the proportion between the mean and the corresponding negative z-value.*]{style="color:#e93cac;"}
+
+![](images/zscore_ggplot.png){.absolute top=200 left=100 width="500" height="250"}
+
+---
+
+### STEP 3
+
+#### [Use standard normal table$^1$ to find proportion of cases between the mean and the z-score]{style="color:#e93cac;"}
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+
+# remotes::install_github("coolbutuseless/ggpattern")
+library(ggpattern)
+
+ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), color = "#a68100", size = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = height), 
+                  geom = "area", fill = "#1b8883", alpha = .75) +
+  stat_function(fun = funcShaded_middle, args = list(lower_bound = height -0.4, upper_bound = mu), 
+                  geom = "area", fill = "#6e8e13", alpha = .5) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(55, 60, 65, 70, 75), labels = c(-2.86, -1.43, 0, 1.43, 2.86)) 
+
+```
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 150px; right: 0px; width: 275px"}
+If height for women is **$N(65,3.5)$** what percentage of women are shorter than 5 feet tall (i.e., 60 inches)?
+:::
+
+::: {data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; bottom: 350px; left: 50px; width: 375px"}
+Proportion in this area is .4236
+:::
+
+::: {data-id="box4" style="text-align: center; position: absolute; bottom: 0px; left: 0px; width: 600px; font-size: 1em"}
+$^1$A standard normal table can be found [here](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3671.htm)
+:::
+
+---
+
+### STEP 4
+
+#### [Subtract or add areas under the curve to get the total proportion you are looking for$^1$]{style="color:#e93cac;"}
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+
+# remotes::install_github("coolbutuseless/ggpattern")
+library(ggpattern)
+
+ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), color = "#a68100", size = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = height), 
+                  geom = "area", fill = "#1b8883", alpha = .75) +
+  stat_function(fun = funcShaded_middle, args = list(lower_bound = height -0.4, upper_bound = mu), 
+                  geom = "area", fill = "#6e8e13", alpha = .5) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(55, 60, 65, 70, 75), labels = c(-2.86, -1.43, 0, 1.43, 2.86)) 
+
+```
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 150px; right: 0px; width: 275px"}
+If height for women is **$N(65,3.5)$** what percentage of women are shorter than 5 feet tall (i.e., 60 inches)?
+:::
+
+::: {data-id="box2" style="border: 3px solid black; border-radius:5px; position: absolute; top: 145px; left: -5px; width: 525px; height: 0px; font-size: 0.75em; text-align: center"}
+Since we know that each half of<br>the distribution contains 50% of cases . . . 
+:::
+
+::: {.fragment fragment-index=1 data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; bottom: 350px; left: 50px; width: 325px; text-align: center"}
+. . . and this area is .4236 . . . 
+:::
+
+::: {data-id="box4" style="text-align: left; position: absolute; bottom: 0px; left: 0px; width: 600px; font-size: 1em"}
+$^1$see the picture from step 1
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 1px 1px 1px 1px; position: absolute; bottom: 150px; left: 350px; width: 500px; text-align: center"}
+. . . the proportion in our shaded area is<br>0.50 - 0.4236 = **0.0764**
+:::
+
+
+---
+
+### STEP 5
+
+#### [Convert to percentages or probabilities as required by the problem]{style="color:#e93cac;"}
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+
+# remotes::install_github("coolbutuseless/ggpattern")
+library(ggpattern)
+
+ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), color = "#a68100", size = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = height), 
+                  geom = "area", fill = "#1b8883", alpha = .75) +
+  stat_function(fun = funcShaded_middle, args = list(lower_bound = height -0.4, upper_bound = mu), 
+                  geom = "area", fill = "#6e8e13", alpha = .5) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(55, 60, 65, 70, 75), labels = c(-2.86, -1.43, 0, 1.43, 2.86)) 
+
+```
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 150px; right: 0px; width: 275px"}
+If height for women is **$N(65,3.5)$** what percentage of women are shorter than 5 feet tall (i.e., 60 inches)?
+:::
+
+::: {data-id="box2" style="position: absolute; top: 145px; left: -50px; width: 400px; text-align: center"}
+Multiply by 100 to get<br>from proportion to percentage:<br>
+$$
+0.0764(100) = 7.636\%
+$$
+
+:::
+
+::: {.fragment fragment-index=1 data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; bottom: 275px; left: 0px; width: 350px; text-align: center"}
+[Answer]{.underline}: **7.64%** of women<br>are shorter than 5 feet
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 1px 1px 1px 1px; position: absolute; bottom: 150px; left: 350px; width: 500px; text-align: center"}
+. . . the proportion in our shaded area is<br>0.50 - 0.4236 = **0.0764**
+:::
+
+## {background-iframe="https://www.calculator.net/z-score-calculator.html"}
+
+::: {data-id="box2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 700px; padding: 0px 0px 0px 0px; position: absolute; top: 100px; right: -75px; text-align: center"}
+**<https://www.calculator.net/z-score-calculator.html>**
+:::
+
+## More examples
+
+#### [Think creatively to use the information in Normal Table to figure out what you want to know]{style="color: #e93cac; font-size: 0.9em"}
+
+<br> 
+
+::: incremental
+* Percentage of women shorter than 55 inches?
+* Percentage of women 55 inches or taller?
+* Probability of randomly selecting a woman who is 69 inches or taller?
+* Probability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?
+* Find the score at the 10th percentile in the distribution.
+* Find the two heights that define the middle 95% of cases in the distribution.
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; position: absolute; top: 125px; right: 0px; width: 175px"}
+Height for women is <br>
+$N(65,3.5)$
+:::
+
+---
+
+#### [Percentage of women shorter than 55 inches?]{style="color: #e93cac;"}
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; position: absolute; top: 125px; right: 0px; width: 175px"}
+Height for women is <br>
+$N(65,3.5)$
+:::
+
+<br>
+<br>
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+
+ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), color = "#a68100", size = 0.75) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = 55), 
+                  geom = "area", fill = "#2ad2c9", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(55, 60, 65, 70, 75), labels = c(-2.86, -1.43, 0, 1.43, 2.86)) 
+
+```
+
+::: {data-id="box4" style="text-align: center; position: absolute; top: 150px; left: 0px; width: 275px; font-size: 1.5em"}
+$$
+z = \frac{55 - 65}{3.5} = -2.86
+$$
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; bottom: 160px; left:-75px; width: 325px"}
+55 inches is **2.86 standard deviations** below the mean.
+:::
+
+::: {.fragment fragment-index=1 data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 385px; padding: 10px 10px 10px 10px; position: absolute; bottom: 200px; right: -75px"}
+Now we [look up](https://www.calculator.net/z-score-calculator.html) the associated probability for our z-score
+:::
+
+---
+
+#### [Percentage of women shorter than 55 inches?]{style="color: #e93cac;"}
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; position: absolute; top: 125px; right: 0px; width: 175px"}
+Height for women is <br>
+$N(65,3.5)$
+:::
+
+<br>
+<br>
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+
+ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), color = "#a68100", size = 0.75) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = 55), 
+                  geom = "area", fill = "#2ad2c9", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(55, 60, 65, 70, 75), labels = c(-2.86, -1.43, 0, 1.43, 2.86)) 
+
+```
+
+::: {data-id="box4" style="text-align: center; position: absolute; top: 150px; left: 0px; width: 275px; font-size: 1.5em"}
+$$
+z = \frac{55 - 65}{3.5} = -2.86
+$$
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; bottom: 160px; left:-75px; width: 325px"}
+Proportion of cases under the shaded part of the curve is $.50 - .49711 = .00289$
+:::
+
+::: {data-id="box3" style="width: 385px; padding: 10px 10px 10px 10px; position: absolute; bottom: 250px; right: -75px; color: #e93cac"}
+$$
+\text{Percentage}(<55) = 
+.00289(100) =
+.29\%
+$$
+:::
+
+---
+
+#### [Percentage of women 55 inches or taller?]{style="color: #e93cac;"}
+
+<br>
+<br>
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+
+ggplot(data = heights, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), color = "#a68100", size = 0.75) + 
+  stat_function(fun = funcShaded_upper, args = list(lower_bound = 55), 
+                  geom = "area", fill = "#2ad2c9", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(55, 60, 65, 70, 75), labels = c(-2.86, -1.43, 0, 1.43, 2.86)) 
+
+```
+
+::: {data-id="box4" style="text-align: center; position: absolute; top: 150px; left: 0px; width: 275px; font-size: 1.5em"}
+$$
+z = \frac{55 - 65}{3.5} = -2.86
+$$
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; bottom: 160px; left:-75px; width: 325px"}
+55 inches is **2.86 standard deviations** below the mean.
+:::
+
+::: {.fragment fragment-index=1 data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 385px; padding: 10px 10px 10px 10px; position: absolute; bottom: 200px; right: -75px"}
+Now we [look up](https://www.calculator.net/z-score-calculator.html) the associated probability for our z-score
+:::
+
+
+
+
+---
+
+#### [Probability of randomly selecting a woman who is 69 inches or taller?]{style="color: #e93cac;"}
+
+
+---
+
+#### [Probability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?]{style="color: #e93cac;"}
+
+
+---
+
+#### [Find the score at the 10th percentile in the distribution.]{style="color: #e93cac;"}
+
+
+---
+
+#### [Find the two heights that define the middle 95% of cases in the distribution.]{style="color: #e93cac;"}
+
+
+
 
 # Homework{.section-title background-color="#e8e3d3"}
 

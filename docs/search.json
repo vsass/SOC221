@@ -452,28 +452,28 @@
     "href": "lectures/lecture4.html#probability-rules",
     "title": "",
     "section": "Probability rules",
-    "text": "Probability rules\nRule 1: The probability P(A) of any event A satisfies 0 ≤ P(A) ≤ 1 Rule 2: If S is the sample space in a probability model, then P(S) = 1 Rule 3: Addition Rule Rule 4: Multiplication Rule"
+    "text": "Probability rules\n\n\n\nRule 1\nThe probability \\(P(A)\\) of any event Asatisfies \\(0 \\leq P(A) \\leq 1\\)\n\nThe probability of any single event, is always between 0 and 1.0\n\nAn event, or outcome, with probability 0 never happens\nAn event, or outcome, with probability 1 is a certainty\n\n\n\n\nRule 2\nIf \\(S\\) is the sample space in aprobability model, then \\(P(S) = 1\\)\n\nAdd up the probabilities of all these possible outcomes and the result will be 1.0\n\nSample space is just the list of all possible outcomes\nA list of all the possibilities equals 100% of possibilities and one of them has to happen as a result of the trial"
   },
   {
     "objectID": "lectures/lecture4.html#normal-distribution",
     "href": "lectures/lecture4.html#normal-distribution",
     "title": "",
     "section": "Normal distribution",
-    "text": "Normal distribution"
+    "text": "Normal distribution\n\nWe describe the specific shape of the normal distribution using its mean and standard deviation\n\n\n\nMean = \\(\\mu\\)\nStandard deviation = \\(\\sigma\\)\n\n\n\nGreek letter mew\n\n\nGreek letter sigma\n\n\nNote that we are using Greek symbols to highlight that we are thinking of the normal distribution as a theoretical distribution of all possible values in a population.\n\n\n\\(N(\\mu, \\sigma)\\) Read as: A normal distribution with mean mew and standard deviation sigma"
   },
   {
     "objectID": "lectures/lecture4.html#consistent-areas-under-the-normal-curve",
     "href": "lectures/lecture4.html#consistent-areas-under-the-normal-curve",
     "title": "",
     "section": "Consistent areas under the normal curve",
-    "text": "Consistent areas under the normal curve"
+    "text": "Consistent areas under the normal curve\n\n\n\n\n\n\n\nEmpirical (68-95-99) Rule\nFor ANY Normal Curve\n\n68.26% of the observations fall within one \\(\\sigma\\) of the mean (\\(\\mu\\))\n95.44% of the observations fall within two \\(\\sigma\\) of the mean (\\(\\mu\\))\n99.73% of the observations fall within three \\(\\sigma\\) of the mean (\\(\\mu\\))"
   },
   {
     "objectID": "lectures/lecture4.html#standard-normal-distribution",
     "href": "lectures/lecture4.html#standard-normal-distribution",
     "title": "",
     "section": "Standard normal distribution",
-    "text": "Standard normal distribution"
+    "text": "Standard normal distribution\n\n\n\nCan find the percentage of cases under ANY part of the normal curve by thinking of the normal distribution as a standard normal distribution\n \n\nWe can convert any normal distribution into a standard normal distribution . . .\n\n\n\n. . . just need to convert all scores to standard deviation units\n\n\n\n\nSTANDARD   NORMAL      DISTRIBUTIONA normal distribution(symmetrical, bell-shaped,single peak) with…  • Mean = 0  • Standard deviation = 1  \\(N(0,1)\\)"
   },
   {
     "objectID": "lectures/lecture4.html#normal-distribution-and-standardized-z-scores",
@@ -487,7 +487,7 @@
     "href": "lectures/lecture4.html#steps-for-finding-area-under-the-normal-curve",
     "title": "",
     "section": "Steps for finding area under the normal curve",
-    "text": "Steps for finding area under the normal curve\nNote: these steps can happen out of order!\n\nDraw the picture, roughly showing the area under the curve that you are looking for (highly recommended)\nConvert value(s) of interest into z-score(s)\nUse standard normal table (linked in the back of the book) to find proportion of cases between the mean and the z-score\nSubtract or add areas under the curve to get the total proportion you are looking for (see the picture from step 1)\nConvert to percentages or probabilities as required by the problem"
+    "text": "Steps for finding area under the normal curve\n\nNote: these steps can happen out of order!\n\nDraw the picture, roughly showing the area under the curve that you are looking for (highly recommended)\nConvert value(s) of interest into z-score(s)\nUse standard normal table (linked in the back of the book) to find proportion of cases between the mean and the z-score\nSubtract or add areas under the curve to get the total proportion you are looking for (see the picture from step 1)\nConvert to percentages or probabilities as required by the problem"
   },
   {
     "objectID": "lectures/lecture4.html#step-1",
@@ -1803,7 +1803,7 @@
     "href": "lectures/lecture4.html#probability-distribution",
     "title": "",
     "section": "Probability distribution",
-    "text": "Probability distribution"
+    "text": "Probability distribution\n\n\n\n\nProbability distributionFor a random variable,this specifies itspossible values and their probabilities.\n\n\n\n\nA discrete random variable X has separate values (such as 1,2, 3…) as its possible outcomes\n\n\n\nIts probability distribution assigns a probability P(x) to each possible value of X\n\n\n\nThe sum of the probabilities for all the possible x values equals 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nFor each x, the probability P(x) falls between 0 and 1"
   },
   {
     "objectID": "lectures/lecture4.html#discrete-versus-continuous-probability-distribution",
@@ -2084,5 +2084,145 @@
     "title": "",
     "section": "Examples",
     "text": "Examples"
+  },
+  {
+    "objectID": "lectures/lecture4.html#example-probability-distribution",
+    "href": "lectures/lecture4.html#example-probability-distribution",
+    "title": "",
+    "section": "Example: Probability distribution",
+    "text": "Example: Probability distribution\nWhat is the probability of a correct guess (choosing randomly) on a five-choice test question?\n\n\n\nProbability distribution of guess outcomes\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\nP(C) = \\frac{1}{5} = 0.2\n\\]\n\\[\nP(I) = \\frac{4}{5} = 0.8\n\\]\n\n\n\nNote (again!):Probabilities = Proportions"
+  },
+  {
+    "objectID": "lectures/lecture4.html#example-probability-distribution-1",
+    "href": "lectures/lecture4.html#example-probability-distribution-1",
+    "title": "",
+    "section": "Example: Probability distribution",
+    "text": "Example: Probability distribution\nProbability distributions are reflected in frequency distributions\n\nAs long as every possible outcome is included, we can think of this as a probability distribution"
+  },
+  {
+    "objectID": "lectures/lecture4.html#example-probability-distribution-2",
+    "href": "lectures/lecture4.html#example-probability-distribution-2",
+    "title": "",
+    "section": "Example: Probability distribution",
+    "text": "Example: Probability distribution\nProbability distributions are reflected in frequency distributions\n\n\nAs long as every possible outcome is included, we can think of this as a probability distribution\n\n\nFor example: Theprobability of randomly selecting a student who works more than full time is .03"
+  },
+  {
+    "objectID": "lectures/lecture4.html#probability-rules-1",
+    "href": "lectures/lecture4.html#probability-rules-1",
+    "title": "",
+    "section": "Probability rules",
+    "text": "Probability rules\n\n\n\nRule 3: Addition Rule\nThe probability of any of several different mutually exclusive outcomes is equal to the sum of their separate probabilities\n i.e., the probability of either outcome A or outcome B on one single trial:\n\n\\[\nP(\\text{A or B}) = P(A) + P(B)\n\\]\n\n\n\nExamples\n\nProbability of rolling a 5 or a 6 with a fair six-sided die?\n\n\\[\nP(\\text{5 or 6}) = \\frac{1}{6} + \\frac{1}{6} = 0.167 + 0.167 = 0.334\n\\]\n\nProbability of rolling any value below 4 with a fair six-sided die?\n\n\\[\nP(\\text{1 or 2 or 3}) = \\frac{1}{6} + \\frac{1}{6} + \\frac{1}{6} = 0.167 + 0.167 + 0.167 = 0.50\n\\]\n\n\nThe probability of any of multiple outcomes happening is always larger than the probability of any one of the outcomes alone."
+  },
+  {
+    "objectID": "lectures/lecture4.html#probability-rules-2",
+    "href": "lectures/lecture4.html#probability-rules-2",
+    "title": "",
+    "section": "Probability rules",
+    "text": "Probability rules\n\n\n\n\nExamples\n\nProbability of rolling a 5 and a 6 on consecutive roles of a fair six-sided die?\n\n\\[\nP(\\text{5 and 6}) = \\frac{1}{6} \\times \\frac{1}{6} = (0.167)(0.167) = 0.028\n\\]\n\nProbability of flipping 3 heads in a row?\n\n\\[\nP(\\text{H, H, H}) = \\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2} = (0.5)(0.5)(0.5)= 0.125\n\\]\n\n\nThe probability of a combination of multiple outcomes happening is always smaller than the probability of one of the outcomes happening independently.\n\n\nRule 4:Multiplication Rule\nThe probability of a combination of independent outcomes is equal to the product of their separate probabilities\n i.e., the probability of outcome A and outcome B on two independent trials:\n\n\\[\nP(\\text{A and B}) = P(A) \\times P(B)\n\\]"
+  },
+  {
+    "objectID": "lectures/lecture4.html#examples-3",
+    "href": "lectures/lecture4.html#examples-3",
+    "title": "",
+    "section": "Examples",
+    "text": "Examples"
+  },
+  {
+    "objectID": "lectures/lecture4.html#how-does-this-help-us",
+    "href": "lectures/lecture4.html#how-does-this-help-us",
+    "title": "",
+    "section": "How does this help us?",
+    "text": "How does this help us?\n\n\n\n\nIn inferential statistics, we have to make use of distributions we don’t actually observe\n\n\n↓\n\n\nIf we know enough about the SHAPE of the distribution, we can still make PROBABILITY STATEMENTS from the distribution without actually observing the distribution.\n\n\n\n→\n\n\n\n\nNORMAL DISTRIBUTIONContinuous probability distributionfrequently used in inferentialstatistics • Theoretical model • But useful because:  1) its shape is well known (familiar pdf); and  2) under certain conditions, distributions that we need to knowabout follow a normal curve"
+  },
+  {
+    "objectID": "lectures/lecture4.html#how-does-this-help-us-1",
+    "href": "lectures/lecture4.html#how-does-this-help-us-1",
+    "title": "",
+    "section": "How does this help us?",
+    "text": "How does this help us?\n\n\n\n\n\n\n\n\n\n\n\nCharacteristics of theNormal Distribution\n\nBell shaped\nSymmetric around the mean (and median and single mode)\nDeclining frequencies on tails\n\nBoth tails continue infinitely ever closer to 0 but without touching the baseline\n\n\n\n\n←\n\n\n\n\nNORMAL DISTRIBUTIONContinuous probability distributionfrequently used in inferentialstatistics • Theoretical model • But useful because:  1) its shape is well known (familiar pdf); and  2) under certain conditions, distributions that we need to knowabout follow a normal curve"
+  },
+  {
+    "objectID": "lectures/lecture4.html#normal-distribution-1",
+    "href": "lectures/lecture4.html#normal-distribution-1",
+    "title": "",
+    "section": "Normal distribution",
+    "text": "Normal distribution\nThe mean (\\(\\mu\\)) and the standard deviation (\\(\\sigma\\)) completely describe the density curve for a normal distribution\n\nIncreasing/decreasing \\(\\mu\\) moves the curve along the horizontal axis\nIncreasing/decreasing \\(\\sigma\\) determines the spread of the curve\n\n\n\nWomen \\(N(65, 3.5)\\)\n\n\nMen \\(N(70, 4.0)\\)"
+  },
+  {
+    "objectID": "lectures/lecture4.html#consistent-areas-under-the-normal-curve-1",
+    "href": "lectures/lecture4.html#consistent-areas-under-the-normal-curve-1",
+    "title": "",
+    "section": "Consistent areas under the normal curve",
+    "text": "Consistent areas under the normal curve\n\n\nLeft column\n\nRight column"
+  },
+  {
+    "objectID": "lectures/lecture4.html#example-of-constant-areas-under-the-normal-curve",
+    "href": "lectures/lecture4.html#example-of-constant-areas-under-the-normal-curve",
+    "title": "",
+    "section": "Example of constant areas under the normal curve",
+    "text": "Example of constant areas under the normal curve\n\n\n\n\n\n\n\n\nHeights of adult women\n\nRoughly follow a normal distribution\n\\(\\mu\\) = 65 inches; \\(\\sigma\\) = 3.5 inches\n\n\n\n\nApply 68-95-99.7 Rule for women’s heights\n\n68.26% are between 61.5 and 68.5 in.\n\n[ µ ± σ = 65 ± 3.5 ]\n\n95.44% are between 58 and 72 inches\n\n[ µ ± 2σ = 65 ± 2(3.5) = 65 ± 7 ]\n\n99.73% are between 54.5 and 75.5 inches\n\n[ µ ± 3σ = 65 ± 3(3.5) = 65 ± 10.5 ]\n\n\n\n\n\n\nWomen \\(N(65, 3.5)\\)"
+  },
+  {
+    "objectID": "lectures/lecture4.html#think-for-a-moment",
+    "href": "lectures/lecture4.html#think-for-a-moment",
+    "title": "",
+    "section": "Think for a moment",
+    "text": "Think for a moment\nDistribution of height for women, \\(N(65, 3.5)\\)\n\n\n\n• Z-score for a woman that is 69 inches?  • Z-score for a woman that is 55 inches?  • Z-score for a woman that is 5 feet tall?\n\n\\[z = \\frac{69-65}{3.5} = 1.14\\]\n\\[z = \\frac{55-65}{3.5} = -2.86\\]\n\\[z = \\frac{60-65}{3.5} = -1.43\\]"
+  },
+  {
+    "objectID": "lectures/lecture4.html#think-for-a-moment-1",
+    "href": "lectures/lecture4.html#think-for-a-moment-1",
+    "title": "",
+    "section": "Think for a moment",
+    "text": "Think for a moment\nDistribution of height for women, \\(N(65, 3.5)\\)\n\n\n\n• Z-score for a woman that is 69 inches?  A woman 69 inches tall is just over one standard deviation above average.  • Z-score for a woman that is 55 inches?  A woman 55 inches tall is almost three standard deviations below average.  • Z-score for a woman that is 5 feet tall?  A woman 5 feet tall is almost one and a half standard deviations below average.\n\n\\[z = \\frac{69-65}{3.5} = 1.14\\]\n\\[z = \\frac{55-65}{3.5} = -2.86\\]\n\\[z = \\frac{60-65}{3.5} = -1.43\\]"
+  },
+  {
+    "objectID": "lectures/lecture4.html#standard-normal-distribution-1",
+    "href": "lectures/lecture4.html#standard-normal-distribution-1",
+    "title": "",
+    "section": "Standard Normal distribution",
+    "text": "Standard Normal distribution\nHow does this help us?\nAllows us to find proportions, percentages, or probabilities associated with more specific areas under the normal curve\n\n\nAlready know, for example, that about 34% (half of 68%) falls between the mean and a z-score of 1 (one standard deviation above the mean)\nWe will be able to do this more precisely\nWill be able to tell the percentage of cases falling…\n\nbetween the mean and 1.25 standard deviations\nbelow -3.30 standard deviations\nbetween z-scores of -1.96 and 1.96\netc.\n\nCan convert all to proportions and probabilities"
+  },
+  {
+    "objectID": "lectures/lecture4.html#standard-normal-distribution-2",
+    "href": "lectures/lecture4.html#standard-normal-distribution-2",
+    "title": "",
+    "section": "Standard Normal distribution",
+    "text": "Standard Normal distribution\nHow does this help us?\nAllows us to find proportions, percentages, or probabilities associated with more specific areas under the normal curve\n\n\n\n\n\n\nFor example, if we know that the distribution of height for women is N(65,3.5) . . .\n\n\n\n\n\n\n\n\n\n\n\n. . . we can figure out the percentage of women in the distribution who are shorter than 5 feet tall (or the probability of selecting such a woman) without actually looking at the individual women making up the distribution"
+  },
+  {
+    "objectID": "lectures/lecture4.html#how-to-use-a-standard-normal-z-score-table",
+    "href": "lectures/lecture4.html#how-to-use-a-standard-normal-z-score-table",
+    "title": "",
+    "section": "How to use a standard normal (z-score) table ",
+    "text": "How to use a standard normal (z-score) table"
+  },
+  {
+    "objectID": "lectures/lecture4.html#step-4-1",
+    "href": "lectures/lecture4.html#step-4-1",
+    "title": "",
+    "section": "Step 4",
+    "text": "Step 4"
+  },
+  {
+    "objectID": "lectures/lecture4.html#z-score-calculator",
+    "href": "lectures/lecture4.html#z-score-calculator",
+    "title": "",
+    "section": "z-score calculator",
+    "text": "z-score calculator"
+  },
+  {
+    "objectID": "lectures/lecture4.html#more-examples",
+    "href": "lectures/lecture4.html#more-examples",
+    "title": "",
+    "section": "More examples",
+    "text": "More examples\nThink creatively to use the information in Normal Table to figure out what you want to know\n\n\n\nPercentage of women shorter than 55 inches?\nPercentage of women 55 inches or taller?\nProbability of randomly selecting a woman who is 69 inches or taller?\nProbability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?\nFind the score at the 10th percentile in the distribution.\nFind the two heights that define the middle 95% of cases in the distribution.\n\n\n\nHeight for women is  \\(N(65,3.5)\\)"
+  },
+  {
+    "objectID": "lectures/lecture4.html#section",
+    "href": "lectures/lecture4.html#section",
+    "title": "",
+    "section": "",
+    "text": "https://www.calculator.net/z-score-calculator.html"
   }
 ]

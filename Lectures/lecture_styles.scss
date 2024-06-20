@@ -109,3 +109,12 @@ $mermaid-node-fg-color: $heritage-gold;
 .underlined-text {
   text-decoration: underline;
 }
+
+.center {
+  display: table;
+  margin: auto;
+}
+
+div.image-container {
+  overflow-y: scroll;
+}
