@@ -1964,7 +1964,7 @@
     "href": "Lectures/lecture4.html#normal-distribution",
     "title": "",
     "section": "Normal distribution",
-    "text": "Normal distribution"
+    "text": "Normal distribution\n\nWe describe the specific shape of the normal distribution using its mean and standard deviation\n\n\n\nMean = \\(\\mu\\)\nStandard deviation = \\(\\sigma\\)\n\n\n\nGreek letter mew\n\n\nGreek letter sigma\n\n\nNote that we are using Greek symbols to highlight that we are thinking of the normal distribution as a theoretical distribution of all possible values in a population.\n\n\n\\(N(\\mu, \\sigma)\\) Read as: A normal distribution with mean mew and standard deviation sigma"
   },
   {
     "objectID": "Lectures/lecture4.html#consistent-areas-under-the-normal-curve",
@@ -1992,7 +1992,7 @@
     "href": "Lectures/lecture4.html#steps-for-finding-area-under-the-normal-curve",
     "title": "",
     "section": "Steps for finding area under the normal curve",
-    "text": "Steps for finding area under the normal curve\nNote: these steps can happen out of order!\n\nDraw the picture, roughly showing the area under the curve that you are looking for (highly recommended)\nConvert value(s) of interest into z-score(s)\nUse standard normal table (linked in the back of the book) to find proportion of cases between the mean and the z-score\nSubtract or add areas under the curve to get the total proportion you are looking for (see the picture from step 1)\nConvert to percentages or probabilities as required by the problem"
+    "text": "Steps for finding area under the normal curve\n\nNote: these steps can happen out of order!\n\nDraw the picture, roughly showing the area under the curve that you are looking for (highly recommended)\nConvert value(s) of interest into z-score(s)\nUse standard normal table (linked in the back of the book) to find proportion of cases between the mean and the z-score\nSubtract or add areas under the curve to get the total proportion you are looking for (see the picture from step 1)\nConvert to percentages or probabilities as required by the problem"
   },
   {
     "objectID": "Lectures/lecture4.html#step-1",
@@ -2224,5 +2224,68 @@
     "title": "",
     "section": "",
     "text": "https://www.calculator.net/z-score-calculator.html"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#how-does-this-help-us",
+    "href": "Lectures/lecture4.html#how-does-this-help-us",
+    "title": "",
+    "section": "How does this help us?",
+    "text": "How does this help us?\n\n\n\n\nIn inferential statistics, we have to make use of distributions we don’t actually observe\n\n\n↓\n\n\nIf we know enough about the SHAPE of the distribution, we can still make PROBABILITY STATEMENTS from the distribution without actually observing the distribution.\n\n\n\n→\n\n\n\n\nNORMAL DISTRIBUTIONContinuous probability distributionfrequently used in inferentialstatistics • Theoretical model • But useful because:  1) its shape is well known (familiar pdf); and  2) under certain conditions, distributions that we need to knowabout follow a normal curve"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#how-does-this-help-us-1",
+    "href": "Lectures/lecture4.html#how-does-this-help-us-1",
+    "title": "",
+    "section": "How does this help us?",
+    "text": "How does this help us?\n\n\n\n\n\n\n\n\n\n\n\nCharacteristics of theNormal Distribution\n\nBell shaped\nSymmetric around the mean (and median and single mode)\nDeclining frequencies on tails\n\nBoth tails continue infinitely ever closer to 0 but without touching the baseline\n\n\n\n\n←\n\n\n\n\nNORMAL DISTRIBUTIONContinuous probability distributionfrequently used in inferentialstatistics • Theoretical model • But useful because:  1) its shape is well known (familiar pdf); and  2) under certain conditions, distributions that we need to knowabout follow a normal curve"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#normal-distribution-1",
+    "href": "Lectures/lecture4.html#normal-distribution-1",
+    "title": "",
+    "section": "Normal distribution",
+    "text": "Normal distribution\nThe mean (\\(\\mu\\)) and the standard deviation (\\(\\sigma\\)) completely describe the density curve for a normal distribution\n\nIncreasing/decreasing \\(\\mu\\) moves the curve along the horizontal axis\nIncreasing/decreasing \\(\\sigma\\) determines the spread of the curve\n\n\n\nWomen \\(N(65, 3.5)\\)\n\n\nMen \\(N(70, 4.0)\\)"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#think-for-a-moment",
+    "href": "Lectures/lecture4.html#think-for-a-moment",
+    "title": "",
+    "section": "Think for a moment",
+    "text": "Think for a moment\nDistribution of height for women, \\(N(65, 3.5)\\)\n\n\n\n• Z-score for a woman that is 69 inches?  • Z-score for a woman that is 55 inches?  • Z-score for a woman that is 5 feet tall?\n\n\\[z = \\frac{69-65}{3.5} = 1.14\\]\n\\[z = \\frac{55-65}{3.5} = -2.86\\]\n\\[z = \\frac{60-65}{3.5} = -1.43\\]"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#think-for-a-moment-1",
+    "href": "Lectures/lecture4.html#think-for-a-moment-1",
+    "title": "",
+    "section": "Think for a moment",
+    "text": "Think for a moment\nDistribution of height for women, \\(N(65, 3.5)\\)\n\n\n\n• Z-score for a woman that is 69 inches?  A woman 69 inches tall is just over one standard deviation above average.  • Z-score for a woman that is 55 inches?  A woman 55 inches tall is almost three standard deviations below average.  • Z-score for a woman that is 5 feet tall?  A woman 5 feet tall is almost one and a half standard deviations below average.\n\n\\[z = \\frac{69-65}{3.5} = 1.14\\]\n\\[z = \\frac{55-65}{3.5} = -2.86\\]\n\\[z = \\frac{60-65}{3.5} = -1.43\\]"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#standard-normal-distribution-1",
+    "href": "Lectures/lecture4.html#standard-normal-distribution-1",
+    "title": "",
+    "section": "Standard Normal distribution",
+    "text": "Standard Normal distribution\nHow does this help us?\nAllows us to find proportions, percentages, or probabilities associated with more specific areas under the normal curve\n\n\nAlready know, for example, that about 34% (half of 68%) falls between the mean and a z-score of 1 (one standard deviation above the mean)\nWe will be able to do this more precisely\nWill be able to tell the percentage of cases falling…\n\nbetween the mean and 1.25 standard deviations\nbelow -3.30 standard deviations\nbetween z-scores of -1.96 and 1.96\netc.\n\nCan convert all to proportions and probabilities"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#standard-normal-distribution-2",
+    "href": "Lectures/lecture4.html#standard-normal-distribution-2",
+    "title": "",
+    "section": "Standard Normal distribution",
+    "text": "Standard Normal distribution\nHow does this help us?\nAllows us to find proportions, percentages, or probabilities associated with more specific areas under the normal curve\n\n\n\n\n\n\nFor example, if we know that the distribution of height for women is N(65,3.5) . . .\n\n\n\n\n\n\n\n\n\n\n\n. . . we can figure out the percentage of women in the distribution who are shorter than 5 feet tall (or the probability of selecting such a woman) without actually looking at the individual women making up the distribution"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#section",
+    "href": "Lectures/lecture4.html#section",
+    "title": "",
+    "section": "",
+    "text": "https://www.calculator.net/z-score-calculator.html"
+  },
+  {
+    "objectID": "Lectures/lecture4.html#more-examples",
+    "href": "Lectures/lecture4.html#more-examples",
+    "title": "",
+    "section": "More examples",
+    "text": "More examples\nThink creatively to use the information in the Normal Table to figure out what you want to know\n\n\n\nPercentage of women shorter than 55 inches?\nPercentage of women 55 inches or taller?\nProbability of randomly selecting a woman who is 69 inches or taller?\nProbability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?\nFind the score at the 10th percentile in the distribution.\nFind the two heights that define the middle 95% of cases in the distribution.\n\n\n\nHeight for women is  \\(N(65,3.5)\\)"
   }
 ]
