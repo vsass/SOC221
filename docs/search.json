@@ -2287,5 +2287,145 @@
     "title": "",
     "section": "More examples",
     "text": "More examples\nThink creatively to use the information in the Normal Table to figure out what you want to know\n\n\n\nPercentage of women shorter than 55 inches?\nPercentage of women 55 inches or taller?\nProbability of randomly selecting a woman who is 69 inches or taller?\nProbability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?\nFind the score at the 10th percentile in the distribution.\nFind the two heights that define the middle 95% of cases in the distribution.\n\n\n\nHeight for women is  \\(N(65,3.5)\\)"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#descriptive-inferential-statistics",
+    "href": "Lectures/lecture5.html#descriptive-inferential-statistics",
+    "title": "",
+    "section": "Descriptive –> Inferential statistics",
+    "text": "Descriptive –&gt; Inferential statistics\n\n\n\n\nWhere are we?\n\nSo far: Worked on descriptive statistics – tools to describe distributions\nNEXT: Building the tools for inferential statistics\n\n\n\n\n\nExample: Want to know about the average study time for the population of UW students.\nNEXT: Building the tools for inferential statistics\n\n\n\n\n\nInferential statisticsStatistical procedures usedto draw conclusions(or inferences) abouta population based ondata drawn from a sample\n\n\n\n\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#descriptive-inferential-statistics-1",
+    "href": "Lectures/lecture5.html#descriptive-inferential-statistics-1",
+    "title": "",
+    "section": "Descriptive –> Inferential statistics",
+    "text": "Descriptive –&gt; Inferential statistics\n\n\nWhere are we?\n\nSo far: Worked on descriptive statistics – tools to describe distributions\nNEXT: Building the tools for inferential statistics\n\n\n\nExample: Want to know about the average study time for the population of UW students.\nNEXT: Building the tools for inferential statistics\n\n\n\n\nInferential statisticsStatistical procedures usedto draw conclusions(or inferences) abouta population based ondata drawn from a sample\n\n\n\n\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)\n\n\nPopulation parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)\n\n\nSample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#the-challenge-of-making-inferences",
+    "href": "Lectures/lecture5.html#the-challenge-of-making-inferences",
+    "title": "",
+    "section": "The challenge of making inferences",
+    "text": "The challenge of making inferences\n\n\nDrawing inferences entails uncertainty\nEven with a good sample, the sample is likely to differ from the population (sample statistic is likely to be different from our population parameter, just by chance)\n\n\n\n\nChallenge\nAssessing the risk of being wrong (being way off) in making an inference from observed sample statistics to unknown population parameters.\n\n\n\n\nKey questions\n\nHow often would this procedure (drawing a sample, inferring about the population) give us something close to the correct answer if I used it over and over? or\nWhat is the probability that the inference I draw from one sample is wrong (way off from the population characteristic of interest)?"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#sample-statistic-population-parameter",
+    "href": "Lectures/lecture5.html#sample-statistic-population-parameter",
+    "title": "",
+    "section": "sample statistic –> population parameter",
+    "text": "sample statistic –&gt; population parameter"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#estimating-population-parameters-two-options",
+    "href": "Lectures/lecture5.html#estimating-population-parameters-two-options",
+    "title": "",
+    "section": "Estimating Population Parameters: TWO OPTIONS",
+    "text": "Estimating Population Parameters: TWO OPTIONS\n\n\n\nOne option: Just assume that the population mean is equal to the sample mean\n\\[\n\\mu_x = \\bar{X} = 14.5\n\\]\n\nCalled a point estimate\n\n\n\n\nPotential problems with this strategy?\n\n\n\nVery likely to be wrong!\n\nEven with a random sample, the sample statistic is like to miss the true population parameter by at least a little\n\nReflects chance sampling error\n\nIn reality:\n\n\n\\[\n\\mu_x \\neq \\bar{X}\n\\]\n\n\n\n\n\n\nSAMPLING ERROR The differencebetween a samplestatistic used toestimate a populationparameter and theactual (but unknown)value of thepopulationparameter."
+  },
+  {
+    "objectID": "Lectures/lecture5.html#sampling-error",
+    "href": "Lectures/lecture5.html#sampling-error",
+    "title": "",
+    "section": "Sampling error",
+    "text": "Sampling error"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#confidence-interval",
+    "href": "Lectures/lecture5.html#confidence-interval",
+    "title": "",
+    "section": "Confidence interval",
+    "text": "Confidence interval"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#confidence-level",
+    "href": "Lectures/lecture5.html#confidence-level",
+    "title": "",
+    "section": "Confidence level",
+    "text": "Confidence level"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#sampling-distribution",
+    "href": "Lectures/lecture5.html#sampling-distribution",
+    "title": "",
+    "section": "Sampling distribution",
+    "text": "Sampling distribution\n\n\n\n\n\nSampling Distribution A theoretical probability distribution of all possible sample values for the statistic in which we are interested.\n\n\n\n\n\n\nKey tool for inferential statistics\n\nAllows us to think about how our one single sample result relates to all possible sample results and, by extension, the population we are interested in drawing inferences about."
+  },
+  {
+    "objectID": "Lectures/lecture5.html#sampling-distribution-visual",
+    "href": "Lectures/lecture5.html#sampling-distribution-visual",
+    "title": "",
+    "section": "Sampling distribution visual",
+    "text": "Sampling distribution visual"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#three-types-of-distributions",
+    "href": "Lectures/lecture5.html#three-types-of-distributions",
+    "title": "",
+    "section": "Three types of distributions",
+    "text": "Three types of distributions"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#important-facts-about-sampling-distributions",
+    "href": "Lectures/lecture5.html#important-facts-about-sampling-distributions",
+    "title": "",
+    "section": "Important facts about sampling distributions",
+    "text": "Important facts about sampling distributions"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#central-limit-theorem-1",
+    "href": "Lectures/lecture5.html#central-limit-theorem-1",
+    "title": "",
+    "section": "Central limit theorem",
+    "text": "Central limit theorem"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#implication-of-central-limit-theorem",
+    "href": "Lectures/lecture5.html#implication-of-central-limit-theorem",
+    "title": "",
+    "section": "Implication of central limit theorem",
+    "text": "Implication of central limit theorem"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#sampling-distribution-of-sample-means-distribution",
+    "href": "Lectures/lecture5.html#sampling-distribution-of-sample-means-distribution",
+    "title": "",
+    "section": "Sampling distribution of sample means distribution",
+    "text": "Sampling distribution of sample means distribution"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#using-these-tools-for-inference",
+    "href": "Lectures/lecture5.html#using-these-tools-for-inference",
+    "title": "",
+    "section": "Using these tools for inference",
+    "text": "Using these tools for inference\nExample: Want to know how much UW students study on average\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)\n\n\nSample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)\n\n\nFor example: draw a random sample of 100 students and observe \\(\\bar{X} = 14.5\\)\n\n\nPopulation parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)\n\n\nOur goal: Estimate the unknown population parameter \\(\\mu_x = ?\\)"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#estimating-population-parameters-two-options-1",
+    "href": "Lectures/lecture5.html#estimating-population-parameters-two-options-1",
+    "title": "",
+    "section": "Estimating Population Parameters: TWO OPTIONS",
+    "text": "Estimating Population Parameters: TWO OPTIONS\nBetter option: Create a CONFIDENCE INTERVAL\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nCONFIDENCE INTERVAL A range of scores, centered on the sample mean, in which we think the population mean is likely to be located.\n\n\nBuilding a margin of error around our sample mean"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#estimating-population-parameters-two-options-2",
+    "href": "Lectures/lecture5.html#estimating-population-parameters-two-options-2",
+    "title": "",
+    "section": "Estimating Population Parameters: TWO OPTIONS",
+    "text": "Estimating Population Parameters: TWO OPTIONS\nBetter option: Create a CONFIDENCE INTERVAL\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nConfidence intervals are defined by the Confidence Level (our certainty that the confidence interval will contain the true population parameter)\n\n\nWith a 95% confidence interval, we are 95% sure that the interval we construct contains the true population parameter we are interested in.\n\n\nOver the long run, there is a probability of .99 that the actual population parameter falls within a 99% confidence interval that we construct"
+  },
+  {
+    "objectID": "Lectures/lecture5.html#estimating-population-parameters-two-options-3",
+    "href": "Lectures/lecture5.html#estimating-population-parameters-two-options-3",
+    "title": "",
+    "section": "Estimating Population Parameters: TWO OPTIONS",
+    "text": "Estimating Population Parameters: TWO OPTIONS\nBetter option: Create a CONFIDENCE INTERVAL\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nCONFIDENCE INTERVAL A range of scores, centered on the sample mean, in which we think the population mean is likely to be located.\n\n\nQ: What is the ADVANTAGE of a confidence interval over a point estimate?\n\n\nA: We are less likely to be wrong, and we can quantify the risk of being wrong."
+  },
+  {
+    "objectID": "Lectures/lecture5.html#sampling-distribution-1",
+    "href": "Lectures/lecture5.html#sampling-distribution-1",
+    "title": "",
+    "section": "Sampling distribution",
+    "text": "Sampling distribution"
   }
 ]

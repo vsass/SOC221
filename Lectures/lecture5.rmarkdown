@@ -49,6 +49,7 @@ ggplot2::theme_update(panel.background = ggplot2::element_blank(),
 options(width=80, show.signif.stars=FALSE)
 ```
 
+
 # Sampling distributions {.section-title background-color="#c5b4e3"}
 
 ## Descriptive --> Inferential statistics
@@ -338,6 +339,7 @@ Allows us to think about how our one single sample result relates to all possibl
 
 ---
 
+
 ```{r}
 #| echo: false
 #| fig-width: 6
@@ -408,6 +410,7 @@ p_anim2 <-
 
 animate(p_anim2, width = 550, height = 230, res = 96)
 ```
+
 
 
 
