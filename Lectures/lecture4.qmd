@@ -287,7 +287,7 @@ theme(legend.background = element_rect(fill = "transparent"),
         panel.grid.minor = element_blank(), 
         plot.background = element_rect(fill = "transparent", 
                                        color = NA)) 
-#animate(roll_3 + transition_reveal(trial), height = 6, width = 9, units = "in", res = 150)
+animate(roll_3 + transition_reveal(trial), start_pause = 15, height = 6, width = 9, units = "in", res = 150)
 #anim_save(filename = "lectures/images/dice.gif", animation = last_animation(), duration = 6, bg = "transparent")
 ```
 

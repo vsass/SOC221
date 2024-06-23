@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.551">
+  <meta name="generator" content="quarto-1.5.43">
 
   <meta name="author" content="Victoria Sass">
-  <title></title>
+  <title> Sampling distributions, Central limit theorem,  &amp; the Logic of inference </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -570,7 +570,7 @@ Victoria Sass
 <h2>Sampling distribution</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p><br></p>
+<p><br> <br></p>
 <div class="fragment" style="font-size: 1.75em">
 <blockquote>
 <p><span style="color:#e93cac"><strong>Sampling Distribution</strong></span><br> A <em>theoretical</em> <u>probability distribution</u> of <u>all possible sample values</u> for the statistic in which we are interested.</p>
@@ -587,27 +587,93 @@ Victoria Sass
 </div>
 </div>
 </section>
-<section id="sampling-error" class="slide level2">
-<h2>Sampling error</h2>
+<section class="slide level2">
+
+<p><br> <br></p>
+
+<img data-src="lecture5_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"><div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 350px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; left: -50px; text-align: center">
+<p>Imagine drawing ONE sample from the population and calculating the sample mean</p>
+</div>
 </section>
-<section id="confidence-interval" class="slide level2">
-<h2>Confidence interval</h2>
+<section class="slide level2">
+
+<p><br> <br></p>
+
+<img data-src="lecture5_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"><div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 350px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; left: -50px; text-align: center">
+<p>Imagine drawing ONE sample from the population and calculating the sample mean</p>
+</div>
+<div data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 375px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; left: 25px; text-align: center">
+<p>Just by chance, our sample mean may be a little different than the true population mean.</p>
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box2" style="border: 2px solid #6e8e13; border-radius:0px; position: absolute; bottom: 96px; left: 468px; width: 53px; height: 0px; font-size: 0.75em; text-align: center">
+
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 425px; padding: 5px 5px 5px 5px; position: absolute; bottom: 75px; right: 65px; text-align: center">
+<p>Distance between the sample mean and the actual population mean reflects <strong>random sampling error</strong></p>
+</div>
 </section>
-<section id="confidence-level" class="slide level2">
-<h2>Confidence level</h2>
+<section class="slide level2">
+
+<p><br> <br></p>
+<div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; left: -50px; text-align: center">
+<p>Now imagine drawing LOTS of independent samples and calculating the mean of X for each one.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<p><br> <br></p>
+
+<img data-src="lecture5_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"><div data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 425px; padding: 10px 10px 10px 10px; position: absolute; top: 50px; left: -75px; text-align: left">
+<p>Interesting features of the<br>sampling distribution<br>(<em>when certain conditions are met</em>):<br> • Normal distribution<br> • Mean of the sampling distribution is equal to the population mean</p>
+</div>
+<div data-id="box2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: -50px; text-align: center">
+<p>This produces a <strong>SAMPLING DISTRIBUTION</strong> of sample means</p>
+</div>
+</section>
+<section class="slide level2">
+
+<p><br> <br></p>
+
+<img data-src="lecture5_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"><div data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; right: -50px; text-align: center">
+<p>So can use what we know about the normal distribution to think about the location of sample means relative to the population mean.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<p><br> <br></p>
+
+<img data-src="lecture5_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"><div data-id="box2" style="color: #a68100; width: 1000px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: 35px; text-align: center">
+<p>68.26% of samples will be within 1 <span class="math inline">\(\sigma\)</span> of the pop. mean</p>
+</div>
+</section>
+<section class="slide level2">
+
+<p><br> <br></p>
+
+<img data-src="lecture5_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"><div data-id="box2" style="color: #754cbc; width: 1000px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; right: 25px; text-align: center">
+<p>95% of sample means will be within 1.96 <span class="math inline">\(\sigma\)</span> of the pop. mean</p>
+</div>
 </section>
 <section id="sampling-distribution-1" class="slide level2">
-<h2>Sampling distribution</h2>
-</section>
-<section id="sampling-distribution-visual" class="slide level2">
-<h2>Sampling distribution visual</h2>
+<h2>Sampling Distribution</h2>
+<h3 id="important-facts-about-sampling-distributions"><u>Important facts about sampling distributions:</u></h3>
+<div>
+<ul>
+<li class="fragment"><em>Theoretical distributions: can’t take every possible sample from the population</em></li>
+<li class="fragment"><em>Each statistic that we might be interested in has a theoretical sampling distribution</em></li>
+<li class="fragment"><em>Just by chance, the different samples making up this sampling distribution will give different statistics</em>
+<ul>
+<li class="fragment">e.g., the mean for each sample will probably be slightly different because different individuals make up the different samples.</li>
+<li class="fragment">Reflects chance sampling error.</li>
+</ul></li>
+<li class="fragment"><em>“Probability distribution” means that if we know the shape of the distribution we can find the probability of a particular sample score within the distribution of all the possible sample scores</em></li>
+</ul>
+</div>
 </section>
 <section id="three-types-of-distributions" class="slide level2">
 <h2>Three types of distributions</h2>
-</section>
-<section id="important-facts-about-sampling-distributions" class="slide level2">
-<h2>Important facts about sampling distributions</h2>
-</section></section>
+
+<img data-src="images/three_dists.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
 <section id="break" class="title-slide slide level1 section-title center" data-background-color="#2ad2c9">
 <h1>Break!</h1>
 
@@ -618,14 +684,148 @@ Victoria Sass
 <h1>Central limit theorem</h1>
 
 </section>
-<section id="central-limit-theorem-1" class="slide level2">
-<h2>Central limit theorem</h2>
+<section id="central-limit-theorem-clt" class="slide level2">
+<h2>Central Limit Theorem (CLT)</h2>
+<p><br> <br></p>
+<div class="fragment" style="font-size: 1.5em">
+<p>If all possible random samples of size <span class="math inline">\(N\)</span> are drawn from a population with the mean <span class="math inline">\(\mu_X\)</span> and the standard deviation <span class="math inline">\(\sigma_X\)</span>, then as <span class="math inline">\(N\)</span> becomes larger, the sampling distribution of the sample means becomes approximately normal, with mean equal to <span class="math inline">\(\mu_X\)</span> and standard deviation equal to the population standard deviation divided by square root of the sample size.</p>
+</div>
 </section>
 <section id="implication-of-central-limit-theorem" class="slide level2">
 <h2>Implication of central limit theorem</h2>
+<ul>
+<li><u><strong>Central limit theorem</strong></u> tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:
+<ul>
+<li>Normally distributed</li>
+<li>Mean: <span class="math inline">\(\mu_\bar{X}\)</span> <span class="math inline">\(= \mu_X\)</span></li>
+</ul></li>
+</ul>
 </section>
-<section id="sampling-distribution-of-sample-means-distribution" class="slide level2">
-<h2>Sampling distribution of sample means distribution</h2>
+<section id="implication-of-central-limit-theorem-1" class="slide level2">
+<h2>Implication of central limit theorem</h2>
+<ul>
+<li><u><strong>Central limit theorem</strong></u> tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:
+<ul>
+<li>Normally distributed</li>
+<li>Mean: <span style="color: #754cbc"><span class="math inline">\(\mu_\bar{X}\)</span></span> <span class="math inline">\(= \mu_X\)</span></li>
+</ul></li>
+</ul>
+<div data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 250px; left: 50px; text-align: center">
+<p>Check out this new symbol:<br> The population mean of sample means<br>(i.e., the average of the means you would<br>calculate from all possible samples)</p>
+</div>
+</section>
+<section id="implication-of-central-limit-theorem-2" class="slide level2">
+<h2>Implication of central limit theorem</h2>
+<ul>
+<li><u><strong>Central limit theorem</strong></u> tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:
+<ul>
+<li>Normally distributed</li>
+<li>Mean: <span class="math inline">\(\mu_\bar{X}\)</span> <span class="math inline">\(= \mu_X\)</span></li>
+<li>Standard Error = <span style="color: #a68100"><span class="math inline">\(\sigma_\bar{X}\)</span></span> <span class="math inline">\(= \frac{\sigma}{\sqrt{n}}\)</span></li>
+</ul></li>
+</ul>
+<div data-id="box5" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; bottom: 125px; left: -50px; text-align: center; font-size: 1.25em">
+<p><span style="color:#e93cac">Standard error</span>:<br> The the standard deviation<br>in the sampling distribution<br> (in this case, of all<br>possible sample means)</p>
+</div>
+<div style="position: absolute; bottom: -50px; right: -50px;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture5_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="implication-of-central-limit-theorem-3" class="slide level2">
+<h2>Implication of central limit theorem</h2>
+<ul>
+<li><u><strong>Central limit theorem</strong></u> tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:
+<ul>
+<li>Normally distributed</li>
+<li>Mean: <span class="math inline">\(\mu_\bar{X}\)</span> <span class="math inline">\(= \mu_X\)</span></li>
+<li>Standard Error = <span class="math inline">\(\sigma_\bar{X}\)</span> <span class="math inline">\(= \frac{\sigma}{\sqrt{n}}\)</span></li>
+</ul></li>
+</ul>
+<div style="position: absolute; bottom: -50px; right: -50px;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture5_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div data-id="box2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 350px; padding: 5px 5px 5px 5px; position: absolute; top: 200px; right: -75px; text-align: center; font-size: 0.9em">
+<p>Just over 68% of sample means will be within ±1 standard error of the true population mean</p>
+</div>
+</section>
+<section id="implication-of-central-limit-theorem-4" class="slide level2">
+<h2>Implication of central limit theorem</h2>
+<ul>
+<li><u><strong>Central limit theorem</strong></u> tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:
+<ul>
+<li>Normally distributed</li>
+<li>Mean: <span class="math inline">\(\mu_\bar{X}\)</span> <span class="math inline">\(= \mu_X\)</span></li>
+<li>Standard Error = <span class="math inline">\(\sigma_\bar{X}\)</span> <span class="math inline">\(= \frac{\sigma}{\sqrt{n}}\)</span></li>
+</ul></li>
+</ul>
+<div style="position: absolute; bottom: -50px; right: -50px;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture5_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 200px; left: -75px; text-align: center; font-size: 0.9em">
+<p><span class="math inline">\(95.44\%\)</span> of sample means will be within <span class="math inline">\(\pm2\)</span> standard errors of the true population mean</p>
+</div>
+<div class="fragment" data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 350px; padding: 5px 5px 5px 5px; position: absolute; bottom: 75px; left: 0px; text-align: center; font-size: 0.9em">
+<p>And exactly <span class="math inline">\(95\%\)</span> will be within <span class="math inline">\(1.96\)</span> standard errors</p>
+</div>
+</section>
+<section id="how-does-this-help-us" class="slide level2">
+<h2>How does this help us?</h2>
+<div class="fragment">
+<!-- -->
+<h4 id="sampling-distribution-of-sample-means"><strong>SAMPLING DISTRIBUTION</strong> of sample means</h4>
+</div>
+
+<img data-src="lecture5_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"></section>
+<section class="slide level2">
+
+
+<img data-src="lecture5_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"><div data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; left: -75px; text-align: center">
+<p>If, 95% of the samples are within 1.96 standard errors of the true population mean . . .</p>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="lecture5_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"><div data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; left: -75px; text-align: center">
+<p>If, 95% of the samples are within 1.96 standard errors of the true population mean . . .</p>
+</div>
+<div data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: -75px; text-align: center">
+<p>. . . then for 95 samples out of 100, we will find the true population mean if we look within 1.96 standard errors of the sample mean.</p>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="lecture5_files/figure-revealjs/unnamed-chunk-15-1.gif" class="quarto-figure quarto-figure-center r-stretch"><div data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; left: -75px; text-align: center">
+<p>If, 95% of the samples are within 1.96 standard errors of the true population mean . . .</p>
+</div>
+<div data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: -75px; text-align: center">
+<p>. . . then for 95 samples out of 100, we will find the true population mean if we look within 1.96 standard errors of the sample mean.</p>
+</div>
 </section></section>
 <section>
 <section id="homework" class="title-slide slide level1 section-title center" data-background-color="#e8e3d3">
@@ -923,18 +1123,7 @@ Victoria Sass
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -966,7 +1155,29 @@ Victoria Sass
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -974,7 +1185,7 @@ Victoria Sass
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

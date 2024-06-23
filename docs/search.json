@@ -970,7 +970,7 @@
     "href": "lectures/lecture5.html#implication-of-central-limit-theorem",
     "title": "",
     "section": "Implication of central limit theorem",
-    "text": "Implication of central limit theorem"
+    "text": "Implication of central limit theorem\n\nCentral limit theorem tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:\n\nNormally distributed\nMean: \\(\\mu_\\bar{X}\\) \\(= \\mu_X\\)"
   },
   {
     "objectID": "lectures/lecture5.html#sampling-distribution-of-sample-means-distribution",
@@ -1796,7 +1796,7 @@
     "href": "lectures/lecture4.html#myths-about-randomness-and-probability",
     "title": "",
     "section": "Myths about randomness and probability",
-    "text": "Myths about randomness and probability\nThe myth of short-run regularity\n\n\n\nMyth: If I flip a coin 10 times I should get 5 heads.\n\n\nReality: Over a short number of flips, you might get lots of heads or lots of tails. Probabilities express expectations only over the long run.\n\n\n\n\n\n\n\n\nExample: Tossing a die to get a 3 • In the short-run, might get very few or very many 3s • In the long-run 1/6 of the observations will be 3s"
+    "text": "Myths about randomness and probability\nThe myth of short-run regularity\n\n\n\nMyth: If I flip a coin 10 times I should get 5 heads.\n\n\nReality: Over a short number of flips, you might get lots of heads or lots of tails. Probabilities express expectations only over the long run.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample: Tossing a die to get a 3 • In the short-run, might get very few or very many 3s • In the long-run 1/6 of the observations will be 3s"
   },
   {
     "objectID": "lectures/lecture4.html#probability-distribution",
@@ -2216,7 +2216,7 @@
     "href": "lectures/lecture4.html#more-examples",
     "title": "",
     "section": "More examples",
-    "text": "More examples\nThink creatively to use the information in Normal Table to figure out what you want to know\n\n\n\nPercentage of women shorter than 55 inches?\nPercentage of women 55 inches or taller?\nProbability of randomly selecting a woman who is 69 inches or taller?\nProbability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?\nFind the score at the 10th percentile in the distribution.\nFind the two heights that define the middle 95% of cases in the distribution.\n\n\n\nHeight for women is  \\(N(65,3.5)\\)"
+    "text": "More examples\nThink creatively to use the information in the Normal Table to figure out what you want to know\n\n\n\nPercentage of women shorter than 55 inches?\nPercentage of women 55 inches or taller?\nProbability of randomly selecting a woman who is 69 inches or taller?\nProbability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?\nFind the score at the 10th percentile in the distribution.\nFind the two heights that define the middle 95% of cases in the distribution.\n\n\n\nHeight for women is  \\(N(65,3.5)\\)"
   },
   {
     "objectID": "lectures/lecture4.html#section",
@@ -2427,5 +2427,173 @@
     "title": "",
     "section": "Sampling distribution",
     "text": "Sampling distribution"
+  },
+  {
+    "objectID": "lectures/lecture5.html#descriptive-inferential-statistics",
+    "href": "lectures/lecture5.html#descriptive-inferential-statistics",
+    "title": "",
+    "section": "Descriptive –> Inferential statistics",
+    "text": "Descriptive –&gt; Inferential statistics\n\n\n\n\nWhere are we?\n\nSo far: Worked on descriptive statistics – tools to describe distributions\nNEXT: Building the tools for inferential statistics\n\n\n\n\n\nExample: Want to know about the average study time for the population of UW students.\nNEXT: Building the tools for inferential statistics\n\n\n\n\n\nInferential statisticsStatistical procedures usedto draw conclusions(or inferences) abouta population based ondata drawn from a sample\n\n\n\n\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)"
+  },
+  {
+    "objectID": "lectures/lecture5.html#descriptive-inferential-statistics-1",
+    "href": "lectures/lecture5.html#descriptive-inferential-statistics-1",
+    "title": "",
+    "section": "Descriptive –> Inferential statistics",
+    "text": "Descriptive –&gt; Inferential statistics\n\n\nWhere are we?\n\nSo far: Worked on descriptive statistics – tools to describe distributions\nNEXT: Building the tools for inferential statistics\n\n\n\nExample: Want to know about the average study time for the population of UW students.\nNEXT: Building the tools for inferential statistics\n\n\n\n\nInferential statisticsStatistical procedures usedto draw conclusions(or inferences) abouta population based ondata drawn from a sample\n\n\n\n\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)\n\n\nPopulation parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)\n\n\nSample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)"
+  },
+  {
+    "objectID": "lectures/lecture5.html#the-challenge-of-making-inferences",
+    "href": "lectures/lecture5.html#the-challenge-of-making-inferences",
+    "title": "",
+    "section": "The challenge of making inferences",
+    "text": "The challenge of making inferences\n\n\nDrawing inferences entails uncertainty\nEven with a good sample, the sample is likely to differ from the population (sample statistic is likely to be different from our population parameter, just by chance)\n\n\n\n\nChallenge\nAssessing the risk of being wrong (being way off) in making an inference from observed sample statistics to unknown population parameters.\n\n\n\n\nKey questions\n\nHow often would this procedure (drawing a sample, inferring about the population) give us something close to the correct answer if I used it over and over? or\nWhat is the probability that the inference I draw from one sample is wrong (way off from the population characteristic of interest)?"
+  },
+  {
+    "objectID": "lectures/lecture5.html#using-these-tools-for-inference",
+    "href": "lectures/lecture5.html#using-these-tools-for-inference",
+    "title": "",
+    "section": "Using these tools for inference",
+    "text": "Using these tools for inference\nExample: Want to know how much UW students study on average\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)\n\n\nSample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)\n\n\nFor example: draw a random sample of 100 students and observe \\(\\bar{X} = 14.5\\)\n\n\nPopulation parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)\n\n\nOur goal: Estimate the unknown population parameter \\(\\mu_x = ?\\)"
+  },
+  {
+    "objectID": "lectures/lecture5.html#estimating-population-parameters-two-options",
+    "href": "lectures/lecture5.html#estimating-population-parameters-two-options",
+    "title": "",
+    "section": "Estimating Population Parameters: TWO OPTIONS",
+    "text": "Estimating Population Parameters: TWO OPTIONS\n\n\n\nOne option: Just assume that the population mean is equal to the sample mean\n\\[\n\\mu_x = \\bar{X} = 14.5\n\\]\n\nCalled a point estimate\n\n\n\n\nPotential problems with this strategy?\n\n\n\nVery likely to be wrong!\n\nEven with a random sample, the sample statistic is like to miss the true population parameter by at least a little\n\nReflects chance sampling error\n\nIn reality:\n\n\n\\[\n\\mu_x \\neq \\bar{X}\n\\]\n\n\n\n\n\n\nSAMPLING ERROR The differencebetween a samplestatistic used toestimate a populationparameter and theactual (but unknown)value of thepopulationparameter."
+  },
+  {
+    "objectID": "lectures/lecture5.html#estimating-population-parameters-two-options-1",
+    "href": "lectures/lecture5.html#estimating-population-parameters-two-options-1",
+    "title": "",
+    "section": "Estimating Population Parameters: TWO OPTIONS",
+    "text": "Estimating Population Parameters: TWO OPTIONS\nBetter option: Create a CONFIDENCE INTERVAL\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nCONFIDENCE INTERVAL A range of scores, centered on the sample mean, in which we think the population mean is likely to be located.\n\n\nBuilding a margin of error around our sample mean"
+  },
+  {
+    "objectID": "lectures/lecture5.html#estimating-population-parameters-two-options-2",
+    "href": "lectures/lecture5.html#estimating-population-parameters-two-options-2",
+    "title": "",
+    "section": "Estimating Population Parameters: TWO OPTIONS",
+    "text": "Estimating Population Parameters: TWO OPTIONS\nBetter option: Create a CONFIDENCE INTERVAL\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nConfidence intervals are defined by the Confidence Level (our certainty that the confidence interval will contain the true population parameter)\n\n\nWith a 95% confidence interval, we are 95% sure that the interval we construct contains the true population parameter we are interested in.\n\n\nOver the long run, there is a probability of .99 that the actual population parameter falls within a 99% confidence interval that we construct"
+  },
+  {
+    "objectID": "lectures/lecture5.html#estimating-population-parameters-two-options-3",
+    "href": "lectures/lecture5.html#estimating-population-parameters-two-options-3",
+    "title": "",
+    "section": "Estimating Population Parameters: TWO OPTIONS",
+    "text": "Estimating Population Parameters: TWO OPTIONS\nBetter option: Create a CONFIDENCE INTERVAL\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nCONFIDENCE INTERVAL A range of scores, centered on the sample mean, in which we think the population mean is likely to be located.\n\n\nQ: What is the ADVANTAGE of a confidence interval over a point estimate?\n\n\nA: We are less likely to be wrong, and we can quantify the risk of being wrong."
+  },
+  {
+    "objectID": "lectures/lecture5.html#sampling-distribution",
+    "href": "lectures/lecture5.html#sampling-distribution",
+    "title": "",
+    "section": "Sampling distribution",
+    "text": "Sampling distribution\n\n\n \n\n\nSampling Distribution A theoretical probability distribution of all possible sample values for the statistic in which we are interested.\n\n\n\n\n\n\nKey tool for inferential statistics\n\nAllows us to think about how our one single sample result relates to all possible sample results and, by extension, the population we are interested in drawing inferences about."
+  },
+  {
+    "objectID": "lectures/lecture5.html#sampling-error",
+    "href": "lectures/lecture5.html#sampling-error",
+    "title": "",
+    "section": "Sampling error",
+    "text": "Sampling error"
+  },
+  {
+    "objectID": "lectures/lecture5.html#confidence-interval",
+    "href": "lectures/lecture5.html#confidence-interval",
+    "title": "",
+    "section": "Confidence interval",
+    "text": "Confidence interval"
+  },
+  {
+    "objectID": "lectures/lecture5.html#confidence-level",
+    "href": "lectures/lecture5.html#confidence-level",
+    "title": "",
+    "section": "Confidence level",
+    "text": "Confidence level"
+  },
+  {
+    "objectID": "lectures/lecture5.html#sampling-distribution-1",
+    "href": "lectures/lecture5.html#sampling-distribution-1",
+    "title": "",
+    "section": "Sampling Distribution",
+    "text": "Sampling Distribution\nImportant facts about sampling distributions:\n\n\nTheoretical distributions: can’t take every possible sample from the population\nEach statistic that we might be interested in has a theoretical sampling distribution\nJust by chance, the different samples making up this sampling distribution will give different statistics\n\ne.g., the mean for each sample will probably be slightly different because different individuals make up the different samples.\nReflects chance sampling error.\n\n“Probability distribution” means that if we know the shape of the distribution we can find the probability of a particular sample score within the distribution of all the possible sample scores"
+  },
+  {
+    "objectID": "lectures/lecture5.html#sampling-distribution-visual",
+    "href": "lectures/lecture5.html#sampling-distribution-visual",
+    "title": "",
+    "section": "Sampling distribution visual",
+    "text": "Sampling distribution visual"
+  },
+  {
+    "objectID": "lectures/lecture5.html#three-types-of-distributions",
+    "href": "lectures/lecture5.html#three-types-of-distributions",
+    "title": "",
+    "section": "Three types of distributions",
+    "text": "Three types of distributions"
+  },
+  {
+    "objectID": "lectures/lecture5.html#important-facts-about-sampling-distributions",
+    "href": "lectures/lecture5.html#important-facts-about-sampling-distributions",
+    "title": "",
+    "section": "Important facts about sampling distributions",
+    "text": "Important facts about sampling distributions"
+  },
+  {
+    "objectID": "lectures/lecture5.html#important-facts-about-sampling-distributions-1",
+    "href": "lectures/lecture5.html#important-facts-about-sampling-distributions-1",
+    "title": "",
+    "section": "Important facts about sampling distributions",
+    "text": "Important facts about sampling distributions"
+  },
+  {
+    "objectID": "lectures/lecture5.html#central-limit-theorem-clt",
+    "href": "lectures/lecture5.html#central-limit-theorem-clt",
+    "title": "",
+    "section": "Central Limit Theorem (CLT)",
+    "text": "Central Limit Theorem (CLT)\n \n\nIf all possible random samples of size \\(N\\) are drawn from a population with the mean \\(\\mu_X\\) and the standard deviation \\(\\sigma_X\\), then as \\(N\\) becomes larger, the sampling distribution of the sample means becomes approximately normal, with mean equal to \\(\\mu_X\\) and standard deviation equal to the population standard deviation divided by square root of the sample size."
+  },
+  {
+    "objectID": "lectures/lecture5.html#implication-of-central-limit-theorem-1",
+    "href": "lectures/lecture5.html#implication-of-central-limit-theorem-1",
+    "title": "",
+    "section": "Implication of central limit theorem",
+    "text": "Implication of central limit theorem\n\nCentral limit theorem tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:\n\nNormally distributed\nMean: \\(\\mu_\\bar{X}\\) \\(= \\mu_X\\)\n\n\n\nCheck out this new symbol: The population mean of sample means(i.e., the average of the means you wouldcalculate from all possible samples)"
+  },
+  {
+    "objectID": "lectures/lecture5.html#implication-of-central-limit-theorem-2",
+    "href": "lectures/lecture5.html#implication-of-central-limit-theorem-2",
+    "title": "",
+    "section": "Implication of central limit theorem",
+    "text": "Implication of central limit theorem\n\nCentral limit theorem tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:\n\nNormally distributed\nMean: \\(\\mu_\\bar{X}\\) \\(= \\mu_X\\)\nStandard Error = \\(\\sigma_\\bar{X}\\) \\(= \\frac{\\sigma}{\\sqrt{n}}\\)\n\n\n\nStandard error: The the standard deviationin the sampling distribution (in this case, of allpossible sample means)"
+  },
+  {
+    "objectID": "lectures/lecture5.html#implication-of-central-limit-theorem-3",
+    "href": "lectures/lecture5.html#implication-of-central-limit-theorem-3",
+    "title": "",
+    "section": "Implication of central limit theorem",
+    "text": "Implication of central limit theorem\n\nCentral limit theorem tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:\n\nNormally distributed\nMean: \\(\\mu_\\bar{X}\\) \\(= \\mu_X\\)\nStandard Error = \\(\\sigma_\\bar{X}\\) \\(= \\frac{\\sigma}{\\sqrt{n}}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJust over 68% of sample means will be within ±1 standard error of the true population mean"
+  },
+  {
+    "objectID": "lectures/lecture5.html#implication-of-central-limit-theorem-4",
+    "href": "lectures/lecture5.html#implication-of-central-limit-theorem-4",
+    "title": "",
+    "section": "Implication of central limit theorem",
+    "text": "Implication of central limit theorem\n\nCentral limit theorem tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:\n\nNormally distributed\nMean: \\(\\mu_\\bar{X}\\) \\(= \\mu_X\\)\nStandard Error = \\(\\sigma_\\bar{X}\\) \\(= \\frac{\\sigma}{\\sqrt{n}}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(95.44\\%\\) of sample means will be within \\(\\pm2\\) standard errors of the true population mean\n\n\nAnd exactly \\(95\\%\\) will be within \\(1.96\\) standard errors"
+  },
+  {
+    "objectID": "lectures/lecture5.html#how-does-this-help-us",
+    "href": "lectures/lecture5.html#how-does-this-help-us",
+    "title": "",
+    "section": "How does this help us?",
+    "text": "How does this help us?\n\n\nSAMPLING DISTRIBUTION of sample means"
+  },
+  {
+    "objectID": "lectures/lecture5.html#how-does-this-help-us-1",
+    "href": "lectures/lecture5.html#how-does-this-help-us-1",
+    "title": "",
+    "section": "How does this help us?",
+    "text": "How does this help us?\nSampling distribution of sample means distribution\n\n\nIf, 95% of the samples are within 1.96 standard errors of the true population mean . . ."
   }
 ]
