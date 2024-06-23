@@ -546,7 +546,7 @@ p_anim2 <-
   shadow_mark() +
   enter_fly(y_loc = 12) 
 
-#animate(p_anim2, fps = 3, units = "in", res = 150)
+animate(p_anim2, fps = 3, units = "in", res = 150)
 ```
 
 ::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; left: -50px; text-align: center"}
@@ -1170,9 +1170,8 @@ twenty_randos <- tibble(x = rnorm(n = 20, 0, 1), y = 1:20, color = c(rep("1", 14
 
 sample_means <- ggplot(twenty_randos, aes(group = y)) + 
   annotate("label", x = 0, y = 0, label = "mu[x]", parse = TRUE, size = 12, color = "#690c48", fill = "#e93cac") +
-  annotate(geom = "rect", xmin = -1.96, xmax = 1.96, ymin = 0, ymax = 21, fill = "#e93cac", alpha = 0.15) +
+  annotate(geom = "rect", xmin = -1.96, xmax = 1.96, ymin = 0, ymax = 21, fill = "#e93cac", alpha = 0.145) +
   geom_ellipse(aes(group = y, x0 = x, y0 = y, a = bin_width/2, b = 0.5, angle = 0, fill = color)) +
-  scale_fill_manual(values = c("#transparent", "#aadb1e")) +
   geom_text(data = twenty_randos[1, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[1]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
   #geom_segment(x = twenty_randos$x[1] - 1.96, y = 1, xend = twenty_randos$x[1] - 0.2, color = "#e93cac", linetype = 1, linewidth = 0.75) +
   #geom_segment(x = twenty_randos$x[1] + 0.2, y = 1, xend = twenty_randos$x[1] + 1.96, color = "#e93cac", linetype = 1, linewidth = 0.75) +
@@ -1205,18 +1204,18 @@ sample_means <- ggplot(twenty_randos, aes(group = y)) +
   scale_y_continuous(name = NULL, breaks = NULL, limits = c(0, 21)) + 
   scale_x_continuous(name = NULL, limits = c(-5.5, 5.5), breaks = c(-1.96, 1.96), label = c(expression(paste(bar(X), " - 1.96",sigma[bar(X)])), 
   expression(paste(bar(X), " + 1.96",sigma[bar(X)])))) + 
-  scale_color_manual(values = c("#e93cac", "#6e8e13")) 
+  scale_color_manual(values = c("#e93cac", "#6e8e13")) +
+  scale_fill_manual(values = c("transparent", "#aadb1e"))
 
 p_anim3 <- 
   sample_means +
   transition_states(states = y, wrap = FALSE) +
   shadow_mark() + 
-  enter_appear()
+  enter_fade()
 
-animate(p_anim3)
+animate(p_anim3, nframes = 21, fps = 1)
 
 
-#animate(p_anim2, fps = 3, units = "in", res = 150)
 ```
 
 ::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; left: -75px; text-align: center"}
@@ -1227,7 +1226,137 @@ If, 95% of the samples are within 1.96 standard errors of the true population me
 . . . then for 95 samples out of 100, we will find the true population mean if we look within 1.96 standard errors of the sample mean.
 :::
 
+---
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+ggplot(twenty_randos, aes(group = y)) + 
+  annotate("label", x = 0, y = 0, label = "mu[x]", parse = TRUE, size = 12, color = "#690c48", fill = "#e93cac") +
+  annotate(geom = "rect", xmin = -1.96, xmax = 1.96, ymin = 0, ymax = 21, fill = "#e93cac", alpha = 0.25) +
+  geom_ellipse(aes(group = y, x0 = x, y0 = y, a = bin_width/2, b = 0.5, angle = 0, fill = color)) +
+  geom_text(data = twenty_randos[1, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[1]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  #geom_segment(x = twenty_randos$x[1] - 1.96, y = 1, xend = twenty_randos$x[1] - 0.2, color = "#e93cac", linetype = 1, linewidth = 0.75) +
+  #geom_segment(x = twenty_randos$x[1] + 0.2, y = 1, xend = twenty_randos$x[1] + 1.96, color = "#e93cac", linetype = 1, linewidth = 0.75) +
+  geom_point(aes(x = x - 1.96, y = y, color = color), size = 2) + 
+  geom_point(aes(x = x + 1.96, y = y, color = color), size = 2) + 
+  geom_segment(aes(x = x - 1.96, xend = x - 0.2, y = y, color = color)) +
+  geom_segment(aes(x = x + 0.2, xend = x + 1.96, y = y, color = color)) +
+  geom_text(data = twenty_randos[2, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[2]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[3, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[3]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[4, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[4]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[5, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[5]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[6, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[6]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[7, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[7]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[8, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[8]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[9, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[9]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[10, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[10]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[11, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[11]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[12, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[12]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[13, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[13]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[14, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[14]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[15, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[15]))), parse = TRUE, color = "#6e8e13", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[16, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[16]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[17, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[17]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[18, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[18]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[19, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[19]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[20, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[20]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  coord_equal(bin_width, clip = "off") + # to make the dots look nice and round0 
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "black") + 
+  theme(legend.position = "none", axis.text.x = element_text(size = 30, color = "#e93cac"), axis.ticks.x = element_blank()) +
+  scale_y_continuous(name = NULL, breaks = NULL, limits = c(0, 21)) + 
+  scale_x_continuous(name = NULL, limits = c(-5.5, 5.5), breaks = c(-1.96, 1.96), label = c(expression(paste(bar(X), " - 1.96",sigma[bar(X)])), 
+  expression(paste(bar(X), " + 1.96",sigma[bar(X)])))) + 
+  scale_color_manual(values = c("#e93cac", "#6e8e13")) +
+  scale_fill_manual(values = c("transparent", "#aadb1e"))
+
+```
+
+::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; left: -75px; text-align: center"}
+If, 95% of the samples are within 1.96 standard errors of the true population mean . . . 
+:::
+
+::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: -75px; text-align: center"}
+. . . then for 95 samples out of 100, we will find the true population mean if we look within 1.96 standard errors of the sample mean.
+:::
+
+## Confidence intervals
+
+<br>
+
+#### The **BIG IDEA**:
+
+::: incremental
+* The sampling distribution and CLT tells us how close to the population mean ($\mu$) the sample mean ($\bar{X}$) is likely to be
+* We can use this knowledge to figure out how close the true population mean ($\mu$) is likely to be to the one sample mean ($\bar{X}$)that we observe
+* Build a confidence interval around our sample statistic (mean) to define the range in which we think the population parameter can be found
+:::
+
+## Using these tools for inference
+
+#### Example: Want to know how much UW students study on average
+
+::: {style="position: absolute; top: 150px; right: 100px; font-size: 3em"}
+[$\bar{X}$]{style="color:#1b8883"} ---INFERENCE--> [$\mu_x$]{style="color:#a68100"}
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 175px; left: -50px; font-size: 1.25em"}
+**Sample statistic**: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 550px; padding: 5px 5px 0px 5px; position: absolute; bottom: 50px; left: -50px;"}
+*For example*: draw a random sample of 100 students and observe $\bar{X} = 14.5$
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 175px; right: -50px; font-size: 1.25em"}
+**Population parameter**: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; padding: 5px 5px 0px 5px; position: absolute; bottom: 50px; right: -50px;"}
+[**Our goal**]{.underline}: Estimate the unknown population parameter $\mu_x = ?$
+:::
+
+## Confidence intervals
+
+
+::: {style="font-size:2em"}
+$$
+\bar{X}
+$$
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 145px; left: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 145px; right: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 750px; padding: 5px 5px 5px 5px; position: absolute; top: 195px; left: 140px; font-size: 1.5em; text-align: center"}
+Create a **range** of scores, centered on the sample mean, in which we think the population mean is likely to be located
+:::
+
+::: {data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; top: 425px; left: 225px"}
+Building a [*margin of error*]{style="color:#e93cac"} around our sample mean
+:::
+
+::: {.fragment fragment-index=1 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 25px; left: 285px; font-size: 1.25em; text-align: center"}
+[Confidence interval]{.underline}:<br>
+$\text{sample statistic} \pm \text{margin of error}$
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 20px; right: -47px; font-size: 2.5em; text-align: center"}
+⬅️
+:::
+
+::: {.fragment fragment-index=2 data-id="box5" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 15px; right: -50px; width: 200px; text-align: center"}
+All confidence intervals take this form
+:::
 
 # Homework{.section-title background-color="#e8e3d3"}
 
-## {data-menu-title="Homework 5" background-iframe="https://vsass.github.io/SOC221/homework/homework5.html" background-interactive=TRUE}
+## {data-menu-title="Homework 4" background-iframe="https://vsass.github.io/SOC221/homework/homework4.html" background-interactive=TRUE}

@@ -2595,5 +2595,26 @@
     "title": "",
     "section": "How does this help us?",
     "text": "How does this help us?\nSampling distribution of sample means distribution\n\n\nIf, 95% of the samples are within 1.96 standard errors of the true population mean . . ."
+  },
+  {
+    "objectID": "lectures/lecture5.html#confidence-intervals",
+    "href": "lectures/lecture5.html#confidence-intervals",
+    "title": "",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\nThe BIG IDEA:\n\n\nThe sampling distribution and CLT tells us how close to the population mean (\\(\\mu\\)) the sample mean (\\(\\bar{X}\\)) is likely to be\nWe can use this knowledge to figure out how close the true population mean (\\(\\mu\\)) is likely to be to the one sample mean (\\(\\bar{X}\\))that we observe\nBuild a confidence interval around our sample statistic (mean) to define the range in which we think the population parameter can be found"
+  },
+  {
+    "objectID": "lectures/lecture5.html#using-these-tools-for-inference-1",
+    "href": "lectures/lecture5.html#using-these-tools-for-inference-1",
+    "title": "",
+    "section": "Using these tools for inference",
+    "text": "Using these tools for inference\nExample: Want to know how much UW students study on average\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)\n\n\nSample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)\n\n\nFor example: draw a random sample of 100 students and observe \\(\\bar{X} = 14.5\\)\n\n\nPopulation parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)\n\n\nOur goal: Estimate the unknown population parameter \\(\\mu_x = ?\\)"
+  },
+  {
+    "objectID": "lectures/lecture5.html#confidence-intervals-1",
+    "href": "lectures/lecture5.html#confidence-intervals-1",
+    "title": "",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nCreate a range of scores, centered on the sample mean, in which we think the population mean is likely to be located\n\n\nBuilding a margin of error around our sample mean\n\n\nConfidence interval: \\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n⬅️\n\n\nAll confidence intervals take this form"
   }
 ]
