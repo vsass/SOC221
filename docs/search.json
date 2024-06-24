@@ -3085,5 +3085,159 @@
     "title": "",
     "section": "Rule 5: Be objective",
     "text": "Rule 5: Be objective\n\n\nPurposefully misleading"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#hypothesis-and-hypothesis-testing",
+    "href": "Lectures/lecture7.html#hypothesis-and-hypothesis-testing",
+    "title": "",
+    "section": "Hypothesis and hypothesis testing",
+    "text": "Hypothesis and hypothesis testing"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#test-of-significance-example",
+    "href": "Lectures/lecture7.html#test-of-significance-example",
+    "title": "",
+    "section": "Test of significance example",
+    "text": "Test of significance example"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#alternative-versus-null-hypothesis",
+    "href": "Lectures/lecture7.html#alternative-versus-null-hypothesis",
+    "title": "",
+    "section": "Alternative versus null hypothesis",
+    "text": "Alternative versus null hypothesis"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#example",
+    "href": "Lectures/lecture7.html#example",
+    "title": "",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#p-value-and-alpha-level",
+    "href": "Lectures/lecture7.html#p-value-and-alpha-level",
+    "title": "",
+    "section": "p value and alpha level",
+    "text": "p value and alpha level"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#notes-on-results-of-hypothesis-tests",
+    "href": "Lectures/lecture7.html#notes-on-results-of-hypothesis-tests",
+    "title": "",
+    "section": "Notes on results of hypothesis tests",
+    "text": "Notes on results of hypothesis tests"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#example-1",
+    "href": "Lectures/lecture7.html#example-1",
+    "title": "",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#step-1-plan",
+    "href": "Lectures/lecture7.html#step-1-plan",
+    "title": "",
+    "section": "Step 1: Plan",
+    "text": "Step 1: Plan"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#step-2-calculate",
+    "href": "Lectures/lecture7.html#step-2-calculate",
+    "title": "",
+    "section": "Step 2: Calculate",
+    "text": "Step 2: Calculate"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#step-3-make-a-decision",
+    "href": "Lectures/lecture7.html#step-3-make-a-decision",
+    "title": "",
+    "section": "Step 3: Make a decision",
+    "text": "Step 3: Make a decision"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#one-sided-versus-two-sided-tests",
+    "href": "Lectures/lecture7.html#one-sided-versus-two-sided-tests",
+    "title": "",
+    "section": "One-sided versus two-sided tests",
+    "text": "One-sided versus two-sided tests"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#example-1-1",
+    "href": "Lectures/lecture7.html#example-1-1",
+    "title": "",
+    "section": "Example 1",
+    "text": "Example 1"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#example-2",
+    "href": "Lectures/lecture7.html#example-2",
+    "title": "",
+    "section": "Example 2",
+    "text": "Example 2"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#inference-with-the-t-distribution",
+    "href": "Lectures/lecture7.html#inference-with-the-t-distribution",
+    "title": "",
+    "section": "Inference with the t-distribution",
+    "text": "Inference with the t-distribution"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#degrees-of-freedom",
+    "href": "Lectures/lecture7.html#degrees-of-freedom",
+    "title": "",
+    "section": "Degrees of freedom",
+    "text": "Degrees of freedom"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#more-realistic-example",
+    "href": "Lectures/lecture7.html#more-realistic-example",
+    "title": "",
+    "section": "More realistic example",
+    "text": "More realistic example"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#another-example",
+    "href": "Lectures/lecture7.html#another-example",
+    "title": "",
+    "section": "Another example",
+    "text": "Another example"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#example-3",
+    "href": "Lectures/lecture7.html#example-3",
+    "title": "",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#sampling-theory-and-sampling-distribution",
+    "href": "Lectures/lecture7.html#sampling-theory-and-sampling-distribution",
+    "title": "",
+    "section": "Sampling theory and sampling distribution",
+    "text": "Sampling theory and sampling distribution"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#another-example-1",
+    "href": "Lectures/lecture7.html#another-example-1",
+    "title": "",
+    "section": "Another Example",
+    "text": "Another Example"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#example-test-of-significance",
+    "href": "Lectures/lecture7.html#example-test-of-significance",
+    "title": "",
+    "section": "Example: Test of Significance",
+    "text": "Example: Test of Significance\nSay we know that, on average, college students across the country study 13 hrs/week, with a standard deviation of 8.\nQuestion: Do UW students really study more than the national average?\n\n\nInsufficient time, energy, and money, so draw a random sample of UW students:   N = 100, Mean = 14.5 hrs/week\n\n\n\n\n\nLooks like UW students study more than the national average.\n\n\n\nBut there are at least two explanations for this observation. . .\n\n\n\nExplanation 1:\n\nUW students really do study more than 13 hours/week, on average\nIn other words, the observed differences between sample mean and the national average reflects a real difference between the population mean for all UW students and the national average\n\n\n\n\\(\\mu{UW} &gt; 13\\)"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#example-test-of-significance-1",
+    "href": "Lectures/lecture7.html#example-test-of-significance-1",
+    "title": "",
+    "section": "Example: Test of Significance",
+    "text": "Example: Test of Significance\nSay we know that, on average, college students across the country study 13 hrs/week, with a standard deviation of 8.\nQuestion: Do UW students really study more than the national average?\n\nInsufficient time, energy, and money, so draw a random sample of UW students:   N = 100, Mean = 14.5 hrs/week\n\n\n\nLooks like UW students study more than the national average.\n\nBut there are at least two explanations for this observation. . .\n\n\nExplanation 2:\n\nWe have drawn an unusual sample of UW students when, in reality, UW students don’t study more than the national average of 13 hours/week\nThe difference we observe between the sample mean and the national average is just due to chance sampling error\n\n\n\n\\(\\mu{UW} = 13\\)"
   }
 ]

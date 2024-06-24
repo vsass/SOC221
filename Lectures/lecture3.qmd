@@ -228,7 +228,7 @@ $$
 ::: {.fragment fragment-index=4 style="font-size: 1.5em"}
 
 $$
-       = \frac{242}{10} = 24.2years
+       = \frac{242}{10} = 24.2 \text{ years}
 $$
 
 :::

@@ -31,18 +31,1006 @@ format:
 #| echo: false
 #| cache: false
 require(tidyverse)
+require(ggthemes)
 require(gt)
 
 knitr::opts_chunk$set(comment = ">")
+
+# set transparent background in base
+knitr::opts_chunk$set(dev.args=list(bg='transparent'))
+
+# set transparent background in ggplot
+ggplot2::theme_set(ggthemes::theme_tufte(base_size=12))
+ggplot2::theme_update(panel.background = ggplot2::element_blank(),
+                      plot.background=ggplot2::element_blank(),
+    legend.background=ggplot2::element_blank())
+
+options(width=80, show.signif.stars=FALSE)
 ```
 
 # Hypothesis testing for one sample {.section-title background-color="#c5b4e3"}
 
-## Hypothesis and hypothesis testing
+--- 
 
-## Test of significance example
+### So far: 
+
+#### Estimating an unknown population characteristic based on sample information
+
+::: {style="position: absolute; top: 150px; right: 100px; font-size: 3em"}
+[$\bar{X}$]{style="color:#1b8883"} ---INFERENCE--> [$\mu_x$]{style="color:#a68100"}
+:::
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 175px; left: -50px; font-size: 1.25em"}
+**Sample statistic**: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)
+:::
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 550px; padding: 5px 5px 0px 5px; position: absolute; bottom: 50px; left: -50px;"}
+*For example*: draw a random sample of 100 students and observe $\bar{X} = 14.5$
+:::
+
+::: {style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 175px; right: -50px; font-size: 1.25em"}
+**Population parameter**: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)
+:::
+
+::: {style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; padding: 5px 5px 0px 5px; position: absolute; bottom: 50px; right: -50px;"}
+[**Our goal**]{.underline}: Estimate the unknown population parameter $\mu_x = ?$
+:::
+
+---
+
+### Another way to use our sample information
+
+#### [NOW]{.underline}: Use our sample statistic to test an [hypothesis]{.underline style="color:#e93cac"} about the population
+
+:::  {style="width: 600px; padding: 5px 5px 5px 5px; position: absolute; top: 100px; left: 175px; text-align: center; font-size: 1.5em"}
+$$
+\bar{X} = 14.5\text{ hours/week study time}
+$$
+:::
+
+:::  {.fragment fragment-index=1 style="border: 4px solid black; width: 525px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; left: -75px; text-align: left; font-size: 1.25em"}
+[Hypothesis:]{.underline .center}
+
+* A claim about reality (i.e., about how the world works)<br>
+* In our examples, the hypothesis is a statement about the reality of a parameter, like the population proportion, $\pi$, or the population mean, $\mu$.
+:::
+
+:::  {.fragment fragment-index=2 style="background: black; color: white; width: 630px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: -75px; text-align: left; font-size: 1.25em"}
+[Hypothesis testing:]{.underline .center}
+
+* We compare the [**known sample statistics**]{style="color:#e93cac"} to what the hypothesis implies.<br>
+* Make a [**probability statement**]{style="color:#e93cac"} about how well the sample statistic corresponds with the hypothesis.<br>
+* Probability statement = statement about [**statistical significance**]{style="color:#e93cac"}
+:::
+
+## Example: Test of Significance
+
+Say we know that, on average, college students across the country study 13 hrs/week, with a standard deviation of 8.
+
+[**Question: Do UW students really study more than the national average?**]{style="color: #a68100;"}
+
+<br>
+
+::: {.fragment fragment-index=1}
+Insufficient time, energy, and money, so draw a random sample of UW students:
+<br>
+<br>
+[N = 100, Mean = 14.5 hrs/week]{.center style="color: #e93cac;font-size: 1.25"}
+:::
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+<br>
+
+::: {.fragment fragment-index=2}
+Looks like UW students study more than the national average.
+:::
+
+<br>
+
+::: {.fragment fragment-index=3}
+But there are at least two explanations for this observation. . . 
+:::
+
+
+:::
+
+::: {.column width="65%"}
+:::  {.fragment fragment-index=4 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 630px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: -75px; text-align: left;"}
+[Explanation 1:]{.underline .center}
+
+* UW students really do study more than 13 hours/week, on average<br>
+* In other words, the observed differences between sample mean and the national average reflects a [real difference]{.underline} between the [population mean]{.underline} for all UW students and the national average
+:::
+
+:::  {.fragment fragment-index=4 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 125px; padding: 5px 5px 5px 5px; position: absolute; bottom: 325px; right: -75px; text-align: left; font-size: 1.25"}
+$\mu{UW} > 13$
+:::
+:::
+
+::::
+
+## Example: Test of Significance
+
+Say we know that, on average, college students across the country study 13 hrs/week, with a standard deviation of 8.
+
+[**Question: Do UW students really study more than the national average?**]{style="color: #a68100;"}
+
+<br>
+
+
+Insufficient time, energy, and money, so draw a random sample of UW students:
+<br>
+<br>
+[N = 100, Mean = 14.5 hrs/week]{.center style="color: #e93cac;font-size: 1.25"}
+
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+<br>
+
+
+Looks like UW students study more than the national average.
+
+
+<br>
+
+
+But there are at least two explanations for this observation. . . 
+
+
+
+:::
+
+::: {.column width="65%"}
+:::  {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 630px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: -75px; text-align: left;"}
+[Explanation 2:]{.underline .center}
+
+* We have drawn an unusual sample of UW students when, in reality, UW students don’t study more than the national average of 13 hours/week
+* The difference we observe between the sample mean and the national average is just due to [chance sampling error]{.underline}
+:::
+
+:::  {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 125px; padding: 5px 5px 5px 5px; position: absolute; bottom: 325px; right: -75px; text-align: left; font-size: 1.25"}
+$\mu{UW} = 13$
+:::
+:::
+
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+<br>
+
+::: {style="color: #a68100; font-size: 1.25em"}
+> Question: Do UW students really study more than the national average?
+:::
+
+<br>
+
+::: {style="font-size: 1.25em"}
+Have to decide between two explanations. . . 
+[**TWO HYPOTHESES**]{style="color: #e93cac;"}
+:::
+:::
+
+::: {.column width="70%"}
+
+:::  {.fragment fragment-index=1 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 125px; padding: 5px 5px 5px 5px; position: absolute; top: 135px; right: -75px; text-align: left; font-size: 1.25"}
+$\mu{UW} > 13$
+:::
+
+:::  {.fragment fragment-index=1 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 630px; padding: 5px 5px 5px 5px; position: absolute; top: 25px; right: 75px; text-align: left;"}
+[Explanation 1:]{.underline .center}
+
+* UW students really do study more than 13 hours/week, on average<br>
+* In other words, the observed differences between sample mean and the national average reflects a [real difference]{.underline} between the [population mean]{.underline} for all UW students and the national average
+:::
+
+:::  {.fragment fragment-index=2 style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 125px; padding: 5px 5px 5px 5px; position: absolute; bottom: 135px; right: -75px; text-align: left; font-size: 1.25"}
+$\mu{UW} = 13$
+:::
+
+:::  {.fragment fragment-index=2 style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 630px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: 75px; text-align: left;"}
+[Explanation 2:]{.underline .center}
+
+* We have drawn an unusual sample of UW students when, in reality, UW students don’t study more than the national average of 13 hours/week
+* The difference we observe between the sample mean and the national average is just due to [chance sampling error]{.underline}
+:::
+
+:::
+
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+<br>
+
+::: {.fragment fragment-index=2 style="font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+States that there **IS** a real difference in the population (difference not just due to chance)
+:::
+
+<br>
+
+::: {style="font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+States that there is **NO** real difference in the population (sample result happened by chance)
+:::
+:::
+
+::: {.column width="70%"}
+
+:::  {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 125px; padding: 5px 5px 5px 5px; position: absolute; top: 135px; right: -75px; text-align: left; font-size: 1.25"}
+$\mu{UW} > 13$
+:::
+
+:::  {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 630px; padding: 5px 5px 5px 5px; position: absolute; top: 25px; right: 75px; text-align: left;"}
+[Explanation 1:]{.underline .center}
+
+* UW students really do study more than 13 hours/week, on average<br>
+* In other words, the observed differences between sample mean and the national average reflects a [real difference]{.underline} between the [population mean]{.underline} for all UW students and the national average
+:::
+
+:::  {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 125px; padding: 5px 5px 5px 5px; position: absolute; bottom: 135px; right: -75px; text-align: left; font-size: 1.25"}
+$\mu{UW} = 13$
+:::
+
+:::  {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 630px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: 75px; text-align: left;"}
+[Explanation 2:]{.underline .center}
+
+* We have drawn an unusual sample of UW students when, in reality, UW students don’t study more than the national average of 13 hours/week
+* The difference we observe between the sample mean and the national average is just due to [chance sampling error]{.underline}
+:::
+
+:::
+
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+::: fragment
+#### Key question:
+[How likely is it that we would observe a sample mean of 14.5 if, in reality, the population of UW students really don’t study more than 13 hours per week?]{style="color: #e93cac;"}
+:::
+
+* Set up a **test** assuming that the null $H_0$ is true and see whether the facts of our sample contradict that assumption.
+    *  In other words, if the null hypothesis were true, [how likely]{.underline} is it that the sample result just occurred by chance?
+
+::: {.fragment style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 650px; padding: 5px 5px 5px 5px; position: absolute; bottom: 75px; right: 0px; text-align: center;"}
+If the probability of observing the sample result is low (i.e., sample results are really inconsistent with the null hypothesis) then we [**REJECT**]{.underline} the null hypothesis.
+
+<br>
+
+This would [**SUPPORT**]{.underline} the alternative hypothesis.
+:::
+
+:::
+
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+
+#### Key question:
+[How likely is it that we would observe a sample mean of 14.5 if, in reality, the population of UW students really don’t study more than 13 hours per week?]{style="color: #e93cac;"}
+
+* Set up a **test** assuming that the null $H_0$ is true and see whether the facts of our sample contradict that assumption.
+    *  In other words, if the null hypothesis were true, [how likely]{.underline} is it that the sample result just occurred by chance?
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 650px; padding: 5px 5px 5px 5px; position: absolute; bottom: 40px; right: 0px; text-align: center;"}
+If, on the other hand, the probability of observing the sample result is too high (i.e., sample results are somewhat consistent with the null hypothesis) then we **FAIL TO REJECT** the null hypothesis.
+
+
+<br>
+
+This would **FAIL TO SUPPORT** the alternative hypothesis.
+:::
+
+:::
+
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+
+#### Key question:
+[How likely is it that we would observe a sample mean of 14.5 if, in reality, the population of UW students really don’t study more than 13 hours per week?]{style="color: #e93cac;"}
+
+* Set up a **test** assuming that the null $H_0$ is true and see whether the facts of our sample contradict that assumption.
+    *  In other words, if the null hypothesis were true, [how likely]{.underline} is it that the sample result just occurred by chance?
+    
+<br>    
+  
+* Our [**key question**]{style="color: #e93cac;"} requires us to make a [PROBABILITY STATEMENT]{.underline} about the sample.
+    * So, think about the probability distribution from which the sample comes.
+    * Probability distribution of all possible sample results is the [SAMPLING DISTRIBUTION]{.underline}.
+
+
+
+:::
+
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+#### If the [**null hypothesis were true**]{.underline style="color: #754cbc"}, what would the sampling distribution look like?
+
+
+* Central Limit theorem tells us: 
+    * Sampling distribution is **NORMAL**
+    * $\mu_{\bar{X}} = \mu_X$
+    * $\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}$
+
+:::
+
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+#### If the [**null hypothesis were true**]{.underline style="color: #754cbc"}, what would the sampling distribution look like?
+
+* Central Limit theorem tells us: 
+    * Sampling distribution is **NORMAL**
+    * $\mu_{\bar{X}} = \mu_X$
+    * $\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}$
+
+::: {style="position: absolute; bottom: 50px; right: -50px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+hrs <- data.frame(x = c(-3.5, 3.5))
+ggplot(data = hrs, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 1), linewidth = 1) + 
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+
+```
+:::
+
+:::
+
+::::
+
+::: {.fragment fragment-index=1 data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: 175px; text-align: center; font-size: 1.25em"}
+$\mu_{\bar{X}_{UW}} = \mu_{UW} = 13$
+:::
+
+::: {.fragment fragment-index=1 data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; position: absolute; bottom: 325px; right: 450px; text-align: center; font-size: 1.25em"}
+$\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{8.0}{\sqrt{100}}$
+:::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+#### [Key question]{.underline}
+
+[How likely is it that we would observe a sample mean of 14.5 if, in reality, the population of UW students really don’t study more than 13 hours per week?]{style="color: #e93cac;"}
+
+::: {.fragment fragment-index=1}
+Think about where our ONE SINGLE sample falls in this distribution.
+:::
+
+::: {.fragment fragment-index=2 data-id="box5" style="border: 4px solid #e93cac; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; right: -75px; text-align: center;"}
+14.5 is out on this side of the distribution, but how far?
+:::
+
+::: {.fragment fragment-index=3 data-id="box5" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; bottom: 350px; right: 415px; text-align: center;"}
+We need to convert our score to a z-score
+:::
+
+::: {data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; right: 540px; text-align: center; font-size: 1.25em"}
+$\sigma_{\bar{X}} = 0.8$
+:::
+
+::: {.fragment fragment-index=3 data-id="box5" style="width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 185px; right: -100px; text-align: center; font-size: 1.25em"}
+$z = \frac{\bar{X} -  \mu_{0}}{\sigma_{\bar{X}}}$
+<br>
+<br>
+$= \frac{14.5 - 13}{0.8} = 1.875$
+:::
+
+::: {style="position: absolute; bottom: 50px; right: -50px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+hrs <- data.frame(x = c(-3.5, 3.5))
+ggplot(data = hrs, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 1), linewidth = 1) + 
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+
+```
+:::
+
+:::
+
+::::
+
+::: {data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: 175px; text-align: center; font-size: 1.25em"}
+$\mu_{\bar{X}_{UW}} = \mu_{UW} = 13$
+:::
+
+::: {.fragment fragment-index=4 data-id="box5" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; right: -75px; text-align: center; font-size: 0.85em"}
+14.5 is [1.875]{.underline} standard errors away from what we assume under the null hypothesis
+:::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+#### [Key question]{.underline}
+
+[How likely is it that we would observe a sample mean of 14.5 if, in reality, the population of UW students really don’t study more than 13 hours per week?]{style="color: #e93cac;"}
+
+What is the probability of randomly selecting a case that is [1.875]{style="color: #e93cac;"} standard deviations above the mean of a normal distribution?
+
+<br>
+
+::: fragment
+We need to find the<br>probability associated<br>with a [**z-score of 1.875**]{style="color: #e93cac;"}<br>in the [standard<br>normal table](https://www.calculator.net/z-score-calculator.html)
+:::
+
+
+::: {style="position: absolute; bottom: 50px; right: -50px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+hrs <- data.frame(x = c(-3.5, 3.5))
+ggplot(data = hrs, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 1), linewidth = 1) + 
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+
+```
+:::
+
+:::
+
+::::
+
+::: {data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: 175px; text-align: center; font-size: 1.25em"}
+$\mu_{\bar{X}_{UW}} = \mu_{UW} = 13$
+:::
+
+::: {data-id="box5" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; right: -75px; text-align: center; font-size: 0.85em"}
+14.5 is [1.875]{.underline} standard errors away from what we assume under the null hypothesis
+:::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+#### [Key question]{.underline}
+
+[How likely is it that we would observe a sample mean of 14.5 if, in reality, the population of UW students really don’t study more than 13 hours per week?]{style="color: #e93cac;"}
+
+What is the probability of randomly selecting a case that is [1.875]{style="color: #e93cac;"} standard deviations above the mean of a normal distribution?
+
+<br>
+
+::: fragment
+The proportion of cases<br>below z of 1.875<br>is [**0.9696**]{style="background: darkgrey;"}
+:::
+
+
+::: {style="position: absolute; bottom: 50px; right: -50px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+
+# function to shade lower part of distribution
+funcShaded_lower <- function(x, upper_bound) {
+    y = dnorm(x, mean = mu, sd = sigma)
+    y[x > upper_bound] <- NA
+    return(y)
+}
+
+# function to shade middle part of distribution
+funcShaded_middle <- function(x, upper_bound, lower_bound) {
+    y = dnorm(x, mean = mu, sd = sigma)
+    y[x > upper_bound] <- NA
+    y[x < lower_bound] <- NA
+    return(y)
+}
+
+# function to shade upper part of distribution
+funcShaded_upper <- function(x, lower_bound) {
+    y = dnorm(x, mean = mu, sd = sigma)
+    y[x < lower_bound] <- NA
+    return(y)
+}
+
+mu <- 0
+sigma <- 1
+z <- 1.875
+
+hrs <- data.frame(x = c(-3.5, 3.5))
+ggplot(data = hrs, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), linewidth = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = z), 
+                  geom = "area", fill = "darkgrey", alpha = .5) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+
+
+```
+:::
+
+:::
+
+::::
+
+::: {data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: 175px; text-align: center; font-size: 1.25em"}
+$\mu_{\bar{X}_{UW}} = \mu_{UW} = 13$
+:::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+#### [Key question]{.underline}
+
+[How likely is it that we would observe a sample mean of 14.5 if, in reality, the population of UW students really don’t study more than 13 hours per week?]{style="color: #e93cac;"}
+
+What is the probability of randomly selecting a case that is [1.875]{style="color: #e93cac;"} standard deviations above the mean of a normal distribution?
+
+<br>
+
+The proportion of cases<br>below z of 1.875<br>is [**0.9696**]{style="background: darkgrey;"}
+
+
+
+::: {style="position: absolute; bottom: 50px; right: -50px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+
+mu <- 0
+sigma <- 1
+z <- 1.875
+
+hrs <- data.frame(x = c(-3.5, 3.5))
+ggplot(data = hrs, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), linewidth = 1) + 
+  stat_function(fun = funcShaded_upper, args = list(lower_bound = z - 0.1), 
+                  geom = "area", fill = "#e93cac", alpha = .5) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+
+
+```
+:::
+
+:::
+
+::::
+
+::: {data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: 175px; text-align: center; font-size: 1.25em"}
+$\mu_{\bar{X}_{UW}} = \mu_{UW} = 13$
+:::
+
+::: {style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; right: -75px; text-align: center; font-size: 0.85em"}
+Probability of observing a case from this part is $1 -.9696 =.0304$
+
+:::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+#### [Key question]{.underline}
+
+[How likely is it that we would observe a sample mean of 14.5 if, in reality, the population of UW students really don’t study more than 13 hours per week?]{style="color: #e93cac;"}
+
+**So, the probability of randomly selecting a sample with a mean as large as 14.5 from a population with a mean of 13 is only 0.0304**
+
+<br>
+
+The proportion of cases<br>below z of 1.875<br>is [**0.9696**]{style="background: darkgrey;"}
+
+
+
+::: {style="position: absolute; bottom: 50px; right: -50px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+
+mu <- 0
+sigma <- 1
+z <- 1.875
+
+hrs <- data.frame(x = c(-3.5, 3.5))
+ggplot(data = hrs, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), linewidth = 1) + 
+  stat_function(fun = funcShaded_upper, args = list(lower_bound = z - 0.1), 
+                  geom = "area", fill = "#e93cac", alpha = .5) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+
+
+```
+:::
+
+:::
+
+::::
+
+::: {data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: 175px; text-align: center; font-size: 1.25em"}
+$\mu_{\bar{X}_{UW}} = \mu_{UW} = 13$
+:::
+
+::: {style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; right: -75px; text-align: center; font-size: 0.85em"}
+Probability of observing a case from this part is $1 -.9696 =.0304$
+
+:::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+#### [Key question]{.underline}
+
+[How likely is it that we would observe a sample mean of 14.5 if, in reality, the population of UW students really don’t study more than 13 hours per week?]{style="color: #e93cac;"}
+
+**So, the probability of randomly selecting a sample with a mean as large as 14.5 from a population with a mean of 13 is only [0.0304]{style="color: #a68100;"}**
+
+<br>
+
+:::
+
+::::
+
+::: {.fragment style="font-size: 1.5em; position: absolute; top: 275px; left: 350px"}
+> [**P-VALUE**]{style="color: #a68100;"}: The probability of observing the sample result if the null hypothesis were actually true.
+:::
+
+::: {.fragment style="font-size: 1.25em; position: absolute; bottom: 50px; left: 450px"}
+i.e., the probability that the null hypothesis is [**true**]{.underline}, given our sample results
+:::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+#### [Key question]{.underline}
+
+[How likely is it that we would observe a sample mean of 14.5 if, in reality, the population of UW students really don’t study more than 13 hours per week?]{style="color: #e93cac;"}
+
+**So, the probability of randomly selecting a sample with a mean as large as 14.5 from a population with a mean of 13 is only [0.0304]{style="color: #a68100;"}**
+
+<br>
+
+:::
+
+::::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 650px; padding: 5px 5px 5px 5px; position: absolute; bottom: 200px; right: 0px; text-align: center;"}
+Since the [**P-VALUE**]{style="background: #a68100;"} is small (the sample result is unlikely to have occurred if the null hypothesis were actually true we
+<br> 
+[**REJECT THE NULL HYPOTHESIS**]{style="font-size: 1.25em"}
+:::
+
+::: {.fragment style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 40px; right: 40px; text-align: center;"}
+[**SUPPORT THE ALTERNATIVE HYPOTHESIS**]{style="font-size: 1.25em"}
+:::
+
+---
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #6e8e13"}
+**ALTERNATIVE HYPOTHESIS ($H_a$)**<br>
+$$\mu{UW} > 13$$
+[(*sample result reflects a real difference*)]{.smaller}
+:::
+
+<br>
+
+::: {style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.20em; color: #754cbc"}
+**NULL**<br>**HYPOTHESIS: ($H_0$)**<br>
+$$\mu{UW} = 13$$
+[(*sample result just happened by chance*)]{.smaller}
+:::
+:::
+
+::: {.column width="70%"}
+
+#### [Key question]{.underline}
+
+[How likely is it that we would observe a sample mean of 14.5 if, in reality, the population of UW students really don’t study more than 13 hours per week?]{style="color: #e93cac;"}
+
+<br>
+
+* When we reject the null hypothesis we say that the sample result is [**statistically significant**]{.underline style="color: #e93cac;"}
+    * statistically unlikely to have occurred just by chance
+    * Likely represents a real difference in the population
+
+<br>
+
+:::
+
+::::
+
+
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 40px; right: 40px; text-align: center;"}
+[**SUPPORT THE ALTERNATIVE HYPOTHESIS**]{style="font-size: 1.25em"}
+:::
 
 ## Alternative versus null hypothesis
+
+
 
 ## Example
 
