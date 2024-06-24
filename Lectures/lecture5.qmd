@@ -1292,7 +1292,8 @@ If, 95% of the samples are within 1.96 standard errors of the true population me
 ::: incremental
 * The sampling distribution and CLT tells us how close to the population mean ($\mu$) the sample mean ($\bar{X}$) is likely to be
 * We can use this knowledge to figure out how close the true population mean ($\mu$) is likely to be to the one sample mean ($\bar{X}$)that we observe
-* Build a confidence interval around our sample statistic (mean) to define the range in which we think the population parameter can be found
+* Build a confidence interval around our sample statistic (mean) to define the range in which we think the population parameter can be found...
+    * [... and quantify how likely it is that we are right]{style="color:#e93cac"}
 :::
 
 ## Using these tools for inference

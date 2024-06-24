@@ -921,7 +921,7 @@
     "href": "lectures/lecture6.html#estimating-population-proportions-or-percentages",
     "title": "",
     "section": "Estimating Population Proportions (or percentages)",
-    "text": "Estimating Population Proportions (or percentages)"
+    "text": "Estimating Population Proportions (or percentages)\n\n\nGoal:\n\nUse the sample proportion (\\(\\widehat{p}\\)) to construct a confidence interval in which we believe the true population proportion (\\(P\\))1 is located\n\n\n\nExample:\n\nWant to know the proportion of UW students who are employed during the school year\nPopulation proportion, \\(P\\), is not observable\nUse sample information to estimate \\(P\\)\n\n\\(n = 200\\)\nSample proportion, \\(\\hat{p} = 0.42\\)\n\n\n\nSometimes \\(\\pi\\)"
   },
   {
     "objectID": "lectures/lecture6.html#step-1-decide-on-a-confidence-level-and-corresponding-z-score-1",
@@ -2601,7 +2601,7 @@
     "href": "lectures/lecture5.html#confidence-intervals",
     "title": "",
     "section": "Confidence intervals",
-    "text": "Confidence intervals\n\nThe BIG IDEA:\n\n\nThe sampling distribution and CLT tells us how close to the population mean (\\(\\mu\\)) the sample mean (\\(\\bar{X}\\)) is likely to be\nWe can use this knowledge to figure out how close the true population mean (\\(\\mu\\)) is likely to be to the one sample mean (\\(\\bar{X}\\))that we observe\nBuild a confidence interval around our sample statistic (mean) to define the range in which we think the population parameter can be found"
+    "text": "Confidence intervals\n\nThe BIG IDEA:\n\n\nThe sampling distribution and CLT tells us how close to the population mean (\\(\\mu\\)) the sample mean (\\(\\bar{X}\\)) is likely to be\nWe can use this knowledge to figure out how close the true population mean (\\(\\mu\\)) is likely to be to the one sample mean (\\(\\bar{X}\\))that we observe\nBuild a confidence interval around our sample statistic (mean) to define the range in which we think the population parameter can be found…\n\n… and quantify how likely it is that we are right"
   },
   {
     "objectID": "lectures/lecture5.html#using-these-tools-for-inference-1",
@@ -2616,5 +2616,222 @@
     "title": "",
     "section": "Confidence intervals",
     "text": "Confidence intervals\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nCreate a range of scores, centered on the sample mean, in which we think the population mean is likely to be located\n\n\nBuilding a margin of error around our sample mean\n\n\nConfidence interval: \\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n⬅️\n\n\nAll confidence intervals take this form"
+  },
+  {
+    "objectID": "lectures/lecture6.html#using-these-tools-for-inference",
+    "href": "lectures/lecture6.html#using-these-tools-for-inference",
+    "title": "",
+    "section": "Using these tools for inference",
+    "text": "Using these tools for inference\nExample: Want to know how much UW students study on average\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)\n\n\nSample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)\n\n\nFor example: draw a random sample of 100 students and observe \\(\\bar{X} = 14.5\\)\n\n\nPopulation parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)\n\n\nOur goal: Estimate the unknown population parameter \\(\\mu_x = ?\\)"
+  },
+  {
+    "objectID": "lectures/lecture6.html#sampling-distribution",
+    "href": "lectures/lecture6.html#sampling-distribution",
+    "title": "",
+    "section": "Sampling distribution",
+    "text": "Sampling distribution\n\n\n \n\n\nSampling Distribution A theoretical probability distribution of all possible sample values for the statistic in which we are interested.\n\n\n\n\n\n\nKey tool for inferential statistics\n\nAllows us to think about how our one single sample result relates to all possible sample results and, by extension, the population we are interested in drawing inferences about."
+  },
+  {
+    "objectID": "lectures/lecture6.html#three-types-of-distributions",
+    "href": "lectures/lecture6.html#three-types-of-distributions",
+    "title": "",
+    "section": "Three types of distributions",
+    "text": "Three types of distributions"
+  },
+  {
+    "objectID": "lectures/lecture6.html#implication-of-central-limit-theorem",
+    "href": "lectures/lecture6.html#implication-of-central-limit-theorem",
+    "title": "",
+    "section": "Implication of central limit theorem",
+    "text": "Implication of central limit theorem\n\nCentral limit theorem tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:\n\nNormally distributed\nMean: \\(\\mu_\\bar{X}\\) \\(= \\mu_X\\)\nStandard Error = \\(\\sigma_\\bar{X}\\) \\(= \\frac{\\sigma}{\\sqrt{n}}\\)\n\n\n\nStandard error: The the standard deviationin the sampling distribution (in this case, of allpossible sample means)"
+  },
+  {
+    "objectID": "lectures/lecture6.html#confidence-intervals",
+    "href": "lectures/lecture6.html#confidence-intervals",
+    "title": "",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\nThe BIG IDEA:\n\n\nThe sampling distribution and CLT tells us how close to the population mean (\\(\\mu\\)) the sample mean (\\(\\bar{X}\\)) is likely to be\nWe can use this knowledge to figure out how close the true population mean (\\(\\mu\\)) is likely to be to the one sample mean (\\(\\bar{X}\\))that we observe\nBuild a confidence interval around our sample statistic (mean) to define the range in which we think the population parameter can be found…\n\n… and quantify how likely it is that we are right"
+  },
+  {
+    "objectID": "lectures/lecture6.html#using-these-tools-for-inference-1",
+    "href": "lectures/lecture6.html#using-these-tools-for-inference-1",
+    "title": "",
+    "section": "Using these tools for inference",
+    "text": "Using these tools for inference\nExample: Want to know how much UW students study on average\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)\n\n\nSample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)\n\n\nFor example: draw a random sample of 100 students and observe \\(\\bar{X} = 14.5\\)\n\n\nPopulation parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)\n\n\nOur goal: Estimate the unknown population parameter \\(\\mu_x = ?\\)"
+  },
+  {
+    "objectID": "lectures/lecture6.html#confidence-intervals-1",
+    "href": "lectures/lecture6.html#confidence-intervals-1",
+    "title": "",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nCreate a range of scores, centered on the sample mean, in which we think the population mean is likely to be located\n\n\nBuilding a margin of error around our sample mean\n\n\nConfidence interval: \\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n⬅️\n\n\nAll confidence intervals take this form"
+  },
+  {
+    "objectID": "lectures/lecture6.html#sampling-distribution-1",
+    "href": "lectures/lecture6.html#sampling-distribution-1",
+    "title": "",
+    "section": "Sampling distribution",
+    "text": "Sampling distribution"
+  },
+  {
+    "objectID": "lectures/lecture6.html#central-limit-theorem",
+    "href": "lectures/lecture6.html#central-limit-theorem",
+    "title": "",
+    "section": "Central limit theorem",
+    "text": "Central limit theorem"
+  },
+  {
+    "objectID": "lectures/lecture6.html#the-big-idea-behind-confidence-intervals",
+    "href": "lectures/lecture6.html#the-big-idea-behind-confidence-intervals",
+    "title": "",
+    "section": "The BIG idea behind confidence intervals",
+    "text": "The BIG idea behind confidence intervals"
+  },
+  {
+    "objectID": "lectures/lecture6.html#confidence-intervals-2",
+    "href": "lectures/lecture6.html#confidence-intervals-2",
+    "title": "",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nConfidence interval: \\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n\\(\\text{sample statistic} \\pm z \\text{(standard error)}\\)\n\n\n\\(\\bar{X} \\pm z(\\sigma_{\\bar{X}})\\)"
+  },
+  {
+    "objectID": "lectures/lecture6.html#calculating-confidence-intervals",
+    "href": "lectures/lecture6.html#calculating-confidence-intervals",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "lectures/lecture6.html#step-1-decide-on-a-confidence-level-and-corresponding-z-score",
+    "href": "lectures/lecture6.html#step-1-decide-on-a-confidence-level-and-corresponding-z-score",
+    "title": "",
+    "section": "Step 1: Decide on a confidence level and corresponding z-score",
+    "text": "Step 1: Decide on a confidence level and corresponding z-score"
+  },
+  {
+    "objectID": "lectures/lecture6.html#step-2-calculate-the-standard-error",
+    "href": "lectures/lecture6.html#step-2-calculate-the-standard-error",
+    "title": "",
+    "section": "Step 2: Calculate the standard error",
+    "text": "Step 2: Calculate the standard error"
+  },
+  {
+    "objectID": "lectures/lecture6.html#step-3-calculate-the-margin-of-error",
+    "href": "lectures/lecture6.html#step-3-calculate-the-margin-of-error",
+    "title": "",
+    "section": "Step 3: Calculate the margin of error",
+    "text": "Step 3: Calculate the margin of error"
+  },
+  {
+    "objectID": "lectures/lecture6.html#step-4-calculate-the-confidence-interval",
+    "href": "lectures/lecture6.html#step-4-calculate-the-confidence-interval",
+    "title": "",
+    "section": "Step 4: Calculate the confidence interval",
+    "text": "Step 4: Calculate the confidence interval"
+  },
+  {
+    "objectID": "lectures/lecture6.html#step-5-interpret-the-results",
+    "href": "lectures/lecture6.html#step-5-interpret-the-results",
+    "title": "",
+    "section": "Step 5: Interpret the results",
+    "text": "Step 5: Interpret the results"
+  },
+  {
+    "objectID": "lectures/lecture6.html#confidence-interval-example",
+    "href": "lectures/lecture6.html#confidence-interval-example",
+    "title": "",
+    "section": "Confidence interval example",
+    "text": "Confidence interval example"
+  },
+  {
+    "objectID": "lectures/lecture6.html#factors-affecting-precision-width-of-the-confidence-interval",
+    "href": "lectures/lecture6.html#factors-affecting-precision-width-of-the-confidence-interval",
+    "title": "",
+    "section": "Factors affecting precision (width) of the confidence interval",
+    "text": "Factors affecting precision (width) of the confidence interval\n\n\nWhich confidence interval would you prefer?\n\nAverage study time of UW students is between 10.5 and 18.5 hours  OR\nAverage study time of UW students is between 14.25 and 14.75 hours\n\n\n\n\nAll else being equal, the second one is preferable because it is more precise  (narrower, with smaller margin of error)"
+  },
+  {
+    "objectID": "lectures/lecture6.html#confidence-intervals-3",
+    "href": "lectures/lecture6.html#confidence-intervals-3",
+    "title": "",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\n\\[\n\\widehat{p}\n\\]\n\n\n\n\n\n\n\n\nCreate our 95% confidence interval by going 1.96 standard errors on each side of the sample proportion\n\n\nBuilding a margin of error around our sample mean\n\n\nConfidence interval: \\(\\text{sample statistic} \\pm \\text{margin of error}\\)"
+  },
+  {
+    "objectID": "lectures/lecture6.html#calculating-confidence-intervals-1",
+    "href": "lectures/lecture6.html#calculating-confidence-intervals-1",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "lectures/lecture6.html#calculating-confidence-intervals-2",
+    "href": "lectures/lecture6.html#calculating-confidence-intervals-2",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "lectures/lecture6.html#calculating-confidence-intervals-3",
+    "href": "lectures/lecture6.html#calculating-confidence-intervals-3",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "lectures/lecture6.html#calculating-confidence-intervals-4",
+    "href": "lectures/lecture6.html#calculating-confidence-intervals-4",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "lectures/lecture6.html#calculating-confidence-intervals-5",
+    "href": "lectures/lecture6.html#calculating-confidence-intervals-5",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "lectures/lecture6.html#step-1-decide-on-a-confidence-level-and-corresponding-z-score-2",
+    "href": "lectures/lecture6.html#step-1-decide-on-a-confidence-level-and-corresponding-z-score-2",
+    "title": "",
+    "section": "Step 1: Decide on a confidence level and corresponding z-score",
+    "text": "Step 1: Decide on a confidence level and corresponding z-score"
+  },
+  {
+    "objectID": "lectures/lecture6.html#another-confidence-interval-example",
+    "href": "lectures/lecture6.html#another-confidence-interval-example",
+    "title": "",
+    "section": "Another confidence interval example",
+    "text": "Another confidence interval example\nMean texts per hour\n\n\n\n\nSuppose that the number of text messages sent per hour by the population of teenagers has a standard deviation of 3\nYou take a random sample of 144 teenagers and find that the mean number of text messages per hour is 4.5\nCalculate a 90% confidence interval to estimate the average number of text messages per hour in the population\n\n\n\n\n\nStep 1: Use z = 1.645\n\n\n\n\nStep 2: Calculate standard error \\[\n\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}} = \\frac{3.0}{\\sqrt{144}} = 0.25\n\\]\n\n\n\n\nStep 3: Calculate the margin of error \\[\nz(\\frac{\\sigma}{\\sqrt{n}}) = (1.645)(0.25)= 0.411\n\\]\n\n\n\n\n\n\nZ-scores come from Standard Normal Table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n50%\n60%\n70%\n80%\n90%\n95%\n96%\n98%\n99%\n99.5%\n99.9%\n\n\n\n\nZ*\n0.674\n0.841\n1.036\n1.282\n1.645\n1.960\n2.054\n2.326\n2.576\n2.807\n3.291\n\n\n\n\n\n\\(\\text{sample statistic} \\pm \\text{margin of error}\\)"
+  },
+  {
+    "objectID": "lectures/lecture6.html#another-confidence-interval-example-1",
+    "href": "lectures/lecture6.html#another-confidence-interval-example-1",
+    "title": "",
+    "section": "Another confidence interval example",
+    "text": "Another confidence interval example\nMean texts per hour\n\n\\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n\n\nSuppose that the number of text messages sent per hour by the population of teenagers has a standard deviation of 3\nYou take a random sample of 144 teenagers and find that the mean number of text messages per hour is 4.5\nCalculate a 90% confidence interval to estimate the average number of text messages per hour in the population\n\n\n\nStep 4: Calculate the confidence interval \\[\n4.5 + 0.411 = 4.911\n\\] \\[\n4.5 - 0.411 = 4.089\n\\]\n\n\n\\(90\\%\\) confidence interval: \\(4.09\\) to \\(4.91\\) hours\n\n\n\n\nZ-scores come from Standard Normal Table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n50%\n60%\n70%\n80%\n90%\n95%\n96%\n98%\n99%\n99.5%\n99.9%\n\n\n\n\nZ*\n0.674\n0.841\n1.036\n1.282\n1.645\n1.960\n2.054\n2.326\n2.576\n2.807\n3.291"
+  },
+  {
+    "objectID": "lectures/lecture6.html#another-confidence-interval-example-2",
+    "href": "lectures/lecture6.html#another-confidence-interval-example-2",
+    "title": "",
+    "section": "Another confidence interval example",
+    "text": "Another confidence interval example\nMean texts per hour\n\n\\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n\n\nSuppose that the number of text messages sent per hour by the population of teenagers has a standard deviation of 3\nYou take a random sample of 144 teenagers and find that the mean number of text messages per hour is 4.5\nCalculate a 90% confidence interval to estimate the average number of text messages per hour in the population\n\n\n\nStep 5: Interpret the results   We are 90% confident that the average number of texts sent per hour for the population of teenagers is between 4.09 and 4.91\n\n\n\n\nZ-scores come from Standard Normal Table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n50%\n60%\n70%\n80%\n90%\n95%\n96%\n98%\n99%\n99.5%\n99.9%\n\n\n\n\nZ*\n0.674\n0.841\n1.036\n1.282\n1.645\n1.960\n2.054\n2.326\n2.576\n2.807\n3.291"
+  },
+  {
+    "objectID": "lectures/lecture6.html#factors-affecting-precision-width-of-the-confidence-interval-1",
+    "href": "lectures/lecture6.html#factors-affecting-precision-width-of-the-confidence-interval-1",
+    "title": "",
+    "section": "Factors affecting precision (width) of the confidence interval",
+    "text": "Factors affecting precision (width) of the confidence interval\n\n\\[\n\\text{margin of error} = z(\\frac{\\sigma}{\\sqrt{n}})\n\\]\n\n\n\nConfidence level\n\nTrade-off: higher confidence = lower precision (higher margin of error)\n\n\n\n\n\nZ-scores come from Standard Normal Table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n50%\n60%\n70%\n80%\n90%\n95%\n96%\n98%\n99%\n99.5%\n99.9%\n\n\n\n\nZ*\n0.674\n0.841\n1.036\n1.282\n1.645\n1.960\n2.054\n2.326\n2.576\n2.807\n3.291\n\n\n\n\n\n\nSample size\n\nLarger sample = smaller standard error = greater precision (lower margin of error)\n\n\n\n\n\nLevel of variation in the population\n\nMore variation in population = more variation in possible sample results = larger standard error = bigger margin of error"
+  },
+  {
+    "objectID": "lectures/lecture6.html#calculating-confidence-intervals-6",
+    "href": "lectures/lecture6.html#calculating-confidence-intervals-6",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
   }
 ]
