@@ -1358,6 +1358,3 @@ $\text{sample statistic} \pm \text{margin of error}$
 All confidence intervals take this form
 :::
 
-# Homework{.section-title background-color="#e8e3d3"}
-
-## {data-menu-title="Homework 4" background-iframe="https://vsass.github.io/SOC221/homework/homework4.html" background-interactive=TRUE}
