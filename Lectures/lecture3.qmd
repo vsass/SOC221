@@ -242,7 +242,7 @@ $$
 #### Number of paper cups used per week by a sample of 67 college students
 :::
 
-::: {.fragment fragment-index=1 .r-fit-text}
+::: {.fragment fragment-index=1 style="font-size: 2em"}
 ```{r}
 #| echo: false
 options(width = 50)
@@ -251,11 +251,11 @@ cups
 ```
 :::
 
-::: {.fragment fragment-index=3 style="font-size: 1.5em"}
+<br>
+
+::: {.fragment fragment-index=3 style="font-size: 1.75em"}
 We could apply 
 [$\bar{X} = \frac{\Sigma  X_i}{N}$]{style="color:#e93cac"}
-
-<br>
 
 :::
 
@@ -265,9 +265,7 @@ $$
 $$
 :::
 
-<br> 
-
-::: {.fragment fragment-index=4 style="font-size: 1.5em; position: absolute; bottom: 0px; right: 0px"}
+::: {.fragment fragment-index=4 style="font-size: 1.5em; position: absolute; bottom: 50px; right: 0px"}
 ...but this would be inefficient
 
 :::
@@ -992,7 +990,7 @@ Mode is <span style="color:#e93cac;">21</span>
 
 ::::
 
-## Example calculation
+## Example calculation: What is the mode?
 
 <br>
 
@@ -1053,7 +1051,7 @@ Mode is <span style="color:#e93cac;">21</span>
   * Median = $150
   * Mean = $1,200
   
-## Practice 
+## Practice {visibility="hidden"}
 
 #### Choose the “best” measure of central tendency for the following
 
@@ -1078,7 +1076,7 @@ Decision: [MEDIAN]{style="color:#e93cac"}
 :::
 :::
 
-## Practice 
+## Practice {visibility="hidden"}
 
 #### Choose the “best” measure of central tendency for the following
 
@@ -1101,7 +1099,7 @@ Decision: [MODE]{style="color:#e93cac"}
 :::
 :::
 
-## Practice 
+## Practice {visibility="hidden"}
 
 #### Choose the “best” measure of central tendency for the following
 
@@ -1127,7 +1125,7 @@ Decision: [MEDIAN]{style="color:#e93cac"}
 :::
 :::
 
-## Practice 
+## Practice {visibility="hidden"}
 
 #### Choose the “best” measure of central tendency for the following
 
@@ -1153,7 +1151,7 @@ Decision: [MEAN]{style="color:#e93cac"}
 :::
 :::
 
-## Practice 
+## Practice {visibility="hidden"}
 
 #### Choose the “best” measure of central tendency for the following
 
@@ -1177,7 +1175,7 @@ Decision: [MEAN]{style="color:#e93cac"}
 :::
 :::
 
-## Practice 
+## Practice {visibility="hidden"}
 
 #### Choose the “best” measure of central tendency for the following
 
@@ -1964,10 +1962,6 @@ You can read more about the reason we use squared deviations [here](https://stat
 | **MEAN** | **73** |   |   | 
 
 : {tbl-colwidths="[25, 25, 25, 25]"}
-  
-::: {.fragment fragment-index=1 data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 375px; height: 150px; padding: 0px 0px 10px 20px; position: absolute; top: 175px; right: 300px;"}
-Squaring the deviations is just a way to make sure that positive and negative deviations don't cancel each other out
-:::
 
 ::: {.aside .fragment fragment-index=1}
 You can read more about the reason we use squared deviations [here](https://stats.stackexchange.com/questions/118/why-square-the-difference-instead-of-taking-the-absolute-value-in-standard-devia). 
@@ -2025,7 +2019,7 @@ Variance = average [squared]{.underline} deviation from the mean
 
 : {tbl-colwidths="[25, 25, 25, 25]"}
   
-::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 300px; height: 300px; padding: 0px 0px 20px 10px; position: absolute; top: 200px; left: 350px; font-size:1.25em; text-align:center;"}
+::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 200px; left: 350px; font-size:1.25em; text-align:center;"}
 $$
 s_x = \sqrt{\frac{\Sigma(X_i - \bar{X})^2}{n - 1}}
 $$
@@ -2408,4 +2402,4 @@ $$
 
 # Homework{.section-title background-color="#e8e3d3"}
 
-## {data-menu-title="Homework 3" background-iframe="https://vsass.github.io/SOC221/homework/homework3.html" background-interactive=TRUE}
+## {data-menu-title="Homework 2" background-iframe="https://vsass.github.io/SOC221/homework/homework2.html" background-interactive=TRUE}
