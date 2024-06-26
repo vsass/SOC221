@@ -3132,8 +3132,8 @@
     "objectID": "Lectures/lecture7.html#example-1",
     "href": "Lectures/lecture7.html#example-1",
     "title": "",
-    "section": "Example 1",
-    "text": "Example 1"
+    "section": "Example",
+    "text": "Example"
   },
   {
     "objectID": "Lectures/lecture7.html#step-1-plan",
@@ -3147,14 +3147,14 @@
     "href": "Lectures/lecture7.html#step-2-calculate",
     "title": "",
     "section": "Step 2: Calculate",
-    "text": "Step 2: Calculate"
+    "text": "Step 2: Calculate\nCalculate test statistic (and p-value)\nThe university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9. They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.\n\nDraw a random sample of students from Greek system:  \\(n = 150\\), Mean = \\(2.3\\) drinks/week\n\n\n\n\n\\[\nH_0: \\mu_{greek} = 2\n\\]\n\n\n\\[\nH_a: \\mu_{greek} \\ne 2\n\\]\n\n\n\nFiguring out how far the sample result is fom \\(H_0\\) and putting it in standard-error units\n\n\n\\[\n\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}} = \\frac{1.9}{\\sqrt{150}} = 0.155\n\\]\n\n\n\n\\(z\\) \\(= \\frac{\\bar{X} - \\mu_0}{\\sigma_{\\bar{X}}}\\)\n\\(\\frac{2.3-2}{0.155} =\\) \\(1.94\\)\n\n\n\n\nSo, the average number of drinks for the Greeks is \\(1.94\\) standard errors above what we assume under \\(H_0\\)"
   },
   {
     "objectID": "Lectures/lecture7.html#step-3-make-a-decision",
     "href": "Lectures/lecture7.html#step-3-make-a-decision",
     "title": "",
     "section": "Step 3: Make a decision",
-    "text": "Step 3: Make a decision"
+    "text": "Step 3: Make a decision\nFail to reject \\(H_0\\) and fail to support \\(H_a\\)\nThe university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9. They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.\n\nDraw a random sample of students from Greek system:  \\(n = 150\\), Mean = \\(2.3\\) drinks/week\n\n\n\n\n\\[\nH_0: \\mu_{greek} = 2\n\\]\n\n\n\\[\nH_a: \\mu_{greek} \\ne 2\n\\]\n\n\n\nSince our test statistic (\\(1.94\\)) is less extreme than the critical value (\\(1.96\\)) we FAIL TO REJECT \\(H_0\\)\n\n\n\nNot enough evidence to say that Greeks drink more than other students\nObserved difference is NOT statistically significant (may have just occurred by chance)"
   },
   {
     "objectID": "Lectures/lecture7.html#one-sided-versus-two-sided-tests",
@@ -3182,7 +3182,7 @@
     "href": "Lectures/lecture7.html#inference-with-the-t-distribution",
     "title": "",
     "section": "Inference with the t-distribution",
-    "text": "Inference with the t-distribution"
+    "text": "Inference with the t-distribution\nWhy use something other than the normal (z) distribution?\n\n\nTYPES OF INFERENCE SO FAR:\n\n\n\n\n\nConfidence intervals: Assume our sampleof 100 UW students comes from a population with a standard deviation of 8.0, estimate the population mean…\n\nHypothesis testing: Say we know that the average study time for the population of college students in the country is 13 hrs/week, with a standard deviation of 8.0. Do UW students really study more than the national average?\n\n\n\nThese types of examples are UNREALISTIC (or at least really rare) because we rarely know the population standard deviation.\n\n\n\n\n\n\\[\n\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\n\n\n\n\n\n\n\\[\ns_{\\bar{X}} = \\frac{s}{\\sqrt{n}}\n\\]\n\n\n\n\n\n\nWhen the population standard deviation is unknown, use the SAMPLE standard deviation to estimate the standard error used in inferences.\n\n\nConfidence intervals: You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a sample standard deviation of 8.25, estimate the population mean.\n\nHypothesis testing: You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a sample standard deviation of 8.25. Test the hypothesis that UW students study more than the national average of 13 hours/week.\n\n\n\nMORE REALISTICS EXAMPLES:\n\n\nPROBLEM: Using sample statistics to maketwo difference inferences  \\(s_x \\Rightarrow \\sigma_x\\)  \\(\\bar{X} \\Rightarrow \\mu_x\\)  = INCREASED UNCERTAINTY\n\n\nThis is especially problematic when the sample size is small!"
   },
   {
     "objectID": "Lectures/lecture7.html#degrees-of-freedom",
@@ -3757,5 +3757,75 @@
     "title": "",
     "section": "Another Example",
     "text": "Another Example"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#one-sided-versus-two-sided-2",
+    "href": "Lectures/lecture7.html#one-sided-versus-two-sided-2",
+    "title": "",
+    "section": "One-sided versus two-sided",
+    "text": "One-sided versus two-sided\n\n\n\nA ONE-SIDED test is one in which we are interested if the unknown population parameter is HIGHER or LOWER than the value assumed under the null hypothesis\n\n\n\n\n\n\n\n\n\n\n\n\nA TWO-SIDED test is one in which we are interested if the unknown population parameter is just DIFFERENT from the value assumed under the null hypothesis\n\n\n\n\n\n\n\n\n\n\n\n\n\nSame null hypothesis (that there is no difference) contradicts both one- and two-sided alternative hypotheses."
+  },
+  {
+    "objectID": "Lectures/lecture7.html#structure-of-hypothesis-determines-the-critical-value",
+    "href": "Lectures/lecture7.html#structure-of-hypothesis-determines-the-critical-value",
+    "title": "",
+    "section": "Structure of hypothesis determines the critical value",
+    "text": "Structure of hypothesis determines the critical value\n\n\nCritical value: The minimum value at which the test statistic would lead you to reject the null hypothesis\n\n\n\nValues that are more extreme than the critical value are so unlikely under the null hypothesis (have such low p-values) that they lead you to believe that the null hypothesis is not true.\nCritical value determined by the alpha level and the structure of the hypothesis (one- or two-sided)"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#step-1-plan-1",
+    "href": "Lectures/lecture7.html#step-1-plan-1",
+    "title": "",
+    "section": "Step 1: Plan",
+    "text": "Step 1: Plan\nChoose your alpha level and find the critical value\nThe university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9. They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.\n\nDraw a random sample of students from Greek system:  \\(n = 150\\), Mean = \\(2.3\\) drinks/week\n\n\n\n\n\\[\nH_0: \\mu_{greek} = 2\n\\]\n\n\n\\[\nH_a: \\mu_{greek} \\ne 2\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis is a TWO-SIDED (non-directional) hypothesis\n\n\nNormal distribution \\(\\alpha = 0.05\\)\n\n\nSo our sample result has to be at least 1.96 standard errors away from what is assumed under \\(H_0\\) for us to reject \\(H_0\\)\n\n\n\\(H_a: \\mu \\ne 0\\) Critical value of \\(z = \\pm 1.96\\)"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#practice",
+    "href": "Lectures/lecture7.html#practice",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.\n\n\n\nStep 1: Plan\n\nState the null and alternative hypotheses\nChoose your alpha level and find the critical value\n\nStep 2: Calculate\n\nCalculate test statistic (and p-value)\n\nStep 3: Make a decision\n\nReject \\(H_0\\) and support \\(H_a\\) if\n\np-value &lt; alpha\nTest statistic more extreme than critical value\n\nFail to reject \\(H_0\\) and fail to support \\(H_a\\) if\n\np-value &gt; alpha\nTest statistic less extreme than critical value"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#step-1-plan-2",
+    "href": "Lectures/lecture7.html#step-1-plan-2",
+    "title": "",
+    "section": "Step 1: Plan",
+    "text": "Step 1: Plan\nState the null and alternative hypotheses\nYou are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.\n\n\n\n\n\\[\nH_0: \\mu_{immig} = 12.75\n\\]\n\n\n\\[\nH_a: \\mu_{immig} \\ne 12.75\n\\]\n\n\n\n\n\n\nSet up a test assuming that the null \\(H_0\\) is true and see whether the facts of our sample contradict that assumption"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#step-1-plan-3",
+    "href": "Lectures/lecture7.html#step-1-plan-3",
+    "title": "",
+    "section": "Step 1: Plan",
+    "text": "Step 1: Plan\nChoose your alpha level and find the critical value\nYou are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.\n\n\n\n\n\\[\nH_0: \\mu_{immig} = 12.75\n\\]\n\n\n\\[\nH_a: \\mu_{immig} \\ne 12.75\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNormal distribution \\(\\alpha = 0.05\\)\n\n\nSo our sample result has to be at least 1.96 standard errors away from what is assumed under \\(H_0\\) for us to reject \\(H_0\\)\n\n\n\\(H_a: \\mu \\ne 0\\) Critical value of \\(z = \\pm 1.96\\)"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#step-2-calculate-1",
+    "href": "Lectures/lecture7.html#step-2-calculate-1",
+    "title": "",
+    "section": "Step 2: Calculate",
+    "text": "Step 2: Calculate\nCalculate test statistic (and p-value)\nYou are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.\n\n\n\n\n\\[\nH_0: \\mu_{immig} = 12.75\n\\]\n\n\n\\[\nH_a: \\mu_{immig} \\ne 12.75\n\\]\n\n\n\n\nFiguring out how far the sample result is fom \\(H_0\\) and putting it in standard-error units\n\n\n\\[\n\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}} = \\frac{4}{\\sqrt{225}} = 0.267\n\\]\n\n\n\n\n\\(z\\) \\(= \\frac{\\bar{X} - \\mu_0}{\\sigma_{\\bar{X}}}\\)\n\n\\(\\frac{13.3-12.75}{0.267} =\\) \\(2.060\\)\n\n\n\n\nMean education for immigrants is 2.06 standard errors above the national average (assumed under \\(H_0\\))"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#step-3-make-a-decision-1",
+    "href": "Lectures/lecture7.html#step-3-make-a-decision-1",
+    "title": "",
+    "section": "Step 3: Make a decision",
+    "text": "Step 3: Make a decision\nReject \\(H_0\\) and support \\(H_a\\) if\nYou are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.\n\n\n\n\n\\[\nH_0: \\mu_{immig} = 12.75\n\\]\n\n\n\\[\nH_a: \\mu_{immig} \\ne 12.75\n\\]\n\n\n\n\nBased on this evidence, it appears that the population of immigrants have, on average, more education than the national average.\nThe observed difference IS statistically significant\n\n\n\nSince our test statistic (2.06) is more extreme than the critical value (1.96) weREJECT \\(H_0\\), FIND EVIDENCE TO SUPPORT \\(H_A\\)"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#inference-with-the-t-distribution-1",
+    "href": "Lectures/lecture7.html#inference-with-the-t-distribution-1",
+    "title": "",
+    "section": "Inference with the t-distribution",
+    "text": "Inference with the t-distribution\nWhy use something other than the normal (z) distribution?\n\n\nAccount for the extra uncertainty by assuming that the sampling distribution follows a t-distribution instead of a normal (z) distribution."
+  },
+  {
+    "objectID": "Lectures/lecture7.html#inference-with-the-t-distribution-2",
+    "href": "Lectures/lecture7.html#inference-with-the-t-distribution-2",
+    "title": "",
+    "section": "Inference with the t-distribution",
+    "text": "Inference with the t-distribution\nWhy use something other than the normal (z) distribution?\nExample\nYou draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a sample standard deviation of 8.25. Estimate the population mean.\n\n\n\n\n\n\n\n\\[\n\\text{Confidence interval} =\n\\]\n\\[\n\\bar{X} \\pm z(\\frac{\\sigma_x}{\\sqrt{n}})\n\\]\n\n\n\n\n\n\n\n\n\\[\n\\text{Confidence interval} =\n\\]\n\\[\n\\bar{X} \\pm t(\\frac{s_x}{\\sqrt{n}})\n\\]"
   }
 ]

@@ -1201,33 +1201,361 @@ Victoria Sass
 </div>
 </section>
 
+<section id="one-sided-versus-two-sided-2" class="slide level2">
+<h2>One-sided versus two-sided</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="text-align: center; font-size: 1.25em; ">
+<p>A <span style="color: #1b8883;"><strong>ONE-SIDED</strong></span> test is one in which we are interested if the unknown population parameter is <strong>HIGHER</strong> <em>or</em> <strong>LOWER</strong> than the value assumed under the null hypothesis</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture7_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="text-align: center; font-size: 1.25em; ">
+<p>A <span style="color: #a68100;"><strong>TWO-SIDED</strong></span> test is one in which we are interested if the unknown population parameter is just <strong>DIFFERENT</strong> from the value assumed under the null hypothesis</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture7_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em;">
+<p>Same null hypothesis (that there is no difference) contradicts both one- and two-sided alternative hypotheses.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="structure-of-hypothesis-determines-the-critical-value">Structure of hypothesis determines the <span style="color: #e93cac;">critical value</span></h3>
+<div style="font-size: 1.5em;">
+<blockquote>
+<p><span style="color: #e93cac;"><strong>Critical value</strong></span>: The minimum value at which the test statistic would lead you to reject the null hypothesis</p>
+</blockquote>
+</div>
+<ul>
+<li>Values that are more extreme than the critical value are so unlikely under the null hypothesis (have such low p-values) that they lead you to believe that the null hypothesis is not true.</li>
+<li>Critical value determined by the <u>alpha level</u> and the <u>structure of the hypothesis</u> (one- or two-sided)</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture7_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture7_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="1" style="background: black; color: white; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 100px; right: 425px; text-align: center">
+<p>Normal<br> distribution<br> <span class="math inline">\(\alpha = 0.05\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 100px; left: -75px; text-align: center">
+<p><span class="math inline">\(H_a: \mu \lt 0\)</span><br> Critical value of<br> <span class="math inline">\(z = -1.65\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 100px; right: -75px; text-align: center">
+<p><span class="math inline">\(H_a: \mu \ne 0\)</span><br> Critical value of<br> <span class="math inline">\(z = \pm 1.96\)</span></p>
+</div>
+</section>
+<section id="step-1-plan-1" class="slide level2">
+<h2>Step 1: Plan</h2>
+<h4 id="choose-your-alpha-level-and-find-the-critical-value">Choose your <span style="color: #e93cac;">alpha</span> level and find the <span style="color: #e93cac;">critical value</span></h4>
+<p><em>The university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9. They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.</em></p>
+<div style="text-align: center; font-size: 1.25em">
+<p>Draw a random sample of students from Greek system: <br> <span style="color: #e93cac;"><span class="math inline">\(n = 150\)</span>, Mean = <span class="math inline">\(2.3\)</span> drinks/week</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em">
+<p><span class="math display">\[
+H_0: \mu_{greek} = 2
+\]</span></p>
+</div>
+<div style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em">
+<p><span class="math display">\[
+H_a: \mu_{greek} \ne 2
+\]</span></p>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="fragment" data-fragment-index="2">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture7_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="1" style="background: black; color: white; 15px; width: 375px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; bottom: 125px; left: 400px;">
+<p>This is a <span style="color: #ffc700;"><strong>TWO-SIDED</strong></span> (non-directional) hypothesis</p>
+</div>
+<div class="fragment" data-fragment-index="2" style="background: black; color: white; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 125px; left: 325px; text-align: center">
+<p>Normal<br> distribution<br> <span style="color: #e93cac;"><span class="math inline">\(\alpha = 0.05\)</span></span></p>
+</div>
+<div class="fragment" data-fragment-index="2" style="width: 300px; position: absolute; bottom: 225px; right: -75px; text-align: center; font-size: 0.85em;border: 3px solid black;">
+<p>So our sample result has to be at least <span style="color: #e93cac;">1.96</span> standard errors away from what is assumed under <span class="math inline">\(H_0\)</span> for us to reject <span class="math inline">\(H_0\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 50px; right: -75px; text-align: center">
+<p><span class="math inline">\(H_a: \mu \ne 0\)</span><br> Critical value of<br> <span style="color: #e93cac;"><span class="math inline">\(z = \pm 1.96\)</span></span></p>
+</div>
+</section>
 <section id="step-2-calculate" class="slide level2">
 <h2>Step 2: Calculate</h2>
+<h4 id="calculate-test-statistic-and-p-value">Calculate <span style="color: #e93cac;">test statistic</span> (and <span style="color: #e93cac;">p-value</span>)</h4>
+<p><em>The university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9. They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.</em></p>
+<div style="text-align: center; font-size: 1.25em">
+<p>Draw a random sample of students from Greek system: <br> <span style="color: #e93cac;"><span class="math inline">\(n = 150\)</span>, Mean = <span class="math inline">\(2.3\)</span> drinks/week</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em">
+<p><span class="math display">\[
+H_0: \mu_{greek} = 2
+\]</span></p>
+</div>
+<div style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em">
+<p><span class="math display">\[
+H_a: \mu_{greek} \ne 2
+\]</span></p>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="fragment" data-fragment-index="1">
+<p>Figuring out how far the sample result is fom <span class="math inline">\(H_0\)</span> and putting it in standard-error units</p>
+</div>
+<div class="fragment" data-fragment-index="1" style="font-size: 1.25em">
+<p><span class="math display">\[
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{1.9}{\sqrt{150}} = 0.155
+\]</span></p>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="fragment" data-fragment-index="2" style="font-size: 2em; text-align: end">
+<p><span style="color: #e93cac;"><span class="math inline">\(z\)</span></span> <span class="math inline">\(= \frac{\bar{X} - \mu_0}{\sigma_{\bar{X}}}\)</span></p>
+<p><span class="math inline">\(\frac{2.3-2}{0.155} =\)</span> <span style="color: #e93cac;"><span class="math inline">\(1.94\)</span></span></p>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 800px; padding: 0px 0px 0px 0px; position: absolute; bottom: 0px; right: -50px; text-align: center; font-size: 0.85em">
+<p>So, the average number of drinks for the Greeks is <span style="color: #e93cac;"><span class="math inline">\(1.94\)</span></span> standard errors above what we assume under <span class="math inline">\(H_0\)</span></p>
+</div>
 </section>
 <section id="step-3-make-a-decision" class="slide level2">
 <h2>Step 3: Make a decision</h2>
+<h4 id="fail-to-reject-h_0-and-fail-to-support-h_a"><span style="color: #e93cac;">Fail to reject <span class="math inline">\(H_0\)</span> and fail to support <span class="math inline">\(H_a\)</span></span></h4>
+<p><em>The university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9. They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.</em></p>
+<div style="text-align: center; font-size: 1.25em">
+<p>Draw a random sample of students from Greek system: <br> <span style="color: #e93cac;"><span class="math inline">\(n = 150\)</span>, Mean = <span class="math inline">\(2.3\)</span> drinks/week</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em">
+<p><span class="math display">\[
+H_0: \mu_{greek} = 2
+\]</span></p>
+</div>
+<div style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em">
+<p><span class="math display">\[
+H_a: \mu_{greek} \ne 2
+\]</span></p>
+</div>
+</div><div class="column" style="width:70%;">
+<div style="border: 4px solid #754cbc; border-radius: 15px; text-align: center">
+<p>Since our <span style="color: #e93cac;">test statistic</span> (<span style="color: #e93cac;"><span class="math inline">\(1.94\)</span></span>) is less extreme than the <span style="color: #e93cac;">critical value</span> (<span style="color: #e93cac;"><span class="math inline">\(1.96\)</span></span>) we<br> <span style="color: #754cbc; font-size: 1.25em">FAIL TO REJECT <span class="math inline">\(H_0\)</span></span></p>
+</div>
+<div class="fragment" data-fragment-index="1">
+<ul>
+<li><u>Not enough evidence</u> to say that Greeks drink more than other students</li>
+<li><span class="underling">Observed difference</span> is <strong>NOT statistically significant</strong> (may have just occurred by chance)</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
-<section id="one-sided-versus-two-sided-tests" class="slide level2">
-<h2>One-sided versus two-sided tests</h2>
+<section id="practice" class="slide level2">
+<h2>Practice</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><em>You are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.</em></p>
+</div><div class="column" style="width:60%;">
+<div class="fragment" style="border: 3px solid black;">
+<ul>
+<li><strong>Step 1: Plan</strong>
+<ul>
+<li>State the null and alternative <span style="color: #e93cac;">hypotheses</span></li>
+<li>Choose your <span style="color: #e93cac;">alpha</span> level and find the <span style="color: #e93cac;">critical value</span></li>
+</ul></li>
+<li><strong>Step 2: Calculate</strong>
+<ul>
+<li>Calculate <span style="color: #e93cac;">test statistic</span> (and <span style="color: #e93cac;">p-value</span>)</li>
+</ul></li>
+<li><strong>Step 3: Make a decision</strong>
+<ul>
+<li><span style="color: #6e8e13;">Reject <span class="math inline">\(H_0\)</span> and support <span class="math inline">\(H_a\)</span> if</span>
+<ul>
+<li>p-value &lt; alpha</li>
+<li>Test statistic more extreme than critical value</li>
+</ul></li>
+<li><span style="color: #754cbc;">Fail to reject <span class="math inline">\(H_0\)</span> and fail to support <span class="math inline">\(H_a\)</span> if</span>
+<ul>
+<li>p-value &gt; alpha</li>
+<li>Test statistic less extreme than critical value</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
-<section id="example-1" class="slide level2">
-<h2>Example 1</h2>
+
+
+
 </section>
-<section id="example-2" class="slide level2">
-<h2>Example 2</h2>
-</section></section>
 <section id="break" class="title-slide slide level1 section-title center" data-background-color="#2ad2c9">
 <h1>Break!</h1>
 
 </section>
 
 <section>
-<section id="t-distribution" class="title-slide slide level1 center">
+<section id="t-distribution" class="title-slide slide level1 section-title center" data-background-color="#c5b4e3">
 <h1>t-distribution</h1>
 
 </section>
 <section id="inference-with-the-t-distribution" class="slide level2">
 <h2>Inference with the t-distribution</h2>
+<h3 id="why-use-something-other-than-the-normal-z-distribution"><span style="font-size: 0.9em">Why use something other than the normal (z) distribution?</span></h3>
+<div class="fragment" data-fragment-index="1">
+<!-- -->
+<h4 id="types-of-inference-so-far">TYPES OF INFERENCE SO FAR:</h4>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
+<div class="fragment" data-fragment-index="1">
+<p><u>Confidence intervals:</u> Assume our sample<br>of 100 UW students comes from a <span style="background: #ffc700">population</span> with a <span style="background: #ffc700">standard deviation of 8.0</span>, estimate the population mean…</p>
+<p><br></p>
+<p><u>Hypothesis testing:</u> Say we know that the average study time for the <span style="background: #ffc700">population</span> of college students in the country is 13 hrs/week, with a <span style="background: #ffc700">standard deviation of 8.0</span>. Do UW students really study more than the national average?</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="2" style="font-size: 1.25em">
+<p>These types of examples are <u><strong>UNREALISTIC</strong></u> (or at least really rare) because <strong>we rarely know the <span style="background: #ffc700">population</span> standard deviation</strong>.</p>
+</div>
+<div style="font-size: 1.5em; position: absolute; top: 350px; right: 350px; text-align: center; color: #a68100">
+<div class="fragment fade-in" data-fragment-index="1">
+<div class="fragment shrink" data-fragment-index="3">
+<div class="fragment semi-fade-out" data-fragment-index="3">
+<p><span class="math display">\[
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div style="font-size: 1.5em; position: absolute; top: 350px; right: 100px; color: #e93cac">
+<div class="fragment fade-in" data-fragment-index="3">
+<div class="fragment grow" data-fragment-index="3">
+<p><span class="math display">\[
+s_{\bar{X}} = \frac{s}{\sqrt{n}}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3" style="background: black; color: white; font-size: 1em; width: 500px; padding: 5px 5px 5px 5px; position: absolute; top: 195px; right: 25px; text-align: center">
+<p>When the population standard deviation is unknown, use the <span style="color: #e93cac"><u><strong>SAMPLE standard deviation</strong></u></span> to estimate the standard error used in inferences.</p>
+</div>
+<div class="fragment" data-fragment-index="4" style="background: #e8e3d3; width: 500px; position: absolute; top: 223px; left: 0px;">
+<p><u>Confidence intervals:</u> You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a <span style="background: #e93cac">sample standard deviation of 8.25</span>, estimate the population mean.</p>
+<p><br></p>
+<p><u>Hypothesis testing:</u> You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a <span style="background: #e93cac">sample standard deviation of 8.25</span>. Test the hypothesis that UW students study more than the national average of 13 hours/week.</p>
+</div>
+<div class="fragment" data-fragment-index="4" style="background: #e8e3d3; width: 500px; position: absolute; top: 150px; left: 0px;">
+<!-- -->
+<h4 id="more-realistics-examples">MORE REALISTICS EXAMPLES:</h4>
+</div>
+<div class="fragment" data-fragment-index="5" style="position: absolute; bottom: 0px; right: 150px; border: 2px solid black; padding: 5px 5px 5px 5px;text-align: center ">
+<p><span style="font-size: .75em"><u>PROBLEM</u>: Using sample statistics to make<br>two difference inferences</span> <br> <span style="font-size: 1.25em;"><span class="math inline">\(s_x \Rightarrow \sigma_x\)</span></span> <br> <span style="font-size: 1.25em"><span class="math inline">\(\bar{X} \Rightarrow \mu_x\)</span></span> <br> <span style="background: #aadb1e;">= INCREASED UNCERTAINTY</span></p>
+</div>
+<div class="fragment" data-fragment-index="6" style="position: absolute; bottom: 25px; right: -75px; background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px">
+<p>This is especially problematic when the sample size is <strong>small</strong>!</p>
+</div>
+</section>
+<section id="inference-with-the-t-distribution-1" class="slide level2">
+<h2>Inference with the t-distribution</h2>
+<h3 id="why-use-something-other-than-the-normal-z-distribution-1"><span style="font-size: 0.9em">Why use something other than the normal (z) distribution?</span></h3>
+<p><br></p>
+<div style="font-size: 2.5em; text-align: center">
+<p>Account for the <u><strong>extra uncertainty</strong></u> by assuming that the sampling distribution follows a <span style="color: #e93cac"><u>t-distribution</u></span> instead of a normal (z) distribution.</p>
+</div>
+</section>
+<section id="inference-with-the-t-distribution-2" class="slide level2">
+<h2>Inference with the t-distribution</h2>
+<h3 id="why-use-something-other-than-the-normal-z-distribution-2"><span style="font-size: 0.9em">Why use something other than the normal (z) distribution?</span></h3>
+<h4 id="example">Example</h4>
+<p><em>You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a <span style="color: #e93cac">sample standard deviation of 8.25</span>. Estimate the population mean.</em></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 2em; text-align: center;">
+<div class="fragment fade-in" data-fragment-index="1">
+<div class="fragment shrink" data-fragment-index="2">
+<div class="fragment semi-fade-out" data-fragment-index="2">
+<p><span class="math display">\[
+\text{Confidence interval} =
+\]</span></p>
+<p><span style="color: #a68100"><span class="math display">\[
+\bar{X} \pm z(\frac{\sigma_x}{\sqrt{n}})
+\]</span></span></p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 2em; text-align: center">
+<div class="fragment fade-in" data-fragment-index="2">
+<div class="fragment grow" data-fragment-index="2">
+<p><span class="math display">\[
+\text{Confidence interval} =
+\]</span></p>
+<p><span style="color: #e93cac"><span class="math display">\[
+\bar{X} \pm t(\frac{s_x}{\sqrt{n}})
+\]</span></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="degrees-of-freedom" class="slide level2">
 <h2>Degrees of freedom</h2>
@@ -1243,7 +1571,7 @@ Victoria Sass
 <h1>Hypothesis testing for two samples</h1>
 
 </section>
-<section id="example" class="slide level2">
+<section id="example-1" class="slide level2">
 <h2>Example</h2>
 </section>
 <section id="sampling-theory-and-sampling-distribution" class="slide level2">

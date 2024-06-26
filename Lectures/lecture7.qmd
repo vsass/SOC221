@@ -1380,23 +1380,709 @@ Both of these areas contain strong results consistent with our research hypothes
     * [One-sided]{style="color: #1b8883;"}
 :::
 
+## One-sided versus two-sided
 
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {style="text-align: center; font-size: 1.25em; "}
+A [**ONE-SIDED**]{style="color: #1b8883;"} test is one in which we are interested if the unknown population parameter is **HIGHER** *or* **LOWER** than the value assumed under the null hypothesis
+:::
+
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+
+mu <- 0
+sigma <- 1
+z <- -1.645
+
+eq <- data.frame(x = c(-3.5, 3.5))
+ggplot(data = eq, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), linewidth = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = z), 
+                  geom = "area", fill = "#1b8883", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+```
+
+:::
+
+::: {.column width="50%"}
+::: {style="text-align: center; font-size: 1.25em; "}
+A [**TWO-SIDED**]{style="color: #a68100;"} test is one in which we are interested if the unknown population parameter is just **DIFFERENT** from the value assumed under the null hypothesis
+:::
+
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+
+z2 <- 2.241
+z1 <- -2.241
+
+ggplot(data = eq, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), linewidth = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = z1), 
+                  geom = "area", fill = "#a68100", alpha = .75) +
+  stat_function(fun = funcShaded_upper, args = list(lower_bound = z2), 
+                  geom = "area", fill = "#a68100", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+```
+
+:::
+
+::::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em;"}
+Same null hypothesis (that there is no difference) contradicts both one- and two-sided alternative hypotheses.
+:::
+
+---
+
+### Structure of hypothesis determines the [critical value]{style="color: #e93cac;"}
+
+::: {style="font-size: 1.5em;"}
+> [**Critical value**]{style="color: #e93cac;"}: The minimum value at which the test statistic would lead you to reject the null hypothesis
+:::
+
+* Values that are more extreme than the critical value are so unlikely under the null hypothesis (have such low p-values) that they lead you to believe that the null hypothesis is not true.
+* Critical value determined by the [alpha level]{.underline} and the [structure of the hypothesis]{.underline} (one- or two-sided)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=1}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+
+mu <- 0
+sigma <- 1
+z <- -1.645
+
+eq <- data.frame(x = c(-3.5, 3.5))
+ggplot(data = eq, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), linewidth = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = z), 
+                  geom = "area", fill = "#1b8883", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+```
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=1}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+
+z2 <- 2.241
+z1 <- -2.241
+
+ggplot(data = eq, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), linewidth = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = z1), 
+                  geom = "area", fill = "#a68100", alpha = .75) +
+  stat_function(fun = funcShaded_upper, args = list(lower_bound = z2), 
+                  geom = "area", fill = "#a68100", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+```
+:::
+:::
+
+::::
+
+::: {.fragment fragment-index=1 style="background: black; color: white; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 100px; right: 425px; text-align: center"}
+Normal<br>
+distribution<br>
+$\alpha = 0.05$
+:::
+
+::: {.fragment fragment-index=2 style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 100px; left: -75px; text-align: center"}
+$H_a: \mu \lt 0$<br>
+Critical value of<br>
+$z = -1.65$
+:::
+
+::: {.fragment fragment-index=2 style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 100px; right: -75px; text-align: center"}
+$H_a: \mu \ne 0$<br>
+Critical value of<br>
+$z = \pm 1.96$
+:::
+
+## Step 1: Plan
+
+#### Choose your [alpha]{style="color: #e93cac;"} level and find the [critical value]{style="color: #e93cac;"}
+
+*The university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9.  They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.*
+
+::: {style="text-align: center; font-size: 1.25em"}
+Draw a random sample of students from Greek system: <br>
+[$n = 150$, Mean = $2.3$ drinks/week]{style="color: #e93cac;"}
+:::
+
+:::: {.columns}
+
+::: {.column width="30%"}
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em"}
+$$
+H_0: \mu_{greek} = 2
+$$
+:::
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em"}
+$$
+H_a: \mu_{greek} \ne 2
+$$
+:::
+
+:::
+
+::: {.column width="70%"}
+::: {.fragment fragment-index=2}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+
+z2 <- 2.241
+z1 <- -2.241
+
+ggplot(data = eq, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), linewidth = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = z1), 
+                  geom = "area", fill = "#a68100", alpha = .75) +
+  stat_function(fun = funcShaded_upper, args = list(lower_bound = z2), 
+                  geom = "area", fill = "#a68100", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+```
+:::
+:::
+
+::::
+
+::: {.fragment .fade-in-then-out fragment-index=1 style="background: black; color: white; 15px; width: 375px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; bottom: 125px; left: 400px;"}
+This is a [**TWO-SIDED**]{style="color: #ffc700;"} (non-directional) hypothesis
+:::
+
+::: {.fragment fragment-index=2 style="background: black; color: white; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 125px; left: 325px; text-align: center"}
+Normal<br>
+distribution<br>
+[$\alpha = 0.05$]{style="color: #e93cac;"}
+:::
+
+::: {.fragment fragment-index=2 style="width: 300px; position: absolute; bottom: 225px; right: -75px; text-align: center; font-size: 0.85em;border: 3px solid black;"}
+So our sample result has to be at least [1.96]{style="color: #e93cac;"} standard errors away from what is assumed under $H_0$ for us to reject $H_0$
+:::
+
+::: {.fragment fragment-index=2 style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 50px; right: -75px; text-align: center"}
+$H_a: \mu \ne 0$<br>
+Critical value of<br>
+[$z = \pm 1.96$]{style="color: #e93cac;"}
+:::
 
 ## Step 2: Calculate
 
+#### Calculate [test statistic]{style="color: #e93cac;"} (and [p-value]{style="color: #e93cac;"})
+
+*The university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9.  They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.*
+
+::: {style="text-align: center; font-size: 1.25em"}
+Draw a random sample of students from Greek system: <br>
+[$n = 150$, Mean = $2.3$ drinks/week]{style="color: #e93cac;"}
+:::
+
+:::: {.columns}
+
+::: {.column width="30%"}
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em"}
+$$
+H_0: \mu_{greek} = 2
+$$
+:::
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em"}
+$$
+H_a: \mu_{greek} \ne 2
+$$
+:::
+
+:::
+
+::: {.column width="40%"}
+::: {.fragment fragment-index=1}
+Figuring out how far the sample result is fom $H_0$ and putting it in standard-error units
+:::
+
+::: {.fragment fragment-index=1 style="font-size: 1.25em"}
+$$
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{1.9}{\sqrt{150}} = 0.155
+$$
+:::
+:::
+
+::: {.column width="30%"}
+::: {.fragment fragment-index=2 style="font-size: 2em; text-align: end"}
+[$z$]{style="color: #e93cac;"} $= \frac{\bar{X} - \mu_0}{\sigma_{\bar{X}}}$
+
+$\frac{2.3-2}{0.155} =$ [$1.94$]{style="color: #e93cac;"}
+:::
+:::
+
+::::
+
+::: {.fragment fragment-index=3 style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 800px; padding: 0px 0px 0px 0px; position: absolute; bottom: 0px; right: -50px; text-align: center; font-size: 0.85em"}
+So, the average number of drinks for the Greeks is [$1.94$]{style="color: #e93cac;"} standard errors above what we assume under $H_0$ 
+:::
+
 ## Step 3: Make a decision
 
-## One-sided versus two-sided tests
+#### [Fail to reject $H_0$ and fail to support $H_a$]{style="color: #e93cac;"}
 
-## Example 1
+*The university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9.  They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.*
 
-## Example 2
+::: {style="text-align: center; font-size: 1.25em"}
+Draw a random sample of students from Greek system: <br>
+[$n = 150$, Mean = $2.3$ drinks/week]{style="color: #e93cac;"}
+:::
+
+:::: {.columns}
+
+::: {.column width="30%"}
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em"}
+$$
+H_0: \mu_{greek} = 2
+$$
+:::
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em"}
+$$
+H_a: \mu_{greek} \ne 2
+$$
+:::
+
+:::
+
+::: {.column width="70%"}
+::: {style="border: 4px solid #754cbc; border-radius: 15px; text-align: center"}
+Since our [test statistic]{style="color: #e93cac;"} ([$1.94$]{style="color: #e93cac;"}) is less extreme than the [critical value]{style="color: #e93cac;"} ([$1.96$]{style="color: #e93cac;"}) we<br>
+[FAIL TO REJECT $H_0$]{style="color: #754cbc; font-size: 1.25em"}
+:::
+
+::: {.fragment fragment-index=1}
+* [Not enough evidence]{.underline} to say that Greeks drink more than other students
+* [Observed difference]{.underling} is **NOT statistically significant** (may have just occurred by chance)
+:::
+:::
+
+::::
+
+## Practice
+
+:::: {.columns}
+
+::: {.column width="40%"}
+*You are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment.  You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years.  Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years.  Use a .05 alpha level to test the statistical significance of the observed difference.*
+:::
+
+::: {.column width="60%"}
+::: {.fragment style="border: 3px solid black;"}
+* **Step 1: Plan**
+    * State the null and alternative [hypotheses]{style="color: #e93cac;"}
+    * Choose your [alpha]{style="color: #e93cac;"} level and find the [critical value]{style="color: #e93cac;"}
+* **Step 2: Calculate**
+    * Calculate [test statistic]{style="color: #e93cac;"} (and [p-value]{style="color: #e93cac;"})
+* **Step 3: Make a decision**
+    * [Reject $H_0$ and support $H_a$ if]{style="color: #6e8e13;"}
+        * p-value < alpha
+        * Test statistic more extreme than critical value
+    * [Fail to reject $H_0$ and fail to support $H_a$ if]{style="color: #754cbc;"}
+        * p-value > alpha
+        * Test statistic less extreme than critical value
+:::
+:::
+
+::::
+
+## Step 1: Plan {visibility="hidden"}
+
+#### State the null and alternative [hypotheses]{style="color: #e93cac;"}
+
+*You are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment.  You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years.  Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years.  Use a .05 alpha level to test the statistical significance of the observed difference.*
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+<br>
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+$$
+H_0: \mu_{immig} = 12.75
+$$
+:::
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+$$
+H_a: \mu_{immig} \ne 12.75
+$$
+:::
+
+:::
+
+::: {.column width="70%"}
+
+:::
+
+::::
+
+::: {.fragment fragment-index=1 style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 750px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; right: -75px; text-align: center;"}
+Set up a test assuming that the null $H_0$ is true and see whether the facts of our sample contradict that assumption
+:::
+
+## Step 1: Plan {visibility="hidden"}
+
+#### Choose your [alpha]{style="color: #e93cac;"} level and find the [critical value]{style="color: #e93cac;"}
+
+*You are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment.  You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years.  Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years.  Use a .05 alpha level to test the statistical significance of the observed difference.*
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+<br>
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+$$
+H_0: \mu_{immig} = 12.75
+$$
+:::
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+$$
+H_a: \mu_{immig} \ne 12.75
+$$
+:::
+
+:::
+
+::: {.column width="70%"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+
+z2 <- 2.241
+z1 <- -2.241
+
+ggplot(data = eq, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), linewidth = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = z1), 
+                  geom = "area", fill = "#a68100", alpha = .75) +
+  stat_function(fun = funcShaded_upper, args = list(lower_bound = z2), 
+                  geom = "area", fill = "#a68100", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  theme(axis.text.x = element_text(size = 18)) +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(-1.96, 1.96), labels = c(expression(paste(alpha, "/ 2 = 0.250")), expression(paste(alpha, "/ 2 = 0.250")))) 
+```
+:::
+
+::::
+
+::: {style="background: black; color: white; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; left: 325px; text-align: center"}
+Normal<br>
+distribution<br>
+[$\alpha = 0.05$]{style="color: #e93cac;"}
+:::
+
+::: {.fragment fragment-index=1 style="width: 300px; position: absolute; bottom: 225px; right: -50px; text-align: center; font-size: 0.85em;border: 3px solid black;"}
+So our sample result has to be at least [1.96]{style="color: #e93cac;"} standard errors away from what is assumed under $H_0$ for us to reject $H_0$
+:::
+
+::: {.fragment fragment-index=1 style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 75px; right: -75px; text-align: center"}
+$H_a: \mu \ne 0$<br>
+Critical value of<br>
+[$z = \pm 1.96$]{style="color: #e93cac;"}
+:::
+
+## Step 2: Calculate {visibility="hidden"}
+
+#### Calculate [test statistic]{style="color: #e93cac;"} (and [p-value]{style="color: #e93cac;"})
+
+*You are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment.  You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years.  Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years.  Use a .05 alpha level to test the statistical significance of the observed difference.*
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+<br>
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+$$
+H_0: \mu_{immig} = 12.75
+$$
+:::
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+$$
+H_a: \mu_{immig} \ne 12.75
+$$
+:::
+
+:::
+
+::: {.column width="40%"}
+
+<br>
+
+::: {.fragment fragment-index=1}
+Figuring out how far the sample result is fom $H_0$ and putting it in standard-error units
+:::
+
+::: {.fragment fragment-index=1 style="font-size: 1.25em"}
+$$
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{4}{\sqrt{225}} = 0.267
+$$
+:::
+:::
+
+::: {.column width="30%"}
+
+<br>
+
+::: {.fragment fragment-index=2 style="font-size: 1.5em; text-align: end"}
+[$z$]{style="color: #e93cac;"} $= \frac{\bar{X} - \mu_0}{\sigma_{\bar{X}}}$
+
+<br>
+
+$\frac{13.3-12.75}{0.267} =$ [$2.060$]{style="color: #e93cac;"}
+:::
+
+:::
+
+::::
+
+::: {.fragment fragment-index=3 style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 800px; padding: 0px 0px 0px 0px; position: absolute; bottom: -15px; right: -75px; text-align: center; font-size: 0.85em"}
+Mean education for immigrants is [2.06]{style="color: #e93cac;"} standard errors above the national average (assumed under $H_0$)
+:::
+
+## Step 3: Make a decision {visibility="hidden"}
+
+#### [Reject $H_0$ and support $H_a$]{style="color: #6e8e13;"}
+
+*You are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment.  You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years.  Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years.  Use a .05 alpha level to test the statistical significance of the observed difference.*
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+<br>
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+$$
+H_0: \mu_{immig} = 12.75
+$$
+:::
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+$$
+H_a: \mu_{immig} \ne 12.75
+$$
+:::
+
+:::
+
+::: {.column width="70%"}
+
+::: {.fragment fragment-index=1}
+* Based on this evidence, it appears that the *population of immigrants have, on average, [more education]{.underline} than the national average*.
+* The [observed difference]{.underline} **IS statistically significant**
+:::
+
+::: {style="border: 4px solid #6e8e13; border-radius: 15px; text-align: center"}
+Since our [test statistic]{style="color: #e93cac;"} ([2.06]{style="color: #e93cac;"}) is more extreme than the [critical value]{style="color: #e93cac;"} ([1.96]{style="color: #e93cac;"}) we<br>[REJECT $H_0$, FIND EVIDENCE TO SUPPORT $H_A$]{style="color: #6e8e13; font-size: 1.25em"}
+:::
+
+:::
+
+::::
 
 # Break! {.section-title background-color="#2ad2c9"}
 
-# t-distribution
+# t-distribution {.section-title background-color="#c5b4e3"}
 
 ## Inference with the t-distribution
+
+### [Why use something other than the normal (z) distribution?]{style="font-size: 0.9em"}
+
+::: {.fragment fragment-index=1}
+#### TYPES OF INFERENCE SO FAR:
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<br>
+
+::: {.fragment fragment-index=1}
+[Confidence intervals:]{.underline}
+Assume our sample<br>of 100 UW students comes from a [population]{style="background: #ffc700"} with a [standard deviation of 8.0]{style="background: #ffc700"}, estimate the population mean…
+
+<br>
+
+[Hypothesis testing:]{.underline}
+Say we know that the average study time for the [population]{style="background: #ffc700"} of college students in the country is 13 hrs/week, with a [standard deviation of 8.0]{style="background: #ffc700"}.  Do UW students really study more than the national average?
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=2 style="font-size: 1.25em"}
+These types of examples are [**UNREALISTIC**]{.underline} (or at least really rare) because **we rarely know the [population]{style="background: #ffc700"} standard deviation**.
+:::
+
+::: {style="font-size: 1.5em; position: absolute; top: 350px; right: 350px; text-align: center; color: #a68100"}
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .shrink fragment-index=3}
+::: {.fragment .semi-fade-out fragment-index=3}
+$$
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}
+$$
+:::
+:::
+:::
+:::
+
+::: {style="font-size: 1.5em; position: absolute; top: 350px; right: 100px; color: #e93cac"}
+::: {.fragment .fade-in fragment-index=3 }
+::: {.fragment .grow fragment-index=3 }
+$$
+s_{\bar{X}} = \frac{s}{\sqrt{n}}
+$$
+:::
+:::
+:::
+
+:::
+
+::::
+
+::: {.fragment fragment-index=3 style="background: black; color: white; font-size: 1em; width: 500px; padding: 5px 5px 5px 5px; position: absolute; top: 195px; right: 25px; text-align: center"}
+When the population standard deviation is unknown, use the [**SAMPLE standard deviation**]{.underline style="color: #e93cac"} to estimate the standard error used in inferences.
+:::
+
+::: {.fragment fragment-index=4 style="background: #e8e3d3; width: 500px; position: absolute; top: 223px; left: 0px;"}
+[Confidence intervals:]{.underline}
+You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a [sample standard deviation of 8.25]{style="background: #e93cac"}, estimate the population mean.
+
+<br>
+
+[Hypothesis testing:]{.underline}
+You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a [sample standard deviation of 8.25]{style="background: #e93cac"}.  Test the hypothesis that UW students study more than the national average of 13 hours/week.
+
+:::
+
+::: {.fragment fragment-index=4 style="background: #e8e3d3; width: 500px; position: absolute; top: 150px; left: 0px;"}
+#### MORE REALISTICS EXAMPLES:
+:::
+
+::: {.fragment fragment-index=5 style="position: absolute; bottom: 0px; right: 150px; border: 2px solid black; padding: 5px 5px 5px 5px;text-align: center "}
+[[PROBLEM]{.underline}: Using sample statistics to make<br>two difference inferences]{style="font-size: .75em"} <br>
+[$s_x \Rightarrow \sigma_x$]{style="font-size: 1.25em;"}
+<br>
+[$\bar{X} \Rightarrow \mu_x$]{style="font-size: 1.25em"}
+<br>
+[= INCREASED UNCERTAINTY]{style="background: #aadb1e;"}
+:::
+
+::: {.fragment fragment-index=6 style="position: absolute; bottom: 25px; right: -75px; background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px"}
+This is especially problematic when the sample size is **small**!
+:::
+
+## Inference with the t-distribution
+
+### [Why use something other than the normal (z) distribution?]{style="font-size: 0.9em"}
+
+<br>
+
+::: {style="font-size: 2.5em; text-align: center"}
+Account for the [**extra uncertainty**]{.underline} by assuming that the sampling distribution follows a [t-distribution]{.underline style="color: #e93cac"} instead of a normal (z) distribution.
+:::
+
+## Inference with the t-distribution
+
+### [Why use something other than the normal (z) distribution?]{style="font-size: 0.9em"}
+
+#### Example
+
+*You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a [sample standard deviation of 8.25]{style="color: #e93cac"}. Estimate the population mean.*
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {style="font-size: 2em; text-align: center;"}
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .shrink fragment-index=2}
+::: {.fragment .semi-fade-out fragment-index=2}
+$$
+\text{Confidence interval} = 
+$$
+
+[$$
+\bar{X} \pm z(\frac{\sigma_x}{\sqrt{n}})
+$$]{style="color: #a68100"}
+:::
+:::
+:::
+:::
+
+:::
+
+::: {.column width="50%"}
+
+::: {style="font-size: 2em; text-align: center"}
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .grow fragment-index=2 }
+$$
+\text{Confidence interval} = 
+$$
+
+
+[$$
+\bar{X} \pm t(\frac{s_x}{\sqrt{n}})
+$$]{style="color: #e93cac"}
+:::
+:::
+:::
+
+
+:::
+
+::::
 
 ## Degrees of freedom
 
