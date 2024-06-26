@@ -1365,7 +1365,7 @@ geom_col() +
 theme_tufte(base_size = 10) 
 ```
 
-## IQR example 1 ([15.75]{style="color:#2ad2c9"}  - [5]{style="color:#e93cac"}  = 10)
+## IQR example 1 ([15.75]{style="color:#e93cac"}  - [5]{style="color:#2ad2c9"}  = 10)
 
 ```{r}
 #| echo: false
@@ -1382,7 +1382,7 @@ theme_tufte(base_size = 10)
 Score at 25th percentile = 5
 :::
 
-## IQR example 1 ([15.75]{style="color:#2ad2c9"}  - [5]{style="color:#e93cac"}  = 10)
+## IQR example 1 ([15.75]{style="color:#e93cac"}  - [5]{style="color:#2ad2c9"}  = 10)
 
 ```{r}
 #| echo: false

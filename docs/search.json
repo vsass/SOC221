@@ -3132,15 +3132,15 @@
     "objectID": "Lectures/lecture7.html#example-1",
     "href": "Lectures/lecture7.html#example-1",
     "title": "",
-    "section": "Example",
-    "text": "Example"
+    "section": "Example 1",
+    "text": "Example 1"
   },
   {
     "objectID": "Lectures/lecture7.html#step-1-plan",
     "href": "Lectures/lecture7.html#step-1-plan",
     "title": "",
     "section": "Step 1: Plan",
-    "text": "Step 1: Plan"
+    "text": "Step 1: Plan\nState the null and alternative hypotheses\nThe university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9. They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.\n\nDraw a random sample of students from Greek system:  \\(n = 150\\), Mean = \\(2.3\\) drinks/week\n\n\n\n\n\nNULL HYPOTHESIS:\n\n\n\nALTERNATIVE  HYPOTHESIS:\n\n\n\n\\[\n\\mu_{greek} = 2\n\\]\n\n\n\\[\n\\mu_{greek} \\ne 2\n\\]\n\n\n\nSet up a test assuming that the null \\(H_0\\) is true and see whether the facts of our sample contradict that assumption.\n\n\n\n\nStated in terms of unknown population parameters\n\n\nThis is a TWO-SIDED (non-directional) hypothesis"
   },
   {
     "objectID": "Lectures/lecture7.html#step-2-calculate",
@@ -3203,7 +3203,7 @@
     "href": "Lectures/lecture7.html#another-example",
     "title": "",
     "section": "Another example",
-    "text": "Another example"
+    "text": "Another example\n\nThe university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9. They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.\n\n\nDraw a random sample of students from Greek system:  \\(n = 150\\), Mean = \\(2.3\\) drinks/week"
   },
   {
     "objectID": "Lectures/lecture7.html#example-3",
@@ -3223,8 +3223,8 @@
     "objectID": "Lectures/lecture7.html#another-example-1",
     "href": "Lectures/lecture7.html#another-example-1",
     "title": "",
-    "section": "Another Example",
-    "text": "Another Example"
+    "section": "Another example",
+    "text": "Another example"
   },
   {
     "objectID": "Lectures/lecture7.html#example-test-of-significance",
@@ -3729,5 +3729,33 @@
     "title": "",
     "section": "Example calculation: What is the mode?",
     "text": "Example calculation: What is the mode?\n\n\nRacial distribution for sample of 50 small business owners\n\n\n\n\n\n\nRace\nf\n\n\n\n\nAfrican American/Black\n16\n\n\nAsian/Pacific Islander\n7\n\n\nNative American\n3\n\n\nWhite\n22\n\n\nOther\n2\n\n\nTotal (N)\n50"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#steps-for-hypothesis-significance-tests",
+    "href": "Lectures/lecture7.html#steps-for-hypothesis-significance-tests",
+    "title": "",
+    "section": "Steps for Hypothesis / Significance Tests",
+    "text": "Steps for Hypothesis / Significance Tests\n\n\n\nStep 1: Plan\n\nState the null and alternative hypotheses\nChoose your alpha level and find the critical value\n\nStep 2: Calculate\n\nCalculate test statistic (and p-value)\n\nStep 3: Make a decision\n\nReject \\(H_0\\) and support \\(H_a\\) if\n\np-value &lt; alpha\nTest statistic more extreme than critical value\n\nFail to reject \\(H_0\\) and fail to support \\(H_a\\) if\n\np-value &gt; alpha\nTest statistic less extreme than critical value"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#one-sided-versus-two-sided",
+    "href": "Lectures/lecture7.html#one-sided-versus-two-sided",
+    "title": "",
+    "section": "One-sided versus two-sided",
+    "text": "One-sided versus two-sided\n\n\n\nA ONE-SIDED test is one in which we are interested if the unknown population parameter is HIGHER or LOWER than the value assumed under the null hypothesis\n\n\nExample: Do women have a higher level of emotional intelligence than do men?\n\n\n\nReject null hypothesis if the test result is different enough from the null in the right direction\n\n\n\nA TWO-SIDED test is one in which we are interested if the unknown population parameter is just DIFFERENT from the value assumed under the null hypothesis\n\n\nExample: Are men and women different in terms of emotional intelligence?\n\n\n\nReject null hypothesis if the test result is EITHER much higher OR much lower than what we assume under the null"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#one-sided-versus-two-sided-1",
+    "href": "Lectures/lecture7.html#one-sided-versus-two-sided-1",
+    "title": "",
+    "section": "One-sided versus two-sided",
+    "text": "One-sided versus two-sided\n\n\n\nA ONE-SIDED test is one in which we are interested if the unknown population parameter is HIGHER or LOWER than the value assumed under the null hypothesis\n\n\n\n\n\n\n\n\n\n\n\nOnly one side contains strong results consistent with our research hypothesis\n\n\n\nA TWO-SIDED test is one in which we are interested if the unknown population parameter is just DIFFERENT from the value assumed under the null hypothesis\n\n\n\n\n\n\n\n\n\n\n\nBoth of these areas contain strong results consistent with our research hypothesis"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#another-example-2",
+    "href": "Lectures/lecture7.html#another-example-2",
+    "title": "",
+    "section": "Another Example",
+    "text": "Another Example"
   }
 ]
