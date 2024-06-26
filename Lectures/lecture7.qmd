@@ -1028,19 +1028,359 @@ $$\mu{UW} = 13$$
 [**SUPPORT THE ALTERNATIVE HYPOTHESIS**]{style="font-size: 1.25em"}
 :::
 
-## Alternative versus null hypothesis
+---
+
+:::: {.columns}
+
+::: {.column width="40%"}
+<br>
+
+::: {style="font-size: 2em;"}
+> [**P-VALUE**]{style="color: #e93cac;"}: The probability of observing the sample result if the null hypothesis were actually true.
+:::
+:::
+
+::: {.column width="60%"}
+::: {style="font-size: 1.5em; position: static; text-align: center"}
+When the [**P-VALUE**]{style="color: #e93cac;"} is [*small*]{.underline} we:<br>
+[**REJECT THE NULL HYPOTHESIS**]{style="color: #754cbc;"}, <br>
+[**SUPPORT THE ALTERNATIVE HYPOTHESIS**]{style="color: #6e8e13;"} <br>
+and say that the result is <br>
+[**STATISTICALLY SIGNIFICANT**]{style="color: #e93cac;"}
+:::
+
+<br>
+
+::: {.fragment style="font-size: 1.25em; position: static; text-align: center"}
+Question: How small does the [P-value]{style="color: #e93cac;"} have to be before we reject the null hypothesis?
+:::
+
+<br>
+
+::: {.fragment style="font-size: 1.25em; position: static; text-align: center"}
+Answer: We decide on that standard before our test by setting the [**ALPHA LEVEL ($\alpha$)**]{style="color: #e93cac;"} for the test
+:::
+:::
+
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+::: {style="font-size: 1.9em;"}
+> [**ALPHA $(\alpha)$**]{style="color: #e93cac;"}: The probability [*threshold*]{.underline} at which we are willing to reject the null hypothesis.
+:::
+:::
+
+::: {.column width="60%"}
+::: {style="font-size: 1.4em; position: static; text-align: center"}
+[**$\text{p-value} \lt \alpha$**]{style="color: #e93cac;"}<br>
+we [**REJECT THE NULL HYPOTHESIS**]{style="color: #754cbc;"}, <br>
+[**SUPPORT THE ALTERNATIVE HYPOTHESIS**]{style="color: #6e8e13;"} <br>
+and say that the result is <br>
+[**STATISTICALLY SIGNIFICANT**]{style="color: #e93cac;"}
+:::
+
+::: {.fragment style="font-size: 1.25em; position: static; text-align: center;"}
+Standard choices for $\alpha$:<br>
+0.05<br>
+0.01<br>
+0.001
+:::
 
 
+:::
 
-## Example
+::::
 
-## p value and alpha level
+---
 
-## Notes on results of hypothesis tests
+:::: {.columns}
 
-## Example
+::: {.column width="40%"}
+
+::: {style="font-size: 1.9em;"}
+> [**ALPHA $(\alpha)$**]{style="color: #e93cac;"}: The probability [*threshold*]{.underline} at which we are willing to reject the null hypothesis.
+:::
+:::
+
+::: {.column width="60%"}
+::: {style="font-size: 1.4em; position: static; text-align: center"}
+[**$\text{p-value} \lt \alpha$**]{style="color: #e93cac;"}<br>
+we [**REJECT THE NULL HYPOTHESIS**]{style="color: #754cbc;"}, <br>
+[**SUPPORT THE ALTERNATIVE HYPOTHESIS**]{style="color: #6e8e13;"} <br>
+and say that the result is <br>
+[**STATISTICALLY SIGNIFICANT**]{style="color: #e93cac;"}
+:::
+
+::: {style="font-size: 1.25em; position: static; text-align: center;"}
+Standard choices for $\alpha$:<br>
+[**0.05**]{style="color: #1b8883;"}<br>
+0.01<br>
+0.001
+:::
+
+:::
+
+::::
+
+::: {style="font-size: 0.85em; position: absolute; right: -75px; top: 350px; text-align: center; padding: 5px 5px 5px 5px; background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px;"}
+Not willing to reject the null hypothesis unless there is less than a [**5% chance**]{.underline} that the sample result (difference) appeared  just because of random sampling error.
+:::
+
+::: {.fragment fragment-index=1 style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 750px; padding: 0px 0px 0px 0px; position: absolute; bottom: 100px; left: 25px; text-align: center"}
+Even with these high standards, we never call this proof because another sample may lead to a different decision.
+:::
+
+::: {.fragment fragment-index=2 style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 750px; padding: padding: 0px 0px 0px 0px; position: absolute; bottom: 0px; left: 25px; text-align: center"}
+So we [**NEVER ACCEPT AN HYPOTHESIS**]{.underline}!<br>
+(can only reject or retain / support or fail to support)
+
+:::
+
+---
+
+### Important notes on results of hypothesis tests
+
+<br>
+
+::: incremental
+* Never *accept* or *prove* an hypothesis
+    * Your decision reflects just the evidence available in the current sample
+    * A new sample may produce a different result and the *accepted* or *proven* hypothesis may be wrong
+* Statistically significant results can happen by chance
+    * $\text{p-value} = 0.05$ means that there is a $5\%$ chance of claiming statistical significance for a non-existent difference
+* Statistically significant $\ne$ substantively significant
+    * Tiny real-world differences can be statistically significant, especially with high power (big samples)
+    * Important differences can look statistically non-significant, especially with low power (small samples)
+:::
+
+## Another example
+
+<br>
+
+*The university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9.  They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.*
+
+<br>
+
+::: {.fragment style="text-align: center; font-size: 1.25em"}
+Draw a random sample of students from Greek system: <br>
+[$n = 150$, Mean = $2.3$ drinks/week]{style="color: #e93cac;"}
+:::
+
+## Steps for Hypothesis / Significance Tests
+
+<br>
+
+::: incremental
+* **Step 1: Plan**
+    * State the null and alternative [hypotheses]{style="color: #e93cac;"}
+    * Choose your [alpha]{style="color: #e93cac;"} level and find the [critical value]{style="color: #e93cac;"}
+* **Step 2: Calculate**
+    * Calculate [test statistic]{style="color: #e93cac;"} (and [p-value]{style="color: #e93cac;"})
+* **Step 3: Make a decision**
+    * [Reject $H_0$ and support $H_a$ if]{style="color: #6e8e13;"}
+        * p-value < alpha
+        * Test statistic more extreme than critical value
+    * [Fail to reject $H_0$ and fail to support $H_a$ if]{style="color: #754cbc;"}
+        * p-value > alpha
+        * Test statistic less extreme than critical value
+:::
 
 ## Step 1: Plan
+
+#### State the null and alternative [hypotheses]{style="color: #e93cac;"}
+
+*The university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9.  They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.*
+
+::: {style="text-align: center; font-size: 1.25em"}
+Draw a random sample of students from Greek system: <br>
+[$n = 150$, Mean = $2.3$ drinks/week]{style="color: #e93cac;"}
+:::
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+<br>
+
+::: {.fragment fragment-index=1 style="color: #754cbc; text-align: center; font-size: 1.25em"}
+**NULL HYPOTHESIS:**
+:::
+
+<br>
+
+::: {.fragment fragment-index=2 style="color: #6e8e13; text-align: center; font-size: 1.25em"}
+**ALTERNATIVE**
+<br>
+**HYPOTHESIS:**
+:::
+
+:::
+
+::: {.column width="30%"}
+::: {.fragment fragment-index=1 style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em"}
+$$
+\mu_{greek} = 2
+$$
+:::
+
+::: {.fragment fragment-index=2 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em"}
+$$
+\mu_{greek} \ne 2
+$$
+:::
+
+:::
+
+::: {.column width="30%"}
+::: {.fragment fragment-index=3 style="border: 4px solid black; border-radius: 15px; width: 350px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+Set up a test assuming that the [null $H_0$]{style="color: #754cbc;"} is true and see whether the facts of our sample contradict that assumption.
+:::
+:::
+
+::::
+
+::: {.fragment fragment-index=4 style="background: black; color: white; width: 375px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; bottom: 177px; right: -70px;"}
+Stated in terms of unknown population parameters
+:::
+
+::: {.fragment fragment-index=4 style="background: black; color: white; 15px; width: 375px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; bottom: 25px; right: -70px;"}
+This is a [**TWO-SIDED**]{style="color: #ffc700;"} (non-directional) hypothesis
+:::
+
+## One-sided versus two-sided
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.fragment fragment-index=4 style="text-align: center; font-size: 1.25em; "}
+A [**ONE-SIDED**]{style="color: #1b8883;"} test is one in which we are interested if the unknown population parameter is **HIGHER** *or* **LOWER** than the value assumed under the null hypothesis
+:::
+
+::: {.fragment fragment-index=5 style="border: 3px solid #1b8883; text-align: center; font-size: 1.25em; "}
+Example: Do women have a [higher]{.underline} level of emotional intelligence than do men?
+
+:::
+
+<br>
+
+::: {.fragment fragment-index=6 style="border: 3px solid #1b8883; text-align: center; font-size: 1.25em; "}
+Reject null hypothesis if the test result is [different]{.underline} enough from the null [in the right direction]{.underline}
+:::
+
+:::
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=1 style="text-align: center; font-size: 1.25em; "}
+A [**TWO-SIDED**]{style="color: #a68100;"} test is one in which we are interested if the unknown population parameter is just **DIFFERENT** from the value assumed under the null hypothesis
+:::
+
+
+::: {.fragment fragment-index=2 style="border: 4px solid #a68100; text-align: center; font-size: 1.25em; "}
+Example: Are men and women [different]{.underline} in terms of emotional intelligence?
+:::
+
+<br>
+
+::: {.fragment fragment-index=3 style="border: 4px solid #a68100; text-align: center; font-size: 1.25em; "}
+Reject null hypothesis if the test result is [EITHER]{.underline} much higher [OR]{.underline} much lower than what we assume under the null
+:::
+
+:::
+
+::::
+
+## One-sided versus two-sided
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {style="text-align: center; font-size: 1.25em; "}
+A [**ONE-SIDED**]{style="color: #1b8883;"} test is one in which we are interested if the unknown population parameter is **HIGHER** *or* **LOWER** than the value assumed under the null hypothesis
+:::
+
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+
+mu <- 0
+sigma <- 1
+z <- -1.645
+
+eq <- data.frame(x = c(-3.5, 3.5))
+ggplot(data = eq, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), linewidth = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = z), 
+                  geom = "area", fill = "#1b8883", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+```
+
+::: {.fragment fragment-index=1 style="border: 4px solid #1b8883; text-align: center; font-size: 1em;"}
+Only one side contains strong results consistent with our research hypothesis
+:::
+
+:::
+
+::: {.column width="50%"}
+::: {style="text-align: center; font-size: 1.25em; "}
+A [**TWO-SIDED**]{style="color: #a68100;"} test is one in which we are interested if the unknown population parameter is just **DIFFERENT** from the value assumed under the null hypothesis
+:::
+
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+
+z2 <- 2.241
+z1 <- -2.241
+
+ggplot(data = eq, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), linewidth = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = z1), 
+                  geom = "area", fill = "#a68100", alpha = .75) +
+  stat_function(fun = funcShaded_upper, args = list(lower_bound = z2), 
+                  geom = "area", fill = "#a68100", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+```
+
+
+::: {.fragment fragment-index=2 style="border: 4px solid #a68100; text-align: center; font-size: 1em;"}
+Both of these areas contain strong results consistent with our research hypothesis
+:::
+
+:::
+
+::::
+
+## One-sided or two-sided? {visibility="hidden"}
+
+<br>
+
+::: incremental
+* Are Friday classes, on average, shorter than the standard 50 minutes?
+    * [One-sided]{style="color: #1b8883;"}
+* Are bars with pool tables different from bars without pool tables different in terms of average cover charge?
+    * [Two-sided]{style="color: #a68100;"}
+* Is the average education of immigrants lower than the national average?
+    * [One-sided]{style="color: #1b8883;"}
+* Do professors drink more coffee than do students?
+    * [One-sided]{style="color: #1b8883;"}
+:::
+
+
 
 ## Step 2: Calculate
 

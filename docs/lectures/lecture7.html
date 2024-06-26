@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.551">
+  <meta name="generator" content="quarto-1.5.43">
 
   <meta name="author" content="Victoria Sass">
-  <title></title>
+  <title> Hypothesis testing for   one and two samples </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -959,24 +959,248 @@ Victoria Sass
 <p><span style="font-size: 1.25em"><strong>SUPPORT THE ALTERNATIVE HYPOTHESIS</strong></span></p>
 </div>
 </section>
-<section id="alternative-versus-null-hypothesis" class="slide level2">
-<h2>Alternative versus null hypothesis</h2>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><br></p>
+<div style="font-size: 2em;">
+<blockquote>
+<p><span style="color: #e93cac;"><strong>P-VALUE</strong></span>: The probability of observing the sample result if the null hypothesis were actually true.</p>
+</blockquote>
+</div>
+</div><div class="column" style="width:60%;">
+<div style="font-size: 1.5em; position: static; text-align: center">
+<p>When the <span style="color: #e93cac;"><strong>P-VALUE</strong></span> is <u><em>small</em></u> we:<br> <span style="color: #754cbc;"><strong>REJECT THE NULL HYPOTHESIS</strong></span>, <br> <span style="color: #6e8e13;"><strong>SUPPORT THE ALTERNATIVE HYPOTHESIS</strong></span> <br> and say that the result is <br> <span style="color: #e93cac;"><strong>STATISTICALLY SIGNIFICANT</strong></span></p>
+</div>
+<p><br></p>
+<div class="fragment" style="font-size: 1.25em; position: static; text-align: center">
+<p>Question: How small does the <span style="color: #e93cac;">P-value</span> have to be before we reject the null hypothesis?</p>
+</div>
+<p><br></p>
+<div class="fragment" style="font-size: 1.25em; position: static; text-align: center">
+<p>Answer: We decide on that standard before our test by setting the <span style="color: #e93cac;"><strong>ALPHA LEVEL (<span class="math inline">\(\alpha\)</span>)</strong></span> for the test</p>
+</div>
+</div>
+</div>
 </section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:40%;">
+<div style="font-size: 1.9em;">
+<blockquote>
+<p><span style="color: #e93cac;"><strong>ALPHA <span class="math inline">\((\alpha)\)</span></strong></span>: The probability <u><em>threshold</em></u> at which we are willing to reject the null hypothesis.</p>
+</blockquote>
+</div>
+</div><div class="column" style="width:60%;">
+<div style="font-size: 1.4em; position: static; text-align: center">
+<p><span style="color: #e93cac;"><strong><span class="math inline">\(\text{p-value} \lt \alpha\)</span></strong></span><br> we <span style="color: #754cbc;"><strong>REJECT THE NULL HYPOTHESIS</strong></span>, <br> <span style="color: #6e8e13;"><strong>SUPPORT THE ALTERNATIVE HYPOTHESIS</strong></span> <br> and say that the result is <br> <span style="color: #e93cac;"><strong>STATISTICALLY SIGNIFICANT</strong></span></p>
+</div>
+<div class="fragment" style="font-size: 1.25em; position: static; text-align: center;">
+<p>Standard choices for <span class="math inline">\(\alpha\)</span>:<br> 0.05<br> 0.01<br> 0.001</p>
+</div>
+</div>
+</div>
 </section>
-<section id="p-value-and-alpha-level" class="slide level2">
-<h2>p value and alpha level</h2>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:40%;">
+<div style="font-size: 1.9em;">
+<blockquote>
+<p><span style="color: #e93cac;"><strong>ALPHA <span class="math inline">\((\alpha)\)</span></strong></span>: The probability <u><em>threshold</em></u> at which we are willing to reject the null hypothesis.</p>
+</blockquote>
+</div>
+</div><div class="column" style="width:60%;">
+<div style="font-size: 1.4em; position: static; text-align: center">
+<p><span style="color: #e93cac;"><strong><span class="math inline">\(\text{p-value} \lt \alpha\)</span></strong></span><br> we <span style="color: #754cbc;"><strong>REJECT THE NULL HYPOTHESIS</strong></span>, <br> <span style="color: #6e8e13;"><strong>SUPPORT THE ALTERNATIVE HYPOTHESIS</strong></span> <br> and say that the result is <br> <span style="color: #e93cac;"><strong>STATISTICALLY SIGNIFICANT</strong></span></p>
+</div>
+<div style="font-size: 1.25em; position: static; text-align: center;">
+<p>Standard choices for <span class="math inline">\(\alpha\)</span>:<br> <span style="color: #1b8883;"><strong>0.05</strong></span><br> 0.01<br> 0.001</p>
+</div>
+</div>
+</div>
+<div style="font-size: 0.85em; position: absolute; right: -75px; top: 350px; text-align: center; padding: 5px 5px 5px 5px; background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px;">
+<p>Not willing to reject the null hypothesis unless there is less than a <u><strong>5% chance</strong></u> that the sample result (difference) appeared just because of random sampling error.</p>
+</div>
+<div class="fragment" data-fragment-index="1" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 750px; padding: 0px 0px 0px 0px; position: absolute; bottom: 100px; left: 25px; text-align: center">
+<p>Even with these high standards, we never call this proof because another sample may lead to a different decision.</p>
+</div>
+<div class="fragment" data-fragment-index="2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 750px; padding: padding: 0px 0px 0px 0px; position: absolute; bottom: 0px; left: 25px; text-align: center">
+<p>So we <u><strong>NEVER ACCEPT AN HYPOTHESIS</strong></u>!<br> (can only reject or retain / support or fail to support)</p>
+</div>
 </section>
-<section id="notes-on-results-of-hypothesis-tests" class="slide level2">
-<h2>Notes on results of hypothesis tests</h2>
+<section class="slide level2">
+
+<h3 id="important-notes-on-results-of-hypothesis-tests">Important notes on results of hypothesis tests</h3>
+<p><br></p>
+<div>
+<ul>
+<li class="fragment">Never <em>accept</em> or <em>prove</em> an hypothesis
+<ul>
+<li class="fragment">Your decision reflects just the evidence available in the current sample</li>
+<li class="fragment">A new sample may produce a different result and the <em>accepted</em> or <em>proven</em> hypothesis may be wrong</li>
+</ul></li>
+<li class="fragment">Statistically significant results can happen by chance
+<ul>
+<li class="fragment"><span class="math inline">\(\text{p-value} = 0.05\)</span> means that there is a <span class="math inline">\(5\%\)</span> chance of claiming statistical significance for a non-existent difference</li>
+</ul></li>
+<li class="fragment">Statistically significant <span class="math inline">\(\ne\)</span> substantively significant
+<ul>
+<li class="fragment">Tiny real-world differences can be statistically significant, especially with high power (big samples)</li>
+<li class="fragment">Important differences can look statistically non-significant, especially with low power (small samples)</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="example-1" class="slide level2">
-<h2>Example</h2>
+<section id="another-example" class="slide level2">
+<h2>Another example</h2>
+<p><br></p>
+<p><em>The university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9. They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.</em></p>
+<p><br></p>
+<div class="fragment" style="text-align: center; font-size: 1.25em">
+<p>Draw a random sample of students from Greek system: <br> <span style="color: #e93cac;"><span class="math inline">\(n = 150\)</span>, Mean = <span class="math inline">\(2.3\)</span> drinks/week</span></p>
+</div>
+</section>
+<section id="steps-for-hypothesis-significance-tests" class="slide level2">
+<h2>Steps for Hypothesis / Significance Tests</h2>
+<p><br></p>
+<div>
+<ul>
+<li class="fragment"><strong>Step 1: Plan</strong>
+<ul>
+<li class="fragment">State the null and alternative <span style="color: #e93cac;">hypotheses</span></li>
+<li class="fragment">Choose your <span style="color: #e93cac;">alpha</span> level and find the <span style="color: #e93cac;">critical value</span></li>
+</ul></li>
+<li class="fragment"><strong>Step 2: Calculate</strong>
+<ul>
+<li class="fragment">Calculate <span style="color: #e93cac;">test statistic</span> (and <span style="color: #e93cac;">p-value</span>)</li>
+</ul></li>
+<li class="fragment"><strong>Step 3: Make a decision</strong>
+<ul>
+<li class="fragment"><span style="color: #6e8e13;">Reject <span class="math inline">\(H_0\)</span> and support <span class="math inline">\(H_a\)</span> if</span>
+<ul>
+<li class="fragment">p-value &lt; alpha</li>
+<li class="fragment">Test statistic more extreme than critical value</li>
+</ul></li>
+<li class="fragment"><span style="color: #754cbc;">Fail to reject <span class="math inline">\(H_0\)</span> and fail to support <span class="math inline">\(H_a\)</span> if</span>
+<ul>
+<li class="fragment">p-value &gt; alpha</li>
+<li class="fragment">Test statistic less extreme than critical value</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="step-1-plan" class="slide level2">
 <h2>Step 1: Plan</h2>
+<h4 id="state-the-null-and-alternative-hypotheses">State the null and alternative <span style="color: #e93cac;">hypotheses</span></h4>
+<p><em>The university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9. They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.</em></p>
+<div style="text-align: center; font-size: 1.25em">
+<p>Draw a random sample of students from Greek system: <br> <span style="color: #e93cac;"><span class="math inline">\(n = 150\)</span>, Mean = <span class="math inline">\(2.3\)</span> drinks/week</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><br></p>
+<div class="fragment" data-fragment-index="1" style="color: #754cbc; text-align: center; font-size: 1.25em">
+<p><strong>NULL HYPOTHESIS:</strong></p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="2" style="color: #6e8e13; text-align: center; font-size: 1.25em">
+<p><strong>ALTERNATIVE</strong> <br> <strong>HYPOTHESIS:</strong></p>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="fragment" data-fragment-index="1" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em">
+<p><span class="math display">\[
+\mu_{greek} = 2
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em">
+<p><span class="math display">\[
+\mu_{greek} \ne 2
+\]</span></p>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="fragment" data-fragment-index="3" style="border: 4px solid black; border-radius: 15px; width: 350px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em">
+<p>Set up a test assuming that the <span style="color: #754cbc;">null <span class="math inline">\(H_0\)</span></span> is true and see whether the facts of our sample contradict that assumption.</p>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="4" style="background: black; color: white; width: 375px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; bottom: 177px; right: -70px;">
+<p>Stated in terms of unknown population parameters</p>
+</div>
+<div class="fragment" data-fragment-index="4" style="background: black; color: white; 15px; width: 375px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; bottom: 25px; right: -70px;">
+<p>This is a <span style="color: #ffc700;"><strong>TWO-SIDED</strong></span> (non-directional) hypothesis</p>
+</div>
 </section>
+<section id="one-sided-versus-two-sided" class="slide level2">
+<h2>One-sided versus two-sided</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="4" style="text-align: center; font-size: 1.25em; ">
+<p>A <span style="color: #1b8883;"><strong>ONE-SIDED</strong></span> test is one in which we are interested if the unknown population parameter is <strong>HIGHER</strong> <em>or</em> <strong>LOWER</strong> than the value assumed under the null hypothesis</p>
+</div>
+<div class="fragment" data-fragment-index="5" style="border: 3px solid #1b8883; text-align: center; font-size: 1.25em; ">
+<p>Example: Do women have a <u>higher</u> level of emotional intelligence than do men?</p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="6" style="border: 3px solid #1b8883; text-align: center; font-size: 1.25em; ">
+<p>Reject null hypothesis if the test result is <u>different</u> enough from the null <u>in the right direction</u></p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1" style="text-align: center; font-size: 1.25em; ">
+<p>A <span style="color: #a68100;"><strong>TWO-SIDED</strong></span> test is one in which we are interested if the unknown population parameter is just <strong>DIFFERENT</strong> from the value assumed under the null hypothesis</p>
+</div>
+<div class="fragment" data-fragment-index="2" style="border: 4px solid #a68100; text-align: center; font-size: 1.25em; ">
+<p>Example: Are men and women <u>different</u> in terms of emotional intelligence?</p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="3" style="border: 4px solid #a68100; text-align: center; font-size: 1.25em; ">
+<p>Reject null hypothesis if the test result is <u>EITHER</u> much higher <u>OR</u> much lower than what we assume under the null</p>
+</div>
+</div>
+</div>
+</section>
+<section id="one-sided-versus-two-sided-1" class="slide level2">
+<h2>One-sided versus two-sided</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="text-align: center; font-size: 1.25em; ">
+<p>A <span style="color: #1b8883;"><strong>ONE-SIDED</strong></span> test is one in which we are interested if the unknown population parameter is <strong>HIGHER</strong> <em>or</em> <strong>LOWER</strong> than the value assumed under the null hypothesis</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture7_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="1" style="border: 4px solid #1b8883; text-align: center; font-size: 1em;">
+<p>Only one side contains strong results consistent with our research hypothesis</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="text-align: center; font-size: 1.25em; ">
+<p>A <span style="color: #a68100;"><strong>TWO-SIDED</strong></span> test is one in which we are interested if the unknown population parameter is just <strong>DIFFERENT</strong> from the value assumed under the null hypothesis</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture7_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="2" style="border: 4px solid #a68100; text-align: center; font-size: 1em;">
+<p>Both of these areas contain strong results consistent with our research hypothesis</p>
+</div>
+</div>
+</div>
+</section>
+
 <section id="step-2-calculate" class="slide level2">
 <h2>Step 2: Calculate</h2>
 </section>
@@ -986,7 +1210,7 @@ Victoria Sass
 <section id="one-sided-versus-two-sided-tests" class="slide level2">
 <h2>One-sided versus two-sided tests</h2>
 </section>
-<section id="example-1-1" class="slide level2">
+<section id="example-1" class="slide level2">
 <h2>Example 1</h2>
 </section>
 <section id="example-2" class="slide level2">
@@ -1011,7 +1235,7 @@ Victoria Sass
 <section id="more-realistic-example" class="slide level2">
 <h2>More realistic example</h2>
 </section>
-<section id="another-example" class="slide level2">
+<section id="another-example-1" class="slide level2">
 <h2>Another example</h2>
 </section></section>
 <section>
@@ -1019,13 +1243,13 @@ Victoria Sass
 <h1>Hypothesis testing for two samples</h1>
 
 </section>
-<section id="example-3" class="slide level2">
+<section id="example" class="slide level2">
 <h2>Example</h2>
 </section>
 <section id="sampling-theory-and-sampling-distribution" class="slide level2">
 <h2>Sampling theory and sampling distribution</h2>
 </section>
-<section id="another-example-1" class="slide level2">
+<section id="another-example-2" class="slide level2">
 <h2>Another Example</h2>
 </section></section>
 <section>
@@ -1324,18 +1548,7 @@ Victoria Sass
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1367,7 +1580,29 @@ Victoria Sass
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1375,7 +1610,7 @@ Victoria Sass
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

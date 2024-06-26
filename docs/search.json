@@ -557,7 +557,7 @@
     "href": "lectures/lecture7.html#another-example",
     "title": "",
     "section": "Another example",
-    "text": "Another example"
+    "text": "Another example\n\nThe university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9. They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.\n\n\nDraw a random sample of students from Greek system:  \\(n = 150\\), Mean = \\(2.3\\) drinks/week"
   },
   {
     "objectID": "lectures/lecture7.html#example-3",
@@ -577,8 +577,8 @@
     "objectID": "lectures/lecture7.html#another-example-1",
     "href": "lectures/lecture7.html#another-example-1",
     "title": "",
-    "section": "Another Example",
-    "text": "Another Example"
+    "section": "Another example",
+    "text": "Another example"
   },
   {
     "objectID": "lectures/lecture2.html",
@@ -3239,5 +3239,124 @@
     "title": "",
     "section": "Example: Test of Significance",
     "text": "Example: Test of Significance\nSay we know that, on average, college students across the country study 13 hrs/week, with a standard deviation of 8.\nQuestion: Do UW students really study more than the national average?\n\nInsufficient time, energy, and money, so draw a random sample of UW students:   N = 100, Mean = 14.5 hrs/week\n\n\n\nLooks like UW students study more than the national average.\n\nBut there are at least two explanations for this observation. . .\n\n\nExplanation 2:\n\nWe have drawn an unusual sample of UW students when, in reality, UW students don’t study more than the national average of 13 hours/week\nThe difference we observe between the sample mean and the national average is just due to chance sampling error\n\n\n\n\\(\\mu{UW} = 13\\)"
+  },
+  {
+    "objectID": "lectures/lecture7.html#example-test-of-significance",
+    "href": "lectures/lecture7.html#example-test-of-significance",
+    "title": "",
+    "section": "Example: Test of Significance",
+    "text": "Example: Test of Significance\nSay we know that, on average, college students across the country study 13 hrs/week, with a standard deviation of 8.\nQuestion: Do UW students really study more than the national average?\n\n\nInsufficient time, energy, and money, so draw a random sample of UW students:   N = 100, Mean = 14.5 hrs/week\n\n\n\n\n\nLooks like UW students study more than the national average.\n\n\n\nBut there are at least two explanations for this observation. . .\n\n\n\nExplanation 1:\n\nUW students really do study more than 13 hours/week, on average\nIn other words, the observed differences between sample mean and the national average reflects a real difference between the population mean for all UW students and the national average\n\n\n\n\\(\\mu{UW} &gt; 13\\)"
+  },
+  {
+    "objectID": "lectures/lecture7.html#example-test-of-significance-1",
+    "href": "lectures/lecture7.html#example-test-of-significance-1",
+    "title": "",
+    "section": "Example: Test of Significance",
+    "text": "Example: Test of Significance\nSay we know that, on average, college students across the country study 13 hrs/week, with a standard deviation of 8.\nQuestion: Do UW students really study more than the national average?\n\nInsufficient time, energy, and money, so draw a random sample of UW students:   N = 100, Mean = 14.5 hrs/week\n\n\n\nLooks like UW students study more than the national average.\n\nBut there are at least two explanations for this observation. . .\n\n\nExplanation 2:\n\nWe have drawn an unusual sample of UW students when, in reality, UW students don’t study more than the national average of 13 hours/week\nThe difference we observe between the sample mean and the national average is just due to chance sampling error\n\n\n\n\\(\\mu{UW} = 13\\)"
+  },
+  {
+    "objectID": "lectures/lecture7.html#p-value-and-alpha-level",
+    "href": "lectures/lecture7.html#p-value-and-alpha-level",
+    "title": "",
+    "section": "p value and alpha level",
+    "text": "p value and alpha level"
+  },
+  {
+    "objectID": "lectures/lecture7.html#notes-on-results-of-hypothesis-tests",
+    "href": "lectures/lecture7.html#notes-on-results-of-hypothesis-tests",
+    "title": "",
+    "section": "Notes on results of hypothesis tests",
+    "text": "Notes on results of hypothesis tests"
+  },
+  {
+    "objectID": "lectures/lecture7.html#example",
+    "href": "lectures/lecture7.html#example",
+    "title": "",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "lectures/lecture7.html#step-1-plan",
+    "href": "lectures/lecture7.html#step-1-plan",
+    "title": "",
+    "section": "Step 1: Plan",
+    "text": "Step 1: Plan\nState the null and alternative hypotheses\nThe university tells us that the average student on campus consumes 2 drinks per week with a standard deviation of 1.9. They have asked us to determine whether students living in the Greek system are different from the university average in terms of average number of drinks per week.\n\nDraw a random sample of students from Greek system:  \\(n = 150\\), Mean = \\(2.3\\) drinks/week\n\n\n\n\n\nNULL HYPOTHESIS:\n\n\n\nALTERNATIVE  HYPOTHESIS:\n\n\n\n\\[\n\\mu_{greek} = 2\n\\]\n\n\n\\[\n\\mu_{greek} \\ne 2\n\\]\n\n\n\nSet up a test assuming that the null \\(H_0\\) is true and see whether the facts of our sample contradict that assumption.\n\n\n\n\nStated in terms of unknown population parameters\n\n\nThis is a TWO-SIDED (non-directional) hypothesis"
+  },
+  {
+    "objectID": "lectures/lecture7.html#step-2-calculate",
+    "href": "lectures/lecture7.html#step-2-calculate",
+    "title": "",
+    "section": "Step 2: Calculate",
+    "text": "Step 2: Calculate"
+  },
+  {
+    "objectID": "lectures/lecture7.html#step-3-make-a-decision",
+    "href": "lectures/lecture7.html#step-3-make-a-decision",
+    "title": "",
+    "section": "Step 3: Make a decision",
+    "text": "Step 3: Make a decision"
+  },
+  {
+    "objectID": "lectures/lecture7.html#one-sided-versus-two-sided-tests",
+    "href": "lectures/lecture7.html#one-sided-versus-two-sided-tests",
+    "title": "",
+    "section": "One-sided versus two-sided tests",
+    "text": "One-sided versus two-sided tests"
+  },
+  {
+    "objectID": "lectures/lecture7.html#example-1",
+    "href": "lectures/lecture7.html#example-1",
+    "title": "",
+    "section": "Example 1",
+    "text": "Example 1"
+  },
+  {
+    "objectID": "lectures/lecture7.html#example-2",
+    "href": "lectures/lecture7.html#example-2",
+    "title": "",
+    "section": "Example 2",
+    "text": "Example 2"
+  },
+  {
+    "objectID": "lectures/lecture7.html#important-notes-on-results-of-hypothesis-tests",
+    "href": "lectures/lecture7.html#important-notes-on-results-of-hypothesis-tests",
+    "title": "",
+    "section": "Important notes on results of hypothesis tests",
+    "text": "Important notes on results of hypothesis tests\n\n\nNever accept or prove an hypothesis\n\nYour decision reflects just the evidence available in the current sample\nA new sample may produce a different result and the accepted or proven hypothesis may be wrong\n\nStatistically significant results can happen by chance\n\n\\(\\text{P-value} = 0.05\\) means that there is a \\(5\\%\\) chance of claiming statistical significance for a non-existent difference\n\nStatistically significant \\(\\ne\\) substantively significant\n\nTiny real-world differences can be statistically significant, especially with high power (big samples)\nImportant differences can look statistically non-significant, especially with low power (small samples)"
+  },
+  {
+    "objectID": "lectures/lecture7.html#another-example-2",
+    "href": "lectures/lecture7.html#another-example-2",
+    "title": "",
+    "section": "Another Example",
+    "text": "Another Example"
+  },
+  {
+    "objectID": "lectures/lecture7.html#steps-for-hypothesis-significance-tests",
+    "href": "lectures/lecture7.html#steps-for-hypothesis-significance-tests",
+    "title": "",
+    "section": "Steps for Hypothesis / Significance Tests",
+    "text": "Steps for Hypothesis / Significance Tests\n\n\n\nStep 1: Plan\n\nState the null and alternative hypotheses\nChoose your alpha level and find the critical value\n\nStep 2: Calculate\n\nCalculate test statistic (and p-value)\n\nStep 3: Make a decision\n\nReject \\(H_0\\) and support \\(H_a\\) if\n\np-value &lt; alpha\nTest statistic more extreme than critical value\n\nFail to reject \\(H_0\\) and fail to support \\(H_a\\) if\n\np-value &gt; alpha\nTest statistic less extreme than critical value"
+  },
+  {
+    "objectID": "lectures/lecture7.html#one-sided-versus-two-sided",
+    "href": "lectures/lecture7.html#one-sided-versus-two-sided",
+    "title": "",
+    "section": "One-sided versus two-sided",
+    "text": "One-sided versus two-sided\n\n\n\nA ONE-SIDED test is one in which we are interested if the unknown population parameter is HIGHER or LOWER than the value assumed under the null hypothesis\n\n\nExample: Do women have a higher level of emotional intelligence than do men?\n\n\n\nReject null hypothesis if the test result is different enough from the null in the right direction\n\n\n\nA TWO-SIDED test is one in which we are interested if the unknown population parameter is just DIFFERENT from the value assumed under the null hypothesis\n\n\nExample: Are men and women different in terms of emotional intelligence?\n\n\n\nReject null hypothesis if the test result is EITHER much higher OR much lower than what we assume under the null"
+  },
+  {
+    "objectID": "lectures/lecture7.html#one-sided-versus-two-sided-1",
+    "href": "lectures/lecture7.html#one-sided-versus-two-sided-1",
+    "title": "",
+    "section": "One-sided versus two-sided",
+    "text": "One-sided versus two-sided\n\n\n\nA ONE-SIDED test is one in which we are interested if the unknown population parameter is HIGHER or LOWER than the value assumed under the null hypothesis\n\n\n\n\n\n\n\n\n\n\n\nOnly one side contains strong results consistent with our research hypothesis\n\n\n\nA TWO-SIDED test is one in which we are interested if the unknown population parameter is just DIFFERENT from the value assumed under the null hypothesis\n\n\n\n\n\n\n\n\n\n\n\nBoth of these areas contain strong results consistent with our research hypothesis"
+  },
+  {
+    "objectID": "lectures/lecture7.html#one-sided-or-two-sided",
+    "href": "lectures/lecture7.html#one-sided-or-two-sided",
+    "title": "",
+    "section": "One-sided or two-sided?",
+    "text": "One-sided or two-sided?\n\n\n\nAre Friday classes, on average, shorter than the standard 50 minutes?\n\nOne-sided\n\nAre bars with pool tables different from bars without pool tables different in terms of average cover charge?\n\nTwo-sided\n\nIs the average education of immigrants lower than the national average?\n\nOne-sided\n\nDo professors drink more coffee than do students?\n\nOne-sided"
   }
 ]
