@@ -1051,7 +1051,7 @@ Mode is <span style="color:#e93cac;">21</span>
   * Median = $150
   * Mean = $1,200
   
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Choose the “best” measure of central tendency for the following
 
@@ -1076,7 +1076,7 @@ Decision: [MEDIAN]{style="color:#e93cac"}
 :::
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Choose the “best” measure of central tendency for the following
 
@@ -1099,7 +1099,7 @@ Decision: [MODE]{style="color:#e93cac"}
 :::
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Choose the “best” measure of central tendency for the following
 
@@ -1125,7 +1125,7 @@ Decision: [MEDIAN]{style="color:#e93cac"}
 :::
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Choose the “best” measure of central tendency for the following
 
@@ -1151,7 +1151,7 @@ Decision: [MEAN]{style="color:#e93cac"}
 :::
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Choose the “best” measure of central tendency for the following
 
@@ -1175,7 +1175,7 @@ Decision: [MEAN]{style="color:#e93cac"}
 :::
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Choose the “best” measure of central tendency for the following
 
