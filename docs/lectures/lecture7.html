@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.551">
+  <meta name="generator" content="quarto-1.5.43">
 
   <meta name="author" content="Victoria Sass">
-  <title></title>
+  <title> Hypothesis testing for   one and two samples </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -1514,15 +1579,93 @@ s_{\bar{X}} = \frac{s}{\sqrt{n}}
 <section id="inference-with-the-t-distribution-1" class="slide level2">
 <h2>Inference with the t-distribution</h2>
 <h3 id="why-use-something-other-than-the-normal-z-distribution-1"><span style="font-size: 0.9em">Why use something other than the normal (z) distribution?</span></h3>
-<p><br></p>
 <div style="font-size: 2.5em; text-align: center">
 <p>Account for the <u><strong>extra uncertainty</strong></u> by assuming that the sampling distribution follows a <span style="color: #e93cac"><u>t-distribution</u></span> instead of a normal (z) distribution.</p>
+</div>
+<div class="fragment" data-fragment-index="1" style="position: absolute; bottom: 25px; left: 25px; background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; text-align: center">
+<p>Using the t-distribution tends to give more <span style="color: #e93cac"><u>conservative</u></span> inferences (e.g., wider confidence intervals, more extreme critical values)</p>
+</div>
+<div class="fragment" data-fragment-index="2" style="position: absolute; bottom: 50px; right: 25px; background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; text-align: center">
+<p>Correction is most dramatic when the <span style="color: #e93cac"><u>sample size is small</u></span></p>
 </div>
 </section>
 <section id="inference-with-the-t-distribution-2" class="slide level2">
 <h2>Inference with the t-distribution</h2>
-<h3 id="why-use-something-other-than-the-normal-z-distribution-2"><span style="font-size: 0.9em">Why use something other than the normal (z) distribution?</span></h3>
+<h3 id="what-is-the-t-distribution">What is the t-distribution?</h3>
+<div>
+<ul>
+<li class="fragment">t-distribution is a family of distributions (several different shapes)</li>
+<li class="fragment">t-distribution is <em>similar</em> to Normal
+<ul>
+<li class="fragment">Symmetric<br>
+</li>
+<li class="fragment">Single peak</li>
+<li class="fragment">Centered on a mean/median/mode of 0</li>
+</ul></li>
+<li class="fragment">t-distribution is <em>different</em> from Normal in that it tends to
+<ul>
+<li class="fragment">be flatter</li>
+<li class="fragment">be more spread out</li>
+<li class="fragment">have a higher proportion of cases out on the tails</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment" style="font-size: 2em; text-align: center">
+<p>How different <span style="color: #e93cac">t</span> is from Normal depends on the <span style="color: #e93cac"><u>degrees of freedom</u></span></p>
+</div>
+</section>
+<section id="inference-with-the-t-distribution-3" class="slide level2">
+<h2>Inference with the t-distribution</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div style="font-size: 2em; text-align: center">
+<blockquote>
+<p><span style="color: #e93cac"><strong>Degrees of freedom (df)</strong></span><br> The number of scores that are free to vary in the calculation of a statistic</p>
+</blockquote>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="fragment" style="font-size: 1.25em">
+<!-- -->
 <h4 id="example">Example</h4>
+<p><span style="color: #a68100">Q: If a sample of <span class="math inline">\(n = 5\)</span> has a mean of 3, how many scores are free to vary?</span></p>
+</div>
+<p><br></p>
+<div class="fragment" style="font-size: 1.75em; text-align: center">
+<p>___ + ___ + ___ + ___ + ___ = 15</p>
+</div>
+<div class="fragment" style="color: #e93cac; font-size: 1.75em; text-align: center; position: absolute; top: 257px; right: 545px">
+<p>2</p>
+</div>
+<div class="fragment" style="color: #e93cac; font-size: 1.75em; text-align: center; position: absolute; top: 257px; right: 445px">
+<p>1</p>
+</div>
+<div class="fragment" style="color: #e93cac; font-size: 1.75em; text-align: center; position: absolute; top: 257px; right: 330px">
+<p>7</p>
+</div>
+<div class="fragment" style="color: #e93cac; font-size: 1.75em; text-align: center; position: absolute; top: 257px; right: 230px">
+<p>2</p>
+</div>
+<p><br></p>
+<div class="fragment" style="font-size: 1.25em; color: #1b8883">
+<p>A: <span class="center"><span class="math inline">\(n-1=4\)</span></span> <br> Once you know the first four numbers, there is only one value that the fifth could take to produce a mean of <span class="math inline">\(3\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="fragment" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; font-size: 1em; text-align: center; position: absolute; top: 340px; right: 125px">
+<p>df for calculation of a mean = <span class="math inline">\(n-1\)</span></p>
+</div>
+</section>
+<section id="inference-with-the-t-distribution-4" class="slide level2">
+<h2>Inference with the t-distribution</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">ggplot</span>(<span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>)), <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> <span class="fu">stat_function</span>(<span class="at">fun =</span> dt, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">df =</span> <span class="dv">8</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="lecture7_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+<section id="inference-with-the-t-distribution-5" class="slide level2">
+<h2>Inference with the t-distribution</h2>
+<h3 id="why-use-something-other-than-the-normal-z-distribution-2"><span style="font-size: 0.9em">Why use something other than the normal (z) distribution?</span></h3>
+<h4 id="example-1">Example</h4>
 <p><em>You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a <span style="color: #e93cac">sample standard deviation of 8.25</span>. Estimate the population mean.</em></p>
 <p><br></p>
 <div class="columns">
@@ -1571,7 +1714,7 @@ s_{\bar{X}} = \frac{s}{\sqrt{n}}
 <h1>Hypothesis testing for two samples</h1>
 
 </section>
-<section id="example-1" class="slide level2">
+<section id="example-2" class="slide level2">
 <h2>Example</h2>
 </section>
 <section id="sampling-theory-and-sampling-distribution" class="slide level2">
@@ -1876,18 +2019,7 @@ s_{\bar{X}} = \frac{s}{\sqrt{n}}
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1919,7 +2051,29 @@ s_{\bar{X}} = \frac{s}{\sqrt{n}}
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1927,7 +2081,7 @@ s_{\bar{X}} = \frac{s}{\sqrt{n}}
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
