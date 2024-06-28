@@ -550,7 +550,7 @@
     "href": "lectures/lecture7.html#more-realistic-example",
     "title": "",
     "section": "More realistic example",
-    "text": "More realistic example"
+    "text": "More realistic example\nEstimation: Confidence interval\nYou draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a sample standard deviation of 8.25. Estimate the population mean.\n\n\n\n\n\n\n\\[\n\\text{Confidence interval} =\n\\]\n\\[\n\\bar{X} \\pm t(\\frac{s_x}{\\sqrt{n}})\n\\]\n\n\n\n\n\n\\[\n\\text{95% C.I.} = 14.5 \\pm 1.984(0.825)\n\\] \\[\n\\text{        } = 14.5 \\pm 1.6368\n\\]\n\n\n\n\nPopulation standard deviation is unknown\n\n\n\n\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_\\bar{X} = \\frac{s_x}{\\sqrt{n}} = \\frac{8.25}{\\sqrt{100}} = 0.825\n\\]\n\n\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\n\n\\(df = 100 - 1 = 99\\)\n\n\n\n\nWe are 95% confident that the average number of hours studied for the population of UW students is between 12.86 to 16.14 hours\n\nTable from your textbook or an online calculator"
   },
   {
     "objectID": "lectures/lecture7.html#another-example",
@@ -577,8 +577,8 @@
     "objectID": "lectures/lecture7.html#another-example-1",
     "href": "lectures/lecture7.html#another-example-1",
     "title": "",
-    "section": "Another example",
-    "text": "Another example"
+    "section": "Another Example",
+    "text": "Another Example"
   },
   {
     "objectID": "lectures/lecture2.html",
@@ -3875,13 +3875,202 @@
     "href": "lectures/lecture7.html#inference-with-the-t-distribution-4",
     "title": "",
     "section": "Inference with the t-distribution",
-    "text": "Inference with the t-distribution\n\nggplot(data.frame(x = c(-4, 4)), aes(x = x)) + stat_function(fun = dt, args = list(df = 8))"
+    "text": "Inference with the t-distribution\n\n\n\nFor 95% confidence level(\\(\\alpha = 0.05\\), two-sided)\n\n\n\n\n\n\nt-distribution\ncritical value\n\n\n\n\ndf = 3\n\\(\\pm3.182\\)\n\n\ndf = 30\n\\(\\pm2.042\\)\n\n\ndf = 100\n\\(\\pm1.984\\)\n\n\ndf = 1000\n\\(\\pm1.962\\)\n\n\n\n\n\nNotice: Tests with the t-distribution are more conservative (wider confidence intervals, harder to reject H0) than with normal (critical value: \\(\\pm1.960\\)) and results are especially conservative when the sample size (df) is small."
   },
   {
     "objectID": "lectures/lecture7.html#inference-with-the-t-distribution-5",
     "href": "lectures/lecture7.html#inference-with-the-t-distribution-5",
     "title": "",
     "section": "Inference with the t-distribution",
+    "text": "Inference with the t-distribution"
+  },
+  {
+    "objectID": "lectures/lecture7.html#inference-with-the-t-distribution-6",
+    "href": "lectures/lecture7.html#inference-with-the-t-distribution-6",
+    "title": "",
+    "section": "Inference with the t-distribution",
     "text": "Inference with the t-distribution\nWhy use something other than the normal (z) distribution?\nExample\nYou draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a sample standard deviation of 8.25. Estimate the population mean.\n\n\n\n\n\n\n\n\\[\n\\text{Confidence interval} =\n\\]\n\\[\n\\bar{X} \\pm z(\\frac{\\sigma_x}{\\sqrt{n}})\n\\]\n\n\n\n\n\n\n\n\n\\[\n\\text{Confidence interval} =\n\\]\n\\[\n\\bar{X} \\pm t(\\frac{s_x}{\\sqrt{n}})\n\\]"
+  },
+  {
+    "objectID": "lectures/lecture7.html#more-realistic-example-1",
+    "href": "lectures/lecture7.html#more-realistic-example-1",
+    "title": "",
+    "section": "More realistic example",
+    "text": "More realistic example\nHypothesis testing\nYou draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a sample standard deviation of 8.25. Test the hypothesis that UW students study more than the national average of 13 hours/week.\n\n\n\n\\(H_0: \\mu_{UW} = 13\\) \\(H_a: \\mu_{UW} \\gt 13\\)\n\n\n\nCritical value of t?\n\n\n\n\n\nPopulation standard deviation is unknown\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_\\bar{X} = \\frac{s_x}{\\sqrt{n}} = \\frac{8.25}{\\sqrt{100}} = 0.825\n\\]\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\\(df = 100 - 1 = 99\\)\n\n\n\nTable from your textbook or an online calculator"
+  },
+  {
+    "objectID": "lectures/lecture7.html#more-realistic-example-2",
+    "href": "lectures/lecture7.html#more-realistic-example-2",
+    "title": "",
+    "section": "More realistic example",
+    "text": "More realistic example\nHypothesis testing\nYou draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a sample standard deviation of 8.25. Test the hypothesis that UW students study more than the national average of 13 hours/week.\n\n\n\\(H_0: \\mu_{UW} = 13\\) \\(H_a: \\mu_{UW} \\gt 13\\)\n\n\nCritical value of t = 1.660\n\n\n\nTest statistic from the sample:\n\n\n\\(t = \\frac{\\bar{X}-\\mu_0}{s_\\bar{X}} = \\frac{14.5 - 13}{0.825} =\\) \\(1.818\\)\n\n\n\n\nPopulation standard deviation is unknown\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_\\bar{X} = \\frac{s_x}{\\sqrt{n}} = \\frac{8.25}{\\sqrt{100}} = 0.825\n\\]\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\\(df = 100 - 1 = 99\\)\n\n\n\n\nSince obtained t is more extreme than critical value, reject \\(H_0\\) and support the claim that the population of UW students really do study more than the national average.\n\nTable from your textbook or an online calculator"
+  },
+  {
+    "objectID": "lectures/lecture7.html#more-realistic-example-3",
+    "href": "lectures/lecture7.html#more-realistic-example-3",
+    "title": "",
+    "section": "More realistic example",
+    "text": "More realistic example"
+  },
+  {
+    "objectID": "lectures/lecture7.html#practice-1",
+    "href": "lectures/lecture7.html#practice-1",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nEstimation: Confidence interval\nIn a random sample of 121 UW students, the mean number of visits to family in the past six months was 5.5 with a standard deviation of 0.9. Calculate a 90% confidence interval for the average number of visits in the population.\n\nSTEPS:\n\nDecide on a confidence level and corresponding t-score\nCalculate the standard error (using sample standard deviation)\nCalculate the margin of error\nCalculate the confidence interval\nInterpret the results\n\n\n\nHypothesis test\nYou want to know whether high school students are different than the national average (µ=220) in terms of the number of Facebook friends. A random sample of 30 high school students shows a mean number of Facebook friends of 245 with a standard deviation of 90. Is this difference from the national average statistically significant at the .01 level?\n\nSTEPS:\n1a. State the null and alternative hypotheses  1b. Choose your alpha level and find the critical value  2. Calculate the test statistic (t-score) and p-value  3. Make a decision (Reject or fail to reject the null hypothesis (\\(H_0\\)) and support or fail to support the alternative hypothesis \\(H_a\\))"
+  },
+  {
+    "objectID": "lectures/lecture7.html#practice-2",
+    "href": "lectures/lecture7.html#practice-2",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nEstimation: Confidence interval\nIn a random sample of 121 UW students, the mean number of visits to family in the past six months was 5.5 with a standard deviation of 0.9. Calculate a 90% confidence interval for the average number of visits in the population.\n\n\n\n\n\n\n\\[\n\\text{Confidence interval} =\n\\]\n\\[\n\\bar{X} \\pm t(\\frac{s_x}{\\sqrt{n}})\n\\]\n\n\n\n\n\n\\[\n\\text{90% C.I.} = 5.5 \\pm 1.66(0.082)\n\\] \\[\n\\text{        } = 5.5 \\pm 0.136\n\\]\n\n\n\n\nPopulation standard deviation is unknown\n\n\n\n\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_\\bar{X} = \\frac{s_x}{\\sqrt{n}} = \\frac{0.9}{\\sqrt{121}} = 0.082\n\\]\n\n\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\n\n\\(df = 121 - 1 = 120\\)\n\n\n\n\nWe are 90% confident that the average number of visits to family for the population of UW students is between 5.364 to 5.636 hours\n\nTable from your textbook or an online calculator"
+  },
+  {
+    "objectID": "lectures/lecture7.html#practice-3",
+    "href": "lectures/lecture7.html#practice-3",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nHypothesis test\nYou want to know whether high school students are different than the national average (µ=220) in terms of the number of Facebook friends. A random sample of 30 high school students shows a mean number of Facebook friends of 245 with a standard deviation of 90. Is this difference from the national average statistically significant at the .01 level?\n\n\n\n\\(H_0: \\mu_{HS} = 220\\) \\(H_a: \\mu_{HS} \\ne 220\\)\n\n\n\nCritical value of t?\n\n\n\n\n\nPopulation standard deviation is unknown\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_\\bar{X} = \\frac{s_x}{\\sqrt{n}} = \\frac{90}{\\sqrt{30}} = 16.432\n\\]\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\\(df = 30 - 1 = 29\\)\n\n\n\nTable from your textbook or an online calculator"
+  },
+  {
+    "objectID": "lectures/lecture7.html#practice-4",
+    "href": "lectures/lecture7.html#practice-4",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nHypothesis test\nYou want to know whether high school students are different than the national average (µ=220) in terms of the number of Facebook friends. A random sample of 30 high school students shows a mean number of Facebook friends of 245 with a standard deviation of 90. Is this difference from the national average statistically significant at the .01 level?\n\n\n\\(H_0: \\mu_{HS} = 220\\) \\(H_a: \\mu_{HS} \\ne 220\\)\n\n\nCritical value of t = 2.756\n\n\n\nTest statistic from the sample:\n\n\n\\(t = \\frac{\\bar{X}-\\mu_0}{s_\\bar{X}} = \\frac{245 - 220}{16.432} =\\) \\(1.521\\)\n\n\n\n\nPopulation standard deviation is unknown\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_\\bar{X} = \\frac{s_x}{\\sqrt{n}} = \\frac{90}{\\sqrt{30}} = 16.432\n\\]\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\\(df = 30 - 1 = 29\\)\n\n\n\n\nSince obtained t is NOT more extreme than critical value, we FAIL TO REJECT \\(H_0\\) that the average number of FB friends in the high school population is the same as the national average.\n\nTable from your textbook or an online calculator"
+  },
+  {
+    "objectID": "lectures/lecture7.html#where-are-we",
+    "href": "lectures/lecture7.html#where-are-we",
+    "title": "",
+    "section": "Where are we?",
+    "text": "Where are we?\n\n\nInference: Drawing conclusions about populations based on information drawn from samples\nInferences so far:\n\nConfidence intervals to estimate a population mean or proportion based on the results from a SINGLE SAMPLE\nHypothesis tests / tests of significance for a SINGLE SAMPLE:\n\nComparing our SINGLE SAMPLE result to some known benchmark\n\nWith and without knowing the standard deviation of the population of interest\n\nNOW: drawing conclusions about the difference between TWO unknown populations based on information from TWO samples"
+  },
+  {
+    "objectID": "lectures/lecture7.html#two-sample-hypothesis-test",
+    "href": "lectures/lecture7.html#two-sample-hypothesis-test",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\n\n\nStep 1a: State the null and alternative hypotheses\n\nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\n\n\\(H_0: \\mu_{UW} = \\mu_{WSU}\\)       \\(H_a: \\mu_{UW} \\ne \\mu_{WSU}\\)\n\n\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\)       \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\nObserved difference between sample means reflects chance sampling error.\n\n\nObserved difference b/w sample means reflects a real difference b/w population means"
+  },
+  {
+    "objectID": "lectures/lecture7.html#two-sample-hypothesis-test-1",
+    "href": "lectures/lecture7.html#two-sample-hypothesis-test-1",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nOther possible hypotheses\n\n\n\nTwo-sided\nQuestion just asks about any difference\n\n\\(H_a: \\mu_{1} \\ne \\mu_{2}\\)\n\n↓\n\n\\(H_a: \\mu_{1} - \\mu_{2} \\ne 0\\)\n\n\nOne-sided\nQuestion implies a direction of difference\n\n\n\n\\(H_a: \\mu_{1} \\gt \\mu_{2}\\)\n\n↓\n\n\\(H_a: \\mu_{1} - \\mu_{2} \\gt 0\\)\n\n\n\n\\(H_a: \\mu_{1} \\lt \\mu_{2}\\)\n\n↓\n\n\\(H_a: \\mu_{1} - \\mu_{2} \\lt 0\\)\n\n\n\n\nCan restate any in terms of differences between population means\n\n\n\nNote: all of these hypothesize a real difference between population means\n\n\nAll are contradicted by the same null hypothesis\n\\(H_0: \\mu_{1} = \\mu_{2}\\) → \\(H_0: \\mu_{1} - \\mu_{2} = 0\\)"
+  },
+  {
+    "objectID": "lectures/lecture7.html#two-sample-hypothesis-test-2",
+    "href": "lectures/lecture7.html#two-sample-hypothesis-test-2",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nStep 1a: State the null and alternative hypotheses\n\nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\n\nSet up a test assuming that the null (\\(H_0\\)) is true and see whether the facts of our samples contradict that assumption.\nKey question: How likely is it that we would observe a sample difference this big  (\\(14.5-12.5 = 2 \\text{ hrs}\\)) if the null (\\(H_0\\)) were true?\n\nIf very unlikely, we will reject \\(H_0\\) and support \\(H_a\\)\nIf not very unlikely, we will fail to reject \\(H_0\\)\n\n\n\n\n\nHave to think about probability of receiving our sample result (difference) if \\(H_0\\) were true\n\nHave to think about the SAMPLING DISTRIBUTION of all possible sample results"
+  },
+  {
+    "objectID": "lectures/lecture7.html#sampling-theory",
+    "href": "lectures/lecture7.html#sampling-theory",
+    "title": "",
+    "section": "Sampling theory",
+    "text": "Sampling theory\nHypothesis test for difference between means\nSampling Distribution for the difference between means\nA theoretical probability distribution that would be obtained by calculating all of the possible mean differences (\\(\\bar{X_1}-\\bar{X_2}\\)) for all possible pairs of random, independent samples of size \\(n_1\\) and \\(n_2\\) drawn from two populations."
+  },
+  {
+    "objectID": "lectures/lecture7.html#sampling-theory-1",
+    "href": "lectures/lecture7.html#sampling-theory-1",
+    "title": "",
+    "section": "Sampling theory",
+    "text": "Sampling theory\nHypothesis test for difference between means\nCharacteristics of the Sampling Distribution for Difference between Two Means:\n\n\nIF the random samples are independently drawn AND the sample sizes are large(\\(n_1 + n_2 &gt; 100\\)) then:\nThe sampling distribution of differences between means would be NORMAL\n\n(but use the t-distribution when population standard deviations are unknown)\n\nThe MEAN of this distribution would equal the real difference between the population means\n\n\\(\\mu_{\\bar{X_1} - \\bar{X_2}} = \\mu_1 - \\mu_2\\)\n\nThe STANDARD ERROR of the sampling distribution of differences would be\n\n\\(\\sigma_{\\bar{X_1} - \\bar{X_2}} = \\sqrt{\\frac{\\sigma_1^2}{n_1} + \\frac{\\sigma_2^2}{n_2}}\\)       →       \\(s_{\\bar{X_1} - \\bar{X_2}} = \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}\\)\n\n\nINFERENCE"
+  },
+  {
+    "objectID": "lectures/lecture7.html#two-sample-hypothesis-test-3",
+    "href": "lectures/lecture7.html#two-sample-hypothesis-test-3",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nStep 1b: Choose your alpha level and find the critical value\nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\n\n\n\\(\\alpha = 0.05\\)   Two-sided text\n\n\n\nBecause population standard deviations are unknown, use t-distribution1\n\n\n\\(df_1= n_1-1 = 100-1 = 99\\) \\(df_2= n_2-1 = 81-1 = 80\\)\n\n←\n\n\nUse the smaller of the two df’s to create a more conservative test!\n\n\n\nOur sample result has to be at least 1.99 standard errors away from the null hypothesis for us to reject the null hypothesis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTable from your textbookor an online calculator"
+  },
+  {
+    "objectID": "lectures/lecture7.html#two-sample-hypothesis-test-4",
+    "href": "lectures/lecture7.html#two-sample-hypothesis-test-4",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nStep 2: Calculate the test statistic (t-score) and p-value \nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\nFiguring out how far the sample result is from \\(H_0\\)and putting it in standard-error units\n\n\n\n\\(t = \\frac{(\\bar{X_1}-\\bar{X_2})-0}{s_{\\bar{X_1}}-s_{\\bar{X_2}}}\\)"
+  },
+  {
+    "objectID": "lectures/lecture7.html#two-sample-hypothesis-test-5",
+    "href": "lectures/lecture7.html#two-sample-hypothesis-test-5",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nStep 2: Calculate the test statistic (t-score) and p-value \nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\nObserved sample result(difference between means)\n\n\n\n\\(t = \\frac{(\\bar{X_1}-\\bar{X_2})-0}{s_{\\bar{X_1}}-s_{\\bar{X_2}}}\\)"
+  },
+  {
+    "objectID": "lectures/lecture7.html#two-sample-hypothesis-test-6",
+    "href": "lectures/lecture7.html#two-sample-hypothesis-test-6",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nStep 2: Calculate the test statistic (t-score) and p-value \nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\nDifference observed underthe null hypotheses\n\n\n\n\\(t = \\frac{(\\bar{X_1}-\\bar{X_2})-0}{s_{\\bar{X_1}}-s_{\\bar{X_2}}}\\)"
+  },
+  {
+    "objectID": "lectures/lecture7.html#two-sample-hypothesis-test-7",
+    "href": "lectures/lecture7.html#two-sample-hypothesis-test-7",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nStep 2: Calculate the test statistic (t-score) and p-value \nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\nStandard error(s.d. of the sampling distribution)\n\n\n\n\\(t = \\frac{(\\bar{X_1}-\\bar{X_2})-0}{s_{\\bar{X_1}}-s_{\\bar{X_2}}}\\)\n\n\n\n\n\n\n\\(s_{\\bar{X_1} - \\bar{X_2}} = \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}} = \\sqrt{\\frac{8.25^2}{100} + \\frac{7.0^2}{81}} = \\sqrt{0.681 0.605} = 1.134\\)\n\n\n\n\n\\(t = \\frac{(14 - 12.5)-0}{1.134} = 1.764\\)\n\n\n\nObserved sample difference is 1.764 standard errors away from the assumption of the null hypothesis"
+  },
+  {
+    "objectID": "lectures/lecture7.html#two-sample-hypothesis-test-8",
+    "href": "lectures/lecture7.html#two-sample-hypothesis-test-8",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nMake a decision (Reject/fail to reject \\(H_0\\) and support/fail to support \\(H_a\\))\nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\n\nSince our test statistic (\\(1.764\\)) is LESS extreme than the critical value (\\(1.990\\)) we FAIL TO REJECT \\(H_0\\)\n\nBased on this evidence, it is NOT safe to say that the population of UW students and the population of WSU students differ in terms of average study time.\n\nThe observed difference between sample means is NOT statistically significant\n\n\n\n\n\n\\(t = \\frac{(14 - 12.5)-0}{1.134} = 1.764\\)"
+  },
+  {
+    "objectID": "lectures/lecture7.html#practice-5",
+    "href": "lectures/lecture7.html#practice-5",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nTwo-sample hypothesis test\nWe want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90. In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means."
+  },
+  {
+    "objectID": "lectures/lecture7.html#practice-6",
+    "href": "lectures/lecture7.html#practice-6",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nTwo-sample hypothesis test\nWe want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90. In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\n\n\\(H_0: \\mu_{HS} - \\mu_{SC} = 0\\) \\(H_a: \\mu_{HS} - \\mu_{SC} \\gt 0\\)\n\n\n\nCritical value of t?\n\n\n\n\n\nPopulation standard deviation is unknown\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_{\\bar{X_1} - \\bar{X_2}} = \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}} = \\sqrt{\\frac{90^2}{30} + \\frac{65^2}{40}} = \\sqrt{270 + 105.625} = 19.381\n\\]\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\\(df = 30 - 1 = 29\\)\n\n\n\nTable from your textbook or an online calculator"
+  },
+  {
+    "objectID": "lectures/lecture7.html#practice-7",
+    "href": "lectures/lecture7.html#practice-7",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nTwo-sample hypothesis test\nWe want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90. In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\n\\(H_0: \\mu_{HS} - \\mu_{SC} = 0\\) \\(H_a: \\mu_{HS} - \\mu_{SC} \\gt 0\\)\n\n\nCritical value of t = 1.699\n\n\n\nTest statistic from the sample:\n\n\n\\(t = \\frac{\\bar{X}-\\mu_0}{s_\\bar{X}} = \\frac{(245-185)-0}{19.381} =\\)\\(3.096\\)\n\n\n\n\nPopulation standard deviation is unknown\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_{\\bar{X_1} - \\bar{X_2}} = \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}} = \\sqrt{\\frac{90^2}{30} + \\frac{65^2}{40}} = \\sqrt{270 + 105.625} = 19.381\n\\]\n\nUse the t-distribution with \\(df = n - 1\\)\n\n\\(df = 30 - 1 = 29\\)\n\n\n\n\nSince obtained t is MORE extreme than the critical value, we REJECT \\(H_0\\). Based on this evidence, we are reasonably confidence that the population of high schoolers have a higher average number of FB friends than do senior citizens. The observed difference between sample means is statistically significant."
+  },
+  {
+    "objectID": "lectures/lecture7.html#step-1-plan-2",
+    "href": "lectures/lecture7.html#step-1-plan-2",
+    "title": "",
+    "section": "Step 1: Plan",
+    "text": "Step 1: Plan\nState the null and alternative hypotheses\nYou are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.\n\n\n\n\n\\[\nH_0: \\mu_{immig} = 12.75\n\\]\n\n\n\\[\nH_a: \\mu_{immig} \\ne 12.75\n\\]\n\n\n\n\n\n\nSet up a test assuming that the null \\(H_0\\) is true and see whether the facts of our sample contradict that assumption"
+  },
+  {
+    "objectID": "lectures/lecture7.html#step-1-plan-3",
+    "href": "lectures/lecture7.html#step-1-plan-3",
+    "title": "",
+    "section": "Step 1: Plan",
+    "text": "Step 1: Plan\nChoose your alpha level and find the critical value\nYou are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.\n\n\n\n\n\\[\nH_0: \\mu_{immig} = 12.75\n\\]\n\n\n\\[\nH_a: \\mu_{immig} \\ne 12.75\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNormal distribution \\(\\alpha = 0.05\\)\n\n\nSo our sample result has to be at least 1.96 standard errors away from what is assumed under \\(H_0\\) for us to reject \\(H_0\\)\n\n\n\\(H_a: \\mu \\ne 0\\) Critical value of \\(z = \\pm 1.96\\)"
+  },
+  {
+    "objectID": "lectures/lecture7.html#step-2-calculate-1",
+    "href": "lectures/lecture7.html#step-2-calculate-1",
+    "title": "",
+    "section": "Step 2: Calculate",
+    "text": "Step 2: Calculate\nCalculate test statistic (and p-value)\nYou are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.\n\n\n\n\n\\[\nH_0: \\mu_{immig} = 12.75\n\\]\n\n\n\\[\nH_a: \\mu_{immig} \\ne 12.75\n\\]\n\n\n\n\nFiguring out how far the sample result is fom \\(H_0\\) and putting it in standard-error units\n\n\n\\[\n\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}} = \\frac{4}{\\sqrt{225}} = 0.267\n\\]\n\n\n\n\n\\(z\\) \\(= \\frac{\\bar{X} - \\mu_0}{\\sigma_{\\bar{X}}}\\)\n\n\\(\\frac{13.3-12.75}{0.267} =\\) \\(2.060\\)\n\n\n\n\nMean education for immigrants is 2.06 standard errors above the national average (assumed under \\(H_0\\))"
+  },
+  {
+    "objectID": "lectures/lecture7.html#step-3-make-a-decision-1",
+    "href": "lectures/lecture7.html#step-3-make-a-decision-1",
+    "title": "",
+    "section": "Step 3: Make a decision",
+    "text": "Step 3: Make a decision\nReject \\(H_0\\) and support \\(H_a\\)\nYou are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.\n\n\n\n\n\\[\nH_0: \\mu_{immig} = 12.75\n\\]\n\n\n\\[\nH_a: \\mu_{immig} \\ne 12.75\n\\]\n\n\n\n\nBased on this evidence, it appears that the population of immigrants have, on average, more education than the national average.\nThe observed difference IS statistically significant\n\n\n\nSince our test statistic (2.06) is more extreme than the critical value (1.96) weREJECT \\(H_0\\), FIND EVIDENCE TO SUPPORT \\(H_A\\)"
   }
 ]

@@ -33,6 +33,8 @@ format:
 require(tidyverse)
 require(ggthemes)
 require(gt)
+require(gganimate)
+require(ggforce)
 
 knitr::opts_chunk$set(comment = ">")
 
@@ -2116,29 +2118,87 @@ df for calculation of a mean = $n-1$
 
 ```{r}
 #| echo: false
-#| fig-width: 8
-#| fig-height: 4
+#| fig-width: 10
+#| fig-height: 6
 #| fig-align: center
 
-z2 <- 2.241
-z1 <- -2.241
-
-ggplot(data.frame(x = c(-3.5, 3.5)), aes(x = x)) + 
-  stat_function(fun = dt, n = 101, args = list(mean = mu, sd = sigma, df = 1), linewidth = 1) +
+tdist <- ggplot(data.frame(x = c(-10, 10)), aes(x = x)) + 
   geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  stat_function(fun = dnorm, args = list(mean = mu, sd = sigma), linewidth = 1, color = "black") +
+  annotate(geom = "text", x = 2, y = 0.4, color = "black", label = "Normal") + 
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 1") + 
+  stat_function(fun = dt, args = list(df = 1), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 2") + 
+  stat_function(fun = dt, args = list(df = 2), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 3") + 
+  stat_function(fun = dt, args = list(df = 3), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 4") + 
+  stat_function(fun = dt, args = list(df = 4), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 5") + 
+  stat_function(fun = dt, args = list(df = 5), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 6") + 
+  stat_function(fun = dt, args = list(df = 6), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 7") + 
+  stat_function(fun = dt, args = list(df = 7), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 8") + 
+  stat_function(fun = dt, args = list(df = 8), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 9") + 
+  stat_function(fun = dt, args = list(df = 9), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 10") + 
+  stat_function(fun = dt, args = list(df = 10), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 20") + 
+  stat_function(fun = dt, args = list(df = 20), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 30") + 
+  stat_function(fun = dt, args = list(df = 30), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 40") + 
+  stat_function(fun = dt, args = list(df = 40), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 50") + 
+  stat_function(fun = dt, args = list(df = 50), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 60") + 
+  stat_function(fun = dt, args = list(df = 60), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 70") + 
+  stat_function(fun = dt, args = list(df = 70), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 80") + 
+  stat_function(fun = dt, args = list(df = 80), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 90") + 
+  stat_function(fun = dt, args = list(df = 90), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 100") + 
+  stat_function(fun = dt, args = list(df = 100), linewidth = 0.5, color = "#e93cac") +
+  #annotate(geom = "text", x = 3.5, y = 0.3, color = "#e93cac", label = "t, df = 1000") + 
+  stat_function(fun = dt, args = list(df = 1000), linewidth = 0.5, color = "#e93cac") +
   theme_tufte() +
-  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = c(-10, -5, 0, 5, 10)) + 
+  transition_layers(layer_length = 5, transition_length = 1,
+                    from_blank = FALSE, keep_layers = c(Inf, Inf, Inf, Inf, rep(0, 20)), 
+                    layer_names = c("", "", "", "", "t, df = 1", "t, df = 2", "t, df = 3", "t, df = 4", "t, df = 5", "t, df = 6", "t, df = 7", 
+                                    "t, df = 8", "t, df = 9", "t, df = 10", "t, df = 20", "t, df = 30", "t, df = 40", "t, df = 50", 
+                                    "t, df = 60", "t, df = 70", "t, df = 80", "t, df = 90", "t, df = 100", "t, df = 1000")) +
+  enter_fade() + 
+  exit_fade() + 
+  labs(title = "Comparison of standard normal and student t distributions", subtitle = "{closest_layer}") + 
+  theme(plot.subtitle = element_text(color = "#e93cac", size = 18, vjust = 5, hjust = 0.35))
 
+animate(plot = tdist, nframes = 100, fps = 5, end_pause = 10)
 ```
 
+::: {.fragment style="position: absolute; top: 190px; right: -275px"}
+| t-distribution  | critical value  |
+|:------|:------:|
+| df = 3  | $\pm3.182$   |
+| df = 30   | $\pm2.042$   |
+| df = 100 | $\pm1.984$   |
+| df = 1000 | $\pm1.962$   |
 
+: For 95% confidence level<br>($\alpha = 0.05$, two-sided) {tbl-colwidths="[20,25]"}
+:::
 
+::: {.fragment style="border: 3px solid #e93cac; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; position: absolute; bottom: 200px; left: -50px"}
+**Notice**: Tests with the [t-distribution]{style="color: #e93cac"} are more conservative (wider confidence intervals, harder to reject H0) than with normal (critical value: **$\pm1.960$**) and results are [especially conservative]{.underline} when the [sample size (df) is small]{.underline}.
+:::
 
-## Inference with the t-distribution
+## More realistic example
 
-### [Why use something other than the normal (z) distribution?]{style="font-size: 0.9em"}
-
-#### Example
+### Estimation: Confidence interval
 
 *You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a [sample standard deviation of 8.25]{style="color: #e93cac"}. Estimate the population mean.*
 
@@ -2146,31 +2206,11 @@ ggplot(data.frame(x = c(-3.5, 3.5)), aes(x = x)) +
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 
-::: {style="font-size: 2em; text-align: center;"}
-::: {.fragment .fade-in fragment-index=1}
-::: {.fragment .shrink fragment-index=2}
-::: {.fragment .semi-fade-out fragment-index=2}
-$$
-\text{Confidence interval} = 
-$$
-
-[$$
-\bar{X} \pm z(\frac{\sigma_x}{\sqrt{n}})
-$$]{style="color: #a68100"}
-:::
-:::
-:::
-:::
-
-:::
-
-::: {.column width="50%"}
-
-::: {style="font-size: 2em; text-align: center"}
-::: {.fragment .fade-in fragment-index=2}
-::: {.fragment .grow fragment-index=2 }
+::: {.fragment .fade-in fragment-index=3}
+::: {.fragment .grow fragment-index=3 style="font-size: 1em; text-align: center;"}
+::: {.fragment .fade-out fragment-index=6}
 $$
 \text{Confidence interval} = 
 $$
@@ -2183,24 +2223,1071 @@ $$]{style="color: #e93cac"}
 :::
 :::
 
+<br>
+
+::: {.fragment fragment-index=5}
+$$
+\text{95% C.I.} = 14.5 \pm 1.984(0.825)
+$$
+$$
+\text{        } = 14.5 \pm 1.6368
+$$
+:::
+
+
+:::
+
+::: {.column width="60%"}
+
+::: {.fragment fragment-index=1}
+* Population standard deviation is unknown
+:::
+
+::: {.fragment fragment-index=2}
+* Use the sample standard deviation to estimate the standard error
+
+$$
+s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{8.25}{\sqrt{100}} = 0.825
+$$
+:::
+
+
+::: {.fragment fragment-index=4}
+* Use the t-distribution^[[Table](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm) from your textbook or an [online calculator](https://goodcalculators.com/student-t-value-calculator/)] with $df = n - 1$
+:::
+
+::: {.fragment fragment-index=4}
+[$df = 100 - 1 = 99$]{.center}
+:::
+
 
 :::
 
 ::::
 
-## Degrees of freedom
+::: {.fragment fragment-index=6 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 250px; left: 00px; text-align: center"}
+We are [95% confident]{.underline} that the average number of hours studied for the [population]{.underline} of UW students is between [12.86 to 16.14]{.underline} hours
+:::
 
 ## More realistic example
 
-## Another example
+### Hypothesis testing
+
+*You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a [sample standard deviation of 8.25]{style="color: #e93cac"}. Test the hypothesis that UW students study more than the national average of 13 hours/week.*
+
+:::: {.columns}
+
+::: {.column width="40%"}
+::: {.fragment fragment-index=1}
+[$H_0: \mu_{UW} = 13$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"} [$H_a: \mu_{UW} \gt 13$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"}
+:::
+<br>
+
+::: {.fragment fragment-index=2 style="text-align: center;"}
+Critical value of t?
+:::
+
+<br>
+
+
+:::
+
+::: {.column width="60%"}
+
+::: {.fragment fragment-index=1}
+* Population standard deviation is unknown
+
+
+
+* Use the sample standard deviation to estimate the standard error
+
+$$
+s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{8.25}{\sqrt{100}} = 0.825
+$$
+
+
+
+
+* Use the t-distribution^[[Table](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm) from your textbook or an [online calculator](https://goodcalculators.com/student-t-value-calculator/)] with $df = n - 1$
+
+
+
+[$df = 100 - 1 = 99$]{.center}
+:::
+
+
+:::
+
+::::
+
+## More realistic example
+
+### Hypothesis testing
+
+*You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a [sample standard deviation of 8.25]{style="color: #e93cac"}. Test the hypothesis that UW students study more than the national average of 13 hours/week.*
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+[$H_0: \mu_{UW} = 13$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"} [$H_a: \mu_{UW} \gt 13$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"}
+
+<br>
+
+
+::: {style="text-align: center;"}
+Critical value of t = [1.660]{style="color: #e93cac"}
+:::
+
+
+<br>
+
+::: {.fragment fragment-index=1 style="font-size: 1em"}
+Test statistic from the sample:<br>
+:::
+
+::: {.fragment fragment-index=1 style="font-size: 1.25em; text-align: center"}
+$t = \frac{\bar{X}-\mu_0}{s_\bar{X}} = \frac{14.5 - 13}{0.825} =$ [$1.818$]{style="color: #1b8883"}
+:::
+
+
+:::
+
+::: {.column width="60%"}
+
+::: {.fragment .fade-out fragment-index=2}
+* Population standard deviation is unknown
+
+
+
+* Use the sample standard deviation to estimate the standard error
+
+$$
+s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{8.25}{\sqrt{100}} = 0.825
+$$
+
+
+
+
+* Use the t-distribution^[[Table](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm) from your textbook or an [online calculator](https://goodcalculators.com/student-t-value-calculator/)] with $df = n - 1$
+
+
+
+[$df = 100 - 1 = 99$]{.center}
+:::
+
+
+:::
+
+::::
+
+::: {.fragment fragment-index=2 style="border: 4px solid black; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; top: 350px; right: 0px; text-align: center"}
+Since [obtained t]{style="color: #1b8883"} is more extreme than [critical value]{style="color: #e93cac"}, reject $H_0$ and support the claim that the population of UW students really do study more than the national average.
+:::
+
+## Practice
+
+:::: {.columns}
+
+::: {.column width="45%"}
+#### Estimation: Confidence interval
+
+*In a random sample of 121 UW students, the mean number of visits to family in the past six months was 5.5 with a  standard deviation of 0.9.  Calculate a 90% confidence interval for the average number of visits in the population.*
+
+::: {.fragment}
+[**STEPS**:]{.underline style="background: #c5b4e3"}
+
+1. Decide on a confidence level and corresponding [t-score]{style="color: #e93cac"}
+2. Calculate the standard error (using **sample** standard deviation)
+3. Calculate the margin of error
+4. Calculate the confidence interval
+5. Interpret the results
+:::
+:::
+
+::: {.column width="55%"}
+#### Hypothesis test
+*You want to know whether high school students are different than the national average (µ=220) in terms of the number of Facebook friends.  A random sample of 30 high school students shows a mean number of Facebook friends of 245 with a standard deviation of 90.  Is this difference from the national average statistically significant at the .01 level?*
+
+::: {.fragment}
+[**STEPS**:]{.underline style="background: #c5b4e3"}
+
+1a. State the null and alternative hypotheses <br>
+1b. Choose your alpha level and find the critical value <br>
+2. Calculate the test statistic ([t-score]{style="color: #e93cac"}) and p-value <br>
+3. Make a decision (Reject or fail to reject the null hypothesis ($H_0$) and support or fail to support the alternative hypothesis $H_a$)
+:::
+:::
+
+::::
+
+## Practice {visibility="hidden"}
+
+#### Estimation: Confidence interval
+
+*In a random sample of 121 UW students, the mean number of visits to family in the past six months was 5.5 with a  standard deviation of 0.9.  Calculate a 90% confidence interval for the average number of visits in the population.*
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+::: {.fragment .fade-in fragment-index=3}
+::: {.fragment .grow fragment-index=3 style="font-size: 1em; text-align: center;"}
+::: {.fragment .fade-out fragment-index=6}
+$$
+\text{Confidence interval} = 
+$$
+
+
+[$$
+\bar{X} \pm t(\frac{s_x}{\sqrt{n}})
+$$]{style="color: #e93cac"}
+:::
+:::
+:::
+
+<br>
+
+::: {.fragment fragment-index=5}
+$$
+\text{90% C.I.} = 5.5 \pm 1.66(0.082)
+$$
+$$
+\text{        } = 5.5 \pm 0.136
+$$
+:::
+
+
+:::
+
+::: {.column width="60%"}
+
+::: {.fragment fragment-index=1}
+* Population standard deviation is unknown
+:::
+
+::: {.fragment fragment-index=2}
+* Use the sample standard deviation to estimate the standard error
+
+$$
+s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{0.9}{\sqrt{121}} = 0.082
+$$
+:::
+
+
+::: {.fragment fragment-index=4}
+* Use the t-distribution^[[Table](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm) from your textbook or an [online calculator](https://goodcalculators.com/student-t-value-calculator/)] with $df = n - 1$
+:::
+
+::: {.fragment fragment-index=4}
+[$df = 121 - 1 = 120$]{.center}
+:::
+
+
+:::
+
+::::
+
+::: {.fragment fragment-index=6 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 250px; left: 00px; text-align: center"}
+We are [90% confident]{.underline} that the average number of visits to family for the [population]{.underline} of UW students is between [5.364 to 5.636]{.underline} hours
+:::
+
+## Practice {visibility="hidden"}
+
+#### Hypothesis test
+
+*You want to know whether high school students are different than the national average (µ=220) in terms of the number of Facebook friends.  A random sample of 30 high school students shows a mean number of Facebook friends of 245 with a standard deviation of 90.  Is this difference from the national average statistically significant at the .01 level?*
+
+:::: {.columns}
+
+::: {.column width="40%"}
+::: {.fragment fragment-index=1}
+[$H_0: \mu_{HS} = 220$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"} [$H_a: \mu_{HS} \ne 220$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"}
+:::
+<br>
+
+::: {.fragment fragment-index=2 style="text-align: center;"}
+Critical value of t?
+:::
+
+<br>
+
+
+:::
+
+::: {.column width="60%"}
+
+::: {.fragment fragment-index=1}
+* Population standard deviation is unknown
+
+
+
+* Use the sample standard deviation to estimate the standard error
+
+$$
+s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{90}{\sqrt{30}} = 16.432
+$$
+
+
+
+
+* Use the t-distribution^[[Table](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm) from your textbook or an [online calculator](https://goodcalculators.com/student-t-value-calculator/)] with $df = n - 1$
+
+
+
+[$df = 30 - 1 = 29$]{.center}
+:::
+
+
+:::
+
+::::
+
+## Practice {visibility="hidden"}
+
+#### Hypothesis test
+
+*You want to know whether high school students are different than the national average (µ=220) in terms of the number of Facebook friends.  A random sample of 30 high school students shows a mean number of Facebook friends of 245 with a standard deviation of 90.  Is this difference from the national average statistically significant at the .01 level?*
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+[$H_0: \mu_{HS} = 220$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"} [$H_a: \mu_{HS} \ne 220$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"}
+
+<br>
+
+
+::: {style="text-align: center;"}
+Critical value of t = [2.756]{style="color: #e93cac"}
+:::
+
+
+<br>
+
+::: {.fragment fragment-index=1 style="font-size: 1em"}
+Test statistic from the sample:<br>
+:::
+
+::: {.fragment fragment-index=1 style="font-size: 1.25em; text-align: center"}
+$t = \frac{\bar{X}-\mu_0}{s_\bar{X}} = \frac{245 - 220}{16.432} =$ [$1.521$]{style="color: #1b8883"}
+:::
+
+
+:::
+
+::: {.column width="60%"}
+
+::: {.fragment .fade-out fragment-index=2}
+* Population standard deviation is unknown
+
+
+
+* Use the sample standard deviation to estimate the standard error
+
+$$
+s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{90}{\sqrt{30}} = 16.432
+$$
+
+
+
+
+* Use the t-distribution^[[Table](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm) from your textbook or an [online calculator](https://goodcalculators.com/student-t-value-calculator/)] with $df = n - 1$
+
+
+
+[$df = 30 - 1 = 29$]{.center}
+:::
+
+
+:::
+
+::::
+
+::: {.fragment fragment-index=2 style="border: 4px solid black; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; top: 350px; right: 0px; text-align: center"}
+Since [obtained t]{style="color: #1b8883"} is **NOT** more extreme than [critical value]{style="color: #e93cac"}, we **FAIL TO REJECT** $H_0$ that the average number of FB friends in the high school population is the same as the national average. 
+:::
 
 # Hypothesis testing for two samples {.section-title background-color="#c5b4e3"}
 
-## Example
+## Where are we? 
 
-## Sampling theory and sampling distribution
+::: incremental
+* [**Inference**]{.underline}: Drawing conclusions about populations based on information drawn from samples
+* [**Inferences so far**]{.underline}:
+    * Confidence intervals to estimate a population mean or proportion based on the results from a SINGLE SAMPLE
+    * Hypothesis tests / tests of significance for a SINGLE SAMPLE:
+        * Comparing our SINGLE SAMPLE result to some known benchmark
+            * With and without *knowing* the standard deviation of the population of interest
+        * [NOW: drawing conclusions about the difference between TWO unknown populations based on information from TWO samples]{style="background: #ffc700; color: #754cbc"}
+:::
 
-## Another Example
+## Two-sample hypothesis test
+
+::: fragment
+#### Step 1a: State the null and alternative hypotheses
+:::
+
+*We want to know if UW students differ from WSU students in terms of average study time.  We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25.  In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0.  Use a .05 alpha level to test the statistical significance of the observed difference between means.*
+
+:::: {.columns}
+
+::: {.column width="30%"}
+::: {.fragment}
+[$H_0: \mu_{UW} = \mu_{WSU}$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"} 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+[$H_a: \mu_{UW} \ne \mu_{WSU}$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+:::
+:::
+
+::: {.column width="30%"}
+::: {.fragment}
+[$H_0: \mu_{UW} - \mu_{WSU} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"} 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+[$H_a: \mu_{UW} - \mu_{WSU} \ne 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+:::
+:::
+
+::: {.column width="40%"}
+::: {.fragment style="border: 4px solid #754cbc; border-radius: 15px; padding: 1px 1px 1px 1px; text-align: center; width: 400px"}
+Observed difference between sample means reflects chance sampling error.
+:::
+
+::: {.fragment style="border: 4px solid #6e8e13; border-radius: 15px; padding: 1px 1px 1px 1px; text-align: center; width: 400px"}
+Observed difference b/w sample means reflects a real difference b/w population means
+:::
+:::
+
+::::
+
+## Two-sample hypothesis test
+
+### Other possible hypotheses
+
+:::: {.columns}
+
+::: {.fragment .column width="50%" style="text-align: center"}
+#### [Two-sided]{.underline}
+
+*Question just asks about any difference*
+
+<br>
+
+[$H_a: \mu_{1} \ne \mu_{2}$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+
+
+::: {style="font-size: 2em;"}
+↓
+:::
+
+[$H_a: \mu_{1} - \mu_{2} \ne 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+:::
+
+::: {.fragment .column width="60%" style="text-align: center"}
+#### [One-sided]{.underline}
+
+*Question implies a direction of difference*
+
+<br>
+
+:::: {.columns}
+
+::: {.fragment .column width="30%"}
+[$H_a: \mu_{1} \gt \mu_{2}$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; top: 275px; right: 275px"}
+
+
+::: {style="font-size: 2em; position: absolute; top: 330px; right: 350px"}
+↓
+:::
+
+[$H_a: \mu_{1} - \mu_{2} \gt 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; bottom: 225px; right: 250px"}
+:::
+:::
+
+::: {.fragment .column width="30%"}
+[$H_a: \mu_{1} \lt \mu_{2}$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; top: 275px; right: -25px"}
+
+
+::: {style="font-size: 2em; position: absolute; top: 330px; right: 50px"}
+↓
+:::
+
+[$H_a: \mu_{1} - \mu_{2} \lt 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; bottom: 225px; right: -50px"}
+:::
+
+::::
+
+
+::::
+
+::: {.fragment style="width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 330px; left: 275px; text-align: center; font-size: 0.75em"}
+Can restate any in terms of [differences]{.underline} between  population means
+:::
+
+<br>
+
+::: {.fragment style="text-align: center;"}
+Note: all of these hypothesize a [real difference]{.underline} between [population]{.underline} means
+:::
+
+::: {.fragment style="text-align: center;"}
+All are contradicted by the same null hypothesis
+
+[$H_0: \mu_{1} = \mu_{2}$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"} [→]{style="font-size: 2em"} [$H_0: \mu_{1} - \mu_{2} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"} 
+:::
+
+## Two-sample hypothesis test
+
+#### Step 1a: State the null and alternative hypotheses
+
+::: {.fragment .fade-out fragment-index=2}
+*We want to know if UW students differ from WSU students in terms of average study time.  We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25.  In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0.  Use a .05 alpha level to test the statistical significance of the observed difference between means.*
+:::
+
+::: {.center}
+[$H_0: \mu_{UW} - \mu_{WSU} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"} [$H_a: \mu_{UW} - \mu_{WSU} \ne 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"}
+:::
+
+<br>
+
+::: {.fragment fragment-index=1}
+* Set up a test assuming that the null ($H_0$) is true and see whether the facts of our samples contradict that assumption.
+* Key question: How likely is it that we would observe a sample difference this big <br>
+($14.5-12.5 = 2 \text{ hrs}$) if the null ($H_0$) were true?
+    * [If very unlikely, we will reject $H_0$ and support $H_a$]{style="color: #6e8e13"}
+    * [If not very unlikely, we will fail to reject $H_0$]{style="color: #754cbc"}
+:::
+
+::: {.fragment fragment-index=2 style="background: #e8e3d3; position: absolute; top: 125px; left: 75px"}
+* Have to think about **probability** of receiving our sample result (difference) if $H_0$ were true
+    * Have to think about the **SAMPLING DISTRIBUTION** of all possible sample results
+:::
+
+## Sampling theory
+
+#### Hypothesis test for difference between means 
+
+[Sampling Distribution for the difference between means]{.underline}
+
+A theoretical probability distribution that would be obtained by calculating all of the possible mean differences ($\bar{X_1}-\bar{X_2}$) for [all possible pairs]{.underline} of random, independent samples of size $n_1$ and $n_2$ drawn from two populations.
+
+
+---
+
+[*The DIFFERENCES between sample means drawn from every possible PAIR of samples create a SAMPLING DISTRIBUTION [OF DIFFERENCES BETWEEN (SAMPLE) MEANS]{.underline}*]{.center}
+
+::: {.incremental style="color: #e93cac; position: absolute; top 200px; left: 0px; font-size: 1.25em"}
+* $\bar{X}_{UW1} - \bar{X}_{WSU1} = \bar{X}_{diff1}$ <br>
+* $\bar{X}_{UW2} - \bar{X}_{WSU2} = \bar{X}_{diff2}$ <br>
+* $\bar{X}_{UW3} - \bar{X}_{WSU3} = \bar{X}_{diff3}$ <br>
+* . . . 
+:::
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+set.seed(711)
+samples <- c(rep(0, 12), rep(-0.375, 11), rep(0.375, 11), rep(-0.750, 10), rep(0.750, 10), rep(-1.125, 8), rep(1.125, 8), rep(-1.500, 6), rep(1.500, 6), rep(-1.875, 4), rep(1.875, 4), rep(-2.250, 3), rep(2.250, 3), rep(-2.625, 1), rep(2.625, 1), rep(-3, 1), 
+rep(3, 1)) 
+
+index <- seq(1:length(samples))
+sample_samples <- sample(samples, 100)
+df <- tibble(value = sample_samples, index = index)
+
+bin_width <- 0.375
+
+count_data <- # some minor data transformation
+  df %>%
+  mutate(x = plyr::round_any(value, bin_width)) %>%
+  group_by(x) %>%
+  mutate(y = seq_along(x))
+
+plot2 <- 
+  ggplot(count_data) +
+  geom_ellipse(aes(group = index, x0 = x, y0 = y, a = bin_width/2, b = 0.5, angle = 0), fill = NA) +
+  #annotate(geom = text, label = expression(bar("X")["1]"), x = 0, 1) +
+  # i hate the code below but couldn't figure out how to make a label variable with bquote or expression and needed to move on
+  geom_text(data = count_data[1, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff1]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[2, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff2]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[3, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff3]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[4, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff4]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[5, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff5]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[6, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff6]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[7, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff7]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[8, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff8]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[9, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff9]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[10, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff10]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[11, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff11]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[12, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff12]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[13, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff13]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[14, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff14]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[15, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff15]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[16, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff16]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[17, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff17]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[18, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff18]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[19, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff19]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[20, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff20]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[21, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff21]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[22, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff22]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[23, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff23]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[24, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff24]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[25, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff25]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[26, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff26]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[27, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff27]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[28, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff28]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[29, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff29]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[30, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff30]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[31, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff31]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[32, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff32]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[33, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff33]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[34, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff34]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[35, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff35]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[36, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff36]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[37, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff37]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[38, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff38]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[39, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff39]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[40, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff40]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[41, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff41]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[42, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff42]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[43, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff43]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[44, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff44]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[45, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff45]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[46, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff46]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[47, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff47]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[48, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff48]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[49, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff49]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[50, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff50]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[51, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff51]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[52, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff52]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[53, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff53]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[54, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff54]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[55, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff55]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[56, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff56]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[57, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff57]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[58, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff58]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[59, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff59]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[60, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff60]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[61, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff61]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[62, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff62]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[63, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff63]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[64, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff64]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[65, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff65]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[66, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff66]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[67, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff67]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[68, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff68]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[69, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff69]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[70, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff70]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[71, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff71]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[72, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff72]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[73, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff73]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[74, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff74]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[75, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff75]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[76, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff76]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[77, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff77]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[78, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff78]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[79, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff79]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[80, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff80]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[81, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff81]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[82, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff82]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[83, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff83]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[84, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff84]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[85, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff85]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[86, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff86]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[87, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff87]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[88, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff88]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[89, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff89]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[90, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff90]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[91, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff91]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[92, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff92]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[93, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff93]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[94, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff94]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[95, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff95]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[96, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff96]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[97, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff97]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[98, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff98]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[99, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff99]))), parse = TRUE, color = "#e93cac", size = 6, fontface = "bold") +
+  geom_text(data = count_data[100, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[diff100]))), parse = TRUE, , color = "#e93cac", size = 6, fontface = "bold") +
+  coord_equal(bin_width) + # to make the dots look nice and round
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "black") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL, limits = c(0, 13)) + scale_x_continuous(name = NULL, limits = c(-3.5, 3.5), breaks = NULL) + 
+  annotate("label", x = 0, y = 0, label = "mu[x]", parse = TRUE, size = 12, color = "#690c48", fill = "#e93cac")
+
+samples2 <- dnorm(c(seq(from = -3, to = 3, by = 0.375)), mean = mu, sd = sigma) * 30
+count_data2 <- tibble(x = seq(from = -3, to = 3, by = 0.375), y = samples2)
+
+plot2 + geom_freqpoly(data = count_data2, aes(x = x, y = y), stat = "smooth", position = position_nudge(y = 1.25), linewidth = 1.5, color = "#690c48")
+
+```
+
+## Sampling theory
+
+#### Hypothesis test for difference between means 
+
+[Characteristics of the Sampling Distribution for Difference between Two Means:]{.underline}
+
+::: incremental
+* IF the random samples are [independently drawn]{.underline} AND the [sample sizes are large]{.underline}<br>($n_1 + n_2 > 100$) then:
+* The sampling distribution of differences between means would be NORMAL  
+    * (but use the t-distribution when population standard deviations are unknown)
+* The MEAN of this distribution would equal the real difference between the population means  
+
+[$\mu_{\bar{X_1} - \bar{X_2}} = \mu_1 - \mu_2$]{.center .fragment style="font-size: 1.5em"}
+
+* The STANDARD ERROR of the sampling distribution of differences would be  
+
+[$\sigma_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}$]{.fragment style="font-size: 1.5em"} &emsp;&emsp;&emsp;&emsp;&emsp; [→]{.fragment style="font-size: 2em"} &emsp;&emsp;&emsp;&emsp;&emsp; [$s_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$]{.fragment style="font-size: 1.5em"}
+
+:::
+
+::: {.fragment style="position: absolute; bottom: 10px; left: 425px; color: #754cbc; background: #c5b4e3"}
+**INFERENCE**
+:::
+
+## Two-sample hypothesis test
+
+#### Step 1b: Choose your alpha level and find the critical value
+
+*We want to know if UW students [**differ**]{style="color: #1b8883;"} from WSU students in terms of average study time.  We draw a random sample of [**100**]{style="color: #a68100;"} UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25.  In contrast, our random sample of [**81**]{style="color: #a68100;"} WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0.  Use a [**.05 alpha level**]{style="color: #e93cac;"} to test the statistical significance of the observed difference between means.*
+
+::: {.center}
+[$H_0: \mu_{UW} - \mu_{WSU} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"} [$H_a: \mu_{UW} - \mu_{WSU} \ne 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"}
+:::
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="30%"}
+::: {.fragment .fade-out fragment-index=6}
+[$\alpha = 0.05$ ]{.fragment fragment-index=1 style="color: #e93cac; border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 100px"} 
+<br>
+<br>
+[Two-sided text]{.fragment fragment-index=2 style="color: #1b8883; border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; width: 150px"}
+:::
+:::
+
+::: {.column width="70%"}
+::: {.fragment fragment-index=3 style="text-align: center"}
+Because population standard deviations are unknown, use **t-distribution**^[[Table](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm) from your textbook<br>or an [online calculator](https://goodcalculators.com/student-t-value-calculator/)]
+:::
+
+::: {.fragment fragment-index=4 style="color: #a68100; border: 3px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; width: 310px"}
+$df_1= n_1-1 = 100-1 = 99$
+$df_2= n_2-1 = 81-1 = 80$
+:::
+
+[←]{.fragment fragment-index=5 style="font-size: 2em; position: absolute; bottom: 40px; right: 340px"} 
+
+::: {.fragment fragment-index=5 style="background: #ffc700; border: 3px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; width: 350px; position: absolute; bottom: 0px; right: -25px; text-align: center"}
+::: {.fragment .fade-out fragment-index=6}
+Use the smaller of the two df’s to create a more conservative test! 
+:::
+:::
+
+::: {.fragment fragment-index=6 style="background: #ffc700; border: 3px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; width: 350px; position: absolute; bottom: 0px; right: -25px; text-align: center; font-size: 0.85em"}
+Our sample result has to be at least [1.99 standard errors]{style="background: #e93cac;"} away from the null hypothesis for us to reject the null hypothesis
+:::
+
+:::
+
+::::
+
+::: {.fragment fragment-index=6 style="position: absolute; bottom: 75px; left: -60px"}
+```{r}
+#| echo: false
+#| fig-width: 4
+#| fig-height: 2
+#| fig-align: center
+
+z2 <- 2.241
+z1 <- -2.241
+
+ggplot(data = eq, aes(x = x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mu, sd = sigma), linewidth = 1) + 
+  stat_function(fun = funcShaded_lower, args = list(upper_bound = z1), 
+                  geom = "area", fill = "#a68100", alpha = .75) +
+  stat_function(fun = funcShaded_upper, args = list(lower_bound = z2), 
+                  geom = "area", fill = "#a68100", alpha = .75) +
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = 0, color = "darkgray") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL) + scale_x_continuous(name = NULL, breaks = NULL) 
+```
+:::
+
+## Two-sample hypothesis test
+
+#### Step 2: Calculate the test statistic ([t-score]{style="color: #e93cac"}) and p-value <br>
+
+*We want to know if UW students differ from WSU students in terms of average study time.  We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25.  In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0.  Use a .05 alpha level to test the statistical significance of the observed difference between means.*
+
+::: {.center}
+[$H_0: \mu_{UW} - \mu_{WSU} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"} [$H_a: \mu_{UW} - \mu_{WSU} \ne 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"}
+:::
+
+<br>
+
+::: {.fragment style="text-align: center"}
+Figuring out how far the sample result is from $H_0$<br>and putting it in standard-error units
+:::
+
+<br>
+
+::: {.fragment style="font-size: 2em; text-align: center"}
+$t = \frac{(\bar{X_1}-\bar{X_2})-0}{s_{\bar{X_1}}-s_{\bar{X_2}}}$
+:::
+
+## Two-sample hypothesis test
+
+#### Step 2: Calculate the test statistic ([t-score]{style="color: #e93cac"}) and p-value <br>
+
+*We want to know if UW students differ from WSU students in terms of average study time.  We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25.  In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0.  Use a .05 alpha level to test the statistical significance of the observed difference between means.*
+
+::: {.center}
+[$H_0: \mu_{UW} - \mu_{WSU} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"} [$H_a: \mu_{UW} - \mu_{WSU} \ne 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"}
+:::
+
+<br>
+
+::: {style="text-align: center; color: #1b8883"}
+Observed sample result<br>(difference between means)
+:::
+
+<br>
+
+::: {style="font-size: 2em; text-align: center"}
+$t = \frac{(\bar{X_1}-\bar{X_2})-0}{s_{\bar{X_1}}-s_{\bar{X_2}}}$
+:::
+
+::: {style="border: 3px solid #1b8883; width: 125px; height: 45px; position: absolute; bottom: 72px; left: 475px"}
+:::
+
+## Two-sample hypothesis test
+
+#### Step 2: Calculate the test statistic ([t-score]{style="color: #e93cac"}) and p-value <br>
+
+*We want to know if UW students differ from WSU students in terms of average study time.  We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25.  In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0.  Use a .05 alpha level to test the statistical significance of the observed difference between means.*
+
+::: {.center}
+[$H_0: \mu_{UW} - \mu_{WSU} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"} [$H_a: \mu_{UW} - \mu_{WSU} \ne 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"}
+:::
+
+<br>
+
+::: {style="text-align: center; color: #754cbc"}
+Difference observed under<br>the null hypotheses
+:::
+
+<br>
+
+::: {style="font-size: 2em; text-align: center"}
+$t = \frac{(\bar{X_1}-\bar{X_2})-0}{s_{\bar{X_1}}-s_{\bar{X_2}}}$
+:::
+
+::: {style="border: 3px solid #754cbc; width: 30px; height: 45px; position: absolute; bottom: 75px; left: 620px"}
+:::
+
+## Two-sample hypothesis test
+
+#### Step 2: Calculate the test statistic ([t-score]{style="color: #e93cac"}) and p-value <br>
+
+*We want to know if UW students differ from WSU students in terms of average study time.  We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25.  In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0.  Use a .05 alpha level to test the statistical significance of the observed difference between means.*
+
+::: {.center}
+[$H_0: \mu_{UW} - \mu_{WSU} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"} [$H_a: \mu_{UW} - \mu_{WSU} \ne 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"}
+:::
+
+<br>
+
+::: {.fragment .fade-out fragment-index=1 style="text-align: center; color: #a68100"}
+Standard error<br>(s.d. of the sampling distribution)
+:::
+
+<br>
+
+::: {.fragment .fade-out fragment-index=2 style="font-size: 2em; text-align: center"}
+$t = \frac{(\bar{X_1}-\bar{X_2})-0}{s_{\bar{X_1}}-s_{\bar{X_2}}}$
+:::
+
+::: {.fragment .fade-out fragment-index=2 style="border: 3px solid #a68100; width: 125px; height: 45px; position: absolute; bottom: 15px; left: 495px"}
+:::
+
+::: {.fragment fragment-index=1 style="font-size: 1.5em; text-align: center; position: absolute; bottom: 150px; left: 50px;"}
+::: {.fragment .fade-out fragment-index=3}
+$s_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{8.25^2}{100} + \frac{7.0^2}{81}} = \sqrt{0.681 0.605} = 1.134$ 
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .grow fragment-index=2 style="font-size: 1.5em; text-align: center; position: absolute; bottom: 25px; left: 350px;"}
+$t = \frac{(14 - 12.5)-0}{1.134} = 1.764$
+:::
+:::
+
+::: {.fragment fragment-index=3 style="font-size: 1em; text-align: center; position: absolute; bottom: 150px; left: 50px;"}
+Observed sample difference is [1.764]{style="color: #1b8883"} standard errors away from the assumption of the null hypothesis 
+:::
+
+
+## Two-sample hypothesis test
+
+#### Make a decision (Reject/fail to reject $H_0$ and support/fail to support $H_a$)
+
+*We want to know if UW students differ from WSU students in terms of average study time.  We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25.  In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0.  Use a .05 alpha level to test the statistical significance of the observed difference between means.*
+
+::: {.center}
+[$H_0: \mu_{UW} - \mu_{WSU} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"} [$H_a: \mu_{UW} - \mu_{WSU} \ne 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"}
+:::
+
+<br>
+
+::: {.incremental style="font-size: 0.85em; text-align: center; position: absolute; bottom: 130px; left: 50px;"}
+* Since our test statistic ([$1.764$]{style="color: #1b8883"}) is LESS extreme than the critical value ([$1.990$]{style="color: #e93cac"}) we [**FAIL TO REJECT** $H_0$]{style="background: #c5b4e3"}
+    * Based on this evidence, it is NOT safe to say that the [population]{.underline} of UW students and the [population]{.underline} of WSU students differ in terms of average study time.
+        * The observed difference between sample means is [NOT statistically significant]{.underline}
+:::
+
+
+::: {style="font-size: 1.95em; text-align: center; position: absolute; bottom: 15px; left: 295px;"}
+$t = \frac{(14 - 12.5)-0}{1.134} = 1.764$
+:::
+
+## Practice
+
+#### Two-sample hypothesis test
+
+*We want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90.  In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means.*
+
+## Practice {visibility="hidden"}
+
+#### Two-sample hypothesis test
+
+*We want to know if high school students have [more]{style="color: #1b8883;"} Facebook (FB) friends than do senior citizens. A random sample of [30]{style="color: #a68100;"} high school students shows a mean number of FB friends of 245 with a standard deviation of 90.  In contrast, a random sample of [40]{style="color: #a68100;"} senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a [.05 alpha level]{style="color: #e93cac;"} to test the statistical significance of the observed difference between means.*
+
+:::: {.columns}
+
+::: {.column width="40%"}
+::: {.fragment fragment-index=1}
+[$H_0: \mu_{HS} - \mu_{SC} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 125px; padding: 5px 5px 5px 5px; text-align: center; font-size: 0.8em"} [$H_a: \mu_{HS} - \mu_{SC} \gt 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 125px; padding: 5px 5px 5px 5px; text-align: center; font-size: 0.8em"}
+:::
+<br>
+
+::: {.fragment fragment-index=2 style="text-align: center;"}
+Critical value of t?
+:::
+
+<br>
+
+
+:::
+
+::: {.column width="60%"}
+
+::: {.fragment fragment-index=1}
+* Population standard deviation is unknown
+
+
+
+* Use the sample standard deviation to estimate the standard error
+
+$$
+s_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{90^2}{30} + \frac{65^2}{40}} = \sqrt{270 + 105.625} = 19.381
+$$
+
+
+
+
+* Use the t-distribution^[[Table](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm) from your textbook or an [online calculator](https://goodcalculators.com/student-t-value-calculator/)] with $df = n - 1$
+
+
+
+[$df = 30 - 1 = 29$]{.center}
+:::
+
+
+:::
+
+::::
+
+## Practice {visibility="hidden"}
+
+#### Two-sample hypothesis test
+
+*We want to know if high school students have [more]{style="color: #1b8883;"} Facebook (FB) friends than do senior citizens. A random sample of [30]{style="color: #a68100;"} high school students shows a mean number of FB friends of 245 with a standard deviation of 90.  In contrast, a random sample of [40]{style="color: #a68100;"} senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a [.05 alpha level]{style="color: #e93cac;"} to test the statistical significance of the observed difference between means.*
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+[$H_0: \mu_{HS} - \mu_{SC} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 0.8em"} [$H_a: \mu_{HS} - \mu_{SC} \gt 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 0.8em"}
+
+<br>
+
+
+::: {style="text-align: center;"}
+Critical value of t = [1.699]{style="color: #e93cac"}
+:::
+
+<br>
+
+::: {.fragment fragment-index=1 style="font-size: 1em"}
+Test statistic from the sample:<br>
+:::
+
+::: {.fragment fragment-index=1 style="font-size: 1.25em; text-align: center"}
+$t = \frac{\bar{X}-\mu_0}{s_\bar{X}} = \frac{(245-185)-0}{19.381} =$<br><br>[$3.096$]{style="color: #1b8883; border: solid #1b8883; padding: 5px 5px 5px 5px"}
+:::
+
+
+:::
+
+::: {.column width="60%"}
+
+::: {.fragment .fade-out fragment-index=2}
+* Population standard deviation is unknown
+
+
+
+* Use the sample standard deviation to estimate the standard error
+
+$$
+s_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{90^2}{30} + \frac{65^2}{40}} = \sqrt{270 + 105.625} = 19.381
+$$
+
+
+
+
+* Use the t-distribution with $df = n - 1$
+
+
+
+[$df = 30 - 1 = 29$]{.center}
+:::
+
+
+:::
+
+::::
+
+::: {.fragment fragment-index=2 style="border: 4px solid black; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; top: 350px; right: 0px; text-align: center"}
+Since [obtained t]{style="color: #1b8883"} is MORE extreme than the [critical value]{style="color: #e93cac"}, we **REJECT** $H_0$. Based on this evidence, we are reasonably confidence that the population of high schoolers have a [higher average number]{style="color: #6e8e13"} of FB friends than do senior citizens. The observed difference between sample means is **statistically significant**. 
+:::
+
 
 # Homework{.section-title background-color="#e8e3d3"}
 

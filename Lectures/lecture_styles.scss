@@ -115,6 +115,14 @@ $mermaid-node-fg-color: $heritage-gold;
   margin: auto;
 }
 
-div.image-container {
-  overflow-y: scroll;
+// fun tip from here: https://emilhvitfeldt.com/post/slidecraft-7-tips-and-tricks/ 
+.highlight-last  {
+  color: grey;
+  .current-fragment {
+    color: #e93cac;
+  }
+}
+
+.highlight-pink {
+  color: #e93cac;
 }

@@ -29,71 +29,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -1657,37 +1592,54 @@ s_{\bar{X}} = \frac{s}{\sqrt{n}}
 </section>
 <section id="inference-with-the-t-distribution-4" class="slide level2">
 <h2>Inference with the t-distribution</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">ggplot</span>(<span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>)), <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> <span class="fu">stat_function</span>(<span class="at">fun =</span> dt, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">df =</span> <span class="dv">8</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
+<img data-src="lecture7_files/figure-revealjs/unnamed-chunk-16-1.gif" class="quarto-figure quarto-figure-center r-stretch"><div class="fragment" style="position: absolute; top: 190px; right: -275px">
+<table class="caption-top" style="width:45%;">
+<caption>For 95% confidence level<br>(<span class="math inline">\(\alpha = 0.05\)</span>, two-sided)</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">t-distribution</th>
+<th style="text-align: center;">critical value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">df = 3</td>
+<td style="text-align: center;"><span class="math inline">\(\pm3.182\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">df = 30</td>
+<td style="text-align: center;"><span class="math inline">\(\pm2.042\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">df = 100</td>
+<td style="text-align: center;"><span class="math inline">\(\pm1.984\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">df = 1000</td>
+<td style="text-align: center;"><span class="math inline">\(\pm1.962\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<img data-src="lecture7_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
-<section id="inference-with-the-t-distribution-5" class="slide level2">
-<h2>Inference with the t-distribution</h2>
-<h3 id="why-use-something-other-than-the-normal-z-distribution-2"><span style="font-size: 0.9em">Why use something other than the normal (z) distribution?</span></h3>
-<h4 id="example-1">Example</h4>
+<div class="fragment" style="border: 3px solid #e93cac; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; position: absolute; bottom: 200px; left: -50px">
+<p><strong>Notice</strong>: Tests with the <span style="color: #e93cac">t-distribution</span> are more conservative (wider confidence intervals, harder to reject H0) than with normal (critical value: <strong><span class="math inline">\(\pm1.960\)</span></strong>) and results are <u>especially conservative</u> when the <u>sample size (df) is small</u>.</p>
+</div>
+</section>
+<section id="more-realistic-example" class="slide level2">
+<h2>More realistic example</h2>
+<h3 id="estimation-confidence-interval">Estimation: Confidence interval</h3>
 <p><em>You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a <span style="color: #e93cac">sample standard deviation of 8.25</span>. Estimate the population mean.</em></p>
 <p><br></p>
 <div class="columns">
-<div class="column" style="width:50%;">
-<div style="font-size: 2em; text-align: center;">
-<div class="fragment fade-in" data-fragment-index="1">
-<div class="fragment shrink" data-fragment-index="2">
-<div class="fragment semi-fade-out" data-fragment-index="2">
-<p><span class="math display">\[
-\text{Confidence interval} =
-\]</span></p>
-<p><span style="color: #a68100"><span class="math display">\[
-\bar{X} \pm z(\frac{\sigma_x}{\sqrt{n}})
-\]</span></span></p>
-</div>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div style="font-size: 2em; text-align: center">
-<div class="fragment fade-in" data-fragment-index="2">
-<div class="fragment grow" data-fragment-index="2">
+<div class="column" style="width:40%;">
+<div class="fragment fade-in" data-fragment-index="3">
+<div class="fragment grow" data-fragment-index="3" style="font-size: 1em; text-align: center;">
+<div class="fragment fade-out" data-fragment-index="6">
 <p><span class="math display">\[
 \text{Confidence interval} =
 \]</span></p>
@@ -1697,32 +1649,470 @@ s_{\bar{X}} = \frac{s}{\sqrt{n}}
 </div>
 </div>
 </div>
+<p><br></p>
+<div class="fragment" data-fragment-index="5">
+<p><span class="math display">\[
+\text{95% C.I.} = 14.5 \pm 1.984(0.825)
+\]</span> <span class="math display">\[
+\text{        } = 14.5 \pm 1.6368
+\]</span></p>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="fragment" data-fragment-index="1">
+<ul>
+<li>Population standard deviation is unknown</li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="2">
+<ul>
+<li>Use the sample standard deviation to estimate the standard error</li>
+</ul>
+<p><span class="math display">\[
+s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{8.25}{\sqrt{100}} = 0.825
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="4">
+<ul>
+<li>Use the t-distribution<sup>1</sup> with <span class="math inline">\(df = n - 1\)</span></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="4">
+<p><span class="center"><span class="math inline">\(df = 100 - 1 = 99\)</span></span></p>
 </div>
 </div>
-</section>
-<section id="degrees-of-freedom" class="slide level2">
-<h2>Degrees of freedom</h2>
-</section>
-<section id="more-realistic-example" class="slide level2">
+</div>
+<div class="fragment" data-fragment-index="6" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 250px; left: 00px; text-align: center">
+<p>We are <u>95% confident</u> that the average number of hours studied for the <u>population</u> of UW students is between <u>12.86 to 16.14</u> hours</p>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm">Table</a> from your textbook or an <a href="https://goodcalculators.com/student-t-value-calculator/">online calculator</a></p></li></ol></aside></section>
+<section id="more-realistic-example-1" class="slide level2">
 <h2>More realistic example</h2>
+<h3 id="hypothesis-testing">Hypothesis testing</h3>
+<p><em>You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a <span style="color: #e93cac">sample standard deviation of 8.25</span>. Test the hypothesis that UW students study more than the national average of 13 hours/week.</em></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="fragment" data-fragment-index="1">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"><span class="math inline">\(H_0: \mu_{UW} = 13\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"><span class="math inline">\(H_a: \mu_{UW} \gt 13\)</span></span></p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="2" style="text-align: center;">
+<p>Critical value of t?</p>
+</div>
+<p><br></p>
+</div><div class="column" style="width:60%;">
+<div class="fragment" data-fragment-index="1">
+<ul>
+<li><p>Population standard deviation is unknown</p></li>
+<li><p>Use the sample standard deviation to estimate the standard error</p></li>
+</ul>
+<p><span class="math display">\[
+s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{8.25}{\sqrt{100}} = 0.825
+\]</span></p>
+<ul>
+<li>Use the t-distribution<sup>1</sup> with <span class="math inline">\(df = n - 1\)</span></li>
+</ul>
+<p><span class="center"><span class="math inline">\(df = 100 - 1 = 99\)</span></span></p>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm">Table</a> from your textbook or an <a href="https://goodcalculators.com/student-t-value-calculator/">online calculator</a></p></li></ol></aside></section>
+<section id="more-realistic-example-2" class="slide level2">
+<h2>More realistic example</h2>
+<h3 id="hypothesis-testing-1">Hypothesis testing</h3>
+<p><em>You draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a <span style="color: #e93cac">sample standard deviation of 8.25</span>. Test the hypothesis that UW students study more than the national average of 13 hours/week.</em></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"><span class="math inline">\(H_0: \mu_{UW} = 13\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"><span class="math inline">\(H_a: \mu_{UW} \gt 13\)</span></span></p>
+<p><br></p>
+<div style="text-align: center;">
+<p>Critical value of t = <span style="color: #e93cac">1.660</span></p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="1" style="font-size: 1em">
+<p>Test statistic from the sample:<br></p>
+</div>
+<div class="fragment" data-fragment-index="1" style="font-size: 1.25em; text-align: center">
+<p><span class="math inline">\(t = \frac{\bar{X}-\mu_0}{s_\bar{X}} = \frac{14.5 - 13}{0.825} =\)</span> <span style="color: #1b8883"><span class="math inline">\(1.818\)</span></span></p>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="fragment fade-out" data-fragment-index="2">
+<ul>
+<li><p>Population standard deviation is unknown</p></li>
+<li><p>Use the sample standard deviation to estimate the standard error</p></li>
+</ul>
+<p><span class="math display">\[
+s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{8.25}{\sqrt{100}} = 0.825
+\]</span></p>
+<ul>
+<li>Use the t-distribution<sup>1</sup> with <span class="math inline">\(df = n - 1\)</span></li>
+</ul>
+<p><span class="center"><span class="math inline">\(df = 100 - 1 = 99\)</span></span></p>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="2" style="border: 4px solid black; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; top: 350px; right: 0px; text-align: center">
+<p>Since <span style="color: #1b8883">obtained t</span> is more extreme than <span style="color: #e93cac">critical value</span>, reject <span class="math inline">\(H_0\)</span> and support the claim that the population of UW students really do study more than the national average.</p>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn3"><p><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm">Table</a> from your textbook or an <a href="https://goodcalculators.com/student-t-value-calculator/">online calculator</a></p></li></ol></aside></section>
+<section id="practice-1" class="slide level2">
+<h2>Practice</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<h4 id="estimation-confidence-interval-1">Estimation: Confidence interval</h4>
+<p><em>In a random sample of 121 UW students, the mean number of visits to family in the past six months was 5.5 with a standard deviation of 0.9. Calculate a 90% confidence interval for the average number of visits in the population.</em></p>
+<div class="fragment">
+<p><span style="background: #c5b4e3"><u><strong>STEPS</strong>:</u></span></p>
+<ol type="1">
+<li>Decide on a confidence level and corresponding <span style="color: #e93cac">t-score</span></li>
+<li>Calculate the standard error (using <strong>sample</strong> standard deviation)</li>
+<li>Calculate the margin of error</li>
+<li>Calculate the confidence interval</li>
+<li>Interpret the results</li>
+</ol>
+</div>
+</div><div class="column" style="width:55%;">
+<h4 id="hypothesis-test">Hypothesis test</h4>
+<p><em>You want to know whether high school students are different than the national average (µ=220) in terms of the number of Facebook friends. A random sample of 30 high school students shows a mean number of Facebook friends of 245 with a standard deviation of 90. Is this difference from the national average statistically significant at the .01 level?</em></p>
+<div class="fragment">
+<p><span style="background: #c5b4e3"><u><strong>STEPS</strong>:</u></span></p>
+<p>1a. State the null and alternative hypotheses <br> 1b. Choose your alpha level and find the critical value <br> 2. Calculate the test statistic (<span style="color: #e93cac">t-score</span>) and p-value <br> 3. Make a decision (Reject or fail to reject the null hypothesis (<span class="math inline">\(H_0\)</span>) and support or fail to support the alternative hypothesis <span class="math inline">\(H_a\)</span>)</p>
+</div>
+</div>
+</div>
 </section>
-<section id="another-example-1" class="slide level2">
-<h2>Another example</h2>
-</section></section>
+
+
+</section>
 <section>
 <section id="hypothesis-testing-for-two-samples" class="title-slide slide level1 section-title center" data-background-color="#c5b4e3">
 <h1>Hypothesis testing for two samples</h1>
 
 </section>
-<section id="example-2" class="slide level2">
-<h2>Example</h2>
+<section id="where-are-we" class="slide level2">
+<h2>Where are we?</h2>
+<div>
+<ul>
+<li class="fragment"><u><strong>Inference</strong></u>: Drawing conclusions about populations based on information drawn from samples</li>
+<li class="fragment"><u><strong>Inferences so far</strong></u>:
+<ul>
+<li class="fragment">Confidence intervals to estimate a population mean or proportion based on the results from a SINGLE SAMPLE</li>
+<li class="fragment">Hypothesis tests / tests of significance for a SINGLE SAMPLE:
+<ul>
+<li class="fragment">Comparing our SINGLE SAMPLE result to some known benchmark
+<ul>
+<li class="fragment">With and without <em>knowing</em> the standard deviation of the population of interest</li>
+</ul></li>
+<li class="fragment"><span style="background: #ffc700; color: #754cbc">NOW: drawing conclusions about the difference between TWO unknown populations based on information from TWO samples</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="sampling-theory-and-sampling-distribution" class="slide level2">
-<h2>Sampling theory and sampling distribution</h2>
+<section id="two-sample-hypothesis-test" class="slide level2">
+<h2>Two-sample hypothesis test</h2>
+<div class="fragment">
+<!-- -->
+<h4 id="step-1a-state-the-null-and-alternative-hypotheses">Step 1a: State the null and alternative hypotheses</h4>
+</div>
+<p><em>We want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.</em></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="fragment">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"><span class="math inline">\(H_0: \mu_{UW} = \mu_{WSU}\)</span></span> <br> <br> <br> <br> <br> <br> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"><span class="math inline">\(H_a: \mu_{UW} \ne \mu_{WSU}\)</span></span></p>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="fragment">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"><span class="math inline">\(H_0: \mu_{UW} - \mu_{WSU} = 0\)</span></span> <br> <br> <br> <br> <br> <br> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"><span class="math inline">\(H_a: \mu_{UW} - \mu_{WSU} \ne 0\)</span></span></p>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="fragment" style="border: 4px solid #754cbc; border-radius: 15px; padding: 1px 1px 1px 1px; text-align: center; width: 400px">
+<p>Observed difference between sample means reflects chance sampling error.</p>
+</div>
+<div class="fragment" style="border: 4px solid #6e8e13; border-radius: 15px; padding: 1px 1px 1px 1px; text-align: center; width: 400px">
+<p>Observed difference b/w sample means reflects a real difference b/w population means</p>
+</div>
+</div>
+</div>
 </section>
-<section id="another-example-2" class="slide level2">
-<h2>Another Example</h2>
-</section></section>
+<section id="two-sample-hypothesis-test-1" class="slide level2">
+<h2>Two-sample hypothesis test</h2>
+<h3 id="other-possible-hypotheses">Other possible hypotheses</h3>
+<div class="columns">
+<div class="fragment column" style="text-align: center">
+<!-- -->
+<h4 id="two-sided"><u>Two-sided</u></h4>
+<p><em>Question just asks about any difference</em></p>
+<p><br></p>
+<p><span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"><span class="math inline">\(H_a: \mu_{1} \ne \mu_{2}\)</span></span></p>
+<div style="font-size: 2em;">
+<p>↓</p>
+</div>
+<p><span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"><span class="math inline">\(H_a: \mu_{1} - \mu_{2} \ne 0\)</span></span></p>
+</div><div class="fragment column" style="text-align: center">
+<!-- -->
+<h4 id="one-sided"><u>One-sided</u></h4>
+<p><em>Question implies a direction of difference</em></p>
+<p><br></p>
+<div class="columns">
+<div class="fragment column" style="width:30%;">
+<p><span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; top: 275px; right: 275px"><span class="math inline">\(H_a: \mu_{1} \gt \mu_{2}\)</span></span></p>
+<div style="font-size: 2em; position: absolute; top: 330px; right: 350px">
+<p>↓</p>
+</div>
+<p><span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; bottom: 225px; right: 250px"><span class="math inline">\(H_a: \mu_{1} - \mu_{2} \gt 0\)</span></span></p>
+</div>
+</div>
+<div class="fragment column" style="width:30%;">
+<p><span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; top: 275px; right: -25px"><span class="math inline">\(H_a: \mu_{1} \lt \mu_{2}\)</span></span></p>
+<div style="font-size: 2em; position: absolute; top: 330px; right: 50px">
+<p>↓</p>
+</div>
+<p><span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; bottom: 225px; right: -50px"><span class="math inline">\(H_a: \mu_{1} - \mu_{2} \lt 0\)</span></span></p>
+</div>
+</div>
+</div>
+<div class="fragment" style="width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 330px; left: 275px; text-align: center; font-size: 0.75em">
+<p>Can restate any in terms of <u>differences</u> between population means</p>
+</div>
+<p><br></p>
+<div class="fragment" style="text-align: center;">
+<p>Note: all of these hypothesize a <u>real difference</u> between <u>population</u> means</p>
+</div>
+<div class="fragment" style="text-align: center;">
+<p>All are contradicted by the same null hypothesis</p>
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"><span class="math inline">\(H_0: \mu_{1} = \mu_{2}\)</span></span> <span style="font-size: 2em">→</span> <span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"><span class="math inline">\(H_0: \mu_{1} - \mu_{2} = 0\)</span></span></p>
+</div>
+</section>
+<section id="two-sample-hypothesis-test-2" class="slide level2">
+<h2>Two-sample hypothesis test</h2>
+<h4 id="step-1a-state-the-null-and-alternative-hypotheses-1">Step 1a: State the null and alternative hypotheses</h4>
+<div class="fragment fade-out" data-fragment-index="2">
+<p><em>We want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.</em></p>
+</div>
+<div class="center">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"><span class="math inline">\(H_0: \mu_{UW} - \mu_{WSU} = 0\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"><span class="math inline">\(H_a: \mu_{UW} - \mu_{WSU} \ne 0\)</span></span></p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="1">
+<ul>
+<li>Set up a test assuming that the null (<span class="math inline">\(H_0\)</span>) is true and see whether the facts of our samples contradict that assumption.</li>
+<li>Key question: How likely is it that we would observe a sample difference this big <br> (<span class="math inline">\(14.5-12.5 = 2 \text{ hrs}\)</span>) if the null (<span class="math inline">\(H_0\)</span>) were true?
+<ul>
+<li><span style="color: #6e8e13">If very unlikely, we will reject <span class="math inline">\(H_0\)</span> and support <span class="math inline">\(H_a\)</span></span></li>
+<li><span style="color: #754cbc">If not very unlikely, we will fail to reject <span class="math inline">\(H_0\)</span></span></li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="2" style="background: #e8e3d3; position: absolute; top: 125px; left: 75px">
+<ul>
+<li>Have to think about <strong>probability</strong> of receiving our sample result (difference) if <span class="math inline">\(H_0\)</span> were true
+<ul>
+<li>Have to think about the <strong>SAMPLING DISTRIBUTION</strong> of all possible sample results</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="sampling-theory" class="slide level2">
+<h2>Sampling theory</h2>
+<h4 id="hypothesis-test-for-difference-between-means">Hypothesis test for difference between means</h4>
+<p><u>Sampling Distribution for the difference between means</u></p>
+<p>A theoretical probability distribution that would be obtained by calculating all of the possible mean differences (<span class="math inline">\(\bar{X_1}-\bar{X_2}\)</span>) for <u>all possible pairs</u> of random, independent samples of size <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> drawn from two populations.</p>
+</section>
+<section class="slide level2">
+
+<p><span class="center"><em>The DIFFERENCES between sample means drawn from every possible PAIR of samples create a SAMPLING DISTRIBUTION <u>OF DIFFERENCES BETWEEN (SAMPLE) MEANS</u></em></span></p>
+<div style="color: #e93cac; position: absolute; top 200px; left: 0px; font-size: 1.25em">
+<ul>
+<li class="fragment"><span class="math inline">\(\bar{X}_{UW1} - \bar{X}_{WSU1} = \bar{X}_{diff1}\)</span> <br></li>
+<li class="fragment"><span class="math inline">\(\bar{X}_{UW2} - \bar{X}_{WSU2} = \bar{X}_{diff2}\)</span> <br></li>
+<li class="fragment"><span class="math inline">\(\bar{X}_{UW3} - \bar{X}_{WSU3} = \bar{X}_{diff3}\)</span> <br></li>
+<li class="fragment">. . .</li>
+</ul>
+</div>
+
+<img data-src="lecture7_files/figure-revealjs/unnamed-chunk-17-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"></section>
+<section id="sampling-theory-1" class="slide level2">
+<h2>Sampling theory</h2>
+<h4 id="hypothesis-test-for-difference-between-means-1">Hypothesis test for difference between means</h4>
+<p><u>Characteristics of the Sampling Distribution for Difference between Two Means:</u></p>
+<div>
+<ul>
+<li class="fragment">IF the random samples are <u>independently drawn</u> AND the <u>sample sizes are large</u><br>(<span class="math inline">\(n_1 + n_2 &gt; 100\)</span>) then:</li>
+<li class="fragment">The sampling distribution of differences between means would be NORMAL
+<ul>
+<li class="fragment">(but use the t-distribution when population standard deviations are unknown)</li>
+</ul></li>
+<li class="fragment">The MEAN of this distribution would equal the real difference between the population means</li>
+</ul>
+<p><span class="center fragment" style="font-size: 1.5em"><span class="math inline">\(\mu_{\bar{X_1} - \bar{X_2}} = \mu_1 - \mu_2\)</span></span></p>
+<ul>
+<li class="fragment">The STANDARD ERROR of the sampling distribution of differences would be</li>
+</ul>
+<p><span class="fragment" style="font-size: 1.5em"><span class="math inline">\(\sigma_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}\)</span></span>       <span class="fragment" style="font-size: 2em">→</span>       <span class="fragment" style="font-size: 1.5em"><span class="math inline">\(s_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\)</span></span></p>
+</div>
+<div class="fragment" style="position: absolute; bottom: 10px; left: 425px; color: #754cbc; background: #c5b4e3">
+<p><strong>INFERENCE</strong></p>
+</div>
+</section>
+<section id="two-sample-hypothesis-test-3" class="slide level2">
+<h2>Two-sample hypothesis test</h2>
+<h4 id="step-1b-choose-your-alpha-level-and-find-the-critical-value">Step 1b: Choose your alpha level and find the critical value</h4>
+<p><em>We want to know if UW students <span style="color: #1b8883;"><strong>differ</strong></span> from WSU students in terms of average study time. We draw a random sample of <span style="color: #a68100;"><strong>100</strong></span> UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of <span style="color: #a68100;"><strong>81</strong></span> WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a <span style="color: #e93cac;"><strong>.05 alpha level</strong></span> to test the statistical significance of the observed difference between means.</em></p>
+<div class="center">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"><span class="math inline">\(H_0: \mu_{UW} - \mu_{WSU} = 0\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"><span class="math inline">\(H_a: \mu_{UW} - \mu_{WSU} \ne 0\)</span></span></p>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="fragment fade-out" data-fragment-index="6">
+<p><span class="fragment" data-fragment-index="1" style="color: #e93cac; border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 100px"><span class="math inline">\(\alpha = 0.05\)</span></span> <br> <br> <span class="fragment" data-fragment-index="2" style="color: #1b8883; border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; width: 150px">Two-sided text</span></p>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="fragment" data-fragment-index="3" style="text-align: center">
+<p>Because population standard deviations are unknown, use <strong>t-distribution</strong><sup>1</sup></p>
+</div>
+<div class="fragment" data-fragment-index="4" style="color: #a68100; border: 3px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; width: 310px">
+<p><span class="math inline">\(df_1= n_1-1 = 100-1 = 99\)</span> <span class="math inline">\(df_2= n_2-1 = 81-1 = 80\)</span></p>
+</div>
+<p><span class="fragment" data-fragment-index="5" style="font-size: 2em; position: absolute; bottom: 40px; right: 340px">←</span></p>
+<div class="fragment" data-fragment-index="5" style="background: #ffc700; border: 3px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; width: 350px; position: absolute; bottom: 0px; right: -25px; text-align: center">
+<div class="fragment fade-out" data-fragment-index="6">
+<p>Use the smaller of the two df’s to create a more conservative test!</p>
+</div>
+</div>
+<div class="fragment" data-fragment-index="6" style="background: #ffc700; border: 3px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; width: 350px; position: absolute; bottom: 0px; right: -25px; text-align: center; font-size: 0.85em">
+<p>Our sample result has to be at least <span style="background: #e93cac;">1.99 standard errors</span> away from the null hypothesis for us to reject the null hypothesis</p>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="6" style="position: absolute; bottom: 75px; left: -60px">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture7_files/figure-revealjs/unnamed-chunk-18-1.png" class="quarto-figure quarto-figure-center" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn7"><p><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm">Table</a> from your textbook<br>or an <a href="https://goodcalculators.com/student-t-value-calculator/">online calculator</a></p></li></ol></aside></section>
+<section id="two-sample-hypothesis-test-4" class="slide level2">
+<h2>Two-sample hypothesis test</h2>
+<h4 id="step-2-calculate-the-test-statistic-t-score-and-p-value">Step 2: Calculate the test statistic (<span style="color: #e93cac">t-score</span>) and p-value <br></h4>
+<p><em>We want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.</em></p>
+<div class="center">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"><span class="math inline">\(H_0: \mu_{UW} - \mu_{WSU} = 0\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"><span class="math inline">\(H_a: \mu_{UW} - \mu_{WSU} \ne 0\)</span></span></p>
+</div>
+<p><br></p>
+<div class="fragment" style="text-align: center">
+<p>Figuring out how far the sample result is from <span class="math inline">\(H_0\)</span><br>and putting it in standard-error units</p>
+</div>
+<p><br></p>
+<div class="fragment" style="font-size: 2em; text-align: center">
+<p><span class="math inline">\(t = \frac{(\bar{X_1}-\bar{X_2})-0}{s_{\bar{X_1}}-s_{\bar{X_2}}}\)</span></p>
+</div>
+</section>
+<section id="two-sample-hypothesis-test-5" class="slide level2">
+<h2>Two-sample hypothesis test</h2>
+<h4 id="step-2-calculate-the-test-statistic-t-score-and-p-value-1">Step 2: Calculate the test statistic (<span style="color: #e93cac">t-score</span>) and p-value <br></h4>
+<p><em>We want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.</em></p>
+<div class="center">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"><span class="math inline">\(H_0: \mu_{UW} - \mu_{WSU} = 0\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"><span class="math inline">\(H_a: \mu_{UW} - \mu_{WSU} \ne 0\)</span></span></p>
+</div>
+<p><br></p>
+<div style="text-align: center; color: #1b8883">
+<p>Observed sample result<br>(difference between means)</p>
+</div>
+<p><br></p>
+<div style="font-size: 2em; text-align: center">
+<p><span class="math inline">\(t = \frac{(\bar{X_1}-\bar{X_2})-0}{s_{\bar{X_1}}-s_{\bar{X_2}}}\)</span></p>
+</div>
+<div style="border: 3px solid #1b8883; width: 125px; height: 45px; position: absolute; bottom: 72px; left: 475px">
+
+</div>
+</section>
+<section id="two-sample-hypothesis-test-6" class="slide level2">
+<h2>Two-sample hypothesis test</h2>
+<h4 id="step-2-calculate-the-test-statistic-t-score-and-p-value-2">Step 2: Calculate the test statistic (<span style="color: #e93cac">t-score</span>) and p-value <br></h4>
+<p><em>We want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.</em></p>
+<div class="center">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"><span class="math inline">\(H_0: \mu_{UW} - \mu_{WSU} = 0\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"><span class="math inline">\(H_a: \mu_{UW} - \mu_{WSU} \ne 0\)</span></span></p>
+</div>
+<p><br></p>
+<div style="text-align: center; color: #754cbc">
+<p>Difference observed under<br>the null hypotheses</p>
+</div>
+<p><br></p>
+<div style="font-size: 2em; text-align: center">
+<p><span class="math inline">\(t = \frac{(\bar{X_1}-\bar{X_2})-0}{s_{\bar{X_1}}-s_{\bar{X_2}}}\)</span></p>
+</div>
+<div style="border: 3px solid #754cbc; width: 30px; height: 45px; position: absolute; bottom: 75px; left: 620px">
+
+</div>
+</section>
+<section id="two-sample-hypothesis-test-7" class="slide level2">
+<h2>Two-sample hypothesis test</h2>
+<h4 id="step-2-calculate-the-test-statistic-t-score-and-p-value-3">Step 2: Calculate the test statistic (<span style="color: #e93cac">t-score</span>) and p-value <br></h4>
+<p><em>We want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.</em></p>
+<div class="center">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"><span class="math inline">\(H_0: \mu_{UW} - \mu_{WSU} = 0\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"><span class="math inline">\(H_a: \mu_{UW} - \mu_{WSU} \ne 0\)</span></span></p>
+</div>
+<p><br></p>
+<div class="fragment fade-out" data-fragment-index="1" style="text-align: center; color: #a68100">
+<p>Standard error<br>(s.d. of the sampling distribution)</p>
+</div>
+<p><br></p>
+<div class="fragment fade-out" data-fragment-index="2" style="font-size: 2em; text-align: center">
+<p><span class="math inline">\(t = \frac{(\bar{X_1}-\bar{X_2})-0}{s_{\bar{X_1}}-s_{\bar{X_2}}}\)</span></p>
+</div>
+<div class="fragment fade-out" data-fragment-index="2" style="border: 3px solid #a68100; width: 125px; height: 45px; position: absolute; bottom: 15px; left: 495px">
+
+</div>
+<div class="fragment" data-fragment-index="1" style="font-size: 1.5em; text-align: center; position: absolute; bottom: 150px; left: 50px;">
+<div class="fragment fade-out" data-fragment-index="3">
+<p><span class="math inline">\(s_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{8.25^2}{100} + \frac{7.0^2}{81}} = \sqrt{0.681 0.605} = 1.134\)</span></p>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<div class="fragment grow" data-fragment-index="2" style="font-size: 1.5em; text-align: center; position: absolute; bottom: 25px; left: 350px;">
+<p><span class="math inline">\(t = \frac{(14 - 12.5)-0}{1.134} = 1.764\)</span></p>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3" style="font-size: 1em; text-align: center; position: absolute; bottom: 150px; left: 50px;">
+<p>Observed sample difference is <span style="color: #1b8883">1.764</span> standard errors away from the assumption of the null hypothesis</p>
+</div>
+</section>
+<section id="two-sample-hypothesis-test-8" class="slide level2">
+<h2>Two-sample hypothesis test</h2>
+<h4 id="make-a-decision-rejectfail-to-reject-h_0-and-supportfail-to-support-h_a">Make a decision (Reject/fail to reject <span class="math inline">\(H_0\)</span> and support/fail to support <span class="math inline">\(H_a\)</span>)</h4>
+<p><em>We want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.</em></p>
+<div class="center">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.25em"><span class="math inline">\(H_0: \mu_{UW} - \mu_{WSU} = 0\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px;font-size: 1.25em"><span class="math inline">\(H_a: \mu_{UW} - \mu_{WSU} \ne 0\)</span></span></p>
+</div>
+<p><br></p>
+<div style="font-size: 0.85em; text-align: center; position: absolute; bottom: 130px; left: 50px;">
+<ul>
+<li class="fragment">Since our test statistic (<span style="color: #1b8883"><span class="math inline">\(1.764\)</span></span>) is LESS extreme than the critical value (<span style="color: #e93cac"><span class="math inline">\(1.990\)</span></span>) we <span style="background: #c5b4e3"><strong>FAIL TO REJECT</strong> <span class="math inline">\(H_0\)</span></span>
+<ul>
+<li class="fragment">Based on this evidence, it is NOT safe to say that the <u>population</u> of UW students and the <u>population</u> of WSU students differ in terms of average study time.
+<ul>
+<li class="fragment">The observed difference between sample means is <u>NOT statistically significant</u></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div style="font-size: 1.95em; text-align: center; position: absolute; bottom: 15px; left: 295px;">
+<p><span class="math inline">\(t = \frac{(14 - 12.5)-0}{1.134} = 1.764\)</span></p>
+</div>
+</section>
+<section id="practice-5" class="slide level2">
+<h2>Practice</h2>
+<h4 id="two-sample-hypothesis-test-9">Two-sample hypothesis test</h4>
+<p><em>We want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90. In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means.</em></p>
+</section>
+
+</section>
 <section>
 <section id="homework" class="title-slide slide level1 section-title center" data-background-color="#e8e3d3">
 <h1>Homework</h1>
@@ -1737,6 +2127,7 @@ s_{\bar{X}} = \frac{s}{\sqrt{n}}
 </div>
 </div>
 </section></section>
+
     </div>
   </div>
 
