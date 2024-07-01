@@ -1838,7 +1838,7 @@ Height for women is <br>
 $N(65,3.5)$
 :::
 
-## {visibility="hidden"}
+--- 
 
 #### [1. Percentage of women shorter than 55 inches?]{style="color: #e93cac;"}
 
@@ -1880,7 +1880,7 @@ $$
 Now we [look up](https://www.calculator.net/z-score-calculator.html) the associated probability for our z-score
 :::
 
-## {visibility="hidden"}
+--- 
 
 #### [1. Percentage of women shorter than 55 inches?]{style="color: #e93cac;"}
 
@@ -1937,7 +1937,7 @@ $$
 :::
 
 
-## {visibility="hidden"}
+--- 
 
 #### [2. Percentage of women 55 inches or taller?]{style="color: #e93cac;"}
 
@@ -1987,7 +1987,7 @@ $$
 $$
 :::
 
-## {visibility="hidden"}
+--- 
 
 #### [3. Probability of randomly selecting a woman who is 69 inches or taller?]{style="color: #e93cac;"}
 
@@ -2024,7 +2024,7 @@ $$
 69 inches is **1.14 standard deviations** above the mean.
 :::
 
-## {visibility="hidden"}
+--- 
 
 #### [3. Probability of randomly selecting a woman who is 69 inches or taller?]{style="color: #e93cac;"}
 
@@ -2080,7 +2080,7 @@ $$
 $$
 ::: 
 
-## {visibility="hidden"}
+--- 
 
 #### [4. Probability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?]{style="color: #e93cac; font-size: 0.9em"}
 
@@ -2141,7 +2141,7 @@ $$
 $$
 ::: 
 
-## {visibility="hidden"}
+--- 
 
 #### [5. Find the score at the 10th percentile in the distribution.]{style="color: #e93cac;"}
 
@@ -2162,7 +2162,7 @@ BACKWARDS APPROACH<br>
 :::
 :::
 
-## {visibility="hidden"}
+--- 
 
 #### [5. Find the score at the 10th percentile in the distribution.]{style="color: #e93cac;"}
 
@@ -2197,7 +2197,7 @@ Now we [look up](https://www.calculator.net/z-score-calculator.html) the associa
 This shaded area represents the 10th percentile
 :::
 
-## {visibility="hidden"} 
+---  
 
 #### [5. Find the score at the 10th percentile in the distribution.]{style="color: #e93cac;"}
 
@@ -2252,7 +2252,7 @@ $$
 Interpretation: The 10th percentile is at 60.52 inches. About 10% of women are 5 ft. ½ inch or shorter, and about 90% are taller.
 :::
 
-## {visibility="hidden"}
+--- 
 
 #### [6. Find the two heights that define the middle 95% of cases in the distribution.]{style="color: #e93cac;"}
 
@@ -2288,7 +2288,7 @@ ggplot(data = heights, aes(x = x)) +
 Scores defining the middle 95% of cases (in [**any normal distribution**]{.underline}) are at $Z = -1.96$ and $Z = 1.96$
 :::
 
-## {visibility="hidden"}
+--- 
 
 #### [6. Find the two heights that define the middle 95% of cases in the distribution.]{style="color: #e93cac;"}
 
