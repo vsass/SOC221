@@ -639,9 +639,9 @@ $$
 
 * Probability of rolling any value below *4* with a fair six-sided die?
 
-$$
+[$$
 P(\text{1 or 2 or 3}) = \frac{1}{6} + \frac{1}{6} + \frac{1}{6} = 0.167 + 0.167 + 0.167 = 0.50
-$$
+$$]{style="font-size: 0.9em"}
 :::
 
 ::: {.fragment fragment-index=3 data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 575px; height: 100px; padding: 0px 10px 20px 10px; position: absolute; bottom: 25px; right: -50px"}
@@ -971,11 +971,12 @@ If we know enough about the **SHAPE** of the distribution, we can still make **P
 ::: {.column width="55%"}
 ::: {.fragment fragment-index=3 style="font-size: 1.25em"}
 
->[**NORMAL DISTRIBUTION**]{style="color: #e93cac"}<br>Continuous probability distribution<br>frequently used in inferentialstatistics<br> 
+>[**NORMAL DISTRIBUTION**]{style="color: #e93cac"}<br>Continuous probability distribution<br>frequently used in inferential statistics<br> 
 • Theoretical model<br> 
 • But useful because:
 <br>&emsp;1) its shape is well known<br>&emsp;(familiar pdf); and
-<br>&emsp;2) under certain conditions,<br>&emsp;distributions that we need to<br>&emsp;knowabout follow a normal curve
+<br>&emsp;2) under certain conditions,<br>&emsp;distributions that we need to<br>&emsp;know about follow a normal 
+<br>&emsp;curve
 
 :::
 :::
@@ -1019,7 +1020,8 @@ theme_tufte() + theme(axis.text = element_blank(), axis.ticks = element_blank(),
 • Theoretical model<br> 
 • But useful because:
 <br>&emsp;1) its shape is well known<br>&emsp;(familiar pdf); and
-<br>&emsp;2) under certain conditions,<br>&emsp;distributions that we need to<br>&emsp;knowabout follow a normal curve
+<br>&emsp;2) under certain conditions,<br>&emsp;distributions that we need to<br>&emsp;know about follow a normal 
+<br>&emsp;curve
 
 :::
 :::
@@ -1280,11 +1282,11 @@ Convert any normal distribution into a standard normal distribution by convertin
 
 ::: {.column width="30%"}
 
-[$$z = \frac{69-65}{3.5} = 1.14$$]{style="color:#754cbc; font-size: 1.7em"}
+[$$z = \frac{69-65}{3.5} = 1.14$$]{style="color:#754cbc; font-size: 1.5em"}
 
-[$$z = \frac{55-65}{3.5} = -2.86$$]{style="color:#6e8e13; font-size: 1.7em"}
+[$$z = \frac{55-65}{3.5} = -2.86$$]{style="color:#6e8e13; font-size: 1.5em"}
 
-[$$z = \frac{60-65}{3.5} = -1.43$$]{style="color:#1b8883; font-size: 1.7em"}
+[$$z = \frac{60-65}{3.5} = -1.43$$]{style="color:#1b8883; font-size: 1.5em"}
 
 :::
 
@@ -1315,11 +1317,11 @@ A woman 69 inches tall is just over one standard deviation above average.
 
 ::: {.column width="30%"}
 
-[$$z = \frac{69-65}{3.5} = 1.14$$]{style="color:#754cbc; font-size: 1.7em"}
+[$$z = \frac{69-65}{3.5} = 1.14$$]{style="color:#754cbc; font-size: 1.5em"}
 
-[$$z = \frac{55-65}{3.5} = -2.86$$]{style="color:#6e8e13; font-size: 1.7em"}
+[$$z = \frac{55-65}{3.5} = -2.86$$]{style="color:#6e8e13; font-size: 1.5em"}
 
-[$$z = \frac{60-65}{3.5} = -1.43$$]{style="color:#1b8883; font-size: 1.7em"}
+[$$z = \frac{60-65}{3.5} = -1.43$$]{style="color:#1b8883; font-size: 1.5em"}
 
 :::
 
@@ -1836,7 +1838,7 @@ Height for women is <br>
 $N(65,3.5)$
 :::
 
----
+## {visibility="hidden"}
 
 #### [1. Percentage of women shorter than 55 inches?]{style="color: #e93cac;"}
 
@@ -1878,7 +1880,7 @@ $$
 Now we [look up](https://www.calculator.net/z-score-calculator.html) the associated probability for our z-score
 :::
 
----
+## {visibility="hidden"}
 
 #### [1. Percentage of women shorter than 55 inches?]{style="color: #e93cac;"}
 
@@ -1935,7 +1937,7 @@ $$
 :::
 
 
----
+## {visibility="hidden"}
 
 #### [2. Percentage of women 55 inches or taller?]{style="color: #e93cac;"}
 
@@ -1985,7 +1987,7 @@ $$
 $$
 :::
 
----
+## {visibility="hidden"}
 
 #### [3. Probability of randomly selecting a woman who is 69 inches or taller?]{style="color: #e93cac;"}
 
@@ -2022,7 +2024,7 @@ $$
 69 inches is **1.14 standard deviations** above the mean.
 :::
 
----
+## {visibility="hidden"}
 
 #### [3. Probability of randomly selecting a woman who is 69 inches or taller?]{style="color: #e93cac;"}
 
@@ -2078,7 +2080,7 @@ $$
 $$
 ::: 
 
----
+## {visibility="hidden"}
 
 #### [4. Probability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?]{style="color: #e93cac; font-size: 0.9em"}
 
@@ -2139,7 +2141,7 @@ $$
 $$
 ::: 
 
----
+## {visibility="hidden"}
 
 #### [5. Find the score at the 10th percentile in the distribution.]{style="color: #e93cac;"}
 
@@ -2160,7 +2162,7 @@ BACKWARDS APPROACH<br>
 :::
 :::
 
----
+## {visibility="hidden"}
 
 #### [5. Find the score at the 10th percentile in the distribution.]{style="color: #e93cac;"}
 
@@ -2195,7 +2197,7 @@ Now we [look up](https://www.calculator.net/z-score-calculator.html) the associa
 This shaded area represents the 10th percentile
 :::
 
----
+## {visibility="hidden"} 
 
 #### [5. Find the score at the 10th percentile in the distribution.]{style="color: #e93cac;"}
 
@@ -2250,7 +2252,7 @@ $$
 Interpretation: The 10th percentile is at 60.52 inches. About 10% of women are 5 ft. ½ inch or shorter, and about 90% are taller.
 :::
 
----
+## {visibility="hidden"}
 
 #### [6. Find the two heights that define the middle 95% of cases in the distribution.]{style="color: #e93cac;"}
 
@@ -2286,7 +2288,7 @@ ggplot(data = heights, aes(x = x)) +
 Scores defining the middle 95% of cases (in [**any normal distribution**]{.underline}) are at $Z = -1.96$ and $Z = 1.96$
 :::
 
----
+## {visibility="hidden"}
 
 #### [6. Find the two heights that define the middle 95% of cases in the distribution.]{style="color: #e93cac;"}
 

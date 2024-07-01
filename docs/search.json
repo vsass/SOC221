@@ -1915,7 +1915,7 @@
     "href": "Lectures/lecture4.html#myths-about-randomness-and-probability",
     "title": "",
     "section": "Myths about randomness and probability",
-    "text": "Myths about randomness and probability\nThe myth of short-run regularity\n\n\n\nMyth: If I flip a coin 10 times I should get 5 heads.\n\n\nReality: Over a short number of flips, you might get lots of heads or lots of tails. Probabilities express expectations only over the long run.\n\n\n\n\n\n\n\n\nExample: Tossing a die to get a 3 • In the short-run, might get very few or very many 3s • In the long-run 1/6 of the observations will be 3s"
+    "text": "Myths about randomness and probability\nThe myth of short-run regularity\n\n\n\nMyth: If I flip a coin 10 times I should get 5 heads.\n\n\nReality: Over a short number of flips, you might get lots of heads or lots of tails. Probabilities express expectations only over the long run.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample: Tossing a die to get a 3 • In the short-run, might get very few or very many 3s • In the long-run 1/6 of the observations will be 3s"
   },
   {
     "objectID": "Lectures/lecture4.html#myths-about-randomness-and-probability-1",
@@ -2230,14 +2230,14 @@
     "href": "Lectures/lecture4.html#how-does-this-help-us",
     "title": "",
     "section": "How does this help us?",
-    "text": "How does this help us?\n\n\n\n\nIn inferential statistics, we have to make use of distributions we don’t actually observe\n\n\n↓\n\n\nIf we know enough about the SHAPE of the distribution, we can still make PROBABILITY STATEMENTS from the distribution without actually observing the distribution.\n\n\n\n→\n\n\n\n\nNORMAL DISTRIBUTIONContinuous probability distributionfrequently used in inferentialstatistics • Theoretical model • But useful because:  1) its shape is well known (familiar pdf); and  2) under certain conditions, distributions that we need to knowabout follow a normal curve"
+    "text": "How does this help us?\n\n\n\n\nIn inferential statistics, we have to make use of distributions we don’t actually observe\n\n\n↓\n\n\nIf we know enough about the SHAPE of the distribution, we can still make PROBABILITY STATEMENTS from the distribution without actually observing the distribution.\n\n\n\n→\n\n\n\n\nNORMAL DISTRIBUTIONContinuous probability distributionfrequently used in inferential statistics • Theoretical model • But useful because:  1) its shape is well known (familiar pdf); and  2) under certain conditions, distributions that we need to know about follow a normal  curve"
   },
   {
     "objectID": "Lectures/lecture4.html#how-does-this-help-us-1",
     "href": "Lectures/lecture4.html#how-does-this-help-us-1",
     "title": "",
     "section": "How does this help us?",
-    "text": "How does this help us?\n\n\n\n\n\n\n\n\n\n\n\nCharacteristics of theNormal Distribution\n\nBell shaped\nSymmetric around the mean (and median and single mode)\nDeclining frequencies on tails\n\nBoth tails continue infinitely ever closer to 0 but without touching the baseline\n\n\n\n\n←\n\n\n\n\nNORMAL DISTRIBUTIONContinuous probability distributionfrequently used in inferentialstatistics • Theoretical model • But useful because:  1) its shape is well known (familiar pdf); and  2) under certain conditions, distributions that we need to knowabout follow a normal curve"
+    "text": "How does this help us?\n\n\n\n\n\n\n\n\n\n\n\nCharacteristics of theNormal Distribution\n\nBell shaped\nSymmetric around the mean (and median and single mode)\nDeclining frequencies on tails\n\nBoth tails continue infinitely ever closer to 0 but without touching the baseline\n\n\n\n\n←\n\n\n\n\nNORMAL DISTRIBUTIONContinuous probability distributionfrequently used in inferentialstatistics • Theoretical model • But useful because:  1) its shape is well known (familiar pdf); and  2) under certain conditions, distributions that we need to know about follow a normal  curve"
   },
   {
     "objectID": "Lectures/lecture4.html#normal-distribution-1",
