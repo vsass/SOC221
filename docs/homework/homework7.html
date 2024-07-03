@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>homework7</title>
+<title>Homework 7</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,10 +67,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -100,44 +129,44 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-lectures">    
         <li>
-    <a class="dropdown-item" href="../lectures/lecture1.html">
- <span class="dropdown-text">Lecture 1: Introductions<br>Overview of statistics<br>Producting data: surveys and sampling</span></a>
+    <a class="dropdown-item" href="../lectures/lecture1.qmd">
+ <span class="dropdown-text">Lecture 1:<br>Introductions<br>Overview of statistics<br>Producting data: surveys and sampling</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lectures/lecture2.html">
- <span class="dropdown-text">Lecture 2:Frequency tables<br>Graphical techniques</span></a>
+    <a class="dropdown-item" href="../lectures/lecture2.qmd">
+ <span class="dropdown-text">Lecture 2:<br>Frequency tables<br>Graphical techniques</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lectures/lecture3.html">
- <span class="dropdown-text">Lecture 3: Measures of central tendency<br>Measures of variability</span></a>
+    <a class="dropdown-item" href="../lectures/lecture3.qmd">
+ <span class="dropdown-text">Lecture 3:<br>Measures of central tendency<br>Measures of variability</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lectures/lecture4.html">
- <span class="dropdown-text">Lecture 4: Probability and probability distributions<br>Normal distributions</span></a>
+    <a class="dropdown-item" href="../lectures/lecture4.qmd">
+ <span class="dropdown-text">Lecture 4:<br>Probability and probability distributions<br>Normal distributions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lectures/lecture5.html">
- <span class="dropdown-text">Lecture 5: Sampling distributions<br>Central limit theorem<br>Logic of inference</span></a>
+    <a class="dropdown-item" href="../lectures/lecture5.qmd">
+ <span class="dropdown-text">Lecture 5:<br>Sampling distributions<br>Central limit theorem<br>Logic of inference</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lectures/lecture6.html">
- <span class="dropdown-text">Lecture 6: Estimation: confidence intervals for means<br>Estimation: confidence intervals for proportions</span></a>
+    <a class="dropdown-item" href="../lectures/lecture6.qmd">
+ <span class="dropdown-text">Lecture 6:<br>Estimation: confidence intervals for means<br>Estimation: confidence intervals for proportions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lectures/lecture7.html">
- <span class="dropdown-text">Lecture 7: Hypothesis testing for one sample<br>Hypothesis testing for two samples</span></a>
+    <a class="dropdown-item" href="../lectures/lecture7.qmd">
+ <span class="dropdown-text">Lecture 7:<br>Hypothesis testing for one sample<br>Hypothesis testing for two samples</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lectures/lecture8.html">
- <span class="dropdown-text">Lecture 8: Two-way tables and chi-square<br>Scatterplots and correlation</span></a>
+    <a class="dropdown-item" href="../lectures/lecture8.qmd">
+ <span class="dropdown-text">Lecture 8:<br>Two-way tables and chi-square<br>Scatterplots and correlation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lectures/lecture9.html">
- <span class="dropdown-text">Lecture 9: Bivariate regression<br>Inference for regression</span></a>
+    <a class="dropdown-item" href="../lectures/lecture9.qmd">
+ <span class="dropdown-text">Lecture 9:<br>Bivariate regression<br>Inference for regression</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lectures/lecture10.html">
- <span class="dropdown-text">Lecture 10: Multivariate regression</span></a>
+    <a class="dropdown-item" href="../lectures/lecture10.qmd">
+ <span class="dropdown-text">Lecture 10:<br>Multivariate regression</span></a>
   </li>  
     </ul>
   </li>
@@ -147,31 +176,31 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-homework">    
         <li>
-    <a class="dropdown-item" href="../homework/homework1.html">
+    <a class="dropdown-item" href="../homework/homework1.qmd">
  <span class="dropdown-text">Homework 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../homework/homework2.html">
+    <a class="dropdown-item" href="../homework/homework2.qmd">
  <span class="dropdown-text">Homework 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../homework/homework3.html">
+    <a class="dropdown-item" href="../homework/homework3.qmd">
  <span class="dropdown-text">Homework 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../homework/homework4.html">
+    <a class="dropdown-item" href="../homework/homework4.qmd">
  <span class="dropdown-text">Homework 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../homework/homework5.html">
+    <a class="dropdown-item" href="../homework/homework5.qmd">
  <span class="dropdown-text">Homework 5</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../homework/homework6.html">
+    <a class="dropdown-item" href="../homework/homework6.qmd">
  <span class="dropdown-text">Homework 6</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../homework/homework7.html">
+    <a class="dropdown-item" href="../homework/homework7.qmd">
  <span class="dropdown-text">Homework 7</span></a>
   </li>  
     </ul>
@@ -192,15 +221,964 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Homework 7</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="instructions" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<ol class="example" type="1">
+<li>Download a printable version of this assignment <a href="pdfs/homework7.pdf">here</a>. Print it out and record your answers directly in the space provided.</li>
+<li>Write your <strong>name</strong> and <strong>student number</strong> on the top of the assignment.</li>
+<li>For problems requiring additional written work, use the allotted work space and/or margins of the page.</li>
+<li>Once you’re done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.<br>
+</li>
+</ol>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Confidence-level assessment</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><span style="color: #e93cac">Confident</span></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><span style="color: #e93cac">Unsure</span></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false"><span style="color: #e93cac">Don’t Know</span></a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/confidence_level_assessment1.png" class="img-fluid figure-img" style="width:25.0%"></p>
+<figcaption>I knew the answer to that question</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/confidence_level_assessment2.png" class="img-fluid figure-img" style="width:25.0%"></p>
+<figcaption>I’m not sure whether I got this question correct</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/confidence_level_assessment3.png" class="img-fluid figure-img" style="width:25.0%"></p>
+<figcaption>I don’t know the answer for this question</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<ol start="5" class="example" type="1">
+<li>Turn in your assignment in class on the due date.</li>
+</ol>
+<p><br></p>
+<section id="questions" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="questions">Questions</h3>
+<section id="question-1" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="question-1">Question 1</h4>
+<p><strong>A researcher collected the following data on years of education (X) and number of children (Y) for a sample of married adults:</strong></p>
+<p><br></p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">X</th>
+<th style="text-align: center;">Y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<ol type="a">
+<li>Draw a scatter plot of the data.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<ol start="2" type="a">
+<li>Calculate and interpret the correlation between education and number of children.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="3" type="a">
+<li>Is the association between education and number of children statistically significant? Explain the basis of your answer and the implications for the association in the population.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br></p>
+<ol start="4" type="a">
+<li>Calculate and interpret the meaning of the regression slope.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="5" type="a">
+<li>Calculate and interpret the meaning of the Y-intercept for the regression line.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="6" type="a">
+<li>Predict the number of children for an adult with 11 years of education.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="7" type="a">
+<li>Calculate and interpret the coefficient of determination.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br> <br></p>
+</section>
+<section id="question-2" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="question-2">Question 2</h4>
+<p><strong>The same researcher collected at random one child from each of the eight families in which there was at least one child. She calculated the following statistics to study the effects of number of siblings (X) on happiness of the child (Y), measured on an interval scale in which low scores indicate a low level of happiness and high scores indicate a high level of happiness.</strong></p>
+<div style="page-break-after: always;"></div>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Happiness points (Y)</th>
+<th style="text-align: center;">Number of siblings (X)</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\bar{y} = 5.625\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\bar{x} = 1.750\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(r = 0.588\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(s_y = 2.134\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(s_x = 1.282\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(n = 8\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<ol type="a">
+<li>Is the association between number of siblings and happiness statistically significant? Explain the basis of your answer and the implications for the association in the population.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br> <br></p>
+<ol start="2" type="a">
+<li>Calculate and interpret the meaning of the regression slope.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="3" type="a">
+<li>Calculate and interpret the meaning of the Y-intercept for the regression line.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="4" type="a">
+<li>Predict the level of happiness for an only child and for a kid with two siblings.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><div style="page-break-after: always;"></div>
+<ol start="5" type="a">
+<li>Calculate and interpret the coefficient of determination.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br> <br></p>
+</section>
+<section id="question-3" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="question-3">Question 3</h4>
+<p><strong>A personnel specialist with a large accounting firm is interested in determining the effect of seniority (the number of years with the company) on hourly wages for administrative staff. She selects a random sample of 10 secretaries and collects the following data on their years with the company (X) and hourly wages (Y):</strong></p>
+<p><br></p>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Hourly Wage (Y)</th>
+<th style="text-align: center;">Years with company (X)</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\bar{y} = \$13.90\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\bar{x} = 2.700\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(r = 0.631\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(s_y = \$1.37\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(s_x = 1.889\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(n = 10\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<ol type="a">
+<li>Is the association statistically significant? Explain your answer.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br> <br></p>
+<ol start="2" type="a">
+<li>Calculate and interpret the meaning of the regression slope.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="3" type="a">
+<li>Calculate and interpret the meaning of the Y-intercept for the regression line.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="4" type="a">
+<li>Predict the hourly wage of a randomly selected worker who has been with the company for 4 years.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="5" type="a">
+<li>Calculate and interpret the coefficient of determination.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br></p>
+<ol start="6" type="a">
+<li>Based on these results, what is the typical starting wage per hour, and what is the typical increase in wage for each additional year on the job? (<em>not a trick question!</em>)</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br></p>
+</section>
+<section id="use-the-following-information-to-answer-both-questions-5-and-6" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="use-the-following-information-to-answer-both-questions-5-and-6">Use the following information to answer both questions 5 and 6</h4>
+<p><strong>Even in the modern era, countries differ dramatically in terms of the health of their populations. For example, average life expectancy is in the 80’s in some countries but remains in the low 40’s in other countries. Some researchers claim that the most effective way to improve the health of the worst-off populations is to provide more education for people in these countries. To assess this argument, use the following analysis of data from a random sample of countries</strong></p>
+<p><br></p>
+<div class="column-page">
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div id="sfokqixiyo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#sfokqixiyo table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#sfokqixiyo thead, #sfokqixiyo tbody, #sfokqixiyo tfoot, #sfokqixiyo tr, #sfokqixiyo td, #sfokqixiyo th {
+  border-style: none;
+}
+
+#sfokqixiyo p {
+  margin: 0;
+  padding: 0;
+}
+
+#sfokqixiyo .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #D5D5D5;
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: #D5D5D5;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #D5D5D5;
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-left-color: #D5D5D5;
+}
+
+#sfokqixiyo .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#sfokqixiyo .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#sfokqixiyo .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#sfokqixiyo .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sfokqixiyo .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+}
+
+#sfokqixiyo .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D5D5D5;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sfokqixiyo .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #016763;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#sfokqixiyo .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #016763;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#sfokqixiyo .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#sfokqixiyo .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#sfokqixiyo .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#sfokqixiyo .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#sfokqixiyo .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D5D5D5;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#sfokqixiyo .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D5D5D5;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+  vertical-align: middle;
+}
+
+#sfokqixiyo .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#sfokqixiyo .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#sfokqixiyo .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #A5FEF2;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #A5FEF2;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #A5FEF2;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#sfokqixiyo .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #5F5F5F;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sfokqixiyo .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#sfokqixiyo .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#sfokqixiyo .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#sfokqixiyo .gt_summary_row {
+  color: #333333;
+  background-color: #A5FEF2;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sfokqixiyo .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D5D5D5;
+}
+
+#sfokqixiyo .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#sfokqixiyo .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+}
+
+#sfokqixiyo .gt_grand_summary_row {
+  color: #333333;
+  background-color: #7FE9DB;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sfokqixiyo .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D5D5D5;
+}
+
+#sfokqixiyo .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D5D5D5;
+}
+
+#sfokqixiyo .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#sfokqixiyo .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D5D5D5;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+}
+
+#sfokqixiyo .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sfokqixiyo .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sfokqixiyo .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sfokqixiyo .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sfokqixiyo .gt_left {
+  text-align: left;
+}
+
+#sfokqixiyo .gt_center {
+  text-align: center;
+}
+
+#sfokqixiyo .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#sfokqixiyo .gt_font_normal {
+  font-weight: normal;
+}
+
+#sfokqixiyo .gt_font_bold {
+  font-weight: bold;
+}
+
+#sfokqixiyo .gt_font_italic {
+  font-style: italic;
+}
+
+#sfokqixiyo .gt_super {
+  font-size: 65%;
+}
+
+#sfokqixiyo .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#sfokqixiyo .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#sfokqixiyo .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#sfokqixiyo .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#sfokqixiyo .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#sfokqixiyo .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#sfokqixiyo .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_heading">
+<th colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border">Results of OLS regression models predicting<br>
+life expectancy at birth in a sample of countries</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
+<th id="Model 1" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Model 1</th>
+<th id="Model 2" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Model 2</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd gt_group_heading_row">
+<td colspan="3" id="Predictor" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Predictor</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td id="stub_1_1" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row" style="text-align: left; text-indent: 20px;"><p>% Literate</p></td>
+<td class="gt_row gt_right" headers="Predictor stub_1_1 One"><p>0.403 ***</p></td>
+<td class="gt_row gt_right" headers="Predictor stub_1_1 Two"><p>0.301 ***</p></td>
+</tr>
+<tr class="odd">
+<td id="stub_1_2" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row" style="text-align: left; text-indent: 20px;"><p>% Urban</p></td>
+<td class="gt_row gt_right gt_striped" headers="Predictor stub_1_2 One"></td>
+<td class="gt_row gt_right gt_striped" headers="Predictor stub_1_2 Two"><p>0.149 ***</p></td>
+</tr>
+<tr class="even gt_group_heading_row">
+<td colspan="3" class="gt_empty_group_heading" data-quarto-table-cell-role="th" scope="colgroup"></td>
+</tr>
+<tr class="odd gt_row_group_first">
+<td id="stub_1_3" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Constant</p></td>
+<td class="gt_row gt_right" headers="NA stub_1_3 One"><p>38.541</p></td>
+<td class="gt_row gt_right" headers="NA stub_1_3 Two"><p>37.974</p></td>
+</tr>
+<tr class="even">
+<td id="stub_1_4" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Model R²</p></td>
+<td class="gt_row gt_right gt_striped" headers="NA stub_1_4 One"><p>0.749</p></td>
+<td class="gt_row gt_right gt_striped" headers="NA stub_1_4 Two"><p>0.814</p></td>
+</tr>
+</tbody><tfoot class="gt_sourcenotes">
+<tr class="even">
+<td colspan="3" class="gt_sourcenote">N = 107<br>
+<br>
+* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:30%;">
+<p><br></p>
+<p><u><strong>Definition of Variables</strong></u></p>
+<ul>
+<li>Life expectancy at birth: Average age to which people born right now will live if exposed to current death rates in the country.</li>
+<li>% Literate: Percent of adults in the population that can read and write.</li>
+<li>% Urban: Percent of the country’s population residing in cities.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="question-5" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="question-5">Question 5</h4>
+<p><strong>Interpretation of Model 1</strong></p>
+<ol type="a">
+<li>Write out the regression equation implied in the results for Model 1.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="2" type="a">
+<li>Predict the life expectancy for a country in which 75% of the population can read and write.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="3" type="a">
+<li>Interpret the meaning of the constant in Model 1.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="4" type="a">
+<li>Interpret the slope coefficient for the effect of % Literate in Model 1.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br></p>
+<ol start="5" type="a">
+<li>Is the association between literacy and life expectancy statistically significant? Explain how you reached your conclusion.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br> <br></p>
+<ol start="6" type="a">
+<li>Interpret the coefficient of determination in Model 1.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br></p>
+<ol start="7" type="a">
+<li>Do these results support the idea that population health (as measured by life expectancy) is affected by education levels (as measured by % literate)? Explain your answer.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br></p>
+</section>
+<section id="question-6" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="question-6">Question 6</h4>
+<p><strong>A critic of the education argument suggests that any association between literacy and life expectancy is a spurious byproduct of urbanization; in countries in which the population is concentrated in cities people have access to both schooling and health care, creating an association between literacy between literacy and life expectancy that is not causal. To test this argument, interpret Model 2 of the table above.</strong></p>
+<ol type="a">
+<li>Write out the regression equation implied in the results for Model 2.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="2" type="a">
+<li>Predict the life expectancy for a country in which 75% of the population can read and write and 50% of the population lives in cities.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br></p>
+<ol start="3" type="a">
+<li>Interpret the meaning of the constant in Model 2.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br></p>
+<ol start="4" type="a">
+<li>Interpret the slope coefficient for the effect of % Literate in Model 2.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br> <br> <br></p>
+<ol start="5" type="a">
+<li>Interpret the slope coefficient for the effect of % Urban in Model 2.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br> <br> <br></p>
+<ol start="6" type="a">
+<li>Interpret the coefficient of multiple determination in Model 2</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br> <br> <br></p>
+<ol start="7" type="a">
+<li>Do these results support the argument that the association between life expectancy and % literate is spurious? Explain your answer.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/confidence_level_assessment.png" class="img-fluid"></p>
+</div></div><p><br> <br> <br> <br> <br> <br></p>
+
+
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

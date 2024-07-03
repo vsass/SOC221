@@ -1,0 +1,73 @@
+---
+title: '<h1 style="font-size:3em; "> Multivariate regression </h1>'
+title-slide-attributes:
+  data-background-image: ../images/abstract_statistics_playful2.jpeg
+  data-background-size: cover
+  data-background-opacity: "0.33"
+subtitle: "SOC 221 • Lecture 10"
+author: "Victoria Sass"
+date: "July 29, 2024"
+date-format: full
+execute: 
+  echo: true
+  message: false
+  warning: false
+format: 
+  revealjs:
+    reference-location: margin
+    theme: lecture_styles.scss
+    controls: true
+    slide-number: true
+    chalkboard: true
+    incremental: false 
+    smaller: true
+    preview-links: true
+    history: false
+    progress: true
+    link-external-icon: true 
+---
+
+```{r}
+#| echo: false
+#| cache: false
+require(tidyverse)
+require(gt)
+
+knitr::opts_chunk$set(comment = ">")
+```
+
+# Multivariate regression {.section-title background-color="#c5b4e3"}
+
+## Bivariate regression
+
+## Multivariate regression
+
+## Purpose 1: building the case for causality
+
+1. There is a statistical association between X and Y
+2. X happens before Y (correct time ordering)
+3. No other variable accounts for the statistical link between X and Y
+
+## Spurious relationship
+
+## Summary of logic
+
+## Bivariate slope & partial slopes
+
+# Break! {.section-title background-color="#2ad2c9"}
+
+## Purpose 2: developing better predictions
+
+## Purpose 3: explain more
+
+## Coefficient of MULTIPLE determination
+
+## Example
+
+## Regression tables
+
+## Example
+
+# Homework{.section-title background-color="#e8e3d3"}
+
+## {data-menu-title="Homework 10" background-iframe="https://vsass.github.io/SOC221/homework/homework10.html" background-interactive=TRUE}

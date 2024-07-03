@@ -1,0 +1,275 @@
+---
+title: "Homework 3"
+sidebar: false
+format: html
+message: false
+warning: false
+reference-location: margin
+citation-location: margin
+---
+
+## Instructions
+(@) Download a printable version of this assignment [here](pdfs/homework3.pdf). Print it out and record your answers directly in the space provided.
+(@) Write your **name** and **student number** on the top of the assignment. 
+(@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
+(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.\
+
+::: {.panel-tabset}
+
+### Confidence-level assessment
+
+![](../images/confidence_level_assessment.png){fig-align="center" width="25%"}
+
+### [Confident]{style="color: #e93cac"}
+
+![I knew the answer to that question](../images/confidence_level_assessment1.png){fig-align="center" width="25%"}
+
+### [Unsure]{style="color: #e93cac"}
+
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){fig-align="center" width="25%"}
+
+### [Don't Know]{style="color: #e93cac"}
+
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){fig-align="center" width="25%"}
+
+:::
+
+(@) Turn in your assignment in class on the due date. 
+
+### Questions
+
+#### Question 1
+
+**The following students are enrolled in a course in Introductory Sociology. They are listed along with their year in school and whether or not they are majoring in sociology.**
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+<br>
+
+| Student | Year  | Sociology major? | 
+|:--------:|:------:|:--------:|
+| 1 | Sophomore | Yes | 
+| 2 | Senior |  No     | 
+| 3 | Junior | Yes     | 
+| 4 | Freshman | No     | 
+| 5 | Freshman | Yes  | 
+| 6 | Sophomore |  Yes     | 
+| 7 | Sophomore | Yes     | 
+| 8 | Junior |  No | 
+| 9 | Sophomore |  Yes  | 
+| 10 | Sophomore | No  | 
+
+: {tbl-colwidths="[10, 20, 20]"}
+
+<br>
+
+What is the probability of selecting at random:
+
+a. a sophomore?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+b. a student majoring in Sociology?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+c. a freshman or a sophomore?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+d. a student who is not a freshman?
+<br>
+<br>
+<br>
+_____________________________________
+
+{{< pagebreak >}}
+
+#### Question 2
+
+**A student taking a midterm exam in Ancient History comes to two questions pertaining to a lecture that he missed, and so he decides to take a random guess on both questions. One question is true-false and the other is multiple choice with five possible answers. What is the probability of guessing...**
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+What is the probability of selecting at random:
+
+a. the correct answer to the true/false question?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+b. the correct answer to the multiple choice question?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+c. the correct answers to both the true/false question and the multiple choice question?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+d. the incorrect answers to both the true/false question and the multiple choice question?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+e. the correct answer to the true/false question and the incorrect answer to the multiple choice question?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+f. the incorrect answer to the true/false question and the correct answer to the multiple choice question?
+<br>
+<br>
+<br>
+_____________________________________
+
+{{< pagebreak >}}
+
+#### Question 3
+
+**Research has shown that 6 out of 10 marriages end in divorce. What is the probability that...**
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+a. a particular just-married couple will stay married “until death do them part”?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+b. two different randomly selected couples both remain married “until death do them part”?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+c. two different randomly selected couples both get divorced?
+<br>
+<br>
+<br>
+_____________________________________
+
+#### Question 4
+
+**The Superior Test of Achievement (STA) is standardized to be normally distributed with a mean μ = 500 and a standard deviation σ = 100. What percentage of STA scores falls...**
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+a. between 500 and 600?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+b. between 400 and 600?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+c. between 500 and 700?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+d. between 300 and 700?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+e. above 600?
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+f. below 300?
+
+#### Question 5
+
+**Suppose that at a large state university, statistics tutors are paid by the hour. Data from the personnel office show the distribution of hourly wages paid to statistics tutors across the campus to be roughly normal with a mean of $12.00 and a standard deviation of $2.50. Determine...**
+
+::: {.column-margin}
+![](../images/confidence_level_assessment.png)
+:::
+
+a. the percentage of statistics tutors who earn an hourly wage of $15 or more.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+b. the probability of selecting at random from personnel files a statistics tutor who earns an hourly wage of $15 or more
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+c. the percentage of statistics tutors who earn between $10 and $12 per hour.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+d. the probability of selecting at random from personnel files a statistics tutor who earns between $10 and $12 per hour.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+e. the percentage of statistics tutors who earn an hourly wage of $11 or less.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+f. the probability of selecting at random from personnel files a statistics tutor who earns an hourly wage of $11 or less.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+g. the probability of selecting at random from personnel files a statistics tutor who is extreme in either direction – earning either $10 or below or $14 or above.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+h. the probability of selecting at random from personnel files two statistics tutors whose hourly wages are less than average (mean).
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+i. the probability of selecting at random from personnel files two statistics tutors whose hourly wages are $13.50 or more.
+<br>
+<br>
+<br>
+_____________________________________
+<br>
+j. the two dollar amounts that define the hourly wages received by the middle 95% of statistics tutors.
+
+
+
