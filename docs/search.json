@@ -752,15 +752,15 @@
     "objectID": "lectures/lecture8.html#two-way-contingencybivariate-tables",
     "href": "lectures/lecture8.html#two-way-contingencybivariate-tables",
     "title": "",
-    "section": "",
-    "text": "Conditional distributions"
+    "section": "Two-way (contingency/bivariate) tables",
+    "text": "Two-way (contingency/bivariate) tables\nConditional distributions"
   },
   {
     "objectID": "lectures/lecture8.html#key-characteristics-of-an-association",
     "href": "lectures/lecture8.html#key-characteristics-of-an-association",
     "title": "",
-    "section": "",
-    "text": "Strength Direction Statistical significance"
+    "section": "Key characteristics of an association",
+    "text": "Key characteristics of an association\nStrength Direction Statistical significance"
   },
   {
     "objectID": "lectures/lecture8.html#correlation",
@@ -4072,5 +4072,82 @@
     "title": "",
     "section": "Step 3: Make a decision",
     "text": "Step 3: Make a decision\nReject \\(H_0\\) and support \\(H_a\\)\nYou are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.\n\n\n\n\n\\[\nH_0: \\mu_{immig} = 12.75\n\\]\n\n\n\\[\nH_a: \\mu_{immig} \\ne 12.75\n\\]\n\n\n\n\nBased on this evidence, it appears that the population of immigrants have, on average, more education than the national average.\nThe observed difference IS statistically significant\n\n\n\nSince our test statistic (2.06) is more extreme than the critical value (1.96) weREJECT \\(H_0\\), FIND EVIDENCE TO SUPPORT \\(H_A\\)"
+  },
+  {
+    "objectID": "lectures/lecture8.html#overview",
+    "href": "lectures/lecture8.html#overview",
+    "title": "",
+    "section": "Overview",
+    "text": "Overview\n\n\nHave used one sample to draw inferences about one population\nHave drawn inferences about the difference between two populations\n\nBeginning of efforts to test statistical significance of associations between variables\n\nExample: testing for gender differences in emotional intelligence (EI) = testing for an association between gender and EI\n\n\nNew goal: test statistical significance for associations in two-way tables\n\nTwo-way tables: tables that simultaneously cross-classify values of one variable by values of another\n\nAlso called bivariate tables, contingency tables, or crosstabs\n\nUseful for assessing the bivariate associations between categorical variables"
+  },
+  {
+    "objectID": "lectures/lecture8.html#association",
+    "href": "lectures/lecture8.html#association",
+    "title": "",
+    "section": "Association",
+    "text": "Association\n\n\n\n\nAssociationTwo variables are “associated” with each other when variation in one variable corresponds with variation in the other variable.\n\n\n\n\n\nSynonym: relationship\n\n\n\n\n\n\nIf the variables X and Y are associated:\n\nparticular values of Y tend to coincide with particular values of X\nthe values of Y are different across different values of X\nthe average value of Y depends on the value of X\n\n\n\n\nExamples:\n\nEducation and income are associated because people with higher levels of education tend to have higher levels of income.\nPolitical attitudes are associated with age in that older people tend to be more politically conservative than younger people."
+  },
+  {
+    "objectID": "lectures/lecture8.html#independent-v-dependent-variables",
+    "href": "lectures/lecture8.html#independent-v-dependent-variables",
+    "title": "",
+    "section": "Independent v dependent variables",
+    "text": "Independent v dependent variables\n\n\n\n\nIndependent VariableAn independent variable is assumed to influence a dependent variable. The assumed “cause” in an association\n\n\n\n\nExamples:\n\nIf we assume that education affects income, education is the independent variable and income is the dependent variable.\nIf we believe that political attitudes change with age, then age is independent variable and political attitudes represent the dependent variable.\n\n\n\n\n\nDependent VariableA dependent variable is affected by one or more other variables. The assumed “effect” in an association\n\n\n\n\nGenerally avoid using language of “cause” and “effect” since establishing a case for causality is always difficult and rarely certain."
+  },
+  {
+    "objectID": "lectures/lecture8.html#risk-ratio",
+    "href": "lectures/lecture8.html#risk-ratio",
+    "title": "",
+    "section": "Risk ratio",
+    "text": "Risk ratio"
+  },
+  {
+    "objectID": "lectures/lecture8.html#chi-square-test",
+    "href": "lectures/lecture8.html#chi-square-test",
+    "title": "",
+    "section": "Chi-square test",
+    "text": "Chi-square test"
+  },
+  {
+    "objectID": "lectures/lecture8.html#calculation-of-chi-square",
+    "href": "lectures/lecture8.html#calculation-of-chi-square",
+    "title": "",
+    "section": "Calculation of chi-square",
+    "text": "Calculation of chi-square"
+  },
+  {
+    "objectID": "lectures/lecture8.html#hypothesis-test-for-two-way-chi-square",
+    "href": "lectures/lecture8.html#hypothesis-test-for-two-way-chi-square",
+    "title": "",
+    "section": "Hypothesis test for two-way Chi-square",
+    "text": "Hypothesis test for two-way Chi-square"
+  },
+  {
+    "objectID": "lectures/lecture8.html#another-example",
+    "href": "lectures/lecture8.html#another-example",
+    "title": "",
+    "section": "Another example",
+    "text": "Another example"
+  },
+  {
+    "objectID": "lectures/lecture8.html#chi-square-and-strength-of-an-association",
+    "href": "lectures/lecture8.html#chi-square-and-strength-of-an-association",
+    "title": "",
+    "section": "Chi-square and strength of an association",
+    "text": "Chi-square and strength of an association"
+  },
+  {
+    "objectID": "lectures/lecture8.html#examples-1",
+    "href": "lectures/lecture8.html#examples-1",
+    "title": "",
+    "section": "Examples",
+    "text": "Examples"
+  },
+  {
+    "objectID": "lectures/lecture8.html#examples-2",
+    "href": "lectures/lecture8.html#examples-2",
+    "title": "",
+    "section": "Examples",
+    "text": "Examples"
   }
 ]

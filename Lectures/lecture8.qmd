@@ -1,5 +1,5 @@
 ---
-title: '<h1 style="font-size:2.9em; "> Two way tables and chi-square <br> & Scatterplots and correlation </h1>'
+title: '<h1 style="font-size:2.8em; "> Two-way tables and chi-square <br> & Scatterplots and correlation </h1>'
 title-slide-attributes:
   data-background-image: ../images/abstract_statistics_playful2.jpeg
   data-background-size: cover
@@ -31,28 +31,551 @@ format:
 #| echo: false
 #| cache: false
 require(tidyverse)
+require(ggthemes)
 require(gt)
+require(gganimate)
+require(ggforce)
 
 knitr::opts_chunk$set(comment = ">")
+
+# set transparent background in base
+knitr::opts_chunk$set(dev.args=list(bg='transparent'))
+
+# set transparent background in ggplot
+ggplot2::theme_set(ggthemes::theme_tufte(base_size=12))
+ggplot2::theme_update(panel.background = ggplot2::element_blank(),
+                      plot.background=ggplot2::element_blank(),
+    legend.background=ggplot2::element_blank())
+
+options(width=80, show.signif.stars=FALSE)
 ```
 
-# Two way tables and chi-square {.section-title background-color="#c5b4e3"}
+# Two-way tables<br>and chi-square {.section-title background-color="#c5b4e3"}
+
+# Bivariate tables<br>and chi-square {.section-title background-color="#c5b4e3"}
 
 ## Overview
 
-## Association
+::: incremental
+* Have used one sample to draw inferences about one population
 
-## Independent v dependent variables
 
-## Two-way (contingency/bivariate) tables
+* Have drawn inferences about the difference between two populations
+    * Beginning of efforts to test statistical significance of [associations]{.underline} between variables
+        * Example: testing for gender differences in emotional intelligence (EI) = testing for an *association* between gender and EI
 
-Conditional distributions
 
-## Key characteristics of an association
+* [New goal: test statistical significance for [associations]{.underline} in two-way tables]{style="color: #e93cac"}
+    * Two-way tables: tables that simultaneously cross-classify values of one variable by values of another
+        * Also called bivariate tables, contingency tables, or crosstabs
+    * Useful for assessing the [bivariate]{.underline} associations between [categorical]{.underline} variables
+:::
 
-Strength
-Direction
-Statistical significance
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+\
+
+::: {style="font-size: 1.75em"}
+> [Association]{style="color: #e93cac"}<br>Two variables are “associated” with each other when variation in one variable corresponds with variation in the other variable.
+:::
+
+::: {.fragment}
+::: {style="font-size: 1.5em"}
+> Synonym: *relationship*
+:::
+:::
+:::
+  
+::: {.column width="50%"}
+
+\
+
+::: {.fragment}
+#### [If the variables X and Y are associated:]{.underline}
+
+* particular values of Y tend to coincide with particular values of X
+* the values of Y are different across different values of X
+* the average value of Y depends on the value of X
+
+:::
+
+::: {.fragment}
+#### [Examples:]{.underline}
+
+* Education and income are associated because people with higher levels of education tend to have higher levels of income.
+* Political attitudes are associated with age in that older people tend to be more politically conservative than younger people.
+:::
+
+:::
+  
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {style="font-size: 1.5em"}
+> [Independent Variable]{style="color: #e93cac"}<br>An independent variable is assumed to influence a dependent variable. The assumed “*cause*” in an association
+:::
+
+\
+
+::: {.fragment}
+#### Examples:
+
+* [If we assume that education affects income, education is the independent variable and income is the dependent variable.]{style="font-size: 0.8em"}
+* [If we believe that political attitudes change with age, then age is independent variable and political attitudes represent the dependent variable.]{style="font-size: 0.8em"}
+:::
+
+
+
+:::
+  
+::: {.column width="50%"}
+::: {style="font-size: 1.5em"}
+> [Dependent Variable]{style="color: #e93cac"}<br>A dependent variable is affected by one or more other variables. The assumed “*effect*” in an association
+:::
+
+\
+\
+
+::: {.fragment style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+Generally avoid using language of “*cause*” and “*effect*” since establishing a case for causality is always difficult and rarely certain.
+:::
+
+:::
+  
+::::
+
+# Associations in <br> bivariate tables
+
+---
+
+#### [Goal]{style="color: #e93cac"}: Understand the association between race and attitudes about the death penalty
+
+<br>
+
+Say you were presented with the following two tables. Can you tell whether there is an association between race and support for the death penalty?
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{r}
+#| echo: false
+
+death_penalty <- data.frame(f = c(719, 178, 897), Percent = c(80.16, 19.84, 100.00))
+rownames(death_penalty) <- c("Support Death Penalty", "Oppose Death Penalty", "TOTAL")
+
+death_penalty |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Frequency distribution of attitudes towards the death penalty", subtitle = "Black and White respondents in GSS 2000") |> # add title and subtitle
+  fmt_markdown(columns = ) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3", table.font.size = px(18L)) |> # change background color
+  opt_stylize(style = 6, color = "pink", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") # outline table with colored border
+
+
+  # |>  
+  #tab_style(style = list(cell_borders(sides = "all", color = "red")), locations = list(cells_body(), cells_column_labels(), cells_stub(), cells_stubhead(), cells_title(groups = c('title', 'subtitle')))) 
+```
+
+
+:::
+  
+::: {.column width="40%"}
+```{r}
+#| echo: false
+
+race <- data.frame(f = c(104, 793, 897), Percent = c(11.59, 88.41, 100.00))
+rownames(race) <- c("Black", "White", "TOTAL")
+
+race |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Frequency distribution of race", subtitle = "Black and White respondents in GSS 2000") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3", table.font.size = px(18L)) |> # change background color
+  opt_stylize(style = 6, color = "cyan", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") # outline table with colored border
+
+```
+:::
+  
+::::
+
+<br>
+
+::: {.fragment fragment-index=1}
+#### [Two-way (contingency/bivariate) tables]{.underline}
+
+* Purpose: 
+    * Simultaneously cross-classify the distribution of two variables
+    * Common first step in detecting and summarizing an association between variables
+
+:::
+
+---
+
+#### [Goal]{style="color: #e93cac"}: Understand the association between race and attitudes about the death penalty
+
+<br>
+
+#### [Placeholder]{style="color: #e8e3d3"}
+
+<br>
+
+```{r}
+#| echo: false
+
+death_penalty_race <- data.frame(Black = c("60", "44",  "104"), White = c("659", "134", "793"), TOTAL = c("719", "178", "**897**"))
+rownames(death_penalty_race) <- c("Support Death Penalty", "Oppose Death Penalty", "TOTAL")
+
+death_penalty_race |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Two-way table of attitudes towards the death penalty by race", subtitle = "Black and White respondents in GSS 2000") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  #opt_stylize(style = 2, color = "blue", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(100), table.font.size = px(25L), data_row.padding = px(24.5)) |> 
+  tab_style(style = list(cell_text(v_align = "top")), locations = list(cells_body()))
+```
+
+---
+
+#### [Goal]{style="color: #e93cac"}: Understand the association between race and attitudes about the death penalty
+
+<br>
+
+#### [**Title**: Values of the *DV* [by]{.underline} Values of the *IV*]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center;"}
+
+<br>
+
+```{r}
+#| echo: false
+
+death_penalty_race |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Two-way table of attitudes towards the death penalty by race", subtitle = "Black and White respondents in GSS 2000") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  #opt_stylize(style = 2, color = "blue", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(100), table.font.size = px(25L), data_row.padding = px(24.5)) |> 
+  tab_style(style = list(cell_text(v_align = "top")), locations = list(cells_body())) |> 
+  tab_style(style = cell_fill(color = "#c5b4e3"), locations = cells_title())
+```
+
+---
+
+#### [Goal]{style="color: #e93cac"}: Understand the association between race and attitudes about the death penalty
+
+<br>
+
+#### [**Column variable** (usually the *independent* variable)]{style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center;"}
+
+<br>
+
+```{r}
+#| echo: false
+
+death_penalty_race |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Two-way table of attitudes towards the death penalty by race", subtitle = "Black and White respondents in GSS 2000") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  #opt_stylize(style = 2, color = "blue", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(100), table.font.size = px(25L), data_row.padding = px(24.5)) |> 
+  tab_style(style = list(cell_text(v_align = "top")), locations = list(cells_body())) |> 
+  tab_style(style = cell_fill(color = "#ffc700"), locations = cells_column_labels(columns = c(Black, White)))
+```
+
+---
+
+#### [Goal]{style="color: #e93cac"}: Understand the association between race and attitudes about the death penalty
+
+<br>
+
+#### [**Row variable** (usually the *dependent* variable)]{style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center;"}
+
+<br>
+
+```{r}
+#| echo: false
+
+death_penalty_race |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Two-way table of attitudes towards the death penalty by race", subtitle = "Black and White respondents in GSS 2000") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  #opt_stylize(style = 2, color = "blue", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(100), table.font.size = px(25L), data_row.padding = px(24.5)) |> 
+  tab_style(style = list(cell_text(v_align = "top")), locations = list(cells_body())) |> 
+  tab_style(style = cell_fill(color = "#2ad2c9"), locations = cells_stub(rows = c("Support Death Penalty", "Oppose Death Penalty")))
+```
+
+---
+
+#### [Goal]{style="color: #e93cac"}: Understand the association between race and attitudes about the death penalty
+
+<br>
+
+#### [Placeholder]{style="color: #e8e3d3"}
+
+<br>
+
+```{r}
+#| echo: false
+
+death_penalty_race |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Two-way table of attitudes towards the death penalty by race", subtitle = "Black and White respondents in GSS 2000") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  #opt_stylize(style = 2, color = "blue", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(100), table.font.size = px(25L), data_row.padding = px(24.5)) |> 
+  tab_style(style = list(cell_text(v_align = "top")), locations = list(cells_body())) |> 
+  tab_style(style = cell_fill(color = "#aadb1e"), locations = cells_body(rows = c("Support Death Penalty", "Oppose Death Penalty"), columns = c(Black, White)))
+```
+
+
+#### [**Observed frequencies** (Each [cell]{.underline} of the table includes the [count]{.underline} of cases with the specific combination of attributes on the two variables)]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 50px; left: 0px"}
+
+---
+
+#### [Goal]{style="color: #e93cac"}: Understand the association between race and attitudes about the death penalty
+
+<br>
+
+#### [Placeholder]{style="color: #e8e3d3"}
+
+<br>
+
+```{r}
+#| echo: false
+
+death_penalty_race |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Two-way table of attitudes towards the death penalty by race", subtitle = "Black and White respondents in GSS 2000") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  #opt_stylize(style = 2, color = "blue", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(100), table.font.size = px(25L), data_row.padding = px(24.5)) |> 
+  tab_style(style = list(cell_text(v_align = "top")), locations = list(cells_body())) |> 
+  tab_style(style = cell_fill(color = "#e93cac"), locations = cells_body(columns = "TOTAL")) |> 
+  tab_style(style = cell_fill(color = "#e93cac"), locations = cells_body(rows = "TOTAL"))
+```
+
+
+#### [**Marginals** show the basic distribution of the two variables<br>(same information from frequency tables)]{style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 50px; left: 0px"}
+
+#### ["*Total*" row and column are called *marginals*]{style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; bottom: 25px; right: 0px"}
+
+---
+
+#### [Goal]{style="color: #e93cac"}: Understand the association between race and attitudes about the death penalty
+
+<br>
+
+#### [Placeholder]{style="color: #e8e3d3"}
+
+<br>
+
+```{r}
+#| echo: false
+
+death_penalty_race <- data.frame(Black = c("60 <br> (57.69%)", "44 <br> (42.31%)",  "104 <br> (100.00%)"), White = c("659 <br> (83.10%)", "134 <br> (16.90%)", "793 <br> (100.00%)"), TOTAL = c("719 <br> (80.16%)", "178 <br> (19.84%)", "**897**"))
+rownames(death_penalty_race) <- c("Support Death Penalty", "Oppose Death Penalty", "TOTAL")
+
+death_penalty_race |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Two-way table of attitudes towards the death penalty by race", subtitle = "Black and White respondents in GSS 2000") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  #opt_stylize(style = 2, color = "blue", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(100), table.font.size = px(25L)) 
+```
+
+
+#### [**Percentages** can be used to compare the distribution of the [dependent variable]{.underline} (DV) across values of the [independent variable]{.underline} (IV)]{style="border: 4px solid #4b2e83; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 50px; left: 0px"}
+
+---
+
+#### [Goal]{style="color: #e93cac"}: Understand the association between race and attitudes about the death penalty
+
+<br>
+
+#### [Placeholder]{style="color: #e8e3d3"}
+
+<br>
+
+```{r}
+#| echo: false
+
+death_penalty_race <- data.frame(Black = c("60 <br> (**57.69%**)", "44 <br> (42.31%)",  "104 <br> (100.00%)"), White = c("659 <br> (83.10%)", "134 <br> (16.90%)", "793 <br> (100.00%)"), TOTAL = c("719 <br> (80.16%)", "178 <br> (19.84%)", "**897**"))
+rownames(death_penalty_race) <- c("Support Death Penalty", "Oppose Death Penalty", "TOTAL")
+
+death_penalty_race |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Two-way table of attitudes towards the death penalty by race", subtitle = "Black and White respondents in GSS 2000") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  #opt_stylize(style = 2, color = "blue", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(100), table.font.size = px(25L)) |> 
+  tab_style(style = cell_fill(color = "#c5b4e3"), locations = cells_body(rows = c("Support Death Penalty", "TOTAL"), columns = Black))
+```
+
+
+#### [**Percentages** can be used to compare the distribution of the [dependent variable]{.underline} (DV) across values of the [independent variable]{.underline} (IV)]{style="border: 4px solid #4b2e83; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 50px; left: 0px"}
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; height: 50px; padding: 5px 5px 5px 5px; position: absolute; top: 404px; right: 110px; text-align: center; font-size: 1.25em"}
+**57.69%** = (60/104) * (100)
+:::
+
+#### [Calculate percentages of the DV within values of IV (here use column %s)]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; bottom: 25px; right: 0px"}
+
+---
+
+#### [Goal]{style="color: #e93cac"}: Understand the association between race and attitudes about the death penalty
+
+<br>
+
+#### [Placeholder]{style="color: #e8e3d3"}
+
+<br>
+
+```{r}
+#| echo: false
+
+death_penalty_race <- data.frame(Black = c("60 <br> (**57.69%**)", "44 <br> (42.31%)",  "104 <br> (100.00%)"), White = c("659 <br> (83.10%)", "134 <br> (16.90%)", "793 <br> (100.00%)"), TOTAL = c("719 <br> (80.16%)", "178 <br> (19.84%)", "**897**"))
+rownames(death_penalty_race) <- c("Support Death Penalty", "Oppose Death Penalty", "TOTAL")
+
+death_penalty_race |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Two-way table of attitudes towards the death penalty by race", subtitle = "Black and White respondents in GSS 2000") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  #opt_stylize(style = 2, color = "blue", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(100), table.font.size = px(25L)) 
+```
+
+#### [**Percentages** can be used to compare the distribution of the [dependent variable]{.underline} (DV) across values of the [independent variable]{.underline} (IV)]{style="border: 4px solid #4b2e83; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; top: 50px; left: 0px"}
+
+#### [Percentages of the DV within values of the IV =<br>**Conditional Distributions**]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; bottom: 25px; right: -75px;"}
+
+::: {.fragment style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 10px 10px 10px 10px; text-align: center; position: absolute; bottom: 100px; left: -75px; width: 600px; font-size: 1.25em"}
+Can detect the [**ASSOCIATION**]{style="color: #e93cac"} between variables by comparing conditional distributions...
+:::
+
+---
+
+### Key characteristics of an association [(e.g. between X and Y)]{style="font-size: 0.9em"}
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.fragment style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center;"}
+[**STRENGTH**]{.underline style="color: #115450"} <br>
+How strong is the tendency for certain values of Y to go with particular values of X?
+:::
+
+
+:::
+  
+::: {.column width="50%"}
+
+::: {.fragment style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+[**DIRECTION**]{.underline style="color: #690c48"} <br>
+Is the association positive or negative?
+:::
+
+<br>
+
+::: {.fragment style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+[**STATISTICAL SIGNIFICANCE**]{.underline style="color: #44580c"} <br>
+How certain can we be that the association exists in the population?
+:::
+
+:::
+  
+::::
+
+---
+
+### Key characteristics of an association [(e.g. between X and Y)]{style="font-size: 0.9em"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center;"}
+[**STRENGTH**]{.underline style="color: #115450"} <br>
+How strong is the tendency for certain values of Y to go with particular values of X?
+
+* **Maximum (perfect) association:**
+    * All cases with a particular value of X have the same value on Y (no conditional variation)
+    * Knowing the value of X allows for perfect prediction of Y
+* **Minimum (no) association:**
+    * High conditional variation (value of Y varies even among those cases with the same value of X)
+    * Knowing the value of X does not improve ability to predict Y
+
+:::
+
+
+:::
+  
+::: {.column width="50%"}
+
+
+
+:::
+  
+::::
+
+
 
 ## Risk ratio
 
