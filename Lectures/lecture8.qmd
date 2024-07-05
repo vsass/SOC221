@@ -569,13 +569,143 @@ How strong is the tendency for certain values of Y to go with particular values 
   
 ::: {.column width="50%"}
 
+:::
+  
+::::
 
+---
+
+### Key characteristics of an association [(e.g. between X and Y)]{style="font-size: 0.9em"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center;"}
+[**STRENGTH**]{.underline style="color: #115450"} <br>
+How strong is the tendency for certain values of Y to go with particular values of X?
+
+* [**Maximum (perfect) association:**]{style="color: #a68100"}
+    * [All cases with a particular value of X have the same value on Y (no conditional variation)]{style="color: #a68100"}
+    * [Knowing the value of X allows for perfect prediction of Y]{style="color: #a68100"}
+* **Minimum (no) association:**
+    * High conditional variation (value of Y varies even among those cases with the same value of X)
+    * Knowing the value of X does not improve ability to predict Y
+
+:::
+
+
+:::
+  
+::: {.column width="50%"}
+
+::: {.fragment fragment-index=3 style="text-align: center; border: 3px solid black; font-size: 0.85em"}
+**Conditional distributions are completely dissimilar** (maximum difference in column %s across values of the IV)
+:::
+
+::: {.fragment fragment-index=1}
+```{r}
+#| echo: false
+
+aca <- data.frame(Democrat = c("60 <br> (100.00%)", "0 <br> (0.00%)",  "60 <br> (100.00%)"), Republican = c("0 <br> (0.00%)", "39 <br> (100.00%)", "39 <br> (100.00%)"), TOTAL = c("60 <br> (60.61%)", "39 <br> (39.39%)", "99"))
+rownames(aca) <- c("Voted for ACA", "Voted against ACA", "TOTAL")
+
+aca |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Two-way table of vote on Affordable Care Act (ACA) by political party", subtitle = "US Senators in 2009") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  #opt_stylize(style = 2, color = "blue", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(100), table.font.size = px(25L)) 
+```
+:::
+
+::: {.fragment fragment-index=4 style="text-align: center; border: 3px solid black; font-size: 0.85em"}
+**No conditional variation** (all cases with a particular IV value have the same DV value)
+:::
 
 :::
   
 ::::
 
+::: {.fragment fragment-index=2 style="border: 3px solid #a68100; width: 100px; height: 35px; margin: 10px; position: absolute; top: 380px; right: 132px"}
 
+:::
+
+::: {.fragment fragment-index=2 style="border: 3px solid #a68100; width: 120px; height: 35px; margin: 10px; position: absolute; top: 380px; right: 247px"}
+
+:::
+
+---
+
+### Key characteristics of an association [(e.g. between X and Y)]{style="font-size: 0.9em"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center;"}
+[**STRENGTH**]{.underline style="color: #115450"} <br>
+How strong is the tendency for certain values of Y to go with particular values of X?
+
+* **Maximum (perfect) association:**{
+    * All cases with a particular value of X have the same value on Y (no conditional variation)
+    * Knowing the value of X allows for perfect prediction of Y
+* [**Minimum (no) association:**]{style="color: #a68100"}}
+    * [High conditional variation (value of Y varies even among those cases with the same value of X)]{style="color: #a68100"}}
+    * [Knowing the value of X does not improve ability to predict Y]{style="color: #a68100"}}
+
+:::
+
+
+:::
+  
+::: {.column width="50%"}
+
+::: {.fragment fragment-index=3 style="text-align: center; border: 3px solid black; font-size: 0.85em"}
+**Conditional distributions are completely dissimilar** (maximum difference in column %s across values of the IV)
+:::
+
+::: {.fragment fragment-index=1}
+```{r}
+#| echo: false
+
+aca <- data.frame(Democrat = c("60 <br> (100.00%)", "0 <br> (0.00%)",  "60 <br> (100.00%)"), Republican = c("0 <br> (0.00%)", "39 <br> (100.00%)", "39 <br> (100.00%)"), TOTAL = c("60 <br> (60.61%)", "39 <br> (39.39%)", "99"))
+rownames(aca) <- c("Voted for ACA", "Voted against ACA", "TOTAL")
+
+aca |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Two-way table of vote on Affordable Care Act (ACA) by political party", subtitle = "US Senators in 2009") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  #opt_stylize(style = 2, color = "blue", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(100), table.font.size = px(25L)) 
+```
+:::
+
+::: {.fragment fragment-index=4 style="text-align: center; border: 3px solid black; font-size: 0.85em"}
+**No conditional variation** (all cases with a particular IV value have the same DV value)
+:::
+
+:::
+  
+::::
+
+::: {.fragment fragment-index=2 style="border: 3px solid #a68100; width: 100px; height: 35px; margin: 10px; position: absolute; top: 380px; right: 132px"}
+
+:::
+
+::: {.fragment fragment-index=2 style="border: 3px solid #a68100; width: 120px; height: 35px; margin: 10px; position: absolute; top: 380px; right: 247px"}
+
+:::
 
 ## Risk ratio
 
