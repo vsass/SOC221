@@ -1,7 +1,5 @@
 ---
 title: "Homework 7"
-sidebar: false
-format: html
 message: false
 warning: false
 reference-location: margin
