@@ -4078,7 +4078,7 @@
     "href": "lectures/lecture8.html#overview",
     "title": "",
     "section": "Overview",
-    "text": "Overview\n\n\nHave used one sample to draw inferences about one population\nHave drawn inferences about the difference between two populations\n\nBeginning of efforts to test statistical significance of associations between variables\n\nExample: testing for gender differences in emotional intelligence (EI) = testing for an association between gender and EI\n\n\nNew goal: test statistical significance for associations in two-way tables\n\nTwo-way tables: tables that simultaneously cross-classify values of one variable by values of another\n\nAlso called bivariate tables, contingency tables, or crosstabs\n\nUseful for assessing the bivariate associations between categorical variables\n\n\n\n\n\n\n\n\n\n\nAssociationTwo variables are “associated” with each other when variation in one variable corresponds with variation in the other variable.\n\n\n\n\n\nSynonym: relationship\n\n\n\n\n\n\n\n\nIf the variables X and Y are associated:\n\nparticular values of Y tend to coincide with particular values of X\nthe values of Y are different across different values of X\nthe average value of Y depends on the value of X\n\n\n\n\n\nExamples:\n\nEducation and income are associated because people with higher levels of education tend to have higher levels of income.\nPolitical attitudes are associated with age in that older people tend to be more politically conservative than younger people.\n\n\n\n\n\n\n\n\n\n\nIndependent VariableAn independent variable is assumed to influence a dependent variable. The assumed “cause” in an association\n\n\n\n\n\n\nExamples:\n\nIf we assume that education affects income, education is the independent variable and income is the dependent variable.\nIf we believe that political attitudes change with age, then age is independent variable and political attitudes represent the dependent variable.\n\n\n\n\n\n\nDependent VariableA dependent variable is affected by one or more other variables. The assumed “effect” in an association\n\n\n\n\n\n\nGenerally avoid using language of “cause” and “effect” since establishing a case for causality is always difficult and rarely certain."
+    "text": "Overview\n\n\nHave used one sample to draw inferences about one population\nHave drawn inferences about the difference between two populations\n\nBeginning of efforts to test statistical significance of associations between variables\n\nExample: testing for gender differences in emotional intelligence (EI) = testing for an association between gender and EI\n\n\nNew goal: test statistical significance for associations in two-way tables\n\nTwo-way tables: tables that simultaneously cross-classify values of one variable by values of another\n\nAlso called bivariate tables, contingency tables, or crosstabs\n\nUseful for assessing the bivariate associations between categorical variables"
   },
   {
     "objectID": "lectures/lecture8.html#association",
@@ -4106,14 +4106,14 @@
     "href": "lectures/lecture8.html#chi-square-test",
     "title": "",
     "section": "Chi-square test",
-    "text": "Chi-square test"
+    "text": "Chi-square test\n\n\nUsed to test statistical significance of associations in a two-way table (so, between categorical variables)\nIntended to test whether a pattern or association observed in a set of sample data:\n\nrepresents a real association in the population from which the sample was drawn OR\nreflects random sampling error when, in reality, there is no real association in the population\n\nBased on a comparison of our observed frequencies to expected frequencies.\n\nObserved frequencies = the relative frequencies actually observed in the data for the sample\nExpected frequencies = the relative frequencies that we would expect if there was no association in the data"
   },
   {
     "objectID": "lectures/lecture8.html#calculation-of-chi-square",
     "href": "lectures/lecture8.html#calculation-of-chi-square",
     "title": "",
     "section": "Calculation of chi-square",
-    "text": "Calculation of chi-square"
+    "text": "Calculation of chi-square\n\n\nObtained value of chi-square:\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\] where\n\\(f_o =\\) \\(observed\\) \\(\\text{frequency in a given cell}\\)\n\\(f_e =\\) \\(\\text{frequency in the}\\) \\(cell\\) \\(expected\\) \\(\\text{under the assumption of the null hypothesis}\\)\n   \\(\\text{(no association in the population)}\\)\n\n\n\n\nShortcut to calculate expected cell frequencies:\n\n\\[\nf_e = \\frac{\\text{(row marginal)(column marginal)}}{n}\n\\]\n\n\nNote: Chi-square will take a value of 0 if there is no association in the sample."
   },
   {
     "objectID": "lectures/lecture8.html#hypothesis-test-for-two-way-chi-square",
