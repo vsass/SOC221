@@ -4337,7 +4337,7 @@
     "href": "Lectures/lecture6.html#confidence-intervals",
     "title": "",
     "section": "Confidence intervals",
-    "text": "Confidence intervals\n\nThe BIG IDEA:\n\n\nThe sampling distribution and CLT tells us how close to the population mean (\\(\\mu\\)) the sample mean (\\(\\bar{X}\\)) is likely to be\nWe can use this knowledge to figure out how close the true population mean (\\(\\mu\\)) is likely to be to the one sample mean (\\(\\bar{X}\\))that we observe\nBuild a confidence interval around our sample statistic (mean) to define the range in which we think the population parameter can be found…\n\n… and quantify how likely it is that we are right"
+    "text": "Confidence intervals\n\nThe BIG IDEA:\n\n\nThe sampling distribution and CLT tells us how close to the population mean (\\(\\mu\\)) the sample mean (\\(\\bar{X}\\)) is likely to be\nWe can use this knowledge to figure out how close to the one sample mean (\\(\\bar{X}\\)) that we observe the true population mean (\\(\\mu\\)) is likely to be\nBuild a confidence interval around our sample statistic (mean) to define the range in which we think the population parameter can be found…\n\n… and quantify how likely it is that we are right"
   },
   {
     "objectID": "Lectures/lecture6.html#using-these-tools-for-inference-1",
@@ -4449,7 +4449,7 @@
     "href": "Lectures/lecture6.html#confidence-intervals-3",
     "title": "",
     "section": "Confidence intervals",
-    "text": "Confidence intervals\n\n\\[\n\\widehat{p}\n\\]\n\n\n\n\n\n\n\n\nCreate our 95% confidence interval by going 1.96 standard errors on each side of the sample proportion\n\n\nBuilding a margin of error around our sample mean\n\n\nConfidence interval: \\(\\text{sample statistic} \\pm \\text{margin of error}\\)"
+    "text": "Confidence intervals\n\n\\[\n\\widehat{p}\n\\]\n\n\n\n\n\n\n\n\nCreate our 95% confidence interval by going 1.96 standard errors on each side of the sample proportion\n\n\nBuilding a margin of error around our sample proportion\n\n\nConfidence interval: \\(\\text{sample statistic} \\pm \\text{margin of error}\\)"
   },
   {
     "objectID": "Lectures/lecture6.html#calculating-confidence-intervals-6",
