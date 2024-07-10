@@ -1725,7 +1725,7 @@ Since our [test statistic]{style="color: #e93cac;"} ([$1.94$]{style="color: #e93
 
 ::::
 
-## Step 1: Plan {visibility="hidden"}
+## Step 1: Plan 
 
 #### State the null and alternative [hypotheses]{style="color: #e93cac;"}
 
@@ -1761,7 +1761,7 @@ $$
 Set up a test assuming that the null $H_0$ is true and see whether the facts of our sample contradict that assumption
 :::
 
-## Step 1: Plan {visibility="hidden"}
+## Step 1: Plan 
 
 #### Choose your [alpha]{style="color: #e93cac;"} level and find the [critical value]{style="color: #e93cac;"}
 
@@ -1828,7 +1828,7 @@ Critical value of<br>
 [$z = \pm 1.96$]{style="color: #e93cac;"}
 :::
 
-## Step 2: Calculate {visibility="hidden"}
+## Step 2: Calculate 
 
 #### Calculate [test statistic]{style="color: #e93cac;"} (and [p-value]{style="color: #e93cac;"})
 
@@ -1859,7 +1859,7 @@ $$
 <br>
 
 ::: {.fragment fragment-index=1}
-Figuring out how far the sample result is fom $H_0$ and putting it in standard-error units
+Figuring out how far the sample result is from $H_0$ and putting it in standard-error units
 :::
 
 ::: {.fragment fragment-index=1 style="font-size: 1.25em"}
@@ -1889,7 +1889,7 @@ $\frac{13.3-12.75}{0.267} =$ [$2.060$]{style="color: #e93cac;"}
 Mean education for immigrants is [2.06]{style="color: #e93cac;"} standard errors above the national average (assumed under $H_0$)
 :::
 
-## Step 3: Make a decision {visibility="hidden"}
+## Step 3: Make a decision 
 
 #### [Reject $H_0$ and support $H_a$]{style="color: #6e8e13;"}
 

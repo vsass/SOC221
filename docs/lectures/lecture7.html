@@ -1437,10 +1437,140 @@ H_a: \mu_{greek} \ne 2
 </div>
 </div>
 </section>
+<section id="step-1-plan-2" class="slide level2">
+<h2>Step 1: Plan</h2>
+<h4 id="state-the-null-and-alternative-hypotheses-1">State the null and alternative <span style="color: #e93cac;">hypotheses</span></h4>
+<p><em>You are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.</em></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><br></p>
+<div style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+H_0: \mu_{immig} = 12.75
+\]</span></p>
+</div>
+<div style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+H_a: \mu_{immig} \ne 12.75
+\]</span></p>
+</div>
+</div><div class="column" style="width:70%;">
 
-
-
+</div>
+</div>
+<div class="fragment" data-fragment-index="1" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 750px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; right: -75px; text-align: center;">
+<p>Set up a test assuming that the null <span class="math inline">\(H_0\)</span> is true and see whether the facts of our sample contradict that assumption</p>
+</div>
 </section>
+<section id="step-1-plan-3" class="slide level2">
+<h2>Step 1: Plan</h2>
+<h4 id="choose-your-alpha-level-and-find-the-critical-value-1">Choose your <span style="color: #e93cac;">alpha</span> level and find the <span style="color: #e93cac;">critical value</span></h4>
+<p><em>You are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.</em></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><br></p>
+<div style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+H_0: \mu_{immig} = 12.75
+\]</span></p>
+</div>
+<div style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+H_a: \mu_{immig} \ne 12.75
+\]</span></p>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture7_files/figure-revealjs/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="background: black; color: white; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; left: 325px; text-align: center">
+<p>Normal<br> distribution<br> <span style="color: #e93cac;"><span class="math inline">\(\alpha = 0.05\)</span></span></p>
+</div>
+<div class="fragment" data-fragment-index="1" style="width: 300px; position: absolute; bottom: 225px; right: -50px; text-align: center; font-size: 0.85em;border: 3px solid black;">
+<p>So our sample result has to be at least <span style="color: #e93cac;">1.96</span> standard errors away from what is assumed under <span class="math inline">\(H_0\)</span> for us to reject <span class="math inline">\(H_0\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="1" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 200px; padding: 5px 5px 5px 5px; position: absolute; bottom: 75px; right: -75px; text-align: center">
+<p><span class="math inline">\(H_a: \mu \ne 0\)</span><br> Critical value of<br> <span style="color: #e93cac;"><span class="math inline">\(z = \pm 1.96\)</span></span></p>
+</div>
+</section>
+<section id="step-2-calculate-1" class="slide level2">
+<h2>Step 2: Calculate</h2>
+<h4 id="calculate-test-statistic-and-p-value-1">Calculate <span style="color: #e93cac;">test statistic</span> (and <span style="color: #e93cac;">p-value</span>)</h4>
+<p><em>You are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.</em></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><br></p>
+<div style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+H_0: \mu_{immig} = 12.75
+\]</span></p>
+</div>
+<div style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+H_a: \mu_{immig} \ne 12.75
+\]</span></p>
+</div>
+</div><div class="column" style="width:40%;">
+<p><br></p>
+<div class="fragment" data-fragment-index="1">
+<p>Figuring out how far the sample result is from <span class="math inline">\(H_0\)</span> and putting it in standard-error units</p>
+</div>
+<div class="fragment" data-fragment-index="1" style="font-size: 1.25em">
+<p><span class="math display">\[
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{4}{\sqrt{225}} = 0.267
+\]</span></p>
+</div>
+</div><div class="column" style="width:30%;">
+<p><br></p>
+<div class="fragment" data-fragment-index="2" style="font-size: 1.5em; text-align: end">
+<p><span style="color: #e93cac;"><span class="math inline">\(z\)</span></span> <span class="math inline">\(= \frac{\bar{X} - \mu_0}{\sigma_{\bar{X}}}\)</span></p>
+<p><br></p>
+<p><span class="math inline">\(\frac{13.3-12.75}{0.267} =\)</span> <span style="color: #e93cac;"><span class="math inline">\(2.060\)</span></span></p>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 800px; padding: 0px 0px 0px 0px; position: absolute; bottom: -15px; right: -75px; text-align: center; font-size: 0.85em">
+<p>Mean education for immigrants is <span style="color: #e93cac;">2.06</span> standard errors above the national average (assumed under <span class="math inline">\(H_0\)</span>)</p>
+</div>
+</section>
+<section id="step-3-make-a-decision-1" class="slide level2">
+<h2>Step 3: Make a decision</h2>
+<h4 id="reject-h_0-and-support-h_a"><span style="color: #6e8e13;">Reject <span class="math inline">\(H_0\)</span> and support <span class="math inline">\(H_a\)</span></span></h4>
+<p><em>You are interested in knowing whether immigrants (US residents born outside of the country) are different from the US population as a whole in terms of educational attainment. You draw a random sample of 225 adult immigrants and find that their average level of education is 13.3 years. Compare this to the statistics for the population of American adults which has an average education of 12.75 with a standard deviation of 4 years. Use a .05 alpha level to test the statistical significance of the observed difference.</em></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><br></p>
+<div style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+H_0: \mu_{immig} = 12.75
+\]</span></p>
+</div>
+<div style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 275px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+H_a: \mu_{immig} \ne 12.75
+\]</span></p>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="fragment" data-fragment-index="1">
+<ul>
+<li>Based on this evidence, it appears that the <em>population of immigrants have, on average, <u>more education</u> than the national average</em>.</li>
+<li>The <u>observed difference</u> <strong>IS statistically significant</strong></li>
+</ul>
+</div>
+<div style="border: 4px solid #6e8e13; border-radius: 15px; text-align: center">
+<p>Since our <span style="color: #e93cac;">test statistic</span> (<span style="color: #e93cac;">2.06</span>) is more extreme than the <span style="color: #e93cac;">critical value</span> (<span style="color: #e93cac;">1.96</span>) we<br><span style="color: #6e8e13; font-size: 1.25em">REJECT <span class="math inline">\(H_0\)</span>, FIND EVIDENCE TO SUPPORT <span class="math inline">\(H_A\)</span></span></p>
+</div>
+</div>
+</div>
+</section></section>
 <section id="break" class="title-slide slide level1 section-title center" data-background-color="#2ad2c9">
 <h1>Break!</h1>
 
