@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.43">
+  <meta name="generator" content="quarto-1.4.551">
 
   <meta name="author" content="Victoria Sass">
-  <title> Estimation: confidence intervals   for means and proportions </title>
+  <title></title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -559,7 +559,7 @@ Victoria Sass
 </ul></li>
 <li>Most common: <span style="color: #754cbc;">90%</span>, <span style="color: #a68100;">95%</span>, and <span style="color: #1b8883;">99%</span></li>
 </ul>
-<table class="caption-top" style="width:96%;">
+<table style="width:96%;">
 <caption>Z-scores come from Standard Normal Table</caption>
 <colgroup>
 <col style="width: 8%">
@@ -767,7 +767,7 @@ z(\frac{\sigma}{\sqrt{n}}) = (1.645)(0.25)= 0.411
 </div>
 </div>
 <div class="fragment" data-fragment-index="2">
-<table class="caption-top" style="width:96%;">
+<table style="width:96%;">
 <caption>Z-scores come from Standard Normal Table</caption>
 <colgroup>
 <col style="width: 8%">
@@ -847,7 +847,7 @@ z(\frac{\sigma}{\sqrt{n}}) = (1.645)(0.25)= 0.411
 </div>
 </div>
 </div>
-<table class="caption-top" style="width:96%;">
+<table style="width:96%;">
 <caption>Z-scores come from Standard Normal Table</caption>
 <colgroup>
 <col style="width: 8%">
@@ -916,7 +916,7 @@ z(\frac{\sigma}{\sqrt{n}}) = (1.645)(0.25)= 0.411
 </ul>
 </div>
 </div>
-<table class="caption-top" style="width:96%;">
+<table style="width:96%;">
 <caption>Z-scores come from Standard Normal Table</caption>
 <colgroup>
 <col style="width: 8%">
@@ -1000,7 +1000,7 @@ z(\frac{\sigma}{\sqrt{n}}) = (1.645)(0.25)= 0.411
 </ul>
 </div>
 <div class="fragment" style="border: 3px solid black; border-radius: 15px; width: 1000px; padding: 5px 5px 5px 5px; position: static;">
-<table class="caption-top" style="width:96%;">
+<table style="width:96%;">
 <caption>Z-scores come from Standard Normal Table</caption>
 <colgroup>
 <col style="width: 8%">
@@ -1067,11 +1067,6 @@ z(\frac{\sigma}{\sqrt{n}}) = (1.645)(0.25)= 0.411
 </ul>
 </div>
 </section></section>
-<section id="break" class="title-slide slide level1 section-title center" data-background-color="#2ad2c9">
-<h1>Break!</h1>
-
-</section>
-
 <section>
 <section id="estimation-confidence-intervals-for-proportions" class="title-slide slide level1 section-title center" data-background-color="#c5b4e3">
 <h1>Estimation: confidence intervals for proportions</h1>
@@ -1132,23 +1127,6 @@ z(\frac{\sigma}{\sqrt{n}}) = (1.645)(0.25)= 0.411
 <section class="slide level2">
 
 <h3 id="step-1-decide-on-a-confidence-level-and-corresponding-z-score-2"><span style="font-size: 0.85em">Step 1: Decide on a confidence level and corresponding z-score</span></h3>
-<div>
-<ul>
-<li class="fragment">Confidence level (C) refers to the level of confidence that you will have in your inference
-<ul>
-<li class="fragment">Example: For a 95% confidence interval, you will be able to say that you are 95% confident that the true population mean falls within the interval</li>
-<li class="fragment">More accurately, the probability that the confidence interval contains the actual population parameter
-<ul>
-<li class="fragment">95% of all possible samples of a given size from this population will result in an interval that captures the unknown parameter.</li>
-</ul></li>
-</ul></li>
-<li class="fragment">Most common: <span style="color: #754cbc;">90%</span>, <span style="color: #a68100;">95%</span>, and <span style="color: #1b8883;">99%</span></li>
-</ul>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="step-1-decide-on-a-confidence-level-and-corresponding-z-score-3"><span style="font-size: 0.85em">Step 1: Decide on a confidence level and corresponding z-score</span></h3>
 <ul>
 <li>Confidence level (C) refers to the level of confidence that you will have in your inference
 <ul>
@@ -1160,7 +1138,7 @@ z(\frac{\sigma}{\sqrt{n}}) = (1.645)(0.25)= 0.411
 </ul></li>
 <li>Most common: <span style="color: #754cbc;">90%</span>, <span style="color: #a68100;">95%</span>, and <span style="color: #1b8883;">99%</span></li>
 </ul>
-<table class="caption-top" style="width:96%;">
+<table style="width:96%;">
 <caption>Z-scores come from Standard Normal Table</caption>
 <colgroup>
 <col style="width: 8%">
@@ -1606,7 +1584,18 @@ z(\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}) = (1.96)(0.035) = 0.069
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1638,29 +1627,7 @@ z(\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}) = (1.96)(0.035) = 0.069
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1668,7 +1635,7 @@ z(\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}) = (1.96)(0.035) = 0.069
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

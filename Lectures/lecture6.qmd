@@ -750,8 +750,6 @@ $$
     * More variation in population = more variation in possible sample results = larger standard error = bigger margin of error
 :::
 
-# Break! {.section-title background-color="#2ad2c9"}
-
 # Estimation: confidence intervals for proportions {.section-title background-color="#c5b4e3"}
 
 ## [Estimating Population Proportions (or percentages)]{style="font-size: 0.85em"}
@@ -816,18 +814,6 @@ Step 3: Calculate the margin of error
 Step 4: Calculate the confidence interval
 <br><br>
 Step 5: Interpret the results
-:::
-
----
-
-### [Step 1: Decide on a confidence level and corresponding z-score]{style="font-size: 0.85em"}
-
-::: incremental
-* Confidence level (C) refers to the level of confidence that you will have in your inference
-    * Example: For a 95% confidence interval, you will be able to say that you are 95% confident that the true population mean falls within the interval
-    * More accurately, the probability that the confidence interval contains the actual population parameter
-        * 95% of all possible samples of a given size from this population will result in an interval that captures the unknown parameter.
-* Most common: [90%]{style="color: #754cbc;"}, [95%]{style="color: #a68100;"}, and [99%]{style="color: #1b8883;"}
 :::
 
 ---

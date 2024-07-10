@@ -3196,7 +3196,7 @@
     "href": "Lectures/lecture7.html#more-realistic-example",
     "title": "",
     "section": "More realistic example",
-    "text": "More realistic example"
+    "text": "More realistic example\nEstimation: Confidence interval\nYou draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a sample standard deviation of 8.25. Estimate the population mean.\n\n\n\n\n\n\n\\[\n\\text{Confidence interval} =\n\\]\n\\[\n\\bar{X} \\pm t(\\frac{s_x}{\\sqrt{n}})\n\\]\n\n\n\n\n\n\\[\n\\text{95% C.I.} = 14.5 \\pm 1.984(0.825)\n\\] \\[\n\\text{        } = 14.5 \\pm 1.6368\n\\]\n\n\n\n\nPopulation standard deviation is unknown\n\n\n\n\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_\\bar{X} = \\frac{s_x}{\\sqrt{n}} = \\frac{8.25}{\\sqrt{100}} = 0.825\n\\]\n\n\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\n\n\\(df = 100 - 1 = 99\\)\n\n\n\n\nWe are 95% confident that the average number of hours studied for the population of UW students is between 12.86 to 16.14 hours\n\nTable from your textbook or an online calculator"
   },
   {
     "objectID": "Lectures/lecture7.html#another-example",
@@ -3819,14 +3819,14 @@
     "href": "Lectures/lecture7.html#inference-with-the-t-distribution-1",
     "title": "",
     "section": "Inference with the t-distribution",
-    "text": "Inference with the t-distribution\nWhy use something other than the normal (z) distribution?\n\n\nAccount for the extra uncertainty by assuming that the sampling distribution follows a t-distribution instead of a normal (z) distribution."
+    "text": "Inference with the t-distribution\nWhy use something other than the normal (z) distribution?\n\nAccount for the extra uncertainty by assuming that the sampling distribution follows a t-distribution instead of a normal (z) distribution.\n\n\nUsing the t-distribution tends to give more conservative inferences (e.g., wider confidence intervals, more extreme critical values)\n\n\nCorrection is most dramatic when the sample size is small"
   },
   {
     "objectID": "Lectures/lecture7.html#inference-with-the-t-distribution-2",
     "href": "Lectures/lecture7.html#inference-with-the-t-distribution-2",
     "title": "",
     "section": "Inference with the t-distribution",
-    "text": "Inference with the t-distribution\nWhy use something other than the normal (z) distribution?\nExample\nYou draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a sample standard deviation of 8.25. Estimate the population mean.\n\n\n\n\n\n\n\n\\[\n\\text{Confidence interval} =\n\\]\n\\[\n\\bar{X} \\pm z(\\frac{\\sigma_x}{\\sqrt{n}})\n\\]\n\n\n\n\n\n\n\n\n\\[\n\\text{Confidence interval} =\n\\]\n\\[\n\\bar{X} \\pm t(\\frac{s_x}{\\sqrt{n}})\n\\]"
+    "text": "Inference with the t-distribution\nWhat is the t-distribution?\n\n\nt-distribution is a family of distributions (several different shapes)\nt-distribution is similar to Normal\n\nSymmetric\n\nSingle peak\nCentered on a mean/median/mode of 0\n\nt-distribution is different from Normal in that it tends to\n\nbe flatter\nbe more spread out\nhave a higher proportion of cases out on the tails\n\n\n\n\nHow different t is from Normal depends on the degrees of freedom"
   },
   {
     "objectID": "lectures/lecture7.html#one-sided-versus-two-sided-2",
@@ -4303,5 +4303,285 @@
     "title": "Quiz 2",
     "section": "",
     "text": "Where appropriate, use the t-distribution table from your textbook or an online calculator to calculate your answers.\n\nPart A: Use the following scenario to answer questions 1-4.\nAn environmental scientist has collected data from a random sample of 30 young adults (age 18-25) and found that they drive an average of 192 miles per week with a standard deviation of 60.\n\n\n\n\nWhat is the margin of error for a 95% confidence interval for this problem?\n\n\n\n\n\n\n\n\n\nWhat is the standard error of sample means for this problem?\n\n\n\n\n\n\n\n\n\nWhich of the following is best interpretation for the 95% confidence interval?\n\nWe are 95% confident that the mean number of miles driven for the population of young adults is between 169.599 and 214.401.\nWe are 95% confident that the mean number of miles driven for the population of young adults is between 173.389 and 210.611.\nWe are 95% confident that the average number of miles driven is between 173.389 and 210.611.\nThe mean number of miles driven for the population of young adults is between 169.599 and 214.401.\n\n\n\n\n\n\n\nWhich of the following is a true statement?\n\nTo calculate a 90% confidence interval we would need to recalculate the standard error.\nThere is a greater probability that the true population mean falls within a 90% confidence interval than in the 95% confidence interval.\nA 90% confidence interval for the average hours driven would be less precise than the calculated 95% confidence interval.\nA 90% confidence interval for the average hours driven would be more precise than the calculated 95% confidence interval.\n\n\n\nFor the sake of comparison, the scientist also collected information from an independent random sample of 45 middle-aged adults (age 45-60) and found that they drove an average of 225 miles per week with a standard deviation of 72. Use this information, the information on the sample of young adults from Part A, and a .01 alpha level to test whether middle-aged adults and young adults are significantly different in terms of the average number of average miles driven.\n\n\n\n\n\nWhich of the following is a true statement?\n\nThere is greater diversity in the driving behavior of young adults than among middle-aged adults.\nThe sample of middle-aged adults appear to drive less, on average, than does the sample of young adults.\nThe observed difference between young adults and middle-aged adults in terms of average miles driven could reflect random sampling error.\nAll of the above are true.  \n\n\n\n\n\n\nWhich of the following is the most appropriate null hypothesis for this example?\n\n\\(\\mu_{Young} = \\mu_{MiddleAged}\\)\n\\(\\mu_{Young} \\ne \\mu_{MiddleAged}\\)\n\\(\\mu_{Young} &lt; \\mu_{MiddleAged}\\)\n\\(\\bar{X}_{Young} = \\bar{X}_{MiddleAged}\\)\n\n\n\n\n\n\n\nWhich of the following is a TRUE statement?\n\nThis is a one-sided test because the research hypothesis does not imply directionality.\nThis is a two-sided test because the research hypothesis does not imply directionality.\nThis is a two-sided test because the null hypothesis does not imply directionality.\nThis is a one-sided test because the null hypothesis implies directionality.\n\n\n\n\n\n\n\nWhat is the critical value of the test statistic for this problem?\n\n\n\n\n\n\n\n\n\nWhat is the standard error of the difference between means?\n\n\n\n\n\n\n\n\n\nWhat is the value of the test statistic calculated from the sample data?\n\n\n\n\n\n\n\n\n\nGiven these results, which of the following is a true statement?\n\nThe p-value associated with our calculated test statistic is less than .01.\nThe p-value associated with our calculated test statistic is greater than .01.\nThe p-value associated with our calculated test statistic is 0.\nThe p-value associated with the critical value of the test statistic is less than .01.\n\n\n\n\n\n\n\nBased on the results of the hypothesis test, we should…\n\nreject the null hypothesis and support the research hypothesis.\nreject the null hypothesis and reject the research hypothesis.\nfail to reject the null hypothesis and fail to support the research hypothesis.\nNone of the above.\n\n\n\n\n\n\n\nThe results of this test imply that…\n\nthe observed difference in average miles driven by young adults and middle-aged adults is not statistically significant.\nthe observed difference in average miles driven by young adults and middle-aged adults does not reflect sampling error.\nthere is likely a real difference in average miles driven by the populations of young adults and middle-aged adults.\nAll of the above.\n\n\n\n\n\n\n\nThe null and alternative hypotheses are stated using Greek notation because…\n\nstatisticians like to feel fancy\nthey refer to the characteristics of the population(s)\nthey refer to the characteristics of the sample(s)\nthey refer to the difference between the calculated and critical value of t\n\n\n\n\n\n\nA researcher uses data from a random sample of college professors to report, with 95% confidence, that between 32% and 48% of all college professors claim to have liberal political attitudes. Based on this information, which of the following statements is true?\n\nThere is a 5% chance that less than 32% or more than 48% of the population of college professors hold liberal attitudes.\n40% of the professors in the sample report liberal political attitudes.\nThe margin of error for the estimate is 8%.\nAll of the above are true.\n\n\n\n\n\n\n\nAs degrees of freedom increase…\n\nit becomes more difficult to reject the null hypothesis.\nthe critical value of the test statistic becomes larger.\nthe t-distribution becomes more similar to the normal distribution.\nAll of the above.\n\n\n\n\n\n\n\nA standard error is the…\n\nstandard deviation of a sampling distribution\nstandard deviation of a sample distribution\nerror that is typically made in making an inference about a population\nerror that is typically made in making an inference about a sample\n\n\n\n\n\n\n\nWe create confidence intervals in estimating a population parameter because…\n\nsamples are usually too small to use a normal distribution\nsamples are subject to random sampling error\nthey increase the precision of our estimates\nsamples are usually not random\n\n\n\n\n\n\n\nWhich of the following represents the maximum probability threshold at which we reject the null hypothesis?\n\nobtained/calculated t\ndegrees of freedom\nt-critical\nalpha\n\n\n\n\n\n\n\nThe p-value represents the probability of observing the sample result if the null hypothesis were…\n\ntrue\nfalse\none-sided\ntwo-sided\n\n\n\n\n\n\n\nWe use a two-tailed hypothesis test only when…\n\nthe research hypothesis does not imply a direction for the difference between groups\nthe research hypothesis implies a direction for the difference between groups\nthe population standard deviation is unknown\nthe population standard deviation is known\n\n\n\n\n\n\n\nA sampling distribution is…\n\na theoretical probability distribution of all of the individual scores in the population\na distribution that we must directly observe in order to conduct a hypothesis test\na theoretical probability distribution of all possible sample values for a statistic\na distribution of sample results that is always normally distributed\n\n\n\n\n\n\n\nChoosing a smaller alpha level has what effect on a hypothesis test?\n\nReduces the likelihood of rejecting the null hypothesis.\nReduces the critical value of the test statistic.\nIncreases the obtained/calculated value of the test statistic.\nIncreases the risk of rejecting a null hypothesis that is actually true.\n\n\n\n\n\n\n\nWe can improve the precision of our confidence interval by increasing the…\n\nmean\nstandard deviation\nsample size\nconfidence level\n\n\n\n\n\n\n\nWhich of the following is true of the sampling distribution of means, assuming you have a large random sample?\n\nThe mean of a sampling distribution can be thought of as a “mean of means”\nThe mean of a sampling distribution is equal to the population mean\nThe distribution is roughly normal\nAll of the above\n\n\n\n\n\n\n\nAll other things being equal, increasing the size of the sample has what effect on a hypothesis test?\n\nDecreases the ability to reject the null hypothesis.\nIncreases the ability to reject the null hypothesis.\nIncreases the ability to accept the null hypothesis.\nHas no influence on the chance of rejecting a null hypothesis.\n\n\n\n\n\n\n\nWhen the standard deviation of the population distribution is not known we must…\n\nuse the t-distribution in making inferences about the population mean\nuse the normal distribution in making inferences about the population mean\nuse the population standard deviation to estimate the standard error of the sampling distribution\nAll of the above\n\n\n\n\n\n\n\nTwo samples are considered independent if…\n\nwe use the information about the members of one sample to identify the members of the second sample\nthe selection of members into one sample does not affect the selection of members of the second sample\nthe difference between the means of the two samples is significantly different from zero\nthe difference between the means of the two samples is not significantly different from zero\n\n\n\n\n\n\n\nWhen we say that the difference between two sample means is statistically significant we know that …\n\nthe samples must be large\nthe difference is very large\nthe difference probably did happen by chance\nthe difference probably did not happen by chance"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#using-these-tools-for-inference",
+    "href": "Lectures/lecture6.html#using-these-tools-for-inference",
+    "title": "",
+    "section": "Using these tools for inference",
+    "text": "Using these tools for inference\nExample: Want to know how much UW students study on average\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)\n\n\nSample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)\n\n\nFor example: draw a random sample of 100 students and observe \\(\\bar{X} = 14.5\\)\n\n\nPopulation parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)\n\n\nOur goal: Estimate the unknown population parameter \\(\\mu_x = ?\\)"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#sampling-distribution",
+    "href": "Lectures/lecture6.html#sampling-distribution",
+    "title": "",
+    "section": "Sampling distribution",
+    "text": "Sampling distribution\n\n\n \n\n\nSampling Distribution A theoretical probability distribution of all possible sample values for the statistic in which we are interested.\n\n\n\n\n\n\nKey tool for inferential statistics\n\nAllows us to think about how our one single sample result relates to all possible sample results and, by extension, the population we are interested in drawing inferences about."
+  },
+  {
+    "objectID": "Lectures/lecture6.html#three-types-of-distributions",
+    "href": "Lectures/lecture6.html#three-types-of-distributions",
+    "title": "",
+    "section": "Three types of distributions",
+    "text": "Three types of distributions"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#implication-of-central-limit-theorem",
+    "href": "Lectures/lecture6.html#implication-of-central-limit-theorem",
+    "title": "",
+    "section": "Implication of central limit theorem",
+    "text": "Implication of central limit theorem\n\nCentral limit theorem tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:\n\nNormally distributed\nMean: \\(\\mu_\\bar{X}\\) \\(= \\mu_X\\)\nStandard Error = \\(\\sigma_\\bar{X}\\) \\(= \\frac{\\sigma}{\\sqrt{n}}\\)\n\n\n\nStandard error: The the standard deviationin the sampling distribution (in this case, of allpossible sample means)"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#confidence-intervals",
+    "href": "Lectures/lecture6.html#confidence-intervals",
+    "title": "",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\nThe BIG IDEA:\n\n\nThe sampling distribution and CLT tells us how close to the population mean (\\(\\mu\\)) the sample mean (\\(\\bar{X}\\)) is likely to be\nWe can use this knowledge to figure out how close the true population mean (\\(\\mu\\)) is likely to be to the one sample mean (\\(\\bar{X}\\))that we observe\nBuild a confidence interval around our sample statistic (mean) to define the range in which we think the population parameter can be found…\n\n… and quantify how likely it is that we are right"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#using-these-tools-for-inference-1",
+    "href": "Lectures/lecture6.html#using-these-tools-for-inference-1",
+    "title": "",
+    "section": "Using these tools for inference",
+    "text": "Using these tools for inference\nExample: Want to know how much UW students study on average\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)\n\n\nSample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)\n\n\nFor example: draw a random sample of 100 students and observe \\(\\bar{X} = 14.5\\)\n\n\nPopulation parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)\n\n\nOur goal: Estimate the unknown population parameter \\(\\mu_x = ?\\)"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#confidence-intervals-1",
+    "href": "Lectures/lecture6.html#confidence-intervals-1",
+    "title": "",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nCreate a range of scores, centered on the sample mean, in which we think the population mean is likely to be located\n\n\nBuilding a margin of error around our sample mean\n\n\nConfidence interval: \\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n⬅️\n\n\nAll confidence intervals take this form"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#confidence-intervals-2",
+    "href": "Lectures/lecture6.html#confidence-intervals-2",
+    "title": "",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nConfidence interval: \\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n\\(\\text{sample statistic} \\pm z \\text{(standard error)}\\)\n\n\n\\(\\bar{X} \\pm z(\\sigma_{\\bar{X}})\\)"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#calculating-confidence-intervals",
+    "href": "Lectures/lecture6.html#calculating-confidence-intervals",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#calculating-confidence-intervals-1",
+    "href": "Lectures/lecture6.html#calculating-confidence-intervals-1",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#calculating-confidence-intervals-2",
+    "href": "Lectures/lecture6.html#calculating-confidence-intervals-2",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#calculating-confidence-intervals-3",
+    "href": "Lectures/lecture6.html#calculating-confidence-intervals-3",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#calculating-confidence-intervals-4",
+    "href": "Lectures/lecture6.html#calculating-confidence-intervals-4",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#calculating-confidence-intervals-5",
+    "href": "Lectures/lecture6.html#calculating-confidence-intervals-5",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#another-confidence-interval-example",
+    "href": "Lectures/lecture6.html#another-confidence-interval-example",
+    "title": "",
+    "section": "Another confidence interval example",
+    "text": "Another confidence interval example\nMean texts per hour\n\n\n\n\nSuppose that the number of text messages sent per hour by the population of teenagers has a standard deviation of 3\nYou take a random sample of 144 teenagers and find that the mean number of text messages per hour is 4.5\nCalculate a 90% confidence interval to estimate the average number of text messages per hour in the population\n\n\n\n\n\nStep 1: Use z = 1.645\n\n\n\n\nStep 2: Calculate standard error \\[\n\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}} = \\frac{3.0}{\\sqrt{144}} = 0.25\n\\]\n\n\n\n\nStep 3: Calculate the margin of error \\[\nz(\\frac{\\sigma}{\\sqrt{n}}) = (1.645)(0.25)= 0.411\n\\]\n\n\n\n\n\n\nZ-scores come from Standard Normal Table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n50%\n60%\n70%\n80%\n90%\n95%\n96%\n98%\n99%\n99.5%\n99.9%\n\n\n\n\nZ*\n0.674\n0.841\n1.036\n1.282\n1.645\n1.960\n2.054\n2.326\n2.576\n2.807\n3.291\n\n\n\n\n\n\\(\\text{sample statistic} \\pm \\text{margin of error}\\)"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#another-confidence-interval-example-1",
+    "href": "Lectures/lecture6.html#another-confidence-interval-example-1",
+    "title": "",
+    "section": "Another confidence interval example",
+    "text": "Another confidence interval example\nMean texts per hour\n\n\\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n\n\nSuppose that the number of text messages sent per hour by the population of teenagers has a standard deviation of 3\nYou take a random sample of 144 teenagers and find that the mean number of text messages per hour is 4.5\nCalculate a 90% confidence interval to estimate the average number of text messages per hour in the population\n\n\n\nStep 4: Calculate the confidence interval \\[\n4.5 + 0.411 = 4.911\n\\] \\[\n4.5 - 0.411 = 4.089\n\\]\n\n\n\\(90\\%\\) confidence interval: \\(4.09\\) to \\(4.91\\) hours\n\n\n\n\nZ-scores come from Standard Normal Table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n50%\n60%\n70%\n80%\n90%\n95%\n96%\n98%\n99%\n99.5%\n99.9%\n\n\n\n\nZ*\n0.674\n0.841\n1.036\n1.282\n1.645\n1.960\n2.054\n2.326\n2.576\n2.807\n3.291"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#another-confidence-interval-example-2",
+    "href": "Lectures/lecture6.html#another-confidence-interval-example-2",
+    "title": "",
+    "section": "Another confidence interval example",
+    "text": "Another confidence interval example\nMean texts per hour\n\n\\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n\n\nSuppose that the number of text messages sent per hour by the population of teenagers has a standard deviation of 3\nYou take a random sample of 144 teenagers and find that the mean number of text messages per hour is 4.5\nCalculate a 90% confidence interval to estimate the average number of text messages per hour in the population\n\n\n\nStep 5: Interpret the results   We are 90% confident that the average number of texts sent per hour for the population of teenagers is between 4.09 and 4.91\n\n\n\n\nZ-scores come from Standard Normal Table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n50%\n60%\n70%\n80%\n90%\n95%\n96%\n98%\n99%\n99.5%\n99.9%\n\n\n\n\nZ*\n0.674\n0.841\n1.036\n1.282\n1.645\n1.960\n2.054\n2.326\n2.576\n2.807\n3.291"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#factors-affecting-precision-width-of-the-confidence-interval",
+    "href": "Lectures/lecture6.html#factors-affecting-precision-width-of-the-confidence-interval",
+    "title": "",
+    "section": "Factors affecting precision (width) of the confidence interval",
+    "text": "Factors affecting precision (width) of the confidence interval\n\n\nWhich confidence interval would you prefer?\n\nAverage study time of UW students is between 10.5 and 18.5 hours  OR\nAverage study time of UW students is between 14.25 and 14.75 hours\n\n\n\n\nAll else being equal, the second one is preferable because it is more precise  (narrower, with smaller margin of error)"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#factors-affecting-precision-width-of-the-confidence-interval-1",
+    "href": "Lectures/lecture6.html#factors-affecting-precision-width-of-the-confidence-interval-1",
+    "title": "",
+    "section": "Factors affecting precision (width) of the confidence interval",
+    "text": "Factors affecting precision (width) of the confidence interval\n\n\\[\n\\text{margin of error} = z(\\frac{\\sigma}{\\sqrt{n}})\n\\]\n\n\n\nConfidence level\n\nTrade-off: higher confidence = lower precision (higher margin of error)\n\n\n\n\n\nZ-scores come from Standard Normal Table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n50%\n60%\n70%\n80%\n90%\n95%\n96%\n98%\n99%\n99.5%\n99.9%\n\n\n\n\nZ*\n0.674\n0.841\n1.036\n1.282\n1.645\n1.960\n2.054\n2.326\n2.576\n2.807\n3.291\n\n\n\n\n\n\nSample size\n\nLarger sample = smaller standard error = greater precision (lower margin of error)\n\n\n\n\n\nLevel of variation in the population\n\nMore variation in population = more variation in possible sample results = larger standard error = bigger margin of error"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#estimating-population-proportions-or-percentages",
+    "href": "Lectures/lecture6.html#estimating-population-proportions-or-percentages",
+    "title": "",
+    "section": "Estimating Population Proportions (or percentages)",
+    "text": "Estimating Population Proportions (or percentages)\n\n\nGoal:\n\nUse the sample proportion (\\(\\widehat{p}\\)) to construct a confidence interval in which we believe the true population proportion (\\(P\\))1 is located\n\n\n\nExample:\n\nWant to know the proportion of UW students who are employed during the school year\nPopulation proportion, \\(P\\), is not observable\nUse sample information to estimate \\(P\\)\n\n\\(n = 200\\)\nSample proportion, \\(\\hat{p} = 0.42\\)\n\n\n\nSometimes \\(\\pi\\)"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#confidence-intervals-3",
+    "href": "Lectures/lecture6.html#confidence-intervals-3",
+    "title": "",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\n\\[\n\\widehat{p}\n\\]\n\n\n\n\n\n\n\n\nCreate our 95% confidence interval by going 1.96 standard errors on each side of the sample proportion\n\n\nBuilding a margin of error around our sample mean\n\n\nConfidence interval: \\(\\text{sample statistic} \\pm \\text{margin of error}\\)"
+  },
+  {
+    "objectID": "Lectures/lecture6.html#calculating-confidence-intervals-6",
+    "href": "Lectures/lecture6.html#calculating-confidence-intervals-6",
+    "title": "",
+    "section": "Calculating confidence intervals",
+    "text": "Calculating confidence intervals\n\n\nStep 1: Decide on a confidence level and corresponding z-score  Step 2: Calculate the standard error  Step 3: Calculate the margin of error  Step 4: Calculate the confidence interval  Step 5: Interpret the results"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#inference-with-the-t-distribution-3",
+    "href": "Lectures/lecture7.html#inference-with-the-t-distribution-3",
+    "title": "",
+    "section": "Inference with the t-distribution",
+    "text": "Inference with the t-distribution\n\n\n\n\nDegrees of freedom (df) The number of scores that are free to vary in the calculation of a statistic\n\n\n\n\n\nExample\nQ: If a sample of \\(n = 5\\) has a mean of 3, how many scores are free to vary?\n\n\n\n___ + ___ + ___ + ___ + ___ = 15\n\n\n2\n\n\n1\n\n\n7\n\n\n2\n\n\n\nA: \\(n-1=4\\)  Once you know the first four numbers, there is only one value that the fifth could take to produce a mean of \\(3\\).\n\n\n\n\ndf for calculation of a mean = \\(n-1\\)"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#inference-with-the-t-distribution-4",
+    "href": "Lectures/lecture7.html#inference-with-the-t-distribution-4",
+    "title": "",
+    "section": "Inference with the t-distribution",
+    "text": "Inference with the t-distribution\n\n\n\nFor 95% confidence level(\\(\\alpha = 0.05\\), two-sided)\n\n\n\n\n\n\nt-distribution\ncritical value\n\n\n\n\ndf = 3\n\\(\\pm3.182\\)\n\n\ndf = 30\n\\(\\pm2.042\\)\n\n\ndf = 100\n\\(\\pm1.984\\)\n\n\ndf = 1000\n\\(\\pm1.962\\)\n\n\n\n\n\nNotice: Tests with the t-distribution are more conservative (wider confidence intervals, harder to reject H0) than with normal (critical value: \\(\\pm1.960\\)) and results are especially conservative when the sample size (df) is small."
+  },
+  {
+    "objectID": "Lectures/lecture7.html#more-realistic-example-1",
+    "href": "Lectures/lecture7.html#more-realistic-example-1",
+    "title": "",
+    "section": "More realistic example",
+    "text": "More realistic example\nHypothesis testing\nYou draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a sample standard deviation of 8.25. Test the hypothesis that UW students study more than the national average of 13 hours/week.\n\n\n\n\\(H_0: \\mu_{UW} = 13\\) \\(H_a: \\mu_{UW} \\gt 13\\)\n\n\n\nCritical value of t?\n\n\n\n\n\nPopulation standard deviation is unknown\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_\\bar{X} = \\frac{s_x}{\\sqrt{n}} = \\frac{8.25}{\\sqrt{100}} = 0.825\n\\]\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\\(df = 100 - 1 = 99\\)\n\n\n\nTable from your textbook or an online calculator"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#more-realistic-example-2",
+    "href": "Lectures/lecture7.html#more-realistic-example-2",
+    "title": "",
+    "section": "More realistic example",
+    "text": "More realistic example\nHypothesis testing\nYou draw a sample of 100 UW students and find that the average study time is 14.5 hours/week with a sample standard deviation of 8.25. Test the hypothesis that UW students study more than the national average of 13 hours/week.\n\n\n\\(H_0: \\mu_{UW} = 13\\) \\(H_a: \\mu_{UW} \\gt 13\\)\n\n\nCritical value of t = 1.660\n\n\n\nTest statistic from the sample:\n\n\n\\(t = \\frac{\\bar{X}-\\mu_0}{s_\\bar{X}} = \\frac{14.5 - 13}{0.825} =\\) \\(1.818\\)\n\n\n\n\nPopulation standard deviation is unknown\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_\\bar{X} = \\frac{s_x}{\\sqrt{n}} = \\frac{8.25}{\\sqrt{100}} = 0.825\n\\]\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\\(df = 100 - 1 = 99\\)\n\n\n\n\nSince obtained t is more extreme than critical value, reject \\(H_0\\) and support the claim that the population of UW students really do study more than the national average.\n\nTable from your textbook or an online calculator"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#practice-1",
+    "href": "Lectures/lecture7.html#practice-1",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nEstimation: Confidence interval\nIn a random sample of 121 UW students, the mean number of visits to family in the past six months was 5.5 with a standard deviation of 0.9. Calculate a 90% confidence interval for the average number of visits in the population.\n\nSTEPS:\n\nDecide on a confidence level and corresponding t-score\nCalculate the standard error (using sample standard deviation)\nCalculate the margin of error\nCalculate the confidence interval\nInterpret the results\n\n\n\nHypothesis test\nYou want to know whether high school students are different than the national average (µ=220) in terms of the number of Facebook friends. A random sample of 30 high school students shows a mean number of Facebook friends of 245 with a standard deviation of 90. Is this difference from the national average statistically significant at the .01 level?\n\nSTEPS:\n1a. State the null and alternative hypotheses  1b. Choose your alpha level and find the critical value  2. Calculate the test statistic (t-score) and p-value  3. Make a decision (Reject or fail to reject the null hypothesis (\\(H_0\\)) and support or fail to support the alternative hypothesis \\(H_a\\))"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#where-are-we",
+    "href": "Lectures/lecture7.html#where-are-we",
+    "title": "",
+    "section": "Where are we?",
+    "text": "Where are we?\n\n\nInference: Drawing conclusions about populations based on information drawn from samples\nInferences so far:\n\nConfidence intervals to estimate a population mean or proportion based on the results from a SINGLE SAMPLE\nHypothesis tests / tests of significance for a SINGLE SAMPLE:\n\nComparing our SINGLE SAMPLE result to some known benchmark\n\nWith and without knowing the standard deviation of the population of interest\n\nNOW: drawing conclusions about the difference between TWO unknown populations based on information from TWO samples"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#two-sample-hypothesis-test",
+    "href": "Lectures/lecture7.html#two-sample-hypothesis-test",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\n\n\nStep 1a: State the null and alternative hypotheses\n\nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\n\n\\(H_0: \\mu_{UW} = \\mu_{WSU}\\)       \\(H_a: \\mu_{UW} \\ne \\mu_{WSU}\\)\n\n\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\)       \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\nObserved difference between sample means reflects chance sampling error.\n\n\nObserved difference b/w sample means reflects a real difference b/w population means"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#two-sample-hypothesis-test-1",
+    "href": "Lectures/lecture7.html#two-sample-hypothesis-test-1",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nOther possible hypotheses\n\n\n\nTwo-sided\nQuestion just asks about any difference\n\n\\(H_a: \\mu_{1} \\ne \\mu_{2}\\)\n\n↓\n\n\\(H_a: \\mu_{1} - \\mu_{2} \\ne 0\\)\n\n\nOne-sided\nQuestion implies a direction of difference\n\n\n\n\\(H_a: \\mu_{1} \\gt \\mu_{2}\\)\n\n↓\n\n\\(H_a: \\mu_{1} - \\mu_{2} \\gt 0\\)\n\n\n\n\\(H_a: \\mu_{1} \\lt \\mu_{2}\\)\n\n↓\n\n\\(H_a: \\mu_{1} - \\mu_{2} \\lt 0\\)\n\n\n\n\nCan restate any in terms of differences between population means\n\n\n\nNote: all of these hypothesize a real difference between population means\n\n\nAll are contradicted by the same null hypothesis\n\\(H_0: \\mu_{1} = \\mu_{2}\\) → \\(H_0: \\mu_{1} - \\mu_{2} = 0\\)"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#two-sample-hypothesis-test-2",
+    "href": "Lectures/lecture7.html#two-sample-hypothesis-test-2",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nStep 1a: State the null and alternative hypotheses\n\nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\n\nSet up a test assuming that the null (\\(H_0\\)) is true and see whether the facts of our samples contradict that assumption.\nKey question: How likely is it that we would observe a sample difference this big  (\\(14.5-12.5 = 2 \\text{ hrs}\\)) if the null (\\(H_0\\)) were true?\n\nIf very unlikely, we will reject \\(H_0\\) and support \\(H_a\\)\nIf not very unlikely, we will fail to reject \\(H_0\\)\n\n\n\n\n\nHave to think about probability of receiving our sample result (difference) if \\(H_0\\) were true\n\nHave to think about the SAMPLING DISTRIBUTION of all possible sample results"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#sampling-theory",
+    "href": "Lectures/lecture7.html#sampling-theory",
+    "title": "",
+    "section": "Sampling theory",
+    "text": "Sampling theory\nHypothesis test for difference between means\nSampling Distribution for the difference between means\nA theoretical probability distribution that would be obtained by calculating all of the possible mean differences (\\(\\bar{X_1}-\\bar{X_2}\\)) for all possible pairs of random, independent samples of size \\(n_1\\) and \\(n_2\\) drawn from two populations."
+  },
+  {
+    "objectID": "Lectures/lecture7.html#sampling-theory-1",
+    "href": "Lectures/lecture7.html#sampling-theory-1",
+    "title": "",
+    "section": "Sampling theory",
+    "text": "Sampling theory\nHypothesis test for difference between means\nCharacteristics of the Sampling Distribution for Difference between Two Means:\n\n\nIF the random samples are independently drawn AND the sample sizes are large(\\(n_1 + n_2 &gt; 100\\)) then:\nThe sampling distribution of differences between means would be NORMAL\n\n(but use the t-distribution when population standard deviations are unknown)\n\nThe MEAN of this distribution would equal the real difference between the population means\n\n\\(\\mu_{\\bar{X_1} - \\bar{X_2}} = \\mu_1 - \\mu_2\\)\n\nThe STANDARD ERROR of the sampling distribution of differences would be\n\n\\(\\sigma_{\\bar{X_1} - \\bar{X_2}} = \\sqrt{\\frac{\\sigma_1^2}{n_1} + \\frac{\\sigma_2^2}{n_2}}\\)       →       \\(s_{\\bar{X_1} - \\bar{X_2}} = \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}\\)\n\n\nINFERENCE"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#two-sample-hypothesis-test-3",
+    "href": "Lectures/lecture7.html#two-sample-hypothesis-test-3",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nStep 1b: Choose your alpha level and find the critical value\nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\n\n\n\\(\\alpha = 0.05\\)   Two-sided text\n\n\n\nBecause population standard deviations are unknown, use t-distribution1\n\n\n\\(df_1= n_1-1 = 100-1 = 99\\) \\(df_2= n_2-1 = 81-1 = 80\\)\n\n←\n\n\nUse the smaller of the two df’s to create a more conservative test!\n\n\n\nOur sample result has to be at least 1.99 standard errors away from the null hypothesis for us to reject the null hypothesis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTable from your textbookor an online calculator"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#two-sample-hypothesis-test-4",
+    "href": "Lectures/lecture7.html#two-sample-hypothesis-test-4",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nStep 2: Calculate the test statistic (t-score) and p-value \nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\nFiguring out how far the sample result is from \\(H_0\\)and putting it in standard-error units\n\n\n\n\\(t = \\frac{(\\bar{X_1}-\\bar{X_2})-0}{s_{\\bar{X_1}}-s_{\\bar{X_2}}}\\)"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#two-sample-hypothesis-test-5",
+    "href": "Lectures/lecture7.html#two-sample-hypothesis-test-5",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nStep 2: Calculate the test statistic (t-score) and p-value \nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\nObserved sample result(difference between means)\n\n\n\n\\(t = \\frac{(\\bar{X_1}-\\bar{X_2})-0}{s_{\\bar{X_1}}-s_{\\bar{X_2}}}\\)"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#two-sample-hypothesis-test-6",
+    "href": "Lectures/lecture7.html#two-sample-hypothesis-test-6",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nStep 2: Calculate the test statistic (t-score) and p-value \nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\nDifference observed underthe null hypotheses\n\n\n\n\\(t = \\frac{(\\bar{X_1}-\\bar{X_2})-0}{s_{\\bar{X_1}}-s_{\\bar{X_2}}}\\)"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#two-sample-hypothesis-test-7",
+    "href": "Lectures/lecture7.html#two-sample-hypothesis-test-7",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nStep 2: Calculate the test statistic (t-score) and p-value \nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\nStandard error(s.d. of the sampling distribution)\n\n\n\n\\(t = \\frac{(\\bar{X_1}-\\bar{X_2})-0}{s_{\\bar{X_1}}-s_{\\bar{X_2}}}\\)\n\n\n\n\n\n\n\\(s_{\\bar{X_1} - \\bar{X_2}} = \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}} = \\sqrt{\\frac{8.25^2}{100} + \\frac{7.0^2}{81}} = \\sqrt{0.681 0.605} = 1.134\\)\n\n\n\n\n\\(t = \\frac{(14 - 12.5)-0}{1.134} = 1.764\\)\n\n\n\nObserved sample difference is 1.764 standard errors away from the assumption of the null hypothesis"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#two-sample-hypothesis-test-8",
+    "href": "Lectures/lecture7.html#two-sample-hypothesis-test-8",
+    "title": "",
+    "section": "Two-sample hypothesis test",
+    "text": "Two-sample hypothesis test\nMake a decision (Reject/fail to reject \\(H_0\\) and support/fail to support \\(H_a\\))\nWe want to know if UW students differ from WSU students in terms of average study time. We draw a random sample of 100 UW students and find an average study time of 14.5 hours per week with a standard deviation of 8.25. In contrast, our random sample of 81 WSU students has an average study time of 12.5 hours per week with a standard deviation of 7.0. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\\(H_0: \\mu_{UW} - \\mu_{WSU} = 0\\) \\(H_a: \\mu_{UW} - \\mu_{WSU} \\ne 0\\)\n\n\n\n\nSince our test statistic (\\(1.764\\)) is LESS extreme than the critical value (\\(1.990\\)) we FAIL TO REJECT \\(H_0\\)\n\nBased on this evidence, it is NOT safe to say that the population of UW students and the population of WSU students differ in terms of average study time.\n\nThe observed difference between sample means is NOT statistically significant\n\n\n\n\n\n\\(t = \\frac{(14 - 12.5)-0}{1.134} = 1.764\\)"
+  },
+  {
+    "objectID": "Lectures/lecture7.html#practice-5",
+    "href": "Lectures/lecture7.html#practice-5",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nTwo-sample hypothesis test\nWe want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90. In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means."
   }
 ]
