@@ -29,4 +29,4 @@ Victoria (Vic) Sass
 {{< var location >}}
 
 #### Office Hours:
-{{< var office_hours >}} on Zoom (link on {{< var canvas >}})
+{{< var office_hours >}} on Zoom (link in {{< var slack.short >}})
