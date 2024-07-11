@@ -6,7 +6,7 @@ reference-location: margin
 citation-location: margin
 ---
 
-## Instructions
+## Instructions 
 (@) Download a printable version of this assignment [here](pdfs/homework6.pdf). Print it out and record your answers directly in the space provided.
 (@) Write your **name** and **student number** on the top of the assignment. 
 (@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
