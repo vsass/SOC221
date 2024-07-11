@@ -1267,8 +1267,8 @@ Chi-square test is based on comparison of the counts/frequencies we actually obs
 \chi^2 = \Sigma\frac{(f_o - f_e)^2}{f_e}
 $$]{style="font-size: 1.5em"}
 where\
-$f_o =$ [$observed$]{style="color: #e93cac"} $\text{frequency in a given cell}$\
-$f_e =$ $\text{frequency in the}$ [$cell$]{.underline} [$expected$]{style="color: #e93cac"} $\text{under the assumption of the null hypothesis}$  
+$f_o =$ [$observed$]{style="color: #e93cac"} $\text{frequency in a given}$ [cell]{.underline}\
+$f_e =$ $\text{frequency in the}$ [cell]{.underline} [expected]{style="color: #e93cac"} $\text{under the assumption of the null hypothesis}$  
 &emsp;&ensp; $\text{(no association in the population)}$\
 :::
 
@@ -1288,37 +1288,290 @@ Note: Chi-square will take a value of 0 if there is no association in the sample
 
 #### [Goal]{style="color: #e93cac"}: Understand the association between race and attitudes about the death penalty
 
-<br>
+```{r}
+#| echo: false
 
-What would the table look like if there were no association between the variables?
+death_penalty_chi <- data.frame(Black = c("$$f_0 = 60$$ \n $$f_e = 83.36$$ \n (57.69%)", 
+                                          "$$f_0 = 44$$ \n $$f_e = 20.64$$ \n (42.31%)",  
+                                          "104 <br> (100.00%)"), 
+                                White = c("$$f_0 = 659$$ \n $$f_e = 635.64$$ \n (83.10%)", 
+                                          "$$f_0 = 134$$ \n $$f_e = 157.36$$ \n (16.90%)", 
+                                          "793 <br> (100.00%)"), 
+                                TOTAL = c("719 <br> (80.16%)", "178 <br> (19.84%)", "897"))
+rownames(death_penalty_chi) <- c("Support Death Penalty", "Oppose Death Penalty", "TOTAL")
 
-[Conditional distributions of the DV would match across the values of the IV (same as marginals)]{style="color: #e93cac; font-size: 0.95em"}
+death_penalty_chi |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "OBSERVED and EXPECTED Frequencies") |> # add title
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(60), table.font.size = px(18L)) 
+```
+
+::: {.fragment style="position: absolute; left: 0px"}
+|   | $f_0$  | $f_e$ | [$(f_0 - f_e)$]{style="color: #e8e3d3"}   | [$(f_0 - f_e)^2$]{style="color: #e8e3d3"}   | [$\frac{(f_0 - f_e)^2}{f_e}$]{style="color: #e8e3d3"}   |
+|:------:|:------:|:---:|:---:|:---:|:---:|
+| Cell #1 | 60 | 83.36 |  [-23.36]{style="color: #e8e3d3"}   |   [545.69]{style="color: #e8e3d3"}   |   [6.55]{style="color: #e8e3d3"}   | 
+| Cell #2 | 659 | 635.64 |  [23.36]{style="color: #e8e3d3"}   |  [545.69]{style="color: #e8e3d3"}    |  [0.86]{style="color: #e8e3d3"}    | 
+| Cell #3 | 44 | 20.64 |  [23.36]{style="color: #e8e3d3"}   |  [545.69]{style="color: #e8e3d3"}    |  [26.44]{style="color: #e8e3d3"}    | 
+| Cell #4 | 134 | 157.36 |  [-23.36]{style="color: #e8e3d3"}   |   [545.69]{style="color: #e8e3d3"}   |   [3.47]{style="color: #e8e3d3"}   | 
+
+:  {tbl-colwidths="[15, 15, 15, 15, 15, 25]"}
+:::
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 75px; right: -50px; text-align: center"}
+$$
+\chi^2 = \Sigma\frac{(f_0 - f_e)^2}{f_e}
+$$
+:::
+
+---
+
+#### [Goal]{style="color: #e93cac"}: Understand the association between race and attitudes about the death penalty
 
 ```{r}
 #| echo: false
 
-death_penalty_race <- data.frame(Black = c("83.36 <br> (80.16%)", "20.64 <br> (19.84%)",  "104 <br> (100.00%)"), White = c("635.64 <br> (80.16%)", "157.36 <br> (19.84%)", "793 <br> (100.00%)"), TOTAL = c("719 <br> (80.16%)", "178 <br> (19.84%)", "897"))
-rownames(death_penalty_race) <- c("Support Death Penalty", "Oppose Death Penalty", "TOTAL")
-
-death_penalty_race |> 
+death_penalty_chi |> 
   gt(rownames_to_stub = T) |> # add rownames to column
-  tab_header(title = "EXPECTED FREQUENCIES for attitudes towards the death penalty by race", subtitle = "Black and White respondents in GSS 2000") |> # add title and subtitle
+  tab_header(title = "OBSERVED and EXPECTED Frequencies") |> # add title
   fmt_markdown(columns = everything()) |> # include html 
   cols_align(align = "center", columns = everything()) |> # center columns
   tab_options(table.background.color = "#e8e3d3") |> # change background color
-  #opt_stylize(style = 2, color = "blue", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
               table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
-              table.width = pct(100), table.font.size = px(25L)) 
+              table.width = pct(60), table.font.size = px(18L)) 
 ```
 
+::: {style="position: absolute; left: 0px"}
+|   | $f_0$  | $f_e$ | $(f_0 - f_e)$  | $(f_0 - f_e)^2$  | $\frac{(f_0 - f_e)^2}{f_e}$  |
+|:------:|:------:|:---:|:---:|:---:|:---:|
+| Cell #1 | 60 | 83.36 |  -23.36  |   545.69  |   6.55  | 
+| Cell #2 | 659 | 635.64 |  23.36  |  545.69   |  0.86   | 
+| Cell #3 | 44 | 20.64 |  23.36  |  545.69   |  26.44   | 
+| Cell #4 | 134 | 157.36 |  -23.36  |   545.69  |   3.47  | 
+
+:  {tbl-colwidths="[15, 15, 15, 15, 15, 25]"}
+:::
 
 
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 75px; right: -50px; text-align: center"}
+$$
+\chi^2 = \Sigma\frac{(f_0 - f_e)^2}{f_e}
+$$
+:::
+
+::: {.fragment fragment-index=1 style="position: absolute; bottom: -25px; right: -50px; font-size: 2em"}
+[$\Sigma$]{style="color: #1b8883"}  $= 37.31$
+:::
+
+::: {.fragment fragment-index=1 style="border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 150px; position: absolute; bottom: -21px; right: 272px; text-align: center"}
+
+:::
+
+::: {.fragment fragment-index=2 style="border: 3px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; width: 250px; position: absolute; top: 75px; left: -75px; text-align: center"}
+Chi-square score summarizes the difference between what we observe in the sample and what would expect to observe if there was no association between the variables.
+:::
+
+::: {.fragment fragment-index=3 style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 200px; position: absolute; top: 50px; right: -50px; text-align: center"}
+Question: Is that difference big enough to convince us that it did not just happen by chance (sampling error)?
+:::
+
+::: {.fragment fragment-index=4 style="border: 3px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; width: 200px; position: absolute; top: 365px; right: -50px; text-align: center"}
+Need a hypothesis test
+:::
 
 ## Hypothesis test for two-way Chi-square
 
+::: incremental
+1. Check assumptions
+    * Random sample, scores are independent (i.e., each subject is allowed only one preference); no expected cell frequencies below 5. 
+2. State the hypotheses
+    * Null: No association in the population
+    * Alternative: A real association in the population.
+3. Identify alpha and the critical value of chi-square
+    * Use a [chi-square distribution table](https://math.arizona.edu/~jwatkins/chi-square-table.pdf) to get critical value of chi-square
+    * degrees of freedom $(df) = (R-1)(C-1)$
+4. Calculate the test statistic
+    * chi-square obtained
+5. Make a decision
+    * Reject or fail to reject null hypothesis
+    * Make a statement about the implications for the [population]{.underline}
+:::
+
+## Step 1: Check assumptions
+
+```{r}
+#| echo: false
+
+death_penalty_chi |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "OBSERVED and EXPECTED Frequencies") |> # add title
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(60), table.font.size = px(18L)) 
+```
+
+<br>
+
+::: incremental
+* Random sample ✔️
+* Scores are independent ✔️
+* No expected cell frequencies below 5 ✔️
+:::
+
+## Step 2: State the hypotheses
+
+<br>
+
+::: {.fragment .center fragment-index=1 style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; width: 300px"}
+$H_0$: No association between race and attitudes toward death penalty [in the population]{.underline}
+:::
+
+<br>
+
+::: {.fragment .center fragment-index=2 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; width: 300px"}
+$H_a$: A real association between race and attitudes toward death penalty [in the population]{.underline}
+:::
+
+---
+
+### [Step 3: Identify alpha and the critical value of chi-square]{style="font-size: 0.95em"}
+
+<br>
+
+The default [alpha level]{style="color: #a68100"} is [$0.05$]{style="color: #a68100"} *($0.01$ and $0.001$ are tougher alternatives)*
+
+<br>
+
+::: fragment
+[$df$]{style="color: #1b8883"} $= (R-1)(C-1) = (2-1)(2-1) =$ [$1$]{style="color: #1b8883"}
+:::
+
+<br>
+
+::: fragment
+Now we can go to the [chi-square distribution table](https://math.arizona.edu/~jwatkins/chi-square-table.pdf) to see what critical value is associated with an [alpha level of 0.05]{style="color: #a68100"} and [1 degree of freedom]{style="color: #1b8883"}
+:::
+
+<br>
+<br>
+
+::: {.fragment .center style="border: 3px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em"}
+Our critical value is **$3.84$**
+:::
+
+---
+
+#### Step 4: Calculate the test statistic
+
+```{r}
+#| echo: false
+
+death_penalty_chi |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "OBSERVED and EXPECTED Frequencies") |> # add title
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(60), table.font.size = px(18L)) 
+```
+
+::: {style="position: absolute; left: 0px"}
+|   | $f_0$  | $f_e$ | $(f_0 - f_e)$  | $(f_0 - f_e)^2$  | $\frac{(f_0 - f_e)^2}{f_e}$  |
+|:------:|:------:|:---:|:---:|:---:|:---:|
+| Cell #1 | 60 | 83.36 |  -23.36  |   545.69  |   6.55  | 
+| Cell #2 | 659 | 635.64 |  23.36  |  545.69   |  0.86   | 
+| Cell #3 | 44 | 20.64 |  23.36  |  545.69   |  26.44   | 
+| Cell #4 | 134 | 157.36 |  -23.36  |   545.69  |   3.47  | 
+
+:  {tbl-colwidths="[15, 15, 15, 15, 15, 25]"}
+:::
+
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 75px; right: -50px; text-align: center"}
+$$
+\chi^2 = \Sigma\frac{(f_0 - f_e)^2}{f_e}
+$$
+:::
+
+::: {style="position: absolute; bottom: -25px; right: -50px; font-size: 2em"}
+[$\Sigma$]{style="color: #1b8883"}  $= 37.31$
+:::
+
+::: {style="border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 150px; position: absolute; bottom: -21px; right: 272px; text-align: center"}
+
+:::
+
+## Step 5: Make a decision
+
+<br> 
+
+::: {.fragment .center style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; width: 450px"}
+Since the obtained chi-square ($37.31$) is greater than the critical value ($3.84$), I can [reject the null hypothesis]{.underline style="color: #754cbc"}
+:::
+
+<br>
+
+::: {.fragment .center style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; width: 450px"}
+This [supports the research hypothesis]{style="color: #6e8e13"} that there **IS** a real association between race and attitudes toward the death penalty [**IN THE POPULATION**]{.underline}
+:::
+
 ## Another example 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: fragment
+*You collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences.  The partial data are in the table to the right.*
+:::
+
+
+:::
+
+::: {.column width="50%"}
+```{r}
+death_penalty_chi <- data.frame(Black = c("$$f_0 = 60$$ \n $$f_e = 83.36$$ \n (57.69%)", 
+                                          "$$f_0 = 44$$ \n $$f_e = 20.64$$ \n (42.31%)",  
+                                          "104 <br> (100.00%)"), 
+                                White = c("$$f_0 = 659$$ \n $$f_e = 635.64$$ \n (83.10%)", 
+                                          "$$f_0 = 134$$ \n $$f_e = 157.36$$ \n (16.90%)", 
+                                          "793 <br> (100.00%)"), 
+                                TOTAL = c("719 <br> (80.16%)", "178 <br> (19.84%)", "897"))
+rownames(death_penalty_chi) <- c("Support Death Penalty", "Oppose Death Penalty", "TOTAL")
+
+death_penalty_chi |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "OBSERVED and EXPECTED Frequencies") |> # add title
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", 
+              table.width = pct(60), table.font.size = px(18L)) 
+```
+
+:::
+
+::::
+
+
+
+
 
 ## Chi-square and strength of an association
 
