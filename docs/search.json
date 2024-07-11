@@ -4583,5 +4583,152 @@
     "title": "",
     "section": "Practice",
     "text": "Practice\nTwo-sample hypothesis test\nWe want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90. In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means."
+  },
+  {
+    "objectID": "Lectures/lecture8.html#overview",
+    "href": "Lectures/lecture8.html#overview",
+    "title": "",
+    "section": "Overview",
+    "text": "Overview\n\n\nHave used one sample to draw inferences about one population\nHave drawn inferences about the difference between two populations\n\nBeginning of efforts to test statistical significance of associations between variables\n\nExample: testing for gender differences in emotional intelligence (EI) = testing for an association between gender and EI\n\n\nNew goal: test statistical significance for associations in two-way tables\n\nTwo-way tables: tables that simultaneously cross-classify values of one variable by values of another\n\nAlso called bivariate tables, contingency tables, or crosstabs\n\nUseful for assessing the bivariate associations between categorical variables"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#chi-square-test",
+    "href": "Lectures/lecture8.html#chi-square-test",
+    "title": "",
+    "section": "Chi-square test",
+    "text": "Chi-square test\n\n\nUsed to test statistical significance of associations in a two-way table (so, between categorical variables)\nIntended to test whether a pattern or association observed in a set of sample data:\n\nrepresents a real association in the population from which the sample was drawn OR\nreflects random sampling error when, in reality, there is no real association in the population\n\nBased on a comparison of our observed frequencies to expected frequencies.\n\nObserved frequencies = the relative frequencies actually observed in the data for the sample\nExpected frequencies = the relative frequencies that we would expect if there was no association in the data"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#calculation-of-chi-square",
+    "href": "Lectures/lecture8.html#calculation-of-chi-square",
+    "title": "",
+    "section": "Calculation of chi-square",
+    "text": "Calculation of chi-square\n\n\nObtained value of chi-square:\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\] where\n\\(f_o =\\) \\(observed\\) \\(\\text{frequency in a given}\\) cell\n\\(f_e =\\) \\(\\text{frequency in the}\\) cell expected \\(\\text{under the assumption of the null hypothesis}\\)\n   \\(\\text{(no association in the population)}\\)\n\n\n\n\nShortcut to calculate expected cell frequencies:\n\n\\[\nf_e = \\frac{\\text{(row marginal)(column marginal)}}{n}\n\\]\n\n\nNote: Chi-square will take a value of 0 if there is no association in the sample."
+  },
+  {
+    "objectID": "Lectures/lecture8.html#hypothesis-test-for-two-way-chi-square",
+    "href": "Lectures/lecture8.html#hypothesis-test-for-two-way-chi-square",
+    "title": "",
+    "section": "Hypothesis test for two-way Chi-square",
+    "text": "Hypothesis test for two-way Chi-square\n\n\nCheck assumptions\n\nRandom sample, scores are independent (i.e., each subject is allowed only one preference); no expected cell frequencies below 5.\n\nState the hypotheses\n\nNull: No association in the population\nAlternative: A real association in the population.\n\nIdentify alpha and the critical value of chi-square\n\nUse a chi-square distribution table to get critical value of chi-square\ndegrees of freedom \\((df) = (R-1)(C-1)\\)\n\nCalculate the test statistic\n\nchi-square obtained\n\nMake a decision\n\nReject or fail to reject null hypothesis\nMake a statement about the implications for the population"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#another-example",
+    "href": "Lectures/lecture8.html#another-example",
+    "title": "",
+    "section": "Another example",
+    "text": "Another example"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#chi-square-and-strength-of-an-association",
+    "href": "Lectures/lecture8.html#chi-square-and-strength-of-an-association",
+    "title": "",
+    "section": "Chi-square and strength of an association",
+    "text": "Chi-square and strength of an association"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#correlation",
+    "href": "Lectures/lecture8.html#correlation",
+    "title": "",
+    "section": "Correlation",
+    "text": "Correlation"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#scatterplots",
+    "href": "Lectures/lecture8.html#scatterplots",
+    "title": "",
+    "section": "Scatterplots",
+    "text": "Scatterplots"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#correlation-and-regression",
+    "href": "Lectures/lecture8.html#correlation-and-regression",
+    "title": "",
+    "section": "Correlation and regression",
+    "text": "Correlation and regression"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#correlation-coefficient",
+    "href": "Lectures/lecture8.html#correlation-coefficient",
+    "title": "",
+    "section": "Correlation coefficient",
+    "text": "Correlation coefficient\n\nWhy it’s cool\nWhy you need to be careful\nInterpretation"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#practice",
+    "href": "Lectures/lecture8.html#practice",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#scatterplot-visuals",
+    "href": "Lectures/lecture8.html#scatterplot-visuals",
+    "title": "",
+    "section": "Scatterplot visuals",
+    "text": "Scatterplot visuals"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#making-a-scatterplot",
+    "href": "Lectures/lecture8.html#making-a-scatterplot",
+    "title": "",
+    "section": "Making a scatterplot",
+    "text": "Making a scatterplot"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#calculating-correlation-coefficient",
+    "href": "Lectures/lecture8.html#calculating-correlation-coefficient",
+    "title": "",
+    "section": "Calculating correlation coefficient",
+    "text": "Calculating correlation coefficient"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#hypothesis-test-for-correlation",
+    "href": "Lectures/lecture8.html#hypothesis-test-for-correlation",
+    "title": "",
+    "section": "Hypothesis test for correlation",
+    "text": "Hypothesis test for correlation\n\nCheck assumptions\nState the hypothesis\nIdentify alpha and the critical value of r\nCalculate the test statistic\nMake a decision"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#examples-2",
+    "href": "Lectures/lecture8.html#examples-2",
+    "title": "",
+    "section": "Examples",
+    "text": "Examples"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#step-1-check-assumptions",
+    "href": "Lectures/lecture8.html#step-1-check-assumptions",
+    "title": "",
+    "section": "Step 1: Check assumptions?",
+    "text": "Step 1: Check assumptions?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOBSERVED and EXPECTED Frequencies\n\n\n\nBlack\nWhite\nTOTAL\n\n\n\n\nSupport Death Penalty\n\\[f_0 = 60\\] \\[f_e = 83.36\\] (57.69%)\n\\[f_0 = 659\\] \\[f_e = 635.64\\] (83.10%)\n719  (80.16%)\n\n\nOppose Death Penalty\n\\[f_0 = 44\\] \\[f_e = 20.64\\] (42.31%)\n\\[f_0 = 134\\] \\[f_e = 157.36\\] (16.90%)\n178  (19.84%)\n\n\nTOTAL\n104  (100.00%)\n793  (100.00%)\n897\n\n\n\n\n\n\n\n\n\n\n\nRandom sample ✔️\nScores are independent ✔️\nNo expected cell frequencies below 5 ✔️"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#step-2-state-the-hypotheses",
+    "href": "Lectures/lecture8.html#step-2-state-the-hypotheses",
+    "title": "",
+    "section": "Step 2: State the hypotheses",
+    "text": "Step 2: State the hypotheses\n\n\n\\(H_0\\): No association between race and attitudes toward death penalty in the population\n\n\n\n\\(H_a\\): A real association between race and attitudes toward death penalty in the population"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#step-3-identify-alpha-and-the-critical-value-of-chi-square",
+    "href": "Lectures/lecture8.html#step-3-identify-alpha-and-the-critical-value-of-chi-square",
+    "title": "",
+    "section": "Step 3: Identify alpha and the critical value of chi-square",
+    "text": "Step 3: Identify alpha and the critical value of chi-square\nThe default alpha level is \\(0.05\\) (\\(0.01\\) and \\(0.001\\) are tougher alternatives)\n\n\\(df = (R-1)(C-1) = (2-1)(2-1) = 1\\)\n\n\nNow we can go to the chi-square distribution table to see what critical value is associated with an alpha level of 0.05 and 1 degree of freedom\n\n\nOur critical value is \\(3.84\\)"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#step-4-calculate-the-test-statistic",
+    "href": "Lectures/lecture8.html#step-4-calculate-the-test-statistic",
+    "title": "",
+    "section": "Step 4: Calculate the test statistic",
+    "text": "Step 4: Calculate the test statistic\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOBSERVED and EXPECTED Frequencies\n\n\n\nBlack\nWhite\nTOTAL\n\n\n\n\nSupport Death Penalty\n\\[f_0 = 60\\] \\[f_e = 83.36\\] (57.69%)\n\\[f_0 = 659\\] \\[f_e = 635.64\\] (83.10%)\n719  (80.16%)\n\n\nOppose Death Penalty\n\\[f_0 = 44\\] \\[f_e = 20.64\\] (42.31%)\n\\[f_0 = 134\\] \\[f_e = 157.36\\] (16.90%)\n178  (19.84%)\n\n\nTOTAL\n104  (100.00%)\n793  (100.00%)\n897\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(f_0\\)\n\\(f_e\\)\n\\((f_0 - f_e)\\)\n\\((f_0 - f_e)^2\\)\n\\(\\frac{(f_0 - f_e)^2}{f_e}\\)\n\n\n\n\nCell #1\n60\n83.36\n-23.36\n545.69\n6.55\n\n\nCell #2\n659\n635.64\n23.36\n545.69\n0.86\n\n\nCell #3\n44\n20.64\n23.36\n545.69\n26.44\n\n\nCell #4\n134\n157.36\n-23.36\n545.69\n3.47\n\n\n\n\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_0 - f_e)^2}{f_e}\n\\]\n\n\n\\(\\Sigma\\) \\(= 37.31\\)"
+  },
+  {
+    "objectID": "Lectures/lecture8.html#step-5-make-a-decision",
+    "href": "Lectures/lecture8.html#step-5-make-a-decision",
+    "title": "",
+    "section": "Step 5: Make a decision",
+    "text": "Step 5: Make a decision\n\n\nSince the obtained chi-square (\\(37.31\\)) is greater than the critical value (\\(3.84\\)), I can reject the null hypothesis\n\n\n\nThis supports the research hypothesis that there IS a real association between race and attitudes toward the death penalty IN THE POPULATION"
   }
 ]
