@@ -1544,18 +1544,22 @@ This [supports the research hypothesis]{style="color: #6e8e13"} that there **IS*
 
 ::: {.column width="50%"}
 ```{r}
-death_penalty_chi <- data.frame(Black = c("$$f_0 = 60$$ \n $$f_e = 83.36$$ \n (57.69%)", 
-                                          "$$f_0 = 44$$ \n $$f_e = 20.64$$ \n (42.31%)",  
-                                          "104 <br> (100.00%)"), 
-                                White = c("$$f_0 = 659$$ \n $$f_e = 635.64$$ \n (83.10%)", 
-                                          "$$f_0 = 134$$ \n $$f_e = 157.36$$ \n (16.90%)", 
-                                          "793 <br> (100.00%)"), 
-                                TOTAL = c("719 <br> (80.16%)", "178 <br> (19.84%)", "897"))
-rownames(death_penalty_chi) <- c("Support Death Penalty", "Oppose Death Penalty", "TOTAL")
+#| echo: false
 
-death_penalty_chi |> 
+thanksgiving <- data.frame(Vegetarian = c("25 \n \n", 
+                                          "36",
+                                          "",
+                                          "100"), 
+                                Carnivore = c("", 
+                                          "", 
+                                          "", 
+                                          "275"), 
+                                TOTAL = c("80", "111 \n \n", "184 \n \n", "375"))
+rownames(thanksgiving) <- c("Dislikes", "Indifferrent to", "Likes", "TOTAL")
+
+thanksgiving |> 
   gt(rownames_to_stub = T) |> # add rownames to column
-  tab_header(title = "OBSERVED and EXPECTED Frequencies") |> # add title
+  tab_header(title = "Feelings about Thanksgiving") |> # add title
   fmt_markdown(columns = everything()) |> # include html 
   cols_align(align = "center", columns = everything()) |> # center columns
   tab_options(table.background.color = "#e8e3d3") |> # change background color
