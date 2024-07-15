@@ -2010,7 +2010,7 @@ You draw a sample of 100 UW students and find that the average study time is 14.
 :::
 
 ::: {.fragment fragment-index=5 style="position: absolute; bottom: 0px; right: 150px; border: 2px solid black; padding: 5px 5px 5px 5px;text-align: center "}
-[[PROBLEM]{.underline}: Using sample statistics to make<br>two difference inferences]{style="font-size: .75em"} <br>
+[[PROBLEM]{.underline}: Using sample statistics to make<br>two different inferences]{style="font-size: .75em"} <br>
 [$s_x \Rightarrow \sigma_x$]{style="font-size: 1.25em;"}
 <br>
 [$\bar{X} \Rightarrow \mu_x$]{style="font-size: 1.25em"}
