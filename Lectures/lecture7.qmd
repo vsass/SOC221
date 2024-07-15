@@ -2181,7 +2181,7 @@ tdist <- ggplot(data.frame(x = c(-10, 10)), aes(x = x)) +
 animate(plot = tdist, nframes = 100, fps = 5, end_pause = 10)
 ```
 
-::: {.fragment style="position: absolute; top: 190px; right: -75px"}
+::: {.fragment style="position: absolute; top: 190px; right: -50px"}
 | t-distribution  | critical value  |
 |:------|:------:|
 | df = 3  | $\pm3.182$   |
@@ -2193,7 +2193,7 @@ animate(plot = tdist, nframes = 100, fps = 5, end_pause = 10)
 :::
 
 ::: {.fragment style="border: 3px solid #e93cac; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; position: absolute; bottom: 200px; left: -50px"}
-**Notice**: Tests with the [t-distribution]{style="color: #e93cac"} are more conservative (wider confidence intervals, harder to reject H0) than with normal (critical value: **$\pm1.960$**) and results are [especially conservative]{.underline} when the [sample size (df) is small]{.underline}.
+**Notice**: Tests with the [t-distribution]{style="color: #e93cac"} are more conservative (wider confidence intervals, harder to reject $H_0$) than with normal (critical value: **$\pm1.960$**) and results are [especially conservative]{.underline} when the [sample size (df) is small]{.underline}.
 :::
 
 ## More realistic example
@@ -3074,7 +3074,7 @@ Observed sample result<br>(difference between means)
 $t = \frac{(\bar{X_1}-\bar{X_2})-0}{s_{\bar{X_1}}-s_{\bar{X_2}}}$
 :::
 
-::: {style="border: 3px solid #1b8883; width: 125px; height: 45px; position: absolute; bottom: 72px; left: 475px"}
+::: {style="border: 3px solid #1b8883; width: 135px; height: 48px; position: absolute; bottom: 70px; left: 475px"}
 :::
 
 ## Two-sample hypothesis test
@@ -3099,7 +3099,7 @@ Difference observed under<br>the null hypotheses
 $t = \frac{(\bar{X_1}-\bar{X_2})-0}{s_{\bar{X_1}}-s_{\bar{X_2}}}$
 :::
 
-::: {style="border: 3px solid #754cbc; width: 30px; height: 45px; position: absolute; bottom: 75px; left: 620px"}
+::: {style="border: 3px solid #754cbc; width: 30px; height: 45px; position: absolute; bottom: 70px; left: 625px"}
 :::
 
 ## Two-sample hypothesis test
@@ -3124,12 +3124,12 @@ Standard error<br>(s.d. of the sampling distribution)
 $t = \frac{(\bar{X_1}-\bar{X_2})-0}{s_{\bar{X_1}}-s_{\bar{X_2}}}$
 :::
 
-::: {.fragment .fade-out fragment-index=2 style="border: 3px solid #a68100; width: 125px; height: 45px; position: absolute; bottom: 15px; left: 495px"}
+::: {.fragment .fade-out fragment-index=2 style="border: 3px solid #a68100; width: 130px; height: 50px; position: absolute; bottom: 10px; left: 495px"}
 :::
 
 ::: {.fragment fragment-index=1 style="font-size: 1.5em; text-align: center; position: absolute; bottom: 150px; left: 50px;"}
 ::: {.fragment .fade-out fragment-index=3}
-$s_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{8.25^2}{100} + \frac{7.0^2}{81}} = \sqrt{0.681 0.605} = 1.134$ 
+$s_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{8.25^2}{100} + \frac{7.0^2}{81}} = \sqrt{1.285588} = 1.134$ 
 :::
 :::
 
@@ -3173,7 +3173,7 @@ $t = \frac{(14 - 12.5)-0}{1.134} = 1.764$
 
 *We want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90.  In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means.*
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Two-sample hypothesis test
 
@@ -3205,9 +3205,9 @@ Critical value of t?
 
 * Use the sample standard deviation to estimate the standard error
 
-$$
+[$$
 s_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{90^2}{30} + \frac{65^2}{40}} = \sqrt{270 + 105.625} = 19.381
-$$
+$$]{style="font-size: 0.90em"}
 
 
 
@@ -3224,7 +3224,7 @@ $$
 
 ::::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Two-sample hypothesis test
 
@@ -3265,9 +3265,9 @@ $t = \frac{\bar{X}-\mu_0}{s_\bar{X}} = \frac{(245-185)-0}{19.381} =$<br><br>[$3.
 
 * Use the sample standard deviation to estimate the standard error
 
-$$
+[$$
 s_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{90^2}{30} + \frac{65^2}{40}} = \sqrt{270 + 105.625} = 19.381
-$$
+$$]{style="font-size: 0.90em"}
 
 
 
