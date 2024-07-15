@@ -1723,13 +1723,9 @@ s_{\bar{X}} = \frac{s}{\sqrt{n}}
 <section id="inference-with-the-t-distribution-4" class="slide level2">
 <h2>Inference with the t-distribution</h2>
 
-<img data-src="lecture7_files/figure-revealjs/unnamed-chunk-16-1.gif" class="quarto-figure quarto-figure-center r-stretch"><div class="fragment" style="position: absolute; top: 190px; right: -275px">
-<table style="width:45%;">
+<img data-src="lecture7_files/figure-revealjs/unnamed-chunk-16-1.gif" class="quarto-figure quarto-figure-center r-stretch"><div class="fragment" style="position: absolute; top: 190px; right: -75px">
+<table>
 <caption>For 95% confidence level<br>(<span class="math inline">\(\alpha = 0.05\)</span>, two-sided)</caption>
-<colgroup>
-<col style="width: 20%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">t-distribution</th>
@@ -1910,9 +1906,130 @@ s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{8.25}{\sqrt{100}} = 0.825
 </div>
 </div>
 </section>
-
-
-</section>
+<section id="practice-2" class="slide level2">
+<h2>Practice</h2>
+<h4 id="estimation-confidence-interval-2">Estimation: Confidence interval</h4>
+<p><em>In a random sample of 121 UW students, the mean number of visits to family in the past six months was 5.5 with a standard deviation of 0.9. Calculate a 90% confidence interval for the average number of visits in the population.</em></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="fragment fade-in" data-fragment-index="3">
+<div class="fragment grow" data-fragment-index="3" style="font-size: 1em; text-align: center;">
+<div class="fragment fade-out" data-fragment-index="6">
+<p><span class="math display">\[
+\text{Confidence interval} =
+\]</span></p>
+<p><span style="color: #e93cac"><span class="math display">\[
+\bar{X} \pm t(\frac{s_x}{\sqrt{n}})
+\]</span></span></p>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="5">
+<p><span class="math display">\[
+\text{90% C.I.} = 5.5 \pm 1.66(0.082)
+\]</span> <span class="math display">\[
+\text{        } = 5.5 \pm 0.136
+\]</span></p>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="fragment" data-fragment-index="1">
+<ul>
+<li>Population standard deviation is unknown</li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="2">
+<ul>
+<li>Use the sample standard deviation to estimate the standard error</li>
+</ul>
+<p><span class="math display">\[
+s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{0.9}{\sqrt{121}} = 0.082
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="4">
+<ul>
+<li>Use the t-distribution<sup>1</sup> with <span class="math inline">\(df = n - 1\)</span></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="4">
+<p><span class="center"><span class="math inline">\(df = 121 - 1 = 120\)</span></span></p>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="6" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 250px; left: 00px; text-align: center">
+<p>We are <u>90% confident</u> that the average number of visits to family for the <u>population</u> of UW students is between <u>5.364 to 5.636</u> hours</p>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn4"><p><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm">Table</a> from your textbook or an <a href="https://goodcalculators.com/student-t-value-calculator/">online calculator</a></p></li></ol></aside></section>
+<section id="practice-3" class="slide level2">
+<h2>Practice</h2>
+<h4 id="hypothesis-test-1">Hypothesis test</h4>
+<p><em>You want to know whether high school students are different than the national average (µ=220) in terms of the number of Facebook friends. A random sample of 30 high school students shows a mean number of Facebook friends of 245 with a standard deviation of 90. Is this difference from the national average statistically significant at the .01 level?</em></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="fragment" data-fragment-index="1">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"><span class="math inline">\(H_0: \mu_{HS} = 220\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"><span class="math inline">\(H_a: \mu_{HS} \ne 220\)</span></span></p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="2" style="text-align: center;">
+<p>Critical value of t?</p>
+</div>
+<p><br></p>
+</div><div class="column" style="width:60%;">
+<div class="fragment" data-fragment-index="1">
+<ul>
+<li><p>Population standard deviation is unknown</p></li>
+<li><p>Use the sample standard deviation to estimate the standard error</p></li>
+</ul>
+<p><span class="math display">\[
+s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{90}{\sqrt{30}} = 16.432
+\]</span></p>
+<ul>
+<li>Use the t-distribution<sup>1</sup> with <span class="math inline">\(df = n - 1\)</span></li>
+</ul>
+<p><span class="center"><span class="math inline">\(df = 30 - 1 = 29\)</span></span></p>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn5"><p><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm">Table</a> from your textbook or an <a href="https://goodcalculators.com/student-t-value-calculator/">online calculator</a></p></li></ol></aside></section>
+<section id="practice-4" class="slide level2">
+<h2>Practice</h2>
+<h4 id="hypothesis-test-2">Hypothesis test</h4>
+<p><em>You want to know whether high school students are different than the national average (µ=220) in terms of the number of Facebook friends. A random sample of 30 high school students shows a mean number of Facebook friends of 245 with a standard deviation of 90. Is this difference from the national average statistically significant at the .01 level?</em></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"><span class="math inline">\(H_0: \mu_{HS} = 220\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1em"><span class="math inline">\(H_a: \mu_{HS} \ne 220\)</span></span></p>
+<p><br></p>
+<div style="text-align: center;">
+<p>Critical value of t = <span style="color: #e93cac">2.756</span></p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="1" style="font-size: 1em">
+<p>Test statistic from the sample:<br></p>
+</div>
+<div class="fragment" data-fragment-index="1" style="font-size: 1.25em; text-align: center">
+<p><span class="math inline">\(t = \frac{\bar{X}-\mu_0}{s_\bar{X}} = \frac{245 - 220}{16.432} =\)</span> <span style="color: #1b8883"><span class="math inline">\(1.521\)</span></span></p>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="fragment fade-out" data-fragment-index="2">
+<ul>
+<li><p>Population standard deviation is unknown</p></li>
+<li><p>Use the sample standard deviation to estimate the standard error</p></li>
+</ul>
+<p><span class="math display">\[
+s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{90}{\sqrt{30}} = 16.432
+\]</span></p>
+<ul>
+<li>Use the t-distribution<sup>1</sup> with <span class="math inline">\(df = n - 1\)</span></li>
+</ul>
+<p><span class="center"><span class="math inline">\(df = 30 - 1 = 29\)</span></span></p>
+</div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="2" style="border: 4px solid black; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; top: 350px; right: 0px; text-align: center">
+<p>Since <span style="color: #1b8883">obtained t</span> is <strong>NOT</strong> more extreme than <span style="color: #e93cac">critical value</span>, we <strong>FAIL TO REJECT</strong> <span class="math inline">\(H_0\)</span> that the average number of FB friends in the high school population is the same as the national average.</p>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn6"><p><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm">Table</a> from your textbook or an <a href="https://goodcalculators.com/student-t-value-calculator/">online calculator</a></p></li></ol></aside></section></section>
 <section>
 <section id="hypothesis-testing-for-two-samples" class="title-slide slide level1 section-title center" data-background-color="#c5b4e3">
 <h1>Hypothesis testing for two samples</h1>

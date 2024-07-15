@@ -333,7 +333,7 @@
     "href": "lectures/lecture7.html#inference-with-the-t-distribution-4",
     "title": "",
     "section": "Inference with the t-distribution",
-    "text": "Inference with the t-distribution\n\n\n\nFor 95% confidence level(\\(\\alpha = 0.05\\), two-sided)\n\n\n\n\n\n\nt-distribution\ncritical value\n\n\n\n\ndf = 3\n\\(\\pm3.182\\)\n\n\ndf = 30\n\\(\\pm2.042\\)\n\n\ndf = 100\n\\(\\pm1.984\\)\n\n\ndf = 1000\n\\(\\pm1.962\\)\n\n\n\n\n\nNotice: Tests with the t-distribution are more conservative (wider confidence intervals, harder to reject H0) than with normal (critical value: \\(\\pm1.960\\)) and results are especially conservative when the sample size (df) is small."
+    "text": "Inference with the t-distribution\n\n\n\nFor 95% confidence level(\\(\\alpha = 0.05\\), two-sided)\n\n\nt-distribution\ncritical value\n\n\n\n\ndf = 3\n\\(\\pm3.182\\)\n\n\ndf = 30\n\\(\\pm2.042\\)\n\n\ndf = 100\n\\(\\pm1.984\\)\n\n\ndf = 1000\n\\(\\pm1.962\\)\n\n\n\n\n\nNotice: Tests with the t-distribution are more conservative (wider confidence intervals, harder to reject H0) than with normal (critical value: \\(\\pm1.960\\)) and results are especially conservative when the sample size (df) is small."
   },
   {
     "objectID": "lectures/lecture7.html#more-realistic-example",
@@ -2161,5 +2161,26 @@
     "title": "",
     "section": "Another example",
     "text": "Another example\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIs this association statistically significant?\n\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(f_0\\)\n\\(f_e\\)\n\\((f_0 - f_e)\\)\n\\((f_0 - f_e)^2\\)\n\\(\\frac{(f_0 - f_e)^2}{f_e}\\)\n\n\n\n\nCell 1\n25\n21.33\n3.67\n13.44\n0.63\n\n\nCell 2\n55\n58.67\n-3.67\n13.44\n0.23\n\n\nCell 3\n36\n29.60\n6.40\n40.96\n1.38\n\n\nCell 4\n75\n81.40\n-6.40\n40.96\n0.50\n\n\nCell 5\n39\n49.07\n-10.07\n101.34\n2.07\n\n\nCell 6\n145\n134.93\n10.07\n101.34\n0.75\n\n\n\n\n\n\n\\(\\chi^2 =\\)\n5.56\n\n\n\n\n\nNeed to compare our obtained \\(\\chi^2\\) value of 5.56 with the critical value of \\(\\chi^2\\)\n\n\n\n\n\nExpected frequencies reflect how the table would look if there were no association between the variables (i.e., if the null hypothesis were true)"
+  },
+  {
+    "objectID": "lectures/lecture7.html#practice-2",
+    "href": "lectures/lecture7.html#practice-2",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nEstimation: Confidence interval\nIn a random sample of 121 UW students, the mean number of visits to family in the past six months was 5.5 with a standard deviation of 0.9. Calculate a 90% confidence interval for the average number of visits in the population.\n\n\n\n\n\n\n\\[\n\\text{Confidence interval} =\n\\]\n\\[\n\\bar{X} \\pm t(\\frac{s_x}{\\sqrt{n}})\n\\]\n\n\n\n\n\n\\[\n\\text{90% C.I.} = 5.5 \\pm 1.66(0.082)\n\\] \\[\n\\text{        } = 5.5 \\pm 0.136\n\\]\n\n\n\n\nPopulation standard deviation is unknown\n\n\n\n\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_\\bar{X} = \\frac{s_x}{\\sqrt{n}} = \\frac{0.9}{\\sqrt{121}} = 0.082\n\\]\n\n\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\n\n\\(df = 121 - 1 = 120\\)\n\n\n\n\nWe are 90% confident that the average number of visits to family for the population of UW students is between 5.364 to 5.636 hours\n\nTable from your textbook or an online calculator"
+  },
+  {
+    "objectID": "lectures/lecture7.html#practice-3",
+    "href": "lectures/lecture7.html#practice-3",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nHypothesis test\nYou want to know whether high school students are different than the national average (µ=220) in terms of the number of Facebook friends. A random sample of 30 high school students shows a mean number of Facebook friends of 245 with a standard deviation of 90. Is this difference from the national average statistically significant at the .01 level?\n\n\n\n\\(H_0: \\mu_{HS} = 220\\) \\(H_a: \\mu_{HS} \\ne 220\\)\n\n\n\nCritical value of t?\n\n\n\n\n\nPopulation standard deviation is unknown\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_\\bar{X} = \\frac{s_x}{\\sqrt{n}} = \\frac{90}{\\sqrt{30}} = 16.432\n\\]\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\\(df = 30 - 1 = 29\\)\n\n\n\nTable from your textbook or an online calculator"
+  },
+  {
+    "objectID": "lectures/lecture7.html#practice-4",
+    "href": "lectures/lecture7.html#practice-4",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nHypothesis test\nYou want to know whether high school students are different than the national average (µ=220) in terms of the number of Facebook friends. A random sample of 30 high school students shows a mean number of Facebook friends of 245 with a standard deviation of 90. Is this difference from the national average statistically significant at the .01 level?\n\n\n\\(H_0: \\mu_{HS} = 220\\) \\(H_a: \\mu_{HS} \\ne 220\\)\n\n\nCritical value of t = 2.756\n\n\n\nTest statistic from the sample:\n\n\n\\(t = \\frac{\\bar{X}-\\mu_0}{s_\\bar{X}} = \\frac{245 - 220}{16.432} =\\) \\(1.521\\)\n\n\n\n\nPopulation standard deviation is unknown\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_\\bar{X} = \\frac{s_x}{\\sqrt{n}} = \\frac{90}{\\sqrt{30}} = 16.432\n\\]\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\\(df = 30 - 1 = 29\\)\n\n\n\n\nSince obtained t is NOT more extreme than critical value, we FAIL TO REJECT \\(H_0\\) that the average number of FB friends in the high school population is the same as the national average.\n\nTable from your textbook or an online calculator"
   }
 ]

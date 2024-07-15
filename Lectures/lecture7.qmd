@@ -2181,7 +2181,7 @@ tdist <- ggplot(data.frame(x = c(-10, 10)), aes(x = x)) +
 animate(plot = tdist, nframes = 100, fps = 5, end_pause = 10)
 ```
 
-::: {.fragment style="position: absolute; top: 190px; right: -275px"}
+::: {.fragment style="position: absolute; top: 190px; right: -75px"}
 | t-distribution  | critical value  |
 |:------|:------:|
 | df = 3  | $\pm3.182$   |
@@ -2189,7 +2189,7 @@ animate(plot = tdist, nframes = 100, fps = 5, end_pause = 10)
 | df = 100 | $\pm1.984$   |
 | df = 1000 | $\pm1.962$   |
 
-: For 95% confidence level<br>($\alpha = 0.05$, two-sided) {tbl-colwidths="[20,25]"}
+: For 95% confidence level<br>($\alpha = 0.05$, two-sided)
 :::
 
 ::: {.fragment style="border: 3px solid #e93cac; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; position: absolute; bottom: 200px; left: -50px"}
@@ -2421,7 +2421,7 @@ Since [obtained t]{style="color: #1b8883"} is more extreme than [critical value]
 
 ::::
 
-## Practice {visibility="hidden"}
+## Practice
 
 #### Estimation: Confidence interval
 
@@ -2494,7 +2494,7 @@ $$
 We are [90% confident]{.underline} that the average number of visits to family for the [population]{.underline} of UW students is between [5.364 to 5.636]{.underline} hours
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Hypothesis test
 
@@ -2545,7 +2545,7 @@ $$
 
 ::::
 
-## Practice {visibility="hidden"}
+## Practice
 
 #### Hypothesis test
 
@@ -2978,7 +2978,7 @@ plot2 + geom_freqpoly(data = count_data2, aes(x = x, y = y), stat = "smooth", po
 [$\alpha = 0.05$ ]{.fragment fragment-index=1 style="color: #e93cac; border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 100px"} 
 <br>
 <br>
-[Two-sided text]{.fragment fragment-index=2 style="color: #1b8883; border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; width: 150px"}
+[Two-sided test]{.fragment fragment-index=2 style="color: #1b8883; border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; width: 150px"}
 :::
 :::
 
