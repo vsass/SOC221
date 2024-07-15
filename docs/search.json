@@ -1033,28 +1033,28 @@
     "href": "lectures/lecture8.html#step-1-check-assumptions",
     "title": "",
     "section": "Step 1: Check assumptions",
-    "text": "Step 1: Check assumptions\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOBSERVED and EXPECTED Frequencies\n\n\n\nBlack\nWhite\nTOTAL\n\n\n\n\nSupport Death Penalty\n\\[f_0 = 60\\] \\[f_e = 83.36\\] (57.69%)\n\\[f_0 = 659\\] \\[f_e = 635.64\\] (83.10%)\n719  (80.16%)\n\n\nOppose Death Penalty\n\\[f_0 = 44\\] \\[f_e = 20.64\\] (42.31%)\n\\[f_0 = 134\\] \\[f_e = 157.36\\] (16.90%)\n178  (19.84%)\n\n\nTOTAL\n104  (100.00%)\n793  (100.00%)\n897\n\n\n\n\n\n\n\n\n\n\n\nRandom sample ✔️\nScores are independent ✔️\nNo expected cell frequencies below 5 ✔️"
+    "text": "Step 1: Check assumptions\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOBSERVED and EXPECTED Frequencies\n\n\n\nBlack\nWhite\nTOTAL\n\n\n\n\n\nSupport Death Penalty\n\n\n\\(f_0 = 60\\)\n\\(f_e = 83.36\\)\n(57.69%)\n\n\n\\(f_0 = 659\\)\n\\(f_e = 635.64\\)\n(83.10%)\n\n\n719\n(80.16%)\n\n\n\n\nOppose Death Penalty\n\n\n\\(f_0 = 44\\)\n\\(f_e = 20.64\\)\n(42.31%)\n\n\n\\(f_0 = 134\\)\n\\(f_e = 157.36\\)\n(16.90%)\n\n\n178\n(19.84%)\n\n\n\n\nTOTAL\n\n\n104\n(100.00%)\n\n\n793\n(100.00%)\n\n\n897\n\n\n\n\n\n\n\n\n\n\n\nRandom sample ✔️\nScores are independent ✔️\nNo expected cell frequencies below 5 ✔️"
   },
   {
     "objectID": "lectures/lecture8.html#step-2-state-the-hypotheses",
     "href": "lectures/lecture8.html#step-2-state-the-hypotheses",
     "title": "",
     "section": "Step 2: State the hypotheses",
-    "text": "Step 2: State the hypotheses\n\n\n\\(H_0\\): No association between race and attitudes toward death penalty in the population\n\n\n\n\\(H_a\\): A real association between race and attitudes toward death penalty in the population"
+    "text": "Step 2: State the hypotheses\n \n\n\\(H_0\\): No association between race and attitudes toward death penalty in the population\n\n\n\n\\(H_a\\): A real association between race and attitudes toward death penalty in the population"
   },
   {
     "objectID": "lectures/lecture8.html#step-5-make-a-decision",
     "href": "lectures/lecture8.html#step-5-make-a-decision",
     "title": "",
     "section": "Step 5: Make a decision",
-    "text": "Step 5: Make a decision\n\n\nSince the obtained chi-square (\\(37.31\\)) is greater than the critical value (\\(3.84\\)), I can reject the null hypothesis\n\n\n\nThis supports the research hypothesis that there IS a real association between race and attitudes toward the death penalty IN THE POPULATION"
+    "text": "Step 5: Make a decision\n \n\nSince the obtained chi-square (\\(37.31\\)) is greater than the critical value (\\(3.84\\)), I can reject the null hypothesis\n\n\n\nThis supports the research hypothesis that there IS a real association between race and attitudes toward the death penalty IN THE POPULATION"
   },
   {
     "objectID": "lectures/lecture8.html#another-example",
     "href": "lectures/lecture8.html#another-example",
     "title": "",
     "section": "Another example",
-    "text": "Another example\n\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25\n\n80\n\n\nIndifferrent to\n36\n\n111\n\n\nLikes\n\n\n184\n\n\nTOTAL\n100\n275\n375"
+    "text": "Another example\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\n\nIn this sample, is there an association between diet and feelings towards Thanksgiving? How do you know?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\n\nDislikes\n\n\n25\n\n\n\n\n\n\n\n\n\n\n\n80\n\n\n\n\nIndifferrent\n\n\n36\n\n\n\n\n\n\n\n\n\n\n\n111\n\n\n\n\nLikes\n\n\n\n\n\n\n\n\n\n\n\n184\n\n\n\n\nTOTAL\n\n\n100\n\n\n275\n\n\n375"
   },
   {
     "objectID": "lectures/lecture8.html#chi-square-and-strength-of-an-association",
@@ -2098,5 +2098,68 @@
     "title": "",
     "section": "Confidence intervals",
     "text": "Confidence intervals\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nCreate a range of scores, centered on the sample mean, in which we think the population mean is likely to be located\n\n\nBuilding a margin of error around our sample mean\n\n\nConfidence interval: \\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n⬅️\n\n\nAll confidence intervals take this form"
+  },
+  {
+    "objectID": "lectures/lecture8.html#another-example-1",
+    "href": "lectures/lecture8.html#another-example-1",
+    "title": "",
+    "section": "Another example",
+    "text": "Another example\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIn this sample, is there an association between diet and feelings towards Thanksgiving? How do you know?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\n\nDislikes\n\n\n25\n\n\n\n\n\n55\n\n\n\n\n\n80\n\n\n\n\nIndifferrent\n\n\n36\n\n\n\n\n\n75\n\n\n\n\n\n111\n\n\n\n\nLikes\n\n\n39\n\n\n\n\n\n145\n\n\n\n\n\n184\n\n\n\n\nTOTAL\n\n\n100\n\n\n275\n\n\n375\n\n\n\n\n\n\n\n\n\nFill in the missing observed frequencies"
+  },
+  {
+    "objectID": "lectures/lecture8.html#another-example-2",
+    "href": "lectures/lecture8.html#another-example-2",
+    "title": "",
+    "section": "Another example",
+    "text": "Another example\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIn this sample, is there an association between diet and feelings towards Thanksgiving? How do you know?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\n\nDislikes\n\n\n25\n\n(25.00%)\n\n\n55\n\n(20.00%)\n\n\n80\n\n\n\n\nIndifferrent\n\n\n36\n\n(36.00%)\n\n\n75\n\n(27.27%)\n\n\n111\n\n\n\n\nLikes\n\n\n39\n\n(39.00%)\n\n\n145\n\n(52.73%)\n\n\n184\n\n\n\n\nTOTAL\n\n\n100\n\n\n275\n\n\n375\n\n\n\n\n\n\n\n\n\nAdd column percentages to better understand conditional distributions"
+  },
+  {
+    "objectID": "lectures/lecture8.html#another-example-3",
+    "href": "lectures/lecture8.html#another-example-3",
+    "title": "",
+    "section": "Another example",
+    "text": "Another example\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIn this sample, is there an association between diet and feelings towards Thanksgiving? How do you know?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\n\nDislikes\n\n\n25\n\n(25.00%)\n\n\n55\n\n(20.00%)\n\n\n80\n\n\n\n\nIndifferrent\n\n\n36\n\n(36.00%)\n\n\n75\n\n(27.27%)\n\n\n111\n\n\n\n\nLikes\n\n\n39\n\n(39.00%)\n\n\n145\n\n(52.73%)\n\n\n184\n\n\n\n\nTOTAL\n\n\n100\n\n\n275\n\n\n375\n\n\n\n\n\n\n\n\n\nDifference in conditional distributions indicate that there IS an association in the sample"
+  },
+  {
+    "objectID": "lectures/lecture8.html#another-example-4",
+    "href": "lectures/lecture8.html#another-example-4",
+    "title": "",
+    "section": "Another example",
+    "text": "Another example\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIn this sample, is there an association between diet and feelings towards Thanksgiving? How do you know?\n\n\\(\\frac{0.53}{0.39} = 1.\\)\\(36\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\n\nDislikes\n\n\n25\n\n(25.00%)\n\n\n55\n\n(20.00%)\n\n\n80\n\n\n\n\nIndifferrent\n\n\n36\n\n(36.00%)\n\n\n75\n\n(27.27%)\n\n\n111\n\n\n\n\nLikes\n\n\n39\n\n(39.00%)\n\n\n145\n\n(52.73%)\n\n\n184\n\n\n\n\nTOTAL\n\n\n100\n\n\n275\n\n\n375\n\n\n\n\n\n\n\n\n\nUse risk ratios to quantify the association. For example, the probability of liking Thanksgiving is 36% higher for carnivores than for vegetarians"
+  },
+  {
+    "objectID": "lectures/lecture8.html#another-example-5",
+    "href": "lectures/lecture8.html#another-example-5",
+    "title": "",
+    "section": "Another example",
+    "text": "Another example\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIs this association statistically significant?\n\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\n\nDislikes\n\n\n25\n\n(25.00%)\n\n\n55\n\n(20.00%)\n\n\n80\n\n\n\n\nIndifferrent\n\n\n36\n\n(36.00%)\n\n\n75\n\n(27.27%)\n\n\n111\n\n\n\n\nLikes\n\n\n39\n\n(39.00%)\n\n\n145\n\n(52.73%)\n\n\n184\n\n\n\n\nTOTAL\n\n\n100\n\n\n275\n\n\n375\n\n\n\n\n\n\n\n\n\n\n\n\\(H_a\\): IN THE POPULATION, there is an associationbetween diet and attitudes towards Thanksgiving.\n\n\n\\(H_0\\): There is no association between diet andattitudes towards Thanksgiving IN THE POPULATION."
+  },
+  {
+    "objectID": "lectures/lecture8.html#another-example-6",
+    "href": "lectures/lecture8.html#another-example-6",
+    "title": "",
+    "section": "Another example",
+    "text": "Another example\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIs this association statistically significant?\n\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\n\nDislikes\n\n\n25\n\\(f_e = 21.33\\)\n(25.00%)\n\n\n55\n\\(f_e = 58.67\\)\n(20.00%)\n\n\n80\n\n\n\n\nIndifferrent\n\n\n36\n\\(f_e = 29.60\\)\n(36.00%)\n\n\n75\n\\(f_e = 81.40\\)\n(27.27%)\n\n\n111\n\n\n\n\nLikes\n\n\n39\n\\(f_e = 49.07\\)\n(39.00%)\n\n\n145\n\\(f_e = 134.93\\)\n(52.73%)\n\n\n184\n\n\n\n\nTOTAL\n\n\n100\n\n\n275\n\n\n375\n\n\n\n\n\n\n\n\n\n\n\nFind EXPECTED FREQUENCIES:\n\n\n\\(f_e = \\frac{\\text{(row marginal)(column marginal)}}{n}\\)\n\n\nFor example: \\(f_e\\) for Cell 5 = \\(\\frac{(184)(100)}{375} =\\) \\(49.07\\)"
+  },
+  {
+    "objectID": "lectures/lecture8.html#another-example-7",
+    "href": "lectures/lecture8.html#another-example-7",
+    "title": "",
+    "section": "Another example",
+    "text": "Another example\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIs this association statistically significant?\n\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\n\nDislikes\n\n\n25\n\\(f_e = 21.33\\)\n(25.00%)\n\n\n55\n\\(f_e = 58.67\\)\n(20.00%)\n\n\n80\n\n\n\n\nIndifferrent\n\n\n36\n\\(f_e = 29.60\\)\n(36.00%)\n\n\n75\n\\(f_e = 81.40\\)\n(27.27%)\n\n\n111\n\n\n\n\nLikes\n\n\n39\n\\(f_e = 49.07\\)\n(39.00%)\n\n\n145\n\\(f_e = 134.93\\)\n(52.73%)\n\n\n184\n\n\n\n\nTOTAL\n\n\n100\n\n\n275\n\n\n375\n\n\n\n\n\n\n\n\n\n\n\nExpected frequencies reflect how the table would look if there were no association between the variables (i.e., if the null hypothesis were true)"
+  },
+  {
+    "objectID": "lectures/lecture8.html#another-example-8",
+    "href": "lectures/lecture8.html#another-example-8",
+    "title": "",
+    "section": "Another example",
+    "text": "Another example\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIs this association statistically significant?\n\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(f_0\\)\n\\(f_e\\)\n\\((f_0 - f_e)\\)\n\\((f_0 - f_e)^2\\)\n\\(\\frac{(f_0 - f_e)^2}{f_e}\\)\n\n\n\n\nCell 1\n25\n21.33\n3.67\n13.44\n0.63\n\n\nCell 2\n55\n58.67\n-3.67\n13.44\n0.23\n\n\nCell 3\n36\n29.60\n6.40\n40.96\n1.38\n\n\nCell 4\n75\n81.40\n-6.40\n40.96\n0.50\n\n\nCell 5\n39\n49.07\n-10.07\n101.34\n2.07\n\n\nCell 6\n145\n134.93\n10.07\n101.34\n0.75\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExpected frequencies reflect how the table would look if there were no association between the variables (i.e., if the null hypothesis were true)"
+  },
+  {
+    "objectID": "lectures/lecture8.html#another-example-9",
+    "href": "lectures/lecture8.html#another-example-9",
+    "title": "",
+    "section": "Another example",
+    "text": "Another example\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIs this association statistically significant?\n\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(f_0\\)\n\\(f_e\\)\n\\((f_0 - f_e)\\)\n\\((f_0 - f_e)^2\\)\n\\(\\frac{(f_0 - f_e)^2}{f_e}\\)\n\n\n\n\nCell 1\n25\n21.33\n3.67\n13.44\n0.63\n\n\nCell 2\n55\n58.67\n-3.67\n13.44\n0.23\n\n\nCell 3\n36\n29.60\n6.40\n40.96\n1.38\n\n\nCell 4\n75\n81.40\n-6.40\n40.96\n0.50\n\n\nCell 5\n39\n49.07\n-10.07\n101.34\n2.07\n\n\nCell 6\n145\n134.93\n10.07\n101.34\n0.75\n\n\n\n\n\n\n\\(\\chi^2 =\\)\n5.56\n\n\n\n\n\nNeed to compare our obtained \\(\\chi^2\\) value of 5.56 with the critical value of \\(\\chi^2\\)\n\n\n\n\n\nExpected frequencies reflect how the table would look if there were no association between the variables (i.e., if the null hypothesis were true)"
   }
 ]
