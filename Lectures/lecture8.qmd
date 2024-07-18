@@ -14,6 +14,7 @@ execute:
   warning: false
 format: 
   revealjs:
+    cache: true
     reference-location: margin
     theme: lecture_styles.scss
     controls: true
@@ -2716,11 +2717,11 @@ A measure of association reflecting both the strength and the direction of the a
 ::: incremental
 [Why it's helpful]{.underline}
 
-* Simple:
+* [**Simple**]{style="color: #e93cac"}:
     * one number to convey a lot about an association
-* Symmetrical:
+* [**Symmetrical**]{style="color: #e93cac"}:
     * correlation of X and Y same as the correlation of Y and X
-* Standardized:
+* [**Standardized**]{style="color: #e93cac"}:
     * does not depend on the units of the variables
     * always ranges from 0 to |1|
     * therefore, allows for comparison of bivariate associations between different pairs of variables
@@ -2742,25 +2743,55 @@ A measure of association reflecting both the strength and the direction of the a
 > [**Correlation Coefficient (r)**]{style="color: #e93cac"} <br>
 A measure of association reflecting both the strength and the direction of the association between two interval-level variables
 :::
+
 :::
   
 ::: {.column width="50%"}
 
 <br>
 
-::: fragment
 ::: incremental
 [Why you need to be careful]{.underline}
 
-* Correlation (and regression) only work well with linear associations
+* [Correlation (and regression) only work well with linear associations]{style="color: #e93cac"}
     * i.e., scatterplot shows a roughly straight-line pattern
-* Correlation ≠ causation
+* [Correlation ≠ causation]{style="color: #e93cac"}
     * The observed association might be due to some third “lurking” variable
     * i.e., the association might be spurious
-* Don’t extrapolate
+* [Don’t extrapolate]{style="color: #e93cac"}
     * Can’t use the observed association to draw conclusions about the association among individuals with values outside of your observed range on the variables
 
-hb/n
+:::
+:::
+
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<br>
+
+::: {style="font-size: 1.75em"}
+> [**Correlation Coefficient (r)**]{style="color: #e93cac"} <br>
+A measure of association reflecting both the strength and the direction of the association between two interval-level variables
+:::
+:::
+  
+::: {.column width="50%"}f
+
+::: incremental
+[Interpretation]{.underline}
+
+* [Sign indicates the direction of the association]{style="color: #e93cac"}
+    * [Positive correlation indicates a positive association]{style="color: #1b8883"}
+        * high values on one variable tend to correspond with high values on the other variable
+        * e.g., education and income have a positive correlation
+    * [Negative correlation indicates a negative association]{style="color: #1b8883"}
+        * high values on one variable tend to correspond with low values on the other variable
+        * e.g., income and stress have a negative correlation
 
 :::
 :::
@@ -2783,21 +2814,19 @@ A measure of association reflecting both the strength and the direction of the a
   
 ::: {.column width="50%"}
 
-<br>
-
-::: fragment
 ::: incremental
 [Interpretation]{.underline}
 
-* Sign indicates the direction of the association
-    * Positive correlation indicates a positive association
-        * high values on one variable tend to correspond with high values on the other variable
-        * e.g., education and income have a positive correlation
-    * Negative correlation indicates a negative association
-        * high values on one variable tend to correspond with low values on the other variable
-        * e.g., income and stress have a negative correlation
-
-:::
+* [Value of the number indicates strength of association]{style="color: #e93cac"}
+    * [*i.e., how strong is the tendency for certain values on one variable to correspond with certain values on the other?*]{style="color: #1b8883"}
+    * Minimum value = 0
+        * Values close to 0 indicate no association
+    * Maximum value = 1 or -1
+        * values close to -1.0 or 1.0 indicate strong relationships
+    * Rule of thumb (in absolute values):
+        * 0.00 to 0.30 = weak association
+        * 0.31 to 0.60 = moderate association
+        * 0.61 to 1.0 = strong association
 :::
 :::
 
@@ -2805,11 +2834,584 @@ A measure of association reflecting both the strength and the direction of the a
 
 ## Practice
 
-## Scatterplot visuals
+<br>
+
+*What type of correlations are the following?*
+
+::: incremental
+* Correlation (r) for education and income = 0.385 <br> [moderate and positive]{.fragment style="color: #e8e3d3"}
+* Correlation (r) for education and stress = -0.615 <br> [strong and negative]{.fragment style="color: #e8e3d3"}
+* Correlation (r) for hours studied and number of dates = 0.045 <br> [weak and positive]{.fragment style="color: #e8e3d3"}
+* Correlation (r) for number of children and number of hours of sleep = -0.421 <br> [moderate and negative]{.fragment style="color: #e8e3d3"}
+:::
+
+## Practice 
+
+<br>
+
+*What type of correlations are the following?*
+
+* Correlation (r) for education and income = 0.385 <br> [moderate and positive]{.fragment style="color: #e93cac"}
+* Correlation (r) for education and stress = -0.615 <br> [strong and negative]{.fragment style="color: #e93cac"}
+* Correlation (r) for hours studied and number of dates = 0.045 <br> [weak and positive]{.fragment style="color: #e93cac"}
+* Correlation (r) for number of children and number of hours of sleep = -0.421 <br> [moderate and negative]{.fragment style="color: #e93cac"}
+
+---
+
+#### [Scatterplots allow us to picture the association between variables]{style="font-size: 1.25em"}
+
+<br> 
+<br>
+
+::: {style="position: absolute; left: -75px; width: 300%"}
+![](images/correlations.png)
+:::
+
+::: {.fragment fragment-index=1 style="position: absolute; top: 60px; left: 250px; text-align: center;"}
+**Stronger associations = more tightly clustered points**
+:::
+
+::: {.fragment .fade-out fragment-index=3}
+::: {.fragment fragment-index=2 style="position: absolute; bottom: 50px; text-align: center; color: #6e8e13;"}
+Weak associations have lots of conditional variation and not much difference in conditional distributions (distribution of the DV across values of the IV)
+:::
+:::
+
+::: {.fragment .fade-out fragment-index=3}
+::: {.fragment fragment-index=2 style="border: 3px solid #6e8e13; width: 200px; height: 275px; position: absolute; bottom: 200px; left: 250px;"}
+
+:::
+:::
+
+::: {.fragment .fade-out fragment-index=3}
+::: {.fragment fragment-index=2 style="border: 3px solid #6e8e13; width: 200px; height: 275px; position: absolute; bottom: 200px; right: 250px;"}
+
+:::
+:::
+
+::: {.fragment fragment-index=3 style="position: absolute; bottom: 50px; text-align: center; color: #754cbc"}
+Strong associations have very little conditional variation and lots of difference in conditional distributions (distribution of the DV across values of the IV)
+:::
+
+
+::: {.fragment fragment-index=3 style="border: 3px solid #754cbc; width: 200px; height: 275px; position: absolute; bottom: 200px; left: 75px;"}
+
+:::
+
+::: {.fragment fragment-index=3 style="border: 3px solid #754cbc; width: 200px; height: 275px; position: absolute; bottom: 200px; right: 75px;"}
+
+:::
 
 ## Making a scatterplot
 
-## Calculating correlation coefficient
+#### Example: Do people who study more have more or fewer dates? 
+
+::: {style="position: absolute; left: -50px"}
+```{r}
+#| echo: false
+
+dates <- tibble(hours = c(10, 15, 10, 6, 2, 7, 10, 12, 7, 20), dates = c(1, 2, 5, 1, 0, 3, 4, 3, 1, 3))
+
+dates |>
+  gt() |> 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d") |> 
+  cols_label(hours = "Hours studied", dates = "Dates")
+```
+:::
+
+::: {.fragment style="position: absolute; left: 200px; top: 200px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4.5
+
+ggplot(dates, aes(x = hours, y = dates)) + 
+  geom_point(size = 4, color = "black") + 
+  labs(x = "Hours studied", y = "Dates") + 
+  theme_tufte(base_size = 22) 
+```
+:::
+
+## Making a scatterplot
+
+#### Example: Do people who study more have more or fewer dates? 
+
+::: {style="position: absolute; left: -50px"}
+```{r}
+#| echo: false
+
+dates <- tibble(hours = c(10, 15, 10, 6, 2, 7, 10, 12, 7, 20), dates = c(1, 2, 5, 1, 0, 3, 4, 3, 1, 3))
+
+dates |>
+  gt() |> 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d") |> 
+  cols_label(hours = "Hours studied", dates = "Dates") |> 
+  tab_style( style = cell_fill(color = "#a68100"), locations = cells_column_labels(columns = hours))
+```
+:::
+
+::: {style="position: absolute; left: 200px; top: 200px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4.5
+
+ggplot(dates, aes(x = hours, y = dates)) + 
+  geom_point(size = 4, color = "black") + 
+  labs(x = "Hours studied", y = "Dates") + 
+  theme_tufte(base_size = 22) + 
+  theme(axis.title.x = element_text(colour = "#a68100"))
+```
+:::
+
+## Making a scatterplot
+
+#### Example: Do people who study more have more or fewer dates? 
+
+::: {style="position: absolute; left: -50px"}
+```{r}
+#| echo: false
+
+dates <- tibble(hours = c(10, 15, 10, 6, 2, 7, 10, 12, 7, 20), dates = c(1, 2, 5, 1, 0, 3, 4, 3, 1, 3))
+
+dates |>
+  gt() |> 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d") |> 
+  cols_label(hours = "Hours studied", dates = "Dates") |> 
+  tab_style(style = cell_fill(color = "#a68100"), locations = cells_column_labels(columns = hours)) |> 
+  tab_style(style = cell_fill(color = "#754cbc"), locations = cells_column_labels(columns = dates))
+```
+:::
+
+::: {style="position: absolute; left: 200px; top: 200px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4.5
+
+ggplot(dates, aes(x = hours, y = dates)) + 
+  geom_point(size = 4, color = "black") + 
+  labs(x = "Hours studied", y = "Dates") + 
+  theme_tufte(base_size = 22) + 
+  theme(axis.title.x = element_text(colour = "#a68100"), 
+        axis.title.y = element_text(colour = "#754cbc"))
+```
+:::
+
+## Making a scatterplot
+
+#### Example: Do people who study more have more or fewer dates? 
+
+::: {style="position: absolute; left: -50px"}
+```{r}
+#| echo: false
+
+dates <- tibble(hours = c(10, 15, 10, 6, 2, 7, 10, 12, 7, 20), dates = c(1, 2, 5, 1, 0, 3, 4, 3, 1, 3))
+
+dates |>
+  gt() |> 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d") |> 
+  cols_label(hours = "Hours studied", dates = "Dates") |> 
+  tab_style(style = cell_fill(color = "#a68100"), locations = cells_column_labels(columns = hours)) |> 
+  tab_style(style = cell_fill(color = "#754cbc"), locations = cells_column_labels(columns = dates)) |> 
+  tab_style(style = cell_fill(color = "#e93cac"), locations = cells_body(columns = c(hours, dates), rows = dates == 4))
+```
+:::
+
+::: {style="position: absolute; left: 200px; top: 200px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4.5
+
+ggplot(dates, aes(x = hours, y = dates)) + 
+  geom_point(size = 4, color = "black") + 
+  annotate(geom = "point", x = 10, y = 4, size = 4, color = "#e93cac") + 
+  labs(x = "Hours studied", y = "Dates") + 
+  theme_tufte(base_size = 22) + 
+  theme(axis.title.x = element_text(colour = "#a68100"), 
+        axis.title.y = element_text(colour = "#754cbc"))
+```
+:::
+
+::: {.fragment style="border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 225px; right: 0px; text-align: center"}
+Can see the association
+:::
+
+::: {.fragment style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 125px; right: 0px; text-align: center"}
+Correlation coefficient allows us to quantify/summarize that association
+:::
+
+## Calculating correlation coefficient (r)
+
+::: {style="font-size: 2.5em; position: absolute; top: 200px; left: 125px"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {.fragment fragment-index=1 style="border: 3px solid #a68100; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 475px;"}
+
+:::
+
+::: {.fragment fragment-index=1 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px;  padding: 5px 5px 5px 5px; position: absolute; top: 140px; left: 250px; text-align: center"}
+Value of x variable<br>for an individual
+:::
+
+::: {.fragment fragment-index=2 style="border: 3px solid #a68100; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 595px;"}
+
+:::
+
+::: {.fragment fragment-index=2 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 140px; left: 500px; text-align: center"}
+Mean of<br>x variable
+:::
+
+::: {.fragment fragment-index=3 style="border: 3px solid #a68100; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 355px; left: 538px;"}
+
+:::
+
+::: {.fragment fragment-index=3 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 450px; left: 525px; text-align: center"}
+Standard deviation<br>of x variable
+:::
+
+::: {.fragment fragment-index=4 style="border: 3px solid #1b8883; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 700px;"}
+
+:::
+
+::: {.fragment fragment-index=4 style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px;  padding: 5px 5px 5px 5px; position: absolute; top: 140px; left: 650px; text-align: center"}
+Value of y variable<br>for an individual
+:::
+
+::: {.fragment fragment-index=4 style="border: 3px solid #1b8883; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 820px;"}
+
+:::
+
+::: {.fragment fragment-index=4 style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 225px; right: -80px; text-align: center"}
+Mean of y variable
+:::
+
+::: {.fragment fragment-index=4 style="border: 3px solid #1b8883; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 355px; left: 765px;"}
+
+:::
+
+::: {.fragment fragment-index=4 style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 440px; right: 0px; text-align: center"}
+Standard deviation<br>of y variable
+:::
+
+::: {.fragment fragment-index=5 style="border: 3px solid #754cbc; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 292px; left: 400px;"}
+
+:::
+
+::: {.fragment fragment-index=5 style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 440px; left: 340px; text-align: center"}
+Add up for all<br>individuals
+:::
+
+::: {.fragment fragment-index=6 style="border: 3px solid #e93cac; border-radius: 15px; width: 175px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 343px; left: 230px;"}
+
+:::
+
+::: {.fragment fragment-index=6 style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 425px; left: 100px; text-align: center"}
+Divide the whole <br> mess by n-1
+:::
+
+## Calculating correlation coefficient (r)
+
+::: {style="font-size: 2.5em; position: absolute; top: 200px; left: 125px"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {style="border: 3px solid #a68100; border-radius: 15px; width: 200px; height: 160px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 465px;"}
+
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px;padding: 5px 5px 5px 5px; position: absolute; top: 75px; left: 250px; text-align: center; width: 400px"}
+Just the **standardized score on x** (i.e. how many standard deviations the individual's value on x is from the mean of x)
+:::
+
+::: {style="border: 3px solid #1b8883; border-radius: 15px; width: 200px; height: 160px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 695px;"}
+
+:::
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 450px; right: 0px; text-align: center; width: 400px"}
+Just the **standardized score on y** (i.e. how many standard deviations the individual's value on y is from the mean of y)
+:::
+
+---
+
+#### Calculating Correlation Coefficient (r)
+
+::: {style="text-align: left"}
+*Association between hours studied and number of dates*
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 2px 2px 2px 2px; position: absolute; top: -25px; right: -75px; text-align: center; font-size: 1em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {style="font-size: 0.9em; position: absolute; left: 0px; top: 125px; table-layout: fixed; width: 1050px"}
+| Person  | Hours studied ($x_i$) | Dates ($y_i$) | $x_i -\bar{x}$ | $\frac{x_i-\bar{x}}{s_x}$ | $y_i -\bar{y}$ | $\frac{y_i-\bar{y}}{s_y}$ | $(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$ |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| 1 | 10 | 1 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [-0.02]{style="color: #e8e3d3"} |
+| 2 | 15 | 2 | [5.10]{style="color: #e8e3d3"}  | [1.02]{style="color: #e8e3d3"} | [-0.30]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} |
+| 3 | 10 | 5 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [2.70]{style="color: #e8e3d3"} | [1.72]{style="color: #e8e3d3"} | [0.03]{style="color: #e8e3d3"} |
+| 4 | 6 | 1 | [-3.90]{style="color: #e8e3d3"}  | [-0.78]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.64]{style="color: #e8e3d3"} |
+| 5 | 2 | 0 | [-7.90]{style="color: #e8e3d3"}  | [-1.57]{style="color: #e8e3d3"} | [-2.30]{style="color: #e8e3d3"} | [-1.47]{style="color: #e8e3d3"} | [2.31]{style="color: #e8e3d3"} |
+| 6 | 7 | 3 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [-0.26]{style="color: #e8e3d3"} |
+| 7 | 10 | 4 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [1.70]{style="color: #e8e3d3"} | [1.08]{style="color: #e8e3d3"} | [0.02]{style="color: #e8e3d3"} |
+| 8 | 12 | 3 | [2.10]{style="color: #e8e3d3"}  | [0.42]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.19]{style="color: #e8e3d3"} |
+| 9 | 7 | 1 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.48]{style="color: #e8e3d3"} |
+| 10 | 20 | 3 | [10.10]{style="color: #e8e3d3"}  | [2.01]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.90]{style="color: #e8e3d3"} |
+| **sum** | 99.00 | 23.00 |  |  |  |  | [4.11]{style="color: #e8e3d3"} |
+| **mean** | 9.90 | 2.30 |
+| **st. dev.** | 5.02 | 1.57 |
+
+: {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
+:::
+
+---
+
+#### Calculating Correlation Coefficient (r)
+
+::: {style="text-align: left"}
+*Association between hours studied and number of dates*
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 2px 2px 2px 2px; position: absolute; top: -25px; right: -75px; text-align: center; font-size: 1em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {style="font-size: 0.9em; position: absolute; left: 0px; top: 125px; table-layout: fixed; width: 1050px"}
+| Person  | Hours studied ($x_i$) | Dates ($y_i$) | [$x_i -\bar{x}$]{style="color: #e8e3d3"} | [$\frac{x_i-\bar{x}}{s_x}$]{style="color: #e8e3d3"} | [$y_i -\bar{y}$]{style="color: #e8e3d3"} | [$\frac{y_i-\bar{y}}{s_y}$]{style="color: #e8e3d3"} | [$(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$]{style="color: #e8e3d3"} |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| 1 | 10 | 1 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [-0.02]{style="color: #e8e3d3"} |
+| 2 | 15 | 2 | [5.10]{style="color: #e8e3d3"}  | [1.02]{style="color: #e8e3d3"} | [-0.30]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} |
+| 3 | 10 | 5 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [2.70]{style="color: #e8e3d3"} | [1.72]{style="color: #e8e3d3"} | [0.03]{style="color: #e8e3d3"} |
+| 4 | 6 | 1 | [-3.90]{style="color: #e8e3d3"}  | [-0.78]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.64]{style="color: #e8e3d3"} |
+| 5 | 2 | 0 | [-7.90]{style="color: #e8e3d3"}  | [-1.57]{style="color: #e8e3d3"} | [-2.30]{style="color: #e8e3d3"} | [-1.47]{style="color: #e8e3d3"} | [2.31]{style="color: #e8e3d3"} |
+| 6 | 7 | 3 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [-0.26]{style="color: #e8e3d3"} |
+| 7 | 10 | 4 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [1.70]{style="color: #e8e3d3"} | [1.08]{style="color: #e8e3d3"} | [0.02]{style="color: #e8e3d3"} |
+| 8 | 12 | 3 | [2.10]{style="color: #e8e3d3"}  | [0.42]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.19]{style="color: #e8e3d3"} |
+| 9 | 7 | 1 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.48]{style="color: #e8e3d3"} |
+| 10 | 20 | 3 | [10.10]{style="color: #e8e3d3"}  | [2.01]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.90]{style="color: #e8e3d3"} |
+| **sum** | 99.00 | 23.00 |  |  |  |  | [4.11]{style="color: #e8e3d3"} |
+| **mean** | 9.90 | 2.30 |
+| **st. dev.** | 5.02 | 1.57 |
+
+: {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
+:::
+
+::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 2px 2px 2px 2px; width: 450px; height: 120px; position: absolute; bottom: 0px; left: 5px"}
+
+:::
+
+::: {style="color: #e93cac; background: #e8e3d3; border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 15px; left: 475px; text-align: center"}
+Calculate means and standard<br>deviations for both variables
+:::
+
+---
+
+#### Calculating Correlation Coefficient (r)
+
+::: {style="text-align: left"}
+*Association between hours studied and number of dates*
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 2px 2px 2px 2px; position: absolute; top: -25px; right: -75px; text-align: center; font-size: 1em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {style="font-size: 0.9em; position: absolute; left: 0px; top: 125px; table-layout: fixed; width: 1050px"}
+| Person  | Hours studied ($x_i$) | Dates ($y_i$) | $x_i -\bar{x}$ | $\frac{x_i-\bar{x}}{s_x}$ | $y_i -\bar{y}$ | $\frac{y_i-\bar{y}}{s_y}$ | $(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$ |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| 1 | 10 | 1 | 0.10  | 0.02 | -1.30 | -0.83 | -0.02 |
+| 2 | 15 | 2 | [5.10]{style="color: #e8e3d3"}  | [1.02]{style="color: #e8e3d3"} | [-0.30]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} |
+| 3 | 10 | 5 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [2.70]{style="color: #e8e3d3"} | [1.72]{style="color: #e8e3d3"} | [0.03]{style="color: #e8e3d3"} |
+| 4 | 6 | 1 | [-3.90]{style="color: #e8e3d3"}  | [-0.78]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.64]{style="color: #e8e3d3"} |
+| 5 | 2 | 0 | [-7.90]{style="color: #e8e3d3"}  | [-1.57]{style="color: #e8e3d3"} | [-2.30]{style="color: #e8e3d3"} | [-1.47]{style="color: #e8e3d3"} | [2.31]{style="color: #e8e3d3"} |
+| 6 | 7 | 3 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [-0.26]{style="color: #e8e3d3"} |
+| 7 | 10 | 4 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [1.70]{style="color: #e8e3d3"} | [1.08]{style="color: #e8e3d3"} | [0.02]{style="color: #e8e3d3"} |
+| 8 | 12 | 3 | [2.10]{style="color: #e8e3d3"}  | [0.42]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.19]{style="color: #e8e3d3"} |
+| 9 | 7 | 1 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.48]{style="color: #e8e3d3"} |
+| 10 | 20 | 3 | [10.10]{style="color: #e8e3d3"}  | [2.01]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.90]{style="color: #e8e3d3"} |
+| **sum** | 99.00 | 23.00 |  |  |  |  | [4.11]{style="color: #e8e3d3"} |
+| **mean** | 9.90 | 2.30 |
+| **st. dev.** | 5.02 | 1.57 |
+
+: {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
+:::
+
+::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 30px; position: absolute; top: 125px; left: 508px"}
+
+:::
+
+::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 20px; position: absolute; top: 0px; right: 20px"}
+
+:::
+
+::: {style="color: #e93cac; background: #e8e3d3; border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 370px; left: 475px; text-align: center"}
+Get the deviation of the x score<br>from the mean of x
+:::
+
+
+
+---
+
+#### Calculating Correlation Coefficient (r)
+
+::: {style="text-align: left"}
+*Association between hours studied and number of dates*
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 2px 2px 2px 2px; position: absolute; top: -25px; right: -75px; text-align: center; font-size: 1em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {style="font-size: 0.9em; position: absolute; left: 0px; top: 125px; table-layout: fixed; width: 1050px"}
+| Person  | Hours studied ($x_i$) | Dates ($y_i$) | $x_i -\bar{x}$ | $\frac{x_i-\bar{x}}{s_x}$ | $y_i -\bar{y}$ | $\frac{y_i-\bar{y}}{s_y}$ | $(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$ |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| 1 | 10 | 1 | 0.10  | 0.02 | -1.30 | -0.83 | -0.02 |
+| 2 | 15 | 2 | [5.10]{style="color: #e8e3d3"}  | [1.02]{style="color: #e8e3d3"} | [-0.30]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} |
+| 3 | 10 | 5 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [2.70]{style="color: #e8e3d3"} | [1.72]{style="color: #e8e3d3"} | [0.03]{style="color: #e8e3d3"} |
+| 4 | 6 | 1 | [-3.90]{style="color: #e8e3d3"}  | [-0.78]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.64]{style="color: #e8e3d3"} |
+| 5 | 2 | 0 | [-7.90]{style="color: #e8e3d3"}  | [-1.57]{style="color: #e8e3d3"} | [-2.30]{style="color: #e8e3d3"} | [-1.47]{style="color: #e8e3d3"} | [2.31]{style="color: #e8e3d3"} |
+| 6 | 7 | 3 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [-0.26]{style="color: #e8e3d3"} |
+| 7 | 10 | 4 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [1.70]{style="color: #e8e3d3"} | [1.08]{style="color: #e8e3d3"} | [0.02]{style="color: #e8e3d3"} |
+| 8 | 12 | 3 | [2.10]{style="color: #e8e3d3"}  | [0.42]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.19]{style="color: #e8e3d3"} |
+| 9 | 7 | 1 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.48]{style="color: #e8e3d3"} |
+| 10 | 20 | 3 | [10.10]{style="color: #e8e3d3"}  | [2.01]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.90]{style="color: #e8e3d3"} |
+| **sum** | 99.00 | 23.00 |  |  |  |  | [4.11]{style="color: #e8e3d3"} |
+| **mean** | 9.90 | 2.30 |
+| **st. dev.** | 5.02 | 1.57 |
+
+: {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
+:::
+
+::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 30px; position: absolute; top: 125px; left: 608px"} 
+
+:::
+
+::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 45px; position: absolute; top: 0px; right: 10px"}
+
+:::
+
+::: {style="color: #e93cac; background: #e8e3d3; border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 370px; left: 525px; text-align: center"}
+Get the standardized score of x
+:::
+
+
+
+
+---
+
+#### Calculating Correlation Coefficient (r)
+
+::: {style="text-align: left"}
+*Association between hours studied and number of dates*
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 2px 2px 2px 2px; position: absolute; top: -25px; right: -75px; text-align: center; font-size: 1em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {style="font-size: 0.9em; position: absolute; left: 0px; top: 125px; table-layout: fixed; width: 1050px"}
+| Person  | Hours studied ($x_i$) | Dates ($y_i$) | $x_i -\bar{x}$ | $\frac{x_i-\bar{x}}{s_x}$ | $y_i -\bar{y}$ | $\frac{y_i-\bar{y}}{s_y}$ | $(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$ |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| 1 | 10 | 1 | 0.10  | 0.02 | -1.30 | -0.83 | -0.02 |
+| 2 | 15 | 2 | [5.10]{style="color: #e8e3d3"}  | [1.02]{style="color: #e8e3d3"} | [-0.30]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} |
+| 3 | 10 | 5 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [2.70]{style="color: #e8e3d3"} | [1.72]{style="color: #e8e3d3"} | [0.03]{style="color: #e8e3d3"} |
+| 4 | 6 | 1 | [-3.90]{style="color: #e8e3d3"}  | [-0.78]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.64]{style="color: #e8e3d3"} |
+| 5 | 2 | 0 | [-7.90]{style="color: #e8e3d3"}  | [-1.57]{style="color: #e8e3d3"} | [-2.30]{style="color: #e8e3d3"} | [-1.47]{style="color: #e8e3d3"} | [2.31]{style="color: #e8e3d3"} |
+| 6 | 7 | 3 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [-0.26]{style="color: #e8e3d3"} |
+| 7 | 10 | 4 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [1.70]{style="color: #e8e3d3"} | [1.08]{style="color: #e8e3d3"} | [0.02]{style="color: #e8e3d3"} |
+| 8 | 12 | 3 | [2.10]{style="color: #e8e3d3"}  | [0.42]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.19]{style="color: #e8e3d3"} |
+| 9 | 7 | 1 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.48]{style="color: #e8e3d3"} |
+| 10 | 20 | 3 | [10.10]{style="color: #e8e3d3"}  | [2.01]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.90]{style="color: #e8e3d3"} |
+| **sum** | 99.00 | 23.00 |  |  |  |  | [4.11]{style="color: #e8e3d3"} |
+| **mean** | 9.90 | 2.30 |
+| **st. dev.** | 5.02 | 1.57 |
+
+: {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
+:::
+
+::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 30px; position: absolute; top: 125px; left: 608px"}
+
+:::
+
+::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 20px; position: absolute; top: 0px; right: 0px"}
+
+:::
+
+::: {style="color: #e93cac; background: #e8e3d3; border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 370px; left: 575px; text-align: center"}
+Get the deviation of the y score<br>from the mean of y
+:::
+
+
+
+
+
+
+
+
+
+
+---
+
+#### Calculating Correlation Coefficient (r)
+
+::: {style="text-align: left"}
+*Association between hours studied and number of dates*
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 2px 2px 2px 2px; position: absolute; top: -25px; right: -75px; text-align: center; font-size: 1em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {style="font-size: 0.9em; position: absolute; left: 0px; top: 125px; table-layout: fixed; width: 1050px"}
+| Person  | Hours studied ($x_i$) | Dates ($y_i$) | $x_i -\bar{x}$ | $\frac{x_i-\bar{x}}{s_x}$ | $y_i -\bar{y}$ | $\frac{y_i-\bar{y}}{s_y}$ | $(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$ |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| 1 | 10 | 1 | 0.10 | 0.02 | -1.30 | -0.83 | -0.02 |
+| 2 | 15 | 2 | 5.10 | 1.02 | -0.30 | -0.19 | -0.19 |
+| 3 | 10 | 5 | 0.10 | 0.02 | 2.70 | 1.72 | 0.03 |
+| 4 | 6 | 1 | -3.90 | -0.78 | -1.30 | -0.83 | 0.64 |
+| 5 | 2 | 0 | -7.90 | -1.57 | -2.30 | -1.47 | 2.31 |
+| 6 | 7 | 3 | -2.90 | -0.58 | 0.70 | 0.45 | -0.26 |
+| 7 | 10 | 4 | 0.10 | 0.02 | 1.70 | 1.08 | 0.02 |
+| 8 | 12 | 3 | 2.10 | 0.42 | 0.70 | 0.45 | 0.19 |
+| 9 | 7 | 1 | -2.90 | -0.58 | -1.30 | -0.83 | 0.48 |
+| 10 | 20 | 3 | 10.10 | 2.01 | 0.70 | 0.45 | 0.90 |
+| **sum** | 99.00 | 23.00 |  |  |  |  | 4.11 |
+| **mean** | 9.90 | 2.30 |
+| **st. dev.** | 5.02 | 1.57 |
+
+: {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
+:::
+
 
 ## Hypothesis test for correlation
 
