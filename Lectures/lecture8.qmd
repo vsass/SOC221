@@ -3062,7 +3062,7 @@ r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
 $$
 :::
 
-::: {.fragment fragment-index=1 style="border: 3px solid #a68100; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 475px;"}
+::: {.fragment fragment-index=1 style="border: 3px solid #a68100; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 460px;"}
 
 :::
 
@@ -3070,7 +3070,7 @@ $$
 Value of x variable<br>for an individual
 :::
 
-::: {.fragment fragment-index=2 style="border: 3px solid #a68100; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 595px;"}
+::: {.fragment fragment-index=2 style="border: 3px solid #a68100; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 575px;"}
 
 :::
 
@@ -3078,7 +3078,7 @@ Value of x variable<br>for an individual
 Mean of<br>x variable
 :::
 
-::: {.fragment fragment-index=3 style="border: 3px solid #a68100; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 355px; left: 538px;"}
+::: {.fragment fragment-index=3 style="border: 3px solid #a68100; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 355px; left: 518px;"}
 
 :::
 
@@ -3086,7 +3086,7 @@ Mean of<br>x variable
 Standard deviation<br>of x variable
 :::
 
-::: {.fragment fragment-index=4 style="border: 3px solid #1b8883; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 700px;"}
+::: {.fragment fragment-index=4 style="border: 3px solid #1b8883; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 690px;"}
 
 :::
 
@@ -3094,7 +3094,7 @@ Standard deviation<br>of x variable
 Value of y variable<br>for an individual
 :::
 
-::: {.fragment fragment-index=4 style="border: 3px solid #1b8883; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 820px;"}
+::: {.fragment fragment-index=4 style="border: 3px solid #1b8883; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 805px;"}
 
 :::
 
@@ -3102,7 +3102,7 @@ Value of y variable<br>for an individual
 Mean of y variable
 :::
 
-::: {.fragment fragment-index=4 style="border: 3px solid #1b8883; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 355px; left: 765px;"}
+::: {.fragment fragment-index=4 style="border: 3px solid #1b8883; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 355px; left: 745px;"}
 
 :::
 
@@ -3110,7 +3110,7 @@ Mean of y variable
 Standard deviation<br>of y variable
 :::
 
-::: {.fragment fragment-index=5 style="border: 3px solid #754cbc; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 292px; left: 400px;"}
+::: {.fragment fragment-index=5 style="border: 3px solid #754cbc; border-radius: 15px; width: 60px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 292px; left: 385px;"}
 
 :::
 
@@ -3118,7 +3118,7 @@ Standard deviation<br>of y variable
 Add up for all<br>individuals
 :::
 
-::: {.fragment fragment-index=6 style="border: 3px solid #e93cac; border-radius: 15px; width: 175px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 343px; left: 230px;"}
+::: {.fragment fragment-index=6 style="border: 3px solid #e93cac; border-radius: 15px; width: 175px; height: 60px; padding: 5px 5px 5px 5px; position: absolute; top: 343px; left: 210px;"}
 
 :::
 
@@ -3134,7 +3134,7 @@ r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
 $$
 :::
 
-::: {style="border: 3px solid #a68100; border-radius: 15px; width: 200px; height: 160px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 465px;"}
+::: {style="border: 3px solid #a68100; border-radius: 15px; width: 200px; height: 160px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 455px;"}
 
 :::
 
@@ -3142,7 +3142,7 @@ $$
 Just the **standardized score on x** (i.e. how many standard deviations the individual's value on x is from the mean of x)
 :::
 
-::: {style="border: 3px solid #1b8883; border-radius: 15px; width: 200px; height: 160px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 695px;"}
+::: {style="border: 3px solid #1b8883; border-radius: 15px; width: 200px; height: 160px; padding: 5px 5px 5px 5px; position: absolute; top: 260px; left: 685px;"}
 
 :::
 
@@ -3165,7 +3165,7 @@ $$
 :::
 
 ::: {style="font-size: 0.9em; position: absolute; left: 0px; top: 125px; table-layout: fixed; width: 1050px"}
-| Person  | Hours studied ($x_i$) | Dates ($y_i$) | $x_i -\bar{x}$ | $\frac{x_i-\bar{x}}{s_x}$ | $y_i -\bar{y}$ | $\frac{y_i-\bar{y}}{s_y}$ | $(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$ |
+| Person  | Hours studied ($x_i$) | Dates ($y_i$) | [$x_i -\bar{x}$]{style="color: #e8e3d3"} | [$\frac{x_i-\bar{x}}{s_x}$]{style="color: #e8e3d3"} | [$y_i -\bar{y}$]{style="color: #e8e3d3"} | [$\frac{y_i-\bar{y}}{s_y}$]{style="color: #e8e3d3"} | [$(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$]{style="color: #e8e3d3"} |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 | 1 | 10 | 1 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [-0.02]{style="color: #e8e3d3"} |
 | 2 | 15 | 2 | [5.10]{style="color: #e8e3d3"}  | [1.02]{style="color: #e8e3d3"} | [-0.30]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} |
@@ -3218,11 +3218,11 @@ $$
 : {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
 :::
 
-::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 2px 2px 2px 2px; width: 450px; height: 120px; position: absolute; bottom: 0px; left: 5px"}
+::: {style="border: 3px solid #e93cac; border-radius: 15px; padding: 2px 2px 2px 2px; width: 450px; height: 120px; position: absolute; bottom: 0px; left: 5px"}
 
 :::
 
-::: {style="color: #e93cac; background: #e8e3d3; border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 15px; left: 475px; text-align: center"}
+::: {style="color: #e93cac; background: #e8e3d3; border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 15px; left: 475px; text-align: center"}
 Calculate means and standard<br>deviations for both variables
 :::
 
@@ -3260,15 +3260,15 @@ $$
 : {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
 :::
 
-::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 30px; position: absolute; top: 125px; left: 508px"}
+::: {.fragment fragment-index=1 style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 30px; position: absolute; top: 123px; left: 508px"}
 
 :::
 
-::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 20px; position: absolute; top: 0px; right: 20px"}
+::: {.fragment fragment-index=1 style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 20px; position: absolute; top: 0px; right: 24px"}
 
 :::
 
-::: {style="color: #e93cac; background: #e8e3d3; border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 370px; left: 475px; text-align: center"}
+::: {.fragment fragment-index=1 style="color: #e93cac; background: #e8e3d3; border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 370px; left: 475px; text-align: center"}
 Get the deviation of the x score<br>from the mean of x
 :::
 
@@ -3308,15 +3308,15 @@ $$
 : {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
 :::
 
-::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 30px; position: absolute; top: 125px; left: 608px"} 
+::: {style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 35px; position: absolute; top: 125px; left: 608px"} 
 
 :::
 
-::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 45px; position: absolute; top: 0px; right: 10px"}
+::: {style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 58px; position: absolute; top: 0px; right: 22px"}
 
 :::
 
-::: {style="color: #e93cac; background: #e8e3d3; border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 370px; left: 525px; text-align: center"}
+::: {style="color: #e93cac; background: #e8e3d3; border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 385px; left: 525px; text-align: center"}
 Get the standardized score of x
 :::
 
@@ -3357,25 +3357,151 @@ $$
 : {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
 :::
 
-::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 30px; position: absolute; top: 125px; left: 608px"}
+::: {style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 30px; position: absolute; top: 125px; left: 713px"}
 
 :::
 
-::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 20px; position: absolute; top: 0px; right: 0px"}
+::: {style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 20px; position: absolute; top: 0px; right: -68px"}
 
 :::
 
-::: {style="color: #e93cac; background: #e8e3d3; border: 4px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 370px; left: 575px; text-align: center"}
+::: {style="color: #e93cac; background: #e8e3d3; border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 370px; left: 575px; text-align: center"}
 Get the deviation of the y score<br>from the mean of y
 :::
 
+---
 
+#### Calculating Correlation Coefficient (r)
 
+::: {style="text-align: left"}
+*Association between hours studied and number of dates*
+:::
 
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 2px 2px 2px 2px; position: absolute; top: -25px; right: -75px; text-align: center; font-size: 1em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
 
+::: {style="font-size: 0.9em; position: absolute; left: 0px; top: 125px; table-layout: fixed; width: 1050px"}
+| Person  | Hours studied ($x_i$) | Dates ($y_i$) | $x_i -\bar{x}$ | $\frac{x_i-\bar{x}}{s_x}$ | $y_i -\bar{y}$ | $\frac{y_i-\bar{y}}{s_y}$ | $(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$ |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| 1 | 10 | 1 | 0.10  | 0.02 | -1.30 | -0.83 | -0.02 |
+| 2 | 15 | 2 | [5.10]{style="color: #e8e3d3"}  | [1.02]{style="color: #e8e3d3"} | [-0.30]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} |
+| 3 | 10 | 5 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [2.70]{style="color: #e8e3d3"} | [1.72]{style="color: #e8e3d3"} | [0.03]{style="color: #e8e3d3"} |
+| 4 | 6 | 1 | [-3.90]{style="color: #e8e3d3"}  | [-0.78]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.64]{style="color: #e8e3d3"} |
+| 5 | 2 | 0 | [-7.90]{style="color: #e8e3d3"}  | [-1.57]{style="color: #e8e3d3"} | [-2.30]{style="color: #e8e3d3"} | [-1.47]{style="color: #e8e3d3"} | [2.31]{style="color: #e8e3d3"} |
+| 6 | 7 | 3 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [-0.26]{style="color: #e8e3d3"} |
+| 7 | 10 | 4 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [1.70]{style="color: #e8e3d3"} | [1.08]{style="color: #e8e3d3"} | [0.02]{style="color: #e8e3d3"} |
+| 8 | 12 | 3 | [2.10]{style="color: #e8e3d3"}  | [0.42]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.19]{style="color: #e8e3d3"} |
+| 9 | 7 | 1 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.48]{style="color: #e8e3d3"} |
+| 10 | 20 | 3 | [10.10]{style="color: #e8e3d3"}  | [2.01]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.90]{style="color: #e8e3d3"} |
+| **sum** | 99.00 | 23.00 |  |  |  |  | [4.11]{style="color: #e8e3d3"} |
+| **mean** | 9.90 | 2.30 |
+| **st. dev.** | 5.02 | 1.57 |
 
+: {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
+:::
 
+::: {style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 35px; position: absolute; top: 123px; left: 813px"}
 
+:::
+
+::: {style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 58px; position: absolute; top: 0px; right: -68px"}
+
+:::
+
+::: {style="color: #e93cac; background: #e8e3d3; border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 385px; left: 675px; text-align: center"}
+Get the standardized score of y
+:::
+
+---
+
+#### Calculating Correlation Coefficient (r)
+
+::: {style="text-align: left"}
+*Association between hours studied and number of dates*
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 2px 2px 2px 2px; position: absolute; top: -25px; right: -75px; text-align: center; font-size: 1em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {style="font-size: 0.9em; position: absolute; left: 0px; top: 125px; table-layout: fixed; width: 1050px"}
+| Person  | Hours studied ($x_i$) | Dates ($y_i$) | $x_i -\bar{x}$ | $\frac{x_i-\bar{x}}{s_x}$ | $y_i -\bar{y}$ | $\frac{y_i-\bar{y}}{s_y}$ | $(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$ |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| 1 | 10 | 1 | 0.10  | 0.02 | -1.30 | -0.83 | -0.02 |
+| 2 | 15 | 2 | [5.10]{style="color: #e8e3d3"}  | [1.02]{style="color: #e8e3d3"} | [-0.30]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} | [-0.19]{style="color: #e8e3d3"} |
+| 3 | 10 | 5 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [2.70]{style="color: #e8e3d3"} | [1.72]{style="color: #e8e3d3"} | [0.03]{style="color: #e8e3d3"} |
+| 4 | 6 | 1 | [-3.90]{style="color: #e8e3d3"}  | [-0.78]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.64]{style="color: #e8e3d3"} |
+| 5 | 2 | 0 | [-7.90]{style="color: #e8e3d3"}  | [-1.57]{style="color: #e8e3d3"} | [-2.30]{style="color: #e8e3d3"} | [-1.47]{style="color: #e8e3d3"} | [2.31]{style="color: #e8e3d3"} |
+| 6 | 7 | 3 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [-0.26]{style="color: #e8e3d3"} |
+| 7 | 10 | 4 | [0.10]{style="color: #e8e3d3"}  | [0.02]{style="color: #e8e3d3"} | [1.70]{style="color: #e8e3d3"} | [1.08]{style="color: #e8e3d3"} | [0.02]{style="color: #e8e3d3"} |
+| 8 | 12 | 3 | [2.10]{style="color: #e8e3d3"}  | [0.42]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.19]{style="color: #e8e3d3"} |
+| 9 | 7 | 1 | [-2.90]{style="color: #e8e3d3"}  | [-0.58]{style="color: #e8e3d3"} | [-1.30]{style="color: #e8e3d3"} | [-0.83]{style="color: #e8e3d3"} | [0.48]{style="color: #e8e3d3"} |
+| 10 | 20 | 3 | [10.10]{style="color: #e8e3d3"}  | [2.01]{style="color: #e8e3d3"} | [0.70]{style="color: #e8e3d3"} | [0.45]{style="color: #e8e3d3"} | [0.90]{style="color: #e8e3d3"} |
+| **sum** | 99.00 | 23.00 |  |  |  |  | [4.11]{style="color: #e8e3d3"} |
+| **mean** | 9.90 | 2.30 |
+| **st. dev.** | 5.02 | 1.57 |
+
+: {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
+:::
+
+::: {style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 125px; height: 35px; position: absolute; top: 123px; left: 910px"}
+
+:::
+
+::: {style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 167px; height: 58px; position: absolute; top: 0px; right: -68px"}
+
+:::
+
+::: {style="color: #e93cac; background: #e8e3d3; border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 370px; right: -45px; text-align: center"}
+Calculate the product of<br>standardized scores of x and y
+:::
+
+---
+
+#### Calculating Correlation Coefficient (r)
+
+::: {style="text-align: left"}
+*Association between hours studied and number of dates*
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 2px 2px 2px 2px; position: absolute; top: -25px; right: -75px; text-align: center; font-size: 1em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {style="font-size: 0.9em; position: absolute; left: 0px; top: 125px; table-layout: fixed; width: 1050px"}
+| Person  | Hours studied ($x_i$) | Dates ($y_i$) | $x_i -\bar{x}$ | $\frac{x_i-\bar{x}}{s_x}$ | $y_i -\bar{y}$ | $\frac{y_i-\bar{y}}{s_y}$ | $(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$ |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| 1 | 10 | 1 | 0.10 | 0.02 | -1.30 | -0.83 | -0.02 |
+| 2 | 15 | 2 | 5.10 | 1.02 | -0.30 | -0.19 | -0.19 |
+| 3 | 10 | 5 | 0.10 | 0.02 | 2.70 | 1.72 | 0.03 |
+| 4 | 6 | 1 | -3.90 | -0.78 | -1.30 | -0.83 | 0.64 |
+| 5 | 2 | 0 | -7.90 | -1.57 | -2.30 | -1.47 | 2.31 |
+| 6 | 7 | 3 | -2.90 | -0.58 | 0.70 | 0.45 | -0.26 |
+| 7 | 10 | 4 | 0.10 | 0.02 | 1.70 | 1.08 | 0.02 |
+| 8 | 12 | 3 | 2.10 | 0.42 | 0.70 | 0.45 | 0.19 |
+| 9 | 7 | 1 | -2.90 | -0.58 | -1.30 | -0.83 | 0.48 |
+| 10 | 20 | 3 | 10.10 | 2.01 | 0.70 | 0.45 | 0.90 |
+| **sum** | 99.00 | 23.00 |  |  |  |  | [4.11]{style="color: #e8e3d3"} |
+| **mean** | 9.90 | 2.30 |
+| **st. dev.** | 5.02 | 1.57 |
+
+: {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
+:::
+
+::: {style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 540px; height: 395px; position: absolute; top: 171px; left: 500px"}
+
+:::
+
+::: {style="color: #e93cac; background: #e8e3d3; border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 25px; right: 0px; text-align: center"}
+Do the same thing for every case
+:::
 
 
 ---
@@ -3405,24 +3531,702 @@ $$
 | 8 | 12 | 3 | 2.10 | 0.42 | 0.70 | 0.45 | 0.19 |
 | 9 | 7 | 1 | -2.90 | -0.58 | -1.30 | -0.83 | 0.48 |
 | 10 | 20 | 3 | 10.10 | 2.01 | 0.70 | 0.45 | 0.90 |
-| **sum** | 99.00 | 23.00 |  |  |  |  | 4.11 |
+| **sum** | 99.00 | 23.00 |  |  |  |  | [**4.11**]{style="color: #e93cac"} |
 | **mean** | 9.90 | 2.30 |
 | **st. dev.** | 5.02 | 1.57 |
 
 : {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
 :::
 
+::: {style="border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; width: 30px; height: 20px; position: absolute; top: 17px; right: 100px"}
+
+:::
+
+::: {style="color: #e93cac; background: #e8e3d3; border: 3px solid #e93cac; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 5px; right: 125px; text-align: center"}
+Take the sum of the products of<br>standardized x and y values
+:::
+
+---
+
+#### Calculating Correlation Coefficient (r)
+
+::: {style="text-align: left"}
+*Association between hours studied and number of dates*
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 2px 2px 2px 2px; position: absolute; top: -25px; right: -75px; text-align: center; font-size: 1em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {style="font-size: 0.9em; position: absolute; left: 0px; top: 125px; table-layout: fixed; width: 1050px"}
+| Person  | Hours studied ($x_i$) | Dates ($y_i$) | $x_i -\bar{x}$ | $\frac{x_i-\bar{x}}{s_x}$ | $y_i -\bar{y}$ | $\frac{y_i-\bar{y}}{s_y}$ | $(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$ |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| 1 | 10 | 1 | 0.10 | 0.02 | -1.30 | -0.83 | -0.02 |
+| 2 | 15 | 2 | 5.10 | 1.02 | -0.30 | -0.19 | -0.19 |
+| 3 | 10 | 5 | 0.10 | 0.02 | 2.70 | 1.72 | 0.03 |
+| 4 | 6 | 1 | -3.90 | -0.78 | -1.30 | -0.83 | 0.64 |
+| 5 | 2 | 0 | -7.90 | -1.57 | -2.30 | -1.47 | 2.31 |
+| 6 | 7 | 3 | -2.90 | -0.58 | 0.70 | 0.45 | -0.26 |
+| 7 | 10 | 4 | 0.10 | 0.02 | 1.70 | 1.08 | 0.02 |
+| 8 | 12 | 3 | 2.10 | 0.42 | 0.70 | 0.45 | 0.19 |
+| 9 | 7 | 1 | -2.90 | -0.58 | -1.30 | -0.83 | 0.48 |
+| 10 | 20 | 3 | 10.10 | 2.01 | 0.70 | 0.45 | 0.90 |
+| **sum** | 99.00 | 23.00 |  |  |  |  | [**4.11**]{style="color: #e93cac"} |
+| **mean** | 9.90 | 2.30 |
+| **st. dev.** | 5.02 | 1.57 |
+
+: {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
+:::
+
+::: {style="background: #e93cac; border: 3px solid #690c48; border-radius: 15px; padding: 5px 15px 5px 15px; position: absolute; bottom: 0px; right: 125px; text-align: center; font-size: 1.25em"}
+[**Divide by n-1**]{style="color: white"}<br>
+$r = \frac{4.11}{10-1} = 0.456$
+:::
+
+---
+
+#### Association between hours studied and number of dates
+
+::: {style="position: absolute; left: -25px"}
+```{r}
+#| echo: false
+
+dates |>
+  gt() |> 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d") |> 
+  cols_label(hours = "Hours studied", dates = "Dates") 
+```
+:::
+
+::: {style="position: absolute; left: 175px; bottom: -25px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4.5
+
+ggplot(dates, aes(x = hours, y = dates)) + 
+  geom_point(size = 4, color = "black") + 
+  labs(x = "Hours studied", y = "Dates") + 
+  theme_tufte(base_size = 22) 
+```
+:::
+
+::: {.fragment style="border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; left: 175px; text-align: center"}
+Description of the association?
+:::
+
+::: {.fragment style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 150px; left: 178px; text-align: center"}
+Correlation $r = 0.456$<br>
+*Positive, moderate association*
+:::
+
+---
+
+#### Association between hours studied and number of dates
+
+::: {style="position: absolute; left: -25px"}
+```{r}
+#| echo: false
+
+dates |>
+  gt() |> 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", 
+              table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d") |> 
+  cols_label(hours = "Hours studied", dates = "Dates") 
+```
+:::
+
+::: {style="position: absolute; left: 175px; bottom: -25px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4.5
+
+ggplot(dates, aes(x = hours, y = dates)) + 
+  geom_point(size = 4, color = "#a68100", fill = "#ffc700", shape = 21) + 
+  labs(x = "Hours studied", y = "Dates") + 
+  theme_tufte(base_size = 22) 
+```
+:::
+
+::: {style="border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; left: 175px; text-align: center"}
+Description of the association?
+:::
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 150px; left: 178px; text-align: center"}
+Correlation $r = 0.456$<br>
+*Positive, moderate association*
+:::
+
+::: {style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 215px; right: -50px; text-align: center"}
+This is the DIRECTION and STRENGTH of<br>
+the association in the [**SAMPLE**]{.underline}
+:::
+
+::: {.fragment style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; right: -75px; text-align: center"}
+Want to know whether there is an association<br>in the [**POPULATION**]{.underline} *(i.e., whether the<br>observed association is statistically significant)*
+:::
+
+::: {.fragment style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 125px; right: 0px; text-align: center"}
+Need a hypothesis test...
+:::
 
 ## Hypothesis test for correlation
 
-1. Check assumptions
-2. State the hypothesis
-3. Identify alpha and the critical value of r
-4. Calculate the test statistic
-5. Make a decision
+<br>
 
-## Examples 
+::: {.fragment style="font-size: 1.5em"}
+[**GOAL**]{.underline}: We want to know if the association seen in the sample (as revealed by [**$r$**]{style="color: #e93cac"}) reflects
+:::
+
+<br>
+
+::: {.fragment style="border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.35em"}
+a [**real association**]{style="color: #6e8e13"} between the two variables in the [**population**]{style="color: #6e8e13"}
+:::
+
+<br>
+
+::: {.fragment style="position: absolute; left: 500px; bottom: 240px; text-align: center; font-size: 1.5em"}
+OR
+:::
+
+<br>
+
+::: {.fragment style="border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.35em"}
+chance [*sampling error*]{style="color: #754cbc"} when in reality the two variables are<br>[*not associated in the population*]{style="color: #754cbc"}
+:::
+
+## Hypothesis test for correlation 
+
+::: {style="font-size: 0.9em"}
+1. Check assumptions
+    * Random sample, variables roughly normally distributed in the population, linear relationship, homoscedasticity
+:::
+
+## Hypothesis test for correlation 
+
+::: {style="font-size: 0.9em"}
+1. Check assumptions
+    * Random sample, variables roughly normally distributed in the population, linear relationship, [homoscedasticity]{style="color: #e93cac"}
+:::
+
+::: {style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 200px; left: 100px; text-align: center"}
+Similar error of prediction *(similar spread around the line)* at all values of X
+:::
+
+::: {.fragment style="position: absolute; top: 275px; right: 15px; width: 90%"}
+![](images/skedasticity.png)
+:::
+
+## Hypothesis test for correlation 
+
+::: {style="font-size: 0.9em"}
+1. Check assumptions
+    * Random sample, variables roughly normally distributed in the population, linear relationship, homoscedasticity
+:::
+
+::: {.incremental style="font-size: 0.9em; position: absolute; top: 187px"}
+2. State the hypothesis
+    * $H_0: \rho = 0$ [(correlation in the population is 0)]{style="color: #754cbc"}
+    * $H_1: \rho \ne 0$ [(correlation in the population is statistically significantly different from 0)]{style="color: #6e8e13"}
+        * [or]{style="color: grey"} $H_1: \rho \gt 0$ [(correlation in the population is statistically significantly greater than 0)]{style="color: #6e8e13"}
+        * [or]{style="color: grey"} $H_1: \rho \lt 0$ [(correlation in the population is statistically significantly less than 0)]{style="color: #6e8e13"}
+3. Identify alpha and the critical value of $r$
+    * Use [this table](resources/Appendix B_ Statistical Tables.pdf) to get the ciritical value of $r$
+    * degrees of freedom $(df) = n-2$
+4. Calculate the test statistic
+    * Use $r$ calculated from the sample
+5. Make a decision
+    * Reject or fail to reject null hypothesis
+    * Make a statement about the implications for the [population]{.underline}
+:::
+
+## Hypothesis test for correlation 
+
+::: {style="font-size: 0.9em"}
+1. Check assumptions
+    * Random sample, variables roughly normally distributed in the population, linear relationship, homoscedasticity
+2. State the hypothesis
+    * $H_0: \rho = 0$ [(correlation in the population is 0)]{style="color: #754cbc"}
+    * $H_1: \rho \ne 0$ [(correlation in the population is statistically significantly different from 0)]{style="color: #6e8e13"}
+        * [or]{style="color: grey"} $H_1: \rho \gt 0$ [(correlation in the population is statistically significantly greater than 0)]{style="color: #6e8e13"}
+        * [or]{style="color: grey"} $H_1: \rho \lt 0$ [(correlation in the population is statistically significantly less than 0)]{style="color: #6e8e13"}
+3. Identify alpha and the critical value of $r$
+    * Use [this table](resources/Appendix B_ Statistical Tables.pdf) to get the ciritical value of $r$
+    * degrees of freedom $(df) = n-2$
+4. Calculate the test statistic
+    * Use $r$ calculated from the sample
+5. Make a decision
+    * Reject or fail to reject null hypothesis
+    * Make a statement about the implications for the [population]{.underline}
+:::
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+:::  {style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px;  padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+Association between hours studied and number of dates
+:::
+:::
+  
+::: {.column width="50%"}
+:::  {style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px;  padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+$r = 0.456$<br>
+*Positive, moderate association in the sample*
+:::
+:::
+  
+::::
+
+:::: {.columns}
+
+::: {.column width="40%"}
+#### 1. Check assumptions
+
+::: incremental
+* Random sample?
+* Variables roughly normally distributed in the population?
+    * check sample distributions for a clue
+* Linear relationship
+    * Check scatterplot
+* Homoscedasticity
+    * Similar error of prediction (similar spread around the line) at all values of X
+    * Check scatterplot
+:::
+:::
+
+::: {.column width="60%"}
+
+:::
+
+::::
+
+::: {style="position: absolute; right: -85px; bottom: 0px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4.5
+
+ggplot(dates, aes(x = hours, y = dates)) + 
+  geom_point(size = 4, color = "#a68100", fill = "#ffc700", shape = 21) + 
+  geom_smooth(se = FALSE, method = "lm") +
+  labs(x = "Hours studied", y = "Dates") + 
+  theme_tufte(base_size = 22) 
+```
+:::
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+:::  {style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px;  padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+Association between hours studied and number of dates
+:::
+:::
+  
+::: {.column width="50%"}
+:::  {style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px;  padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+$r = 0.456$<br>
+*Positive, moderate association in the sample*
+:::
+:::
+  
+::::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<br>
+
+#### [2. State the hypotheses]{style="font-size: 1.5em"}
+
+<br>
+
+#### [3. Decide on alpha and identify <br>  &nbsp; &nbsp; the critical value of $r$]{.fragment fragment-index=2 style="font-size: 1.25em"}
+
+
+#### [4. Calculate the test statistic]{.fragment fragment-index=3 style="font-size: 1.5em; position: absolute; bottom: 210px;"}
+
+
+#### [5. Make a decision]{.fragment fragment-index=4 style="font-size: 1.5em; position: absolute; bottom: 135px;"}
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+::: {.fragment fragment-index=1}
+$H_0: \rho = 0$ <br>
+$H_1: \rho \ne 0$
+:::
+
+<br>
+
+::: {.fragment fragment-index=2}
+Use alpha = 0.05 by default <br>
+Use [table](resources/Appendix B_ Statistical Tables.pdf) for critical values
+:::
+
+
+::: {.fragment fragment-index=3 style="position: absolute; bottom: 210px;"}
+$r \text{ observed} = 0.456$
+:::
+
+
+::: {.fragment fragment-index=4 style="position: absolute; bottom: 120px;"}
+Since $r \text{ observed (0.456)}$ < $r\text{ critical (0.6319)}$, <br>
+we [FAIL TO REJECT $H_0$]{style="color: #754cbc"}
+:::
+:::
+
+::::
+
+::: {.fragment fragment-index=1 style="color: #1b8883 ; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 200px; right: -50px; text-align: center"}
+**2-sided**<br>(direction typically not specified)
+:::
+
+::: {.fragment fragment-index=5 style="border: 3px solid #e93cac; margin: 10px; position: absolute; bottom: 0px; text-align: center"}
+We **cannot** say that there is an association between hours studied and number of dates [in the population]{.underline} of students
+:::
+
+## Practice
+
+1. Calculate $r$
+2. Interpret $r$
+3. Test statistical significance of $r$
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: 0px; text-align: center; font-size: 1.5em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+
+::: {.fragment fragment-index=2 style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; left: 25px"}
+[**Example 1**]{.underline}<br>
+Association between hours<br>on TikTok and # of dates?
+:::
+
+
+
+::: {.fragment fragment-index=2 style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; right: 25px"}
+[**Example 2**]{.underline}<br>
+Association between hours playing<br>video games and # of dates?
+:::
+
+
+::: {.fragment fragment-index=1 style="position: absolute; bottom: 0px; width: 1050px"}
+|  |  |  |  |   |  |  |  |  |   |   |  Mean | s |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Hours of<br>playing video games** | 10 | 5 | 0 | 0  | 5  | 0 | 0 | 0 | 0  |  0 |  2.00 | 3.50 |
+| **Hours on<br>TikTok** | 0 | 3 | 5 | 15  | 14 | 25  | 1  | 1 | 5  |  22 |  9.10 | 9.21 |
+| **# of<br>dates** | 1 | 2  | 5 | 1  | 0  | 3 | 4 | 3 | 1  |  3 |  2.30 | 1.57 |
+
+: {tbl-colwidths="[30, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 10]"}
+:::
+
+---
+
+## {visibility="hidden"}
+
+::: {style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; left: 25px;  top: -25px;"}
+[**Example 1**]{.underline}<br>
+Association between hours<br>on TikTok and # of dates?
+:::
+
+::: {style="background: #e8e3d3; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: -25px; right: 0px; text-align: center; font-size: 1.25em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {.fragment fragment-index=1 style="font-size: 0.9em; position: absolute; left: 0px; bottom: -25px; table-layout: fixed; width: 1050px"}
+| Person  | Tiktok hours ($x_i$) | Dates ($y_i$) | $x_i -\bar{x}$ | $\frac{x_i-\bar{x}}{s_x}$ | $y_i -\bar{y}$ | $\frac{y_i-\bar{y}}{s_y}$ | $(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$ |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| 1 | 0 | 1 | -9.10 | -0.99 | -1.30 | -0.83 | 0.82 |
+| 2 | 3 | 2 | -6.10 | -0.66 | -0.30 | -0.19 | 0.13 |
+| 3 | 5 | 5 | -4.10 | -0.45 | 2.70 | 1.72  | -0.77  |
+| 4 | 15 | 1 | 5.90 | 0.64 | -1.30  | -0.83 | -0.53 |
+| 5 | 14 | 0 | 4.90 | 0.53 | -2.30  | -1.47 | -0.78 |
+| 6 | 25 | 3 | 15.90  | 1.73 | 0.70  | 0.45  |  0.77 |
+| 7 | 1 | 4 | -8.10 | -0.88 | 1.70 | 1.08 | -0.95 |
+| 8 | 1 | 3 | -8.10 | -0.88 | 1.70 | 0.45 | -0.39 |
+| 9 | 5 | 1 | -4.10 | -0.45 | -1.30 | -0.83 | 0.37 |
+| 10 | 22 | 3 | 12.90 | 1.40 | 0.70 | 0.45 | 0.63 |
+| **sum** | 91.00 | 23.00 |  |  |  |  | [**-0.71**]{style="color: #e93cac"} |
+| **mean** | 9.10 | 2.30 |
+| **st. dev.** | 9.21 | 1.57 |
+
+: {tbl-colwidths="[10,25,15,10,10,10,10,10]"}
+:::
+
+::: {.fragment fragment-index=1 style="background: #e93cac; border: 3px solid #690c48; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: -5px; right: 125px; text-align: center; font-size: 1.25em"}
+$r = \frac{-0.71}{10-1} =$ [$-0.079$]{style="color: white"}
+:::
+
+::: {.fragment fragment-index=2 style="background: #e8e3d3; color: #1b8883; border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 160px; left: 0px; text-align: center"}
+**Interpretation?**
+:::
+
+::: {.fragment fragment-index=2 style="background: #2ad2c9; border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 250px; left: 0px; text-align: center; width: 500px"}
+Weak negative association between hours on TikTok and number of dates
+:::
+
+::: {.fragment fragment-index=3 style="background: #e8e3d3; color: #754cbc; border: 3px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 250px; left: 0px; text-align: center"}
+**Statistical significance?**
+:::
+
+::: {.fragment fragment-index=3 style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; left: 0px; text-align: center; width: 600px"}
+Since absolute value of r-obtained (0.076) is less extreme than the critical value of r (0.6319), we fail to reject $H_0$ that $\rho = 0$. <br>We do not have enough evidence to say that the association observed in the sample exists in the population. It is not statistically significant.
+:::
+
+---
+
+## {visibility="hidden"}
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; left: 25px; top: -25px"}
+[**Example 2**]{.underline}<br>
+Association between hours playing<br>video games and # of dates?
+:::
+
+::: {style="background: #e8e3d3; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: -25px; right: 0px; text-align: center; font-size: 1.25em"}
+$$
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+$$
+:::
+
+::: {.fragment fragment-index=1 style="font-size: 0.9em; position: absolute; left: 0px; bottom: -25px; table-layout: fixed; width: 1050px"}
+| Person  | Video game hours ($x_i$) | Dates ($y_i$) | $x_i -\bar{x}$ | $\frac{x_i-\bar{x}}{s_x}$ | $y_i -\bar{y}$ | $\frac{y_i-\bar{y}}{s_y}$ | $(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})$ |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| 1 | 0 | 1 | 8.00 | 2.29 | -1.30 | -0.83 | 0.82 |
+| 2 | 3 | 2 | 3.00 | 0.86 | -0.30 | -0.19 | 0.13 |
+| 3 | 5 | 5 | -2.00 | -0.57 | 2.70 | 1.72  | -0.77  |
+| 4 | 15 | 1 | -2.00 |  -0.57 | -1.30  | -0.83 | -0.53 |
+| 5 | 14 | 0 | 3.00 | 0.86 | -2.30  | -1.47 | -0.78 |
+| 6 | 25 | 3 | -2.00 | -0.57  | 0.70  | 0.45  |  0.77 |
+| 7 | 1 | 4 | -2.00 | -0.57 | 1.70 | 1.08 | -0.95 |
+| 8 | 1 | 3 | -2.00 | -0.57 | 1.70 | 0.45 | -0.39 |
+| 9 | 5 | 1 | -2.00 | -0.57 | -1.30 | -0.83 | 0.37 |
+| 10 | 22 | 3 | -2.00 | -0.57 | 0.70 | 0.45 | 0.63 |
+| **sum** | 91.00 | 23.00 |  |  |  |  | [**-4.75**]{style="color: #e93cac"} |
+| **mean** | 9.10 | 2.30 |
+| **st. dev.** | 9.21 | 1.57 |
+
+: {tbl-colwidths="[7,30,15,8,10,8,10,10]"}
+:::
+
+::: {.fragment fragment-index=1 style="background: #e93cac; border: 3px solid #690c48; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: -5px; right: 125px; text-align: center; font-size: 1.25em"}
+$r = \frac{-4.75}{10-1} =$ [$-0.528$]{style="color: white"}
+:::
+
+::: {.fragment fragment-index=2 style="background: #e8e3d3; color: #a68100; border: 3px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 160px; left: 0px; text-align: center"}
+**Interpretation?**
+:::
+
+::: {.fragment fragment-index=2 style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 250px; left: 0px; text-align: center; width: 550px"}
+Moderate negative association between hours of video games played and number of dates.
+:::
+
+::: {.fragment fragment-index=3 style="background: #e8e3d3; color: #754cbc; border: 3px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 250px; left: 0px; text-align: center"}
+**Statistical significance?**
+:::
+
+::: {.fragment fragment-index=3 style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; left: 0px; text-align: center; width: 600px"}
+Since absolute value of r-obtained (0.528) is less extreme than the critical value of r (0.6319), we fail to reject $H_0$ that $\rho = 0$. <br>We do not have enough evidence to say that the association observed in the sample exists in the population. It is not statistically significant.
+:::
+
+# Correlation matrix
+
+---
+
+::: {style="font-size: 0.9em; position: absolute; left: -50px; top: 25px; width: 350px; text-align: center; color: #1b8883; border: 3px solid #1b8883;"}
+Data from a sample of 102 adults results in the correlation matrix to the right
+:::
+
+::: {style="font-size: .90em; position: absolute; right: -75px; top: 0px; table-layout: fixed; width: 800px"}
+|   | Age | Hours Worked | Hours on leisure | 
+|:------:|:------:|:------:|:------:|
+| Age | 1.00 | 0.28 | -0.40 |
+| Hours Worked | 0.28 | 1.00 | -0.61 | 
+| Hours on leisure | -0.40 | -0.61 | 1.00 |
+
+: {tbl-colwidths="[30, 10, 30, 30]"}
+:::
+
+::: {.fragment style="font-size: 1.25em; position: absolute; left: 300px; top: 175px; text-align: center; color: #e8e3d3; background: #1b8883; border: 4px solid #1b8883"}
+Interpret the correlation coefficients
+:::
+
+---
+
+::: {style="font-size: 0.9em; position: absolute; left: -50px; top: 25px; width: 350px; text-align: center; color: #1b8883; border: 3px solid #1b8883;"}
+Data from a sample of 102 adults results in the correlation matrix to the right
+:::
+
+::: {style="font-size: .90em; position: absolute; right: -75px; top: 0px; table-layout: fixed; width: 800px"}
+|   | Age | Hours Worked | Hours on leisure | 
+|:------:|:------:|:------:|:------:|
+| Age | 1.00 | [**0.28**]{style="color: #e93cac"} | -0.40 |
+| Hours Worked | [**0.28**]{style="color: #e93cac"} | 1.00 | -0.61 | 
+| Hours on leisure | -0.40 | -0.61 | 1.00 |
+
+: {tbl-colwidths="[30, 10, 30, 30]"}
+:::
+
+::: {style="font-size: 1.25em; position: absolute; left: 300px; top: 175px; text-align: center; color: #e8e3d3; background: #1b8883; border: 4px solid #1b8883"}
+Interpret the correlation coefficients
+:::
+
+::: {style="font-size: 1.25em; text-align: center; color: #e93cac; border: 4px solid #e93cac; position: absolute; top: 270px;"}
+Weak positive association between age and hours worked *in this sample*.
+:::
+
+---
+
+::: {style="font-size: 0.9em; position: absolute; left: -50px; top: 25px; width: 350px; text-align: center; color: #1b8883; border: 3px solid #1b8883;"}
+Data from a sample of 102 adults results in the correlation matrix to the right
+:::
+
+::: {style="font-size: .90em; position: absolute; right: -75px; top: 0px; table-layout: fixed; width: 800px"}
+|   | Age | Hours Worked | Hours on leisure | 
+|:------:|:------:|:------:|:------:|
+| Age | 1.00 | [**0.28**]{style="color: #e93cac"} | [**-0.40**]{style="color: #a68100"} |
+| Hours Worked | [**0.28**]{style="color: #e93cac"} | 1.00 | -0.61 | 
+| Hours on leisure | [**-0.40**]{style="color: #a68100"} | -0.61 | 1.00 |
+
+: {tbl-colwidths="[30, 10, 30, 30]"}
+:::
+
+::: {style="font-size: 1.25em; position: absolute; left: 300px; top: 175px; text-align: center; color: #e8e3d3; background: #1b8883; border: 4px solid #1b8883"}
+Interpret the correlation coefficients
+:::
+
+::: {style="font-size: 1.25em; text-align: center; color: #e93cac; border: 4px solid #e93cac; position: absolute; top: 270px;"}
+Weak positive association between age and hours worked *in this sample*.
+:::
+
+::: {style="font-size: 1.25em; text-align: center; color: #a68100; border: 4px solid #a68100; position: absolute; top: 410px;"}
+Moderate negative association between age and leisure hours *in this sample*.
+:::
+
+---
+
+::: {style="font-size: 0.9em; position: absolute; left: -50px; top: 25px; width: 350px; text-align: center; color: #1b8883; border: 3px solid #1b8883;"}
+Data from a sample of 102 adults results in the correlation matrix to the right
+:::
+
+::: {style="font-size: .90em; position: absolute; right: -75px; top: 0px; table-layout: fixed; width: 800px"}
+|   | Age | Hours Worked | Hours on leisure | 
+|:------:|:------:|:------:|:------:|
+| Age | 1.00 | [**0.28**]{style="color: #e93cac"} | [**-0.40**]{style="color: #a68100"} |
+| Hours Worked | [**0.28**]{style="color: #e93cac"} | 1.00 | [**-0.61**]{style="color: #754cbc"} | 
+| Hours on leisure | [**-0.40**]{style="color: #a68100"} | [**-0.61**]{style="color: #754cbc"} | 1.00 |
+
+: {tbl-colwidths="[30, 10, 30, 30]"}
+:::
+
+::: {style="font-size: 1.25em; position: absolute; left: 300px; top: 175px; text-align: center; color: #e8e3d3; background: #1b8883; border: 4px solid #1b8883"}
+Interpret the correlation coefficients
+:::
+
+::: {style="font-size: 1.25em; text-align: center; color: #e93cac; border: 4px solid #e93cac; position: absolute; top: 270px;"}
+Weak positive association between age and hours worked *in this sample*.
+:::
+
+::: {style="font-size: 1.25em; text-align: center; color: #a68100; border: 4px solid #a68100; position: absolute; top: 410px; "}
+Moderate negative association between age and leisure hours *in this sample*.
+:::
+
+::: {style="font-size: 1.25em; text-align: center; color: #754cbc; border: 4px solid #754cbc; position: absolute; top: 550px;"}
+Strong negative association between hours worked and leisure hours *in this sample*.
+:::
+
+---
+
+::: {style="font-size: 0.9em; position: absolute; left: -50px; top: 25px; width: 350px; text-align: center; color: #1b8883; border: 3px solid #1b8883;"}
+Data from a sample of 102 adults results in the correlation matrix to the right
+:::
+
+::: {style="font-size: .90em; position: absolute; right: -75px; top: 0px; table-layout: fixed; width: 800px"}
+|   | Age | Hours Worked | Hours on leisure | 
+|:------:|:------:|:------:|:------:|
+| Age | 1.00 | [**0.28**]{style="color: #e93cac"} | [**-0.40**]{style="color: #a68100"} |
+| Hours Worked | [**0.28**]{style="color: #e93cac"} | 1.00 | [**-0.61**]{style="color: #754cbc"} | 
+| Hours on leisure | [**-0.40**]{style="color: #a68100"} | [**-0.61**]{style="color: #754cbc"} | 1.00 |
+
+: {tbl-colwidths="[30, 10, 30, 30]"}
+:::
+
+::: {style="font-size: 1em; position: absolute; left: 25px; top: 175px; text-align: center; color: #e8e3d3; background: #1b8883; border: 4px solid #1b8883"}
+Which of these correlation coefficients is statistically significant at the 0.5 alpha level?
+:::
+
+::: {style="font-size: 1.25em; text-align: center; color: #e93cac; border: 4px solid #e93cac; position: absolute; top: 270px;"}
+Weak positive association between age and hours worked *in this sample*.
+:::
+
+::: {style="font-size: 1.25em; text-align: center; color: #a68100; border: 4px solid #a68100; position: absolute; top: 410px; "}
+Moderate negative association between age and leisure hours *in this sample*.
+:::
+
+::: {style="font-size: 1.25em; text-align: center; color: #754cbc; border: 4px solid #754cbc; position: absolute; top: 550px;"}
+Strong negative association between hours worked and leisure hours *in this sample*.
+:::
+
+
+---
+
+::: {style="font-size: 0.9em; position: absolute; left: -50px; top: 25px; width: 350px; text-align: center; color: #1b8883; border: 3px solid #1b8883;"}
+Data from a sample of 102 adults results in the correlation matrix to the right
+:::
+
+::: {style="font-size: .90em; position: absolute; right: -75px; top: 0px; table-layout: fixed; width: 800px"}
+|   | Age | Hours Worked | Hours on leisure | 
+|:------:|:------:|:------:|:------:|
+| Age | 1.00 | [**0.28**]{style="color: #e93cac"} | [**-0.40**]{style="color: #a68100"} |
+| Hours Worked | [**0.28**]{style="color: #e93cac"} | 1.00 | [**-0.61**]{style="color: #754cbc"} | 
+| Hours on leisure | [**-0.40**]{style="color: #a68100"} | [**-0.61**]{style="color: #754cbc"} | 1.00 |
+
+: {tbl-colwidths="[30, 10, 30, 30]"}
+:::
+
+::: {style="font-size: 1em; position: absolute; left: 25px; top: 175px; text-align: center; color: #e8e3d3; background: #1b8883; border: 4px solid #1b8883"}
+Which of these correlation coefficients is statistically significant at the 0.5 alpha level?
+:::
+
+::: {style="font-size: 1.5em; text-align: center; color: #6e8e13; border: 4px solid #6e8e13; position: absolute; top: 270px; left: 300px; padding: 5px 5px 5px 5px;"}
+$H_a: \rho \ne 0$
+:::
+
+::: {style="font-size: 1.5em; text-align: center; color: #754cbc; border: 4px solid #754cbc; position: absolute; top: 270px; right: 300px; padding: 5px 5px 5px 5px;"}
+$H_0: \rho = 0$
+:::
+
+::: {.fragment style="font-size: 1.25em; text-align: center; color: black; border: 4px solid black; position: absolute; top: 400px; left: 0px; padding: 5px 5px 5px 5px;"}
+Compare observed values of $r$ to the<br>[critical value of $r$](resources/Appendix B_ Statistical Tables.pdf)
+:::
+
+::: {.fragment style="font-size: 1.5em; text-align: center; background: black; color: white; border: 4px solid black; position: absolute; top: 420px; right: 0px; padding: 5px 5px 5px 5px;"}
+critical value of $r = 0.1946$
+:::
+
+::: {.fragment style="font-size: 1em; text-align: center; border: 3px solid #6e8e13; position: absolute; bottom: 0px; padding: 5px 5px 5px 5px;"}
+Since all observed values of $r$ are MORE EXTREME than the critical value of $r$, we can [reject the null hypothesis]{style="color: #754cbc"} in each case and conclude that the [correlations are likely non-zero IN THE POPULATION]{style="color: #6e8e13"} (all sample correlations **statistically significant**)
+:::
 
 # Homework{.section-title background-color="#e8e3d3"}
 
-## {data-menu-title="Homework 8" background-iframe="https://vsass.github.io/SOC221/homework/homework8.html" background-interactive=TRUE}
+## {data-menu-title="Homework 6" background-iframe="https://vsass.github.io/SOC221/homework/homework6.html" background-interactive=TRUE}
