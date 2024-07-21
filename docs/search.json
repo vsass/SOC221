@@ -1284,8 +1284,8 @@
     "objectID": "lectures/lecture9.html#bivariate-regression-1",
     "href": "lectures/lecture9.html#bivariate-regression-1",
     "title": "",
-    "section": "Bivariate regression",
-    "text": "Bivariate regression"
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\nDraw a scatterplot\n\n\nUse a line to describe thepattern of points\n\n\n\n\n\n\n\n\n\nEducation\nIncome\n\n\n\n\n12\n26000\n\n\n16\n33000\n\n\n13\n27750\n\n\n14\n29500\n\n\n8\n19000\n\n\n15\n31250\n\n\n16\n33000\n\n\n16\n33000\n\n\n11\n24250\n\n\n20\n40000\n\n\n17\n34750\n\n\n2\n8500\n\n\n\n\n\n\n\n\n\nCan use this line to predict the level of income for a person with any level of education  (within the range that we observe)"
   },
   {
     "objectID": "lectures/lecture9.html#deterministic-association",
@@ -1326,8 +1326,8 @@
     "objectID": "lectures/lecture9.html#coefficient-of-determination",
     "href": "lectures/lecture9.html#coefficient-of-determination",
     "title": "",
-    "section": "Coefficient of determination",
-    "text": "Coefficient of determination"
+    "section": "Coefficient of Determination",
+    "text": "Coefficient of Determination\n\nAssessing the fit of the regression line\n\n\n\\(\\widehat{\\text{Income}} = 1721.989 + 1566.515(\\text{Education})\\)\n\n\n\n\n\nThis is the line that fits the data best - i.e., comes as close as possible, on average, to all points.\n\n\n\nBUT STILL DOES NOT “FIT”  THE DATA PERFECTLY  (misses some points)"
   },
   {
     "objectID": "lectures/lecture9.html#coefficient-of-determination-interpretations",
@@ -2350,5 +2350,208 @@
     "title": "",
     "section": "Correlation matrix",
     "text": "Correlation matrix\n\nData from a sample of 100 adults results in the correlation matrix to the right\n\n\n\n\n\n\n\n\n\n\n\n\nAge\nHours Worked\nHours on leisure\n\n\n\n\nAge\n1.00\n0.28\n-0.40\n\n\nHours Worked\n0.28\n1.00\n-0.61\n\n\nHours on leisure\n-0.40\n-0.61\n1.00"
+  },
+  {
+    "objectID": "lectures/lecture9.html#correlation-and-regression",
+    "href": "lectures/lecture9.html#correlation-and-regression",
+    "title": "",
+    "section": "Correlation and Regression",
+    "text": "Correlation and Regression\n\n\nThe two most common tool for measuring  associations between interval variables\n\n\n\n\nCORRELATION\n\n\nstandardized summary of association between our variables\n\ndoes not depend on the units of the variables\n\nalways 0 to |1.0|\n\nallows for comparison of associations between different pairs of variables\n\n\n\n\nREGRESSION\n\n\ncharacterizes the substantive effect of X on Y\n\nhow much Y differs across different values of X\nconveyed in units of our specific independent and dependent variables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBoth correlation and regression are based on a description of a line used to characterize data points in a scatterplot"
+  },
+  {
+    "objectID": "lectures/lecture9.html#correlation-vs.-bivariate-regression",
+    "href": "lectures/lecture9.html#correlation-vs.-bivariate-regression",
+    "title": "",
+    "section": "Correlation vs. bivariate regression",
+    "text": "Correlation vs. bivariate regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCorrelation:\n\nassess how tightly clustered points in the scatterplot around a line\n\n\n\n\nBivariate Regression:\n\ndescribe the line that characterizes the points in the scatterplot\ntells us how the dependent (Y) variable changes for a one-unit change in the independent (X) variable\nallows us to predict values of Y based on values of X"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-2",
+    "href": "lectures/lecture9.html#bivariate-regression-2",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\nDraw a scatterplot\n\n\nUse a line to describe thepattern of points\n\n\n\n\n\n\n\n\n\nEducation\nIncome\n\n\n\n\n12\n26000\n\n\n16\n33000\n\n\n13\n27750\n\n\n14\n29500\n\n\n8\n19000\n\n\n15\n31250\n\n\n16\n33000\n\n\n16\n33000\n\n\n11\n24250\n\n\n20\n40000\n\n\n17\n34750\n\n\n2\n8500\n\n\n\n\n\n\n\n\n\nCan use this line to predict the level of income for a person with any level of education  (within the range that we observe)"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-3",
+    "href": "lectures/lecture9.html#bivariate-regression-3",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\nDraw a scatterplot\n\n\nUse a line to describe thepattern of points\n\n\n\n\n\n\n\n\n\nEducation\nIncome\n\n\n\n\n12\n26000\n\n\n16\n33000\n\n\n13\n27750\n\n\n14\n29500\n\n\n8\n19000\n\n\n15\n31250\n\n\n16\n33000\n\n\n16\n33000\n\n\n11\n24250\n\n\n20\n40000\n\n\n17\n34750\n\n\n2\n8500\n\n\n\n\n\n\n\n\n\nCan use this line to predict the level of income for a person with any level of education  (within the range that we observe)"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-4",
+    "href": "lectures/lecture9.html#bivariate-regression-4",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-5",
+    "href": "lectures/lecture9.html#bivariate-regression-5",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)  (the dependent variable)\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-6",
+    "href": "lectures/lecture9.html#bivariate-regression-6",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)  (the dependent variable)\n\n\n\\(x\\) is the value of \\(X\\)  for the individual\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-7",
+    "href": "lectures/lecture9.html#bivariate-regression-7",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)  (the dependent variable)\n\n\n\\(x\\) is the value of \\(X\\)  for the individual\n\n\n\\(b = \\text{slope of the line}\\)  (i.e. how much \\(Y\\) changes with each one-unit difference in \\(X\\))\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-8",
+    "href": "lectures/lecture9.html#bivariate-regression-8",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)  (the dependent variable)\n\n\n\\(x\\) is the value of \\(X\\)  for the individual\n\n\n\\(b = \\text{slope of the line}\\)  (i.e. how much \\(Y\\) changes with each one-unit difference in \\(X\\))\n\n\n\\(a = \\text{Y-intercept}\\)  (the predicted value of \\(Y\\) when \\(X = 0\\); a.k.a. the constant)\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-9",
+    "href": "lectures/lecture9.html#bivariate-regression-9",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n   \n\n\\(\\widehat{y}\\) \\(=\\) \\(5000\\) \\(+\\) \\(1750\\)\\(x\\)\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-10",
+    "href": "lectures/lecture9.html#bivariate-regression-10",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n   \n\n\\(\\widehat{y}\\) \\(=\\) \\(5000\\) \\(+\\) \\(1750\\)\\(x\\)\n\n\n\nA person with \\(0\\) years of education is predicted to make \\(\\$5,000\\)\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-11",
+    "href": "lectures/lecture9.html#bivariate-regression-11",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n   \n\n\\(\\widehat{y}\\) \\(=\\) \\(5000\\) \\(+\\) \\(1750\\)\\(x\\)\n\n\n\nA person with \\(0\\) years of education is predicted to make \\(\\$5,000\\)\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah\n\n\n\n\n\n\n\n\n\n\n\n\n\nIncome is predicted to increase by \\(\\$1,750\\) for each additional year of education"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-12",
+    "href": "lectures/lecture9.html#bivariate-regression-12",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(5000\\) \\(+\\) \\(1750\\)\\(x\\)\n\n\n\n\nDeterministic association:   All of the points in the scatterplot fall on the line.  Perfectly predict\\(Y\\) based on \\(X\\).  \\(|r| = 1.0\\)\n\n\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-13",
+    "href": "lectures/lecture9.html#bivariate-regression-13",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\n\nNon-deterministic association:   Points in the scatterplot do not all fall on the line  Cannot perfectly predict \\(Y\\) based on \\(X\\).  \\(|r| \\lt 1.0\\)\n\n\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-14",
+    "href": "lectures/lecture9.html#bivariate-regression-14",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\n\nNon-deterministic association: \n\n\n\n\nA lot of different lines appear to characterize the points\n\n\n\nEach line comes close to some points but misses others by a lot.\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-15",
+    "href": "lectures/lecture9.html#bivariate-regression-15",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nWant the line that fits the data best - i.e. comes as close as possible, on average, to all points\n\n\n\nTechnically: Want the line that minimizes the (squared) errors we would make in predicting \\(Y\\) with the line\n\n\n\nLooking for the least squares regression line\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-16",
+    "href": "lectures/lecture9.html#bivariate-regression-16",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nWant the line that fits the data best - i.e. comes as close as possible, on average, to all points\n\n\n\nNeed two components of the regression line:\n\n\\(a\\) (y-intercept)\n\\(b\\) (slope)\n\n\n\n\nCalculating the least squares regression line\n\n\nStep 1: calculate the slope\n\n\n\\[\\begin{aligned}\n\\color{#e93cac}{b} = {r}(\\frac{{s_y}}{{s_x}})\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-17",
+    "href": "lectures/lecture9.html#bivariate-regression-17",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nWant the line that fits the data best - i.e. comes as close as possible, on average, to all points\n\n\n\nNeed two components of the regression line:\n\n\\(a\\) (y-intercept)\n\\(b\\) (slope)\n\n\n\n\nCalculating the least squares regression line\n\n\nStep 1: calculate the slope\n\n\n\\[\\begin{aligned}\n\\color{#e93cac}{b} = \\color{#a68100}{r}(\\frac{{s_y}}{{s_x}})\n\\end{aligned}\\]\n\n\nCorrelation coefficient"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-18",
+    "href": "lectures/lecture9.html#bivariate-regression-18",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nWant the line that fits the data best - i.e. comes as close as possible, on average, to all points\n\n\n\nNeed two components of the regression line:\n\n\\(a\\) (y-intercept)\n\\(b\\) (slope)\n\n\n\n\nCalculating the least squares regression line\n\n\nStep 1: calculate the slope\n\n\n\\[\\begin{aligned}\n\\color{#e93cac}{b} = \\color{#a68100}{r}(\\frac{\\color{#6e8e13}{s_y}}{{s_x}})\n\\end{aligned}\\]\n\n\nCorrelation coefficient\n\n\nStandard deviation ofthe dependent variable"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-19",
+    "href": "lectures/lecture9.html#bivariate-regression-19",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nWant the line that fits the data best - i.e. comes as close as possible, on average, to all points\n\n\n\nNeed two components of the regression line:\n\n\\(a\\) (y-intercept)\n\\(b\\) (slope)\n\n\n\n\nCalculating the least squares regression line\n\n\nStep 1: calculate the slope\n\n\n\\[\\begin{aligned}\n\\color{#e93cac}{b} = \\color{#a68100}{r}(\\frac{\\color{#6e8e13}{s_y}}{\\color{#1b8883}{s_x}})\n\\end{aligned}\\]\n\n\nCorrelation coefficient\n\n\nStandard deviation ofthe dependent variable\n\n\nStandard deviation ofthe independent variable"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-20",
+    "href": "lectures/lecture9.html#bivariate-regression-20",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nWant the line that fits the data best - i.e. comes as close as possible, on average, to all points\n\n\n\nNeed two components of the regression line:\n\n\\(a\\) (y-intercept)\n\\(b\\) (slope)\n\n\n\n\nCalculating the least squares regression line\n\n\nStep 2: calculate the Y-intercept\n\n\n\\[\\begin{aligned}\n\\color{#754cbc}{a} = \\color{#6e8e13}{\\bar{y}}-\\color{#e93cac}{b}\\color{#1b8883}{\\bar{x}}\n\\end{aligned}\\]\n\n\nMean of thedependent variable\n\n\nSlope\n\n\nMean of theindependent variable"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-21",
+    "href": "lectures/lecture9.html#bivariate-regression-21",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\nStep 1: calculate the slope\n\n\n\n\\[\\begin{aligned} \\color{#e93cac}b &= r(\\frac{s_y}{s_x}) \\\\ &= 0.857(\\frac{8655.131}{4.735}) \\\\ &= \\color{#e93cac}{1566.515} \\end{aligned}\\]\n\n\nIncome increases by \\(\\color{#e93cac}{\\$1,566.52}\\) for each additional year of education\n\n\n\n\\(\\bar{y} =\\) 22608.333       \\(\\bar{x} =\\) 13.333  \\(s_y =\\) 8655.131       \\(s_x =\\) 4.735  \\(r =\\) 0.857"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-22",
+    "href": "lectures/lecture9.html#bivariate-regression-22",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\nStep 2: calculate the Y-intercept\n\n\n\n\\[\\begin{aligned} \\color{#754cbc}a &= \\bar{y} - b\\bar{x} \\\\ &= 22608.333 - (1566.515)(13.333) \\\\ &= \\color{#754cbc}{1721.989} \\end{aligned}\\]\n\n\nA person with \\(0\\) years ofeducation is predicted tomake \\(\\color{#754cbc}{\\$1721.99}\\).\n\n\n\n\\(\\bar{y} =\\) 22608.333       \\(\\bar{x} =\\) 13.333  \\(s_y =\\) 8655.131       \\(s_x =\\) 4.735  \\(r =\\) 0.857"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-23",
+    "href": "lectures/lecture9.html#bivariate-regression-23",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\nOrdinary least squares regression line: \\(\\widehat{y} = a + bx\\)\n\n\n\\(\\widehat{\\text{Income}} = 1721.989 + 1566.515(\\text{Education})\\)\n\n\n\n\n\nThis is the line that fits the data best - i.e., comes as close as possible, on average, to all points.\n\n\nTechnically: The line that minimizes the (squared) errors we would make in predicting Y with the line"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-24",
+    "href": "lectures/lecture9.html#bivariate-regression-24",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\nOrdinary least squares regression line: \\(\\widehat{y} = a + bx\\)\n\n\n\\(\\widehat{\\text{Income}} = 1721.989 + 1566.515(\\text{Education})\\)\n\n\n\n\n\nCan use this line to predict values of Y (income) for any value of X (education)\n\n\nExample: What is the predicted level of income for a person with 14 years of education?"
+  },
+  {
+    "objectID": "lectures/lecture9.html#bivariate-regression-25",
+    "href": "lectures/lecture9.html#bivariate-regression-25",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\nOrdinary least squares regression line: \\(\\widehat{y} = a + bx\\)\n\n\n\\(\\widehat{\\text{Income}} = 1721.989 + 1566.515(\\text{Education})\\)\n\n\n\n\n\nCan use this line to predict values of Y (income) for any value of X (education)\n\n\nExample: What is the predicted level of income for a person with 14 years of education?\n\n\n\\(\\begin{aligned} \\widehat{\\text{Income}} &= 1721.989 + 1566.515(14) \\\\ &= 23653.20 \\end{aligned}\\)"
+  },
+  {
+    "objectID": "lectures/lecture9.html#coefficient-of-determination-1",
+    "href": "lectures/lecture9.html#coefficient-of-determination-1",
+    "title": "",
+    "section": "Coefficient of Determination",
+    "text": "Coefficient of Determination\n\nAssessing the fit of the regression line\n\n\n\\(\\widehat{\\text{Income}} = 1721.989 + 1566.515(\\text{Education})\\)\n\n\n\n\n\nCoefficient of determination (\\(R^2\\)) measures the level of model fit\n\n\n\\[\nR^2 = (\\color{#1b8883}{r})(\\color{#1b8883}{r})\n\\]\n\n\nSimply square thecorrelation coefficient\n\n\n\nRange of \\(R^2\\): \n\\(0.0 =\\) no association,  no predictive value of knowing X  \\(1.0 =\\) deterministic"
+  },
+  {
+    "objectID": "lectures/lecture9.html#coefficient-of-determination-2",
+    "href": "lectures/lecture9.html#coefficient-of-determination-2",
+    "title": "",
+    "section": "Coefficient of determination",
+    "text": "Coefficient of determination"
+  },
+  {
+    "objectID": "lectures/lecture9.html#interpretation-of-the-coefficient-of-determination",
+    "href": "lectures/lecture9.html#interpretation-of-the-coefficient-of-determination",
+    "title": "",
+    "section": "Interpretation of the Coefficient of Determination",
+    "text": "Interpretation of the Coefficient of Determination\n\n\n\n\\[\nR^2 = (r)(r)\n\\]\n\n\n\nINTERPRETATION #1"
   }
 ]

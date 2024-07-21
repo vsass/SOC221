@@ -2714,6 +2714,7 @@ A measure of association reflecting both the strength and the direction of the a
 <br>
 
 ::: fragment
+
 ::: incremental
 [Why it's helpful]{.underline}
 
@@ -2726,7 +2727,9 @@ A measure of association reflecting both the strength and the direction of the a
     * always ranges from 0 to |1|
     * therefore, allows for comparison of bivariate associations between different pairs of variables
 :::
+
 :::
+
 :::
 
 ::::
@@ -2780,7 +2783,7 @@ A measure of association reflecting both the strength and the direction of the a
 :::
 :::
   
-::: {.column width="50%"}f
+::: {.column width="50%"}
 
 ::: incremental
 [Interpretation]{.underline}
