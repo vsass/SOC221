@@ -3943,8 +3943,6 @@ Association between hours playing<br>video games and # of dates?
 
 ---
 
-## {visibility="hidden"}
-
 ::: {style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; left: 25px;  top: -25px;"}
 [**Example 1**]{.underline}<br>
 Association between hours<br>on TikTok and # of dates?
@@ -3997,8 +3995,6 @@ Since absolute value of r-obtained (0.076) is less extreme than the critical val
 :::
 
 ---
-
-## {visibility="hidden"}
 
 ::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em; position: absolute; left: 25px; top: -25px"}
 [**Example 2**]{.underline}<br>

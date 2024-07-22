@@ -1692,7 +1692,7 @@ In the absence of any other information, we would just guess the **mean** for th
 
 <br>
 
-::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+::: {style="border: 4px solid #690c48; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
 For almost all cases there would be ERROR in these predictions <br>
 $y \ne \bar{y}$
 :::
@@ -1714,7 +1714,7 @@ $y \ne \bar{y}$
 non_deterministic_plot + 
   annotate(geom = "text", label = expression(hat(p) == 22608.33), parse = TRUE, x = 5, y = 28000, size = 7, color = "#e93cac", alpha = 0.75) + 
   #geom_segment(data = educ_income2, aes(x = Education, y = Income, yend = yhat))
-  geom_segment(aes(yend = mean(Income)), color = "#2ad2c9", linewidth = 1.5) + 
+  geom_segment(aes(yend = mean(Income)), color = "#690c48", linewidth = 1.5) + 
   geom_hline(yintercept = mean(educ_income2$Income), color = "#e93cac", alpha = 0.75, linewidth = 1.5) + 
   geom_point(color = "#1b8883", size = 4)
 
@@ -1742,7 +1742,7 @@ $$
 
 ::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
 If we know individuals’ level of education, we would use this information to predict individual income
-(regression line represents the best prediction line for the association between education and income)
+*(regression line represents the best prediction line for the association between education and income)*
 :::
 
 :::
@@ -1840,57 +1840,12 @@ R^2 = (r)(r)
 $$
 :::
 
-<br>
-
-::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
-If we know individuals’ level of education, we would use this information to predict individual income
-*(regression line represents the best prediction line for the association between education and income)*
-:::
-
-:::
-  
-::: {.column width="60%"}
-
-::: {style="background: #c5b4e3; font-size: 1.25em; text-align: center; color: #754cbc; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; width: 325px; position: absolute; right: 0px"}
-**INTERPRETATION #1**
-:::
-
-::: {style="position: absolute; bottom: 3px"}
-```{r}
-#| echo: false
-#| fig-width: 8
-#| fig-height: 5
-
-educ_income2 <- educ_income2 |> mutate(yhat = 1721.989 + (1566.515 * Education))
-
-non_deterministic_plot + 
-  geom_abline(intercept = 1721.989, slope = 1566.515, color = "#a68100", linewidth = 1.5, alpha = 0.75)
-
-```
-:::
-
-:::
-  
-::::
-
----
-
-### Interpretation of the Coefficient of Determination
-
-:::: {.columns}
-
-::: {.column width="40%"}
-::: {style="font-size: 1.5em; text-align: center;"}
-$$
-R^2 = (r)(r)
-$$
-:::
-
 ::: {style="border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
-QUESTION: How much better do we do in predicting the dependent variable using the regression line versus just guessing the mean value?
+**QUESTION**: <br>
+How much better do we do in predicting the dependent variable using the regression line versus just guessing the mean value?
 :::
 
-::: {style="font-size: 1.5em; text-align: center; position: absolute; bottom: 0px"}
+::: {.fragment style="font-size: 1.5em; text-align: center; position: absolute; bottom: 0px"}
 $\begin{aligned}r &= 0.857 \\ R^2 &= (r)(r) \\ &= (0.857)(0.857) \\&= 0.734 \end{aligned}$
 :::
 
@@ -1912,9 +1867,9 @@ $\begin{aligned}r &= 0.857 \\ R^2 &= (r)(r) \\ &= (0.857)(0.857) \\&= 0.734 \end
 educ_income2 <- educ_income2 |> mutate(yhat = 1721.989 + (1566.515 * Education))
 
 non_deterministic_plot + 
-  geom_segment(aes(yend = mean(Income)), color = "#2ad2c9", linewidth = 1.5) + 
+  geom_segment(aes(yend = mean(Income)), color = "#690c48", linewidth = 1.5, alpha = 0.5) + 
   geom_hline(yintercept = mean(educ_income2$Income), color = "#e93cac", alpha = 0.75, linewidth = 1.5) +
-  geom_segment(data = educ_income2, aes(x = Education, y = Income, yend = yhat), color = "#ffc700", linewidth = 1.5) +
+  geom_segment(data = educ_income2, aes(x = Education, y = Income, yend = yhat), color = "#ffc700", linewidth = 1.5, alpha = 0.75) +
   geom_abline(intercept = 1721.989, slope = 1566.515, color = "#a68100", linewidth = 1.5, alpha = 0.75) + 
   geom_point(color = "#1b8883", size = 4)
 
@@ -1965,7 +1920,7 @@ $\begin{aligned}r &= 0.857 \\ R^2 &= (r)(r) \\ &= (0.857)(0.857) \\&= 0.734 \end
 educ_income2 <- educ_income2 |> mutate(yhat = 1721.989 + (1566.515 * Education))
 
 non_deterministic_plot + 
-  geom_segment(aes(yend = mean(Income)), color = "#2ad2c9", linewidth = 1.5) + 
+  geom_segment(aes(yend = mean(Income)), color = "#690c48", linewidth = 1.5, alpha = 0.5) + 
   geom_hline(yintercept = mean(educ_income2$Income), color = "#e93cac", alpha = 0.75, linewidth = 1.5) +
   geom_segment(data = educ_income2, aes(x = Education, y = Income, yend = yhat), color = "#ffc700", linewidth = 1.5) +
   geom_abline(intercept = 1721.989, slope = 1566.515, color = "#a68100", linewidth = 1.5, alpha = 0.75) + 
@@ -1979,6 +1934,69 @@ non_deterministic_plot +
 
 ::: {.fragment style="background: #c5b4e3; font-size: 1em; text-align: center; color: #754cbc; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; width: 500px; position: absolute; right: 0px; top: 160px"}
 The proportional reduction of prediction error achieved by using the linear regression equation to predict the values of the dependent variable (Y)
+:::
+  
+::::
+
+---
+
+### Interpretation of the Coefficient of Determination
+
+:::: {.columns}
+
+::: {.column width="40%"}
+::: {style="font-size: 1.5em; text-align: center;"}
+$$
+R^2 = (r)(r)
+$$
+:::
+
+::: {.fragment style="border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+**QUESTION**: <br> How much of this variation is due to the fact that people have different levels of education?
+:::
+
+<br
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em"}
+Income varies!
+:::
+
+
+
+
+
+::: {style="font-size: 1.5em; text-align: center; position: absolute; bottom: 0px"}
+$\begin{aligned}r &= 0.857 \\ R^2 &= (r)(r) \\ &= (0.857)(0.857) \\&= 0.734 \end{aligned}$
+:::
+
+
+:::
+  
+::: {.column width="60%"}
+
+::: {style="background: #c5b4e3; font-size: 1.25em; text-align: center; color: #754cbc; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; width: 325px; position: absolute; right: 0px"}
+**INTERPRETATION #2**
+:::
+
+::: {style="position: absolute; bottom: 3px"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 5
+
+non_deterministic_plot + 
+  annotate(geom = "segment", x = 0, y = 10000, yend = 35000, color = "#2ad2c9", linewidth = 1.5) + 
+  annotate(geom = "segment", x = -0.75, y = 10000, xend = 0.75, color = "#2ad2c9", linewidth = 1.5) + 
+  annotate(geom = "segment", x = -0.75, y = 35000, xend = 0.75, color = "#2ad2c9", linewidth = 1.5)
+
+
+```
+:::
+
+:::
+
+::: {.fragment style="background: #c5b4e3; font-size: 1em; text-align: center; color: #754cbc; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; width: 500px; position: absolute; right: 0px; top: 160px"}
+The proportion of the variance in the dependent variable ($Y$) explained by the independent variable (X)
 :::
   
 ::::
