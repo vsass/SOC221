@@ -3388,12 +3388,1093 @@ R^2 = (r)(r)
 </ol>
 </div>
 </section>
+<section class="slide level2">
 
+<p><em>A researcher collected the following data on years of education (<span class="math inline">\(X\)</span>) and number of children (<span class="math inline">\(Y\)</span>) for a sample of married adults and produced the following raw data.</em></p>
+<div style="font-size: 0.9em; position: absolute; right: -75px; bottom: 0px; table-layout: fixed; width: 850px">
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Education (<span class="math inline">\(x_i\)</span>)</th>
+<th style="text-align: center;"># Kids (<span class="math inline">\(y_i\)</span>)</th>
+<th style="text-align: center;"><span class="math inline">\(x_i -\bar{x}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\frac{x_i-\bar{x}}{s_x}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(y_i -\bar{y}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\frac{y_i-\bar{y}}{s_y}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-1.00</td>
+<td style="text-align: center;">-0.29</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">0.04</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">-1.20</td>
+<td style="text-align: center;">-0.74</td>
+<td style="text-align: center;">-0.22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">1.18</td>
+<td style="text-align: center;">-2.20</td>
+<td style="text-align: center;">-1.36</td>
+<td style="text-align: center;">-1.60</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-3.00</td>
+<td style="text-align: center;">-0.88</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">-0.44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">-5.00</td>
+<td style="text-align: center;">-1.47</td>
+<td style="text-align: center;">2.80</td>
+<td style="text-align: center;">1.73</td>
+<td style="text-align: center;">-2.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-4.00</td>
+<td style="text-align: center;">-1.18</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">-0.58</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">-1.00</td>
+<td style="text-align: center;">-0.29</td>
+<td style="text-align: center;">1.80</td>
+<td style="text-align: center;">1.11</td>
+<td style="text-align: center;">-0.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">-0.04</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5.00</td>
+<td style="text-align: center;">1.47</td>
+<td style="text-align: center;">-2.20</td>
+<td style="text-align: center;">-1.36</td>
+<td style="text-align: center;">-2.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">-0.11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>sum</strong></td>
+<td style="text-align: center;">130</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-7.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>mean</strong></td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">2.2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>st. dev.</strong></td>
+<td style="text-align: center;">3.399</td>
+<td style="text-align: center;">1.619</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="fragment" data-fragment-index="2" style="color: #a68100"><strong><span class="math inline">\(r =\)</span></strong></span></td>
+<td style="text-align: center;"><span class="fragment" data-fragment-index="2" style="color: #a68100"><strong><span class="math inline">\(-0.868\)</span></strong></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 100px; left: -75px; text-align: center">
+<ol type="1">
+<li>Calculate the correlation between education and number of kids</li>
+</ol>
+</div>
+<div class="fragment" data-fragment-index="1" style="background: #e8e3d3; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 400px; left: -50px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
 
+<p><em>A researcher collected the following data on years of education (<span class="math inline">\(X\)</span>) and number of children (<span class="math inline">\(Y\)</span>) for a sample of married adults and produced the following raw data.</em></p>
+<div style="font-size: 0.9em; position: absolute; right: -75px; bottom: 0px; table-layout: fixed; width: 850px">
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Education (<span class="math inline">\(x_i\)</span>)</th>
+<th style="text-align: center;"># Kids (<span class="math inline">\(y_i\)</span>)</th>
+<th style="text-align: center;"><span class="math inline">\(x_i -\bar{x}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\frac{x_i-\bar{x}}{s_x}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(y_i -\bar{y}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\frac{y_i-\bar{y}}{s_y}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-1.00</td>
+<td style="text-align: center;">-0.29</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">0.04</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">-1.20</td>
+<td style="text-align: center;">-0.74</td>
+<td style="text-align: center;">-0.22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">1.18</td>
+<td style="text-align: center;">-2.20</td>
+<td style="text-align: center;">-1.36</td>
+<td style="text-align: center;">-1.60</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-3.00</td>
+<td style="text-align: center;">-0.88</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">-0.44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">-5.00</td>
+<td style="text-align: center;">-1.47</td>
+<td style="text-align: center;">2.80</td>
+<td style="text-align: center;">1.73</td>
+<td style="text-align: center;">-2.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-4.00</td>
+<td style="text-align: center;">-1.18</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">-0.58</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">-1.00</td>
+<td style="text-align: center;">-0.29</td>
+<td style="text-align: center;">1.80</td>
+<td style="text-align: center;">1.11</td>
+<td style="text-align: center;">-0.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">-0.04</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5.00</td>
+<td style="text-align: center;">1.47</td>
+<td style="text-align: center;">-2.20</td>
+<td style="text-align: center;">-1.36</td>
+<td style="text-align: center;">-2.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">-0.11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>sum</strong></td>
+<td style="text-align: center;">130</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-7.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>mean</strong></td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">2.2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>st. dev.</strong></td>
+<td style="text-align: center;"><span style="color: #1b8883"><strong>3.399</strong></span></td>
+<td style="text-align: center;"><span style="color: #6e8e13"><strong>1.619</strong></span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span style="color: #a68100"><strong><span class="math inline">\(r =\)</span></strong></span></td>
+<td style="text-align: center;"><span style="color: #a68100"><strong><span class="math inline">\(-0.868\)</span></strong></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 100px; left: -75px; text-align: center">
+<ol start="2" type="1">
+<li>Find the OLS regression line for the effect of education on number of kids</li>
+</ol>
+</div>
+<div style="background: #e8e3d3; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 300px; left: -25px; text-align: center; font-size: 1.25em; width: 200px;">
+<p><span class="math display">\[
+\widehat{y} = a + bx
+\]</span></p>
+</div>
+<div class="fragment" style="background: #e8e3d3; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 425px; left: -50px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+\begin{aligned} \color{#e93cac}b &amp;= \color{#a68100}r(\frac{\color{#6e8e13}{s_y}}{\color{#1b8883}{s_x}}) \\
+&amp;= (\color{#a68100}{-0.868})(\frac{\color{#6e8e13}{1.619}}{\color{#1b8883}{3.399}}) \\
+&amp;= \color{#e93cac}{-0.413} \end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
 
+<p><em>A researcher collected the following data on years of education (<span class="math inline">\(X\)</span>) and number of children (<span class="math inline">\(Y\)</span>) for a sample of married adults and produced the following raw data.</em></p>
+<div style="font-size: 0.9em; position: absolute; right: -75px; bottom: 0px; table-layout: fixed; width: 850px">
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Education (<span class="math inline">\(x_i\)</span>)</th>
+<th style="text-align: center;"># Kids (<span class="math inline">\(y_i\)</span>)</th>
+<th style="text-align: center;"><span class="math inline">\(x_i -\bar{x}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\frac{x_i-\bar{x}}{s_x}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(y_i -\bar{y}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\frac{y_i-\bar{y}}{s_y}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-1.00</td>
+<td style="text-align: center;">-0.29</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">0.04</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">-1.20</td>
+<td style="text-align: center;">-0.74</td>
+<td style="text-align: center;">-0.22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">1.18</td>
+<td style="text-align: center;">-2.20</td>
+<td style="text-align: center;">-1.36</td>
+<td style="text-align: center;">-1.60</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-3.00</td>
+<td style="text-align: center;">-0.88</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">-0.44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">-5.00</td>
+<td style="text-align: center;">-1.47</td>
+<td style="text-align: center;">2.80</td>
+<td style="text-align: center;">1.73</td>
+<td style="text-align: center;">-2.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-4.00</td>
+<td style="text-align: center;">-1.18</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">-0.58</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">-1.00</td>
+<td style="text-align: center;">-0.29</td>
+<td style="text-align: center;">1.80</td>
+<td style="text-align: center;">1.11</td>
+<td style="text-align: center;">-0.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">-0.04</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5.00</td>
+<td style="text-align: center;">1.47</td>
+<td style="text-align: center;">-2.20</td>
+<td style="text-align: center;">-1.36</td>
+<td style="text-align: center;">-2.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">-0.11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>sum</strong></td>
+<td style="text-align: center;">130</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-7.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>mean</strong></td>
+<td style="text-align: center;"><span style="color: #1b8883"><strong>13</strong></span></td>
+<td style="text-align: center;"><span style="color: #6e8e13"><strong>2.2</strong></span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>st. dev.</strong></td>
+<td style="text-align: center;">3.399</td>
+<td style="text-align: center;">1.619</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span style="color: #a68100"><strong><span class="math inline">\(r =\)</span></strong></span></td>
+<td style="text-align: center;"><span style="color: #a68100"><strong><span class="math inline">\(-0.868\)</span></strong></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 100px; left: -75px; text-align: center">
+<ol start="2" type="1">
+<li>Find the OLS regression line for the effect of education on number of kids</li>
+</ol>
+</div>
+<div style="background: #e8e3d3; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 300px; left: -25px; text-align: center; font-size: 1.25em; width: 200px;">
+<p><span class="math display">\[
+\widehat{y} = a + bx
+\]</span></p>
+</div>
+<div style="border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 457px; left: -75px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+\begin{aligned} \color{#754cbc}a &amp;= \color{#6e8e13}{\bar{y}}- \color{#e93cac}{b}\color{#1b8883}{\bar{x}} \\
+&amp;= \color{#6e8e13}{2.20} - (\color{#e93cac}{-0.413})(\color{#1b8883}{13.00}) \\
+&amp;= \color{#754cbc}{7.569} \end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
 
+<p><em>A researcher collected the following data on years of education (<span class="math inline">\(X\)</span>) and number of children (<span class="math inline">\(Y\)</span>) for a sample of married adults and produced the following raw data.</em></p>
+<div style="font-size: 0.9em; position: absolute; right: -75px; bottom: 0px; table-layout: fixed; width: 850px">
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Education (<span class="math inline">\(x_i\)</span>)</th>
+<th style="text-align: center;"># Kids (<span class="math inline">\(y_i\)</span>)</th>
+<th style="text-align: center;"><span class="math inline">\(x_i -\bar{x}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\frac{x_i-\bar{x}}{s_x}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(y_i -\bar{y}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\frac{y_i-\bar{y}}{s_y}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-1.00</td>
+<td style="text-align: center;">-0.29</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">0.04</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">-1.20</td>
+<td style="text-align: center;">-0.74</td>
+<td style="text-align: center;">-0.22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">1.18</td>
+<td style="text-align: center;">-2.20</td>
+<td style="text-align: center;">-1.36</td>
+<td style="text-align: center;">-1.60</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-3.00</td>
+<td style="text-align: center;">-0.88</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">-0.44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">-5.00</td>
+<td style="text-align: center;">-1.47</td>
+<td style="text-align: center;">2.80</td>
+<td style="text-align: center;">1.73</td>
+<td style="text-align: center;">-2.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-4.00</td>
+<td style="text-align: center;">-1.18</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">-0.58</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">-1.00</td>
+<td style="text-align: center;">-0.29</td>
+<td style="text-align: center;">1.80</td>
+<td style="text-align: center;">1.11</td>
+<td style="text-align: center;">-0.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">-0.04</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5.00</td>
+<td style="text-align: center;">1.47</td>
+<td style="text-align: center;">-2.20</td>
+<td style="text-align: center;">-1.36</td>
+<td style="text-align: center;">-2.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">-0.11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>sum</strong></td>
+<td style="text-align: center;">130</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-7.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>mean</strong></td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">2.2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>st. dev.</strong></td>
+<td style="text-align: center;">3.399</td>
+<td style="text-align: center;">1.619</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(r =\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-0.868\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 100px; left: -75px; text-align: center">
+<ol start="2" type="1">
+<li>Find the OLS regression line for the effect of education on number of kids</li>
+</ol>
+</div>
+<div style="background: #e8e3d3; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 300px; left: -25px; text-align: center; font-size: 1.25em; width: 200px;">
+<p><span class="math display">\[
+\widehat{y} = a + bx
+\]</span></p>
+</div>
+<div style="border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 460px; left: -75px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+\widehat{y} = 7.569 - 0.413x
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
 
+<p><em>A researcher collected the following data on years of education (<span class="math inline">\(X\)</span>) and number of children (<span class="math inline">\(Y\)</span>) for a sample of married adults and produced the following raw data.</em></p>
+<div style="font-size: 0.9em; position: absolute; right: -75px; bottom: 0px; table-layout: fixed; width: 850px">
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Education (<span class="math inline">\(x_i\)</span>)</th>
+<th style="text-align: center;"># Kids (<span class="math inline">\(y_i\)</span>)</th>
+<th style="text-align: center;"><span class="math inline">\(x_i -\bar{x}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\frac{x_i-\bar{x}}{s_x}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(y_i -\bar{y}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\frac{y_i-\bar{y}}{s_y}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span style="color: #1b8883"><strong>12</strong></span></td>
+<td style="text-align: center;"><span style="color: #754cbc"><strong>2</strong></span></td>
+<td style="text-align: center;">-1.00</td>
+<td style="text-align: center;">-0.29</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">0.04</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">-1.20</td>
+<td style="text-align: center;">-0.74</td>
+<td style="text-align: center;">-0.22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">1.18</td>
+<td style="text-align: center;">-2.20</td>
+<td style="text-align: center;">-1.36</td>
+<td style="text-align: center;">-1.60</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-3.00</td>
+<td style="text-align: center;">-0.88</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">-0.44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">-5.00</td>
+<td style="text-align: center;">-1.47</td>
+<td style="text-align: center;">2.80</td>
+<td style="text-align: center;">1.73</td>
+<td style="text-align: center;">-2.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-4.00</td>
+<td style="text-align: center;">-1.18</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">-0.58</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">-1.00</td>
+<td style="text-align: center;">-0.29</td>
+<td style="text-align: center;">1.80</td>
+<td style="text-align: center;">1.11</td>
+<td style="text-align: center;">-0.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">-0.04</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5.00</td>
+<td style="text-align: center;">1.47</td>
+<td style="text-align: center;">-2.20</td>
+<td style="text-align: center;">-1.36</td>
+<td style="text-align: center;">-2.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">-0.11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>sum</strong></td>
+<td style="text-align: center;">130</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-7.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>mean</strong></td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">2.2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>st. dev.</strong></td>
+<td style="text-align: center;">3.399</td>
+<td style="text-align: center;">1.619</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(r =\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-0.868\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 100px; left: -75px; text-align: center">
+<ol start="3" type="1">
+<li>What is the prediction error for the first person in the data set?</li>
+</ol>
+</div>
+<div style="border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 220px; left: -50px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+\widehat{y} = 7.569 - 0.413x
+\]</span></p>
+</div>
+<div style="background: #e8e3d3; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 300px; left: -25px; text-align: center; font-size: 1.25em; width: 200px;">
+<p><span class="math display">\[
+\widehat{y} = a + bx
+\]</span></p>
+</div>
+<div class="fragment" style="border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 390px; left: -75px; text-align: center; font-size: 1.25em">
+<p><span class="math display">\[
+\text{prediction error} = y - \widehat{y}
+\]</span></p>
+</div>
+<div class="fragment" style="border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 460px; left: -75px; text-align: center; font-size: 1em">
+<p><span class="math display">\[
+\begin{aligned}
+\color{#a68100}{\widehat{Kids_1}} &amp;= 7.569 - 0.413(\color{#1b8883}{12}) \\
+&amp;= \color{#a68100}{2.613}
+\end{aligned}
+\]</span></p>
+</div>
+<div class="fragment" style="border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; left: -75px; text-align: center; font-size: 1em">
+<p><span class="math display">\[
+\begin{aligned}
+\text{prediction error} &amp;= \color{#754cbc}{2} - \color{#a68100}{2.613} \\
+&amp;= -0.613
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
 
+<p><em>A researcher collected the following data on years of education (<span class="math inline">\(X\)</span>) and number of children (<span class="math inline">\(Y\)</span>) for a sample of married adults and produced the following raw data.</em></p>
+<div style="font-size: 0.9em; position: absolute; right: -75px; bottom: 0px; table-layout: fixed; width: 850px">
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Education (<span class="math inline">\(x_i\)</span>)</th>
+<th style="text-align: center;"># Kids (<span class="math inline">\(y_i\)</span>)</th>
+<th style="text-align: center;"><span class="math inline">\(x_i -\bar{x}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\frac{x_i-\bar{x}}{s_x}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(y_i -\bar{y}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\frac{y_i-\bar{y}}{s_y}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-1.00</td>
+<td style="text-align: center;">-0.29</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">0.04</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">-1.20</td>
+<td style="text-align: center;">-0.74</td>
+<td style="text-align: center;">-0.22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">1.18</td>
+<td style="text-align: center;">-2.20</td>
+<td style="text-align: center;">-1.36</td>
+<td style="text-align: center;">-1.60</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-3.00</td>
+<td style="text-align: center;">-0.88</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">-0.44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">-5.00</td>
+<td style="text-align: center;">-1.47</td>
+<td style="text-align: center;">2.80</td>
+<td style="text-align: center;">1.73</td>
+<td style="text-align: center;">-2.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-4.00</td>
+<td style="text-align: center;">-1.18</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">-0.58</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">-1.00</td>
+<td style="text-align: center;">-0.29</td>
+<td style="text-align: center;">1.80</td>
+<td style="text-align: center;">1.11</td>
+<td style="text-align: center;">-0.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">-0.04</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5.00</td>
+<td style="text-align: center;">1.47</td>
+<td style="text-align: center;">-2.20</td>
+<td style="text-align: center;">-1.36</td>
+<td style="text-align: center;">-2.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;">-0.20</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">-0.11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>sum</strong></td>
+<td style="text-align: center;">130</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-7.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>mean</strong></td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">2.2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>st. dev.</strong></td>
+<td style="text-align: center;">3.399</td>
+<td style="text-align: center;">1.619</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span style="color: #e93cac"><strong><span class="math inline">\(r =\)</span></strong></span></td>
+<td style="text-align: center;"><span style="color: #e93cac"><strong><span class="math inline">\(-0.868\)</span></strong></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 100px; left: -75px; text-align: center">
+<ol start="4" type="1">
+<li>Find and interpret the coefficient of determination</li>
+</ol>
+</div>
+<div class="fragment" data-fragment-index="1" style="position: absolute; bottom: 150px; left: -75px; text-align: center; font-size: 1.25em;">
+<p><span class="math display">\[
+\begin{aligned}
+\color{#a68100}{r} &amp;= \color{#a68100}{-0.868} \\ R^2 &amp;= (\color{#a68100}{r})(\color{#a68100}{r}) \\
+&amp;= (\color{#a68100}{-0.868})(\color{#a68100}{-0.868}) \\
+&amp;= 0.753
+\end{aligned}
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="2" data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 170px; right: -50px; text-align: center; width: 450px">
+<p>If we are predicting the number of kids individuals have, we will reduce our errors of prediction by about <span class="math inline">\(75\%\)</span> if we take into consideration how much education these individuals have.</p>
+</div>
+<div class="fragment" data-fragment-index="3" data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 170px; right: -50px; text-align: center; width: 450px">
+<p>About <span class="math inline">\(75\%\)</span> of the variation in number of kids is explained by the diversity of education levels in the sample.</p>
+</div>
+</section>
 <section class="slide level2">
 
 <h3 id="statistical-significance-of-regression-componenets">Statistical significance of regression componenets</h3>
@@ -3424,7 +4505,7 @@ R^2 = (r)(r)
 </div>
 </div>
 </section>
-<section id="section-6" class="slide level2" data-menu-title="Syllabus" data-background-iframe="https://vsass.github.io/SOC221/syllabus.html" data-background-interactive="TRUE">
+<section id="section" class="slide level2" data-menu-title="Syllabus" data-background-iframe="https://vsass.github.io/SOC221/syllabus.html" data-background-interactive="TRUE">
 <h2></h2>
 
 <div class="quarto-auto-generated-content">

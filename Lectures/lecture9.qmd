@@ -2126,7 +2126,7 @@ non_deterministic_plot +
 4. Find and interpret the coefficient of determination
 :::
 
-## {visibility="hidden"}
+---
 
 *A researcher collected the following data on years of education ($X$) and number of children ($Y$) for a sample of married adults and produced the following raw data.*
 
@@ -2160,7 +2160,7 @@ r = \frac{1}{n-1}\Sigma(\frac{x_i - \bar{x}}{s_x})(\frac{y_i - \bar{y}}{s_y})
 $$
 :::
 
-## {visibility="hidden"}
+---
 
 *A researcher collected the following data on years of education ($X$) and number of children ($Y$) for a sample of married adults and produced the following raw data.*
 
@@ -2202,7 +2202,7 @@ $$
 $$
 :::
 
-## {visibility="hidden"}
+---
 
 *A researcher collected the following data on years of education ($X$) and number of children ($Y$) for a sample of married adults and produced the following raw data.*
 
@@ -2246,7 +2246,7 @@ $$
 
 :::
 
-## {visibility="hidden"}
+---
 
 *A researcher collected the following data on years of education ($X$) and number of children ($Y$) for a sample of married adults and produced the following raw data.*
 
@@ -2286,7 +2286,7 @@ $$
 $$
 :::
 
-## {visibility="hidden"}
+---
 
 *A researcher collected the following data on years of education ($X$) and number of children ($Y$) for a sample of married adults and produced the following raw data.*
 
@@ -2350,7 +2350,7 @@ $$
 $$
 :::
 
-## {visibility="hidden"}
+---
 
 *A researcher collected the following data on years of education ($X$) and number of children ($Y$) for a sample of married adults and produced the following raw data.*
 
