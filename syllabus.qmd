@@ -125,7 +125,7 @@ schedule_summer <- tribble(
 "6", "Monday<br>July 22nd", "▪ Two-way tables and chi-square<br>▪ Scatterplots and correlation", "Chapter 11 (sections 11.1 to 11.3<br>Chapter 12 (sections 12.1 to 12.3)", "Homework 5<br>Homework 4 w/ revisions",
 "6", "Wednesday<br>July 24th", "▪ Bivariate regression<br>▪ Inference for regression", "Chapter 12 (section 12.4 and 12.5)", "<i>Homework 5 returned</i>",
 # week 7
-"7", "Monday<br>July 29th", "▪ Multivariate regression", "Primer for multivariate regression", "Homework 6<br>Homework 5 w/ revisions",
+"7", "Monday<br>July 29th", "▪ Multivariate regression", "[Primer for multivariate regression](handouts/Primer.pdf)", "Homework 6<br>Homework 5 w/ revisions",
 "7", "Wednesday<br>July 31st", "▪ Multivariate regression", "", "<i>Homework 6 returned</i>",
 # week 8
 "8", "Monday<br>August 5th", "Individual Learning Assessment Meetings<br>(in-person)", "", "Homework 7<br>Homework 6 w/ revisions<br><i>Homework 7 returned (via Slack)</i>",
@@ -135,6 +135,7 @@ schedule_summer <- tribble(
 "9", "Wednesday<br>August 14th", "NO CLASS:", "Vic @ a conference", "")
 
 schedule_summer |>
+mutate(reading = gt::md(reading)) |> 
 gt() |>
 fmt_markdown(columns = everything()) |>
 cols_align(align = "center", columns = c(week, date)) |>
