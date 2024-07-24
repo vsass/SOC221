@@ -25,6 +25,7 @@ format:
     history: false
     progress: true
     link-external-icon: true 
+    mermaid-format: svg
 ---
 
 ```{r}
@@ -574,7 +575,7 @@ another condition, event, <br>
 process, or state
 :::
 
-::: {.fragment style="position: absolute; top: 75px; right: -100px"}
+::: {.fragment style="position: absolute; top: 75px; right: -150px"}
 ```{r}
 #| echo: false
 
@@ -594,8 +595,9 @@ crime_icecream |>
 ```
 :::
 
-::: {.fragment style="position: absolute; top: 75px; right: -100px"}
-Is there an association between ice cream sales and crime?
+::: {.fragment style="position: absolute; bottom: 200px; right: 25px"}
+Is there an association between <br>
+ice cream sales and crime?
 :::
 
 ## Purpose 1: building the case for causality
@@ -612,7 +614,7 @@ another condition, event, <br>
 process, or state
 :::
 
-::: {style="position: absolute; top: 75px; right: -100px"}
+::: {style="position: absolute; top: 75px; right: -150px"}
 ```{r}
 #| echo: false
 
@@ -625,25 +627,189 @@ crime_icecream |>
   fmt_markdown(columns = everything()) |> # include html 
   cols_align(align = "center", columns = everything()) |> # center columns
   cols_label(low_ice_cream = "Low ice cream sales", high_ice_cream = "High ice cream sales") |> 
-  tab_options(table.background.color = "#e8e3d3") |> # change background color
-  opt_stylize(style = 5, color = "gray", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_stylize(style = 5, color = "gray", add_row_striping = TRUE) |> 
+  tab_style(style = cell_fill(color = "#c5b4e3"), 
+            locations = cells_body(rows = c("Low violent crime", "High violent crime"),
+                                   columns = c(low_ice_cream, high_ice_cream))) |> 
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
 :::
 
-::: {style="position: absolute; top: 75px; right: -100px"}
-Is there an association between ice cream sales and crime?
+::: {style="position: absolute; bottom: 200px; right: 25px"}
+Is there an association between <br>
+ice cream sales and crime?
 :::
 
-Yes. Differences in conditional distributions (column %’s) show a positive association between ice cream sales and crime.
+::: {style="position: absolute; bottom: 0px; right: -50px; text-align: center; color: #754cbc; width: 550px; font-size: 1.25em"}
+**Yes!** Differences in conditional distributions (column $\%$s) show a positive association between ice cream sales and crime.
+:::
 
+## Purpose 1: building the case for causality
 
----
+<br>
 
-1. There is a statistical association between X and Y
-2. X happens before Y (correct time ordering)
-3. No other variable accounts for the statistical link between X and Y
+::: {style="font-size: 2em; position: absolute; left: -25px; top: 100px"}
+> [**Causality**]{style="color: #e93cac"}: <br> 
+A situation in which <br> 
+one condition, event, <br> 
+or process contributes <br> 
+to the production of <br> 
+another condition, event, <br> 
+process, or state
+:::
+
+::: {style="position: absolute; top: 75px; right: -150px"}
+```{r}
+#| echo: false
+
+crime_icecream <- data.frame(low_ice_cream = c("20 <br> (83.3%)", "4 <br> (16.7%)",  "24"), high_ice_cream = c("4 <br> (33.3%)", "8 <br> (66.7%)", "12"), Total = c("24 <br> (66.7%)", "12 <br> (33.3%)", "36"))
+rownames(crime_icecream) <- c("Low violent crime", "High violent crime", "Total")
+
+crime_icecream |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Bivariate table (all months):", subtitle = "Violent crime by ice cream sales") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  cols_label(low_ice_cream = "Low ice cream sales", high_ice_cream = "High ice cream sales") |> 
+  opt_stylize(style = 5, color = "gray", add_row_striping = TRUE) |> 
+  tab_style(style = cell_fill(color = "#c5b4e3"), 
+            locations = cells_body(rows = c("Low violent crime", "High violent crime"),
+                                   columns = c(low_ice_cream, high_ice_cream))) |> 
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="position: absolute; bottom: 200px; right: 25px; width: 350px"}
+Does this mean that ice cream sales *cause* crime to increase?
+:::
+
+::: {style="position: absolute; bottom: -85px; right: 25px;"}
+```{mermaid}
+%%| echo: false
+%%| fig-width: 4
+%%| fig-height: 4
+
+flowchart LR
+  A((Ice cream sales)):::black --> B((Violent crime)):::grey
+  classDef black fill:#000, color:white, stroke:black
+  classDef grey fill:#808080, color:white, stroke:#808080
+```
+:::
+
+## Purpose 1: building the case for causality
+
+<br>
+
+::: {.incremental style="font-size: 1.25em; position: absolute; left: -25px; top: 100px; width: 600px"}
+[3 Criteria for Causality]{.center .underline}
+[*(what we need to show to claim that $X$ causes $Y$)*]{.center style="font-size: 0.75em;"} <br>
+
+1. There is a statistical association between $X$ and $Y$
+2. $X$ happens before $Y$ 
+    * (correct time ordering)
+3. No other variable accounts for the statistical link between $X$ and $Y$
+:::
+
+::: {style="position: absolute; top: 75px; right: -150px"}
+```{r}
+#| echo: false
+
+crime_icecream <- data.frame(low_ice_cream = c("20 <br> (83.3%)", "4 <br> (16.7%)",  "24"), high_ice_cream = c("4 <br> (33.3%)", "8 <br> (66.7%)", "12"), Total = c("24 <br> (66.7%)", "12 <br> (33.3%)", "36"))
+rownames(crime_icecream) <- c("Low violent crime", "High violent crime", "Total")
+
+crime_icecream |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Bivariate table (all months):", subtitle = "Violent crime by ice cream sales") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  cols_label(low_ice_cream = "Low ice cream sales", high_ice_cream = "High ice cream sales") |> 
+  opt_stylize(style = 5, color = "gray", add_row_striping = TRUE) |> 
+  tab_style(style = cell_fill(color = "#c5b4e3"), 
+            locations = cells_body(rows = c("Low violent crime", "High violent crime"),
+                                   columns = c(low_ice_cream, high_ice_cream))) |> 
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="position: absolute; bottom: 200px; right: 25px; width: 350px"}
+Does this mean that ice cream sales *cause* crime to increase?
+:::
+
+::: {style="position: absolute; bottom: -85px; right: 25px;"}
+```{mermaid}
+%%| echo: false
+%%| fig-width: 4
+%%| fig-height: 4
+
+flowchart LR
+  A((Ice cream sales)):::black --> B((Violent crime)):::grey
+  classDef black fill:#000, color:white, stroke:black
+  classDef grey fill:#808080, color:white, stroke:#808080
+```
+:::
+
+## Purpose 1: building the case for causality
+
+<br>
+
+::: {style="font-size: 1.25em; position: absolute; left: -25px; top: 100px; width: 600px"}
+[3 Criteria for Causality]{.center .underline}
+[*(what we need to show to claim that $X$ causes $Y$)*]{.center style="font-size: 0.75em;"} <br>
+
+1. There is a statistical association between $X$ and $Y$
+2. $X$ happens before $Y$ 
+    * (correct time ordering)
+3. [No other variable accounts for the statistical link between $X$ and $Y$]{style="color: #e93cac"}
+:::
+
+::: {style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 650px; padding: 5px 5px 5px 5px; position: absolute; bottom: 25px; left: -75px; text-align: center; font-size: 0.95em"}
+Third criterion motivates us to control for other variables <br>
+(i.e., account for their effects; remove their influence)
+
+:::
+
+::: {style="position: absolute; top: 75px; right: -150px"}
+```{r}
+#| echo: false
+
+crime_icecream <- data.frame(low_ice_cream = c("20 <br> (83.3%)", "4 <br> (16.7%)",  "24"), high_ice_cream = c("4 <br> (33.3%)", "8 <br> (66.7%)", "12"), Total = c("24 <br> (66.7%)", "12 <br> (33.3%)", "36"))
+rownames(crime_icecream) <- c("Low violent crime", "High violent crime", "Total")
+
+crime_icecream |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Bivariate table (all months):", subtitle = "Violent crime by ice cream sales") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  cols_label(low_ice_cream = "Low ice cream sales", high_ice_cream = "High ice cream sales") |> 
+  opt_stylize(style = 5, color = "gray", add_row_striping = TRUE) |> 
+  tab_style(style = cell_fill(color = "#c5b4e3"), 
+            locations = cells_body(rows = c("Low violent crime", "High violent crime"),
+                                   columns = c(low_ice_cream, high_ice_cream))) |> 
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="position: absolute; bottom: 200px; right: 25px; width: 350px"}
+Does this mean that ice cream sales *cause* crime to increase?
+:::
+
+::: {style="position: absolute; bottom: -85px; right: 25px;"}
+```{mermaid}
+%%| echo: false
+%%| fig-width: 4
+%%| fig-height: 4
+
+flowchart LR
+  A((Ice cream sales)):::black --> B((Violent crime)):::grey
+  classDef black fill:#000, color:white, stroke:black
+  classDef grey fill:#808080, color:white, stroke:#808080
+```
+:::
+
 
 ## Spurious relationship
 
