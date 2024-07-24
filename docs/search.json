@@ -1355,21 +1355,21 @@
     "href": "lectures/lecture10.html#bivariate-regression",
     "title": "",
     "section": "Bivariate regression",
-    "text": "Bivariate regression"
+    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#000000}{\\widehat{y}} = \\color{#000000}{a} + \\color{#000000}{b}\\color{#000000}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
   },
   {
     "objectID": "lectures/lecture10.html#multivariate-regression-1",
     "href": "lectures/lecture10.html#multivariate-regression-1",
     "title": "",
     "section": "Multivariate regression",
-    "text": "Multivariate regression"
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#000000}{\\widehat{y}} = \\color{#000000}{a} + \\color{#000000}{b_1}\\color{#000000}{x} + \\color{#000000}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual"
   },
   {
     "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality",
     "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality",
     "title": "",
     "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\nThere is a statistical association between X and Y\nX happens before Y (correct time ordering)\nNo other variable accounts for the statistical link between X and Y"
+    "text": "Purpose 1: building the case for causality\n\n\n\nCausality:  A situation in which  one condition, event,  or process contributes  to the production of  another condition, event,  process, or state\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nIs there an association between ice cream sales and crime?"
   },
   {
     "objectID": "lectures/lecture10.html#spurious-relationship",
@@ -2553,5 +2553,110 @@
     "title": "",
     "section": "Interpretation of the Coefficient of Determination",
     "text": "Interpretation of the Coefficient of Determination\n\n\n\n\\[\nR^2 = (r)(r)\n\\]\n\n\n\nINTERPRETATION #1"
+  },
+  {
+    "objectID": "lectures/lecture9.html#another-example",
+    "href": "lectures/lecture9.html#another-example",
+    "title": "",
+    "section": "Another Example",
+    "text": "Another Example"
+  },
+  {
+    "objectID": "lectures/lecture10.html#where-are-we",
+    "href": "lectures/lecture10.html#where-are-we",
+    "title": "",
+    "section": "Where ARE WE?",
+    "text": "Where ARE WE?\n\n\nBivariate correlation and regression good for detecting and describing basic associations between two variables (e.g., X and Y)\nOften want to bring in additional variables\n\nBuild case for causality\n\nControl for alternative explanations for the main association\n\nDevelop better predictions\n\nPredict Y as a function of multiple variables, not just X\n\nExplain more\n\nUse multiple variables to explain more of the variation in Y\n\n\nMultivariate regression: A key tool for bringing additional variables into consideration"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-1",
+    "href": "lectures/lecture10.html#bivariate-regression-1",
+    "title": "",
+    "section": "Bivariate regression",
+    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#000000}{a} + \\color{#000000}{b}\\color{#000000}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-2",
+    "href": "lectures/lecture10.html#bivariate-regression-2",
+    "title": "",
+    "section": "Bivariate regression",
+    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#000000}{b}\\color{#000000}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-3",
+    "href": "lectures/lecture10.html#bivariate-regression-3",
+    "title": "",
+    "section": "Bivariate regression",
+    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b}\\color{#000000}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-4",
+    "href": "lectures/lecture10.html#bivariate-regression-4",
+    "title": "",
+    "section": "Bivariate regression",
+    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b}\\color{#1b8883}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#multivariate-regression-2",
+    "href": "lectures/lecture10.html#multivariate-regression-2",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#000000}{a} + \\color{#000000}{b_1}\\color{#000000}{x} + \\color{#000000}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture10.html#multivariate-regression-3",
+    "href": "lectures/lecture10.html#multivariate-regression-3",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#000000}{b_1}\\color{#000000}{x} + \\color{#000000}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture10.html#multivariate-regression-4",
+    "href": "lectures/lecture10.html#multivariate-regression-4",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b_1}\\color{#000000}{x} + \\color{#000000}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture10.html#multivariate-regression-5",
+    "href": "lectures/lecture10.html#multivariate-regression-5",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b_1}\\color{#1b8883}{x} + \\color{#000000}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture10.html#multivariate-regression-6",
+    "href": "lectures/lecture10.html#multivariate-regression-6",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b_1}\\color{#1b8883}{x} + \\color{#690c48}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture10.html#multivariate-regression-7",
+    "href": "lectures/lecture10.html#multivariate-regression-7",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b_1}\\color{#1b8883}{x} + \\color{#690c48}{b_2}\\color{#6e8e13}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual\n\n\nWhen we control for a variable, we are holding its effect constant (i.e., removing its influence)\n\n\nNote that we are ADDING variables to the model in order to REMOVE their influence from the effects of \\(X\\).\n\n\nWhen they are not in the model, we are ignoring their influence"
+  },
+  {
+    "objectID": "lectures/lecture10.html#multivariate-regression-8",
+    "href": "lectures/lecture10.html#multivariate-regression-8",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z_1\\) and \\(Z_k\\)\n\n\n\\(b_2 =\\) the effect of \\(Z_1\\) on \\(Y\\) after controlling for the effects of \\(X\\) and \\(Z_k\\)\n\n\n\\(b_k =\\) the effect of \\(Z_k\\) on \\(Y\\) after controlling for the effects of \\(X\\) and \\(Z_1\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b_1}\\color{#1b8883}{x} + \\color{#690c48}{b_2}\\color{#6e8e13}{z} + \\text{. . . } + \\color{#bf5700}{b_k}\\color{#000000}{z_k}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X\\), \\(Z_1\\), and \\(Z_k\\) all equal \\(0\\)\n\n\n\\(z_1\\) is the value of \\(Z_1\\) for the individual\n\n\n\\(z_k\\) is the value of \\(Z_k\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture10.html#why-multivariate-regression",
+    "href": "lectures/lecture10.html#why-multivariate-regression",
+    "title": "",
+    "section": "Why multivariate regression?",
+    "text": "Why multivariate regression?\n\n\n\nPurpose 1: building the case for causality\n\nControl for alternate explanations for the main association\n\nPurpose 2: developing better predictions\n\nPredict \\(Y\\) as a function of multiple variables, not just \\(X\\)\n\nPurpose 3: explain more\n\nUse multiple variables to explain more of the variation in \\(Y\\)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-1",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-1",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\nCausality:  A situation in which  one condition, event,  or process contributes  to the production of  another condition, event,  process, or state\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nIs there an association between ice cream sales and crime?\n\nYes. Differences in conditional distributions (column %’s) show a positive association between ice cream sales and crime."
   }
 ]

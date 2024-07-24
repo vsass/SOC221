@@ -31,18 +31,615 @@ format:
 #| echo: false
 #| cache: false
 require(tidyverse)
+require(ggthemes)
 require(gt)
+require(gganimate)
+require(ggforce)
+options(scipen = 1000)
 
 knitr::opts_chunk$set(comment = ">")
+
+# set transparent background in base
+knitr::opts_chunk$set(dev.args=list(bg='transparent'))
+
+# set transparent background in ggplot
+ggplot2::theme_set(ggthemes::theme_tufte(base_size=12))
+ggplot2::theme_update(panel.background = ggplot2::element_blank(),
+                      plot.background=ggplot2::element_blank(),
+    legend.background=ggplot2::element_blank())
+
+options(width=80, show.signif.stars=FALSE)
 ```
 
 # Multivariate regression {.section-title background-color="#c5b4e3"}
 
+## Where ARE WE?
+
+::: {.incremental style="font-size: 1.25em"}
+* Bivariate correlation and regression good for detecting and describing basic associations between two variables (e.g., X and Y)
+* Often want to bring in additional variables
+    * [Build case for causality]{style="color: #e93cac"}
+        * Control for alternative explanations for the main association
+    * [Develop better predictions]{style="color: #e93cac"}
+        * Predict Y as a function of multiple variables, not just X
+    * [Explain more]{style="color: #e93cac"}
+        * Use multiple variables to explain more of the variation in Y
+* [**Multivariate regression**]{.underline}:  A key tool for bringing additional variables into consideration
+:::
+
 ## Bivariate regression
+
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$b =$ slope of the line; <br> how much $Y$ changes with each one-unit difference in $X$
+:::
+
+<br>
+
+::: {style="text-align: center; font-size: 2em;"}
+$\color{#000000}{\widehat{y}} = \color{#000000}{a} + \color{#000000}{b}\color{#000000}{x}$
+:::
+
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+<br>  
+  
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X = 0$
+:::
+
+## Bivariate regression
+
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$b =$ slope of the line; <br> how much $Y$ changes with each one-unit difference in $X$
+:::
+
+<br>
+
+::: {style="text-align: center; font-size: 2em;"}
+$\color{#a68100}{\widehat{y}} = \color{#000000}{a} + \color{#000000}{b}\color{#000000}{x}$
+:::
+
+<br>
+
+::: {style="color: #a68100; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+<br>  
+  
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X = 0$
+:::
+
+## Bivariate regression
+
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$b =$ slope of the line; <br> how much $Y$ changes with each one-unit difference in $X$
+:::
+
+<br>
+
+::: {style="text-align: center; font-size: 2em;"}
+$\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#000000}{b}\color{#000000}{x}$
+:::
+
+<br>
+
+::: {style="color: #a68100; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+<br>  
+  
+::: {style="color: #754cbc; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X = 0$
+:::
+
+## Bivariate regression
+
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+<br>
+
+::: {style="color: #e93cac; text-align: center; font-size: 1.25em"}
+$b =$ slope of the line; <br> how much $Y$ changes with each one-unit difference in $X$
+:::
+
+<br>
+
+::: {style="text-align: center; font-size: 2em;"}
+$\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b}\color{#000000}{x}$
+:::
+
+<br>
+
+::: {style="color: #a68100; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+<br>  
+  
+::: {style="color: #754cbc; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X = 0$
+:::
+
+## Bivariate regression
+
+<br>
+
+::: {style="color: #1b8883; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+<br>
+
+::: {style="color: #e93cac; text-align: center; font-size: 1.25em"}
+$b =$ slope of the line; <br> how much $Y$ changes with each one-unit difference in $X$
+:::
+
+<br>
+
+::: {style="text-align: center; font-size: 2em;"}
+$\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b}\color{#1b8883}{x}$
+:::
+
+<br>
+
+::: {style="color: #a68100; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+<br>  
+  
+::: {style="color: #754cbc; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X = 0$
+:::
 
 ## Multivariate regression
 
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$b_1 =$ the effect of $X$ on $Y$ **after controlling for the effects of $Z$**
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$b_2 =$ the effect of $Z$ on $Y$ **after controlling for the effects of $X$**
+:::
+
+<br>
+
+::: {style="font-size: 2em; text-align: center;"}
+$\color{#000000}{\widehat{y}} = \color{#000000}{a} + \color{#000000}{b_1}\color{#000000}{x} + \color{#000000}{b_2}\color{#000000}{z}$
+:::
+
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X = 0$ and $Z = 0$
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$z$ is the value of $Z$ for the individual
+:::
+
+## Multivariate regression
+
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$b_1 =$ the effect of $X$ on $Y$ **after controlling for the effects of $Z$**
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$b_2 =$ the effect of $Z$ on $Y$ **after controlling for the effects of $X$**
+:::
+
+<br>
+
+::: {style="font-size: 2em; text-align: center;"}
+$\color{#a68100}{\widehat{y}} = \color{#000000}{a} + \color{#000000}{b_1}\color{#000000}{x} + \color{#000000}{b_2}\color{#000000}{z}$
+:::
+
+<br>
+
+::: {style="color: #a68100; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X = 0$ and $Z = 0$
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$z$ is the value of $Z$ for the individual
+:::
+
+## Multivariate regression
+
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$b_1 =$ the effect of $X$ on $Y$ **after controlling for the effects of $Z$**
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$b_2 =$ the effect of $Z$ on $Y$ **after controlling for the effects of $X$**
+:::
+
+<br>
+
+::: {style="font-size: 2em; text-align: center;"}
+$\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#000000}{b_1}\color{#000000}{x} + \color{#000000}{b_2}\color{#000000}{z}$
+:::
+
+<br>
+
+::: {style="color: #a68100; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+::: {style="color: #754cbc; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X = 0$ and $Z = 0$
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$z$ is the value of $Z$ for the individual
+:::
+
+## Multivariate regression
+
+<br>
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+::: {style="color: #e93cac; text-align: center; font-size: 1.25em"}
+$b_1 =$ the effect of $X$ on $Y$ **after controlling for the effects of $Z$**
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$b_2 =$ the effect of $Z$ on $Y$ **after controlling for the effects of $X$**
+:::
+
+<br>
+
+::: {style="font-size: 2em; text-align: center;"}
+$\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b_1}\color{#000000}{x} + \color{#000000}{b_2}\color{#000000}{z}$
+:::
+
+<br>
+
+::: {style="color: #a68100; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+::: {style="color: #754cbc; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X = 0$ and $Z = 0$
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$z$ is the value of $Z$ for the individual
+:::
+
+## Multivariate regression
+
+<br>
+
+::: {style="color: #1b8883; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+::: {style="color: #e93cac; text-align: center; font-size: 1.25em"}
+$b_1 =$ the effect of $X$ on $Y$ **after controlling for the effects of $Z$**
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$b_2 =$ the effect of $Z$ on $Y$ **after controlling for the effects of $X$**
+:::
+
+<br>
+
+::: {style="font-size: 2em; text-align: center;"}
+$\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b_1}\color{#1b8883}{x} + \color{#000000}{b_2}\color{#000000}{z}$
+:::
+
+<br>
+
+::: {style="color: #a68100; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+::: {style="color: #754cbc; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X = 0$ and $Z = 0$
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$z$ is the value of $Z$ for the individual
+:::
+
+## Multivariate regression
+
+<br>
+
+::: {style="color: #1b8883; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+::: {style="color: #e93cac; text-align: center; font-size: 1.25em"}
+$b_1 =$ the effect of $X$ on $Y$ **after controlling for the effects of $Z$**
+:::
+
+::: {style="color: #690c48; text-align: center; font-size: 1.25em"}
+$b_2 =$ the effect of $Z$ on $Y$ **after controlling for the effects of $X$**
+:::
+
+<br>
+
+::: {style="font-size: 2em; text-align: center;"}
+$\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b_1}\color{#1b8883}{x} + \color{#690c48}{b_2}\color{#000000}{z}$
+:::
+
+<br>
+
+::: {style="color: #a68100; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+::: {style="color: #754cbc; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X = 0$ and $Z = 0$
+:::
+
+::: {style="color: #e8e3d3; text-align: center; font-size: 1.25em"}
+$z$ is the value of $Z$ for the individual
+:::
+
+## Multivariate regression
+
+<br>
+
+::: {style="color: #1b8883; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+::: {style="color: #e93cac; text-align: center; font-size: 1.25em"}
+$b_1 =$ the effect of $X$ on $Y$ **after controlling for the effects of $Z$**
+:::
+
+::: {style="color: #690c48; text-align: center; font-size: 1.25em"}
+$b_2 =$ the effect of $Z$ on $Y$ **after controlling for the effects of $X$**
+:::
+
+<br>
+
+::: {style="font-size: 2em; text-align: center;"}
+$\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b_1}\color{#1b8883}{x} + \color{#690c48}{b_2}\color{#6e8e13}{z}$
+:::
+
+<br>
+
+::: {style="color: #a68100; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+::: {style="color: #754cbc; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X = 0$ and $Z = 0$
+:::
+
+::: {style="color: #6e8e13; text-align: center; font-size: 1.25em"}
+$z$ is the value of $Z$ for the individual
+:::
+
+::: {.fragment fragment-index=1 style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: -25px; right: -75px; text-align: center"}
+When we [*control for*]{.underline} a variable, we are holding its effect constant (i.e., removing its influence)
+:::
+
+::: {.fragment fragment-index=2 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 360px; padding: 5px 5px 5px 5px; position: absolute; top: 285px; left: -75px; text-align: center"}
+Note that we are [**ADDING**]{style="color: #6e8e13"}  variables to the model in order to **REMOVE** their [influence]{style="color: #690c48"} from the [*effects*]{style="color: #e93cac"} of $X$.
+:::
+
+::: {.fragment fragment-index=3 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 300px; right: -25px; text-align: center"}
+ When they are not in the model, we are [ignoring]{.underline} their [influence]{style="color: #690c48"}
+:::
+
+
+## Multivariate regression
+
+::: {style="color: #1b8883; text-align: center; font-size: 1.25em"}
+$x$ is the value of $X$ for the individual
+:::
+
+::: {style="color: #e93cac; text-align: center; font-size: 1.25em"}
+$b_1 =$ the effect of $X$ on $Y$ **after controlling for the effects of $Z_1$ and $Z_k$**
+:::
+
+::: {style="color: #690c48; text-align: center; font-size: 1.25em"}
+$b_2 =$ the effect of $Z_1$ on $Y$ **after controlling for the effects of $X$ and $Z_k$**
+:::
+
+::: {style="color: #bf5700; text-align: center; font-size: 1.25em"}
+$b_k =$ the effect of $Z_k$ on $Y$ **after controlling for the effects of $X$ and $Z_1$**
+:::
+
+<br>
+
+::: {style="font-size: 2em; text-align: center;"}
+$\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b_1}\color{#1b8883}{x} + \color{#690c48}{b_2}\color{#6e8e13}{z} + \text{. . . } + \color{#bf5700}{b_k}\color{#000000}{z_k}$
+:::
+
+<br>
+
+::: {style="color: #a68100; text-align: center; font-size: 1.25em"}
+$\widehat{y}$ is the predicted value of $Y$
+:::
+  
+::: {style="color: #754cbc; text-align: center; font-size: 1.25em"}
+$a = Y-intercept$ (i.e., *constant*); <br>
+predicted value of $Y$ when $X$, $Z_1$, and $Z_k$ all equal $0$
+:::
+
+::: {style="color: #6e8e13; text-align: center; font-size: 1.25em"}
+$z_1$ is the value of $Z_1$ for the individual
+:::
+
+::: {style="color: #000000; text-align: center; font-size: 1.25em"}
+$z_k$ is the value of $Z_k$ for the individual
+:::
+
+## Why multivariate regression?
+
+<br>
+
+::: {.incremental style="font-size: 1.75em;"}
+* Purpose 1: building the case for causality
+    * [Control for alternate explanations for the main association]{style="font-size: 0.75em"}
+* Purpose 2: developing better predictions
+    * [Predict $Y$ as a function of multiple variables, not just $X$]{style="font-size: 0.75em"}
+* Purpose 3: explain more
+    * [Use multiple variables to explain more of the variation in $Y$]{style="font-size: 0.75em"}
+:::
+
 ## Purpose 1: building the case for causality
+
+<br>
+
+::: {.fragment style="font-size: 2em;  position: absolute; left: -25px; top: 100px"}
+> [**Causality**]{style="color: #e93cac"}: <br> 
+A situation in which <br> 
+one condition, event, <br> 
+or process contributes <br> 
+to the production of <br> 
+another condition, event, <br> 
+process, or state
+:::
+
+::: {.fragment style="position: absolute; top: 75px; right: -100px"}
+```{r}
+#| echo: false
+
+crime_icecream <- data.frame(low_ice_cream = c("20 <br> (83.3%)", "4 <br> (16.7%)",  "24"), high_ice_cream = c("4 <br> (33.3%)", "8 <br> (66.7%)", "12"), Total = c("24 <br> (66.7%)", "12 <br> (33.3%)", "36"))
+rownames(crime_icecream) <- c("Low violent crime", "High violent crime", "Total")
+
+crime_icecream |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Bivariate table (all months):", subtitle = "Violent crime by ice cream sales") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  cols_label(low_ice_cream = "Low ice cream sales", high_ice_cream = "High ice cream sales") |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_stylize(style = 5, color = "gray", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
+```
+:::
+
+::: {.fragment style="position: absolute; top: 75px; right: -100px"}
+Is there an association between ice cream sales and crime?
+:::
+
+## Purpose 1: building the case for causality
+
+<br>
+
+::: {style="font-size: 2em; position: absolute; left: -25px; top: 100px"}
+> [**Causality**]{style="color: #e93cac"}: <br> 
+A situation in which <br> 
+one condition, event, <br> 
+or process contributes <br> 
+to the production of <br> 
+another condition, event, <br> 
+process, or state
+:::
+
+::: {style="position: absolute; top: 75px; right: -100px"}
+```{r}
+#| echo: false
+
+crime_icecream <- data.frame(low_ice_cream = c("20 <br> (83.3%)", "4 <br> (16.7%)",  "24"), high_ice_cream = c("4 <br> (33.3%)", "8 <br> (66.7%)", "12"), Total = c("24 <br> (66.7%)", "12 <br> (33.3%)", "36"))
+rownames(crime_icecream) <- c("Low violent crime", "High violent crime", "Total")
+
+crime_icecream |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = "Bivariate table (all months):", subtitle = "Violent crime by ice cream sales") |> # add title and subtitle
+  fmt_markdown(columns = everything()) |> # include html 
+  cols_align(align = "center", columns = everything()) |> # center columns
+  cols_label(low_ice_cream = "Low ice cream sales", high_ice_cream = "High ice cream sales") |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_stylize(style = 5, color = "gray", add_row_striping = TRUE) |> # stylize so visible with background color (code below was excruciating attempt to color all table lines darker but I couldn't figure out how to change all lines)
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="position: absolute; top: 75px; right: -100px"}
+Is there an association between ice cream sales and crime?
+:::
+
+Yes. Differences in conditional distributions (column %’s) show a positive association between ice cream sales and crime.
+
+
+---
 
 1. There is a statistical association between X and Y
 2. X happens before Y (correct time ordering)

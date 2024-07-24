@@ -1,0 +1,13 @@
+---
+title: "Primer for Multivariate Regression"
+format: pdf
+---
+
+*Regression analysis represents a key tool for assessing the nature of a focal association, checking for the statistical significance of a focal association and, most importantly, elaborating on a bivariate association to test theoretical arguments about the relationship between two variables. This document provides a brief refresher on the purpose and meaning of bivariate regression analysis and an overview of multivariate regression analysis. Rather than focus on the mathematics of multivariate regression (which are really a straightforward extension of those for bivariate regression), this introduction will focus on the practical application of these regression tools. Specifically, it demonstrates the creation and interpretation of output from an SPSS estimation of a bivariate regression model and a few multivariate models to exemplify a typical elaboration process. Please note that the example here is meant to demonstrate the mechanics of multivariate regression as a tool for assessing and elaborating on basic associations; it, by no means, represents a complete treatment of the topic of multivariate regression.*
+
+The example uses data from the General Social Survey to explore the simple hypothesis that individual income is positively related to formal educational attainment. Note that the GSS subsample used here includes only adults who earned income from salary or wages in the previous year.
+
+## Bivariate regression model
+*   The first step in exploring any focal relationship is the test of whether the two variables are associated with one another in a theoretically predicted way. A simple bivariate regression model does the trick in many situations.
+* In SPSS, choose the Analyze menu, then Regression, and then Linear. Select r_income, "Rs annual income in dollars" as the dependent variable and educ, "Highest year of school completed" as the independent variable.
+* Partial output:

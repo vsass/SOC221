@@ -20,7 +20,7 @@ Columns
 Left column
 :::
   
-  ::: {.column width="50%"}
+::: {.column width="50%"}
 Right column
 :::
   

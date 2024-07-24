@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.551">
+  <meta name="generator" content="quarto-1.5.43">
 
   <meta name="author" content="Victoria Sass">
-  <title></title>
+  <title> Multivariate regression </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -348,14 +348,1464 @@ Victoria Sass
 <h1>Multivariate regression</h1>
 
 </section>
+<section id="where-are-we" class="slide level2">
+<h2>Where ARE WE?</h2>
+<div style="font-size: 1.25em">
+<ul>
+<li class="fragment">Bivariate correlation and regression good for detecting and describing basic associations between two variables (e.g., X and Y)</li>
+<li class="fragment">Often want to bring in additional variables
+<ul>
+<li class="fragment"><span style="color: #e93cac">Build case for causality</span>
+<ul>
+<li class="fragment">Control for alternative explanations for the main association</li>
+</ul></li>
+<li class="fragment"><span style="color: #e93cac">Develop better predictions</span>
+<ul>
+<li class="fragment">Predict Y as a function of multiple variables, not just X</li>
+</ul></li>
+<li class="fragment"><span style="color: #e93cac">Explain more</span>
+<ul>
+<li class="fragment">Use multiple variables to explain more of the variation in Y</li>
+</ul></li>
+</ul></li>
+<li class="fragment"><u><strong>Multivariate regression</strong></u>: A key tool for bringing additional variables into consideration</li>
+</ul>
+</div>
+</section>
 <section id="bivariate-regression" class="slide level2">
 <h2>Bivariate regression</h2>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b =\)</span> slope of the line; <br> how much <span class="math inline">\(Y\)</span> changes with each one-unit difference in <span class="math inline">\(X\)</span></p>
+</div>
+<p><br></p>
+<div style="text-align: center; font-size: 2em;">
+<p><span class="math inline">\(\color{#000000}{\widehat{y}} = \color{#000000}{a} + \color{#000000}{b}\color{#000000}{x}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span></p>
+</div>
+</section>
+<section id="bivariate-regression-1" class="slide level2">
+<h2>Bivariate regression</h2>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b =\)</span> slope of the line; <br> how much <span class="math inline">\(Y\)</span> changes with each one-unit difference in <span class="math inline">\(X\)</span></p>
+</div>
+<p><br></p>
+<div style="text-align: center; font-size: 2em;">
+<p><span class="math inline">\(\color{#a68100}{\widehat{y}} = \color{#000000}{a} + \color{#000000}{b}\color{#000000}{x}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #a68100; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span></p>
+</div>
+</section>
+<section id="bivariate-regression-2" class="slide level2">
+<h2>Bivariate regression</h2>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b =\)</span> slope of the line; <br> how much <span class="math inline">\(Y\)</span> changes with each one-unit difference in <span class="math inline">\(X\)</span></p>
+</div>
+<p><br></p>
+<div style="text-align: center; font-size: 2em;">
+<p><span class="math inline">\(\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#000000}{b}\color{#000000}{x}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #a68100; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #754cbc; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span></p>
+</div>
+</section>
+<section id="bivariate-regression-3" class="slide level2">
+<h2>Bivariate regression</h2>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<p><br></p>
+<div style="color: #e93cac; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b =\)</span> slope of the line; <br> how much <span class="math inline">\(Y\)</span> changes with each one-unit difference in <span class="math inline">\(X\)</span></p>
+</div>
+<p><br></p>
+<div style="text-align: center; font-size: 2em;">
+<p><span class="math inline">\(\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b}\color{#000000}{x}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #a68100; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #754cbc; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span></p>
+</div>
+</section>
+<section id="bivariate-regression-4" class="slide level2">
+<h2>Bivariate regression</h2>
+<p><br></p>
+<div style="color: #1b8883; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<p><br></p>
+<div style="color: #e93cac; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b =\)</span> slope of the line; <br> how much <span class="math inline">\(Y\)</span> changes with each one-unit difference in <span class="math inline">\(X\)</span></p>
+</div>
+<p><br></p>
+<div style="text-align: center; font-size: 2em;">
+<p><span class="math inline">\(\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b}\color{#1b8883}{x}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #a68100; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #754cbc; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span></p>
+</div>
 </section>
 <section id="multivariate-regression-1" class="slide level2">
 <h2>Multivariate regression</h2>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_1 =\)</span> the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(Z\)</span></strong></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_2 =\)</span> the effect of <span class="math inline">\(Z\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(X\)</span></strong></p>
+</div>
+<p><br></p>
+<div style="font-size: 2em; text-align: center;">
+<p><span class="math inline">\(\color{#000000}{\widehat{y}} = \color{#000000}{a} + \color{#000000}{b_1}\color{#000000}{x} + \color{#000000}{b_2}\color{#000000}{z}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span> and <span class="math inline">\(Z = 0\)</span></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(z\)</span> is the value of <span class="math inline">\(Z\)</span> for the individual</p>
+</div>
+</section>
+<section id="multivariate-regression-2" class="slide level2">
+<h2>Multivariate regression</h2>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_1 =\)</span> the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(Z\)</span></strong></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_2 =\)</span> the effect of <span class="math inline">\(Z\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(X\)</span></strong></p>
+</div>
+<p><br></p>
+<div style="font-size: 2em; text-align: center;">
+<p><span class="math inline">\(\color{#a68100}{\widehat{y}} = \color{#000000}{a} + \color{#000000}{b_1}\color{#000000}{x} + \color{#000000}{b_2}\color{#000000}{z}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #a68100; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span> and <span class="math inline">\(Z = 0\)</span></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(z\)</span> is the value of <span class="math inline">\(Z\)</span> for the individual</p>
+</div>
+</section>
+<section id="multivariate-regression-3" class="slide level2">
+<h2>Multivariate regression</h2>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_1 =\)</span> the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(Z\)</span></strong></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_2 =\)</span> the effect of <span class="math inline">\(Z\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(X\)</span></strong></p>
+</div>
+<p><br></p>
+<div style="font-size: 2em; text-align: center;">
+<p><span class="math inline">\(\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#000000}{b_1}\color{#000000}{x} + \color{#000000}{b_2}\color{#000000}{z}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #a68100; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<div style="color: #754cbc; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span> and <span class="math inline">\(Z = 0\)</span></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(z\)</span> is the value of <span class="math inline">\(Z\)</span> for the individual</p>
+</div>
+</section>
+<section id="multivariate-regression-4" class="slide level2">
+<h2>Multivariate regression</h2>
+<p><br></p>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<div style="color: #e93cac; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_1 =\)</span> the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(Z\)</span></strong></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_2 =\)</span> the effect of <span class="math inline">\(Z\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(X\)</span></strong></p>
+</div>
+<p><br></p>
+<div style="font-size: 2em; text-align: center;">
+<p><span class="math inline">\(\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b_1}\color{#000000}{x} + \color{#000000}{b_2}\color{#000000}{z}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #a68100; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<div style="color: #754cbc; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span> and <span class="math inline">\(Z = 0\)</span></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(z\)</span> is the value of <span class="math inline">\(Z\)</span> for the individual</p>
+</div>
+</section>
+<section id="multivariate-regression-5" class="slide level2">
+<h2>Multivariate regression</h2>
+<p><br></p>
+<div style="color: #1b8883; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<div style="color: #e93cac; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_1 =\)</span> the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(Z\)</span></strong></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_2 =\)</span> the effect of <span class="math inline">\(Z\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(X\)</span></strong></p>
+</div>
+<p><br></p>
+<div style="font-size: 2em; text-align: center;">
+<p><span class="math inline">\(\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b_1}\color{#1b8883}{x} + \color{#000000}{b_2}\color{#000000}{z}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #a68100; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<div style="color: #754cbc; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span> and <span class="math inline">\(Z = 0\)</span></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(z\)</span> is the value of <span class="math inline">\(Z\)</span> for the individual</p>
+</div>
+</section>
+<section id="multivariate-regression-6" class="slide level2">
+<h2>Multivariate regression</h2>
+<p><br></p>
+<div style="color: #1b8883; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<div style="color: #e93cac; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_1 =\)</span> the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(Z\)</span></strong></p>
+</div>
+<div style="color: #690c48; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_2 =\)</span> the effect of <span class="math inline">\(Z\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(X\)</span></strong></p>
+</div>
+<p><br></p>
+<div style="font-size: 2em; text-align: center;">
+<p><span class="math inline">\(\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b_1}\color{#1b8883}{x} + \color{#690c48}{b_2}\color{#000000}{z}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #a68100; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<div style="color: #754cbc; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span> and <span class="math inline">\(Z = 0\)</span></p>
+</div>
+<div style="color: #e8e3d3; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(z\)</span> is the value of <span class="math inline">\(Z\)</span> for the individual</p>
+</div>
+</section>
+<section id="multivariate-regression-7" class="slide level2">
+<h2>Multivariate regression</h2>
+<p><br></p>
+<div style="color: #1b8883; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<div style="color: #e93cac; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_1 =\)</span> the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(Z\)</span></strong></p>
+</div>
+<div style="color: #690c48; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_2 =\)</span> the effect of <span class="math inline">\(Z\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(X\)</span></strong></p>
+</div>
+<p><br></p>
+<div style="font-size: 2em; text-align: center;">
+<p><span class="math inline">\(\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b_1}\color{#1b8883}{x} + \color{#690c48}{b_2}\color{#6e8e13}{z}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #a68100; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<div style="color: #754cbc; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span> and <span class="math inline">\(Z = 0\)</span></p>
+</div>
+<div style="color: #6e8e13; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(z\)</span> is the value of <span class="math inline">\(Z\)</span> for the individual</p>
+</div>
+<div class="fragment" data-fragment-index="1" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: -25px; right: -75px; text-align: center">
+<p>When we <u><em>control for</em></u> a variable, we are holding its effect constant (i.e., removing its influence)</p>
+</div>
+<div class="fragment" data-fragment-index="2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 360px; padding: 5px 5px 5px 5px; position: absolute; top: 285px; left: -75px; text-align: center">
+<p>Note that we are <span style="color: #6e8e13"><strong>ADDING</strong></span> variables to the model in order to <strong>REMOVE</strong> their <span style="color: #690c48">influence</span> from the <span style="color: #e93cac"><em>effects</em></span> of <span class="math inline">\(X\)</span>.</p>
+</div>
+<div class="fragment" data-fragment-index="3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 300px; right: -25px; text-align: center">
+<p>When they are not in the model, we are <u>ignoring</u> their <span style="color: #690c48">influence</span></p>
+</div>
+</section>
+<section id="multivariate-regression-8" class="slide level2">
+<h2>Multivariate regression</h2>
+<div style="color: #1b8883; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(x\)</span> is the value of <span class="math inline">\(X\)</span> for the individual</p>
+</div>
+<div style="color: #e93cac; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_1 =\)</span> the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(Z_1\)</span> and <span class="math inline">\(Z_k\)</span></strong></p>
+</div>
+<div style="color: #690c48; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_2 =\)</span> the effect of <span class="math inline">\(Z_1\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(X\)</span> and <span class="math inline">\(Z_k\)</span></strong></p>
+</div>
+<div style="color: #bf5700; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(b_k =\)</span> the effect of <span class="math inline">\(Z_k\)</span> on <span class="math inline">\(Y\)</span> <strong>after controlling for the effects of <span class="math inline">\(X\)</span> and <span class="math inline">\(Z_1\)</span></strong></p>
+</div>
+<p><br></p>
+<div style="font-size: 2em; text-align: center;">
+<p><span class="math inline">\(\color{#a68100}{\widehat{y}} = \color{#754cbc}{a} + \color{#e93cac}{b_1}\color{#1b8883}{x} + \color{#690c48}{b_2}\color{#6e8e13}{z} + \text{. . . } + \color{#bf5700}{b_k}\color{#000000}{z_k}\)</span></p>
+</div>
+<p><br></p>
+<div style="color: #a68100; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(\widehat{y}\)</span> is the predicted value of <span class="math inline">\(Y\)</span></p>
+</div>
+<div style="color: #754cbc; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(a = Y-intercept\)</span> (i.e., <em>constant</em>); <br> predicted value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X\)</span>, <span class="math inline">\(Z_1\)</span>, and <span class="math inline">\(Z_k\)</span> all equal <span class="math inline">\(0\)</span></p>
+</div>
+<div style="color: #6e8e13; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(z_1\)</span> is the value of <span class="math inline">\(Z_1\)</span> for the individual</p>
+</div>
+<div style="color: #000000; text-align: center; font-size: 1.25em">
+<p><span class="math inline">\(z_k\)</span> is the value of <span class="math inline">\(Z_k\)</span> for the individual</p>
+</div>
+</section>
+<section id="why-multivariate-regression" class="slide level2">
+<h2>Why multivariate regression?</h2>
+<p><br></p>
+<div style="font-size: 1.75em;">
+<ul>
+<li class="fragment">Purpose 1: building the case for causality
+<ul>
+<li class="fragment"><span style="font-size: 0.75em">Control for alternate explanations for the main association</span></li>
+</ul></li>
+<li class="fragment">Purpose 2: developing better predictions
+<ul>
+<li class="fragment"><span style="font-size: 0.75em">Predict <span class="math inline">\(Y\)</span> as a function of multiple variables, not just <span class="math inline">\(X\)</span></span></li>
+</ul></li>
+<li class="fragment">Purpose 3: explain more
+<ul>
+<li class="fragment"><span style="font-size: 0.75em">Use multiple variables to explain more of the variation in <span class="math inline">\(Y\)</span></span></li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="purpose-1-building-the-case-for-causality" class="slide level2">
 <h2>Purpose 1: building the case for causality</h2>
+<p><br></p>
+<div class="fragment" style="font-size: 2em;  position: absolute; left: -25px; top: 100px">
+<blockquote>
+<p><span style="color: #e93cac"><strong>Causality</strong></span>: <br> A situation in which <br> one condition, event, <br> or process contributes <br> to the production of <br> another condition, event, <br> process, or state</p>
+</blockquote>
+</div>
+<div class="fragment" style="position: absolute; top: 75px; right: -100px">
+<div class="cell">
+<div class="cell-output-display">
+<div id="icpdythumt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#icpdythumt table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#icpdythumt thead, #icpdythumt tbody, #icpdythumt tfoot, #icpdythumt tr, #icpdythumt td, #icpdythumt th {
+  border-style: none;
+}
+
+#icpdythumt p {
+  margin: 0;
+  padding: 0;
+}
+
+#icpdythumt .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #E8E3D3;
+  width: 65%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #85754D;
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: #85754D;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #85754D;
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-left-color: #85754D;
+}
+
+#icpdythumt .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#icpdythumt .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #E8E3D3;
+  border-bottom-width: 0;
+}
+
+#icpdythumt .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #E8E3D3;
+  border-top-width: 0;
+}
+
+#icpdythumt .gt_heading {
+  background-color: #E8E3D3;
+  text-align: center;
+  border-bottom-color: #E8E3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#icpdythumt .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #85754D;
+}
+
+#icpdythumt .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D5D5D5;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #85754D;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#icpdythumt .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#icpdythumt .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#icpdythumt .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#icpdythumt .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#icpdythumt .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #85754D;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#icpdythumt .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#icpdythumt .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #E8E3D3;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D5D5D5;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#icpdythumt .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #E8E3D3;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D5D5D5;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+  vertical-align: middle;
+}
+
+#icpdythumt .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#icpdythumt .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#icpdythumt .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #85754D;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #85754D;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #85754D;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#icpdythumt .gt_stub {
+  color: #FFFFFF;
+  background-color: #929292;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #85754D;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#icpdythumt .gt_stub_row_group {
+  color: #333333;
+  background-color: #E8E3D3;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#icpdythumt .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#icpdythumt .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#icpdythumt .gt_summary_row {
+  color: #FFFFFF;
+  background-color: #5F5F5F;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#icpdythumt .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D5D5D5;
+}
+
+#icpdythumt .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#icpdythumt .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+}
+
+#icpdythumt .gt_grand_summary_row {
+  color: #FFFFFF;
+  background-color: #929292;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#icpdythumt .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D5D5D5;
+}
+
+#icpdythumt .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D5D5D5;
+}
+
+#icpdythumt .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#icpdythumt .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #85754D;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #85754D;
+}
+
+#icpdythumt .gt_footnotes {
+  color: #333333;
+  background-color: #E8E3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#icpdythumt .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#icpdythumt .gt_sourcenotes {
+  color: #333333;
+  background-color: #E8E3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#icpdythumt .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#icpdythumt .gt_left {
+  text-align: left;
+}
+
+#icpdythumt .gt_center {
+  text-align: center;
+}
+
+#icpdythumt .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#icpdythumt .gt_font_normal {
+  font-weight: normal;
+}
+
+#icpdythumt .gt_font_bold {
+  font-weight: bold;
+}
+
+#icpdythumt .gt_font_italic {
+  font-style: italic;
+}
+
+#icpdythumt .gt_super {
+  font-size: 65%;
+}
+
+#icpdythumt .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#icpdythumt .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#icpdythumt .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#icpdythumt .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#icpdythumt .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#icpdythumt .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#icpdythumt .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header gt_heading">
+<th colspan="4" class="gt_heading gt_title gt_font_normal">Bivariate table (all months):</th>
+</tr>
+<tr class="odd gt_heading">
+<th colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">Violent crime by ice cream sales</th>
+</tr>
+<tr class="header gt_col_headings">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
+<th id="Low ice cream sales" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Low ice cream sales</th>
+<th id="High ice cream sales" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">High ice cream sales</th>
+<th id="Total" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Total</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td id="stub_1_1" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><div class="gt_from_md">
+<p>Low violent crime</p>
+</div></td>
+<td class="gt_row gt_center" headers="stub_1_1 low_ice_cream"><div class="gt_from_md">
+<p>20<br>
+(83.3%)</p>
+</div></td>
+<td class="gt_row gt_center" headers="stub_1_1 high_ice_cream"><div class="gt_from_md">
+<p>4<br>
+(33.3%)</p>
+</div></td>
+<td class="gt_row gt_center" headers="stub_1_1 Total"><div class="gt_from_md">
+<p>24<br>
+(66.7%)</p>
+</div></td>
+</tr>
+<tr class="even">
+<td id="stub_1_2" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><div class="gt_from_md">
+<p>High violent crime</p>
+</div></td>
+<td class="gt_row gt_center gt_striped" headers="stub_1_2 low_ice_cream"><div class="gt_from_md">
+<p>4<br>
+(16.7%)</p>
+</div></td>
+<td class="gt_row gt_center gt_striped" headers="stub_1_2 high_ice_cream"><div class="gt_from_md">
+<p>8<br>
+(66.7%)</p>
+</div></td>
+<td class="gt_row gt_center gt_striped" headers="stub_1_2 Total"><div class="gt_from_md">
+<p>12<br>
+(33.3%)</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td id="stub_1_3" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><div class="gt_from_md">
+<p>Total</p>
+</div></td>
+<td class="gt_row gt_center" headers="stub_1_3 low_ice_cream"><div class="gt_from_md">
+<p>24</p>
+</div></td>
+<td class="gt_row gt_center" headers="stub_1_3 high_ice_cream"><div class="gt_from_md">
+<p>12</p>
+</div></td>
+<td class="gt_row gt_center" headers="stub_1_3 Total"><div class="gt_from_md">
+<p>36</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<div class="fragment" style="position: absolute; top: 75px; right: -100px">
+<p>Is there an association between ice cream sales and crime?</p>
+</div>
+</section>
+<section id="purpose-1-building-the-case-for-causality-1" class="slide level2">
+<h2>Purpose 1: building the case for causality</h2>
+<p><br></p>
+<div style="font-size: 2em; position: absolute; left: -25px; top: 100px">
+<blockquote>
+<p><span style="color: #e93cac"><strong>Causality</strong></span>: <br> A situation in which <br> one condition, event, <br> or process contributes <br> to the production of <br> another condition, event, <br> process, or state</p>
+</blockquote>
+</div>
+<div style="position: absolute; top: 75px; right: -100px">
+<div class="cell">
+<div class="cell-output-display">
+<div id="rlevpoeupx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rlevpoeupx table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#rlevpoeupx thead, #rlevpoeupx tbody, #rlevpoeupx tfoot, #rlevpoeupx tr, #rlevpoeupx td, #rlevpoeupx th {
+  border-style: none;
+}
+
+#rlevpoeupx p {
+  margin: 0;
+  padding: 0;
+}
+
+#rlevpoeupx .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #E8E3D3;
+  width: 65%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #85754D;
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: #85754D;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #85754D;
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-left-color: #85754D;
+}
+
+#rlevpoeupx .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#rlevpoeupx .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #E8E3D3;
+  border-bottom-width: 0;
+}
+
+#rlevpoeupx .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #E8E3D3;
+  border-top-width: 0;
+}
+
+#rlevpoeupx .gt_heading {
+  background-color: #E8E3D3;
+  text-align: center;
+  border-bottom-color: #E8E3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#rlevpoeupx .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #85754D;
+}
+
+#rlevpoeupx .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D5D5D5;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #85754D;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#rlevpoeupx .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#rlevpoeupx .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#rlevpoeupx .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#rlevpoeupx .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#rlevpoeupx .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #85754D;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#rlevpoeupx .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#rlevpoeupx .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #E8E3D3;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D5D5D5;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#rlevpoeupx .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #E8E3D3;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D5D5D5;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+  vertical-align: middle;
+}
+
+#rlevpoeupx .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#rlevpoeupx .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#rlevpoeupx .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #85754D;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #85754D;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #85754D;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#rlevpoeupx .gt_stub {
+  color: #FFFFFF;
+  background-color: #929292;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #85754D;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rlevpoeupx .gt_stub_row_group {
+  color: #333333;
+  background-color: #E8E3D3;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#rlevpoeupx .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#rlevpoeupx .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#rlevpoeupx .gt_summary_row {
+  color: #FFFFFF;
+  background-color: #5F5F5F;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rlevpoeupx .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D5D5D5;
+}
+
+#rlevpoeupx .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#rlevpoeupx .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D5D5D5;
+}
+
+#rlevpoeupx .gt_grand_summary_row {
+  color: #FFFFFF;
+  background-color: #929292;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rlevpoeupx .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D5D5D5;
+}
+
+#rlevpoeupx .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D5D5D5;
+}
+
+#rlevpoeupx .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#rlevpoeupx .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #85754D;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #85754D;
+}
+
+#rlevpoeupx .gt_footnotes {
+  color: #333333;
+  background-color: #E8E3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#rlevpoeupx .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rlevpoeupx .gt_sourcenotes {
+  color: #333333;
+  background-color: #E8E3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#rlevpoeupx .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rlevpoeupx .gt_left {
+  text-align: left;
+}
+
+#rlevpoeupx .gt_center {
+  text-align: center;
+}
+
+#rlevpoeupx .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#rlevpoeupx .gt_font_normal {
+  font-weight: normal;
+}
+
+#rlevpoeupx .gt_font_bold {
+  font-weight: bold;
+}
+
+#rlevpoeupx .gt_font_italic {
+  font-style: italic;
+}
+
+#rlevpoeupx .gt_super {
+  font-size: 65%;
+}
+
+#rlevpoeupx .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#rlevpoeupx .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#rlevpoeupx .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#rlevpoeupx .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#rlevpoeupx .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#rlevpoeupx .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#rlevpoeupx .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header gt_heading">
+<th colspan="4" class="gt_heading gt_title gt_font_normal">Bivariate table (all months):</th>
+</tr>
+<tr class="odd gt_heading">
+<th colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">Violent crime by ice cream sales</th>
+</tr>
+<tr class="header gt_col_headings">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
+<th id="Low ice cream sales" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Low ice cream sales</th>
+<th id="High ice cream sales" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">High ice cream sales</th>
+<th id="Total" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Total</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td id="stub_1_1" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><div class="gt_from_md">
+<p>Low violent crime</p>
+</div></td>
+<td class="gt_row gt_center" headers="stub_1_1 low_ice_cream"><div class="gt_from_md">
+<p>20<br>
+(83.3%)</p>
+</div></td>
+<td class="gt_row gt_center" headers="stub_1_1 high_ice_cream"><div class="gt_from_md">
+<p>4<br>
+(33.3%)</p>
+</div></td>
+<td class="gt_row gt_center" headers="stub_1_1 Total"><div class="gt_from_md">
+<p>24<br>
+(66.7%)</p>
+</div></td>
+</tr>
+<tr class="even">
+<td id="stub_1_2" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><div class="gt_from_md">
+<p>High violent crime</p>
+</div></td>
+<td class="gt_row gt_center gt_striped" headers="stub_1_2 low_ice_cream"><div class="gt_from_md">
+<p>4<br>
+(16.7%)</p>
+</div></td>
+<td class="gt_row gt_center gt_striped" headers="stub_1_2 high_ice_cream"><div class="gt_from_md">
+<p>8<br>
+(66.7%)</p>
+</div></td>
+<td class="gt_row gt_center gt_striped" headers="stub_1_2 Total"><div class="gt_from_md">
+<p>12<br>
+(33.3%)</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td id="stub_1_3" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><div class="gt_from_md">
+<p>Total</p>
+</div></td>
+<td class="gt_row gt_center" headers="stub_1_3 low_ice_cream"><div class="gt_from_md">
+<p>24</p>
+</div></td>
+<td class="gt_row gt_center" headers="stub_1_3 high_ice_cream"><div class="gt_from_md">
+<p>12</p>
+</div></td>
+<td class="gt_row gt_center" headers="stub_1_3 Total"><div class="gt_from_md">
+<p>36</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<div style="position: absolute; top: 75px; right: -100px">
+<p>Is there an association between ice cream sales and crime?</p>
+</div>
+<p>Yes. Differences in conditional distributions (column %’s) show a positive association between ice cream sales and crime.</p>
+</section>
+<section class="slide level2">
+
 <ol type="1">
 <li>There is a statistical association between X and Y</li>
 <li>X happens before Y (correct time ordering)</li>
@@ -690,18 +2140,7 @@ Victoria Sass
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -733,7 +2172,29 @@ Victoria Sass
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -741,7 +2202,7 @@ Victoria Sass
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
