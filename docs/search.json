@@ -2525,5 +2525,47 @@
     "title": "",
     "section": "More examples",
     "text": "More examples\nThink creatively to use the information in the Normal Table to figure out what you want to know\n\n\n\nPercentage of women shorter than 55 inches?\nPercentage of women 55 inches or taller?\nProbability of randomly selecting a woman who is 69 inches or taller?\nProbability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?\nFind the score at the 10th percentile in the distribution.\nFind the two heights that define the middle 95% of cases in the distribution.\n\n\n\nHeight for women is  \\(N(65,3.5)\\)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-5",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-5",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n3 Criteria for Causality (what we need to show to claim that \\(X\\) causes \\(Y\\)) \n\nThere is a statistical association between \\(X\\) and \\(Y\\)\n\\(X\\) happens before \\(Y\\)\n\n(correct time ordering)\n\nNo other variable accounts for the statistical link between \\(X\\) and \\(Y\\)\n\n\n\nThird criterion motivates us to control for other variables  (i.e., account for their effects; remove their influence)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nDoes this mean that ice cream sales cause crime to increase?\n\n\nOr is the association spurious?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIce cream sales\n\n\n\nViolent crime"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-6",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-6",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\nSpurious relationship:  A situation in which  two variables are  statistically associated  but not causally related,  due to their coincidence  of a certain third,  unseen factor.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nDoes this mean that ice cream sales cause crime to increase?\n\n\nOr is the association spurious?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIce cream sales\n\n\n\nViolent crime"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-7",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-7",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\nSpurious relationship:  A situation in which  two variables are  statistically associated  but not causally related,  due to their coincidence  of a certain third,  unseen factor.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nCertain values on one variable (\\(Y\\)) tend to correspond with certain values on the another (\\(X\\)) because both are affected by a third outside variable."
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-8",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-8",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nCertain values on one variable (\\(Y\\)) tend to correspond with certain values on the another (\\(X\\)) because both are affected by a third outside variable.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnknown\n\n\n\nViolent crime\n\n\n\nIce cream sales"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-9",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-9",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nCertain values on one variable (\\(Y\\)) tend to correspond with certain values on the another (\\(X\\)) because both are affected by a third outside variable.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeather\n\n\n\nViolent crime\n\n\n\nIce cream sales\n\n\n\n\n\n\n\n\n\n\nNote: Weather might create a link between ice cream sales and crime. Failing to control for weather might make the association look causal even though that is false."
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-10",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-10",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nGreen\n\n\nGreen"
   }
 ]
