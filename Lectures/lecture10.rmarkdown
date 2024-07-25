@@ -53,6 +53,7 @@ ggplot2::theme_update(panel.background = ggplot2::element_blank(),
 options(width=80, show.signif.stars=FALSE)
 ```
 
+
 # Multivariate regression {.section-title background-color="#c5b4e3"}
 
 ## Where ARE WE?
@@ -577,6 +578,7 @@ process, or state
 :::
 
 ::: {.fragment style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -594,6 +596,7 @@ crime_icecream |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {.fragment style="position: absolute; bottom: 200px; right: 25px"}
@@ -616,6 +619,7 @@ process, or state
 :::
 
 ::: {style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -635,6 +639,7 @@ crime_icecream |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {style="position: absolute; bottom: 200px; right: 25px"}
@@ -661,6 +666,7 @@ process, or state
 :::
 
 ::: {style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -680,6 +686,7 @@ crime_icecream |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {style="position: absolute; bottom: 225px; right: 25px; width: 350px"}
@@ -687,6 +694,7 @@ Does this mean that ice cream sales *cause* crime to increase?
 :::
 
 ::: {style="position: absolute; bottom: -35px; right: 25px;"}
+
 ```{r}
 #| echo: false
 #| fig-width: 4
@@ -703,6 +711,7 @@ icecream_crime <- create_graph() |>
   render_graph(as_svg = TRUE, layout = "kk")
 icecream_crime
 ```
+
 :::
 
 ## Purpose 1: building the case for causality
@@ -720,6 +729,7 @@ icecream_crime
 :::
 
 ::: {style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -739,6 +749,7 @@ crime_icecream |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {style="position: absolute; bottom: 225px; right: 25px; width: 350px"}
@@ -746,6 +757,7 @@ Does this mean that ice cream sales *cause* crime to increase?
 :::
 
 ::: {style="position: absolute; bottom: -35px; right: 25px;"}
+
 ```{r}
 #| echo: false
 #| fig-width: 4
@@ -753,6 +765,7 @@ Does this mean that ice cream sales *cause* crime to increase?
 
 icecream_crime
 ```
+
 :::
 
 ## Purpose 1: building the case for causality
@@ -776,6 +789,7 @@ Third criterion motivates us to control for other variables <br>
 :::
 
 ::: {style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -795,6 +809,7 @@ crime_icecream |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {style="position: absolute; bottom: 225px; right: 25px; width: 350px"}
@@ -802,6 +817,7 @@ Does this mean that ice cream sales *cause* crime to increase?
 :::
 
 ::: {style="position: absolute; bottom: -35px; right: 25px;"}
+
 ```{r}
 #| echo: false
 #| fig-width: 4
@@ -809,6 +825,7 @@ Does this mean that ice cream sales *cause* crime to increase?
 
 icecream_crime
 ```
+
 :::
 
 ## Purpose 1: building the case for causality
@@ -831,6 +848,7 @@ Third criterion motivates us to control for other variables <br>
 :::
 
 ::: {style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -850,6 +868,7 @@ crime_icecream |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {style="position: absolute; bottom: 225px; right: 25px; width: 350px"}
@@ -857,6 +876,7 @@ Does this mean that ice cream sales *cause* crime to increase?
 :::
 
 ::: {style="position: absolute; bottom: -35px; right: 25px;"}
+
 ```{r}
 #| echo: false
 #| fig-width: 4
@@ -864,6 +884,7 @@ Does this mean that ice cream sales *cause* crime to increase?
 
 icecream_crime
 ```
+
 :::
 
 ::: {style="position: absolute; bottom: -15px; right: 25px; width: 350px; background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; padding: 5px 5px 5px 5px;"}
@@ -886,6 +907,7 @@ unseen factor.
 :::
 
 ::: {style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -905,6 +927,7 @@ crime_icecream |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {style="position: absolute; bottom: 225px; right: 25px; width: 350px"}
@@ -912,6 +935,7 @@ Does this mean that ice cream sales *cause* crime to increase?
 :::
 
 ::: {style="position: absolute; bottom: -35px; right: 25px;"}
+
 ```{r}
 #| echo: false
 #| fig-width: 4
@@ -919,6 +943,7 @@ Does this mean that ice cream sales *cause* crime to increase?
 
 icecream_crime
 ```
+
 :::
 
 ::: {style="position: absolute; bottom: -15px; right: 25px; width: 350px; background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; padding: 5px 5px 5px 5px;"}
@@ -941,6 +966,7 @@ unseen factor.
 :::
 
 ::: {style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -960,6 +986,7 @@ crime_icecream |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {style="position: absolute; bottom: 25px; right: -75px; width: 500px; background: #e93cac; border: 4px solid #690c48; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
@@ -969,6 +996,7 @@ Certain values on one variable ($Y$) tend to correspond with certain values on t
 ## Purpose 1: building the case for causality
 
 ::: {style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -988,6 +1016,7 @@ crime_icecream |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {style="position: absolute; bottom: 25px; right: -75px; width: 500px; background: #e93cac; border: 4px solid #690c48; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
@@ -995,6 +1024,7 @@ Certain values on one variable ($Y$) tend to correspond with certain values on t
 :::
 
 ::: {style="position: absolute; top: 50px; left: 25px;"}
+
 ```{r}
 #| echo: false
 #| fig-width: 4
@@ -1014,11 +1044,13 @@ create_graph() |>
   add_global_graph_attrs(attr = "bgcolor", value = "#e8e3d3", attr_type = "graph") |> 
   render_graph(as_svg = TRUE, layout = "tree")
 ```
+
 :::
 
 ## Purpose 1: building the case for causality
 
 ::: {style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -1038,6 +1070,7 @@ crime_icecream |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {style="position: absolute; bottom: 25px; right: -75px; width: 500px; background: #e93cac; border: 4px solid #690c48; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
@@ -1045,6 +1078,7 @@ Certain values on one variable ($Y$) tend to correspond with certain values on t
 :::
 
 ::: {style="position: absolute; top: 50px; left: 25px;"}
+
 ```{r}
 #| echo: false
 #| fig-width: 4
@@ -1065,6 +1099,7 @@ weather <- create_graph() |>
   render_graph(as_svg = TRUE, layout = "tree")
 weather
 ```
+
 :::
 
 ::: {.fragment style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; position: absolute; bottom: 50px; left: 0px; text-align: center"}
@@ -1074,6 +1109,7 @@ weather
 ## Purpose 1: building the case for causality
 
 ::: {style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -1093,6 +1129,7 @@ crime_icecream |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {style="position: absolute; bottom: 75px; right: -25px; width: 400px; background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
@@ -1100,6 +1137,7 @@ To control for weather, we look at the association between ice cream sales and c
 :::
 
 ::: {style="position: absolute; top: 50px; left: 25px;"}
+
 ```{r}
 #| echo: false
 #| fig-width: 4
@@ -1107,6 +1145,7 @@ To control for weather, we look at the association between ice cream sales and c
 
 weather
 ```
+
 :::
 
 ::: {.fragment style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 75px; left: 0px; text-align: center"}
@@ -1116,6 +1155,7 @@ Any association between ice cream sales and crime among cases (months) with simi
 ## Purpose 1: building the case for causality
 
 ::: {style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -1135,6 +1175,7 @@ warm |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {style="font-size: 1.25em; position: absolute; left: 0px; top: 100px; width: 500px; text-align: center"}
@@ -1156,6 +1197,7 @@ Any association between ice cream sales and crime among cases (months) with simi
 ## Purpose 1: building the case for causality
 
 ::: {style="position: absolute; top: 75px; right: -150px"}
+
 ```{r}
 #| echo: false
 
@@ -1175,6 +1217,7 @@ cool |>
   opt_table_outline(color = "#85754d") |> # outline table with colored border 
   tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(65), table.font.size = px(18L)) 
 ```
+
 :::
 
 ::: {style="font-size: 1.25em; position: absolute; left: 0px; top: 100px; width: 500px; text-align: center"}
@@ -1275,6 +1318,7 @@ $$
 :::
 
 ::: {.fragment style="position: absolute; top: 50px; left: 25px;"}
+
 ```{r}
 #| echo: false
 #| fig-width: 4
@@ -1288,13 +1332,14 @@ create_graph() |>
   add_node(label = "Violent\ncrime", 
            node_aes = node_aes(shape = "circle", fillcolor = "#808080", color = "#808080", fontcolor = "white", width = 0.8, height = 0.3)) |> 
   add_edge(from = 1, to = 3,
-           edge_aes = edge_aes(label = bquote(r[yz]), arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 0.75)) |> 
+           edge_aes = edge_aes(label = "r_{yz}", arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 0.75)) |> 
   add_edge(from = 1, to = 2, 
            edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 0.75)) |> 
   add_global_graph_attrs(attr = "bgcolor", value = "#e8e3d3", attr_type = "graph") |> 
   render_graph(as_svg = TRUE, layout = "tree")
 
 ```
+
 :::
 
 # Break! {.section-title background-color="#2ad2c9"}
