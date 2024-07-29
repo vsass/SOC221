@@ -805,25 +805,172 @@
     "text": "Purpose 1: building the case for causality\n\n\n3 Criteria for Causality (what we need to show to claim that \\(X\\) causes \\(Y\\)) \n\nThere is a statistical association between \\(X\\) and \\(Y\\)\n\\(X\\) happens before \\(Y\\)\n\n(correct time ordering)\n\nNo other variable accounts for the statistical link between \\(X\\) and \\(Y\\)\n\n\n\nThird criterion motivates us to control for other variables  (i.e., account for their effects; remove their influence)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nDoes this mean that ice cream sales cause crime to increase?"
   },
   {
-    "objectID": "lectures/lecture10.html#spurious-relationship",
-    "href": "lectures/lecture10.html#spurious-relationship",
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-5",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-5",
     "title": "",
-    "section": "Spurious relationship",
-    "text": "Spurious relationship"
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n3 Criteria for Causality (what we need to show to claim that \\(X\\) causes \\(Y\\)) \n\nThere is a statistical association between \\(X\\) and \\(Y\\)\n\\(X\\) happens before \\(Y\\)\n\n(correct time ordering)\n\nNo other variable accounts for the statistical link between \\(X\\) and \\(Y\\)\n\n\n\nThird criterion motivates us to control for other variables  (i.e., account for their effects; remove their influence)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nDoes this mean that ice cream sales cause crime to increase?\n\n\n\n\n\n\n\n\n\n\nOr is the association spurious?"
   },
   {
-    "objectID": "lectures/lecture10.html#summary-of-logic",
-    "href": "lectures/lecture10.html#summary-of-logic",
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-6",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-6",
     "title": "",
-    "section": "Summary of logic",
-    "text": "Summary of logic"
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\nSpurious relationship:  A situation in which  two variables are  statistically associated  but not causally related,  due to their coincidence  of a certain third,  unseen factor.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nDoes this mean that ice cream sales cause crime to increase?\n\n\n\n\n\n\n\n\n\n\nOr is the association spurious?"
   },
   {
-    "objectID": "lectures/lecture10.html#bivariate-slope-partial-slopes",
-    "href": "lectures/lecture10.html#bivariate-slope-partial-slopes",
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-7",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-7",
     "title": "",
-    "section": "Bivariate slope & partial slopes",
-    "text": "Bivariate slope & partial slopes"
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\nSpurious relationship:  A situation in which  two variables are  statistically associated  but not causally related,  due to their coincidence  of a certain third,  unseen factor.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nCertain values on one variable (\\(Y\\)) tend to correspond with certain values on the other (\\(X\\)) because both are affected by a third outside variable."
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-8",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-8",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nCertain values on one variable (\\(Y\\)) tend to correspond with certain values on the other (\\(X\\)) because both are affected by a third outside variable."
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-9",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-9",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nCertain values on one variable (\\(Y\\)) tend to correspond with certain values on the other (\\(X\\)) because both are affected by a third outside variable.\n\n\n\n\n\n\n\n\n\n\nNote: Weather might create a link between ice cream sales and crime. Failing to control for weather might make the association look causal even though that is false."
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-10",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-10",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nTo control for weather, we look at the association between ice cream sales and crime among cases (months) with similar weather.\n\n\n\n\n\n\n\n\n\n\nAny association between ice cream sales and crime among cases (months) with similar weather cannot be attributed to the effects of differences in weather."
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-11",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-11",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (WARM months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n0\n(0.0%)\n\n\n0\n(0.0%)\n\n\n0\n(0.0%)\n\n\n\n\nHigh violent crime\n\n\n3\n(100.0%)\n\n\n8\n(100.0%)\n\n\n11\n(100.0%)\n\n\n\n\nTotal\n\n\n3\n\n\n8\n\n\n11\n\n\n\n\n\n\n\n\n\n\nIs there an association between ice cream sales and crime?\n\n\nNo differences in conditional distributions (column %s), indicating that there is no association between ice cream sales and crime among warm months.\n\n\nTo control for weather, we look at the association between ice cream sales and crime among cases (months) with similar weather.\n\n\nAny association between ice cream sales and crime among cases (months) with similar weather cannot be attributed to the effects of differences in weather."
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-12",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-12",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (COOL months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(95.2%)\n\n\n4\n(100.0%)\n\n\n24\n(96.0%)\n\n\n\n\nHigh violent crime\n\n\n1\n(4.8%)\n\n\n0\n(0.0%)\n\n\n1\n(4.0%)\n\n\n\n\nTotal\n\n\n21\n\n\n4\n\n\n25\n\n\n\n\n\n\n\n\n\n\nIs there an association between ice cream sales and crime?\n\n\nLittle differences in conditional distributions (column %s), indicating that there is little association between ice cream sales and crime among cool months.\n\n\nTo control for weather, we look at the association between ice cream sales and crime among cases (months) with similar weather.\n\n\nAny association between ice cream sales and crime among cases (months) with similar weather cannot be attributed to the effects of differences in weather."
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-13",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-13",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nSummary of logic\n\n\nTo build the case that \\(X\\) causes \\(Y\\), we have to show that no other variable accounts for the statistical association between \\(X\\) and \\(Y\\) (association is not spurious)\nWe need to see if the association between \\(X\\) and \\(Y\\) persists even after we control (remove the influence of) other explanatory variables (for example, \\(Z\\))\nIf the association between \\(X\\) and \\(Y\\) goes way when we control for \\(Z\\) then the association was probably spurious (i.e., false)\nThe part of the association between \\(X\\) and \\(Y\\) that remains after we control for \\(Z\\) MIGHT represent the causal effect of \\(X\\) on \\(Y\\) (but still other potential explanations)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-14",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-14",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\\(b_1\\) and \\(b_2\\) are called PARTIAL SLOPES\n\n\n\n\nPARTIAL SLOPES:  Slope coefficient from a multivariate regression model, representing the effects of one predictor on the dependent variable while controlling for all other predictors in the model.\n\n\n\n\n\nMultivariate regression is a convenient tool for assessing the association between two variables (\\(X \\text{ and } Y\\)) while controlling for others (\\(Z\\)))\n\n\n\n\\(\\color{#000000}{\\widehat{y}} = \\color{#000000}{a} + \\color{#e93cac}{b_1}\\color{#000000}{x} + \\color{#690c48}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-15",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-15",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\nBIVARIATE SLOPE: Association between \\(X\\) and \\(Y\\)\n\n\n\\[\nb = r_{yx}(\\frac{s_y}{s_x})\n\\]\n\n\nPARTIAL SLOPE: Association between \\(X\\) and \\(Y\\) after controlling for \\(Z\\)\n\n\n\\[\nb_1 = (\\frac{r_{yx}-r_{yz}r_{xz}}{1-r^2_{xz}})(\\frac{s_y}{s_x})\n\\]\n\n\n\n\n\n\n\n\n\n\n\\(r_{xz}\\)\n\n\n\\(r_{yz}\\)\n\n\n\\(r_{yx}\\)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-16",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-16",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\nBIVARIATE SLOPE: Association between \\(X\\) and \\(Y\\)\n\n\n\\[\nb = r_{yx}(\\frac{s_y}{s_x})\n\\]\n\n\nPARTIAL SLOPE: Association between \\(X\\) and \\(Y\\) after controlling for \\(Z\\)\n\n\n\\[\nb_1 = (\\frac{\\color{#4b2e83}{r_{yx}}-\\color{#85754d}{r_{yz}r_{xz}}}{1-r^2_{xz}})(\\frac{s_y}{s_x})\n\\]\n\n\nLooking at the correlationbetween \\(X\\) and \\(Y\\)…\n\n\n… and subtracting out  the common connection of  these variables to Z\n\n\n\n\n\n\n\n\n\n\n\\(r_{xz}\\)\n\n\n\\(r_{yz}\\)\n\n\n\\(r_{yx}\\)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-17",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-17",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\n\n\nDoes this mean that education causes income to increase?\n\n\n\n\n\n\n\n\n\n\n\n\nOr is the association at least partly spurious?"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-18",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-18",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\n\n\nDoes this mean that education causes income to increase?\n\n\n\n\n\n\n\n\n\n\nOr is the association at least partly spurious?"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-19",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-19",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\n\\[\nb = r_{yx}(\\frac{s_y}{s_x})\n\\]\n\n\n\n \n\nLook at the association  between education and income,  subtracting out their  common connection to parental wealth\n\n\n\n\\[\nb_1 = (\\frac{\\color{#4b2e83}{r_{yx}}-\\color{#85754d}{r_{yz}r_{xz}}}{1-r^2_{xz}})(\\frac{s_y}{s_x})\n\\]\n\n\n\n\nOr is the association at least partly spurious?"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-20",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-20",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\\)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-21",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-21",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\n\n\n\\(b_1\\): Controlling for parental wealth, each additional year of education is associated with \\(\\$623.35\\) in additional income"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-22",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-22",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + \\color{#754cbc}{0.31}(\\text{par_wealth})\\)\n\n\n\n\n\n\n\\(b_1\\): Controlling for parental wealth, each additional year of education is associated with \\(\\$623.35\\) in additional income\n\n\n\n\\(b_2\\): Controlling for education, each additional dollar of parental wealth is associated with \\(\\$0.31\\) in additional income"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-23",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-23",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = \\color{#a68100}{799.22} + \\color{#6e8e13}{623.35}(educ) + \\color{#754cbc}{0.31}(\\text{par_wealth})\\)\n\n\n\n\n\\(a\\): A person with 0 years of education and 0 dollars of parental wealth is predicted to have an income \\(\\$799.22\\)\n\n\n\n\\(b_1\\): Controlling for parental wealth, each additional year of education is associated with \\(\\$623.35\\) in additional income\n\n\n\n\\(b_2\\): Controlling for education, each additional dollar of parental wealth is associated with \\(\\$0.31\\) in additional income"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-24",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-24",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + \\color{#6e8e13}{1582.58}(educ)\\)\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\nApparent association between education and income is reduced after controlling for parental wealth."
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-25",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-25",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + \\color{#6e8e13}{1582.58}(educ)\\)\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\nApparent association between education and income is reduced after controlling for parental wealth.\n\n\n\nThe association between education and income appears to be at least PARTIALLY spurious."
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-26",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-26",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + \\color{#6e8e13}{1582.58}(educ)\\)\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + \\color{#754cbc}{0.31}(\\text{par_wealth})\\)\n\n\n\n\nApparent association between education and income is reduced after controlling for parental wealth.\n\n\n\nThe association between education and income appears to be at least PARTIALLY spurious.\n\n\n\nPart of the basic association between education and income is due to the fact that they are both affected by parental wealth."
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-27",
+    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-27",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + \\color{#6e8e13}{1582.58}(educ)\\)\n\n\nNext step: Add other controls that might account for the remaining association.\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + \\color{#754cbc}{0.31}(\\text{par_wealth})\\)\n\n\n\n\nApparent association between education and income is reduced after controlling for parental wealth.\n\n\n\nThe association between education and income appears to be at least PARTIALLY spurious.\n\n\n\nPart of the basic association between education and income is due to the fact that they are both affected by parental wealth."
+  },
+  {
+    "objectID": "lectures/lecture10.html#why-multivariate-regression-1",
+    "href": "lectures/lecture10.html#why-multivariate-regression-1",
+    "title": "",
+    "section": "Why multivariate regression?",
+    "text": "Why multivariate regression?\n\n\n\nPurpose 1: building the case for causality\n\nControl for alternate explanations for the main association\n\nPurpose 2: developing better predictions\n\nPredict \\(Y\\) as a function of multiple variables, not just \\(X\\)\n\nPurpose 3: explain more\n\nUse multiple variables to explain more of the variation in \\(Y\\)"
   },
   {
     "objectID": "lectures/lecture10.html#purpose-2-developing-better-predictions",
@@ -833,6 +980,13 @@
     "text": "Purpose 2: developing better predictions\nCan use the multivariate regression model to predict values of the dependent variable for any combination of values of the predictors.\n\n\\[\n\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\n\\]\n\n\nExample: What is the predicted level of income for a person with 14 years of education and whose parents have total wealth of $250,000?\n\n\n\\[\n\\begin{aligned}\n\\widehat{Income} &= 799.22 + 623.35(\\color{#e93cac}{14}) + 0.31(\\color{#e93cac}{250000}) \\\\\n&= \\$87,025.12\n\\end{aligned}\n\\]\n\n\nExample: What is the predicted level of income for a person with 16 years of education and whose parents have total wealth of $50,000?\n\n\n\\[\n\\begin{aligned}\n\\widehat{Income} &= 799.22 + 623.35(\\color{#1b8883}{16}) + 0.31(\\color{#1b8883}{50000}) \\\\\n&= \\$26,271.82\n\\end{aligned}\n\\]"
   },
   {
+    "objectID": "lectures/lecture10.html#why-multivariate-regression-2",
+    "href": "lectures/lecture10.html#why-multivariate-regression-2",
+    "title": "",
+    "section": "Why multivariate regression?",
+    "text": "Why multivariate regression?\n\n\n\nPurpose 1: building the case for causality\n\nControl for alternate explanations for the main association\n\nPurpose 2: developing better predictions\n\nPredict \\(Y\\) as a function of multiple variables, not just \\(X\\)\n\nPurpose 3: explain more\n\nUse multiple variables to explain more of the variation in \\(Y\\)"
+  },
+  {
     "objectID": "lectures/lecture10.html#purpose-3-explain-more",
     "href": "lectures/lecture10.html#purpose-3-explain-more",
     "title": "",
@@ -840,18 +994,25 @@
     "text": "Purpose 3: explain more\nMultivariate regression allows for more complete explanation of the variation in the dependent variable.\n\nBivariate regression model\n\n\n\\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\n\n\n\nCoefficient of determination  (\\(R^2\\))\n\n\n\\[\nR_2 = 0.728\n\\]\n\n\n\nInterpretations: \n\nThe proportional reduction of prediction error achieved by using the independent variable (\\(X\\)) in the regression equation to predict the values of the dependent variable (\\(Y\\))\nThe proportion of the variance in the dependent variable (\\(Y\\)) explained by the independent variable (\\(X\\))"
   },
   {
-    "objectID": "lectures/lecture10.html#coefficient-of-multiple-determination",
-    "href": "lectures/lecture10.html#coefficient-of-multiple-determination",
+    "objectID": "lectures/lecture10.html#purpose-3-explain-more-1",
+    "href": "lectures/lecture10.html#purpose-3-explain-more-1",
     "title": "",
-    "section": "Coefficient of MULTIPLE determination",
-    "text": "Coefficient of MULTIPLE determination"
+    "section": "Purpose 3: explain more",
+    "text": "Purpose 3: explain more\nMultivariate regression allows for more complete explanation of the variation in the dependent variable.\n\nBivariate regression model\n\n\n\\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\n\n\n\nCoefficient of determination  (\\(R^2\\))\n\n\n\\[\nR_2 = 0.728\n\\]\n\n\n\nInterpretations: \n\nWe can reduce our errors by almost 73% if we take into consideration individuals’ education when we predict their income (i.e., use the regression line in our predictions).\nAlmost 73% of the variance in income is explained by differences in education."
   },
   {
-    "objectID": "lectures/lecture10.html#example",
-    "href": "lectures/lecture10.html#example",
+    "objectID": "lectures/lecture10.html#purpose-3-explain-more-2",
+    "href": "lectures/lecture10.html#purpose-3-explain-more-2",
     "title": "",
-    "section": "Example",
-    "text": "Example"
+    "section": "Purpose 3: explain more",
+    "text": "Purpose 3: explain more\nMultivariate regression allows for more complete explanation of the variation in the dependent variable.\n\nMultivariate regression model\n\n\n\\(\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\n\nCoefficient of MULTIPLE determination  (\\(R^2\\))\n\n\n\\[\nR_2 = 0.813\n\\]\n\n\n\nInterpretations: \n\nThe proportional reduction of prediction error achieved by using all of the predictors (\\(X\\), \\(Z\\), etc.) in the regression equation to predict the values of the dependent variable (\\(Y\\))\nThe proportion of the variance in the dependent variable (\\(Y\\)) explained by the combination of all of the predictors (\\(X\\), \\(Z\\), etc.)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#purpose-3-explain-more-3",
+    "href": "lectures/lecture10.html#purpose-3-explain-more-3",
+    "title": "",
+    "section": "Purpose 3: explain more",
+    "text": "Purpose 3: explain more\nMultivariate regression allows for more complete explanation of the variation in the dependent variable.\n\nMultivariate regression model\n\n\n\\(\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\n\nCoefficient of MULTIPLE determination  (\\(R^2\\))\n\n\n\\[\nR_2 = 0.813\n\\]\n\n\n\nInterpretations: \n\nWe can reduce our errors by about 81% if we take into consideration individuals’ education and the wealth of their parents when we predict their income (i.e., use the regression line in our predictions).\nAbout 81% of the variance in income is explained by the combination of education and parental wealth."
   },
   {
     "objectID": "lectures/lecture10.html#regression-tables",
@@ -861,11 +1022,67 @@
     "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nSame results in table form"
   },
   {
-    "objectID": "lectures/lecture10.html#example-1",
-    "href": "lectures/lecture10.html#example-1",
+    "objectID": "lectures/lecture10.html#regression-tables-1",
+    "href": "lectures/lecture10.html#regression-tables-1",
     "title": "",
-    "section": "Example",
-    "text": "Example"
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\n N = 12 \n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nTitle indicating the dependent variable, units of analysis.\n\n\nNumber of cases"
+  },
+  {
+    "objectID": "lectures/lecture10.html#regression-tables-2",
+    "href": "lectures/lecture10.html#regression-tables-2",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nSlope coefficient for effect ofeducation on income."
+  },
+  {
+    "objectID": "lectures/lecture10.html#regression-tables-3",
+    "href": "lectures/lecture10.html#regression-tables-3",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001 \n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nSlope coefficient for effect ofeducation on income.\n\n\nStatistical significance of the slope coefficient\n\n\n\nTesting the null hypothesis (\\(H_0\\)) that \\(\\beta = 0\\) (that the slope is zero in the population)\nNumber of stars indicates p-value for coefficient (probability of observing the sample coefficient if \\(H_0\\) where true).\nReject \\(H_0\\) if p-value &lt; alpha\nGiven ***, our model rejects \\(H_0\\) with \\(99.9\\%\\) confidence (alpha of \\(0.001\\))"
+  },
+  {
+    "objectID": "lectures/lecture10.html#regression-tables-4",
+    "href": "lectures/lecture10.html#regression-tables-4",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001 \n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nSlope coefficient for effect ofeducation on income.\n\n\nY-intercept (a.k.a, constant)\n\n\n\\[\n\\widehat{Income} = 1816.16 + 1582.58(educ)\n\\]"
+  },
+  {
+    "objectID": "lectures/lecture10.html#regression-tables-5",
+    "href": "lectures/lecture10.html#regression-tables-5",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001 \n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nSlope coefficient for effect ofeducation on income.\n\n\nY-intercept (a.k.a, constant)\n\n\n\\[\n\\widehat{Income} = 1816.16 + 1582.58(educ)\n\\]\n\n\nCoefficient of determination"
+  },
+  {
+    "objectID": "lectures/lecture10.html#regression-tables-6",
+    "href": "lectures/lecture10.html#regression-tables-6",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nPartial slope coefficient foreffect of education on income.\n\n\nPartial slope coefficient foreffect of parental wealth on income.\n\n\nY-intercept (a.k.a, constant)\n\n\n\\[\n\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\n\\]\n\n\nCoefficient of determination"
+  },
+  {
+    "objectID": "lectures/lecture10.html#regression-tables-7",
+    "href": "lectures/lecture10.html#regression-tables-7",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001 \n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nStatistical significance of the slope coefficients\n\n\n\nTesting the null hypothesis (\\(H_0\\)) that \\(\\beta = 0\\) (that the slope is zero in the population)\nNumber of stars indicates p-value for coefficient (probability of observing the sample coefficient if \\(H_0\\) where true).\nReject \\(H_0\\) if p-value &lt; alpha\nGiven * for the partial slope coefficient of education, our multivariate model rejects \\(H_0\\) with \\(95\\%\\) confidence (alpha of \\(0.05\\))\nGiven ** for the partial slope coefficient of parental wealth, our multivariate model rejects \\(H_0\\) with \\(99\\%\\) confidence (alpha of \\(0.01\\))"
+  },
+  {
+    "objectID": "lectures/lecture10.html#practice",
+    "href": "lectures/lecture10.html#practice",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 1, is the level of crime in the neighborhood associated with the concentration of minorities in the area? Make sure to touch on the direction, magnitude, and statistical significance of the association.\nHow much of the variation in crime rates across neighborhoods can be explained by the racial composition of the neighborhood alone?"
+  },
+  {
+    "objectID": "lectures/lecture10.html#practice-3",
+    "href": "lectures/lecture10.html#practice-3",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 2, how do the local poverty rate and concentration of minorities in the neighborhood affect local crime rates? Make sure to touch on the direction, magnitude, and statistical significance of the effects.\nHow would you explain the dramatic change in the slope coefficient for %Minority from Model 1 to Model 2? What does this change in coefficients imply about the causal effect of %Minority on crime rates?\nWhat is the predicted level of crime in a neighborhood in which 30% of the residents are poor and 60% are members of minority groups? How does this compare to the predicted crime rate in a neighborhood in which 30% of residents are poor and none are members of minority groups?"
   },
   {
     "objectID": "lectures/lecture9.html#correlation-and-regression",
@@ -1187,7 +1404,7 @@
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "This syllabus is subject to change. All changes will be announced both in class, on Slack, and on this page.\n\nCourse info\nInstructor: Victoria (Vic) Sass\nLecture: Mondays & Wednesdays, 9:10-11:20am\nLocation: Savery 132\nOffice Hours: Tuesdays 12-2pm, or by appointment, on Zoom (link on Slack)\nWebsite: https://vsass.github.io/SOC2211\nContact: We’ll use Slack to communicate with each other and you can directly message me there.2\n\n1 The course website provides access/updates to the syllabus, scheduling changes, assignments, and other course-related materials. Make sure to check the site often to stay up-to-date.2 The invitation to our private Slack has been emailed to everyone registered for the course.\n\nOverview and learning objectives\nThis course is intended to provide an introduction to basic statistical techniques used by social scientists to better understand the world. We are all bombarded every day with information from all sorts of sources – television, online media, marketers, news outlets, and regular interactions with other people in a variety of settings. Figuring out how to organize, consolidate, analyze, and understand these data is at the core of the art and science of statistics. Statistics represent a set of tools that are not only useful for us, as citizens, to understand and interact with the social world, but are also extremely useful in a professional sense; mastery of the art of statistics is a great way to enhance your contributions to employers and the community organizations you serve.\nThe overall objective is to provide you with the ability to use basic statistical tools to critically evaluate data and to be an effective analytical consumer of information. Successful completion of the course will allow you to:\n\nDefine real world questions and problems in statistical terms.\nAnalyze data and solve statistical problems.\nInterpret the meaning of statistical solutions in relation to real world issues.\n\n\n\nPrerequisites\nThere are no prerequisites for this course. This is not a mathematics course, but you are expected to be capable of doing arithmetic and very basic algebra. You will also be expected to be able to think through problems clearly and communicate your results. This course is designed to help you practice these skills.\n\n\nRequired materials\n\n\n\n\nTextbook: Introductory Statistics from OpenStax College\n\n\nThe book is available in a wide variety of free online formats via the website linked above. You can use the book in whichever format(s) you like. I recommend that you download the entire PDF so that you always have access to your book.\nIf you prefer a physical book, printed copies at a significantly reduced textbook rate are also for sale here.\nAlthough the textbook is completely free, if you have the means, I strongly encourage you to donate to support their efforts to reduce the cost of textbooks.\n\n\nCalculator: You will need a calculator that can add, subtract, multiply, divide, and take square roots. Bring this device to class every day.\n\n\n\nUngrading and course structure\nThere is a disconnect between what grades are designed to do and what truly supports student learning.3 In an effort to focus on your education, assignments and quizzes will not receive a letter-grade or points. Rather, as you answer the questions for each assignment, you will also provide your own assessment of how well-prepared you felt to answer that particular question. At the core of the philosophy behind ungrading is the fact that each of us possesses the best information about our own learning - both what works and if it’s working. As such, I want you to be in control of reflecting on your own learning process throughout this class.\n3 You can read more about the problem with using grades as an assessment for learning here and here.\nFor homework assignments you will receive written feedback from me about whether you’ve sufficiently demonstrated mastery of a topic and if not, where you can find assistance in answering that particular question. You’ll then have two additional days to revise any questions for re-submission.\nFor quiz assignments you’ll receive a take-home exam that you’ll be given 24 hours to complete. The next day we will use our class time together to go over the questions. If there were any problems you were less sure about, this is a great time to ask questions, and more fully articulate your answers on your assignment before turning in your completed quiz.\n\nThis class is still being taught within the context of a university that assigns grades so I will be required to assign a final grade at the end of the quarter. What that grade ultimately is will be determined by you through your engagement with your assignment self-assessments, revisions on homeworks and quizes, and the two learning assessment meetings we will have (one during week 4 and another our last week of class)4. During these two one-on-one meetings we will have a chance to discuss your learning process, what’s worked/what’s been challenging, how we can both support the outcomes you desire, and what grade you feel reflects your process.\n4 Specifics on how to prepare for these 15-minute meetings will be provided later in the quarter.5 If something comes up and you cannot make it to class, message me as soon as possible on Slack.For this process to work effectively we are both required to attend every class and participate in ways that engage your learning5. This means you are expected to complete and submit all homework and quiz assignments (with revisions if applicable). I will do my best to meet you where you are when you come to class and I ask that you engage in class and with assignments in ways that prioritize your learning.\n\n\nSchedule\n\n\n\n  \n  \n  \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Week\n      Date\n      Topic\n      Required Reading\n      Assignment Due (in class)\n    \n  \n  \n    1\n\nMondayJune 17th\n\n▪ Introductions to the course▪ Overview of statistics▪ Producing data: surveys and sampling\n\nSyllabusChapter 1 (sections 1.1 - 1.2)\n\n\n    1\n\nWednesdayJune 19th\n\nNO CLASS:\n\nJuneteenth Holiday\n\n\n    2\n\nMondayJune 24th\n\n▪ Frequency tables▪ Graphical techniques\n\nChapter 1 (sections 1.3 - 1.4)Chapter 2 (sections 2.1 - 2.4)\n\nHomework 1\n\n    2\n\nWednesdayJune 26th\n\n▪ Measures of central tendency▪ Measures of variability\n\nChapter 2 (sections 2.5 - 2.6)Chapter 2 (sections 2.7 - 2.8)\n\nHomework 1 returned\n\n    3\n\nMondayJuly 1st\n\n▪ Probability and probability distributions▪ Normal distributions\n\nChapter 3 (sections 3.1 to 3.3)Chapter 4 (section 4.1)Chapter 5 (section 5.1)Chapter 6 (sections 6.1 to 6.2)\n\nHomework 2Homework 1 w/ revisions\n\n    3\n\nWednesdayJuly 3rd\n\n✍️🙋💡Quiz 1 Review\n\n\nHomework 2 returned\n\n    4\n\nMondayJuly 8th\n\n▪ Sampling distributions▪ Central limit theorem▪ Logic of inference\n\nChapter 7 (sections 7.1 & 7.3)\n\nHomework 3Homework 2 w/ revisions\n\n    4\n\nWednesdayJuly 10th\n\n▪ Estimation: confidence intervals for means▪ Estimation: confidence intervals for proportions\n\nChapter 8 (sections 8.1 to 8.2)Chapter 8 (section 8.3)\n\nHomework 3 returned\n\n    4\n\nThursdayJuly 11th\n\nIndividual Learning Assessment Meetings(via Zoom)\n\n\n\n    4\n\nFridayJuly 12th\n\nIndividual Learning Assessment Meetings(via Zoom)\n\n\n\n    5\n\nMondayJuly 15th\n\n▪ Hypothesis testing for one sample▪ Hypothesis testing for two samples\n\nChapter 9 (sections 9.1 to 9.6)Chapter 10 (sections 10.1 to 10.3 plus 10.5)\n\nHomework 4Homework 3 w/ revisions\n\n    5\n\nWednesdayJuly 17th\n\n✍️🙋💡Quiz 2 Review\n\n\nHomework 4 returned\n\n    6\n\nMondayJuly 22nd\n\n▪ Two-way tables and chi-square▪ Scatterplots and correlation\n\nChapter 11 (sections 11.1 to 11.3Chapter 12 (sections 12.1 to 12.3)\n\nHomework 5Homework 4 w/ revisions\n\n    6\n\nWednesdayJuly 24th\n\n▪ Bivariate regression▪ Inference for regression\n\nChapter 12 (section 12.4 and 12.5)\n\nHomework 5 returned\n\n    7\n\nMondayJuly 29th\n\n▪ Multivariate regression\n\nPrimer for multivariate regression\n\nHomework 6Homework 5 w/ revisions\n\n    7\n\nWednesdayJuly 31st\n\n▪ Multivariate regression\n\n\nHomework 6 returned\n\n    8\n\nMondayAugust 5th\n\nIndividual Learning Assessment Meetings(in-person)\n\n\nHomework 7Homework 6 w/ revisionsHomework 7 returned (via Slack)\n\n    8\n\nWednesdayAugust 7th\n\n✍️🙋💡Quiz 3 Review\n\n\n\n    9\n\nMondayAugust 12th\n\nNO CLASS:\n\nVic @ a conference\n\nHomework 7 w/ revisions(in Sociology main office)\n\n    9\n\nWednesdayAugust 14th\n\nNO CLASS:\n\nVic @ a conference\n\n\n  \n  \n  \n\n\n\n\n\n\nAccessibility and accommodations\nYour experience in this class is important to me. If you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to me at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (conditions include but not limited to; mental health, attention-related, learning, vision, hearing, physical or health impacts), you are welcome to contact DRS at 206-543-8924, uwdrs@uw.edu, or through their website. DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, me (your instructor), and DRS. It is the policy and practice of the University of Washington to create inclusive and accessible learning environments consistent with federal and state law.\n\n\nReligious accommodations\nWashington state law requires that UW develop a policy for accommodation of student absences or significant hardship due to reasons of faith or conscience, or for organized religious activities. The UW's policy, including more information about how to request an accommodation, is available at Religious Accommodations Policy. Accommodations must be requested within the first two weeks of this course using the Religious Accommodations Request form.\n\n\nAcademic honesty\nStudents are expected to abide by established regulations on student conduct. Any student found in violation of rules of student conduct will be removed from the class in accordance with state policy and appropriate disciplinary action will be pursued.6\n6 You can read more about the University of Washington Student Code here.\n\nBasic needs statement\nIf you find yourself in need of health services, housing, food, or other basic resources, please use the resources listed below and/or visit the Resources page on the Sociology Department’s website. If you feel comfortable doing so, please contact me about any other unmet needs so that we can brainstorm other resources. Concerned with your own safety or the safety of others? Call SafeCampus at 206-685-7233\n\nEmergency Aid\nCampus Food Pantry\nCounseling Center\nShort Term Loans\nOffice of Student Financial Aid\nHealth and Wellness Office\nHall Health\nMental Health Resources\nSexual Assault Resources\nQ Center (for queer community, including questioning)\n\nDisability Resources for Students\nwǝɫǝbʔaltxʷ – Intellectual House (for indigenous community)\nOffice of Minority Affairs & Diversity\nInternational Student Center\nUndocumented Student Resources\n\n\n\n\n\n\n\n\nFeedback\n\n\n\nIf you have feedback on any part of this course or the classroom environment I want to hear it! You can message me directly on Slack or send me an anonymous message here."
+    "text": "This syllabus is subject to change. All changes will be announced both in class, on Slack, and on this page.\n\nCourse info\nInstructor: Victoria (Vic) Sass\nLecture: Mondays & Wednesdays, 9:10-11:20am\nLocation: Savery 132\nOffice Hours: Tuesdays 12-2pm, or by appointment, on Zoom (link on Slack)\nWebsite: https://vsass.github.io/SOC2211\nContact: We’ll use Slack to communicate with each other and you can directly message me there.2\n\n1 The course website provides access/updates to the syllabus, scheduling changes, assignments, and other course-related materials. Make sure to check the site often to stay up-to-date.2 The invitation to our private Slack has been emailed to everyone registered for the course.\n\nOverview and learning objectives\nThis course is intended to provide an introduction to basic statistical techniques used by social scientists to better understand the world. We are all bombarded every day with information from all sorts of sources – television, online media, marketers, news outlets, and regular interactions with other people in a variety of settings. Figuring out how to organize, consolidate, analyze, and understand these data is at the core of the art and science of statistics. Statistics represent a set of tools that are not only useful for us, as citizens, to understand and interact with the social world, but are also extremely useful in a professional sense; mastery of the art of statistics is a great way to enhance your contributions to employers and the community organizations you serve.\nThe overall objective is to provide you with the ability to use basic statistical tools to critically evaluate data and to be an effective analytical consumer of information. Successful completion of the course will allow you to:\n\nDefine real world questions and problems in statistical terms.\nAnalyze data and solve statistical problems.\nInterpret the meaning of statistical solutions in relation to real world issues.\n\n\n\nPrerequisites\nThere are no prerequisites for this course. This is not a mathematics course, but you are expected to be capable of doing arithmetic and very basic algebra. You will also be expected to be able to think through problems clearly and communicate your results. This course is designed to help you practice these skills.\n\n\nRequired materials\n\n\n\n\nTextbook: Introductory Statistics from OpenStax College\n\n\nThe book is available in a wide variety of free online formats via the website linked above. You can use the book in whichever format(s) you like. I recommend that you download the entire PDF so that you always have access to your book.\nIf you prefer a physical book, printed copies at a significantly reduced textbook rate are also for sale here.\nAlthough the textbook is completely free, if you have the means, I strongly encourage you to donate to support their efforts to reduce the cost of textbooks.\n\n\nCalculator: You will need a calculator that can add, subtract, multiply, divide, and take square roots. Bring this device to class every day.\n\n\n\nUngrading and course structure\nThere is a disconnect between what grades are designed to do and what truly supports student learning.3 In an effort to focus on your education, assignments and quizzes will not receive a letter-grade or points. Rather, as you answer the questions for each assignment, you will also provide your own assessment of how well-prepared you felt to answer that particular question. At the core of the philosophy behind ungrading is the fact that each of us possesses the best information about our own learning - both what works and if it’s working. As such, I want you to be in control of reflecting on your own learning process throughout this class.\n3 You can read more about the problem with using grades as an assessment for learning here and here.\nFor homework assignments you will receive written feedback from me about whether you’ve sufficiently demonstrated mastery of a topic and if not, where you can find assistance in answering that particular question. You’ll then have two additional days to revise any questions for re-submission.\nFor quiz assignments you’ll receive a take-home exam that you’ll be given 24 hours to complete. The next day we will use our class time together to go over the questions. If there were any problems you were less sure about, this is a great time to ask questions, and more fully articulate your answers on your assignment before turning in your completed quiz.\n\nThis class is still being taught within the context of a university that assigns grades so I will be required to assign a final grade at the end of the quarter. What that grade ultimately is will be determined by you through your engagement with your assignment self-assessments, revisions on homeworks and quizes, and the two learning assessment meetings we will have (one during week 4 and another our last week of class)4. During these two one-on-one meetings we will have a chance to discuss your learning process, what’s worked/what’s been challenging, how we can both support the outcomes you desire, and what grade you feel reflects your process.\n4 Specifics on how to prepare for these 15-minute meetings will be provided later in the quarter.5 If something comes up and you cannot make it to class, message me as soon as possible on Slack.For this process to work effectively we are both required to attend every class and participate in ways that engage your learning5. This means you are expected to complete and submit all homework and quiz assignments (with revisions if applicable). I will do my best to meet you where you are when you come to class and I ask that you engage in class and with assignments in ways that prioritize your learning.\n\n\nSchedule\n\n\n\n  \n  \n  \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Week\n      Date\n      Topic\n      Required Reading\n      Assignment Due (in class)\n    \n  \n  \n    1\n\nMondayJune 17th\n\n▪ Introductions to the course▪ Overview of statistics▪ Producing data: surveys and sampling\n\nSyllabusChapter 1 (sections 1.1 - 1.2)\n\n\n    1\n\nWednesdayJune 19th\n\nNO CLASS:\n\nJuneteenth Holiday\n\n\n    2\n\nMondayJune 24th\n\n▪ Frequency tables▪ Graphical techniques\n\nChapter 1 (sections 1.3 - 1.4)Chapter 2 (sections 2.1 - 2.4)\n\nHomework 1\n\n    2\n\nWednesdayJune 26th\n\n▪ Measures of central tendency▪ Measures of variability\n\nChapter 2 (sections 2.5 - 2.6)Chapter 2 (sections 2.7 - 2.8)\n\nHomework 1 returned\n\n    3\n\nMondayJuly 1st\n\n▪ Probability and probability distributions▪ Normal distributions\n\nChapter 3 (sections 3.1 to 3.3)Chapter 4 (section 4.1)Chapter 5 (section 5.1)Chapter 6 (sections 6.1 to 6.2)\n\nHomework 2Homework 1 w/ revisions\n\n    3\n\nWednesdayJuly 3rd\n\n✍️🙋💡Quiz 1 Review\n\n\nHomework 2 returned\n\n    4\n\nMondayJuly 8th\n\n▪ Sampling distributions▪ Central limit theorem▪ Logic of inference\n\nChapter 7 (sections 7.1 & 7.3)\n\nHomework 3Homework 2 w/ revisions\n\n    4\n\nWednesdayJuly 10th\n\n▪ Estimation: confidence intervals for means▪ Estimation: confidence intervals for proportions\n\nChapter 8 (sections 8.1 to 8.2)Chapter 8 (section 8.3)\n\nHomework 3 returned\n\n    4\n\nThursdayJuly 11th\n\nIndividual Learning Assessment Meetings(via Zoom)\n\n\n\n    4\n\nFridayJuly 12th\n\nIndividual Learning Assessment Meetings(via Zoom)\n\n\n\n    5\n\nMondayJuly 15th\n\n▪ Hypothesis testing for one sample▪ Hypothesis testing for two samples\n\nChapter 9 (sections 9.1 to 9.6)Chapter 10 (sections 10.1 to 10.3 plus 10.5)\n\nHomework 4Homework 3 w/ revisions\n\n    5\n\nWednesdayJuly 17th\n\n✍️🙋💡Quiz 2 Review\n\n\nHomework 4 returned\n\n    6\n\nMondayJuly 22nd\n\n▪ Two-way tables and chi-square▪ Scatterplots and correlation\n\nChapter 11 (sections 11.1 to 11.3Chapter 12 (sections 12.1 to 12.3)\n\nHomework 5Homework 4 w/ revisions\n\n    6\n\nWednesdayJuly 24th\n\n▪ Bivariate regression▪ Inference for regression\n\nChapter 12 (section 12.4 and 12.5)\n\nHomework 5 returned\n\n    7\n\nMondayJuly 29th\n\n▪ Multivariate regression\n\nPrimer for multivariate regression\n\nHomework 6Homework 5 w/ revisions\n\n    7\n\nWednesdayJuly 31st\n\n▪ Review\n\n\nHomework 6 returned\n\n    8\n\nMondayAugust 5th\n\nNO CLASS:\n\n(Prepare for final quiz)\n\nHomework 7 (via Slack)Homework 6 w/ revisions (via Slack) Homework 7 returned (via Slack)\n\n    8\n\nWednesdayAugust 7th\n\n✍️🙋💡Quiz 3 Review\n\n\nHomework 7 w/ revisions Any/all late submissions due  (nothing accepted past this day)\n\n    8\n\nThursdayAugust 8th\n\nIndividual Learning Assessment Meetings(via Zoom)\n\n\n\n    8\n\nFridayAugust 9th\n\nIndividual Learning Assessment Meetings(via Zoom)\n\n\n\n    9\n\nMondayAugust 12th\n\nNO CLASS:\n\nVic @ a conference\n\n\n    9\n\nWednesdayAugust 14th\n\nNO CLASS:\n\nVic @ a conference\n\n\n  \n  \n  \n\n\n\n\n\n\nAccessibility and accommodations\nYour experience in this class is important to me. If you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to me at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (conditions include but not limited to; mental health, attention-related, learning, vision, hearing, physical or health impacts), you are welcome to contact DRS at 206-543-8924, uwdrs@uw.edu, or through their website. DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, me (your instructor), and DRS. It is the policy and practice of the University of Washington to create inclusive and accessible learning environments consistent with federal and state law.\n\n\nReligious accommodations\nWashington state law requires that UW develop a policy for accommodation of student absences or significant hardship due to reasons of faith or conscience, or for organized religious activities. The UW's policy, including more information about how to request an accommodation, is available at Religious Accommodations Policy. Accommodations must be requested within the first two weeks of this course using the Religious Accommodations Request form.\n\n\nAcademic honesty\nStudents are expected to abide by established regulations on student conduct. Any student found in violation of rules of student conduct will be removed from the class in accordance with state policy and appropriate disciplinary action will be pursued.6\n6 You can read more about the University of Washington Student Code here.\n\nBasic needs statement\nIf you find yourself in need of health services, housing, food, or other basic resources, please use the resources listed below and/or visit the Resources page on the Sociology Department’s website. If you feel comfortable doing so, please contact me about any other unmet needs so that we can brainstorm other resources. Concerned with your own safety or the safety of others? Call SafeCampus at 206-685-7233\n\nEmergency Aid\nCampus Food Pantry\nCounseling Center\nShort Term Loans\nOffice of Student Financial Aid\nHealth and Wellness Office\nHall Health\nMental Health Resources\nSexual Assault Resources\nQ Center (for queer community, including questioning)\n\nDisability Resources for Students\nwǝɫǝbʔaltxʷ – Intellectual House (for indigenous community)\nOffice of Minority Affairs & Diversity\nInternational Student Center\nUndocumented Student Resources\n\n\n\n\n\n\n\n\nFeedback\n\n\n\nIf you have feedback on any part of this course or the classroom environment I want to hear it! You can message me directly on Slack or send me an anonymous message here."
   },
   {
     "objectID": "lectures/lecture8.html#overview",
@@ -2525,313 +2742,5 @@
     "title": "",
     "section": "More examples",
     "text": "More examples\nThink creatively to use the information in the Normal Table to figure out what you want to know\n\n\n\nPercentage of women shorter than 55 inches?\nPercentage of women 55 inches or taller?\nProbability of randomly selecting a woman who is 69 inches or taller?\nProbability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?\nFind the score at the 10th percentile in the distribution.\nFind the two heights that define the middle 95% of cases in the distribution.\n\n\n\nHeight for women is  \\(N(65,3.5)\\)"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-5",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-5",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\n\n3 Criteria for Causality (what we need to show to claim that \\(X\\) causes \\(Y\\)) \n\nThere is a statistical association between \\(X\\) and \\(Y\\)\n\\(X\\) happens before \\(Y\\)\n\n(correct time ordering)\n\nNo other variable accounts for the statistical link between \\(X\\) and \\(Y\\)\n\n\n\nThird criterion motivates us to control for other variables  (i.e., account for their effects; remove their influence)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nDoes this mean that ice cream sales cause crime to increase?\n\n\n\n\n\n\n\n\n\n\nOr is the association spurious?"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-6",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-6",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\n\n\nSpurious relationship:  A situation in which  two variables are  statistically associated  but not causally related,  due to their coincidence  of a certain third,  unseen factor.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nDoes this mean that ice cream sales cause crime to increase?\n\n\n\n\n\n\n\n\n\n\nOr is the association spurious?"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-7",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-7",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\n\n\nSpurious relationship:  A situation in which  two variables are  statistically associated  but not causally related,  due to their coincidence  of a certain third,  unseen factor.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nCertain values on one variable (\\(Y\\)) tend to correspond with certain values on the other (\\(X\\)) because both are affected by a third outside variable."
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-8",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-8",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nCertain values on one variable (\\(Y\\)) tend to correspond with certain values on the other (\\(X\\)) because both are affected by a third outside variable."
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-9",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-9",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nCertain values on one variable (\\(Y\\)) tend to correspond with certain values on the other (\\(X\\)) because both are affected by a third outside variable.\n\n\n\n\n\n\n\n\n\n\nNote: Weather might create a link between ice cream sales and crime. Failing to control for weather might make the association look causal even though that is false."
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-10",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-10",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(83.3%)\n\n\n4\n(33.3%)\n\n\n24\n(66.7%)\n\n\n\n\nHigh violent crime\n\n\n4\n(16.7%)\n\n\n8\n(66.7%)\n\n\n12\n(33.3%)\n\n\n\n\nTotal\n\n\n24\n\n\n12\n\n\n36\n\n\n\n\n\n\n\n\n\n\nTo control for weather, we look at the association between ice cream sales and crime among cases (months) with similar weather.\n\n\n\n\n\n\n\n\n\n\nAny association between ice cream sales and crime among cases (months) with similar weather cannot be attributed to the effects of differences in weather."
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-11",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-11",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (WARM months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n0\n(0.0%)\n\n\n0\n(0.0%)\n\n\n0\n(0.0%)\n\n\n\n\nHigh violent crime\n\n\n3\n(100.0%)\n\n\n8\n(100.0%)\n\n\n11\n(100.0%)\n\n\n\n\nTotal\n\n\n3\n\n\n8\n\n\n11\n\n\n\n\n\n\n\n\n\n\nIs there an association between ice cream sales and crime?\n\n\nNo differences in conditional distributions (column %s), indicating that there is no association between ice cream sales and crime among warm months.\n\n\nTo control for weather, we look at the association between ice cream sales and crime among cases (months) with similar weather.\n\n\nAny association between ice cream sales and crime among cases (months) with similar weather cannot be attributed to the effects of differences in weather."
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-12",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-12",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (COOL months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\n\nLow violent crime\n\n\n20\n(95.2%)\n\n\n4\n(100.0%)\n\n\n24\n(96.0%)\n\n\n\n\nHigh violent crime\n\n\n1\n(4.8%)\n\n\n0\n(0.0%)\n\n\n1\n(4.0%)\n\n\n\n\nTotal\n\n\n21\n\n\n4\n\n\n25\n\n\n\n\n\n\n\n\n\n\nIs there an association between ice cream sales and crime?\n\n\nLittle differences in conditional distributions (column %s), indicating that there is little association between ice cream sales and crime among cool months.\n\n\nTo control for weather, we look at the association between ice cream sales and crime among cases (months) with similar weather.\n\n\nAny association between ice cream sales and crime among cases (months) with similar weather cannot be attributed to the effects of differences in weather."
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-13",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-13",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\nSummary of logic\n\n\nTo build the case that \\(X\\) causes \\(Y\\), we have to show that no other variable accounts for the statistical association between \\(X\\) and \\(Y\\) (association is not spurious)\nWe need to see if the association between \\(X\\) and \\(Y\\) persists even after we control (remove the influence of) other explanatory variables (for example, \\(Z\\))\nIf the association between \\(X\\) and \\(Y\\) goes way when we control for \\(Z\\) then the association was probably spurious (i.e., false)\nThe part of the association between \\(X\\) and \\(Y\\) that remains after we control for \\(Z\\) MIGHT represent the causal effect of \\(X\\) on \\(Y\\) (but still other potential explanations)"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-14",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-14",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\n\n\n\\(b_1\\) and \\(b_2\\) are called PARTIAL SLOPES\n\n\n\n\nPARTIAL SLOPES:  Slope coefficient from a multivariate regression model, representing the effects of one predictor on the dependent variable while controlling for all other predictors in the model.\n\n\n\n\n\nMultivariate regression is a convenient tool for assessing the association between two variables (\\(X \\text{ and } Y\\)) while controlling for others (\\(Z\\)))\n\n\n\n\\(\\color{#000000}{\\widehat{y}} = \\color{#000000}{a} + \\color{#e93cac}{b_1}\\color{#000000}{x} + \\color{#690c48}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-15",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-15",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\nBIVARIATE SLOPE: Association between \\(X\\) and \\(Y\\)\n\n\n\\[\nb = r_{yx}(\\frac{s_y}{s_x})\n\\]\n\n\nPARTIAL SLOPE: Association between \\(X\\) and \\(Y\\) after controlling for \\(Z\\)\n\n\n\\[\nb_1 = (\\frac{r_{yx}-r_{yz}r_{xz}}{1-r^2_{xz}})(\\frac{s_y}{s_x})\n\\]\n\n\n\n\n\n\n\n\n\n\n\\(r_{xz}\\)\n\n\n\\(r_{yz}\\)\n\n\n\\(r_{yx}\\)"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-16",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-16",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\nBIVARIATE SLOPE: Association between \\(X\\) and \\(Y\\)\n\n\n\\[\nb = r_{yx}(\\frac{s_y}{s_x})\n\\]\n\n\nPARTIAL SLOPE: Association between \\(X\\) and \\(Y\\) after controlling for \\(Z\\)\n\n\n\\[\nb_1 = (\\frac{\\color{#4b2e83}{r_{yx}}-\\color{#85754d}{r_{yz}r_{xz}}}{1-r^2_{xz}})(\\frac{s_y}{s_x})\n\\]\n\n\nLooking at the correlationbetween \\(X\\) and \\(Y\\)…\n\n\n… and subtracting out  the common connection of  these variables to Z\n\n\n\n\n\n\n\n\n\n\n\\(r_{xz}\\)\n\n\n\\(r_{yz}\\)\n\n\n\\(r_{yx}\\)"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-17",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-17",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\n\n\nDoes this mean that education causes income to increase?\n\n\n\n\n\n\n\n\n\n\n\n\nOr is the association at least partly spurious?"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-18",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-18",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\n\n\nDoes this mean that education causes income to increase?\n\n\n\n\n\n\n\n\n\n\nOr is the association at least partly spurious?"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-19",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-19",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\n\\[\nb = r_{yx}(\\frac{s_y}{s_x})\n\\]\n\n\n\n \n\nLook at the association  between education and income,  subtracting out their  common connection to parental wealth\n\n\n\n\\[\nb_1 = (\\frac{\\color{#4b2e83}{r_{yx}}-\\color{#85754d}{r_{yz}r_{xz}}}{1-r^2_{xz}})(\\frac{s_y}{s_x})\n\\]\n\n\n\n\nOr is the association at least partly spurious?"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-20",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-20",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\\)"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-21",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-21",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\n\n\n\\(b_1\\): Controlling for parental wealth, each additional year of education is associated with \\(\\$623.35\\) in additional income"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-22",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-22",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + \\color{#754cbc}{0.31}(\\text{par_wealth})\\)\n\n\n\n\n\n\n\\(b_1\\): Controlling for parental wealth, each additional year of education is associated with \\(\\$623.35\\) in additional income\n\n\n\n\\(b_2\\): Controlling for education, each additional dollar of parental wealth is associated with \\(\\$0.31\\) in additional income"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-23",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-23",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = \\color{#a68100}{799.22} + \\color{#6e8e13}{623.35}(educ) + \\color{#754cbc}{0.31}(\\text{par_wealth})\\)\n\n\n\n\n\\(a\\): A person with 0 years of education and 0 dollars of parental wealth is predicted to have an income \\(\\$799.22\\)\n\n\n\n\\(b_1\\): Controlling for parental wealth, each additional year of education is associated with \\(\\$623.35\\) in additional income\n\n\n\n\\(b_2\\): Controlling for education, each additional dollar of parental wealth is associated with \\(\\$0.31\\) in additional income"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-24",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-24",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + \\color{#6e8e13}{1582.58}(educ)\\)\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\nApparent association between education and income is reduced after controlling for parental wealth."
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-25",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-25",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + \\color{#6e8e13}{1582.58}(educ)\\)\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\nApparent association between education and income is reduced after controlling for parental wealth.\n\n\n\nThe association between education and income appears to be at least PARTIALLY spurious."
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-26",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-26",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + \\color{#6e8e13}{1582.58}(educ)\\)\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + \\color{#754cbc}{0.31}(\\text{par_wealth})\\)\n\n\n\n\nApparent association between education and income is reduced after controlling for parental wealth.\n\n\n\nThe association between education and income appears to be at least PARTIALLY spurious.\n\n\n\nPart of the basic association between education and income is due to the fact that they are both affected by parental wealth."
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-27",
-    "href": "lectures/lecture10.html#purpose-1-building-the-case-for-causality-27",
-    "title": "",
-    "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + \\color{#6e8e13}{1582.58}(educ)\\)\n\n\nNext step: Add other controls that might account for the remaining association.\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + \\color{#754cbc}{0.31}(\\text{par_wealth})\\)\n\n\n\n\nApparent association between education and income is reduced after controlling for parental wealth.\n\n\n\nThe association between education and income appears to be at least PARTIALLY spurious.\n\n\n\nPart of the basic association between education and income is due to the fact that they are both affected by parental wealth."
-  },
-  {
-    "objectID": "lectures/lecture10.html#why-multivariate-regression-1",
-    "href": "lectures/lecture10.html#why-multivariate-regression-1",
-    "title": "",
-    "section": "Why multivariate regression?",
-    "text": "Why multivariate regression?\n\n\n\nPurpose 1: building the case for causality\n\nControl for alternate explanations for the main association\n\nPurpose 2: developing better predictions\n\nPredict \\(Y\\) as a function of multiple variables, not just \\(X\\)\n\nPurpose 3: explain more\n\nUse multiple variables to explain more of the variation in \\(Y\\)"
-  },
-  {
-    "objectID": "lectures/lecture10.html#why-multivariate-regression-2",
-    "href": "lectures/lecture10.html#why-multivariate-regression-2",
-    "title": "",
-    "section": "Why multivariate regression?",
-    "text": "Why multivariate regression?\n\n\n\nPurpose 1: building the case for causality\n\nControl for alternate explanations for the main association\n\nPurpose 2: developing better predictions\n\nPredict \\(Y\\) as a function of multiple variables, not just \\(X\\)\n\nPurpose 3: explain more\n\nUse multiple variables to explain more of the variation in \\(Y\\)"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-3-explain-more-1",
-    "href": "lectures/lecture10.html#purpose-3-explain-more-1",
-    "title": "",
-    "section": "Purpose 3: explain more",
-    "text": "Purpose 3: explain more\nMultivariate regression allows for more complete explanation of the variation in the dependent variable.\n\nBivariate regression model\n\n\n\\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\n\n\n\nCoefficient of determination  (\\(R^2\\))\n\n\n\\[\nR_2 = 0.728\n\\]\n\n\n\nInterpretations: \n\nWe can reduce our errors by almost 73% if we take into consideration individuals’ education when we predict their income (i.e., use the regression line in our predictions).\nAlmost 73% of the variance in income is explained by differences in education."
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-3-explain-more-2",
-    "href": "lectures/lecture10.html#purpose-3-explain-more-2",
-    "title": "",
-    "section": "Purpose 3: explain more",
-    "text": "Purpose 3: explain more\nMultivariate regression allows for more complete explanation of the variation in the dependent variable.\n\nMultivariate regression model\n\n\n\\(\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\n\nCoefficient of MULTIPLE determination  (\\(R^2\\))\n\n\n\\[\nR_2 = 0.813\n\\]\n\n\n\nInterpretations: \n\nThe proportional reduction of prediction error achieved by using all of the predictors (\\(X\\), \\(Z\\), etc.) in the regression equation to predict the values of the dependent variable (\\(Y\\))\nThe proportion of the variance in the dependent variable (\\(Y\\)) explained by the combination of all of the predictors (\\(X\\), \\(Z\\), etc.)"
-  },
-  {
-    "objectID": "lectures/lecture10.html#purpose-3-explain-more-3",
-    "href": "lectures/lecture10.html#purpose-3-explain-more-3",
-    "title": "",
-    "section": "Purpose 3: explain more",
-    "text": "Purpose 3: explain more\nMultivariate regression allows for more complete explanation of the variation in the dependent variable.\n\nMultivariate regression model\n\n\n\\(\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\n\nCoefficient of MULTIPLE determination  (\\(R^2\\))\n\n\n\\[\nR_2 = 0.813\n\\]\n\n\n\nInterpretations: \n\nWe can reduce our errors by about 81% if we take into consideration individuals’ education and the wealth of their parents when we predict their income (i.e., use the regression line in our predictions).\nAbout 81% of the variance in income is explained by the combination of education and parental wealth."
-  },
-  {
-    "objectID": "lectures/lecture10.html#practice",
-    "href": "lectures/lecture10.html#practice",
-    "title": "",
-    "section": "Practice",
-    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 1, is the level of crime in the neighborhood associated with the concentration of minorities in the area? Make sure to touch on the direction, magnitude, and statistical significance of the association.\nHow much of the variation in crime rates across neighborhoods can be explained by the racial composition of the neighborhood alone?"
-  },
-  {
-    "objectID": "lectures/lecture10.html#regression-tables-1",
-    "href": "lectures/lecture10.html#regression-tables-1",
-    "title": "",
-    "section": "Regression tables",
-    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\n N = 12 \n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nTitle indicating the dependent variable, units of analysis.\n\n\nNumber of cases"
-  },
-  {
-    "objectID": "lectures/lecture10.html#regression-tables-2",
-    "href": "lectures/lecture10.html#regression-tables-2",
-    "title": "",
-    "section": "Regression tables",
-    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nSlope coefficient for effect ofeducation on income."
-  },
-  {
-    "objectID": "lectures/lecture10.html#regression-tables-3",
-    "href": "lectures/lecture10.html#regression-tables-3",
-    "title": "",
-    "section": "Regression tables",
-    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001 \n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nSlope coefficient for effect ofeducation on income.\n\n\nStatistical significance of the slope coefficient\n\n\n\nTesting the null hypothesis (\\(H_0\\)) that \\(\\beta = 0\\) (that the slope is zero in the population)\nNumber of stars indicates p-value for coefficient (probability of observing the sample coefficient if \\(H_0\\) where true).\nReject \\(H_0\\) if p-value &lt; alpha\nGiven ***, our model rejects \\(H_0\\) with \\(99.9\\%\\) confidence (alpha of \\(0.001\\))"
-  },
-  {
-    "objectID": "lectures/lecture10.html#regression-tables-4",
-    "href": "lectures/lecture10.html#regression-tables-4",
-    "title": "",
-    "section": "Regression tables",
-    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001 \n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nSlope coefficient for effect ofeducation on income.\n\n\nY-intercept (a.k.a, constant)\n\n\n\\[\n\\widehat{Income} = 1816.16 + 1582.58(educ)\n\\]"
-  },
-  {
-    "objectID": "lectures/lecture10.html#regression-tables-5",
-    "href": "lectures/lecture10.html#regression-tables-5",
-    "title": "",
-    "section": "Regression tables",
-    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001 \n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nSlope coefficient for effect ofeducation on income.\n\n\nY-intercept (a.k.a, constant)\n\n\n\\[\n\\widehat{Income} = 1816.16 + 1582.58(educ)\n\\]\n\n\nCoefficient of determination"
-  },
-  {
-    "objectID": "lectures/lecture10.html#regression-tables-6",
-    "href": "lectures/lecture10.html#regression-tables-6",
-    "title": "",
-    "section": "Regression tables",
-    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nPartial slope coefficient foreffect of education on income.\n\n\nPartial slope coefficient foreffect of parental wealth on income.\n\n\nY-intercept (a.k.a, constant)\n\n\n\\[\n\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\n\\]\n\n\nCoefficient of determination"
-  },
-  {
-    "objectID": "lectures/lecture10.html#regression-tables-7",
-    "href": "lectures/lecture10.html#regression-tables-7",
-    "title": "",
-    "section": "Regression tables",
-    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\nEducation\n\n\n1582.58\n\n***\n\n623.35\n\n*\n\n\n\nParental wealth\n\n\n\n\n\n\n0.31\n\n**\n\n\n\n\n\n\nConstant\n\n\n1816.16\n\n\n\n799.22\n\n\n\n\n\nModel \\(R^2\\)\n\n\n0.73\n\n\n\n0.81\n\n\n\n\n\nN = 12\n * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001 \n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nStatistical significance of the slope coefficients\n\n\n\nTesting the null hypothesis (\\(H_0\\)) that \\(\\beta = 0\\) (that the slope is zero in the population)\nNumber of stars indicates p-value for coefficient (probability of observing the sample coefficient if \\(H_0\\) where true).\nReject \\(H_0\\) if p-value &lt; alpha\nGiven * for the partial slope coefficient of education, our multivariate model rejects \\(H_0\\) with \\(95\\%\\) confidence (alpha of \\(0.05\\))\nGiven ** for the partial slope coefficient of parental wealth, our multivariate model rejects \\(H_0\\) with \\(99\\%\\) confidence (alpha of \\(0.01\\))"
-  },
-  {
-    "objectID": "lectures/lecture10.html#practice-1",
-    "href": "lectures/lecture10.html#practice-1",
-    "title": "",
-    "section": "Practice",
-    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 1, is the level of crime in the neighborhood associated with the concentration of minorities in the area? Make sure to touch on the direction, magnitude, and statistical significance of the association.\n\n\n\nDirection: positive slope coefficient  = positive association  Magnitude: A difference of one percentage point in the concentration of minorities is associated with an increase of 0.327 crimes per 100,000  Statistical significance: Coefficient is statistically significant even if we use alpha of \\(0.001\\). Therefore, the association in the sample is large enough to convince us that the association likely exists in the population of neighborhoods."
-  },
-  {
-    "objectID": "lectures/lecture10.html#practice-2",
-    "href": "lectures/lecture10.html#practice-2",
-    "title": "",
-    "section": "Practice",
-    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nHow much of the variation in crime rates across neighborhoods can be explained by the racial composition of the neighborhood alone?\n\n\n\nCoefficient of determination indicates that about \\(1.5\\%\\) of the variation in crime rates can be explained by the racial composition."
-  },
-  {
-    "objectID": "lectures/lecture10.html#practice-3",
-    "href": "lectures/lecture10.html#practice-3",
-    "title": "",
-    "section": "Practice",
-    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 2, how do the local poverty rate and concentration of minorities in the neighborhood affect local crime rates? Make sure to touch on the direction, magnitude, and statistical significance of the effects.\nHow would you explain the dramatic change in the slope coefficient for %Minority from Model 1 to Model 2? What does this change in coefficients imply about the causal effect of %Minority on crime rates?\nWhat is the predicted level of crime in a neighborhood in which 30% of the residents are poor and 60% are members of minority groups? How does this compare to the predicted crime rate in a neighborhood in which 30% of residents are poor and none are members of minority groups?"
-  },
-  {
-    "objectID": "lectures/lecture10.html#practice-4",
-    "href": "lectures/lecture10.html#practice-4",
-    "title": "",
-    "section": "Practice",
-    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 2, how do the local poverty rate and concentration of minorities in the neighborhood affect local crime rates? Make sure to touch on the direction, magnitude, and statistical significance of the effects.\n\n\n\nControlling for % poverty, a one-unit increase in the local % minority is associated with an decrease in crime of \\(0.247\\) crimes per 100,000, and this effect is strong enough to convince us that there is an association in the population."
-  },
-  {
-    "objectID": "lectures/lecture10.html#practice-5",
-    "href": "lectures/lecture10.html#practice-5",
-    "title": "",
-    "section": "Practice",
-    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 2, how do the local poverty rate and concentration of minorities in the neighborhood affect local crime rates? Make sure to touch on the direction, magnitude, and statistical significance of the effects.\n\n\n\nControlling for % minority, a one-unit increase in the local poverty rate is associated with an increase in crime of \\(2.095\\) crimes per 100,000, and this effect is strong enough to convince us that there is an association in the population."
-  },
-  {
-    "objectID": "lectures/lecture10.html#practice-6",
-    "href": "lectures/lecture10.html#practice-6",
-    "title": "",
-    "section": "Practice",
-    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nHow would you explain the dramatic change in the slope coefficient for % Minority from Model 1 to Model 2? What does this change in coefficients imply about the causal effect of %Minority on crime rates?\n\n\n\nIndicates that the positive association between % Minority and crime observed in Model 1 was not causal; it is actually due to the higher level of poverty in minority neighborhoods. Accounting for the poverty rate shows that higher minority concentrations are actually associatedwith lower crime."
-  },
-  {
-    "objectID": "lectures/lecture10.html#practice-7",
-    "href": "lectures/lecture10.html#practice-7",
-    "title": "",
-    "section": "Practice",
-    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nWhat is the predicted level of crime in a neighborhood in which 30% of the residents are poor and 60% are members of minority groups? How does this compare to the predicted crime rate in a neighborhood in which 30% of residents are poor and none are members of minority groups?\n\n\n\n\n\\(\\widehat{crime} = 48.216 - 0.247(\\text{% Minority}) + 2.095(\\text{% Poverty})\\)\n30% poverty, 60% minority: \\(\\widehat{crime} = 48.216 - 0.247(60) + 2.095(30) = 96.246\\)\n30% poverty, 0% minority: \\(\\widehat{crime} = 48.216 - 0.247(0) + 2.095(30) = 111.066\\)"
-  },
-  {
-    "objectID": "lectures/lecture10.html#practice-8",
-    "href": "lectures/lecture10.html#practice-8",
-    "title": "",
-    "section": "Practice",
-    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nBONUS: What’s the interpretation for the coefficient of determination?\n\n\nA neighborhood in which \\(\\text{% Minority} = 0\\) and \\(\\text{% Poverty} = 0\\) is predicted to have a crime rate of \\(48.216\\) crimes per 100,000 population."
   }
 ]
