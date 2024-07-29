@@ -2576,7 +2576,7 @@ minority_poverty |>
   cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
   cols_label(model1 = "Model 1", model2 = "Model 2") |> 
   tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
-  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_source_note(html("N =  6,935 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
   #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
   tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
   tab_stub_indent(rows = c("% Minority", "% Poverty"), indent = 5) |> 
@@ -2606,7 +2606,7 @@ minority_poverty |>
   cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
   cols_label(model1 = "Model 1", model2 = "Model 2") |> 
   tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
-  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_source_note(html("N =  6,935 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
   tab_style(style = list(cell_text(color = "#e93cac")), locations = list(cells_body(column = c(model1, stars1), 
                                                                                     rows = "% Minority")))  |> 
   tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
@@ -2642,7 +2642,7 @@ minority_poverty |>
   cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
   cols_label(model1 = "Model 1", model2 = "Model 2") |> 
   tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
-  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_source_note(html("N =  6,935 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
   tab_style(style = list(cell_text(color = "#e93cac")), 
             locations = list(cells_body(column = c(model1, stars1), rows = "Model $R^2$")))  |> 
   tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
@@ -2676,7 +2676,7 @@ minority_poverty |>
   cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
   cols_label(model1 = "Model 1", model2 = "Model 2") |> 
   tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
-  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_source_note(html("N =  6,935 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
   #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
   tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
   tab_stub_indent(rows = c("% Minority", "% Poverty"), indent = 5) |> 
@@ -2689,11 +2689,11 @@ minority_poverty |>
 
 ::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 0px; right: -75px; text-align: center; font-size: 0.95em;; width: 500px"}
 3. According to the results in Model 2, how do the local poverty rate and concentration of minorities in the neighborhood affect local crime rates?  Make sure to touch on the direction, magnitude, and statistical significance of the effects.
-4. How would you explain the dramatic change in the slope coefficient for %Minority from Model 1 to Model 2?  What does this change in coefficients imply about the causal effect of %Minority on crime rates?
+4. How would you explain the dramatic change in the slope coefficient for % Minority from Model 1 to Model 2?  What does this change in coefficients imply about the causal effect of %Minority on crime rates?
 5. What is the predicted level of crime in a neighborhood in which 30% of the residents are poor and 60% are members of minority groups?  How does this compare to the predicted crime rate in a neighborhood in which 30% of residents are poor and none are members of minority groups?
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 ::: {style="position: absolute; left: -75px; width: 640px"}
 ```{r}
@@ -2707,7 +2707,7 @@ minority_poverty |>
   cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
   cols_label(model1 = "Model 1", model2 = "Model 2") |> 
   tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
-  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_source_note(html("N =  6,935 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
   tab_style(style = list(cell_text(color = "#e93cac")), 
             locations = list(cells_body(column = c(model2, stars2), rows = "% Minority")))  |> 
   #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
@@ -2728,7 +2728,7 @@ minority_poverty |>
 Controlling for % poverty, a one-unit increase in the local % minority is associated with an [*decrease*]{.underline} in crime of [$0.247$ crimes per 100,000]{.underline}, and this effect is strong enough to convince us that there is an association in the population.
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 ::: {style="position: absolute; left: -75px; width: 640px"}
 ```{r}
@@ -2742,7 +2742,7 @@ minority_poverty |>
   cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
   cols_label(model1 = "Model 1", model2 = "Model 2") |> 
   tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
-  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_source_note(html("N =  6,935 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
   tab_style(style = list(cell_text(color = "#e93cac")), 
             locations = list(cells_body(column = c(model2, stars2), rows = "% Poverty")))  |> 
   #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
@@ -2763,7 +2763,7 @@ minority_poverty |>
 Controlling for % minority, a one-unit increase in the local poverty rate is associated with an [*increase*]{.underline} in crime of [$2.095$ crimes per 100,000]{.underline}, and this effect is strong enough to convince us that there is an association in the population.
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 ::: {style="position: absolute; left: -75px; width: 640px"}
 ```{r}
@@ -2777,7 +2777,7 @@ minority_poverty |>
   cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
   cols_label(model1 = "Model 1", model2 = "Model 2") |> 
   tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
-  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_source_note(html("N =  6,935 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
     tab_style(style = list(cell_text(color = "#e93cac")), 
             locations = list(cells_body(rows = "% Minority")))  |>
   #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
@@ -2791,14 +2791,14 @@ minority_poverty |>
 :::
 
 ::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 0px; right: -75px; text-align: center; font-size: 0.95em;; width: 500px"}
-4. How would you explain the dramatic change in the slope coefficient for % Minority from Model 1 to Model 2?  What does this change in coefficients imply about the causal effect of %Minority on crime rates?
+4. How would you explain the dramatic change in the slope coefficient for % Minority from Model 1 to Model 2?  What does this change in coefficients imply about the causal effect of % Minority on crime rates?
 :::
 
 ::: {.fragment style="border: 4px solid #e93cac; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 250px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
 Indicates that the positive association between % Minority and crime observed in Model 1 was not causal; it is actually due to the higher level of poverty in minority neighborhoods. Accounting for the poverty rate shows that higher minority concentrations are actually associated<br>with lower crime.
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 ::: {style="position: absolute; left: -75px; width: 640px"}
 ```{r}
@@ -2812,7 +2812,7 @@ minority_poverty |>
   cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
   cols_label(model1 = "Model 1", model2 = "Model 2") |> 
   tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
-  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_source_note(html("N =  6,935 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
     tab_style(style = list(cell_text(color = "#e93cac")), 
             locations = list(cells_body(rows = c("% Minority", "% Poverty", "Constant"), 
                                         columns = model2)))  |>
@@ -2836,7 +2836,7 @@ minority_poverty |>
 * [30% poverty, 0% minority]{.underline}: $\widehat{crime} = 48.216 - 0.247(0) + 2.095(30) = 111.066$
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 ::: {style="position: absolute; left: -75px; width: 640px"}
 ```{r}
@@ -2850,7 +2850,43 @@ minority_poverty |>
   cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
   cols_label(model1 = "Model 1", model2 = "Model 2") |> 
   tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
-  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_source_note(html("N =  6,935 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+    tab_style(style = list(cell_text(color = "#e93cac")), 
+            locations = list(cells_body(rows = "Constant", 
+                                        columns = model2)))  |>
+  #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("% Minority", "% Poverty"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 250px; right: -75px; text-align: center; font-size: 0.95em;; width: 500px"}
+**BONUS**: What's the interpretation for our Y-intercept?
+:::
+
+::: {.fragment style="border: 4px solid #e93cac; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; bottom: 175px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+A neighborhood in which $\text{% Minority} = 0$ and $\text{% Poverty} = 0$ is predicted to have a crime rate of $48.216$ crimes per 100,000 population.
+:::
+
+## Practice 
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+minority_poverty |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods")) |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
+  tab_source_note(html("N =  6,935 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
     tab_style(style = list(cell_text(color = "#e93cac")), 
             locations = list(cells_body(rows = "Model $R^2$", 
                                         columns = model2)))  |>
@@ -2865,11 +2901,11 @@ minority_poverty |>
 :::
 
 ::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 250px; right: -75px; text-align: center; font-size: 0.95em;; width: 500px"}
-**BONUS**: What's the interpretation for the coefficient of determination?
+**BONUS BONUS**: What's the interpretation for our coefficient of **multiple** determination?
 :::
 
 ::: {.fragment style="border: 4px solid #e93cac; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; bottom: 175px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
-A neighborhood in which $\text{% Minority} = 0$ and $\text{% Poverty} = 0$ is predicted to have a crime rate of $48.216$ crimes per 100,000 population.
+Coefficient of determination indicates that about $7.1\%$ of the variation in crime rates can be explained by the racial composition and poverty combined.
 :::
 
 # Homework{.section-title background-color="#e8e3d3"}
