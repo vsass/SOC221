@@ -2742,5 +2742,19 @@
     "title": "",
     "section": "More examples",
     "text": "More examples\nThink creatively to use the information in the Normal Table to figure out what you want to know\n\n\n\nPercentage of women shorter than 55 inches?\nPercentage of women 55 inches or taller?\nProbability of randomly selecting a woman who is 69 inches or taller?\nProbability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?\nFind the score at the 10th percentile in the distribution.\nFind the two heights that define the middle 95% of cases in the distribution.\n\n\n\nHeight for women is  \\(N(65,3.5)\\)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#practice-1",
+    "href": "lectures/lecture10.html#practice-1",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 1, is the level of crime in the neighborhood associated with the concentration of minorities in the area? Make sure to touch on the direction, magnitude, and statistical significance of the association.\n\n\n\n\nDirection: positive slope coefficient  = positive association \nMagnitude: A difference of one percentage point in the concentration of minorities is associated with an increase of 0.327 crimes per 100,000 \nStatistical significance: Coefficient is statistically significant even if we use alpha of \\(0.001\\). Therefore, the association in the sample is large enough to convince us that the association likely exists in the population of neighborhoods."
+  },
+  {
+    "objectID": "lectures/lecture10.html#practice-2",
+    "href": "lectures/lecture10.html#practice-2",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n% Minority\n\n\n0.327\n\n***\n\n-0.247\n\n***\n\n\n\n% Poverty\n\n\n\n\n\n\n2.095\n\n***\n\n\n\n\n\n\nConstant\n\n\n61.284\n\n***\n\n48.216\n\n***\n\n\n\nModel \\(R^2\\)\n\n\n0.015\n\n\n\n0.071\n\n\n\n\n\nN = &lt;6,935 br&gt; * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nHow much of the variation in crime rates across neighborhoods can be explained by the racial composition of the neighborhood alone?\n\n\n\nCoefficient of determination indicates that about \\(1.5\\%\\) of the variation in crime rates can be explained by the racial composition."
   }
 ]
