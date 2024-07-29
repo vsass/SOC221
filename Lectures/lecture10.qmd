@@ -556,10 +556,10 @@ $z_k$ is the value of $Z_k$ for the individual
 ::: {style="font-size: 1.75em;"}
 * [Purpose 1: building the case for causality]{style="color: #e93cac"}
     * [Control for alternate explanations for the main association]{style="font-size: 0.75em"}
-* [Purpose 2: developing better predictions]{style="color: #e93cac"}
-    * [Predict $Y$ as a function of multiple variables, not just $X$]{style="font-size: 0.75em"}
-* [Purpose 3: explain more]{style="color: #e93cac"}
-    * [Use multiple variables to explain more of the variation in $Y$]{style="font-size: 0.75em"}
+* [Purpose 2: developing better predictions]{.fragment .semi-fade-out fragment-index=1 style="color: #e93cac"}
+    * [Predict $Y$ as a function of multiple variables, not just $X$]{.fragment .semi-fade-out fragment-index=1 style="font-size: 0.75em"}
+* [Purpose 3: explain more]{.fragment .semi-fade-out fragment-index=1 style="color: #e93cac"}
+    * [Use multiple variables to explain more of the variation in $Y$]{.fragment .semi-fade-out fragment-index=1 style="font-size: 0.75em"}
 :::
 
 ## Purpose 1: building the case for causality
@@ -1274,43 +1274,1604 @@ b_1 = (\frac{r_{yx}-r_{yz}r_{xz}}{1-r^2_{xz}})(\frac{s_y}{s_x})
 $$
 :::
 
-::: {.fragment style="position: absolute; top: 50px; left: 25px;"}
+::: {.fragment fragment-index=1 style="position: absolute; top: 29px; right: -75px;"}
 ```{r}
 #| echo: false
 #| fig-width: 4
 #| fig-height: 4
 
 create_graph() |> 
-  add_node(label = "Weather (X)", 
-           node_aes = node_aes(shape = "rectangle", fillcolor = "#2ad2c9", color = "#1b8883", fontcolor = "black", width = 0.7, height = 0.3)) |> 
-  add_node(label = "Ice cream\nsales", 
-           node_aes = node_aes(shape = "circle", fillcolor = "black", color = "black", fontcolor = "white", width = 0.8, height = 0.3)) |> 
-  add_node(label = "Violent\ncrime", 
-           node_aes = node_aes(shape = "circle", fillcolor = "#808080", color = "#808080", fontcolor = "white", width = 0.8, height = 0.3)) |> 
-  add_edge(from = 1, to = 3,
-           edge_aes = edge_aes(label = bquote(r[yz]), arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 0.75)) |> 
-  add_edge(from = 1, to = 2, 
-           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 0.75)) |> 
+  add_node(label = "Violent\ncrime (Y)", 
+           node_aes = node_aes(shape = "circle", fillcolor = "#808080", color = "#808080", fontcolor = "white", width = 0.8, height = 0.3)) |>
+  add_node(label = "Weather (Z)", 
+           node_aes = node_aes(shape = "rectangle", fillcolor = "#2ad2c9", color = "#1b8883", fontcolor = "black", width = 0.8, height = 0.3)) |>
+  add_node(label = "Ice cream\nsales (X)", 
+           node_aes = node_aes(shape = "circle", fillcolor = "black", color = "black", fontcolor = "white", width = 0.8, height = 0.3)) |>
+  add_edge(from = 2, to = 1,
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 1.5)) |> 
+  add_edge(from = 2, to = 3, 
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 1.5)) |> 
+  add_edge(from = 3, to = 1, 
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#4b2e83", penwidth = 1.5, style = "dashed")) |> 
   add_global_graph_attrs(attr = "bgcolor", value = "#e8e3d3", attr_type = "graph") |> 
-  render_graph(as_svg = TRUE, layout = "tree")
+  render_graph(as_svg = TRUE, layout = "kk")
 
 ```
 :::
 
-# Break! {.section-title background-color="#2ad2c9"}
+::: {.fragment fragment-index=2 style="color: #85754d; position: absolute; top: 150px; right: 175px;"}
+$r_{xz}$
+:::
+
+::: {.fragment fragment-index=2 style="color: #85754d; position: absolute; top: 150px; right: 22px;"}
+$r_{yz}$
+:::
+
+::: {.fragment fragment-index=2 style="color: #4b2e83; position: absolute; top: 260px; right: 110px;"}
+$r_{yx}$
+:::
+
+## Purpose 1: building the case for causality
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; font-size: 1.5em; width: 700px"}
+**BIVARIATE SLOPE:** [*Association between $X$ and $Y$*]{style="font-size: 0.66em;"}
+:::
+
+::: {style="font-size: 2em"}
+$$
+b = r_{yx}(\frac{s_y}{s_x})
+$$
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px;padding: 5px 5px 5px 5px; font-size: 1.5em; width: 900px"}
+**PARTIAL SLOPE:** [*Association between $X$ and $Y$ after controlling for $Z$*]{style="font-size: 0.66em;"}
+:::
+
+::: {style="font-size: 2em"}
+$$
+b_1 = (\frac{\color{#4b2e83}{r_{yx}}-\color{#85754d}{r_{yz}r_{xz}}}{1-r^2_{xz}})(\frac{s_y}{s_x})
+$$
+:::
+
+::: {style="color: #4b2e83; border: 4px solid #4b2e83; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 75px; left: -60px; text-align: center"}
+Looking at the correlation<br>between $X$ and $Y$...
+:::
+
+::: {.fragment style="color: #85754d; border: 3px solid #85754d; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 50px; right: -75px; text-align: center"}
+... and subtracting out <br>
+the common connection of <br>
+these variables to Z
+:::
+
+
+
+::: {style="position: absolute; top: 29px; right: -75px;"}
+```{r}
+#| echo: false
+#| fig-width: 4
+#| fig-height: 4
+
+create_graph() |> 
+  add_node(label = "Violent\ncrime (Y)", 
+           node_aes = node_aes(shape = "circle", fillcolor = "#808080", color = "#808080", fontcolor = "white", width = 0.8, height = 0.3)) |>
+  add_node(label = "Weather (Z)", 
+           node_aes = node_aes(shape = "rectangle", fillcolor = "#2ad2c9", color = "#1b8883", fontcolor = "black", width = 0.8, height = 0.3)) |>
+  add_node(label = "Ice cream\nsales (X)", 
+           node_aes = node_aes(shape = "circle", fillcolor = "black", color = "black", fontcolor = "white", width = 0.8, height = 0.3)) |>
+  add_edge(from = 2, to = 1,
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 1.5)) |> 
+  add_edge(from = 2, to = 3, 
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 1.5)) |> 
+  add_edge(from = 3, to = 1, 
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#4b2e83", penwidth = 1.5, style = "dashed")) |> 
+  add_global_graph_attrs(attr = "bgcolor", value = "#e8e3d3", attr_type = "graph") |> 
+  render_graph(as_svg = TRUE, layout = "kk")
+
+```
+:::
+
+::: {style="color: #85754d; position: absolute; top: 150px; right: 175px;"}
+$r_{xz}$
+:::
+
+::: {style="color: #85754d; position: absolute; top: 150px; right: 22px;"}
+$r_{yz}$
+:::
+
+::: {style="color: #4b2e83; position: absolute; top: 260px; right: 110px;"}
+$r_{yx}$
+:::
+
+## Purpose 1: building the case for causality
+
+#### [Another example]{style="color: #e93cac"}: Does education have a *causal* effect on income?
+
+::: {.fragment fragment-index=1 style="font-size:1.5em"}
+[**Bivariate regression model**]{style="color: #1b8883"} <br>
+$\widehat{Income} = 1816.16 + 1582.58(educ)$
+:::
+
+::: {.fragment fragment-index=2 style="color: #1b8883; position: absolute; right: 50px; top: 110px; border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+[ASSOCIATION]{.underline}: <br> Each additional year of education <br> is associated with $1,582.58 <br> in additional income
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<br>
+
+::: {.fragment fragment-index=3 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+Does this mean that education causes income to increase?
+:::
+
+
+::: {.fragment fragment-index=3}
+```{r}
+#| echo: false
+#| fig-width: 4
+#| fig-height: 4
+#| fig-align: center
+
+educ_income <- create_graph() |> 
+  add_node(label = "Income", 
+           node_aes = node_aes(shape = "circle", fillcolor = "#808080", color = "#808080", fontcolor = "white", width = 0.8, height = 0.3)) |>
+  add_node(label = "Education", 
+           node_aes = node_aes(shape = "circle", fillcolor = "black", color = "black", fontcolor = "white", width = 0.8, height = 0.3)) |> 
+  add_edge(from = 2, to = 1, 
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 0.75)) |> 
+  add_global_graph_attrs(attr = "bgcolor", value = "#e8e3d3", attr_type = "graph") |> 
+  render_graph(as_svg = TRUE, layout = "kk")
+educ_income
+```
+:::
+
+:::
+  
+::: {.column width="50%"}
+
+<br>
+
+::: {.fragment fragment-index=4 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+Or is the association at least partly spurious? 
+:::
+
+::: {.fragment fragment-index=4}
+```{r}
+#| echo: false
+#| fig-width: 3.5
+#| fig-height: 3.5
+#| fig-align: center
+
+create_graph() |> 
+  add_node(label = "Income", 
+           node_aes = node_aes(shape = "circle", fillcolor = "#808080", color = "#808080", fontcolor = "white", width = 0.8, height = 0.3)) |>
+  add_node(label = "???", 
+           node_aes = node_aes(shape = "rectangle", fillcolor = "#2ad2c9", color = "#1b8883", fontcolor = "black", width = 1.25, height = 0.3)) |>
+  add_node(label = "Education", 
+           node_aes = node_aes(shape = "circle", fillcolor = "black", color = "black", fontcolor = "white", width = 0.8, height = 0.3)) |>
+  add_edge(from = 2, to = 1,
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 1.5)) |> 
+  add_edge(from = 2, to = 3, 
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 1.5)) |> 
+  add_edge(from = 3, to = 1, 
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#4b2e83", penwidth = 1.5, style = "dashed")) |> 
+  add_global_graph_attrs(attr = "bgcolor", value = "#e8e3d3", attr_type = "graph") |> 
+  render_graph(as_svg = TRUE, layout = "kk")
+```
+:::
+
+:::
+  
+::::
+
+## Purpose 1: building the case for causality
+
+#### [Another example]{style="color: #e93cac"}: Does education have a *causal* effect on income?
+
+::: {style="font-size:1.5em"}
+[**Bivariate regression model**]{style="color: #1b8883"} <br>
+$\widehat{Income} = 1816.16 + 1582.58(educ)$
+:::
+
+::: {style="color: #1b8883; position: absolute; right: 50px; top: 110px; border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+[ASSOCIATION]{.underline}: <br> Each additional year of education <br> is associated with $1,582.58 <br> in additional income
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<br>
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+Does this mean that education causes income to increase?
+:::
+
+```{r}
+#| echo: false
+#| fig-width: 4
+#| fig-height: 4
+#| fig-align: center
+
+educ_income <- create_graph() |> 
+  add_node(label = "Income", 
+           node_aes = node_aes(shape = "circle", fillcolor = "#808080", color = "#808080", fontcolor = "white", width = 0.8, height = 0.3)) |>
+  add_node(label = "Education", 
+           node_aes = node_aes(shape = "circle", fillcolor = "black", color = "black", fontcolor = "white", width = 0.8, height = 0.3)) |> 
+  add_edge(from = 2, to = 1, 
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 0.75)) |> 
+  add_global_graph_attrs(attr = "bgcolor", value = "#e8e3d3", attr_type = "graph") |> 
+  render_graph(as_svg = TRUE, layout = "kk")
+educ_income
+```
+
+:::
+  
+::: {.column width="50%"}
+
+<br>
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+Or is the association at least partly spurious? 
+:::
+
+
+```{r}
+#| echo: false
+#| fig-width: 3.5
+#| fig-height: 3.5
+#| fig-align: center
+
+create_graph() |> 
+  add_node(label = "Income", 
+           node_aes = node_aes(shape = "circle", fillcolor = "#808080", color = "#808080", fontcolor = "white", width = 0.8, height = 0.3)) |>
+  add_node(label = "Parental Wealth", 
+           node_aes = node_aes(shape = "rectangle", fillcolor = "#2ad2c9", color = "#1b8883", fontcolor = "black", width = 1.25, height = 0.3)) |>
+  add_node(label = "Education", 
+           node_aes = node_aes(shape = "circle", fillcolor = "black", color = "black", fontcolor = "white", width = 0.8, height = 0.3)) |>
+  add_edge(from = 2, to = 1,
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 1.5)) |> 
+  add_edge(from = 2, to = 3, 
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 1.5)) |> 
+  add_edge(from = 3, to = 1, 
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#4b2e83", penwidth = 1.5, style = "dashed")) |> 
+  add_global_graph_attrs(attr = "bgcolor", value = "#e8e3d3", attr_type = "graph") |> 
+  render_graph(as_svg = TRUE, layout = "kk")
+```
+
+
+:::
+  
+::::
+
+## Purpose 1: building the case for causality
+
+#### [Another example]{style="color: #e93cac"}: Does education have a *causal* effect on income?
+
+::: {style="font-size:1.5em"}
+[**Bivariate regression model**]{style="color: #1b8883"} <br>
+$\widehat{Income} = 1816.16 + 1582.58(educ)$
+:::
+
+::: {style="position: absolute; right: 125px; top: 110px; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.5em"}
+$$
+b = r_{yx}(\frac{s_y}{s_x})
+$$
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<br>
+<br>
+
+::: {style="text-align: center"}
+Look at the association <br> between [**education and income**]{.underline style="color: #4b2e83"}, <br> subtracting out their <br> [**common connection to parental wealth**]{.underline style="color: #85754d"}
+:::
+
+<br>
+
+::: {style="font-size: 1.5em"}
+$$
+b_1 = (\frac{\color{#4b2e83}{r_{yx}}-\color{#85754d}{r_{yz}r_{xz}}}{1-r^2_{xz}})(\frac{s_y}{s_x})
+$$
+:::
+
+:::
+  
+::: {.column width="50%"}
+
+<br>
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+Or is the association at least partly spurious? 
+:::
+
+
+```{r}
+#| echo: false
+#| fig-width: 3.5
+#| fig-height: 3.5
+#| fig-align: center
+
+create_graph() |> 
+  add_node(label = "Income\n(Y)", 
+           node_aes = node_aes(shape = "circle", fillcolor = "#808080", color = "#808080", fontcolor = "white", width = 0.8, height = 0.3)) |>
+  add_node(label = "Parental Wealth (Z)", 
+           node_aes = node_aes(shape = "rectangle", fillcolor = "#2ad2c9", color = "#1b8883", fontcolor = "black", width = 1.25, height = 0.3)) |>
+  add_node(label = "Education\n(X)", 
+           node_aes = node_aes(shape = "circle", fillcolor = "black", color = "black", fontcolor = "white", width = 0.8, height = 0.3)) |>
+  add_edge(from = 2, to = 1,
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 1.5)) |> 
+  add_edge(from = 2, to = 3, 
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#85754d", penwidth = 1.5)) |> 
+  add_edge(from = 3, to = 1, 
+           edge_aes = edge_aes(arrowhead = "normal", arrowsize = 0.9, color = "#4b2e83", penwidth = 1.5, style = "dashed")) |> 
+  add_global_graph_attrs(attr = "bgcolor", value = "#e8e3d3", attr_type = "graph") |> 
+  render_graph(as_svg = TRUE, layout = "kk")
+```
+
+
+:::
+  
+::::
+
+## Purpose 1: building the case for causality
+
+#### [Another example]{style="color: #e93cac"}: Does education have a *causal* effect on income?
+
+::: {style="font-size:1.5em"}
+[**Bivariate regression model**]{style="color: #1b8883"} <br>
+$\widehat{Income} = 1816.16 + 1582.58(educ)$
+:::
+
+::: {.fragment style="color: #1b8883; position: absolute; right: 50px; top: 110px; border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+[ASSOCIATION]{.underline}: <br> Each additional year of education <br> is associated with $1,582.58 <br> in additional income
+:::
+
+<br>
+
+::: {style="font-size:1.5em"}
+[**Multivariate regression model**]{style="color: #e93cac"} <br>
+$\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\text{par_wealth})$
+:::
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+
+:::
+
+::: {.column width="33.33%"}
+
+
+:::
+  
+::: {.column width="33.33%"}
+
+:::
+  
+::::
+
+
+## Purpose 1: building the case for causality
+
+#### [Another example]{style="color: #e93cac"}: Does education have a *causal* effect on income?
+
+::: {style="font-size:1.5em"}
+[**Bivariate regression model**]{style="color: #1b8883"} <br>
+$\widehat{Income} = 1816.16 + 1582.58(educ)$
+:::
+
+::: {style="color: #1b8883; position: absolute; right: 50px; top: 110px; border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+[ASSOCIATION]{.underline}: <br> Each additional year of education <br> is associated with $1,582.58 <br> in additional income
+:::
+
+<br>
+
+::: {style="font-size:1.5em"}
+[**Multivariate regression model**]{style="color: #e93cac"} <br>
+$\widehat{Income} = 799.22 + \color{#6e8e13}{623.35}(educ) + 0.31(\text{par_wealth})$
+:::
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+
+:::
+
+::: {.column width="33.33%"}
+
+::: {style="text-align: center; color: #6e8e13; font-size: 1.25em"}
+**$b_1$**: Controlling for parental wealth, each additional year of education is associated with $\$623.35$ in additional income
+:::
+:::
+  
+::: {.column width="33.33%"}
+
+:::
+  
+::::
+
+## Purpose 1: building the case for causality
+
+#### [Another example]{style="color: #e93cac"}: Does education have a *causal* effect on income?
+
+::: {style="font-size:1.5em"}
+[**Bivariate regression model**]{style="color: #1b8883"} <br>
+$\widehat{Income} = 1816.16 + 1582.58(educ)$
+:::
+
+::: {style="color: #1b8883; position: absolute; right: 50px; top: 110px; border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+[ASSOCIATION]{.underline}: <br> Each additional year of education <br> is associated with $1,582.58 <br> in additional income
+:::
+
+<br>
+
+::: {style="font-size:1.5em"}
+[**Multivariate regression model**]{style="color: #e93cac"} <br>
+$\widehat{Income} = 799.22 + \color{#6e8e13}{623.35}(educ) + \color{#754cbc}{0.31}(\text{par_wealth})$
+:::
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+
+:::
+
+::: {.column width="33.33%"}
+
+::: {style="text-align: center; color: #6e8e13; font-size: 1.25em"}
+**$b_1$**: Controlling for parental wealth, each additional year of education is associated with $\$623.35$ in additional income
+:::
+:::
+  
+::: {.column width="33.33%"}
+::: {style="text-align: center; color: #754cbc; font-size: 1.25em"}
+**$b_2$**: Controlling for education, each additional dollar of parental wealth is associated with $\$0.31$ in additional income
+
+:::
+:::
+  
+::::
+
+## Purpose 1: building the case for causality
+
+#### [Another example]{style="color: #e93cac"}: Does education have a *causal* effect on income?
+
+::: {style="font-size:1.5em"}
+[**Bivariate regression model**]{style="color: #1b8883"} <br>
+$\widehat{Income} = 1816.16 + 1582.58(educ)$
+:::
+
+::: {style="color: #1b8883; position: absolute; right: 50px; top: 110px; border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center"}
+[ASSOCIATION]{.underline}: <br> Each additional year of education <br> is associated with $1,582.58 <br> in additional income
+:::
+
+<br>
+
+::: {style="font-size:1.5em"}
+[**Multivariate regression model**]{style="color: #e93cac"} <br>
+$\widehat{Income} = \color{#a68100}{799.22} + \color{#6e8e13}{623.35}(educ) + \color{#754cbc}{0.31}(\text{par_wealth})$
+:::
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+
+::: {style="text-align: center; color: #a68100; font-size: 1.25em"}
+**$a$**: A person with 0 years of education and 0 dollars of parental wealth is predicted to have an income $\$799.22$
+:::
+
+:::
+
+::: {.column width="33.33%"}
+
+::: {style="text-align: center; color: #6e8e13; font-size: 1.25em"}
+**$b_1$**: Controlling for parental wealth, each additional year of education is associated with $\$623.35$ in additional income
+:::
+:::
+  
+::: {.column width="33.33%"}
+::: {style="text-align: center; color: #754cbc; font-size: 1.25em"}
+**$b_2$**: Controlling for education, each additional dollar of parental wealth is associated with $\$0.31$ in additional income
+
+:::
+:::
+  
+::::
+
+## Purpose 1: building the case for causality
+
+#### [Another example]{style="color: #e93cac"}: Does education have a *causal* effect on income?
+
+::: {style="font-size:1.5em"}
+[**Bivariate regression model**]{style="color: #1b8883"} <br>
+$\widehat{Income} = 1816.16 + \color{#6e8e13}{1582.58}(educ)$
+:::
+
+
+
+<br>
+
+::: {style="font-size:1.5em"}
+[**Multivariate regression model**]{style="color: #e93cac"} <br>
+$\widehat{Income} = 799.22 + \color{#6e8e13}{623.35}(educ) + 0.31(\text{par_wealth})$
+:::
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+
+::: {style="text-align: center; color: #6e8e13; font-size: 1.25em"}
+Apparent association between education and income is reduced after controlling for parental wealth.
+:::
+
+:::
+
+::: {.column width="33.33%"}
+
+
+
+:::
+  
+::: {.column width="33.33%"}
+
+:::
+  
+::::
+
+## Purpose 1: building the case for causality
+
+#### [Another example]{style="color: #e93cac"}: Does education have a *causal* effect on income?
+
+::: {style="font-size:1.5em"}
+[**Bivariate regression model**]{style="color: #1b8883"} <br>
+$\widehat{Income} = 1816.16 + \color{#6e8e13}{1582.58}(educ)$
+:::
+
+
+
+<br>
+
+::: {style="font-size:1.5em"}
+[**Multivariate regression model**]{style="color: #e93cac"} <br>
+$\widehat{Income} = 799.22 + \color{#6e8e13}{623.35}(educ) + 0.31(\text{par_wealth})$
+:::
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+
+::: {style="text-align: center; color: #6e8e13; font-size: 1.25em"}
+Apparent association between education and income is reduced after controlling for parental wealth.
+:::
+
+:::
+
+::: {.column width="33.33%"}
+
+::: {style="text-align: center; color: #080808; font-size: 1.25em"}
+The association between education and income appears to be at least PARTIALLY spurious.
+:::
+
+:::
+  
+::: {.column width="33.33%"}
+
+:::
+  
+::::
+
+## Purpose 1: building the case for causality
+
+#### [Another example]{style="color: #e93cac"}: Does education have a *causal* effect on income?
+
+::: {style="font-size:1.5em"}
+[**Bivariate regression model**]{style="color: #1b8883"} <br>
+$\widehat{Income} = 1816.16 + \color{#6e8e13}{1582.58}(educ)$
+:::
+
+
+
+<br>
+
+::: {style="font-size:1.5em"}
+[**Multivariate regression model**]{style="color: #e93cac"} <br>
+$\widehat{Income} = 799.22 + \color{#6e8e13}{623.35}(educ) + \color{#754cbc}{0.31}(\text{par_wealth})$
+:::
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+
+::: {style="text-align: center; color: #6e8e13; font-size: 1.25em"}
+Apparent association between education and income is reduced after controlling for parental wealth.
+:::
+
+:::
+
+::: {.column width="33.33%"}
+
+::: {style="text-align: center; color: #080808; font-size: 1.25em"}
+The association between education and income appears to be at least PARTIALLY spurious.
+:::
+
+:::
+  
+::: {.column width="33.33%"}
+::: {style="text-align: center; color: #754cbc; font-size: 1.25em"}
+Part of the basic association between education and income is due to the fact that they are both affected by parental wealth.
+:::
+:::
+  
+::::
+
+## Purpose 1: building the case for causality
+
+#### [Another example]{style="color: #e93cac"}: Does education have a *causal* effect on income?
+
+::: {style="font-size:1.5em"}
+[**Bivariate regression model**]{style="color: #1b8883"} <br>
+$\widehat{Income} = 1816.16 + \color{#6e8e13}{1582.58}(educ)$
+:::
+
+::: {style="color: black; position: absolute; right: 50px; top: 150px; border: 3px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; width: 350px"}
+Next step: Add other controls that might account for the remaining association.
+::: 
+
+<br>
+
+::: {style="font-size:1.5em"}
+[**Multivariate regression model**]{style="color: #e93cac"} <br>
+$\widehat{Income} = 799.22 + \color{#6e8e13}{623.35}(educ) + \color{#754cbc}{0.31}(\text{par_wealth})$
+:::
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+
+::: {style="text-align: center; color: #6e8e13; font-size: 1.25em"}
+Apparent association between education and income is reduced after controlling for parental wealth.
+:::
+
+:::
+
+::: {.column width="33.33%"}
+
+::: {style="text-align: center; color: #080808; font-size: 1.25em"}
+The association between education and income appears to be at least PARTIALLY spurious.
+:::
+
+:::
+  
+::: {.column width="33.33%"}
+::: {style="text-align: center; color: #754cbc; font-size: 1.25em"}
+Part of the basic association between education and income is due to the fact that they are both affected by parental wealth.
+:::
+:::
+  
+::::
+
+## Why multivariate regression?
+
+<br>
+
+::: {style="font-size: 1.75em;"}
+* [Purpose 1: building the case for causality]{.fragment .semi-fade-out fragment-index=1 style="color: #e93cac"}
+    * [Control for alternate explanations for the main association]{.fragment .semi-fade-out fragment-index=1 style="font-size: 0.75em"}
+* [Purpose 2: developing better predictions]{style="color: #e93cac"}
+    * [Predict $Y$ as a function of multiple variables, not just $X$]{style="font-size: 0.75em"}
+* [Purpose 3: explain more]{.fragment .semi-fade-out fragment-index=1 style="color: #e93cac"}
+    * [Use multiple variables to explain more of the variation in $Y$]{.fragment .semi-fade-out fragment-index=1 style="font-size: 0.75em"}
+:::
 
 ## Purpose 2: developing better predictions
 
+#### [Can use the multivariate regression model to predict values of the dependent variable for any combination of values of the predictors.]{style="font-size: 1.25em; text-align: center"}
+
+::: {style="font-size:1.25em"}
+$$
+\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\text{par_wealth})
+$$
+:::
+
+::: {.fragment style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; padding: 5px 5px 5px 5px;"}
+Example: What is the predicted level of income for a person with 14 years of education and whose parents have total wealth of $250,000?
+:::
+
+::: {.fragment}
+$$
+\begin{aligned}
+\widehat{Income} &= 799.22 + 623.35(\color{#e93cac}{14}) + 0.31(\color{#e93cac}{250000}) \\
+&= \$87,025.12
+\end{aligned}
+$$
+:::
+
+::: {.fragment style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px;"}
+Example: What is the predicted level of income for a person with 16 years of education and whose parents have total wealth of $50,000?
+:::
+
+::: {.fragment}
+$$
+\begin{aligned}
+\widehat{Income} &= 799.22 + 623.35(\color{#1b8883}{16}) + 0.31(\color{#1b8883}{50000}) \\
+&= \$26,271.82
+\end{aligned}
+$$
+:::
+
+## Why multivariate regression?
+
+<br>
+
+::: {style="font-size: 1.75em;"}
+* [Purpose 1: building the case for causality]{.fragment .semi-fade-out fragment-index=1 style="color: #e93cac"}
+    * [Control for alternate explanations for the main association]{.fragment .semi-fade-out fragment-index=1 style="font-size: 0.75em"}
+* [Purpose 2: developing better predictions]{.fragment .semi-fade-out fragment-index=1 style="color: #e93cac"}
+    * [Predict $Y$ as a function of multiple variables, not just $X$]{.fragment .semi-fade-out fragment-index=1 style="font-size: 0.75em"}
+* [Purpose 3: explain more]{style="color: #e93cac"}
+    * [Use multiple variables to explain more of the variation in $Y$]{style="font-size: 0.75em"}
+:::
+
 ## Purpose 3: explain more
 
-## Coefficient of MULTIPLE determination
+Multivariate regression allows for more complete explanation of the variation in the dependent variable.
 
-## Example
+::: {.fragment fragment-index=1 style="color: #1b8883; font-size: 1.5em"}
+Bivariate regression model
+:::
+
+::: {style="font-size: 1.25em; color: #e8e3d3"}
+$\widehat{Income} = 1816.16 + 1582.58(educ)$
+:::
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {.fragment fragment-index=1 style="color: #a68100; border: 4px solid #a68100; border-radius: 15px; padding: 2px 2px 2px 2px; font-size: 1.25em; text-align: center"}
+Coefficient of determination <br> 
+($R^2$)
+:::
+
+::: {style="font-size: 1.25em; color: #e8e3d3"}
+$$
+R_2 = 0.728
+$$
+:::
+
+:::
+  
+::: {.column width="70%"}
+
+::: {.fragment fragment-index=1 style="font-size: 1em"}
+[**Interpretations**]{.underline}: <br>
+
+1. [The proportional reduction of prediction error achieved by using the independent variable ($X$) in the regression equation to predict the values of the dependent variable ($Y$)]{style="color: #754cbc"}
+2. [The proportion of the variance in the dependent variable ($Y$) explained by the independent variable ($X$)]{style="color: #6e8e13"}
+:::
+
+:::
+  
+::::
+
+## Purpose 3: explain more
+
+Multivariate regression allows for more complete explanation of the variation in the dependent variable.
+
+::: {style="color: #1b8883; font-size: 1.5em"}
+Bivariate regression model
+:::
+
+::: {style="font-size: 1.25em"}
+$\widehat{Income} = 1816.16 + 1582.58(educ)$
+:::
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="color: #a68100; border: 4px solid #a68100; border-radius: 15px; padding: 2px 2px 2px 2px; font-size: 1.25em; text-align: center"}
+Coefficient of determination <br> 
+($R^2$)
+:::
+
+::: {style="font-size: 1.25em"}
+$$
+R_2 = 0.728
+$$
+:::
+
+:::
+  
+::: {.column width="70%"}
+
+::: {style="font-size: 1em"}
+[**Interpretations**]{.underline}: <br>
+
+1. [We can reduce our errors by almost 73% if we take into consideration individuals’ education when we predict their income (i.e., use the regression line in our predictions).]{style="color: #754cbc"}
+2. [Almost 73% of the variance in income is explained by differences in education.]{style="color: #6e8e13"}
+:::
+
+
+:::
+  
+::::
+
+## Purpose 3: explain more
+
+Multivariate regression allows for more complete explanation of the variation in the dependent variable.
+
+::: {style="color: #e93cac; font-size: 1.5em"}
+Multivariate regression model
+:::
+
+::: {style="font-size: 1.25em; color: #e8e3d3"}
+$\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\text{par_wealth})$
+:::
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="color: #a68100; border: 4px solid #a68100; border-radius: 15px; padding: 2px 2px 2px 2px; font-size: 1.25em; text-align: center"}
+Coefficient of **MULTIPLE** determination <br> 
+($R^2$)
+:::
+
+::: {style="font-size: 1.25em; color: #e8e3d3"}
+$$
+R_2 = 0.813
+$$
+:::
+
+:::
+  
+::: {.column width="70%"}
+
+::: {style="font-size: 1em"}
+[**Interpretations**]{.underline}: <br>
+
+1. [The proportional [reduction of prediction error]{.underline} achieved by using [all]{.underline} of the predictors ($X$, $Z$, etc.) in the regression equation to predict the values of the dependent variable ($Y$)
+]{style="color: #754cbc"}
+2. [The proportion of the [variance]{.underline} in the dependent variable ($Y$) [explained]{.underline} by the [combination]{.underline} of all of the predictors ($X$, $Z$, etc.)
+]{style="color: #6e8e13"}
+:::
+
+:::
+  
+::::
+
+## Purpose 3: explain more
+
+Multivariate regression allows for more complete explanation of the variation in the dependent variable.
+
+::: {style="color: #e93cac; font-size: 1.5em"}
+Multivariate regression model
+:::
+
+::: {style="font-size: 1.25em"}
+$\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\text{par_wealth})$
+:::
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="color: #a68100; border: 4px solid #a68100; border-radius: 15px; padding: 2px 2px 2px 2px; font-size: 1.25em; text-align: center"}
+Coefficient of **MULTIPLE** determination <br> 
+($R^2$)
+:::
+
+::: {style="font-size: 1.25em"}
+$$
+R_2 = 0.813
+$$
+:::
+
+:::
+  
+::: {.column width="70%"}
+
+::: {style="font-size: 1em"}
+[**Interpretations**]{.underline}: <br>
+
+1. [We can reduce our errors by about 81% if we take into consideration individuals’ [education and the wealth of their parents]{.underline} when we predict their income (i.e., use the regression line in our predictions).]{style="color: #754cbc"}
+2. [About 81% of the variance in income is explained by the [combination]{.underline} of education and parental wealth.]{style="color: #6e8e13"}
+:::
+
+
+:::
+  
+::::
+
+# Break! {.section-title background-color="#2ad2c9"}
+
+
 
 ## Regression tables
 
-## Example
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+educ_income <- data.frame(model1 = c("1582.58", "", "1816.16", "0.73"), 
+                          stars1 = c("***", "", "", ""), 
+                          model2 = c("623.35", "0.31", "799.22", "0.81"),
+                          stars2 = c("*", "**", "", ""))
+rownames(educ_income) <- c("Education", "Parental wealth", "Constant", "Model $R^2$")
+
+
+educ_income |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting annual income ($s)"), subtitle = "Individual-level data") |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("Education", "Parental wealth")) |> 
+  tab_source_note(html("N = 12 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), 
+            locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = c(model2, stars2))))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="color: white; background: black; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: 0px; text-align: center; font-size: 1.25em"}
+Same results in table form
+:::
+
+## Regression tables
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+educ_income |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting annual income ($s)"), subtitle = "Individual-level data") |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("Education", "Parental wealth")) |> 
+  tab_source_note(html("<span style='background-color: #aadb1e'> N = 12 </span> <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), 
+            locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = c(model2, stars2))))  |> 
+  tab_style(style = list(cell_fill(color = "#aadb1e")), 
+            locations = list(cells_title()))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="color: white; background: black; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: 0px; text-align: center; font-size: 1.25em"}
+Same results in table form
+:::
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 100px; right: 100px; text-align: center; font-size: 1em; width: 350px"}
+Title indicating the dependent variable, units of analysis. 
+:::
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; left: -50px; text-align: center; font-size: 1em; width: 350px"}
+Number of cases 
+:::
+
+## Regression tables
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+educ_income |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting annual income ($s)"), subtitle = "Individual-level data") |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("Education", "Parental wealth")) |> 
+  tab_source_note(html("N = 12 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), 
+            locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = c(model2, stars2))))  |> 
+  tab_style(style = list(cell_text(color = "#1b8883")), locations = list(cells_body(rows = "Education", column = model1)))  |> 
+  tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="color: white; background: black; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: 0px; text-align: center; font-size: 1.25em"}
+Same results in table form
+:::
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 10px 5px 10px; position: absolute; top: 100px; right: 0px; text-align: center; font-size: 1em;"}
+Slope coefficient for effect of<br>education on income.
+:::
+
+## Regression tables
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+educ_income |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting annual income ($s)"), subtitle = "Individual-level data") |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("Education", "Parental wealth")) |> 
+  tab_source_note(html("N = 12 <br> <span style='color: #e93cac'> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001 </span>")) |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), 
+            locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = c(model2, stars2))))  |> 
+  tab_style(style = list(cell_text(color = "#1b8883")), locations = list(cells_body(rows = "Education", column = model1)))  |> 
+  tab_style(style = list(cell_text(color = "#e93cac")), locations = list(cells_body(rows = "Education", column = stars1)))  |> 
+  tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="color: white; background: black; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: 0px; text-align: center; font-size: 1.25em"}
+Same results in table form
+:::
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 10px 5px 10px; position: absolute; top: 100px; right: 0px; text-align: center; font-size: 1em;"}
+Slope coefficient for effect of<br>education on income.
+:::
+
+::: {style="color: #e93cac; position: absolute; top: 225px; right: -75px; text-align: center; font-size: 1em;"}
+Statistical significance of the slope coefficient
+:::
+
+::: {.fragment .incremental style="border: 4px solid #e93cac; border-radius: 15px; padding: 5px 10px 5px 10px; position: absolute; top: 275px; right: -50px; text-align: center; font-size: 1em;; width: 450px"}
+* Testing the null hypothesis ($H_0$) that $\beta = 0$ *(that the slope is zero in the population)*
+* Number of stars indicates p-value for coefficient (probability of observing the sample coefficient if $H_0$ where true). 
+* Reject $H_0$ if p-value < alpha
+* Given [***]{style="color: #e93cac"}, our model rejects $H_0$ with $99.9\%$ confidence (alpha of $0.001$)
+:::
+
+## Regression tables
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+educ_income |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting annual income ($s)"), subtitle = "Individual-level data") |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("Education", "Parental wealth")) |> 
+  tab_source_note(html("N = 12 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001 </span>")) |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), 
+            locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = c(model2, stars2))))  |> 
+  tab_style(style = list(cell_text(color = "#1b8883")), locations = list(cells_body(rows = "Education", column = model1)))  |>
+  tab_style(style = list(cell_text(color = "#754cbc")), locations = list(cells_body(rows = "Constant", column = model1)))  |> 
+  tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="color: white; background: black; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: 0px; text-align: center; font-size: 1.25em"}
+Same results in table form
+:::
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 10px 5px 10px; position: absolute; top: 100px; right: 0px; text-align: center; font-size: 1em;"}
+Slope coefficient for effect of<br>education on income.
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 10px 5px 10px; position: absolute; top: 275px; right: 10px; text-align: center; font-size: 1em;"}
+Y-intercept (a.k.a, constant)
+:::
+
+::: {.fragment style="border: 4px solid black; border-radius: 15px; padding: 0px 10px 0px 10px; position: absolute; bottom: 50px; left: 0px; text-align: center; font-size: 1.25em;"}
+$$
+\widehat{Income} = 1816.16 + 1582.58(educ)
+$$
+:::
+
+## Regression tables
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+educ_income |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting annual income ($s)"), subtitle = "Individual-level data") |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("Education", "Parental wealth")) |> 
+  tab_source_note(html("N = 12 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001 </span>")) |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), 
+            locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = c(model2, stars2))))  |> 
+  tab_style(style = list(cell_text(color = "#1b8883")), locations = list(cells_body(rows = "Education", column = model1)))  |>
+  tab_style(style = list(cell_text(color = "#754cbc")), locations = list(cells_body(rows = "Constant", column = model1)))  |> 
+    tab_style(style = list(cell_text(color = "#a68100")), locations = list(cells_body(rows = "Model $R^2$", column = model1)))  |> 
+  tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="color: white; background: black; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: 0px; text-align: center; font-size: 1.25em"}
+Same results in table form
+:::
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 10px 5px 10px; position: absolute; top: 100px; right: 0px; text-align: center; font-size: 1em;"}
+Slope coefficient for effect of<br>education on income.
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 10px 5px 10px; position: absolute; top: 275px; right: 10px; text-align: center; font-size: 1em;"}
+Y-intercept (a.k.a, constant)
+:::
+
+::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 10px 0px 10px; position: absolute; bottom: 50px; left: 0px; text-align: center; font-size: 1.25em;"}
+$$
+\widehat{Income} = 1816.16 + 1582.58(educ)
+$$
+:::
+
+::: {style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 10px 5px 10px; position: absolute; top: 375px; right: 0px; text-align: center; font-size: 1em;"}
+Coefficient of determination
+:::
+
+
+
+
+
+
+## Regression tables
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+educ_income |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting annual income ($s)"), subtitle = "Individual-level data") |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("Education", "Parental wealth")) |> 
+  tab_source_note(html("N = 12 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_style(style = list(cell_text(color = "#1b8883")), locations = list(cells_body(rows = "Education", column = model2)))  |>
+  tab_style(style = list(cell_text(color = "#6e8e13")), locations = list(cells_body(rows = "Parental wealth", column = model2)))  |>
+  tab_style(style = list(cell_text(color = "#754cbc")), locations = list(cells_body(rows = "Constant", column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#a68100")), locations = list(cells_body(rows = "Model $R^2$", column = model2)))  |> 
+  #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="color: white; background: black; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: 0px; text-align: center; font-size: 1.25em"}
+Same results in table form
+:::
+
+::: {style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 10px 5px 10px; position: absolute; top: 100px; right: 0px; text-align: center; font-size: 1em;"}
+**Partial** slope coefficient for<br>effect of education on income.
+:::
+
+::: {style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 10px 5px 10px; position: absolute; top: 225px; right: -25px; text-align: center; font-size: 1em;"}
+**Partial** slope coefficient for<br>effect of parental wealth on income.
+:::
+
+::: {style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 10px 5px 10px; position: absolute; top: 350px; right: 10px; text-align: center; font-size: 1em;"}
+Y-intercept (a.k.a, constant)
+:::
+
+::: {.fragment style="border: 4px solid black; border-radius: 15px; padding: 0px 10px 0px 10px; position: absolute; bottom: 50px; left: -75px; text-align: center; font-size: 1.25em;"}
+$$
+\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\text{par_wealth})
+$$
+:::
+
+::: {style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 10px 5px 10px; position: absolute; top: 445px; right: 0px; text-align: center; font-size: 1em;"}
+Coefficient of determination
+:::
+
+## Regression tables
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+educ_income |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting annual income ($s)"), subtitle = "Individual-level data") |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("Education", "Parental wealth")) |> 
+  tab_source_note(html("N = 12 <br> <span style='color: #e93cac'> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001 </span>")) |> 
+  tab_style(style = list(cell_text(color = "#e93cac")), locations = list(cells_body(rows = c("Education", "Parental wealth"), column = stars2)))  |> 
+  
+  #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="color: white; background: black; border: 4px solid black; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: 0px; text-align: center; font-size: 1.25em"}
+Same results in table form
+:::
+
+::: {style="color: #e93cac; position: absolute; top: 100px; right: -80px; text-align: center; font-size: 1em;"}
+Statistical significance of the slope coefficients
+:::
+
+::: {.fragment style="border: 4px solid #e93cac; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 150px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+* Testing the null hypothesis ($H_0$) that $\beta = 0$ *(that the slope is zero in the population)*
+* Number of stars indicates p-value for coefficient (probability of observing the sample coefficient if $H_0$ where true). 
+* Reject $H_0$ if p-value < alpha
+* Given [*]{style="color: #e93cac"} for the partial slope coefficient of education, our multivariate model rejects $H_0$ with $95\%$ confidence (alpha of $0.05$)
+* Given [**]{style="color: #e93cac"} for the partial slope coefficient of parental wealth, our multivariate model rejects $H_0$ with $99\%$ confidence (alpha of $0.01$)
+:::
+
+## Practice
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+minority_poverty <- data.frame(model1 = c("0.327", "", "61.284", "0.015"), 
+                          stars1 = c("***", "", "***", ""), 
+                          model2 = c("-0.247", "2.095", "48.216", "0.071"),
+                          stars2 = c("***", "***", "***", ""))
+rownames(minority_poverty) <- c("% Minority", "% Poverty", "Constant", "Model $R^2$")
+
+minority_poverty |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods")) |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
+  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("% Minority", "% Poverty"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {.fragment style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 150px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+1. According to the results in Model 1, is the level of crime in the neighborhood associated with the concentration of minorities in the area?  Make sure to touch on the direction, magnitude, and statistical significance of the association.
+2. How much of the variation in crime rates across neighborhoods can be explained by the racial composition of the neighborhood alone?
+:::
+
+## Practice {visibility="hidden"}
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+minority_poverty |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods")) |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
+  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_style(style = list(cell_text(color = "#e93cac")), locations = list(cells_body(column = c(model1, stars1), 
+                                                                                    rows = "% Minority")))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("% Minority", "% Poverty"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 0px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+1. According to the results in Model 1, is the level of crime in the neighborhood associated with the concentration of minorities in the area?  Make sure to touch on the direction, magnitude, and statistical significance of the association.
+:::
+
+::: {.fragment .incremental style="border: 4px solid #e93cac; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 250px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+**Direction**: positive slope coefficient <br> = positive association <br>
+**Magnitude**: A difference of one percentage point in the concentration of minorities is associated with an increase of 0.327 crimes per 100,000 <br>
+**Statistical significance**: Coefficient is statistically significant even if we use alpha of $0.001$. Therefore, the association in the sample is large enough to convince us that the association likely exists in the population of neighborhoods.
+:::
+
+## Practice {visibility="hidden"}
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+minority_poverty |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods")) |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
+  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_style(style = list(cell_text(color = "#e93cac")), 
+            locations = list(cells_body(column = c(model1, stars1), rows = "Model $R^2$")))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("% Minority", "% Poverty"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 0px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+2. How much of the variation in crime rates across neighborhoods can be explained by the racial composition of the neighborhood alone?
+:::
+
+::: {.fragment .incremental style="border: 4px solid #e93cac; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 300px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+Coefficient of determination indicates that about $1.5\%$ of the variation in crime rates can be explained by the racial composition.
+:::
+
+## Practice
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+minority_poverty |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods")) |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
+  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("% Minority", "% Poverty"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 0px; right: -75px; text-align: center; font-size: 0.95em;; width: 500px"}
+3. According to the results in Model 2, how do the local poverty rate and concentration of minorities in the neighborhood affect local crime rates?  Make sure to touch on the direction, magnitude, and statistical significance of the effects.
+4. How would you explain the dramatic change in the slope coefficient for %Minority from Model 1 to Model 2?  What does this change in coefficients imply about the causal effect of %Minority on crime rates?
+5. What is the predicted level of crime in a neighborhood in which 30% of the residents are poor and 60% are members of minority groups?  How does this compare to the predicted crime rate in a neighborhood in which 30% of residents are poor and none are members of minority groups?
+:::
+
+## Practice {visibility="hidden"}
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+minority_poverty |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods")) |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
+  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_style(style = list(cell_text(color = "#e93cac")), 
+            locations = list(cells_body(column = c(model2, stars2), rows = "% Minority")))  |> 
+  #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("% Minority", "% Poverty"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 0px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+3. According to the results in Model 2, how do the local poverty rate and concentration of minorities in the neighborhood affect local crime rates?  Make sure to touch on the direction, magnitude, and statistical significance of the effects.
+:::
+
+::: {.fragment style="border: 4px solid #e93cac; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 290px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+Controlling for % poverty, a one-unit increase in the local % minority is associated with an [*decrease*]{.underline} in crime of [$0.247$ crimes per 100,000]{.underline}, and this effect is strong enough to convince us that there is an association in the population.
+:::
+
+## Practice {visibility="hidden"}
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+minority_poverty |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods")) |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
+  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+  tab_style(style = list(cell_text(color = "#e93cac")), 
+            locations = list(cells_body(column = c(model2, stars2), rows = "% Poverty")))  |> 
+  #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("% Minority", "% Poverty"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 0px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+3. According to the results in Model 2, how do the local poverty rate and concentration of minorities in the neighborhood affect local crime rates?  Make sure to touch on the direction, magnitude, and statistical significance of the effects.
+:::
+
+::: {style="border: 4px solid #e93cac; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 290px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+Controlling for % minority, a one-unit increase in the local poverty rate is associated with an [*increase*]{.underline} in crime of [$2.095$ crimes per 100,000]{.underline}, and this effect is strong enough to convince us that there is an association in the population.
+:::
+
+## Practice {visibility="hidden"}
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+minority_poverty |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods")) |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
+  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+    tab_style(style = list(cell_text(color = "#e93cac")), 
+            locations = list(cells_body(rows = "% Minority")))  |>
+  #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("% Minority", "% Poverty"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 0px; right: -75px; text-align: center; font-size: 0.95em;; width: 500px"}
+4. How would you explain the dramatic change in the slope coefficient for % Minority from Model 1 to Model 2?  What does this change in coefficients imply about the causal effect of %Minority on crime rates?
+:::
+
+::: {.fragment style="border: 4px solid #e93cac; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 250px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+Indicates that the positive association between % Minority and crime observed in Model 1 was not causal; it is actually due to the higher level of poverty in minority neighborhoods. Accounting for the poverty rate shows that higher minority concentrations are actually associated<br>with lower crime.
+:::
+
+## Practice {visibility="hidden"}
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+minority_poverty |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods")) |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
+  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+    tab_style(style = list(cell_text(color = "#e93cac")), 
+            locations = list(cells_body(rows = c("% Minority", "% Poverty", "Constant"), 
+                                        columns = model2)))  |>
+  #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("% Minority", "% Poverty"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 0px; right: -75px; text-align: center; font-size: 0.95em;; width: 500px"}
+5. What is the predicted level of crime in a neighborhood in which 30% of the residents are poor and 60% are members of minority groups?  How does this compare to the predicted crime rate in a neighborhood in which 30% of residents are poor and none are members of minority groups?
+:::
+
+::: {.fragment .incremental style="border: 4px solid #e93cac; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; bottom: 0px; left: -75px; text-align: center; font-size: 1em;; width: 700px"}
+* $\widehat{crime} = 48.216 - 0.247(\text{% Minority}) + 2.095(\text{% Poverty})$
+* [30% poverty, 60% minority]{.underline}: $\widehat{crime} = 48.216 - 0.247(60) + 2.095(30) = 96.246$
+* [30% poverty, 0% minority]{.underline}: $\widehat{crime} = 48.216 - 0.247(0) + 2.095(30) = 111.066$
+:::
+
+## Practice {visibility="hidden"}
+
+::: {style="position: absolute; left: -75px; width: 640px"}
+```{r}
+#| echo: false
+
+minority_poverty |> 
+  gt(rownames_to_stub = T) |> # add rownames to column
+  tab_header(title = html("Results of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods")) |> # add title and subtitle
+  fmt_markdown(columns = c(1, 2, 4)) |> # include html 
+  cols_align(align = "right", columns = c(model1, model2)) |> # center columns
+  cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
+  cols_label(model1 = "Model 1", model2 = "Model 2") |> 
+  tab_row_group(label = "Predictor", rows = c("% Minority", "% Poverty")) |> 
+  tab_source_note(html("N =  <6,935 br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
+    tab_style(style = list(cell_text(color = "#e93cac")), 
+            locations = list(cells_body(rows = "Model $R^2$", 
+                                        columns = model2)))  |>
+  #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
+  tab_stub_indent(rows = c("% Minority", "% Poverty"), indent = 5) |> 
+  cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
+  tab_options(table.background.color = "#e8e3d3") |> # change background color
+  opt_table_outline(color = "#85754d") |> # outline table with colored border 
+  tab_options(table.background.color = "#e8e3d3", table_body.hlines.color = "#85754d", table_body.vlines.color = "#85754d", table_body.border.top.color = "#85754d", table_body.border.bottom.color = "#85754d", stub.border.color = "#85754d", heading.border.bottom.color = "#85754d",  column_labels.border.bottom.color = "#85754d", table.width = pct(100), table.font.size = px(18L)) 
+```
+:::
+
+::: {style="border: 4px solid black; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; top: 250px; right: -75px; text-align: center; font-size: 0.95em;; width: 500px"}
+**BONUS**: What's the interpretation for the coefficient of determination?
+:::
+
+::: {.fragment style="border: 4px solid #e93cac; border-radius: 15px; padding: 0px 5px 0px 5px; position: absolute; bottom: 175px; right: -75px; text-align: center; font-size: 1em;; width: 500px"}
+A neighborhood in which $\text{% Minority} = 0$ and $\text{% Poverty} = 0$ is predicted to have a crime rate of $48.216$ crimes per 100,000 population.
+:::
 
 # Homework{.section-title background-color="#e8e3d3"}
 
-## {data-menu-title="Homework 10" background-iframe="https://vsass.github.io/SOC221/homework/homework10.html" background-interactive=TRUE}
+## {data-menu-title="Homework 7" background-iframe="https://vsass.github.io/SOC221/homework/homework7.html" background-interactive=TRUE}

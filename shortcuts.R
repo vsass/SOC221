@@ -10,7 +10,7 @@ Change text size
 
 :::
 
-  
+  <span style='color: #e93cac'> TEXT </span>
   
   
 Columns
