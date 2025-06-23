@@ -1,0 +1,959 @@
+---
+title: '<h1 style="font-size:2.8em; "> Estimation: confidence intervals <br> for means and proportions </h1>'
+title-slide-attributes:
+  data-background-image: ../images/abstract_statistics_playful2.jpeg
+  data-background-size: cover
+  data-background-opacity: "0.33"
+subtitle: "SOC 221 • Lecture 6"
+author: "Victoria Sass"
+date: "July 10, 2024"
+date-format: full
+execute: 
+  echo: true
+  message: false
+  warning: false
+format: 
+  revealjs:
+    reference-location: margin
+    theme: lecture_styles.scss
+    controls: true
+    slide-number: true
+    chalkboard: true
+    incremental: false 
+    smaller: true
+    preview-links: true
+    history: false
+    progress: true
+    link-external-icon: true 
+revealjs-plugins:
+  - attribution
+---
+
+```{r}
+#| echo: false
+#| cache: false
+require(tidyverse)
+require(gt)
+require(ggthemes)
+require(ggforce)
+
+knitr::opts_chunk$set(comment = ">")
+
+# set transparent background in base
+knitr::opts_chunk$set(dev.args=list(bg='transparent'))
+
+# set transparent background in ggplot
+ggplot2::theme_set(ggthemes::theme_tufte(base_size=12))
+ggplot2::theme_update(panel.background = ggplot2::element_blank(),
+                      plot.background=ggplot2::element_blank(),
+    legend.background=ggplot2::element_blank())
+
+options(width=80, show.signif.stars=FALSE)
+```
+
+# Estimation: confidence intervals for means {.section-title background-color="#c5b4e3"}
+
+## Using these tools for inference
+
+#### Example: Want to know how much UW students study on average
+
+::: {style="position: absolute; top: 150px; right: 100px; font-size: 3em"}
+[$\bar{X}$]{style="color:#1b8883"} ---INFERENCE--> [$\mu_x$]{style="color:#a68100"}
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 175px; left: -50px; font-size: 1.25em"}
+**Sample statistic**: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 550px; padding: 5px 5px 0px 5px; position: absolute; bottom: 50px; left: -50px;"}
+*For example*: draw a random sample of 100 students and observe $\bar{X} = 14.5$
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 175px; right: -50px; font-size: 1.25em"}
+**Population parameter**: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; padding: 5px 5px 0px 5px; position: absolute; bottom: 50px; right: -50px;"}
+[**Our goal**]{.underline}: Estimate the unknown population parameter $\mu_x = ?$
+:::
+
+## Sampling distribution
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+<br>
+<br>
+
+::: {.fragment style="font-size: 1.75em"}
+> [**Sampling Distribution**]{style="color:#e93cac"}<br> A *theoretical* [probability distribution]{.underline} of [all possible sample values]{.underline} for the statistic in which we are interested.
+:::
+:::
+
+::: {.column width="40%"}
+
+<br> 
+
+::: {.fragment style="font-size: 1.25em"}
+
+### Key tool for inferential statistics
+
+<br>
+
+Allows us to think about how our one single sample result relates to all possible sample results and, by extension, the population we are interested in drawing inferences about.
+:::
+:::
+
+::::
+
+## Three types of distributions 
+
+![](images/three_dists.png){fig-align="center"}
+
+## Implication of central limit theorem
+
+* [**Central limit theorem**]{.underline} tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:
+    * Normally distributed
+    * Mean: $\mu_\bar{X}$ $= \mu_X$ 
+    * Standard Error = [$\sigma_\bar{X}$]{style="color: #a68100"} $= \frac{\sigma}{\sqrt{n}}$
+
+::: {data-id="box5" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; bottom: 125px; left: -50px; text-align: center; font-size: 1.25em"}
+[Standard error]{style="color:#e93cac"}:<br>
+The the standard deviation<br>in the sampling distribution<br>
+(in this case, of all<br>possible sample means)
+:::
+
+::: {style="position: absolute; bottom: -50px; right: -50px;"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+
+area_minus1 <- data.frame(x = seq(0, -1, length.out = 100), ymin = 0, ymax = dnorm(seq(0, -1, length.out = 100), mean = 0, sd = 1))
+area_minus2 <- data.frame(x = seq(0, -2, length.out = 100), ymin = 0, ymax = dnorm(seq(0, -2, length.out = 100), mean = 0, sd = 1))
+area_minus3 <- data.frame(x = seq(0, -3, length.out = 100), ymin = 0, ymax = dnorm(seq(0, -3, length.out = 100), mean = 0, sd = 1))
+area1 <- data.frame(x = seq(0, 1, length.out = 100), ymin = 0, ymax = dnorm(seq(0, 1, length.out = 100), mean = 0, sd = 1))
+area2 <- data.frame(x = seq(0, 2, length.out = 100), ymin = 0, ymax = dnorm(seq(0, 2, length.out = 100), mean = 0, sd = 1))
+area3 <- data.frame(x = seq(0, 3, length.out = 100), ymin = 0, ymax = dnorm(seq(0, 3, length.out = 100), mean = 0, sd = 1))
+
+ggplot(data = data.frame(x = c(-3.25, 3.25)), aes(x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 1)) + ylab("") +
+  scale_y_continuous(breaks = NULL) + 
+  scale_x_continuous(breaks = c(-3:3), label = c(expression(paste(mu, "- 3",sigma[bar(X)])), expression(paste(mu, "- 2",sigma[bar(X)])), 
+  expression(paste(mu, "- 1",sigma[bar(X)])), expression(mu), expression(paste(mu, "+ 1",sigma[bar(X)])), expression(paste(mu, "+ 2",sigma[bar(X)])),
+  expression(paste(mu, "+ 3",sigma[bar(X)])))) + 
+  geom_segment(x = 0, y = 0, yend = 0.398942, color = "black") +
+  geom_segment(x = -1, y = 0, yend = 0.241971, color = "black") + 
+  geom_segment(x = 1, y = 0, yend = 0.241971, color = "black") + 
+  geom_segment(x = -2, y = 0, yend = 0.053991, color = "black") + 
+  geom_segment(x = 2, y = 0, yend = 0.053991, color = "black") + 
+  geom_segment(x = -3, y = 0, yend = 0.004432, color = "black") + 
+  geom_segment(x = 3, y = 0, yend = 0.004432, color = "black") + 
+  annotate(geom = "segment", x = -1, y = 0.12, xend = 1, yend = .12, arrow = arrow(ends = "both", type = "closed")) + 
+  annotate(geom = "label", x = 0, y = 0.12, label = "68.26%") + 
+  annotate(geom = "segment", x = -2, y = 0.053991, xend = 2, yend = 0.053991, arrow = arrow(ends = "both", type = "closed")) + 
+  annotate(geom = "label", x = 0, y = 0.053991, label = "95.44%") + 
+  annotate(geom = "segment", x = -3, y = 0.01, xend = 3, yend = 0.01, arrow = arrow(ends = "both", type = "closed")) +
+  annotate(geom = "label", x = 0, y = 0.01, label = "99.74%") + 
+  geom_hline(yintercept = 0, color = "black") +
+  theme_tufte(base_size = 16)
+```
+:::
+
+---
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+set.seed(711)
+mu <- 0
+bin_width <- 0.375
+twenty_randos <- tibble(x = rnorm(n = 20, 0, 1), y = 1:20, color = c(rep("1", 14), "2", rep("1", 5)))
+
+ggplot(twenty_randos, aes(group = y)) + 
+  annotate("label", x = 0, y = 0, label = "mu[x]", parse = TRUE, size = 12, color = "#690c48", fill = "#e93cac") +
+  annotate(geom = "rect", xmin = -1.96, xmax = 1.96, ymin = 0, ymax = 21, fill = "#e93cac", alpha = 0.25) +
+  geom_ellipse(aes(group = y, x0 = x, y0 = y, a = bin_width/2, b = 0.5, angle = 0, fill = color)) +
+  geom_text(data = twenty_randos[1, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[1]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_point(aes(x = x - 1.96, y = y, color = color), size = 2) + 
+  geom_point(aes(x = x + 1.96, y = y, color = color), size = 2) + 
+  geom_segment(aes(x = x - 1.96, xend = x - 0.2, y = y, color = color)) +
+  geom_segment(aes(x = x + 0.2, xend = x + 1.96, y = y, color = color)) +
+  geom_text(data = twenty_randos[2, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[2]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[3, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[3]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[4, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[4]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[5, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[5]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[6, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[6]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[7, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[7]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[8, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[8]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[9, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[9]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[10, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[10]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[11, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[11]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[12, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[12]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[13, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[13]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[14, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[14]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[15, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[15]))), parse = TRUE, color = "#6e8e13", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[16, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[16]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[17, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[17]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[18, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[18]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[19, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[19]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[20, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[20]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  coord_equal(bin_width, clip = "off") + # to make the dots look nice and round0 
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "black") + 
+  theme(legend.position = "none", axis.text.x = element_text(size = 30, color = "#e93cac"), axis.ticks.x = element_blank()) +
+  scale_y_continuous(name = NULL, breaks = NULL, limits = c(0, 21)) + 
+  scale_x_continuous(name = NULL, limits = c(-5.5, 5.5), breaks = c(-1.96, 1.96), label = c(expression(paste(bar(X), " - 1.96",sigma[bar(X)])), 
+  expression(paste(bar(X), " + 1.96",sigma[bar(X)])))) + 
+  scale_color_manual(values = c("#e93cac", "#6e8e13")) +
+  scale_fill_manual(values = c("transparent", "#aadb1e"))
+
+```
+
+::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; left: -75px; text-align: center"}
+If, 95% of the samples are within 1.96 standard errors of the true population mean . . . 
+:::
+
+::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: -75px; text-align: center"}
+. . . then for 95 samples out of 100, we will find the true population mean if we look within 1.96 standard errors of the sample mean.
+:::
+
+## Confidence intervals
+
+<br>
+
+#### The **BIG IDEA**:
+
+::: incremental
+* The sampling distribution and CLT tells us how close to the population mean ($\mu$) the sample mean ($\bar{X}$) is likely to be
+* We can use this knowledge to figure out how close to the one sample mean ($\bar{X}$) that we observe the true population mean ($\mu$) is likely to be 
+* Build a confidence interval around our sample statistic (mean) to define the range in which we think the population parameter can be found...
+    * [... and quantify how likely it is that we are right]{style="color:#e93cac"}
+:::
+
+## Using these tools for inference
+
+#### Example: Want to know how much UW students study on average
+
+::: {style="position: absolute; top: 150px; right: 100px; font-size: 3em"}
+[$\bar{X}$]{style="color:#1b8883"} ---INFERENCE--> [$\mu_x$]{style="color:#a68100"}
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 175px; left: -50px; font-size: 1.25em"}
+**Sample statistic**: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 550px; padding: 5px 5px 0px 5px; position: absolute; bottom: 50px; left: -50px;"}
+*For example*: draw a random sample of 100 students and observe $\bar{X} = 14.5$
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 175px; right: -50px; font-size: 1.25em"}
+**Population parameter**: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; padding: 5px 5px 0px 5px; position: absolute; bottom: 50px; right: -50px;"}
+[**Our goal**]{.underline}: Estimate the unknown population parameter $\mu_x = ?$
+:::
+
+## Confidence intervals
+
+::: {style="font-size:2em"}
+$$
+\bar{X}
+$$
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 145px; left: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 145px; right: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 750px; padding: 5px 5px 5px 5px; position: absolute; top: 195px; left: 140px; font-size: 1.5em; text-align: center"}
+Create a **range** of scores, centered on the sample mean, in which we think the population mean is likely to be located
+:::
+
+::: {data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; top: 425px; left: 225px"}
+Building a [*margin of error*]{style="color:#e93cac"} around our sample mean
+:::
+
+::: {.fragment fragment-index=1 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 25px; left: 285px; font-size: 1.25em; text-align: center"}
+[Confidence interval]{.underline}:<br>
+$\text{sample statistic} \pm \text{margin of error}$
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 20px; right: -47px; font-size: 2.5em; text-align: center"}
+⬅️
+:::
+
+::: {.fragment fragment-index=2 data-id="box5" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 15px; right: -50px; width: 200px; text-align: center"}
+All confidence intervals take this form
+:::
+
+## Confidence intervals
+
+::: {style="font-size:2em"}
+$$
+\bar{X}
+$$
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 145px; left: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 145px; right: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; top: 195px; left: 275px; font-size: 1.25em; text-align: center"}
+[Confidence interval]{.underline}:<br>
+$\text{sample statistic} \pm \text{margin of error}$
+:::
+
+::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; top: 325px; left: 275px; font-size: 1.25em; text-align: center"}
+$\text{sample statistic} \pm z \text{(standard error)}$
+:::
+
+::: {data-id="box2" style="width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 200px; left: 275px; font-size: 1.5em; text-align: center"}
+$\bar{X} \pm z(\sigma_{\bar{X}})$
+:::
+
+## Calculating confidence intervals
+
+<br>
+
+::: {style="font-size: 1.25em"}
+Step 1: Decide on a confidence level and corresponding z-score
+<br><br>
+Step 2: Calculate the standard error
+<br><br>
+Step 3: Calculate the margin of error
+<br><br>
+Step 4: Calculate the confidence interval
+<br><br>
+Step 5: Interpret the results
+:::
+
+## Calculating confidence intervals
+
+<br>
+
+::: {style="font-size: 1.25em"}
+Step 1: Decide on a confidence level and corresponding z-score
+<br><br>
+[Step 2: Calculate the standard error]{style="color: #bab0ab"}
+<br><br>
+[Step 3: Calculate the margin of error]{style="color: #bab0ab"}
+<br><br>
+[Step 4: Calculate the confidence interval]{style="color: #bab0ab"}
+<br><br>
+[Step 5: Interpret the results]{style="color: #bab0ab"}
+:::
+
+---
+
+### [Step 1: Decide on a confidence level and corresponding z-score]{style="font-size: 0.85em"}
+
+::: incremental
+* Confidence level (C) refers to the level of confidence that you will have in your inference
+    * Example: For a 95% confidence interval, you will be able to say that you are 95% confident that the true population mean falls within the interval
+    * More accurately, the probability that the confidence interval contains the actual population parameter
+        * 95% of all possible samples of a given size from this population will result in an interval that captures the unknown parameter.
+* Most common: [90%]{style="color: #754cbc;"}, [95%]{style="color: #a68100;"}, and [99%]{style="color: #1b8883;"}
+:::
+
+---
+
+### [Step 1: Decide on a confidence level and corresponding z-score]{style="font-size: 0.85em"}
+
+* Confidence level (C) refers to the level of confidence that you will have in your inference
+    * Example: For a 95% confidence interval, you will be able to say that you are 95% confident that the true population mean falls within the interval
+    * More accurately, the probability that the confidence interval contains the actual population parameter
+        * 95% of all possible samples of a given size from this population will result in an interval that captures the unknown parameter.
+* Most common: [90%]{style="color: #754cbc;"}, [95%]{style="color: #a68100;"}, and [99%]{style="color: #1b8883;"}
+
+|   | 50%  | 60%  | 70%  | 80%  | 90%  | 95%  | 96%  | 98%  | 99%  | 99.5%  | 99.9%  |
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| **Z\*** | 0.674  | 0.841 | 1.036 | 1.282 | [1.645]{style="background: #c5b4e3;"} | [1.960]{style="background: #ffc700;"} | 2.054 | 2.326 | [2.576]{style="background: #2ad2c9;"} | 2.807 | 3.291 |
+
+: Z-scores come from Standard Normal Table {tbl-colwidths="[8.333]"}
+
+::: {.fragment fragment-index=3 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 750px; padding: 5px 5px 5px 5px; position: absolute; bottom: 50px; left: 150px; text-align: center"}
+To create a $95\%$ confidence interval, go out $1.96$ standard errors on each side of the sample mean
+:::
+
+## Calculating confidence intervals
+
+<br>
+
+::: {style="font-size: 1.25em"}
+[Step 1: Decide on a confidence level and corresponding z-score]{style="color: #bab0ab"}
+<br><br>
+Step 2: Calculate the standard error
+<br><br>
+[Step 3: Calculate the margin of error]{style="color: #bab0ab"}
+<br><br>
+[Step 4: Calculate the confidence interval]{style="color: #bab0ab"}
+<br><br>
+[Step 5: Interpret the results]{style="color: #bab0ab"}
+:::
+
+---
+
+### [Step 2: Calculate the standard error]{style="font-size: 0.85em"}
+
+* Standard error = standard deviation of the sampling distribution
+* Central Limit Theorem tells us: 
+
+::: {style="font-size: 1.5em"}
+$$
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}
+$$
+:::
+
+<br>
+
+::: {.fragment fragment-index=1}
+[Example]{.underline style="background: #aadb1e"}: Say you know that your sample of 100 people comes from a population with a standard deviation of 8.0
+:::
+
+::: {.fragment fragment-index=2 style="font-size: 1.5em; color: #6e8e13"}
+$$
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{8.0}{\sqrt{100}} = 0.8
+$$
+:::
+
+
+## Calculating confidence intervals
+
+<br>
+
+::: {style="font-size: 1.25em"}
+[Step 1: Decide on a confidence level and corresponding z-score]{style="color: #bab0ab"}
+<br><br>
+[Step 2: Calculate the standard error]{style="color: #bab0ab"}
+<br><br>
+Step 3: Calculate the margin of error
+<br><br>
+[Step 4: Calculate the confidence interval]{style="color: #bab0ab"}
+<br><br>
+[Step 5: Interpret the results]{style="color: #bab0ab"}
+:::
+
+---
+
+### [Step 3: Calculate the margin of error]{style="font-size: 0.85em"}
+
+Margin of error = how far out on each side of the sample mean we need to go to define our confidence interval
+
+::: {style="font-size: 1.5em"}
+$$
+\text{margin of error} = z(\sigma_{\bar{X}}) = z(\frac{\sigma}{\sqrt{n}})
+$$
+:::
+
+<br>
+
+::: {.fragment fragment-index=1}
+Margin of error for our [example]{.underline style="background: #aadb1e"}:
+:::
+
+::: {.fragment fragment-index=2 style="font-size: 1.5em; color: #6e8e13"}
+$$
+z(\frac{\sigma}{\sqrt{n}}) = (1.96)(0.8)= 1.57
+$$
+:::
+
+::: {.fragment fragment-index=3 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; bottom: 50px; right: -75px; text-align: center"}
+[Interpretation]{.underline}:<br>Need to go out 1.57 hours on each side of the sample mean to be 95% confident that we have captured the true population mean.
+:::
+
+
+## Calculating confidence intervals
+
+<br>
+
+::: {style="font-size: 1.25em"}
+[Step 1: Decide on a confidence level and corresponding z-score]{style="color: #bab0ab"}
+<br><br>
+[Step 2: Calculate the standard error]{style="color: #bab0ab"}
+<br><br>
+[Step 3: Calculate the margin of error]{style="color: #bab0ab"}
+<br><br>
+Step 4: Calculate the confidence interval
+<br><br>
+[Step 5: Interpret the results]{style="color: #bab0ab"}
+::: 
+
+---
+
+### [Step 4: Calculate the confidence interval]{style="font-size: 0.85em"}
+
+* Add and then subtract the margin of error from the sample mean to get the upper and lower bounds of your confidence interval
+
+::: {.fragment fragment-index=1 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; top: 175px; left: 285px; font-size: 1.25em; text-align: center"}
+[Confidence interval]{.underline}:<br>
+$\text{sample statistic} \pm \text{margin of error}$
+:::
+
+<br>
+<br>
+<br>
+<br>
+
+::: {.fragment fragment-index=2}
+[Example]{.underline style="background: #aadb1e"}:
+:::
+
+::: {.fragment fragment-index=2 style="font-size: 1.5em; color: #6e8e13"}
+$$
+14.5 + 1.57 = 16.07
+$$
+
+$$
+14.5 - 1.57 = 12.93
+$$
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="color: #1b8883; border: 4px solid #1b8883; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: 25px; font-size: 1.25em; text-align: center"}
+$95\%$ confidence interval:<br>
+$12.93$ to $16.07$ hours
+:::
+
+## Calculating confidence intervals
+
+<br>
+
+::: {style="font-size: 1.25em"}
+[Step 1: Decide on a confidence level and corresponding z-score]{style="color: #bab0ab"}
+<br><br>
+[Step 2: Calculate the standard error]{style="color: #bab0ab"}
+<br><br>
+[Step 3: Calculate the margin of error]{style="color: #bab0ab"}
+<br><br>
+[Step 4: Calculate the confidence interval]{style="color: #bab0ab"}
+<br><br>
+Step 5: Interpret the results
+:::
+
+---
+
+### [Step 5: Interpret the results]{style="font-size: 0.85em"}
+
+* A complete interpretation of a confidence interval has three components
+
+::: {.fragment fragment-index=1}
+1. Level of [**confidence**]{style="color: #e93cac"} (usually 90%, 95%, 99%)
+2. Reference to the [**population parameter**]{style="color: #e93cac"} being estimated
+3. The [**interval**]{style="color: #e93cac"} of values (or at least the sample statistic and margin of error)
+:::
+
+::: {.fragment fragment-index=2}
+[Example]{.underline style="background: #aadb1e"}:
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="color: #6e8e13; border: 4px solid #6e8e13; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; bottom: 250px; right: 300px; font-size: 1.25em; text-align: center"}
+$95\%$ confidence interval:<br>
+$12.93$ to $16.07$ hours
+:::
+
+::: {.fragment fragment-index=3 data-id="box2" style="border: 4px solid #e93cac; border-radius: 15px; width: 800px; padding: 5px 5px 5px 5px; position: absolute; bottom: 50px; right: 0px; font-size: 1.25em; text-align: center"}
+We are [**$95\%$ confident**]{style="color: #e93cac"} that the true average number of hours studied for the [**population**]{style="color: #e93cac"} of UW students is between [**$12.93$ to $16.07$**]{style="color: #e93cac"} hours
+:::
+
+## Another confidence interval example
+
+#### [Mean texts per hour]{.underline}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+::: {.fragment fragment-index=1}
+* Suppose that the number of text messages sent per hour by the **population of teenagers** has a **standard deviation of 3**
+* You take a [random sample]{.underline} of 144 teenagers and find that the **mean** number of **text messages** per hour is **4.5**
+* Calculate a [**90% confidence interval**]{style="color: #754cbc;"} to estimate the average number of text messages per hour in the population
+:::
+:::
+
+::: {.column width="60%"}
+
+::: {.fragment fragment-index=3}
+* [Step 1]{.underline}: Use [z = 1.645]{style="color: #754cbc;"}
+
+:::
+
+::: {.fragment fragment-index=4}
+* [Step 2]{.underline}: Calculate standard error
+$$
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{3.0}{\sqrt{144}} = 0.25
+$$
+
+:::
+
+::: {.fragment fragment-index=5}
+* [Step 3]{.underline}: Calculate the margin of error
+$$
+z(\frac{\sigma}{\sqrt{n}}) = (1.645)(0.25)= 0.411
+$$
+
+:::
+
+:::
+
+::::
+
+::: {.fragment fragment-index=2}
+|   | 50%  | 60%  | 70%  | 80%  | 90%  | 95%  | 96%  | 98%  | 99%  | 99.5%  | 99.9%  |
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| **Z\*** | 0.674  | 0.841 | 1.036 | 1.282 | [1.645]{style="background: #c5b4e3;"} | [1.960]{style="background: #ffc700;"} | 2.054 | 2.326 | [2.576]{style="background: #2ad2c9;"} | 2.807 | 3.291 |
+
+: Z-scores come from Standard Normal Table {tbl-colwidths="[8.333]"}
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 350px; padding: 0px 0px 0px 0px; position: absolute; top: 70px; right: -75px; font-size: 0.85em; text-align: center"}
+$\text{sample statistic} \pm \text{margin of error}$
+:::
+
+## Another confidence interval example
+
+#### [Mean texts per hour]{.underline}
+
+::: {data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 350px; padding: 0px 0px 0px 0px; position: absolute; top: 70px; right: -75px; font-size: 0.85em; text-align: center"}
+$\text{sample statistic} \pm \text{margin of error}$
+:::
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+* Suppose that the number of text messages sent per hour by the **population of teenagers** has a **standard deviation of 3**
+* You take a [random sample]{.underline} of 144 teenagers and find that the **mean** number of **text messages** per hour is **4.5**
+* Calculate a [**90% confidence interval**]{style="color: #754cbc;"} to estimate the average number of text messages per hour in the population
+
+:::
+
+::: {.column width="60%"}
+
+* [Step 4]{.underline}: Calculate the confidence interval
+$$
+4.5 + 0.411 = 4.911
+$$
+$$
+4.5 - 0.411 = 4.089
+$$
+
+::: {.fragment fragment-index=1 data-id="box2" style="color: #1b8883; border: 4px solid #1b8883; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: static; text-align: center"}
+$90\%$ confidence interval:<br>
+$4.09$ to $4.91$ hours
+:::
+
+:::
+
+::::
+
+|   | 50%  | 60%  | 70%  | 80%  | 90%  | 95%  | 96%  | 98%  | 99%  | 99.5%  | 99.9%  |
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| **Z\*** | 0.674  | 0.841 | 1.036 | 1.282 | [1.645]{style="background: #c5b4e3;"} | [1.960]{style="background: #ffc700;"} | 2.054 | 2.326 | [2.576]{style="background: #2ad2c9;"} | 2.807 | 3.291 |
+
+: Z-scores come from Standard Normal Table {tbl-colwidths="[8.333]"}
+
+## Another confidence interval example
+
+#### [Mean texts per hour]{.underline}
+
+::: {data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 350px; padding: 0px 0px 0px 0px; position: absolute; top: 70px; right: -75px; font-size: 0.85em; text-align: center"}
+$\text{sample statistic} \pm \text{margin of error}$
+:::
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+* Suppose that the number of text messages sent per hour by the **population of teenagers** has a **standard deviation of 3**
+* You take a [random sample]{.underline} of 144 teenagers and find that the **mean** number of **text messages** per hour is **4.5**
+* Calculate a [**90% confidence interval**]{style="color: #754cbc;"} to estimate the average number of text messages per hour in the population
+
+:::
+
+::: {.column width="60%"}
+
+* [Step 5]{.underline}: Interpret the results <br>
+<br>
+[We are [90% confident]{.underline style="color: #e93cac;"} that the average number of texts sent per hour for the [population of teenagers]{.underline style="color: #e93cac;"} is between [4.09 and 4.91]{.underline style="color: #e93cac;"}]{style="text-align: center;"}
+
+:::
+
+::::
+
+|   | 50%  | 60%  | 70%  | 80%  | 90%  | 95%  | 96%  | 98%  | 99%  | 99.5%  | 99.9%  |
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| **Z\*** | 0.674  | 0.841 | 1.036 | 1.282 | [1.645]{style="background: #c5b4e3;"} | [1.960]{style="background: #ffc700;"} | 2.054 | 2.326 | [2.576]{style="background: #2ad2c9;"} | 2.807 | 3.291 |
+
+: Z-scores come from Standard Normal Table {tbl-colwidths="[8.333]"}
+
+## [Factors affecting precision (width) of the confidence interval]{style="font-size: 0.75em"}
+
+::: {.fragment fragment-index=1}
+* Which confidence interval would you prefer?
+    * Average study time of UW students is between **10.5 and 18.5 hours**
+    <br>
+    [OR]{.center}
+    * Average study time of UW students is between **14.25 and 14.75 hours**
+:::
+
+::: {.fragment .center fragment-index=2 style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 700px; padding: 5px 5px 5px 5px; position: static; font-size: 1.25em; text-align: center"}
+All else being equal, the second one is preferable because it is more [**precise**]{style="color: white"}
+<br>
+**(narrower, with smaller margin of error)**
+:::
+
+::: {.fragment .center fragment-index=2 style="border: 3px solid #690c48; border-radius: 15px; width: 825px; height: 35px; padding: 5px 5px 5px 5px; position: absolute; top: 200px; left: 40px"}
+
+:::
+
+## [Factors affecting precision (width) of the confidence interval]{style="font-size: 0.75em"}
+
+::: {style="border: 3px solid #4b2e83; border-radius: 15px; width: 400px; padding: 0px 0px 0px 0px; position: absolute; bottom: 0px; right: 0px"}
+$$
+\text{margin of error} = z(\frac{\sigma}{\sqrt{n}})
+$$
+:::
+
+::: fragment
+* [Confidence level]{.underline}
+    * Trade-off: higher confidence = lower precision (higher margin of error)
+:::
+
+::: {.fragment style="border: 3px solid black; border-radius: 15px; width: 1000px; padding: 5px 5px 5px 5px; position: static;"}
+|   | 50%  | 60%  | 70%  | 80%  | 90%  | 95%  | 96%  | 98%  | 99%  | 99.5%  | 99.9%  |
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| **Z\*** | 0.674  | 0.841 | 1.036 | 1.282 | 1.645 | 1.960 | 2.054 | 2.326 | 2.576 | 2.807 | 3.291 |
+
+: Z-scores come from Standard Normal Table {tbl-colwidths="[8.333]"}
+::: 
+
+
+::: fragment
+* [Sample size]{.underline}
+    * Larger sample = smaller standard error = greater precision (lower margin of error)
+:::
+
+::: fragment
+* [Level of variation in the population]{.underline}
+    * More variation in population = more variation in possible sample results = larger standard error = bigger margin of error
+:::
+
+# Estimation: confidence intervals for proportions {.section-title background-color="#c5b4e3"}
+
+## [Estimating Population Proportions (or percentages)]{style="font-size: 0.85em"}
+
+::: fragment
+#### Goal:
+
+* Use the sample proportion ($\widehat{p}$) to construct a confidence interval in which we believe the true population proportion ($P$)^[Sometimes $\pi$] is located
+:::
+
+::: fragment
+Example:
+
+* Want to know the proportion of UW students who are employed during the school year
+* Population proportion, $P$, is not observable
+* Use sample information to estimate $P$
+    * $n = 200$
+    * Sample proportion, $\hat{p} = 0.42$
+
+:::
+
+## Confidence intervals
+
+::: {style="font-size:2em"}
+$$
+\widehat{p}
+$$
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 145px; left: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 145px; right: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 750px; padding: 5px 5px 5px 5px; position: absolute; top: 195px; left: 140px; font-size: 1.5em; text-align: center"}
+Create our 95% confidence interval by going 1.96 standard errors on each side of the sample proportion
+:::
+
+::: {data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; top: 425px; left: 185px"}
+Building a [*margin of error*]{style="color:#e93cac"} around our sample proportion
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 25px; left: 285px; font-size: 1.25em; text-align: center"}
+[Confidence interval]{.underline}:<br>
+$\text{sample statistic} \pm \text{margin of error}$
+:::
+
+## Calculating confidence intervals
+
+<br>
+
+::: {style="font-size: 1.25em"}
+Step 1: Decide on a confidence level and corresponding z-score
+<br><br>
+Step 2: Calculate the standard error
+<br><br>
+Step 3: Calculate the margin of error
+<br><br>
+Step 4: Calculate the confidence interval
+<br><br>
+Step 5: Interpret the results
+:::
+
+---
+
+### [Step 1: Decide on a confidence level and corresponding z-score]{style="font-size: 0.85em"}
+
+* Confidence level (C) refers to the level of confidence that you will have in your inference
+    * Example: For a 95% confidence interval, you will be able to say that you are 95% confident that the true population mean falls within the interval
+    * More accurately, the probability that the confidence interval contains the actual population parameter
+        * 95% of all possible samples of a given size from this population will result in an interval that captures the unknown parameter.
+* Most common: [90%]{style="color: #754cbc;"}, [95%]{style="color: #a68100;"}, and [99%]{style="color: #1b8883;"}
+
+|   | 50%  | 60%  | 70%  | 80%  | 90%  | 95%  | 96%  | 98%  | 99%  | 99.5%  | 99.9%  |
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| **Z\*** | 0.674  | 0.841 | 1.036 | 1.282 | [1.645]{style="background: #c5b4e3;"} | [1.960]{style="background: #ffc700;"} | 2.054 | 2.326 | [2.576]{style="background: #2ad2c9;"} | 2.807 | 3.291 |
+
+: Z-scores come from Standard Normal Table {tbl-colwidths="[8.333]"}
+
+::: {.fragment fragment-index=1 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 750px; padding: 5px 5px 5px 5px; position: absolute; bottom: 50px; left: 150px; text-align: center"}
+To create a $95\%$ confidence interval, go out $1.96$ standard errors on each side of the sample mean
+:::
+
+---
+
+### [Step 2: Calculate the standard error]{style="font-size: 0.85em"}
+
+* Standard error = standard deviation of the sampling distribution
+* Central Limit Theorem tells us: 
+
+::: {style="font-size: 1.5em"}
+$$
+\sigma_{\widehat{p}} = \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}
+$$
+:::
+
+::: {style="border: 3px solid black; border-radius: 15px; width: 350px; margin: 5px 5px 5px 5px; position: absolute; top: 200px; right: -50px; text-align: center"}
+where $\widehat{p}$ = sample proportion <br> $n$ = sample size
+:::
+
+<br>
+
+::: {.fragment fragment-index=1}
+[Example]{.underline style="background: #aadb1e"}: With sample size of 200 and sample proportion of 0.42
+:::
+
+::: {.fragment fragment-index=2 style="font-size: 1.5em; color: #6e8e13"}
+$$
+\sigma_{\widehat{p}} = \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}} = \sqrt{\frac{0.42(1-0.42)}{200}} = 0.035
+$$
+:::
+
+---
+
+### [Step 3: Calculate the margin of error]{style="font-size: 0.85em"}
+
+Margin of error = how far out on each side of the sample mean we need to go to define our confidence interval
+
+::: {style="font-size: 1.5em"}
+$$
+\text{margin of error} = z(\sigma_{\widehat{p}}) = z(\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}})
+$$
+:::
+
+<br>
+
+::: {.fragment fragment-index=1}
+Margin of error for our [example]{.underline style="background: #aadb1e"}:
+:::
+
+::: {.fragment fragment-index=2 style="font-size: 1.5em; color: #6e8e13"}
+$$
+z(\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}) = (1.96)(0.035) = 0.069
+$$
+:::
+
+::: {.fragment fragment-index=3 style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 250px; padding: 5px 5px 5px 5px; position: absolute; bottom: 100px; right: -85px; text-align: center; font-size: 0.75em"}
+[Interpretation]{.underline}:<br>Need to go out 0.069 in each direction of the sample proportion to be 95% confident that we have captured the true population proportion.
+:::
+
+---
+
+### [Step 4: Calculate the confidence interval]{style="font-size: 0.85em"}
+
+* Add and then subtract the margin of error from the sample mean to get the upper and lower bounds of your confidence interval
+
+::: {.fragment fragment-index=1 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; top: 175px; left: 285px; font-size: 1.25em; text-align: center"}
+[Confidence interval]{.underline}:<br>
+$\text{sample statistic} \pm \text{margin of error}$
+:::
+
+<br>
+<br>
+<br>
+<br>
+
+::: {.fragment fragment-index=2}
+[Example]{.underline style="background: #aadb1e"}:
+:::
+
+::: {.fragment fragment-index=2 style="font-size: 1.5em; color: #6e8e13"}
+$$
+0.42 + 0.069 = 0.489
+$$
+
+$$
+0.42 - 0.069 = 0.351
+$$
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="color: #1b8883; border: 4px solid #1b8883; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 0px; right: 25px; font-size: 1.25em; text-align: center"}
+$95\%$ confidence interval:<br>
+$0.351$ to $0.489$
+:::
+
+---
+
+### [Step 5: Interpret the results]{style="font-size: 0.85em"}
+
+* A complete interpretation of a confidence interval has three components
+
+::: {.fragment fragment-index=1}
+1. Level of [**confidence**]{style="color: #e93cac"} (usually 90%, 95%, 99%)
+2. Reference to the [**population parameter**]{style="color: #e93cac"} being estimated
+3. The [**interval**]{style="color: #e93cac"} of values (or at least the sample statistic and margin of error)
+:::
+
+::: {.fragment fragment-index=2}
+[Example]{.underline style="background: #aadb1e"}:
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="color: #6e8e13; border: 4px solid #6e8e13; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; bottom: 250px; right: 300px; font-size: 1.25em; text-align: center"}
+$95\%$ confidence interval:<br>
+$0.351$ to $0.489$
+:::
+
+::: {.fragment fragment-index=3 data-id="box2" style="border: 4px solid #e93cac; border-radius: 15px; width: 800px; padding: 5px 5px 5px 5px; position: absolute; bottom: 50px; right: 0px; font-size: 1.25em; text-align: center"}
+We are [**$95\%$ confident**]{style="color: #e93cac"} that between [**$35.1\%$ and $48.9\%$**]{style="color: #e93cac"} of the [**population of students**]{style="color: #e93cac"} are employed during the school year.
+:::
+
+
+# Homework{.section-title background-color="#e8e3d3"}
+
+## {data-menu-title="Homework 4" background-iframe="https://vsass.github.io/SOC221/homework/homework4.html" background-interactive=TRUE}

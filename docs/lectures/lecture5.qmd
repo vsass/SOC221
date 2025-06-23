@@ -1,0 +1,1360 @@
+---
+title: '<h1 style="font-size:3em; "> Sampling distributions,<br>Central limit theorem,<br> & the Logic of inference</h1>'
+title-slide-attributes:
+  data-background-image: ../images/abstract_statistics_playful2.jpeg
+  data-background-size: cover
+  data-background-opacity: "0.33"
+subtitle: "SOC 221 • Lecture 5"
+author: "Victoria Sass"
+date: "July 8, 2024"
+date-format: full
+execute: 
+  echo: true
+  message: false
+  warning: false
+format: 
+  revealjs:
+    reference-location: margin
+    theme: lecture_styles.scss
+    controls: true
+    slide-number: true
+    chalkboard: true
+    incremental: false 
+    smaller: true
+    preview-links: true
+    history: false
+    progress: true
+    link-external-icon: true 
+---
+
+```{r}
+#| echo: false
+#| cache: false
+require(tidyverse)
+require(ggthemes)
+require(gt)
+require(gganimate)
+require(ggforce)
+
+knitr::opts_chunk$set(comment = ">")
+
+# set transparent background in base
+knitr::opts_chunk$set(dev.args=list(bg='transparent'))
+
+# set transparent background in ggplot
+ggplot2::theme_set(ggthemes::theme_tufte(base_size=12))
+ggplot2::theme_update(panel.background = ggplot2::element_blank(),
+                      plot.background=ggplot2::element_blank(),
+    legend.background=ggplot2::element_blank())
+
+options(width=80, show.signif.stars=FALSE)
+```
+
+# Sampling distributions {.section-title background-color="#c5b4e3"}
+
+## Descriptive --> Inferential statistics
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.fragment fragment-index=1}
+#### Where are we?
+
+* So far: Worked on descriptive statistics – tools to describe distributions
+* NEXT: Building the tools for [**inferential statistics**]{.underline}
+:::
+
+<br>
+
+::: {.fragment fragment-index=3}
+* Example: Want to know about the average study time for the population of UW students.
+* NEXT: Building the tools for inferential statistics
+:::
+
+:::
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=2 style="font-size: 1.4em"}
+> [**Inferential statistics**]{style="color:#e93cac"}<br>Statistical procedures used<br>to draw conclusions<br>(or inferences) about<br>a population based on<br>data drawn from a sample
+:::
+
+:::
+
+::::
+
+::: {.fragment fragment-index=4 style="position: absolute; bottom: 175px; right: 0px; font-size: 2em"}
+$\bar{X}$ ---INFERENCE--> $\mu_x$
+:::
+
+## Descriptive --> Inferential statistics
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+#### Where are we?
+
+* So far: Worked on descriptive statistics – tools to describe distributions
+* NEXT: Building the tools for [**inferential statistics**]{.underline}
+
+<br>
+
+* Example: Want to know about the average study time for the population of UW students.
+* NEXT: Building the tools for inferential statistics
+
+:::
+
+::: {.column width="50%"}
+::: {style="font-size: 1.4em"}
+> [**Inferential statistics**]{style="color:#e93cac"}<br>Statistical procedures used<br>to draw conclusions<br>(or inferences) about<br>a population based on<br>data drawn from a sample
+:::
+
+:::
+
+::::
+
+::: {style="position: absolute; bottom: 175px; right: 0px; font-size: 2em"}
+[$\bar{X}$]{style="color:#1b8883"} ---INFERENCE--> [$\mu_x$]{style="color:#a68100"}
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 350px; height: 150px; padding: 0px 10px 20px 10px; position: absolute; bottom: 0px; right: -75px; font-size: 0.9em"}
+Population parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 375px; height: 125px; padding: 0px 0px 10px 10px; position: absolute; bottom: 20px; right: 325px; font-size: 0.9em"}
+Sample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)
+:::
+
+## The challenge of making inferences
+
+::: {.fragment fragment-index=1}
+#### Drawing inferences entails uncertainty
+Even with a good sample, the sample is likely to differ from the population (sample statistic is likely to be different from our population parameter, just by chance)
+:::
+
+<br>
+
+::: {.fragment fragment-index=2}
+#### Challenge
+Assessing the risk of being wrong (being way off) in making an inference from observed sample statistics to unknown population parameters.
+:::
+
+<br>
+
+::: {.fragment fragment-index=3}
+#### [Key questions]{style="color: #e93cac;"}
+1. How often would this procedure (drawing a sample, inferring about the population) give us something close to the correct answer if I used it over and over?<br>
+[**or**]{.r-stack}
+2. What is the probability that the inference I draw from one sample is wrong (way off from the population characteristic of interest)?
+:::
+
+## Using these tools for inference
+
+#### Example: Want to know how much UW students study on average
+
+::: {style="position: absolute; top: 150px; right: 100px; font-size: 3em"}
+[$\bar{X}$]{style="color:#1b8883"} ---INFERENCE--> [$\mu_x$]{style="color:#a68100"}
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 175px; left: -50px; font-size: 1.25em"}
+**Sample statistic**: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)
+:::
+
+::: {.fragment fragment-index=1 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 550px; padding: 5px 5px 0px 5px; position: absolute; bottom: 50px; left: -50px;"}
+*For example*: draw a random sample of 100 students and observe $\bar{X} = 14.5$
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 175px; right: -50px; font-size: 1.25em"}
+**Population parameter**: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)
+:::
+
+::: {.fragment fragment-index=2 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; padding: 5px 5px 0px 5px; position: absolute; bottom: 50px; right: -50px;"}
+[**Our goal**]{.underline}: Estimate the unknown population parameter $\mu_x = ?$
+:::
+
+## [Estimating Population Parameters: TWO OPTIONS]{style="font-size:0.9em"}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+::: fragment
+[**One option**]{.underline}: Just assume that the population mean is equal to the sample mean
+
+$$
+\mu_x = \bar{X} = 14.5
+$$
+
+* Called a *point estimate*
+:::
+
+::: fragment
+#### Potential problems with this strategy? 
+:::
+
+::: fragment
+* Very likely to be wrong!
+    * Even with a random sample, the sample statistic is like to miss the true population parameter by at least a little
+       * Reflects [chance sampling error]{style="color:#e93cac"}
+    * In reality:  
+    
+$$
+\mu_x \neq \bar{X}
+$$
+:::
+
+:::
+
+::: {.column width="40%"}
+
+<br>
+
+::: fragment
+::: r-fit-text
+> [**SAMPLING ERROR**]{style="color:#e93cac"}<br> The difference<br>between a sample<br>statistic used to<br>estimate a population<br>parameter and the<br>actual (but unknown)<br>value of the<br>population<br>parameter.
+:::
+:::
+
+:::
+
+::::
+
+## [Estimating Population Parameters: TWO OPTIONS]{style="font-size:0.9em"}
+
+
+[**Better option**]{.underline}: Create a [CONFIDENCE INTERVAL]{style="color:#e93cac"}
+
+::: {.fragment fragment-index=1 style="font-size:2em"}
+$$
+\bar{X}
+$$
+:::
+
+::: {.fragment fragment-index=1 data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 188px; left: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {.fragment fragment-index=1 data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 188px; right: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="width: 850px; padding: 5px 5px 5px 5px; position: absolute; bottom: 195px; left: 90px; font-size: 1.5em; text-align: center"}
+[**CONFIDENCE INTERVAL**]{style="color:#e93cac"}<br> A range of scores, centered on the sample mean, in which we think the population mean is likely to be located.
+:::
+
+::: {.fragment fragment-index=3 data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; bottom: 100px; left: 225px"}
+Building a [*margin of error*]{style="color:#e93cac"} around our sample mean
+:::
+
+## [Estimating Population Parameters: TWO OPTIONS]{style="font-size:0.9em"}
+
+
+[**Better option**]{.underline}: Create a [CONFIDENCE INTERVAL]{style="color:#e93cac"}
+
+::: {style="font-size:2em"}
+$$
+\bar{X}
+$$
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 188px; left: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 188px; right: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="width: 900px; padding: 10px 10px 10px 10px; position: absolute; bottom: 250px; left: 60px; font-size: 1.5em; text-align: center"}
+Confidence intervals are defined by the [**Confidence Level**]{style="color:#e93cac"} (our certainty that the confidence interval will contain the true population parameter)
+:::
+
+::: {.fragment fragment-index=1 data-id="box5" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 25px; left: 75px; width: 425px; text-align: center"}
+With a 95% confidence interval, we are 95% sure that the interval we construct contains the true population parameter we are interested in.
+:::
+
+::: {.fragment fragment-index=1 data-id="box5" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 25px; right: 75px; width: 425px; text-align: center"}
+Over the long run, there is a probability of .99 that the actual population parameter falls within a 99% confidence interval that we construct
+:::
+
+## [Estimating Population Parameters: TWO OPTIONS]{style="font-size:0.9em"}
+
+
+[**Better option**]{.underline}: Create a [CONFIDENCE INTERVAL]{style="color:#e93cac"}
+
+::: {style="font-size:2em"}
+$$
+\bar{X}
+$$
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 188px; left: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 188px; right: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="width: 850px; padding: 5px 5px 5px 5px; position: absolute; bottom: 195px; left: 90px; font-size: 1.5em; text-align: center"}
+[**CONFIDENCE INTERVAL**]{style="color:#e93cac"}<br> A range of scores, centered on the sample mean, in which we think the population mean is likely to be located.
+:::
+
+::: {data-id="box5" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 50px; left: 75px; width: 425px; text-align: center"}
+Q: What is the [**ADVANTAGE**]{style="color:#ffffff"} of a confidence interval over a point estimate?
+:::
+
+::: {.fragment fragment-index=1 data-id="box5" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 50px; right: 75px; width: 425px; text-align: center"}
+A: We are less likely to be wrong, and we can quantify the risk of being wrong.
+:::
+
+## Sampling distribution
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+<br>
+<br>
+
+::: {.fragment style="font-size: 1.75em"}
+> [**Sampling Distribution**]{style="color:#e93cac"}<br> A *theoretical* [probability distribution]{.underline} of [all possible sample values]{.underline} for the statistic in which we are interested.
+:::
+:::
+
+::: {.column width="40%"}
+
+<br> 
+
+::: {.fragment style="font-size: 1.25em"}
+
+### Key tool for inferential statistics
+
+<br>
+
+Allows us to think about how our one single sample result relates to all possible sample results and, by extension, the population we are interested in drawing inferences about.
+:::
+:::
+
+::::
+
+---
+
+<br>
+<br>
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+set.seed(711)
+mu <- 0
+sigma <- 1
+samples <- c(rep(0, 12), rep(-0.375, 11), rep(0.375, 11), rep(-0.750, 10), rep(0.750, 10), rep(-1.125, 8), rep(1.125, 8), rep(-1.500, 6), rep(1.500, 6), rep(-1.875, 4), rep(1.875, 4), rep(-2.250, 3), rep(2.250, 3), rep(-2.625, 1), rep(2.625, 1), rep(-3, 1), 
+rep(3, 1)) 
+
+index <- seq(1:length(samples))
+sample_samples <- sample(samples, 100)
+df <- tibble(value = sample_samples, index = index)
+
+bin_width <- 0.375
+
+count_data <- # some minor data transformation
+  df %>%
+  mutate(x = plyr::round_any(value, bin_width)) %>%
+  group_by(x) %>%
+  mutate(y = seq_along(x))
+
+samp_dist <- ggplot(count_data[1, ]) +
+  geom_ellipse(aes(group = index, x0 = x, y0 = y, a = bin_width/2, b = 0.5, angle = 0), fill = NA) +
+  #annotate(geom = text, label = expression(bar("X")["1]"), x = 0, 1) +
+  # i hate the code below but couldn't figure out how to make a label variable with bquote or expression and needed to move on
+  geom_text(aes(x = x, y = y, label = deparse(bquote(bar(X)[1]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  coord_equal(bin_width, clip = "off") + # to make the dots look nice and round0 
+  theme_tufte() +
+  #theme(tick) + 
+  scale_y_continuous(name = NULL, breaks = NULL, limits = c(0, 13)) + 
+  scale_x_continuous(name = NULL, limits = c(-3.5, 3.5), breaks = NULL) 
+samp_dist
+```
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 350px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; left: -50px; text-align: center"}
+Imagine drawing ONE sample from the population and calculating the sample mean
+:::
+
+
+---
+
+<br>
+<br>
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+samp_dist + geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "black") + 
+annotate("label", x = 0, y = 0, label = "mu[x]", parse = TRUE, size = 12, color = "#690c48", fill = "#e93cac")
+```
+
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 350px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; left: -50px; text-align: center"}
+Imagine drawing ONE sample from the population and calculating the sample mean
+:::
+
+::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 375px; padding: 5px 5px 5px 5px; position: absolute; bottom: 150px; left: 25px; text-align: center"}
+Just by chance, our sample mean may be a little different than the true population mean.
+:::
+
+::: {.fragment fragment-index=1 data-id="box2" style="border: 2px solid #6e8e13; border-radius:0px; position: absolute; bottom: 96px; left: 468px; width: 53px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {.fragment fragment-index=1 data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 425px; padding: 5px 5px 5px 5px; position: absolute; bottom: 75px; right: 65px; text-align: center"}
+Distance between the sample mean and the actual population mean reflects **random sampling error**
+:::
+
+---
+
+<br>
+<br>
+
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+plot2 <- 
+  ggplot(count_data) +
+  geom_ellipse(aes(group = index, x0 = x, y0 = y, a = bin_width/2, b = 0.5, angle = 0), fill = NA) +
+  #annotate(geom = text, label = expression(bar("X")["1]"), x = 0, 1) +
+  # i hate the code below but couldn't figure out how to make a label variable with bquote or expression and needed to move on
+  geom_text(data = count_data[1, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[1]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[2, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[2]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[3, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[3]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[4, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[4]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[5, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[5]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[6, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[6]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[7, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[7]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[8, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[8]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[9, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[9]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[10, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[10]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[11, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[11]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[12, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[12]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[13, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[13]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[14, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[14]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[15, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[15]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[16, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[16]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[17, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[17]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[18, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[18]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[19, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[19]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[20, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[20]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[21, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[21]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[22, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[22]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[23, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[23]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[24, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[24]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[25, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[25]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[26, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[26]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[27, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[27]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[28, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[28]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[29, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[29]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[30, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[30]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[31, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[31]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[32, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[32]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[33, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[33]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[34, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[34]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[35, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[35]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[36, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[36]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[37, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[37]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[38, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[38]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[39, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[39]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[40, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[40]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[41, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[41]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[42, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[42]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[43, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[43]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[44, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[44]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[45, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[45]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[46, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[46]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[47, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[47]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[48, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[48]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[49, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[49]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[50, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[50]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[51, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[51]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[52, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[52]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[53, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[53]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[54, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[54]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[55, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[55]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[56, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[56]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[57, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[57]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[58, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[58]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[59, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[59]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[60, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[60]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[61, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[61]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[62, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[62]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[63, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[63]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[64, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[64]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[65, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[65]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[66, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[66]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[67, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[67]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[68, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[68]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[69, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[69]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[70, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[70]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[71, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[71]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[72, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[72]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[73, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[73]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[74, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[74]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[75, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[75]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[76, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[76]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[77, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[77]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[78, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[78]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[79, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[79]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[80, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[80]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[81, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[81]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[82, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[82]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[83, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[83]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[84, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[84]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[85, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[85]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[86, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[86]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[87, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[87]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[88, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[88]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[89, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[89]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[90, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[90]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[91, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[91]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[92, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[92]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[93, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[93]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[94, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[94]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[95, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[95]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[96, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[96]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[97, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[97]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[98, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[98]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[99, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[99]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data[100, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[100]))), parse = TRUE, , color = "#e93cac", size = 8, fontface = "bold") +
+  coord_equal(bin_width) + # to make the dots look nice and round
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "black") + 
+  theme_tufte() +
+  scale_y_continuous(name = NULL, breaks = NULL, limits = c(0, 13)) + scale_x_continuous(name = NULL, limits = c(-3.5, 3.5), breaks = NULL) + 
+  annotate("label", x = 0, y = 0, label = "mu[x]", parse = TRUE, size = 12, color = "#690c48", fill = "#e93cac")
+
+p_anim2 <- 
+  plot2 +
+  transition_states(states = index, transition_length = 100, state_length = 1) +
+  shadow_mark() +
+  enter_fly(y_loc = 12) 
+
+animate(p_anim2, fps = 3, units = "in", res = 150)
+```
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; left: -50px; text-align: center"}
+Now imagine drawing LOTS of independent samples and calculating the mean of X for each one.
+:::
+
+---
+
+<br>
+<br>
+
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+samples2 <- dnorm(c(seq(from = -3, to = 3, by = 0.375)), mean = mu, sd = sigma) * 30
+count_data2 <- tibble(x = seq(from = -3, to = 3, by = 0.375), y = samples2)
+
+plot2 + geom_freqpoly(data = count_data2, aes(x = x, y = y), stat = "smooth", position = position_nudge(y = 1.25), linewidth = 1.5, color = "#690c48")
+
+```
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 425px; padding: 10px 10px 10px 10px; position: absolute; top: 50px; left: -75px; text-align: left"}
+Interesting features of the<br>sampling distribution<br>(*when certain conditions are met*):<br>
+• Normal distribution<br>
+• Mean of the sampling distribution is equal to the population mean
+:::
+
+::: {data-id="box2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: -50px; text-align: center"}
+This produces a **SAMPLING DISTRIBUTION** of sample means
+:::
+
+---
+
+<br>
+<br>
+
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+plot2 
+
+
+```
+
+::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 450px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; right: -50px; text-align: center"}
+So can use what we know about the normal distribution to think about the location of sample means relative to the population mean.
+:::
+
+
+---
+
+<br>
+<br>
+
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+count_data3 <- count_data |> mutate(std_dev = case_when(x < 1.5 & x > -1.5 ~ "1", 
+                                          (x > 1.125 & x < 3) | (x > -3 & x < -1.125) ~ "1.96", 
+                                          TRUE ~ "3"))
+
+ggplot(count_data3) +
+  geom_ellipse(aes(group = index, x0 = x, y0 = y, a = bin_width/2, b = 0.5, angle = 0, fill = std_dev)) +
+  scale_fill_manual(values = c("#ffc700", "transparent", "transparent")) +
+  #annotate(geom = text, label = expression(bar("X")["1]"), x = 0, 1) +
+  # i hate the code below but couldn't figure out how to make a label variable with bquote or expression and needed to move on
+  geom_text(data = count_data3[1, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[1]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[2, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[2]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[3, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[3]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[4, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[4]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[5, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[5]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[6, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[6]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[7, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[7]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[8, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[8]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[9, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[9]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[10, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[10]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[11, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[11]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[12, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[12]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[13, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[13]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[14, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[14]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[15, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[15]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[16, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[16]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[17, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[17]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[18, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[18]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[19, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[19]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[20, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[20]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[21, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[21]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[22, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[22]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[23, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[23]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[24, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[24]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[25, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[25]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[26, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[26]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[27, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[27]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[28, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[28]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[29, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[29]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[30, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[30]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[31, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[31]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[32, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[32]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[33, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[33]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[34, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[34]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[35, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[35]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[36, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[36]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[37, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[37]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[38, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[38]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[39, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[39]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[40, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[40]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[41, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[41]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[42, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[42]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[43, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[43]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[44, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[44]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[45, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[45]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[46, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[46]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[47, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[47]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[48, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[48]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[49, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[49]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[50, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[50]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[51, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[51]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[52, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[52]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[53, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[53]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[54, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[54]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[55, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[55]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[56, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[56]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[57, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[57]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[58, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[58]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[59, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[59]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[60, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[60]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[61, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[61]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[62, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[62]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[63, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[63]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[64, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[64]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[65, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[65]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[66, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[66]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[67, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[67]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[68, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[68]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[69, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[69]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[70, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[70]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[71, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[71]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[72, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[72]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[73, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[73]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[74, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[74]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[75, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[75]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[76, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[76]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[77, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[77]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[78, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[78]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[79, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[79]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[80, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[80]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[81, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[81]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[82, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[82]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[83, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[83]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[84, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[84]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[85, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[85]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[86, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[86]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[87, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[87]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[88, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[88]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[89, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[89]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[90, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[90]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[91, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[91]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[92, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[92]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[93, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[93]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[94, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[94]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[95, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[95]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[96, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[96]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[97, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[97]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[98, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[98]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[99, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[99]))), parse = TRUE, color = "#a68100", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[100, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[100]))), parse = TRUE, , color = "#a68100", size = 8, fontface = "bold") +
+  coord_equal(bin_width) + # to make the dots look nice and round
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "black") + 
+  geom_vline(xintercept = -1.312, color = "#a68100", size = 1.5) + 
+  geom_vline(xintercept = 1.312, color = "#a68100", size = 1.5) +
+  theme_tufte() +
+  theme(legend.position = "none") +
+  scale_y_continuous(name = NULL, breaks = NULL, limits = c(0, 13)) + scale_x_continuous(name = NULL, limits = c(-3.5, 3.5), breaks = NULL) + 
+  annotate("label", x = 0, y = 0, label = "mu[x]", parse = TRUE, size = 12, color = "#690c48", fill = "#e93cac")
+
+```
+
+::: {data-id="box2" style="color: #a68100; width: 1000px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: 35px; text-align: center"}
+68.26% of samples will be within 1 $\sigma$ of the pop. mean
+:::
+
+---
+
+<br>
+<br>
+
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+ggplot(count_data3) +
+  geom_ellipse(aes(group = index, x0 = x, y0 = y, a = bin_width/2, b = 0.5, angle = 0, fill = std_dev)) +
+  scale_fill_manual(values = c("#c5b4e3", "#c5b4e3", "transparent")) +
+  #annotate(geom = text, label = expression(bar("X")["1]"), x = 0, 1) +
+  # i hate the code below but couldn't figure out how to make a label variable with bquote or expression and needed to move on
+  geom_text(data = count_data3[1, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[1]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[2, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[2]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[3, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[3]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[4, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[4]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[5, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[5]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[6, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[6]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[7, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[7]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[8, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[8]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[9, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[9]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[10, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[10]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[11, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[11]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[12, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[12]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[13, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[13]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[14, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[14]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[15, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[15]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[16, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[16]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[17, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[17]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[18, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[18]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[19, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[19]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[20, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[20]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[21, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[21]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[22, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[22]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[23, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[23]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[24, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[24]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[25, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[25]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[26, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[26]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[27, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[27]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[28, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[28]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[29, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[29]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[30, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[30]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[31, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[31]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[32, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[32]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[33, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[33]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[34, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[34]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[35, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[35]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[36, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[36]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[37, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[37]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[38, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[38]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[39, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[39]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[40, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[40]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[41, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[41]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[42, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[42]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[43, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[43]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[44, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[44]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[45, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[45]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[46, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[46]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[47, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[47]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[48, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[48]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[49, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[49]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[50, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[50]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[51, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[51]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[52, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[52]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[53, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[53]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[54, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[54]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[55, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[55]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[56, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[56]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[57, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[57]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[58, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[58]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[59, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[59]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[60, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[60]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[61, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[61]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[62, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[62]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[63, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[63]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[64, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[64]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[65, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[65]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[66, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[66]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[67, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[67]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[68, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[68]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[69, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[69]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[70, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[70]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[71, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[71]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[72, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[72]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[73, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[73]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[74, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[74]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[75, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[75]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[76, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[76]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[77, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[77]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[78, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[78]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[79, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[79]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[80, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[80]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[81, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[81]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[82, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[82]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[83, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[83]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[84, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[84]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[85, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[85]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[86, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[86]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[87, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[87]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[88, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[88]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[89, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[89]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[90, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[90]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[91, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[91]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[92, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[92]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[93, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[93]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[94, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[94]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[95, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[95]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[96, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[96]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[97, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[97]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[98, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[98]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[99, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[99]))), parse = TRUE, color = "#754cbc", size = 8, fontface = "bold") +
+  geom_text(data = count_data3[100, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[100]))), parse = TRUE, , color = "#754cbc", size = 8, fontface = "bold") +
+  coord_equal(bin_width) + # to make the dots look nice and round
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "black") + 
+  geom_vline(xintercept = -2.812, color = "#754cbc", size = 1.5) + 
+  geom_vline(xintercept = 2.812, color = "#754cbc", size = 1.5) +
+  theme_tufte() +
+  theme(legend.position = "none") +
+  scale_y_continuous(name = NULL, breaks = NULL, limits = c(0, 13)) + scale_x_continuous(name = NULL, limits = c(-3.5, 3.5), breaks = NULL) + 
+  annotate("label", x = 0, y = 0, label = "mu[x]", parse = TRUE, size = 12, color = "#690c48", fill = "#e93cac")
+
+```
+
+::: {data-id="box2" style="color: #754cbc; width: 1000px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; right: 25px; text-align: center"}
+95% of sample means will be within 1.96 $\sigma$ of the pop. mean
+:::
+
+## Sampling Distribution
+
+### [Important facts about sampling distributions:]{.underline}
+
+::: incremental
+* *Theoretical distributions: can't take every possible sample from the population*
+* *Each statistic that we might be interested in has a theoretical sampling distribution*
+* *Just by chance, the different samples making up this sampling distribution will give different statistics*
+    * e.g., the mean for each sample will probably be slightly different because different individuals make up the different samples.
+    * Reflects chance sampling error.
+* *“Probability distribution" means that if we know the shape of the distribution we can find the probability of a particular sample score within the distribution of all the possible sample scores*
+:::
+
+## Three types of distributions 
+
+![](images/three_dists.png){fig-align="center"}
+
+# Break! {.section-title background-color="#2ad2c9"}
+
+# Central limit theorem {.section-title background-color="#c5b4e3"}
+
+## Central Limit Theorem (CLT)
+
+<br>
+<br>
+
+::: {.fragment style="font-size: 1.5em"}
+If all possible random samples of size $N$ are drawn from a population with the mean $\mu_X$ and the standard deviation $\sigma_X$, then as $N$ becomes larger, the sampling distribution of the sample means becomes approximately normal, with mean equal to $\mu_X$ and standard deviation equal to the population standard deviation divided by square root of the sample size.
+:::
+
+## Implication of central limit theorem
+
+
+* [**Central limit theorem**]{.underline} tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:
+    * Normally distributed
+    * Mean: $\mu_\bar{X}$ $= \mu_X$ 
+
+
+## Implication of central limit theorem
+
+
+* [**Central limit theorem**]{.underline} tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:
+    * Normally distributed
+    * Mean: [$\mu_\bar{X}$]{style="color: #754cbc"} $= \mu_X$ 
+
+::: {data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 250px; left: 50px; text-align: center"}
+Check out this new symbol:<br>
+The population mean of sample means<br>(i.e., the average of the means you would<br>calculate from all possible samples)
+:::
+
+## Implication of central limit theorem
+
+
+* [**Central limit theorem**]{.underline} tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:
+    * Normally distributed
+    * Mean: $\mu_\bar{X}$ $= \mu_X$ 
+    * Standard Error = [$\sigma_\bar{X}$]{style="color: #a68100"} $= \frac{\sigma}{\sqrt{n}}$
+
+::: {data-id="box5" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; bottom: 125px; left: -50px; text-align: center; font-size: 1.25em"}
+[Standard error]{style="color:#e93cac"}:<br>
+The the standard deviation<br>in the sampling distribution<br>
+(in this case, of all<br>possible sample means)
+:::
+
+::: {style="position: absolute; bottom: -50px; right: -50px;"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+
+area_minus1 <- data.frame(x = seq(0, -1, length.out = 100), ymin = 0, ymax = dnorm(seq(0, -1, length.out = 100), mean = 0, sd = 1))
+area_minus2 <- data.frame(x = seq(0, -2, length.out = 100), ymin = 0, ymax = dnorm(seq(0, -2, length.out = 100), mean = 0, sd = 1))
+area_minus3 <- data.frame(x = seq(0, -3, length.out = 100), ymin = 0, ymax = dnorm(seq(0, -3, length.out = 100), mean = 0, sd = 1))
+area1 <- data.frame(x = seq(0, 1, length.out = 100), ymin = 0, ymax = dnorm(seq(0, 1, length.out = 100), mean = 0, sd = 1))
+area2 <- data.frame(x = seq(0, 2, length.out = 100), ymin = 0, ymax = dnorm(seq(0, 2, length.out = 100), mean = 0, sd = 1))
+area3 <- data.frame(x = seq(0, 3, length.out = 100), ymin = 0, ymax = dnorm(seq(0, 3, length.out = 100), mean = 0, sd = 1))
+
+ggplot(data = data.frame(x = c(-3.25, 3.25)), aes(x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 1)) + ylab("") +
+  scale_y_continuous(breaks = NULL) + 
+  scale_x_continuous(breaks = c(-3:3), label = c(expression(paste(mu, "- 3",sigma[bar(X)])), expression(paste(mu, "- 2",sigma[bar(X)])), 
+  expression(paste(mu, "- 1",sigma[bar(X)])), expression(mu), expression(paste(mu, "+ 1",sigma[bar(X)])), expression(paste(mu, "+ 2",sigma[bar(X)])),
+  expression(paste(mu, "+ 3",sigma[bar(X)])))) + 
+  geom_segment(x = 0, y = 0, yend = 0.398942, color = "black") +
+  geom_segment(x = -1, y = 0, yend = 0.241971, color = "black") + 
+  geom_segment(x = 1, y = 0, yend = 0.241971, color = "black") + 
+  geom_segment(x = -2, y = 0, yend = 0.053991, color = "black") + 
+  geom_segment(x = 2, y = 0, yend = 0.053991, color = "black") + 
+  geom_segment(x = -3, y = 0, yend = 0.004432, color = "black") + 
+  geom_segment(x = 3, y = 0, yend = 0.004432, color = "black") + 
+  annotate(geom = "segment", x = -1, y = 0.12, xend = 1, yend = .12, arrow = arrow(ends = "both", type = "closed")) + 
+  annotate(geom = "label", x = 0, y = 0.12, label = "68.26%") + 
+  annotate(geom = "segment", x = -2, y = 0.053991, xend = 2, yend = 0.053991, arrow = arrow(ends = "both", type = "closed")) + 
+  annotate(geom = "label", x = 0, y = 0.053991, label = "95.44%") + 
+  annotate(geom = "segment", x = -3, y = 0.01, xend = 3, yend = 0.01, arrow = arrow(ends = "both", type = "closed")) +
+  annotate(geom = "label", x = 0, y = 0.01, label = "99.74%") + 
+  geom_hline(yintercept = 0, color = "black") +
+  theme_tufte(base_size = 16)
+```
+:::
+
+## Implication of central limit theorem
+
+
+* [**Central limit theorem**]{.underline} tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:
+    * Normally distributed
+    * Mean: $\mu_\bar{X}$ $= \mu_X$ 
+    * Standard Error = $\sigma_\bar{X}$ $= \frac{\sigma}{\sqrt{n}}$
+
+::: {style="position: absolute; bottom: -50px; right: -50px;"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+
+area_minus1 <- data.frame(x = seq(0, -1, length.out = 100), ymin = 0, ymax = dnorm(seq(0, -1, length.out = 100), mean = 0, sd = 1))
+area_minus2 <- data.frame(x = seq(0, -2, length.out = 100), ymin = 0, ymax = dnorm(seq(0, -2, length.out = 100), mean = 0, sd = 1))
+area_minus3 <- data.frame(x = seq(0, -3, length.out = 100), ymin = 0, ymax = dnorm(seq(0, -3, length.out = 100), mean = 0, sd = 1))
+area1 <- data.frame(x = seq(0, 1, length.out = 100), ymin = 0, ymax = dnorm(seq(0, 1, length.out = 100), mean = 0, sd = 1))
+area2 <- data.frame(x = seq(0, 2, length.out = 100), ymin = 0, ymax = dnorm(seq(0, 2, length.out = 100), mean = 0, sd = 1))
+area3 <- data.frame(x = seq(0, 3, length.out = 100), ymin = 0, ymax = dnorm(seq(0, 3, length.out = 100), mean = 0, sd = 1))
+
+ggplot(data = data.frame(x = c(-3.25, 3.25)), aes(x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 1)) + ylab("") +
+  scale_y_continuous(breaks = NULL) + 
+  scale_x_continuous(breaks = c(-3:3), label = c(expression(paste(mu, "- 3",sigma[bar(X)])), expression(paste(mu, "- 2",sigma[bar(X)])), 
+  expression(paste(mu, "- 1",sigma[bar(X)])), expression(mu), expression(paste(mu, "+ 1",sigma[bar(X)])), expression(paste(mu, "+ 2",sigma[bar(X)])),
+  expression(paste(mu, "+ 3",sigma[bar(X)])))) + 
+  geom_segment(x = 0, y = 0, yend = 0.398942, color = "black") +
+  geom_segment(x = -1, y = 0, yend = 0.241971, color = "black") + 
+  geom_segment(x = 1, y = 0, yend = 0.241971, color = "black") + 
+  geom_segment(x = -2, y = 0, yend = 0.053991, color = "black") + 
+  geom_segment(x = 2, y = 0, yend = 0.053991, color = "black") + 
+  geom_segment(x = -3, y = 0, yend = 0.004432, color = "black") + 
+  geom_segment(x = 3, y = 0, yend = 0.004432, color = "black") + 
+  geom_ribbon(data = area_minus1, mapping = aes(x = x, ymin = ymin, ymax = ymax), fill = "#ffc700", alpha = 0.5) +
+  geom_ribbon(data = area1, mapping = aes(x = x, ymin = ymin, ymax = ymax), fill = "#ffc700", alpha = 0.5) +
+  annotate(geom = "segment", x = -1, y = 0.12, xend = 1, yend = .12, arrow = arrow(ends = "both", type = "closed")) + 
+  annotate(geom = "label", x = 0, y = 0.12, label = "68.26%", fill = "#a68100") + 
+  annotate(geom = "segment", x = -2, y = 0.053991, xend = 2, yend = 0.053991, arrow = arrow(ends = "both", type = "closed")) + 
+  annotate(geom = "label", x = 0, y = 0.053991, label = "95.44%") + 
+  annotate(geom = "segment", x = -3, y = 0.01, xend = 3, yend = 0.01, arrow = arrow(ends = "both", type = "closed")) +
+  annotate(geom = "label", x = 0, y = 0.01, label = "99.74%") + 
+  geom_hline(yintercept = 0, color = "black") + 
+  theme_tufte(base_size = 16)
+```
+:::
+
+::: {data-id="box2" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 350px; padding: 5px 5px 5px 5px; position: absolute; top: 200px; right: -75px; text-align: center; font-size: 0.9em"}
+Just over 68% of sample means will be within ±1 standard error of the true population mean
+:::
+
+## Implication of central limit theorem
+
+
+* [**Central limit theorem**]{.underline} tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:
+    * Normally distributed
+    * Mean: $\mu_\bar{X}$ $= \mu_X$ 
+    * Standard Error = $\sigma_\bar{X}$ $= \frac{\sigma}{\sqrt{n}}$
+
+::: {style="position: absolute; bottom: -50px; right: -50px;"}
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+
+ggplot(data = data.frame(x = c(-3.25, 3.25)), aes(x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 1)) + ylab("") +
+  scale_y_continuous(breaks = NULL) + 
+  scale_x_continuous(breaks = c(-3:3), label = c(expression(paste(mu, "- 3",sigma[bar(X)])), expression(paste(mu, "- 2",sigma[bar(X)])), 
+  expression(paste(mu, "- 1",sigma[bar(X)])), expression(mu), expression(paste(mu, "+ 1",sigma[bar(X)])), expression(paste(mu, "+ 2",sigma[bar(X)])),
+  expression(paste(mu, "+ 3",sigma[bar(X)])))) + 
+  geom_segment(x = 0, y = 0, yend = 0.398942, color = "black") +
+  geom_segment(x = -1, y = 0, yend = 0.241971, color = "black") + 
+  geom_segment(x = 1, y = 0, yend = 0.241971, color = "black") + 
+  geom_segment(x = -2, y = 0, yend = 0.053991, color = "black") + 
+  geom_segment(x = 2, y = 0, yend = 0.053991, color = "black") + 
+  geom_segment(x = -3, y = 0, yend = 0.004432, color = "black") + 
+  geom_segment(x = 3, y = 0, yend = 0.004432, color = "black") + 
+  geom_ribbon(data = area_minus1, mapping = aes(x = x, ymin = ymin, ymax = ymax), fill = "#c5b4e3", alpha = 0.5) +
+  geom_ribbon(data = area1, mapping = aes(x = x, ymin = ymin, ymax = ymax), fill = "#c5b4e3", alpha = 0.5) +
+  geom_ribbon(data = area_minus2, mapping = aes(x = x, ymin = ymin, ymax = ymax), fill = "#c5b4e3", alpha = 0.5) +
+  geom_ribbon(data = area2, mapping = aes(x = x, ymin = ymin, ymax = ymax), fill = "#c5b4e3", alpha = 0.5) +
+  annotate(geom = "segment", x = -1, y = 0.12, xend = 1, yend = .12, arrow = arrow(ends = "both", type = "closed")) + 
+  annotate(geom = "label", x = 0, y = 0.12, label = "68.26%") + 
+  annotate(geom = "segment", x = -2, y = 0.053991, xend = 2, yend = 0.053991, arrow = arrow(ends = "both", type = "closed")) + 
+  annotate(geom = "label", x = 0, y = 0.053991, label = "95.44%", fill = "#754cbc") + 
+  annotate(geom = "segment", x = -3, y = 0.01, xend = 3, yend = 0.01, arrow = arrow(ends = "both", type = "closed")) +
+  annotate(geom = "label", x = 0, y = 0.01, label = "99.74%") + 
+  geom_hline(yintercept = 0, color = "black") + 
+  theme_tufte(base_size = 16)
+```
+:::
+
+::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 200px; left: -75px; text-align: center; font-size: 0.9em"}
+$95.44\%$ of sample means will be within $\pm2$ standard errors of the true population mean
+:::
+
+::: {.fragment data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 350px; padding: 5px 5px 5px 5px; position: absolute; bottom: 75px; left: 0px; text-align: center; font-size: 0.9em"}
+And exactly $95\%$ will be within $1.96$ standard errors
+:::
+
+## How does this help us?
+
+
+::: fragment
+#### **SAMPLING DISTRIBUTION** of sample means 
+:::
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+count_data2 <- tibble(x = seq(from = -3, to = 3, by = 0.375), y = samples2)
+
+plot2 + geom_freqpoly(data = count_data2, aes(x = x, y = y), stat = "smooth", position = position_nudge(y = 1.25), linewidth = 1.5, color = "#690c48")
+
+```
+
+---
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+count_data2 <- tibble(x = seq(from = -3, to = 3, by = 0.375), y = samples2)
+
+area2 <- data.frame(x = seq(0, 1.96, length.out = 100), ymin = 0, ymax = dnorm(seq(0, 2, length.out = 100), mean = 0, sd = 1))
+area_minus2 <- data.frame(x = seq(-2, 0, length.out = 100), ymin = 0, ymax = dnorm(seq(-2, 0, length.out = 100), mean = 0, sd = 1))
+
+plot2 + 
+  annotate(geom = "rect", xmin = -2.812, xmax = 2.812, ymin = 0, ymax = 13, fill = "#c5b4e3", alpha = 0.5) +
+  geom_vline(xintercept = -2.812, color = "#754cbc", size = 1.5) + 
+  geom_vline(xintercept = 2.812, color = "#754cbc", size = 1.5) + 
+  annotate(geom = "segment", x = -2.812, y = 6, xend = 2.812, yend = 6, arrow = arrow(ends = "both", type = "closed"), size = 3, color = "#754cbc") + 
+  annotate(geom = "label", x = 0, y = 6, label = "95% of sample means will be within 1.96σ of the pop. mean", size = 10, color = "#c5b4e3", fill = "#754cbc") 
+
+```
+
+::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; left: -75px; text-align: center"}
+If, 95% of the samples are within 1.96 standard errors of the true population mean . . . 
+:::
+
+---
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+area196 <- data.frame(x = seq(0, 1.96, length.out = 100), ymin = 0, ymax = dnorm(seq(0, 1.96, length.out = 100), mean = 0, sd = 1))
+area_neg196 <- data.frame(x = seq(0, -1.96, length.out = 100), ymin = 0, ymax = dnorm(seq(0, -1.96, length.out = 100), mean = 0, sd = 1))
+
+
+ggplot(count_data) + 
+  geom_hline(yintercept = 0, color = "black") +
+  annotate(geom = "rect", xmin = -1.96, xmax = 1.96, ymin = 0, ymax = 21, fill = "#e93cac", alpha = 0.25) +
+  #geom_segment(x = -1.96, y = -1, xend = 1.96, color = "#e93cac", linetype = 1, linewidth = 0.75, lineend = "square") +
+  #geom_ribbon(data = area196, mapping = aes(x = x, ymin = ymin, ymax = ymax), fill = "#e93cac", alpha = 0.25) +
+  #geom_ribbon(data = area_neg196, mapping = aes(x = x, ymin = ymin, ymax = ymax), fill = "#e93cac", alpha = 0.25) +
+  geom_vline(xintercept = mu, color = "black") + 
+  theme(legend.position = "none", axis.text.x = element_text(size = 30, color = "#e93cac"), axis.ticks.x = element_blank()) +
+  scale_y_continuous(name = NULL, breaks = NULL, limits = c(0, 21)) + 
+  scale_x_continuous(name = NULL, limits = c(-5.5, 5.5), breaks = c(-1.96, 1.96), label = c(expression(paste(bar(X), " - 1.96",sigma[bar(X)])), 
+  expression(paste(bar(X), " + 1.96",sigma[bar(X)])))) + 
+  coord_equal(bin_width, clip = "off") + 
+  annotate("label", x = 0, y = 0, label = "mu[x]", parse = TRUE, size = 12, color = "#690c48", fill = "#e93cac") 
+```
+
+::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; left: -75px; text-align: center"}
+If, 95% of the samples are within 1.96 standard errors of the true population mean . . . 
+:::
+
+::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: -75px; text-align: center"}
+. . . then for 95 samples out of 100, we will find the true population mean if we look within 1.96 standard errors of the sample mean.
+:::
+
+---
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+set.seed(711)
+twenty_randos <- tibble(x = rnorm(n = 20, 0, 1), y = 1:20, color = c(rep("1", 14), "2", rep("1", 5)))
+
+sample_means <- ggplot(twenty_randos, aes(group = y)) + 
+  annotate("label", x = 0, y = 0, label = "mu[x]", parse = TRUE, size = 12, color = "#690c48", fill = "#e93cac") +
+  annotate(geom = "rect", xmin = -1.96, xmax = 1.96, ymin = 0, ymax = 21, fill = "#e93cac", alpha = 0.145) +
+  geom_ellipse(aes(group = y, x0 = x, y0 = y, a = bin_width/2, b = 0.5, angle = 0, fill = color)) +
+  geom_text(data = twenty_randos[1, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[1]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  #geom_segment(x = twenty_randos$x[1] - 1.96, y = 1, xend = twenty_randos$x[1] - 0.2, color = "#e93cac", linetype = 1, linewidth = 0.75) +
+  #geom_segment(x = twenty_randos$x[1] + 0.2, y = 1, xend = twenty_randos$x[1] + 1.96, color = "#e93cac", linetype = 1, linewidth = 0.75) +
+  geom_point(aes(x = x - 1.96, y = y, color = color), size = 2) + 
+  geom_point(aes(x = x + 1.96, y = y, color = color), size = 2) + 
+  geom_segment(aes(x = x - 1.96, xend = x - 0.2, y = y, color = color)) +
+  geom_segment(aes(x = x + 0.2, xend = x + 1.96, y = y, color = color)) +
+  geom_text(data = twenty_randos[2, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[2]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[3, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[3]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[4, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[4]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[5, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[5]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[6, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[6]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[7, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[7]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[8, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[8]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[9, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[9]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[10, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[10]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[11, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[11]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[12, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[12]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[13, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[13]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[14, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[14]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[15, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[15]))), parse = TRUE, color = "#6e8e13", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[16, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[16]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[17, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[17]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[18, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[18]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[19, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[19]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[20, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[20]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  coord_equal(bin_width, clip = "off") + # to make the dots look nice and round0 
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "black") + 
+  theme(legend.position = "none", axis.text.x = element_text(size = 30, color = "#e93cac"), axis.ticks.x = element_blank()) +
+  scale_y_continuous(name = NULL, breaks = NULL, limits = c(0, 21)) + 
+  scale_x_continuous(name = NULL, limits = c(-5.5, 5.5), breaks = c(-1.96, 1.96), label = c(expression(paste(bar(X), " - 1.96",sigma[bar(X)])), 
+  expression(paste(bar(X), " + 1.96",sigma[bar(X)])))) + 
+  scale_color_manual(values = c("#e93cac", "#6e8e13")) +
+  scale_fill_manual(values = c("transparent", "#aadb1e"))
+
+p_anim3 <- 
+  sample_means +
+  transition_states(states = y, wrap = FALSE) +
+  shadow_mark() + 
+  enter_fade()
+
+animate(p_anim3, nframes = 21, fps = 1)
+
+
+```
+
+::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; left: -75px; text-align: center"}
+If, 95% of the samples are within 1.96 standard errors of the true population mean . . . 
+:::
+
+::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: -75px; text-align: center"}
+. . . then for 95 samples out of 100, we will find the true population mean if we look within 1.96 standard errors of the sample mean.
+:::
+
+---
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-height: 12
+#| fig-align: center
+
+ggplot(twenty_randos, aes(group = y)) + 
+  annotate("label", x = 0, y = 0, label = "mu[x]", parse = TRUE, size = 12, color = "#690c48", fill = "#e93cac") +
+  annotate(geom = "rect", xmin = -1.96, xmax = 1.96, ymin = 0, ymax = 21, fill = "#e93cac", alpha = 0.25) +
+  geom_ellipse(aes(group = y, x0 = x, y0 = y, a = bin_width/2, b = 0.5, angle = 0, fill = color)) +
+  geom_text(data = twenty_randos[1, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[1]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  #geom_segment(x = twenty_randos$x[1] - 1.96, y = 1, xend = twenty_randos$x[1] - 0.2, color = "#e93cac", linetype = 1, linewidth = 0.75) +
+  #geom_segment(x = twenty_randos$x[1] + 0.2, y = 1, xend = twenty_randos$x[1] + 1.96, color = "#e93cac", linetype = 1, linewidth = 0.75) +
+  geom_point(aes(x = x - 1.96, y = y, color = color), size = 2) + 
+  geom_point(aes(x = x + 1.96, y = y, color = color), size = 2) + 
+  geom_segment(aes(x = x - 1.96, xend = x - 0.2, y = y, color = color)) +
+  geom_segment(aes(x = x + 0.2, xend = x + 1.96, y = y, color = color)) +
+  geom_text(data = twenty_randos[2, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[2]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[3, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[3]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[4, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[4]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[5, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[5]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[6, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[6]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[7, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[7]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[8, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[8]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[9, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[9]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[10, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[10]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[11, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[11]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[12, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[12]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[13, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[13]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[14, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[14]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[15, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[15]))), parse = TRUE, color = "#6e8e13", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[16, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[16]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[17, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[17]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[18, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[18]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[19, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[19]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  geom_text(data = twenty_randos[20, ], aes(x = x, y = y, label = deparse(bquote(bar(X)[20]))), parse = TRUE, color = "#e93cac", size = 8, fontface = "bold") +
+  coord_equal(bin_width, clip = "off") + # to make the dots look nice and round0 
+  geom_hline(yintercept = 0, color = "black") + geom_vline(xintercept = mu, color = "black") + 
+  theme(legend.position = "none", axis.text.x = element_text(size = 30, color = "#e93cac"), axis.ticks.x = element_blank()) +
+  scale_y_continuous(name = NULL, breaks = NULL, limits = c(0, 21)) + 
+  scale_x_continuous(name = NULL, limits = c(-5.5, 5.5), breaks = c(-1.96, 1.96), label = c(expression(paste(bar(X), " - 1.96",sigma[bar(X)])), 
+  expression(paste(bar(X), " + 1.96",sigma[bar(X)])))) + 
+  scale_color_manual(values = c("#e93cac", "#6e8e13")) +
+  scale_fill_manual(values = c("transparent", "#aadb1e"))
+
+```
+
+::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 400px; padding: 5px 5px 5px 5px; position: absolute; top: 50px; left: -75px; text-align: center"}
+If, 95% of the samples are within 1.96 standard errors of the true population mean . . . 
+:::
+
+::: {data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; padding: 5px 5px 5px 5px; position: absolute; top: 0px; right: -75px; text-align: center"}
+. . . then for 95 samples out of 100, we will find the true population mean if we look within 1.96 standard errors of the sample mean.
+:::
+
+## Confidence intervals
+
+<br>
+
+#### The **BIG IDEA**:
+
+::: incremental
+* The sampling distribution and CLT tells us how close to the population mean ($\mu$) the sample mean ($\bar{X}$) is likely to be
+* We can use this knowledge to figure out how close the true population mean ($\mu$) is likely to be to the one sample mean ($\bar{X}$)that we observe
+* Build a confidence interval around our sample statistic (mean) to define the range in which we think the population parameter can be found...
+    * [... and quantify how likely it is that we are right]{style="color:#e93cac"}
+:::
+
+## Using these tools for inference
+
+#### Example: Want to know how much UW students study on average
+
+::: {style="position: absolute; top: 150px; right: 100px; font-size: 3em"}
+[$\bar{X}$]{style="color:#1b8883"} ---INFERENCE--> [$\mu_x$]{style="color:#a68100"}
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 175px; left: -50px; font-size: 1.25em"}
+**Sample statistic**: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)
+:::
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 550px; padding: 5px 5px 0px 5px; position: absolute; bottom: 50px; left: -50px;"}
+*For example*: draw a random sample of 100 students and observe $\bar{X} = 14.5$
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; bottom: 175px; right: -50px; font-size: 1.25em"}
+**Population parameter**: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)
+:::
+
+::: {data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 550px; padding: 5px 5px 0px 5px; position: absolute; bottom: 50px; right: -50px;"}
+[**Our goal**]{.underline}: Estimate the unknown population parameter $\mu_x = ?$
+:::
+
+## Confidence intervals
+
+
+::: {style="font-size:2em"}
+$$
+\bar{X}
+$$
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 145px; left: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="border: 3px solid #e93cac; border-radius:5px; position: absolute; top: 145px; right: 85px; width: 400px; height: 0px; font-size: 0.75em; text-align: center"}
+
+:::
+
+::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 750px; padding: 5px 5px 5px 5px; position: absolute; top: 195px; left: 140px; font-size: 1.5em; text-align: center"}
+Create a **range** of scores, centered on the sample mean, in which we think the population mean is likely to be located
+:::
+
+::: {data-id="box5" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 10px 10px 10px 10px; position: absolute; top: 425px; left: 225px"}
+Building a [*margin of error*]{style="color:#e93cac"} around our sample mean
+:::
+
+::: {.fragment fragment-index=1 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 25px; left: 285px; font-size: 1.25em; text-align: center"}
+[Confidence interval]{.underline}:<br>
+$\text{sample statistic} \pm \text{margin of error}$
+:::
+
+::: {.fragment fragment-index=2 data-id="box2" style="width: 500px; padding: 5px 5px 5px 5px; position: absolute; bottom: 20px; right: -47px; font-size: 2.5em; text-align: center"}
+⬅️
+:::
+
+::: {.fragment fragment-index=2 data-id="box5" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; padding: 5px 5px 5px 5px; position: absolute; bottom: 15px; right: -50px; width: 200px; text-align: center"}
+All confidence intervals take this form
+:::
+

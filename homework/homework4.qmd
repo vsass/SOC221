@@ -7,10 +7,25 @@ citation-location: margin
 ---
 
 ## Instructions 
-(@) Download a printable version of this assignment [here](pdfs/homework4.pdf). Print it out and record your answers directly in the space provided.
+(@) Download the printable version of this assignment [here](pdfs/homework1.pdf). Print it out and record your answers directly in the space provided. 
 (@) Write your **name** and **student number** on the top of the assignment. 
 (@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
-(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.\
+(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment.\
+
+::: {.content-hidden when-format="html"}
+:::{.column-screen-inset-shaded} 
+::: {#fig-confidence layout-ncol=3}
+
+![I knew the answer to that question](../images/confidence_level_assessment1.png){width="75%"}
+
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){width="75%"}
+
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){width="75%"}
+
+Confidence Level Assessment
+:::
+:::
+:::
 
 ::: {.panel-tabset}
 
@@ -33,6 +48,8 @@ citation-location: margin
 :::
 
 (@) Turn in your assignment in class on the due date. 
+<br> 
+
 
 ### Questions
 
@@ -41,7 +58,7 @@ citation-location: margin
 **A recent magazine article claimed that “our survey results using a random sample indicate that, on average, American adults watch between 75 and 77 minutes of television per day.”**
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 {{< pagebreak >}}
@@ -77,7 +94,7 @@ e. Name at least two factors that might help to explain the high precision (i.e.
 **A social researcher is interested in estimating the number of friends that college students typically made during their first year of school. Questioning a random sample of 50 students at the end of their freshman year, he finds a mean of 3 friends. Assume that the sample comes from a population with a standard deviation of 1.0.**
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 a. Calculate the standard error.
@@ -101,7 +118,7 @@ c. Provide an interpretation of the confidence interval.
 **A school principal is interested in assessing the performance of her students on the Totally Oppressive Standardized test (TOST). She selects a simple random sample of 16 of her students and finds the following set of scores:**
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 &emsp;&emsp;6&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;12&emsp;&emsp;5&emsp;&emsp;10&emsp;&emsp;11&emsp;&emsp;13
@@ -145,7 +162,7 @@ e. Why is the margin of error smaller for the 95% confidence interval in questio
 **A mayor of a big city finds that 212 of 400 randomly selected city residents believe that that believes that the city should spend more money on road maintenance. Use this information for a large-sample inference of the proportion of all city residents who believe that the city should be spending more.**
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 a. What percentage of the sample members believe the city should be spending more?

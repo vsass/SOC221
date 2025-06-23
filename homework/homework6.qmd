@@ -7,10 +7,25 @@ citation-location: margin
 ---
 
 ## Instructions 
-(@) Download a printable version of this assignment [here](pdfs/homework6.pdf). Print it out and record your answers directly in the space provided.
+(@) Download the printable version of this assignment [here](pdfs/homework1.pdf). Print it out and record your answers directly in the space provided. 
 (@) Write your **name** and **student number** on the top of the assignment. 
 (@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
-(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.\
+(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment.\
+
+::: {.content-hidden when-format="html"}
+:::{.column-screen-inset-shaded} 
+::: {#fig-confidence layout-ncol=3}
+
+![I knew the answer to that question](../images/confidence_level_assessment1.png){width="75%"}
+
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){width="75%"}
+
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){width="75%"}
+
+Confidence Level Assessment
+:::
+:::
+:::
 
 ::: {.panel-tabset}
 
@@ -33,8 +48,8 @@ citation-location: margin
 :::
 
 (@) Turn in your assignment in class on the due date. 
+<br> 
 
-<br>
 
 ### Questions
 
@@ -45,7 +60,7 @@ citation-location: margin
 a. Create a two-way table of quiz performance (passed / did not pass) by attendance status (attended / did not attend).
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -61,7 +76,7 @@ a. Create a two-way table of quiz performance (passed / did not pass) by attenda
 b. Describe, in percentages, the marginal distribution for attendance.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png){width=85%}
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -70,7 +85,7 @@ b. Describe, in percentages, the marginal distribution for attendance.
 c. Describe, in percentages, the marginal distribution for quiz performance.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png){width=85%}
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -79,7 +94,7 @@ c. Describe, in percentages, the marginal distribution for quiz performance.
 d. According to the data, does there appear to be an association between quiz performance and lecture attendance? Support your argument by referring to the conditional distribution of quiz performance.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -90,7 +105,7 @@ d. According to the data, does there appear to be an association between quiz pe
 e. Use a chi-square test and .05 alpha level to test the null hypothesis that there is no association between quiz performance and attendance in the population. Make sure to report: 1) the critical value of the test statistic; 2) the value of the test statistic calculated from the sample data; 3) your decision about the null hypothesis; and 4) an interpretation of the meaning of your decision.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -128,7 +143,7 @@ e. Use a chi-square test and .05 alpha level to test the null hypothesis that th
 a. Calculate the Pearson's correlation coefficient for the association between study time and the quiz grade.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -140,20 +155,22 @@ a. Calculate the Pearson's correlation coefficient for the association between s
 <br>
 <br>
 <br>
-
-::: {.column-margin}
-![](../images/confidence_level_assessment.png)
-:::
 
 b. Provide an interpretation for the correlation coefficient.
 
+::: {.column-margin}
+![](../images/confidence_level_assessment.png){width="75%"}
+:::
+
+<br>
+<br>
 <br>
 <br>
 
 c. Do the sample data provide sufficient evidence with which to conclude that a real association exists in the population from which this sample was drawn? Explain your answer.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -182,11 +199,12 @@ c. Do the sample data provide sufficient evidence with which to conclude that a 
 : {tbl-colwidths="[20, 40, 40]"}
 
 <br>
+<br>
 
 a. What is the strength and the direction of the association between the number of days missed in sixth grade and the number of days missed in tenth grade. Be sure to provide the statistic on which your answer is based.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -202,7 +220,7 @@ a. What is the strength and the direction of the association between the number 
 b. Is the association observed in the sample statistically significant? Explain your answer.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>

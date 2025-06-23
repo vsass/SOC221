@@ -10,7 +10,22 @@ citation-location: margin
 (@) Download the printable version of this assignment [here](pdfs/homework1.pdf). Print it out and record your answers directly in the space provided. 
 (@) Write your **name** and **student number** on the top of the assignment. 
 (@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
-(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.\
+(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment.\
+
+::: {.content-hidden when-format="html"}
+:::{.column-screen-inset-shaded} 
+::: {#fig-confidence layout-ncol=3}
+
+![I knew the answer to that question](../images/confidence_level_assessment1.png){width="75%"}
+
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){width="75%"}
+
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){width="75%"}
+
+Confidence Level Assessment
+:::
+:::
+:::
 
 ::: {.panel-tabset}
 
@@ -35,6 +50,7 @@ citation-location: margin
 (@) Turn in your assignment in class on the due date. 
 <br> 
 
+
 ### Questions
 
 *For this assignment, you will help to collect the data to be used for some of the analyses we do in class. You will also assess the nature of the sample we are drawing as we collect these data and think about the nature of some variables in the data.*
@@ -44,7 +60,7 @@ citation-location: margin
 **Complete the class survey and ask [**at least three (3)**]{style="color:#e93cac"} other people to do the same. The class survey can be accessed [here](survey.qmd). You are free to invite anyone else – friends, family members, co-workers, etc. – to complete the survey but every respondent (including you!) should complete the survey only once. [You will receive credit for this problem if you complete the survey yourself and at least **three (3) others** enter your **student number** at the end of the survey]{style="color:#e93cac"}. Here is an email invitation that you can send out to get your people to complete the survey:**
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 ::: {style="color:#666666"}
@@ -75,7 +91,7 @@ Best wishes,<br>
 #### Question 2
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 **How many people did you invite to complete the survey?**^[Note that this information will be useful for calculating our response rate to the survey.]
@@ -89,7 +105,7 @@ Answer:
 #### Question 3
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 **What is the unit of analysis for the data collected with our class survey?**
@@ -105,10 +121,10 @@ Answer:
 **What is the level of measurement (nominal, ordinal, or interval) for each of the variables collected with the following items in [our survey](survey.qmd)?**
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
-|   | Item | Level of<br>measurement  |
+|   | Item | Level of<br> measurement  |
 |---|--------|--------|
 | a. | Where did you live for most of the years when you were growing up (before age 18)?  |   |
 | b. | What is your college major right now?   |   |
@@ -120,14 +136,14 @@ Answer:
 
 : Survey items {tbl-colwidths="[5,60,35]"}
 
-{{< pagebreak >}}
+<br>
 
 #### Question 5
 
 **Does our class survey use a simple random sample? Explain your answer and describe how the results of our survey might be affected by the sampling technique we have used. *Please limit your response to this question to 300 words or less.***
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 Answer: 
@@ -135,3 +151,4 @@ Answer:
 ::: {style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 700px; height: 300px; position: static"}
 
 :::
+

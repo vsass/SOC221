@@ -7,10 +7,25 @@ citation-location: margin
 ---
 
 ## Instructions 
-(@) Download a printable version of this assignment [here](pdfs/homework2.pdf). Print it out and record your answers directly in the space provided.
+(@) Download the printable version of this assignment [here](pdfs/homework1.pdf). Print it out and record your answers directly in the space provided. 
 (@) Write your **name** and **student number** on the top of the assignment. 
 (@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
-(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.\
+(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment.\
+
+::: {.content-hidden when-format="html"}
+:::{.column-screen-inset-shaded} 
+::: {#fig-confidence layout-ncol=3}
+
+![I knew the answer to that question](../images/confidence_level_assessment1.png){width="75%"}
+
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){width="75%"}
+
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){width="75%"}
+
+Confidence Level Assessment
+:::
+:::
+:::
 
 ::: {.panel-tabset}
 
@@ -33,6 +48,8 @@ citation-location: margin
 :::
 
 (@) Turn in your assignment in class on the due date. 
+<br> 
+
 
 ### Questions
 
@@ -41,7 +58,7 @@ citation-location: margin
 **The following table provides chart data for the patients in a particular hospital ward:**
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -108,7 +125,7 @@ Measure of variability: ____________________________________________
 **A researcher collected information on the number of text messages sent over an 8-hour period by a group of teenagers and a group of parents. The data collected are as follows:**
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 :::: {.columns}
@@ -252,7 +269,7 @@ e. If you removed the most extreme case (the person with the most text messages)
 **A teacher asked a sample of 18 junior high school students how many hours of television they watched during the previous weekend. The results of the survey are summarized in the following frequency distribution.**
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>

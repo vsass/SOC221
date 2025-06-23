@@ -1,0 +1,1119 @@
+---
+title: '<h1 style="font-size:3em; "> Frequency tables &<br>Graphical techniques </h1>'
+title-slide-attributes:
+  data-background-image: ../images/abstract_statistics_playful2.jpeg
+  data-background-size: cover
+  data-background-opacity: "0.33"
+subtitle: "SOC 221 • Lecture 2"
+author: "Victoria Sass"
+date: "June 24, 2024"
+date-format: full
+execute: 
+  echo: true
+  message: false
+  warning: false
+format: 
+  revealjs:
+    reference-location: margin
+    theme: lecture_styles.scss
+    controls: true
+    slide-number: true
+    chalkboard: true
+    incremental: false 
+    smaller: true
+    preview-links: true
+    history: false
+    progress: true
+    link-external-icon: true 
+---
+
+```{r}
+#| echo: false
+#| cache: false
+require(tidyverse)
+require(gt)
+
+knitr::opts_chunk$set(comment = ">")
+
+# set transparent background in base
+knitr::opts_chunk$set(dev.args=list(bg='transparent'))
+
+# set transparent background in ggplot
+ggplot2::theme_set(ggthemes::theme_tufte(base_size=12))
+ggplot2::theme_update(panel.background = ggplot2::element_blank(),
+                      plot.background=ggplot2::element_blank(),
+    legend.background=ggplot2::element_blank())
+
+options(width=80, show.signif.stars=FALSE)
+```
+
+# Frequency tables {.section-title background-color="#c5b4e3"}
+
+## What do we do with data? 
+
+::: {.fragment style="margin-top: 150px; margin-left: 50px; font-size: 2.5em;"}
+Apply some [STATISTICS]{.shadow10} to answer interesting questions...
+:::
+
+## Descriptive statistics
+
+:::: columns
+::: {.column width="50%"}
+::: {.fragment fragment-index=1}
+::: r-fit-text
+> [**Descriptive statistics**]{style="color:#e93cac"}<br>Procedures that help us organize<br>summarize, and describe the<br>[distribution]{.underline} of a variable. 
+:::
+:::
+::: {.fragment fragment-index=2}
+::: r-fit-text
+> [**Distribution**]{style="color:#e93cac"}<br>The list of the entire set of observed<br>values of a variable, indicating all values<br>and how often those values occur. 
+:::
+:::
+
+::: {.smaller .fragment fragment-index=4}
+- Descriptive statistics allow us to summarize information in a distribution more [efficiently]{.underline}
+- The type of descriptive statistics we can use to summarize a variable depends on how the variable is measured (i.e. its [**LEVEL OF MEASUREMENT**]{style="background:#c5b4e3"})
+:::
+ 
+:::
+
+::: {.column width="50%"}
+
+::: {.fragment fragment-index=3}
+```{r}
+#| echo: false
+survey_table <- tibble(`Person #` = c(1:12), 
+                       birth_year = c(1992, 1993, 1995, 1980, 1991, 1975, 1960, 1952, 2000, 1990, 1993, 1992), 
+                       gender = c(1, 2, 2, 2, 1, 4, 1, 1, 3, 1, 2, 3), 
+                       ethnicity = c(1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0), 
+                       race = c(5, 5, 2, 3, 5, 1, 6, 5, 3, 2, 4, 4))
+survey_table |> 
+gt() |> 
+tab_options(table.width = pct(90), table.font.size = pct(90), table.align = "center", table.background.color = "#f2f2f2")
+
+```
+:::
+
+::: {.fragment fragment-index=3 data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #2ad2c9; width: 110px; height: 573px; margin: 10px; position: absolute; top: 80px; right: 250px"}
+
+:::
+
+::: {.fragment fragment-index=3 data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 275px; height: 150px; padding: 0px 0px 10px 10px; position: absolute; bottom: 0px; right: -60px"}
+Each column of our dataset contains the distribution of a different variable
+:::
+
+:::
+::::
+
+## Frequency tables: overview
+
+#### Purpose of a frequency table
+
+::: incremental
+- Frequency distribution table = descriptive tool to display the frequency of cases with various values/scores on the variable of interest.
+- Often present frequencies in multiple ways
+  - raw frequencies
+  - relative frequencies (percentages)
+  - cumulative frequencies
+  - cumulative percentages
+  - etc.
+:::
+
+## Frequency table: step 1
+
+### Record raw data
+
+::: fragment
+<br>
+
+#### Movie ratings (scale from 0 to 10 for 110 viewers)
+
+::: r-fit-text
+```{r}
+#| echo: false
+options(width = 54)
+movie_ratings <- c(5, 8, 3, 6, 5, 8, 3, 7, 9, 10, 6, 8, 7, 4, 6, 5, 8, 7, 4, 6, 5, 3, 6, 1, 8, 6, 8, 5, 6, 6, 8, 9, 6, 9, 6, 5, 9, 9, 6, 5, 8, 5, 8, 4, 8, 6, 7, 4, 8, 6, 8, 7, 6, 8, 5, 7, 6, 9, 6, 10, 4, 8, 6, 8, 6, 5, 4, 7, 8, 5, 7, 4, 5, 5, 9, 6, 6, 7, 5, 3, 10, 3, 5, 7, 9, 10, 6, 7, 4, 10, 6, 9, 8, 7, 8, 5, 7, 4, 10, 6, 7, 4, 2, 3, 8, 5, 4, 7, 7, 7)
+movie_ratings
+```
+:::
+:::
+
+## Frequency table: step 2
+
+### Count the number of cases for each category
+
+<br>
+
+::: fragment
+|   |   |
+|--------|--------|
+| 0 |    |
+| 1 |  /  |
+| 2 | /   |
+| 3 |  ///// /  |
+| 4 | ///// //// /   |
+| 5 |  ///// ///// ///// //  |
+| 6 |  ///// ///// ///// ///// ///  |
+| 7 |  ///// ///// ///// //  |
+| 8 | ///// ///// ///// ////   |
+| 9 | ///// ////   |
+| 10 |  ///// /  |
+
+: {.striped .hover}
+:::
+
+
+## Frequency table: step 3
+
+### Place in [raw]{style="color:#e93cac"} frequency table
+
+::: {.smaller .fragment fragment-index="1"}
+| Movie Rating<br>(score)  | Frequency<br>(f)  |  |  |  |
+|:------:|:------:|---|---|---|
+| 0 | 0 |  |  |  |
+| 1 | 1 |  |  |  |
+| 2 | 1 |  |  |  |
+| 3 | 6  |  |  |  |
+| 4 | 11 |  |  |  |
+| 5 | 17 |  |  |  |
+| 6 | 23 |  |  |  |
+| 7 | 17 |  |  |  |
+| 8 | 19 |  |  |  |
+| 9 | 9 |  |  |  |
+| 10 | 6 |  |  |  |
+| **Total (N)** | **110** |  |  |  | 
+
+: Table 1: Raw Frequency Distribution of Movie Ratings {tbl-colwidths="[20,20,20,20,20]"}
+:::
+
+::: {.fragment fragment-index="2" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 500px; height: 25px; margin: 10px; position: absolute; top: 140px; left: 260px"}
+
+:::
+
+::: {.fragment fragment-index="2" data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 200px; height: 30px; padding: 0px 0px 20px 10px; position: absolute; top: 140px; right: 50px"}
+Descriptive title
+:::
+
+::: {.fragment fragment-index="3" data-id="box2" style="background: rgba(255, 255, 255, 0); border: 4px solid #2ad2c9; width: 125px; height: 440px; padding: 0px 0px 10px 10px; position: absolute; top: 185px; left: 165px"}
+
+:::
+
+::: {.fragment fragment-index="3" data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 200px; height: 205px; padding: 0px 0px 10px 10px; position: absolute; top: 150px; left: -75px"}
+First column: all possible values (sometimes labeled with a variable symbol, e.g. [x]{style="color:white"} )
+:::
+
+::: {.fragment fragment-index="4" data-id="box2" style="background: rgba(255, 255, 255, 0); border: 4px solid #aadb1e; width: 125px; height: 440px; padding: 0px 0px 10px 10px; position: absolute; top: 185px; left: 308px"}
+
+:::
+
+::: {.fragment fragment-index="4" data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 200px; height: 205px; padding: 0px 0px 10px 10px; position: absolute; top: 400px; left: -75px"}
+Second column: number of times each value appears in the data
+:::
+
+::: {.fragment fragment-index="5" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #c5b4e3; width: 280px; height: 25px; margin: 10px; position: absolute; bottom: 15px; left: 155px"}
+
+:::
+
+::: {.fragment fragment-index="5" data-id="box2" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 100px; padding: 0px 0px 10px 10px; position: absolute; bottom: 25px; left: 475px"}
+N = total number of cases in the data
+:::
+
+## Frequency table: step 4: 
+
+### Add a [percentage]{style="color:#e93cac"} (relative frequency) column
+
+::: {.smaller}
+| Movie Rating<br>(score)  | Frequency<br>(f)  | Percent<br>(%) |  |  |
+|:--------:|:------:|:---:|---|---|
+| 0 | 0 | 0 |  |  |
+| 1 | 1 | 0.9 |  |  |
+| 2 | 1 | 0.9 |  |  |
+| 3 | 6  | 5.4 |  |  |
+| 4 | 11 | 10 |  |  |
+| 5 | 17 | 15.5  |  |  |
+| 6 | 23 | 20.9  |  |  |
+| 7 | 17 | 15.5  |  |  |
+| 8 | 19 | 17.3  |  |  |
+| 9 | 9 | 8.2 |  |  |
+| 10 | 6 | 5.4  |  |  |
+| **Total (N)** | **110** | **100** |  |  | 
+
+: Table 1: Raw Frequency Distribution of Movie Ratings {tbl-colwidths="[20,20,20,20,20]"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 125px; height: 55px; margin: 10px; position: absolute; top: 175px; right: 450px"}
+
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="1" data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 200px; height: 100px; padding: 0px 0px 10px 10px; position: absolute; top: 150px; right: 0px"}
+$$
+Pct_x = \frac{f_x}{N} (100)
+$$
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="2" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 125px; height: 25px; margin: 10px; position: absolute; top: 242px; right: 450px"}
+
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="2" data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 200px; height: 100px; padding: 0px 0px 10px 10px; position: absolute; top: 200px; right: 0px"}
+$$
+Pct_0 = \frac{0}{110} (100)
+$$
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="3" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 125px; height: 25px; margin: 10px; position: absolute; top: 421px; right: 450px"}
+
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="3" data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 200px; height: 100px; padding: 0px 0px 10px 10px; position: absolute; top: 388px; right: 0px"}
+$$
+Pct_5 = \frac{17}{110} (100)
+$$
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="4" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 125px; height: 25px; margin: 10px; position: absolute; bottom: 13px; right: 450px"}
+
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="4" data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 230px; height: 75px; padding: 0px 0px 10px 10px; position: absolute; bottom: 0px; right: 0px"}
+Percentages always add to 100
+:::
+
+
+## Frequency table: step 4.1: 
+
+### Make comparisons across [categories]{style="color:#e93cac"}
+
+::: {.smaller}
+| Movie Rating<br>(score)  | Frequency<br>(f)  | Percent<br>(%) |  |  |
+|:--------:|:------:|:---:|---|---|
+| 0 | 0 | 0 |  |  |
+| 1 | 1 | 0.9 |  |  |
+| 2 | 1 | 0.9 |  |  |
+| 3 | 6  | 5.4 |  |  |
+| 4 | 11 | 10 |  |  |
+| 5 | 17 | 15.5  |  |  |
+| 6 | 23 | 20.9  |  |  |
+| 7 | 17 | 15.5  |  |  |
+| 8 | 19 | 17.3  |  |  |
+| 9 | 9 | 8.2 |  |  |
+| 10 | 6 | 5.4  |  |  |
+| **Total (N)** | **110** | **100** |  |  | 
+
+: Table 1: Raw Frequency Distribution of Movie Ratings {tbl-colwidths="[20,20,20,20,20]"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #2ad2c9; width: 125px; height: 55px; margin: 10px; position: absolute; top: 175px; right: 450px"}
+
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="1" data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 455px; height: 135px; padding: 0px 0px 10px 10px; position: absolute; top: 180px; right: -75px"}
+[*Comparing relative frequency of different values*]{.smaller}
+$$
+Ratio = \frac{Pct_x}{Pct_y} = \frac{f_x}{f_y}
+$$
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="2" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #2ad2c9; width: 125px; height: 25px; margin: 10px; position: absolute; top: 421px; right: 450px"}
+
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="2" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #2ad2c9; width: 125px; height: 25px; margin: 10px; position: absolute; bottom: 50px; right: 450px"}
+
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="2" data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 250px; height: 135px; padding: 0px 0px 10px 10px; position: absolute; top: 460px; right: 125px"}
+[Ratio of 5s to 10s:]{.smaller}
+$$
+\frac{15.5}{5.4} = 2.87
+$$
+:::
+
+## Frequency table: step 4.2: 
+
+### Make comparisons across [groups]{style="color:#e93cac"}
+
+::: {.smaller}
+::: {#tbl-panel layout-ncol=2}
+
+| Movie Rating<br>(score)| Frequency<br>(f) | Percent<br>(%) | 
+|:--------|:----:|:----:|
+| 0 | 0    |  0.0   | 
+| 1 | 0    |  0.0  | 
+| 2 | 0    |  0.0   |
+| 3 | 1    |  2.0   | 
+| 4 | 3    |  6.0   | 
+| 5 | 5    |  10.0   |
+| 6 | 9    |  18.0   | 
+| 7 | 10   |   20.0  | 
+| 8 | 12   |  24.0   |
+| 9 | 6    |   12.0  | 
+| 10 | 4    |  8.0   | 
+| **Total (N)** | **50**    | **100**    | 
+
+: Females {#tbl-first}
+
+| Frequency<br>(f) | Percent<br>(%) | 
+|:----:|:----:|
+| 0    | 0.0    | 
+| 1    | 1.7    | 
+| 1    | 1.7    |
+| 5    | 8.3    | 
+| 8    | 13.3    | 
+| 12    | 20.0    |
+| 14    | 23.3    | 
+| 7    | 11.7    | 
+| 7    | 11.7    |
+| 3    | 5.0    | 
+| 2    | 3.3    | 
+| **60**    | **100**    | 
+
+: Males {#tbl-second}
+
+Frequency Distribution of Movie Ratings by Gender
+:::
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #aadb1e; width: 125px; height: 25px; margin: 10px; position: absolute; bottom: 34px; left: 235px"}
+
+:::
+
+::: {.fragment fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #aadb1e; width: 125px; height: 25px; margin: 10px; position: absolute; bottom: 34px; right: 275px"}
+
+:::
+
+::: {.fragment fragment-index="1" data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 200px; height: 135px; padding: 0px 0px 10px 10px; position: absolute; bottom: 100px; right: 25px"}
+[Gender ratio of 10s:]{.smaller}
+$$
+\frac{8.0}{3.3} = 2.42
+$$
+:::
+
+
+## Frequency table: step 5 
+
+### Add a [cumulative frequency]{style="color:#e93cac"} column
+
+::: {.smaller}
+| Movie Rating<br>(score)  | Frequency<br>(f)  | Percent<br>(%) |<br>Cf |  |
+|:--------:|:------:|:---:|:---:|---|
+| 0 | 0 | 0 | 0 |  |
+| 1 | 1 | 0.9 | 1 |  |
+| 2 | 1 | 0.9 | 2 |  |
+| 3 | 6  | 5.4 | 8 |  |
+| 4 | 11 | 10 | 19 |  |
+| 5 | 17 | 15.5  | 36  |  |
+| 6 | 23 | 20.9  | 59  |  |
+| 7 | 17 | 15.5  | 76  |  |
+| 8 | 19 | 17.3  | 95  |  |
+| 9 | 9 | 8.2 | 104 |   |
+| 10 | 6 | 5.4  | 110 |  |
+| **Total (N)** | **110** | **100** |  |  | 
+
+: Table 1: Raw Frequency Distribution of Movie Ratings {tbl-colwidths="[20,20,20,20,20]"}
+:::
+
+::: {.fragment fragment-index=1 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 360px; height: 115px; padding: 0px 10px 20px 10px; position: absolute; top: 200px; right: -50px"}
+Cumulative frequency (Cf) = <br>
+[Number]{.underline} of cases in the given category [and lower categories]{.underline}
+:::
+
+::: {.fragment fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #a68100; width: 60px; height: 25px; margin: 10px; position: absolute; top: 205px; right: 338px"}
+
+:::
+
+::: {.fragment fragment-index="2" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #a68100; width: 60px; height: 25px; margin: 10px; position: absolute; bottom: 50px; right: 340px"}
+
+:::
+
+::: {.fragment fragment-index=2 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 150px; height: 75px; padding: 0px 10px 20px 10px; position: absolute; bottom: 25px; right: 140px"}
+Cf in highest category = N
+:::
+
+## Frequency table: step 6
+
+### Add a [cumulative percentage]{style="color:#e93cac"} column
+
+::: {.smaller}
+| Movie Rating<br>(score)  | Frequency<br>(f)  | Percent<br>(%) | <br>Cf | <br>CPcnt  |
+|:--------:|:------:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 0.9 | 1 | 0.9 |
+| 2 | 1 | 0.9 | 2 | 1.8 |
+| 3 | 6  | 5.4 | 8 | 7.2  |
+| 4 | 11 | 10 | 19 | 17.2  |
+| 5 | 17 | 15.5  | 36  | 32.7 |
+| 6 | 23 | 20.9  | 59  | 53.6  |
+| 7 | 17 | 15.5  | 76  | 69.1  |
+| 8 | 19 | 17.3  | 95  | 86.4  |
+| 9 | 9 | 8.2 | 104 | 94.6  |
+| 10 | 6 | 5.4  | 110 | 100 |
+| **Total (N)** | **110** | **100** |  |  | 
+
+: Table 1: Raw Frequency Distribution of Movie Ratings {tbl-colwidths="[20,20,20,20,20]"}
+:::
+
+::: {.fragment fragment-index=1 data-id="box4" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 300px; height: 160px; padding: 0px 10px 20px 10px; position: absolute; top: 0px; right: -60px"}
+Cumulative<br>percentage (C%) = <br>
+[Percentage]{.underline} of cases in the given category [and lower categories]{.underline}
+
+:::
+
+::: {.fragment fragment-index=1 data-id="box4" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 185px; height: 85px; padding: 0px 10px 20px 10px; position: absolute; top: 200px; right: -60px"}
+$$
+C\%_x = \frac{Cf_x}{N} (100)
+$$
+:::
+
+::: {.fragment fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #754cbc; width: 100px; height: 25px; margin: 10px; position: absolute; top: 205px; right: 172px"}
+
+:::
+
+::: {.fragment fragment-index="2" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #754cbc; width: 60px; height: 25px; margin: 10px; position: absolute; bottom: 264px; right: 195px"}
+
+:::
+
+::: {.fragment fragment-index=2 data-id="box4" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 200px; height: 75px; padding: 0px 10px 20px 10px; position: absolute; bottom: 235px; right: -75px"}
+$$
+C\%_4 = \frac{19}{110} (100)
+$$
+:::
+
+::: {.fragment fragment-index="2" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #754cbc; width: 60px; height: 25px; margin: 10px; position: absolute; bottom: 50px; right: 195px"}
+
+:::
+
+::: {.fragment fragment-index=2 data-id="box4" style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 175px; height: 75px; padding: 0px 10px 20px 10px; position: absolute; bottom: 25px; right: -50px"}
+C% in highest category = 100
+:::
+
+
+
+## Things to watch out for
+
+### Reverse ordering of categories 
+
+::: {.smaller}
+| Number of <br> courses  | Frequency<br>(f)  | Percent<br>(%) | <br>Cf | <br>CPcnt  |
+|:--------:|:------:|:---:|:---:|:---:|
+| 6 | 2 |  |  |  |
+| 5 | 4 |  |  |  |
+| 4 | 8 |  |  |  |
+| 3 | 24  |  |  |   |
+| 2 | 26 |  |  |   |
+| 1 | 18 |   |   |  |
+| 0 | 3 |   |   |   |
+| **Total (N)** | **85** |  |  |  | 
+
+: Frequency Distribution of Number of Statistics Classes Completed {tbl-colwidths="[20,20,20,20,20]"}
+:::
+
+## Things to watch out for
+
+### Reverse ordering of categories 
+
+::: {.smaller}
+| Number of <br> courses  | Frequency<br>(f)  | Percent<br>(%) | <br>Cf | <br>CPcnt  |
+|:--------:|:------:|:---:|:---:|:---:|
+| 6 | 2 | [2.35]{style="color:#e93cac"} | [85]{style="color:#e93cac"} | [100.00]{style="color:#e93cac"} |
+| 5 | 4 | [4.71]{style="color:#e93cac"} | [83]{style="color:#e93cac"} | [97.65]{style="color:#e93cac"} |
+| 4 | 8 | [9.41]{style="color:#e93cac"} | [79]{style="color:#e93cac"} | [92.94]{style="color:#e93cac"} |
+| 3 | 24  | [28.24]{style="color:#e93cac"} | [71]{style="color:#e93cac"}  |  [83.53]{style="color:#e93cac"} |
+| 2 | 26 | [30.59]{style="color:#e93cac"}  |  [47]{style="color:#e93cac"} | [55.29]{style="color:#e93cac"}  |
+| 1 | 18 |  [21.18]{style="color:#e93cac"} |  [21]{style="color:#e93cac"} | [24.71]{style="color:#e93cac"} |
+| 0 | 3 | [3.53]{style="color:#e93cac"}  |  [3]{style="color:#e93cac"} |  [3.53]{style="color:#e93cac"} |
+| **Total (N)** | **85** | [100]{style="color:#e93cac"} |  |  | 
+
+: Frequency Distribution of Number of Statistics Classes Completed {tbl-colwidths="[20,20,20,20,20]"}
+:::
+
+## Things to watch out for
+
+### Level of measurement makes some columns inappropriate
+
+::: {.smaller}
+| <br>Major  | Frequency<br>(f)  | Percent<br>(%) | <br>Cf | <br>CPcnt  |
+|:--------:|:------:|:---:|:---:|:---:|
+| Arts | 61 |  |  |  |
+| Humanities | 385 |  |  |  |
+| Social Science | 425 |  |  |  |
+| Business |  265 |  |  |   |
+| Physical Sciences | 194 |  |  |   |
+| Other | 10 |   |   |  |
+| **Total (N)** | **1340** |  |  |  | 
+
+: Frequency Distribution of College Majors {tbl-colwidths="[20,20,20,20,20]"}
+:::
+
+::: {.fragment data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 275px; height: 35px; padding: 0px 0px 20px 10px; position: absolute; top: 135px; right: 50px"}
+Level of measurement?
+:::
+
+## Things to watch out for
+
+### Level of measurement makes some columns inappropriate
+
+::: {.smaller}
+| <br>Major  | Frequency<br>(f)  | Percent<br>(%) | <br>Cf | <br>CPcnt  |
+|:--------:|:------:|:---:|:---:|:---:|
+| Arts | 61 | [4.55]{style="color:#e93cac"} |  |  |
+| Humanities | 385 | [28.73]{style="color:#e93cac"}  |  |  |
+| Social Science | 425 | [31.72]{style="color:#e93cac"}  |  |  |
+| Business |  265 | [19.78]{style="color:#e93cac"} |  |   |
+| Physical Sciences | 194 | [14.48]{style="color:#e93cac"} |  |   |
+| Other | 10 |  [0.75]{style="color:#e93cac"} |   |  |
+| **Total (N)** | **1340** | [**100**]{style="color:#e93cac"} |  |  | 
+
+: Frequency Distribution of College Majors {tbl-colwidths="[20,20,20,20,20]"}
+:::
+
+::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 300px; height: 140px; padding: 0px 0px 20px 10px; position: absolute; bottom: 200px; right: 100px"}
+Frequency or % “above” or “below” makes no sense without inherent ordering
+:::
+
+::: {data-id="box2" style="background: #e93cac; width: 400px; height: 5px; padding: 0px 0px 0px 0px; position: absolute; top: 280px; right: 50px"}
+:::
+
+
+## Things to watch out for
+
+### [What seems strange here?]{style="color:#e93cac"}
+
+::: {.smaller}
+| <br>Response  | Frequency<br>(f)  | Percent<br>(%) | <br>Cf | <br>CPcnt  |
+|:--------|:------:|:---:|:---:|:---:|
+| Very Dissatisfied | 7 | 9.33 | 7 | 9.33 |
+| Somewhat Dissatisfied | 22 | 29.33  | 29 | 38.67 |
+| Somewhat Satisfied | 20 | 26.67  | 49 | 65.33 |
+| Very Satisfied |  8 | 10.67 | 57  |  76.0 |
+| No Answer | 18 | 24 | 75 | 100.00 |
+| **Total (N)** | **75** | **100** |  |  | 
+
+: Frequency Distribution of Satisfaction with SOCI 708 {tbl-colwidths="[24,19,19,19,19]"}
+:::
+
+## Things to watch out for
+
+### Missing information
+
+::: {.smaller}
+| <br>Response  | Frequency<br>(f)  | Percent<br>(%) | <br>Cf | <br>CPcnt  |
+|:--------|:------:|:---:|:---:|:---:|
+| Very Dissatisfied | 7 | 9.33 | 7 | 9.33 |
+| Somewhat Dissatisfied | 22 | 29.33  | 29 | 38.67 |
+| Somewhat Satisfied | 20 | 26.67  | 49 | 65.33 |
+| Very Satisfied |  8 | 10.67 | 57  |  76.0 |
+|[ No Answer ]{style="color:#e93cac"}|[ 18 ]{style="color:#e93cac"}|[ 24 ]{style="color:#e93cac"}| [ 75 ]{style="color:#e93cac"}|[ 100.00 ]{style="color:#e93cac"}|
+| **Total (N)** | **75** | **100** |  |  | 
+
+: Frequency Distribution of Satisfaction with SOCI 708 {tbl-colwidths="[24,19,19,19,19]"}
+:::
+
+<br>
+
+> Question: Was a majority at least somewhat dissatisfied with the course (somewhat dissatisfied or worse)?
+
+::: {.fragment fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #e93cac; width: 100px; height: 25px; margin: 10px; position: absolute; top: 278px; right: 78px"}
+
+:::
+
+## Things to watch out for
+
+### Missing information
+
+::: {.smaller}
+| <br>Response  | Frequency<br>(f)  | Percent<br>(%) | <br>Cf | <br>CPcnt  |
+|:--------|:------:|:---:|:---:|:---:|
+| Very Dissatisfied | 7 | [12.28]{style="color:#e93cac"} | [7]{style="color:#e93cac"} | [12.28]{style="color:#e93cac"} |
+| Somewhat Dissatisfied | 22 | [38.60]{style="color:#e93cac"}  | [29]{style="color:#e93cac"} | [50.88]{style="color:#e93cac"} |
+| Somewhat Satisfied | 20 | [35.09]{style="color:#e93cac"}  | [49]{style="color:#e93cac"} | [85.96]{style="color:#e93cac"} |
+| Very Satisfied |  8 | [14.04]{style="color:#e93cac"} | [57]{style="color:#e93cac"}  | [100]{style="color:#e93cac"} |
+|[ No Answer ]{style="color:#e93cac"}|[ 18 ]{style="color:#e93cac"}|[ 24 ]{style="color:#e93cac"}| [ 75 ]{style="color:#e93cac"}|[ 100.00 ]{style="color:#e93cac"}|
+| **[Valid (N)]{style="color:#e93cac"}** | **[57]{style="color:#e93cac"}** | **100**|  |  | 
+
+: Frequency Distribution of Satisfaction with SOCI 708 {tbl-colwidths="[24,19,19,19,19]"}
+:::
+
+<br>
+
+> Question: Was a majority at least somewhat dissatisfied with the course (somewhat dissatisfied or worse)?
+
+::: {data-id="box2" style="background: #e93cac; width: 950px; height: 5px; padding: 0px 0px 0px 0px; position: absolute; top: 405px; left: 50px"}
+:::
+
+::: {data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #2ad2c9; width: 100px; height: 25px; margin: 10px; position: absolute; top: 278px; right: 78px"}
+
+:::
+
+::: {.fragment data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 400px; height: 175px; padding: 0px 0px 10px 10px; position: absolute; top: 0px; right: -50px"}
+Best practice:
+Calculate all statistics based on information from those cases with valid (known) information on the variables of interest.
+:::
+
+# Break! {.section-title background-color="#2ad2c9"}
+
+# Graphical techniques {.section-title background-color="#c5b4e3"}
+
+---
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+<br>
+
+::: r-fit-text 
+> [Graphical Techniques]{style="color:#e93cac"} <br>
+Descriptive tools to<br>display the distribution<br>of variables, or the<br>association between<br>variables, using<br>pictures or figures.
+:::
+:::
+
+::: {.column width="40%"}
+
+<br>
+<br>
+<br>
+<br>
+
+::: {.fragment fragment-index="1"}
+- Huge topic that people spend their lifetimes perfecting
+
+<br>
+
+#### Today's goals
+- Brief intro to basic types
+- Basic guidelines for responsible graphing (given great potential to confuse or mislead)
+
+:::
+
+:::
+
+::::
+
+![](images/tufte.jpeg){.fragment fragment-index="2" .absolute top=25 right=-25 width="450"}
+
+
+## 5 rules for responsible graphs
+
+1. Choose the right kind of graph
+    - Level of measurement
+    - Bar charts, histograms, line charts etc.
+2. Clearly label the nature of the information
+    - Title and axis labels are standard
+3. Focus on your perspective
+    - Watch for angles, axis dimensions that skew results
+4. Keep it simple
+    - Avoid extraneous, distracting information
+    - Avoid the use of shapes that do not help convey information
+5. Be objective!
+
+::: {.fragment data-id="box1" style="background: rgba(255, 255, 255, 0); border: 2px solid #e93cac; width: 500px; height: 130px; margin: 10px; position: absolute; top: 70px; left: -10px"}
+
+:::
+
+## Rule 1: Choose the right kind of graph
+
+::: {.fragment fragment-index="1"}
+### Nominal & ordinal variables 
+
+#### Bar chart/graph: % or number of cases in each category
+:::
+
+::: {.fragment fragment-index="2"}
+```{r}
+#| echo: false
+#| fig-width: 5
+library(ggthemes)
+ggplot(msleep, aes(x = vore)) + 
+geom_bar(fill = "#ffc700") + 
+labs(title = "Distribution of mammals by diet type", x = "-vore", y = "count") +
+theme_tufte() 
+```
+:::
+
+::: {.fragment fragment-index="3" .absolute top=200 right=-25 width="450"}
+- Summarizes the distribution (relative size of the categories)
+- Questions:
+    - Biggest category?
+    - Smallest category?
+    - How much bigger is the biggest category from the 2nd biggest category?
+:::
+
+## Rule 1: Choose the right kind of graph
+
+### Nominal & ordinal variables 
+
+#### Bar chart/graph: % or number of cases in each category
+
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-align: left
+#| fig-cap: Categories do not necessarily need to add up to 100%
+library(ggthemes)
+
+drinkers <- tibble(Day = fct(c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")), 
+                   Percent = c(4, 6, 9, 22, 27, 34, 13))
+
+ggplot(drinkers, aes(x = Day, y = Percent)) + 
+geom_col(fill = "#c5b4e3") + 
+labs(title = "% of students drinking alcohol", x = "", y = "Percentage") +
+theme_tufte() 
+```
+
+
+::: {.incremental .absolute top=200 right=-25 width="450"}
+- This chart likely contains responses to several different questions/items.
+    - Did you drink on Monday?
+    - Did you drink on Tuesday?
+    - Etc.
+
+- Level of measurement of the variables produced by these items?
+    - [Nominal]{style="color:#e93cac"}
+
+- This type of variable is called a [dichotomous]{.underline} (2 values) or [dummy]{.underline} (0, 1) variable. 
+:::
+
+## Rule 1: Choose the right kind of graph
+
+### Interval variables 
+
+#### Histogram: summarizes the number of cases with each value (or range) on a variable
+
+::: {.fragment fragment-index="1"}
+```{r}
+#| echo: false
+#| fig-width: 5
+library(ggthemes)
+ggplot(mpg, aes(x = cty)) + 
+geom_histogram(fill = "#aadb1e", color = "#6e8e13", binwidth = 1) + 
+labs(title = "Distribution of mpg (city) of regularly released cars", subtitle = "1999-2008", x = "Miles Per Gallon (City)", y = "Count") +
+theme_tufte() 
+```
+:::
+
+::: {.incremental .absolute top=200 right=-25 width="450"}
+- Usually used for continuous variables (this is why the bars touch)
+- All bars add up to 100% of individuals
+:::
+
+## Histograms tell us about the **[SHAPE]{style="color:#e93cac"}** of a distribution <span style="color:#4b2e83 ">{{< fa scroll >}}</span> {.scrollable style="font-size:0.8em"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: fragment
+- Center: 
+    - Most common value or values
+    - Where the cases tend to be clustered/centered
+:::
+:::
+
+::: {.column width="50%"}
+::: fragment
+- Spread: 
+    - Is there a lot of diversity (cases spread out across the values of the variable)…
+    - Or are most cases clustered within a few values
+:::
+:::
+
+::::
+
+::: fragment
+- Symmetry vs. Skewness
+
+[![](images/skew.png){fig-align=center}](https://derekogle.com/Book107/UnivEDA.html)
+:::
+
+## Rule 1: Choose the right kind of graph
+
+### Interval variables 
+
+#### Histogram: summarizes the number of cases with each value (or range) on a variable
+
+```{r}
+#| echo: false
+#| fig-width: 5
+library(ggthemes)
+ggplot(mpg, aes(x = cty)) + 
+geom_histogram(fill = "#aadb1e",color = "#6e8e13", binwidth = 1) + 
+labs(title = "Distribution of mpg (city) of regularly released cars", subtitle = "1999-2008", x = "Miles Per Gallon (City)", y = "Count") +
+theme_tufte() 
+```
+
+::: {.absolute top=200 right=-25 width="450"}
+- Usually used for continuous variables (this is why the bars touch)
+- All bars add up to 100% of individuals
+
+<br>
+<br>
+
+- [What can you say about the shape of this distribution?]{style="color:#e93cac"}
+:::
+
+## Rule 1: Choose the right kind of graph
+
+### Time-series data
+
+#### Time plots: Shows us trends and discontinuity (unusual periods)
+
+::: {.fragment fragment-index="1"}
+```{r}
+#| echo: false
+#| fig-width: 5
+library(ggthemes)
+ggplot(economics, aes(x = date)) + 
+geom_line(aes(y = unemploy)) + 
+labs(title = "Unemployment in St. Louis, MO", subtitle = "1967-2015", x = "Date", y = "Number of unemployed (in 1000s)") +
+theme_tufte() 
+```
+:::
+
+
+::: {.fragment fragment-index="2" .absolute top=200 right=-25 width="450"}
+- Time always on the horizontal (x) axis
+- Value of the variable always on the vertical (y) axis.
+:::
+
+
+## 5 rules for responsible graphs
+
+1. Choose the right kind of graph
+    - Level of measurement
+    - Bar charts, histograms, line charts etc.
+2. Clearly label the nature of the information
+    - Title and axis labels are standard
+3. Focus on your perspective
+    - Watch for angles, axis dimensions that skew results
+4. Keep it simple
+    - Avoid extraneous, distracting information
+    - Avoid the use of shapes that do not help convey information
+5. Be objective!
+
+::: {data-id="box1" style="background: rgba(255, 255, 255, 0); border: 2px solid #e93cac; width: 525px; height: 80px; margin: 10px; position: absolute; top: 205px; left: -20px"}
+
+:::
+
+## Rule 2: Clearly label the nature of the information
+
+```{r}
+#| echo: false
+movie_ratings_gender <- tibble(rating = rep(0:10, times = 2), 
+                               Gender = c(rep("Female", 11), rep("Male", 11)), 
+                               frequency = c(0, 0, 0, 1, 3, 5, 9, 10, 12, 6, 4, 0, 1, 1, 5, 8, 12, 14, 7, 7, 3, 2), 
+                               percentage = c(0.0, 0.0, 0.0, 2.0, 6.0, 10.0, 18.0, 20.0, 24.0, 12.0, 8.0, 0.0, 1.7, 1.7, 8.3, 13.3, 20.0, 23.3, 11.7, 11.7, 5.0, 3.3))
+
+ggplot(movie_ratings_gender, aes(x = rating, y = percentage)) +
+geom_col(aes(fill = Gender), position = "dodge") +
+labs(title = "Distribution of movie ratings by gender (N=110)", x = "Movie rating", y = "Percentage of viewers") +
+theme_tufte() 
+```
+
+
+## 5 rules for responsible graphs
+
+1. Choose the right kind of graph
+    - Level of measurement
+    - Bar charts, histograms, line charts etc.
+2. Clearly label the nature of the information
+    - Title and axis labels are standard
+3. Focus on your perspective
+    - Watch for angles, axis dimensions that skew results
+4. Keep it simple
+    - Avoid extraneous, distracting information
+    - Avoid the use of shapes that do not help convey information
+5. Be objective!
+
+::: {data-id="box1" style="background: rgba(255, 255, 255, 0); border: 2px solid #e93cac; width: 675px; height: 80px; margin: 10px; position: absolute; top: 295px; left: -20px"}
+
+:::
+
+## Rule 3: Focus on your perspective
+
+```{r}
+#| echo: false
+movie_ratings_gender <- tibble(rating = rep(0:10, times = 2), 
+                               Gender = c(rep("Female", 11), rep("Male", 11)), 
+                               frequency = c(0, 0, 0, 1, 3, 5, 9, 10, 12, 6, 4, 0, 1, 1, 5, 8, 12, 14, 7, 7, 3, 2), 
+                               percentage = c(0.0, 0.0, 0.0, 2.0, 6.0, 10.0, 18.0, 20.0, 24.0, 12.0, 8.0, 0.0, 1.7, 1.7, 8.3, 13.3, 20.0, 23.3, 11.7, 11.7, 5.0, 3.3))
+
+ggplot(movie_ratings_gender, aes(x = rating, y = percentage)) +
+geom_col(aes(fill = Gender), position = "dodge") +
+labs(title = "Distribution of movie ratings by gender (N=110)", x = "Movie rating", y = "Percentage of viewers") +
+ylim(0, 100) +
+theme_tufte() 
+```
+
+## Rule 3: Focus on your perspective
+
+```{r}
+#| echo: false
+movie_ratings_gender <- tibble(rating = rep(0:10, times = 2), 
+                               Gender = c(rep("Female", 11), rep("Male", 11)), 
+                               frequency = c(0, 0, 0, 1, 3, 5, 9, 10, 12, 6, 4, 0, 1, 1, 5, 8, 12, 14, 7, 7, 3, 2), 
+                               percentage = c(0.0, 0.0, 0.0, 2.0, 6.0, 10.0, 18.0, 20.0, 24.0, 12.0, 8.0, 0.0, 1.7, 1.7, 8.3, 13.3, 20.0, 23.3, 11.7, 11.7, 5.0, 3.3))
+
+ggplot(movie_ratings_gender, aes(x = rating, y = percentage)) +
+geom_col(aes(fill = Gender), position = "dodge") +
+labs(title = "Distribution of movie ratings by gender (N=110)", x = "Movie rating", y = "Percentage of viewers") +
+theme_tufte() 
+```
+
+## 5 rules for responsible graphs
+
+1. Choose the right kind of graph
+    - Level of measurement
+    - Bar charts, histograms, line charts etc.
+2. Clearly label the nature of the information
+    - Title and axis labels are standard
+3. Focus on your perspective
+    - Watch for angles, axis dimensions that skew results
+4. Keep it simple
+    - Avoid extraneous, distracting information
+    - Avoid the use of shapes that do not help convey information
+5. Be objective!
+
+::: {data-id="box1" style="background: rgba(255, 255, 255, 0); border: 2px solid #e93cac; width: 775px; height: 130px; margin: 10px; position: absolute; top: 375px; left: -20px"}
+
+:::
+
+## Rule 4: Keep it simple
+
+```{r}
+#| echo: false
+movie_ratings_gender <- tibble(rating = rep(0:10, times = 2), 
+                               Gender = c(rep("Female", 11), rep("Male", 11)), 
+                               frequency = c(0, 0, 0, 1, 3, 5, 9, 10, 12, 6, 4, 0, 1, 1, 5, 8, 12, 14, 7, 7, 3, 2), 
+                               percentage = c(0.0, 0.0, 0.0, 2.0, 6.0, 10.0, 18.0, 20.0, 24.0, 12.0, 8.0, 0.0, 1.7, 1.7, 8.3, 13.3, 20.0, 23.3, 11.7, 11.7, 5.0, 3.3))
+
+ggplot(movie_ratings_gender, aes(x = rating, y = percentage, label = percentage)) +
+geom_col(aes(fill = Gender), position = "dodge") +
+geom_text() + 
+labs(title = "Distribution of movie ratings by gender.\nData collected from a sample of 110 movie goers at Mama's Megaplex\nand Pizzeria in Shankton, Illinois on April 4, 2019.", x = "Movie rating", y = "Percentage of viewers = (f/N)*100") +
+theme_tufte() 
+```
+
+## 5 rules for responsible graphs
+
+1. Choose the right kind of graph
+    - Level of measurement
+    - Bar charts, histograms, line charts etc.
+2. Clearly label the nature of the information
+    - Title and axis labels are standard
+3. Focus on your perspective~~
+    - Watch for angles, axis dimensions that skew results
+4. Keep it simple
+    - Avoid extraneous, distracting information
+    - Avoid the use of shapes that do not help convey information
+5. Be objective!
+
+::: {data-id="box1" style="background: rgba(255, 255, 255, 0); border: 2px solid #e93cac; width: 185px; height: 45px; margin: 10px; position: absolute; top: 505px; left: -20px"}
+
+:::
+
+## Rule 5: Be objective
+
+::: {.fragment fragment-index="3"}
+### Example of axis truncation
+:::
+
+::: {.fragment fragment-index="1" .absolute top=150 left=-50}
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: left
+library(ggrepel)
+divorce_bad <- tibble(Year = c(2005, 2007, 2008), Divorces = c(16.4, 17.5, 16.9))
+
+divorce_bad |> ggplot(aes(Year, Divorces, label = Divorces)) + 
+geom_line() + 
+geom_point() +
+geom_text_repel(color = "#e93cac") +
+labs(title = "Number of Divorces", subtitle = "1,000 Married Women Age 15+, by Year, United States", x = "Year", y = "Divorces") +
+theme_tufte() 
+```
+:::
+
+::: {.fragment fragment-index=2 data-id="box4" style="background: #ffc700; border: 4px solid #a68100; border-radius: 15px; width: 250px; height: 100px; padding: 0px 10px 20px 10px; position: absolute; top: 200px; right: 250px"}
+What does this chart imply about divorce rates?
+:::
+
+::: {.fragment fragment-index="3" .absolute bottom=0 right=-50}
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: right
+divorce_good <- tibble(Year = c(1960, 1965, 1870, 1975, 1980, 1985, 1990, 1995, 2000, 2005, 2007, 2008), Divorces = c(9.2, 10.6, 14.9, 20.3, 22.6, 21.7, 20.9, 19.8, 18.8, 16.4, 17.5, 16.9))
+
+divorce_good |> ggplot(aes(Year, Divorces, label = Divorces)) + 
+geom_line() + 
+geom_point() +
+geom_text_repel(color = "#e93cac") +
+labs(title = "Number of Divorces", subtitle = "1,000 Married Women Age 15+, by Year, United States", x = "Year", y = "Divorces") +
+theme_tufte() 
+```
+:::
+
+::: {.fragment fragment-index=3 data-id="box4" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 250px; height: 75px; padding: 0px 10px 20px 10px; position: absolute; bottom: 100px; left: 250px"}
+Note the difference in the X and Y axis.
+:::
+
+## Rule 5: Be objective
+
+::: {.fragment fragment-index="2"}
+### No consistent y-axis
+:::
+
+::: {.fragment fragment-index="1" .absolute top=150 left=-50}
+![](images/pp_distorted.png)
+:::
+
+
+::: {.fragment fragment-index="3" .absolute bottom=40 right=-100 width="600"}
+![](images/pp_corrected.png)
+:::
+
+::: {.fragment fragment-index=1 data-id="box3" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 600px; height: 60px; padding: 0px 10px 20px 10px; position: absolute; bottom: -20px; left: 70px"}
+[Graphic Presented by Congressman Jason Chaffetz (R-UT) During Meeting About Planned Parenthood Funding. September 29, 2015]{.smaller}
+:::
+
+## Rule 5: Be objective
+
+::: {.fragment fragment-index="2"}
+#### Purposefully misleading
+:::
+
+::: {.r-stack}
+
+![](images/crime_bad.jpeg){.fragment fragment-index="1" width="950" fig-align="center"}
+
+![](images/crime1.jpeg){.fragment .fade-in-then-out fragment-index="2" width="400" .absolute top=-50 right=-80}
+
+![](images/crime2.jpeg){.fragment .fade-in-then-out fragment-index="2" width="450" .absolute bottom=-50 right=-80}
+
+:::
+
+::: {.fragment fragment-index="3" .absolute bottom=150 right=215}
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+crime_good <- tibble(Date = my(c("October 2018", "March 2019", "June 2020", "April 2021")), `% of Adults` = c(52, 49, 41, 48))
+crime_good |> ggplot(aes(Date, `% of Adults`, label = `% of Adults`)) + 
+geom_line() + 
+geom_point() +
+geom_text_repel(color = "#e93cac") +
+ylim(0, 60) +
+labs(title = "Violent crime is fairly stable") +
+theme_tufte() + 
+theme(panel.background = element_rect(fill = "white"),
+      plot.background=element_rect(fill = "white"))
+```
+
+:::
+
+# Fin! {.section-title background-color="#2ad2c9"}
+
+## {data-menu-title="Syllabus" background-iframe="https://vsass.github.io/SOC221/syllabus.html" background-interactive=TRUE}

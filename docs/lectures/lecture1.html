@@ -6,11 +6,10 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.43">
+  <meta name="generator" content="quarto-1.6.42">
 
   <meta name="author" content="Victoria Sass">
   <title> Introductions, Overview of statistics, &amp; Producing data: surveys and sampling </title>
@@ -32,211 +31,13 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-fe9f4a2fc7273c3b31eb1048bce176eb.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
-
-  .callout {
-    margin-top: 1em;
-    margin-bottom: 1em;  
-    border-radius: .25rem;
-  }
-
-  .callout.callout-style-simple { 
-    padding: 0em 0.5em;
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    display: flex;
-  }
-
-  .callout.callout-style-default {
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-  }
-
-  .callout .callout-body-container {
-    flex-grow: 1;
-  }
-
-  .callout.callout-style-simple .callout-body {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-style-default .callout-body {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-titled.callout-style-simple .callout-body {
-    margin-top: 0.2em;
-  }
-
-  .callout:not(.callout-titled) .callout-body {
-      display: flex;
-  }
-
-  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
-    padding-left: 1.6em;
-  }
-
-  .callout.callout-titled .callout-header {
-    padding-top: 0.2em;
-    margin-bottom: -0.2em;
-  }
-
-  .callout.callout-titled .callout-title  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-    
-  .callout.callout-titled.callout-style-simple .callout-content  p {
-    margin-top: 0;
-  }
-
-  .callout.callout-titled.callout-style-default .callout-content  p {
-    margin-top: 0.7em;
-  }
-
-  .callout.callout-style-simple div.callout-title {
-    border-bottom: none;
-    font-size: .9rem;
-    font-weight: 600;
-    opacity: 75%;
-  }
-
-  .callout.callout-style-default  div.callout-title {
-    border-bottom: none;
-    font-weight: 600;
-    opacity: 85%;
-    font-size: 0.9rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-default div.callout-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-simple .callout-icon::before {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
-
-  .callout.callout-style-default .callout-icon::before {
-    height: 0.9rem;
-    width: 0.9rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 0.9rem 0.9rem;
-  }
-
-  .callout-title {
-    display: flex
-  }
-    
-  .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  .callout.no-icon::before {
-    display: none !important;
-  }
-
-  .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .callout.callout-titled .callout-icon::before {
-    margin-top: .5rem;
-    padding-right: .5rem;
-  }
-
-  .callout:not(.callout-titled) .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  /* Callout Types */
-
-  div.callout-note {
-    border-left-color: #4582ec !important;
-  }
-
-  div.callout-note .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
-  }
-
-  div.callout-note.callout-style-default .callout-title {
-    background-color: #dae6fb
-  }
-
-  div.callout-important {
-    border-left-color: #d9534f !important;
-  }
-
-  div.callout-important .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-important.callout-style-default .callout-title {
-    background-color: #f7dddc
-  }
-
-  div.callout-warning {
-    border-left-color: #f0ad4e !important;
-  }
-
-  div.callout-warning .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-warning.callout-style-default .callout-title {
-    background-color: #fcefdc
-  }
-
-  div.callout-tip {
-    border-left-color: #02b875 !important;
-  }
-
-  div.callout-tip .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-tip.callout-style-default .callout-title {
-    background-color: #ccf1e3
-  }
-
-  div.callout-caution {
-    border-left-color: #fd7e14 !important;
-  }
-
-  div.callout-caution .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
-  }
-
-  div.callout-caution.callout-style-default .callout-title {
-    background-color: #ffe5d0
-  }
-
-  </style>
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -344,7 +145,7 @@ Victoria Sass
 </div>
 </div>
 
-  <p class="date">Monday, June 17, 2024</p>
+  <p class="date">Monday, June 23, 2025</p>
 </section>
 <section>
 <section id="introductions" class="title-slide slide level1 section-title center" data-background-color="#c5b4e3">
@@ -355,7 +156,6 @@ Victoria Sass
 <h2>Welcome to SOC/STAT/CSSS 221!</h2>
 <p><br></p>
 <div class="fragment">
-<!-- -->
 <h3 id="plan-for-today">Plan for today:</h3>
 <ul>
 <li class="fragment">Introductions</li>
@@ -368,7 +168,6 @@ Victoria Sass
 <section id="who-are-you" class="slide level2">
 <h2>Who are you??</h2>
 <div class="fragment">
-<!-- -->
 <h3 id="hi-im-vic">Hi! 👋🏻 I’m Vic!</h3>
 <ul>
 <li class="fragment">I’m the instructor for this course and a PhD Candidate in the Sociology department</li>
@@ -444,7 +243,6 @@ named Lemon (aka Clementine)</li>
 </div>
 <p><br></p>
 <div class="fragment" data-fragment-index="2">
-<!-- -->
 <h3 id="good-news">Good news!</h3>
 <p>Statistics is NOT math…</p>
 </div>
@@ -456,8 +254,7 @@ named Lemon (aka Clementine)</li>
 </div>
 </div><div class="column" style="width:50%;">
 
-</div>
-</div>
+</div></div>
 <div class="fragment" data-fragment-index="3">
 <p><br></p>
 <p><img data-src="images/statistics-review.webp" class="absolute" style="top: 75px; right: -100px; width: 600px; "></p>
@@ -491,7 +288,7 @@ named Lemon (aka Clementine)</li>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><br> <span style="color:#e15759"><i class="fa-solid fa-thumbs-up fa-2xl" aria-label="thumbs-up"></i></span></td>
+<td style="text-align: center;"><br> <span style="color:#e15759"><i class="fa-solid fa-hashtag fa-2xl" aria-label="hashtag"></i></span></td>
 <td><span style="color:#e15759">What is the relative number of red, blue, green, and yellow M&amp;Ms in a bag?</span></td>
 </tr>
 <tr class="even">
@@ -528,8 +325,7 @@ named Lemon (aka Clementine)</li>
 </tbody>
 </table>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section class="slide level2">
 
@@ -541,39 +337,55 @@ named Lemon (aka Clementine)</li>
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="-8 -8 273.23828125 337" style="; display: block; margin: auto auto auto 0" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-1" height="576">
-<style>#mermaid-figure-1{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#4b2e83;}#mermaid-figure-1 .error-icon{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);}#mermaid-figure-1 .error-text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);stroke:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-1 .marker.cross{stroke:#171c2c;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-1 .cluster-label text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 .cluster-label span,#mermaid-figure-1 p{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 .label text,#mermaid-figure-1 span,#mermaid-figure-1 p{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-1 .node rect,#mermaid-figure-1 .node circle,#mermaid-figure-1 .node ellipse,#mermaid-figure-1 .node polygon,#mermaid-figure-1 .node path{fill:#c5b4e3;stroke:hsl(261.7021276596, 5.6310679612%, 69.8039215686%);stroke-width:1px;}#mermaid-figure-1 .flowchart-label text{text-anchor:middle;}#mermaid-figure-1 .node .label{text-align:center;}#mermaid-figure-1 .node.clickable{cursor:pointer;}#mermaid-figure-1 .arrowheadPath{fill:#171c2c;}#mermaid-figure-1 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-1 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-1 .edgeLabel{background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);text-align:center;}#mermaid-figure-1 .edgeLabel rect{opacity:0.5;background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);fill:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);}#mermaid-figure-1 .cluster rect{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);stroke:hsl(81.7021276596, 5.6310679612%, 74.8039215686%);stroke-width:1px;}#mermaid-figure-1 .cluster text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 .cluster span,#mermaid-figure-1 p{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);border:1px solid hsl(81.7021276596, 5.6310679612%, 74.8039215686%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-1 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="10" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id1 LE-id2" id="L-id1-id2-0" d="M115.33462761976048,33.5L109.56140843313374,37.666666666666664C103.78818924650699,41.833333333333336,92.24175087325348,50.166666666666664,86.46853168662675,58.5C80.6953125,66.83333333333333,80.6953125,75.16666666666667,80.6953125,79.33333333333333L80.6953125,83.5"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id2 LE-id3" id="L-id2-id3-0" d="M80.6953125,117L80.6953125,121.16666666666667C80.6953125,125.33333333333333,80.6953125,133.66666666666666,80.6953125,142C80.6953125,150.33333333333334,80.6953125,158.66666666666666,80.6953125,162.83333333333334L80.6953125,167"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id3 LE-id4" id="L-id3-id4-0" d="M80.6953125,219L80.6953125,223.16666666666666C80.6953125,227.33333333333334,80.6953125,235.66666666666666,85.42142820669933,244C90.14754391339869,252.33333333333334,99.59977532679738,260.6666666666667,104.32589103349672,264.8333333333333L109.05200674019608,269"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id4 LE-id1" id="L-id4-id1-0" d="M168.03393075980392,269L172.76004646650327,264.8333333333333C177.48616217320262,260.6666666666667,186.93839358660134,252.33333333333334,191.66450929330065,239.66666666666666C196.390625,227,196.390625,210,196.390625,193C196.390625,176,196.390625,159,196.390625,143.54166666666666C196.390625,128.08333333333334,196.390625,114.16666666666667,196.390625,100.25C196.390625,86.33333333333333,196.390625,72.41666666666667,190.61740581337324,61.291666666666664C184.8441866267465,50.166666666666664,173.29774825349304,41.833333333333336,167.52452906686628,37.666666666666664L161.75130988023952,33.5"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="0 0 321 478" style="; display: block; margin: auto auto auto 0" class="flowchart" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-1" height="576">
+<style>#mermaid-figure-1{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#4b2e83;}#mermaid-figure-1 .error-icon{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);}#mermaid-figure-1 .error-text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);stroke:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-1 .marker.cross{stroke:#171c2c;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 p{margin:0;}#mermaid-figure-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-1 .cluster-label text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 .cluster-label span{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 .cluster-label span p{background-color:transparent;}#mermaid-figure-1 .label text,#mermaid-figure-1 span{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-1 .node rect,#mermaid-figure-1 .node circle,#mermaid-figure-1 .node ellipse,#mermaid-figure-1 .node polygon,#mermaid-figure-1 .node path{fill:#c5b4e3;stroke:hsl(261.7021276596, 5.6310679612%, 69.8039215686%);stroke-width:1px;}#mermaid-figure-1 .rough-node .label text,#mermaid-figure-1 .node .label text{text-anchor:middle;}#mermaid-figure-1 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-figure-1 .node .label{text-align:center;}#mermaid-figure-1 .node.clickable{cursor:pointer;}#mermaid-figure-1 .arrowheadPath{fill:#171c2c;}#mermaid-figure-1 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-1 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-1 .edgeLabel{background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);text-align:center;}#mermaid-figure-1 .edgeLabel p{background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);}#mermaid-figure-1 .edgeLabel rect{opacity:0.5;background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);fill:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);}#mermaid-figure-1 .labelBkg{background-color:rgba(179.9999999999, 227, 196.9999999999, 0.5);}#mermaid-figure-1 .cluster rect{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);stroke:hsl(81.7021276596, 5.6310679612%, 74.8039215686%);stroke-width:1px;}#mermaid-figure-1 .cluster text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 .cluster span{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);border:1px solid hsl(81.7021276596, 5.6310679612%, 74.8039215686%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-1 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688070654_flowchart-v2-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="4.5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688070654_flowchart-v2-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688070654_flowchart-v2-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688070654_flowchart-v2-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1750688070654_flowchart-v2-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1750688070654_flowchart-v2-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#mermaid-1750688070654_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id1_id2_0" d="M152.297,86L147.414,90.167C142.531,94.333,132.766,102.667,127.883,108.917C123,115.167,123,119.333,123,122.833C123,126.333,123,129.167,123,130.583L123,132"></path><path marker-end="url(#mermaid-1750688070654_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id2_id3_1" d="M123,190L123,194.167C123,198.333,123,206.667,123,212.917C123,219.167,123,223.333,123,226.833C123,230.333,123,233.167,123,234.583L123,236"></path><path marker-end="url(#mermaid-1750688070654_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id3_id4_2" d="M123,318L123,322.167C123,326.333,123,334.667,125.056,340.917C127.112,347.167,131.224,351.333,134.867,355.025C138.511,358.718,141.686,361.935,143.274,363.544L144.861,365.153"></path><path marker-end="url(#mermaid-1750688070654_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id4_id1_3" d="M248.329,368L252.441,363.833C256.553,359.667,264.776,351.333,268.888,336.5C273,321.667,273,300.333,273,279C273,257.667,273,236.333,273,217C273,197.667,273,180.333,273,163C273,145.667,273,128.333,270.559,117.583C268.117,106.833,263.234,102.667,258.859,98.933C254.483,95.199,250.614,91.898,248.68,90.247L246.746,88.596"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
 </foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
 </foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
 </foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
-</foreignobject></g></g></g><g class="nodes"><g transform="translate(138.54296875, 16.75)" id="flowchart-id1-12" class="node default default flowchart-label"><rect height="33.5" width="237.390625" y="-16.75" x="-118.6953125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-111.1953125, -9.25)" style="" class="label"><rect></rect><foreignobject height="18.5" width="222.390625">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">Interesting real-world question</span>
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(198, 47)" id="flowchart-id1-0" class="node default"><rect height="78" width="230" y="-39" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="" class="basic label-container"></rect><g transform="translate(-100, -24)" style="" class="label"><rect></rect><foreignobject height="48" width="200">
+<div style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Interesting real-world question
+</p>
+</span>
 </div>
-</foreignobject></g></g><g transform="translate(80.6953125, 100.25)" id="flowchart-id2-13" class="node default default flowchart-label"><rect height="33.5" width="102.4765625" y="-16.75" x="-51.23828125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-43.73828125, -9.25)" style="" class="label"><rect></rect><foreignobject height="18.5" width="87.4765625">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">Collect data</span>
+</foreignobject></g></g><g transform="translate(123, 163)" id="flowchart-id2-1" class="node default"><rect height="54" width="117.4765625" y="-27" x="-58.73828125" ry="5" data-et="node" data-id="abc" rx="5" style="" class="basic label-container"></rect><g transform="translate(-43.73828125, -12)" style="" class="label"><rect></rect><foreignobject height="24" width="87.4765625">
+<div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Collect data
+</p>
+</span>
 </div>
-</foreignobject></g></g><g transform="translate(80.6953125, 193)" id="flowchart-id3-14" class="node default default flowchart-label"><rect height="52" width="161.390625" y="-26" x="-80.6953125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-73.1953125, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="146.390625">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">Analyze data<br>(calculate statistics)</span>
+</foreignobject></g></g><g transform="translate(123, 279)" id="flowchart-id3-2" class="node default"><rect height="78" width="230" y="-39" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="" class="basic label-container"></rect><g transform="translate(-100, -24)" style="" class="label"><rect></rect><foreignobject height="48" width="200">
+<div style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Analyze data(calculate statistics)
+</p>
+</span>
 </div>
-</foreignobject></g></g><g transform="translate(138.54296875, 295)" id="flowchart-id4-15" class="node default default flowchart-label"><rect height="52" width="226.1953125" y="-26" x="-113.09765625" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-105.59765625, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="211.1953125">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">Develop an answer to your<br>question (interpret statistics)</span>
+</foreignobject></g></g><g transform="translate(198, 419)" id="flowchart-id4-3" class="node default"><rect height="102" width="230" y="-51" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="" class="basic label-container"></rect><g transform="translate(-100, -36)" style="" class="label"><rect></rect><foreignobject height="72" width="200">
+<div style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Develop an answer to your(interpret statistics)
+</p>
+</span>
 </div>
 </foreignobject></g></g></g></g></g>
 </svg>
@@ -589,35 +401,51 @@ named Lemon (aka Clementine)</li>
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="-8 -8 302.03125 374" style="; display: block; margin: auto 0 auto auto" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-6" height="576">
-<style>#mermaid-figure-6{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#e8e3d3;}#mermaid-figure-6 .error-icon{fill:hsl(222.8571428571, 26.6666666667%, 46.1764705882%);}#mermaid-figure-6 .error-text{fill:rgb(168.6500000001, 150.7071428572, 105.8500000001);stroke:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-6 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-6 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-6 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-6 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-6 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-6 .marker.cross{stroke:#171c2c;}#mermaid-figure-6 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-6 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#e8e3d3;}#mermaid-figure-6 .cluster-label text{fill:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 .cluster-label span,#mermaid-figure-6 p{color:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 .label text,#mermaid-figure-6 span,#mermaid-figure-6 p{fill:#e8e3d3;color:#e8e3d3;}#mermaid-figure-6 .node rect,#mermaid-figure-6 .node circle,#mermaid-figure-6 .node ellipse,#mermaid-figure-6 .node polygon,#mermaid-figure-6 .node path{fill:#85754d;stroke:hsl(42.8571428571, 0%, 31.1764705882%);stroke-width:1px;}#mermaid-figure-6 .flowchart-label text{text-anchor:middle;}#mermaid-figure-6 .node .label{text-align:center;}#mermaid-figure-6 .node.clickable{cursor:pointer;}#mermaid-figure-6 .arrowheadPath{fill:#171c2c;}#mermaid-figure-6 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-6 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-6 .edgeLabel{background-color:hsl(-77.1428571429, 26.6666666667%, 41.1764705882%);text-align:center;}#mermaid-figure-6 .edgeLabel rect{opacity:0.5;background-color:hsl(-77.1428571429, 26.6666666667%, 41.1764705882%);fill:hsl(-77.1428571429, 26.6666666667%, 41.1764705882%);}#mermaid-figure-6 .cluster rect{fill:hsl(222.8571428571, 26.6666666667%, 46.1764705882%);stroke:hsl(222.8571428571, 0%, 36.1764705882%);stroke-width:1px;}#mermaid-figure-6 .cluster text{fill:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 .cluster span,#mermaid-figure-6 p{color:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(222.8571428571, 26.6666666667%, 46.1764705882%);border:1px solid hsl(222.8571428571, 0%, 36.1764705882%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-6 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#e8e3d3;}#mermaid-figure-6 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="10" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id1 LE-id2" id="L-id1-id2-0" d="M143.015625,52L143.015625,56.166666666666664C143.015625,60.333333333333336,143.015625,68.66666666666667,143.015625,77C143.015625,85.33333333333333,143.015625,93.66666666666667,143.015625,97.83333333333333L143.015625,102"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id2 LE-id3" id="L-id2-id3-0" d="M143.015625,154L143.015625,158.16666666666666C143.015625,162.33333333333334,143.015625,170.66666666666666,143.015625,179C143.015625,187.33333333333334,143.015625,195.66666666666666,143.015625,199.83333333333334L143.015625,204"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id3 LE-id4" id="L-id3-id4-0" d="M143.015625,256L143.015625,260.1666666666667C143.015625,264.3333333333333,143.015625,272.6666666666667,143.015625,281C143.015625,289.3333333333333,143.015625,297.6666666666667,143.015625,301.8333333333333L143.015625,306"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="0 0 246 598" style="; display: block; margin: auto 0 auto auto" class="flowchart" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-6" height="576">
+<style>#mermaid-figure-6{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#e8e3d3;}#mermaid-figure-6 .error-icon{fill:hsl(222.8571428571, 26.6666666667%, 46.1764705882%);}#mermaid-figure-6 .error-text{fill:rgb(168.6500000001, 150.7071428572, 105.8500000001);stroke:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-6 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-6 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-6 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-6 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-6 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-6 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-6 .marker.cross{stroke:#171c2c;}#mermaid-figure-6 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-6 p{margin:0;}#mermaid-figure-6 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#e8e3d3;}#mermaid-figure-6 .cluster-label text{fill:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 .cluster-label span{color:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 .cluster-label span p{background-color:transparent;}#mermaid-figure-6 .label text,#mermaid-figure-6 span{fill:#e8e3d3;color:#e8e3d3;}#mermaid-figure-6 .node rect,#mermaid-figure-6 .node circle,#mermaid-figure-6 .node ellipse,#mermaid-figure-6 .node polygon,#mermaid-figure-6 .node path{fill:#85754d;stroke:hsl(42.8571428571, 0%, 31.1764705882%);stroke-width:1px;}#mermaid-figure-6 .rough-node .label text,#mermaid-figure-6 .node .label text{text-anchor:middle;}#mermaid-figure-6 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-figure-6 .node .label{text-align:center;}#mermaid-figure-6 .node.clickable{cursor:pointer;}#mermaid-figure-6 .arrowheadPath{fill:#171c2c;}#mermaid-figure-6 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-6 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-6 .edgeLabel{background-color:hsl(-77.1428571429, 26.6666666667%, 41.1764705882%);text-align:center;}#mermaid-figure-6 .edgeLabel p{background-color:hsl(-77.1428571429, 26.6666666667%, 41.1764705882%);}#mermaid-figure-6 .edgeLabel rect{opacity:0.5;background-color:hsl(-77.1428571429, 26.6666666667%, 41.1764705882%);fill:hsl(-77.1428571429, 26.6666666667%, 41.1764705882%);}#mermaid-figure-6 .labelBkg{background-color:rgba(116.9999999999, 76.9999999999, 132.9999999999, 0.5);}#mermaid-figure-6 .cluster rect{fill:hsl(222.8571428571, 26.6666666667%, 46.1764705882%);stroke:hsl(222.8571428571, 0%, 36.1764705882%);stroke-width:1px;}#mermaid-figure-6 .cluster text{fill:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 .cluster span{color:rgb(168.6500000001, 150.7071428572, 105.8500000001);}#mermaid-figure-6 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(222.8571428571, 26.6666666667%, 46.1764705882%);border:1px solid hsl(222.8571428571, 0%, 36.1764705882%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-6 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#e8e3d3;}#mermaid-figure-6 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688071327_flowchart-v2-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="4.5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688071327_flowchart-v2-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688071327_flowchart-v2-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688071327_flowchart-v2-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1750688071327_flowchart-v2-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1750688071327_flowchart-v2-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#mermaid-1750688071327_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id1_id2_0" d="M123,110L123,114.167C123,118.333,123,126.667,123,132.917C123,139.167,123,143.333,123,146.833C123,150.333,123,153.167,123,154.583L123,156"></path><path marker-end="url(#mermaid-1750688071327_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id2_id3_1" d="M123,262L123,266.167C123,270.333,123,278.667,123,284.917C123,291.167,123,295.333,123,298.833C123,302.333,123,305.167,123,306.583L123,308"></path><path marker-end="url(#mermaid-1750688071327_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id3_id4_2" d="M123,414L123,418.167C123,422.333,123,430.667,123,436.917C123,443.167,123,447.333,123,450.833C123,454.333,123,457.167,123,458.583L123,460"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
 </foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
 </foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
-</foreignobject></g></g></g><g class="nodes"><g transform="translate(143.015625, 26)" id="flowchart-id1-8" class="node default default flowchart-label"><rect height="52" width="283.8046875" y="-26" x="-141.90234375" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-134.40234375, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="268.8046875">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">How does access to healthcare affect<br>levels of stress</span>
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(123, 59)" id="flowchart-id1-0" class="node default"><rect height="102" width="230" y="-51" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="" class="basic label-container"></rect><g transform="translate(-100, -36)" style="" class="label"><rect></rect><foreignobject height="72" width="200">
+<div style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+How does access to healthcare affectof stress
+</p>
+</span>
 </div>
-</foreignobject></g></g><g transform="translate(143.015625, 128)" id="flowchart-id2-9" class="node default default flowchart-label"><rect height="52" width="283.9765625" y="-26" x="-141.98828125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-134.48828125, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="268.9765625">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">Collect information about individuals’<br>access to healthcare &amp; level of stress</span>
+</foreignobject></g></g><g transform="translate(123, 211)" id="flowchart-id2-1" class="node default"><rect height="102" width="230" y="-51" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="" class="basic label-container"></rect><g transform="translate(-100, -36)" style="" class="label"><rect></rect><foreignobject height="72" width="200">
+<div style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Collect information about individuals’to healthcare &amp; level of stress
+</p>
+</span>
 </div>
-</foreignobject></g></g><g transform="translate(143.015625, 230)" id="flowchart-id3-10" class="node default default flowchart-label"><rect height="52" width="256.53125" y="-26" x="-128.265625" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-120.765625, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="241.53125">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">Quantify levels of stress for those<br>with and without healthcare</span>
+</foreignobject></g></g><g transform="translate(123, 363)" id="flowchart-id3-2" class="node default"><rect height="102" width="230" y="-51" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="" class="basic label-container"></rect><g transform="translate(-100, -36)" style="" class="label"><rect></rect><foreignobject height="72" width="200">
+<div style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Quantify levels of stress for thoseand without healthcare
+</p>
+</span>
 </div>
-</foreignobject></g></g><g transform="translate(143.015625, 332)" id="flowchart-id4-11" class="node default default flowchart-label"><rect height="52" width="286.03125" y="-26" x="-143.015625" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-135.515625, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="271.03125">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">Draw a conclusion about relationship<br>between healthcare access and stress</span>
+</foreignobject></g></g><g transform="translate(123, 527)" id="flowchart-id4-3" class="node default"><rect height="126" width="230" y="-63" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="" class="basic label-container"></rect><g transform="translate(-100, -48)" style="" class="label"><rect></rect><foreignobject height="96" width="200">
+<div style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Draw a conclusion about relationshiphealthcare access and stress
+</p>
+</span>
 </div>
 </foreignobject></g></g></g></g></g>
 </svg>
@@ -627,8 +455,7 @@ named Lemon (aka Clementine)</li>
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section class="slide level2">
 
@@ -640,39 +467,55 @@ named Lemon (aka Clementine)</li>
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="-8 -8 273.23828125 337" style="; display: block; margin: auto auto auto 0" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-5" height="576">
-<style>#mermaid-figure-5{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#4b2e83;}#mermaid-figure-5 .error-icon{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);}#mermaid-figure-5 .error-text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);stroke:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-5 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-5 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-5 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-5 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-5 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-5 .marker.cross{stroke:#171c2c;}#mermaid-figure-5 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-5 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-5 .cluster-label text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 .cluster-label span,#mermaid-figure-5 p{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 .label text,#mermaid-figure-5 span,#mermaid-figure-5 p{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-5 .node rect,#mermaid-figure-5 .node circle,#mermaid-figure-5 .node ellipse,#mermaid-figure-5 .node polygon,#mermaid-figure-5 .node path{fill:#c5b4e3;stroke:hsl(261.7021276596, 5.6310679612%, 69.8039215686%);stroke-width:1px;}#mermaid-figure-5 .flowchart-label text{text-anchor:middle;}#mermaid-figure-5 .node .label{text-align:center;}#mermaid-figure-5 .node.clickable{cursor:pointer;}#mermaid-figure-5 .arrowheadPath{fill:#171c2c;}#mermaid-figure-5 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-5 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-5 .edgeLabel{background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);text-align:center;}#mermaid-figure-5 .edgeLabel rect{opacity:0.5;background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);fill:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);}#mermaid-figure-5 .cluster rect{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);stroke:hsl(81.7021276596, 5.6310679612%, 74.8039215686%);stroke-width:1px;}#mermaid-figure-5 .cluster text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 .cluster span,#mermaid-figure-5 p{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);border:1px solid hsl(81.7021276596, 5.6310679612%, 74.8039215686%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-5 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-5 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="10" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id1 LE-id2" id="L-id1-id2-0" d="M115.33462761976048,33.5L109.56140843313374,37.666666666666664C103.78818924650699,41.833333333333336,92.24175087325348,50.166666666666664,86.46853168662675,58.5C80.6953125,66.83333333333333,80.6953125,75.16666666666667,80.6953125,79.33333333333333L80.6953125,83.5"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id2 LE-id3" id="L-id2-id3-0" d="M80.6953125,117L80.6953125,121.16666666666667C80.6953125,125.33333333333333,80.6953125,133.66666666666666,80.6953125,142C80.6953125,150.33333333333334,80.6953125,158.66666666666666,80.6953125,162.83333333333334L80.6953125,167"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id3 LE-id4" id="L-id3-id4-0" d="M80.6953125,219L80.6953125,223.16666666666666C80.6953125,227.33333333333334,80.6953125,235.66666666666666,85.42142820669933,244C90.14754391339869,252.33333333333334,99.59977532679738,260.6666666666667,104.32589103349672,264.8333333333333L109.05200674019608,269"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id4 LE-id1" id="L-id4-id1-0" d="M168.03393075980392,269L172.76004646650327,264.8333333333333C177.48616217320262,260.6666666666667,186.93839358660134,252.33333333333334,191.66450929330065,239.66666666666666C196.390625,227,196.390625,210,196.390625,193C196.390625,176,196.390625,159,196.390625,143.54166666666666C196.390625,128.08333333333334,196.390625,114.16666666666667,196.390625,100.25C196.390625,86.33333333333333,196.390625,72.41666666666667,190.61740581337324,61.291666666666664C184.8441866267465,50.166666666666664,173.29774825349304,41.833333333333336,167.52452906686628,37.666666666666664L161.75130988023952,33.5"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="0 0 321 478" style="; display: block; margin: auto auto auto 0" class="flowchart" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-5" height="576">
+<style>#mermaid-figure-5{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#4b2e83;}#mermaid-figure-5 .error-icon{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);}#mermaid-figure-5 .error-text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);stroke:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-5 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-5 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-5 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-5 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-5 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-5 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-5 .marker.cross{stroke:#171c2c;}#mermaid-figure-5 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-5 p{margin:0;}#mermaid-figure-5 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-5 .cluster-label text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 .cluster-label span{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 .cluster-label span p{background-color:transparent;}#mermaid-figure-5 .label text,#mermaid-figure-5 span{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-5 .node rect,#mermaid-figure-5 .node circle,#mermaid-figure-5 .node ellipse,#mermaid-figure-5 .node polygon,#mermaid-figure-5 .node path{fill:#c5b4e3;stroke:hsl(261.7021276596, 5.6310679612%, 69.8039215686%);stroke-width:1px;}#mermaid-figure-5 .rough-node .label text,#mermaid-figure-5 .node .label text{text-anchor:middle;}#mermaid-figure-5 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-figure-5 .node .label{text-align:center;}#mermaid-figure-5 .node.clickable{cursor:pointer;}#mermaid-figure-5 .arrowheadPath{fill:#171c2c;}#mermaid-figure-5 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-5 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-5 .edgeLabel{background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);text-align:center;}#mermaid-figure-5 .edgeLabel p{background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);}#mermaid-figure-5 .edgeLabel rect{opacity:0.5;background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);fill:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);}#mermaid-figure-5 .labelBkg{background-color:rgba(179.9999999999, 227, 196.9999999999, 0.5);}#mermaid-figure-5 .cluster rect{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);stroke:hsl(81.7021276596, 5.6310679612%, 74.8039215686%);stroke-width:1px;}#mermaid-figure-5 .cluster text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 .cluster span{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-5 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);border:1px solid hsl(81.7021276596, 5.6310679612%, 74.8039215686%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-5 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-5 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688071192_flowchart-v2-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="4.5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688071192_flowchart-v2-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688071192_flowchart-v2-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688071192_flowchart-v2-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1750688071192_flowchart-v2-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1750688071192_flowchart-v2-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#mermaid-1750688071192_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id1_id2_0" d="M152.297,86L147.414,90.167C142.531,94.333,132.766,102.667,127.883,108.917C123,115.167,123,119.333,123,122.833C123,126.333,123,129.167,123,130.583L123,132"></path><path marker-end="url(#mermaid-1750688071192_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id2_id3_1" d="M123,190L123,194.167C123,198.333,123,206.667,123,212.917C123,219.167,123,223.333,123,226.833C123,230.333,123,233.167,123,234.583L123,236"></path><path marker-end="url(#mermaid-1750688071192_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id3_id4_2" d="M123,318L123,322.167C123,326.333,123,334.667,125.056,340.917C127.112,347.167,131.224,351.333,134.867,355.025C138.511,358.718,141.686,361.935,143.274,363.544L144.861,365.153"></path><path marker-end="url(#mermaid-1750688071192_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id4_id1_3" d="M248.329,368L252.441,363.833C256.553,359.667,264.776,351.333,268.888,336.5C273,321.667,273,300.333,273,279C273,257.667,273,236.333,273,217C273,197.667,273,180.333,273,163C273,145.667,273,128.333,270.559,117.583C268.117,106.833,263.234,102.667,258.859,98.933C254.483,95.199,250.614,91.898,248.68,90.247L246.746,88.596"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
 </foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
 </foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
 </foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
-</foreignobject></g></g></g><g class="nodes"><g transform="translate(138.54296875, 16.75)" id="flowchart-id1-16" class="node default default flowchart-label"><rect height="33.5" width="237.390625" y="-16.75" x="-118.6953125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-111.1953125, -9.25)" style="" class="label"><rect></rect><foreignobject height="18.5" width="222.390625">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">Interesting real-world question</span>
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(198, 47)" id="flowchart-id1-0" class="node default"><rect height="78" width="230" y="-39" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="" class="basic label-container"></rect><g transform="translate(-100, -24)" style="" class="label"><rect></rect><foreignobject height="48" width="200">
+<div style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Interesting real-world question
+</p>
+</span>
 </div>
-</foreignobject></g></g><g transform="translate(80.6953125, 100.25)" id="flowchart-id2-17" class="node default default flowchart-label"><rect height="33.5" width="102.4765625" y="-16.75" x="-51.23828125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-43.73828125, -9.25)" style="" class="label"><rect></rect><foreignobject height="18.5" width="87.4765625">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">Collect data</span>
+</foreignobject></g></g><g transform="translate(123, 163)" id="flowchart-id2-1" class="node default"><rect height="54" width="117.4765625" y="-27" x="-58.73828125" ry="5" data-et="node" data-id="abc" rx="5" style="" class="basic label-container"></rect><g transform="translate(-43.73828125, -12)" style="" class="label"><rect></rect><foreignobject height="24" width="87.4765625">
+<div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Collect data
+</p>
+</span>
 </div>
-</foreignobject></g></g><g transform="translate(80.6953125, 193)" id="flowchart-id3-18" class="node default default flowchart-label"><rect height="52" width="161.390625" y="-26" x="-80.6953125" ry="5" rx="5" style="fill:#aadb1e;" class="basic label-container"></rect><g transform="translate(-73.1953125, -18.5)" style="color:#4b2e83;" class="label"><rect></rect><foreignobject height="37" width="146.390625">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(75, 46, 131); display: inline-block; white-space: nowrap;">
-<span class="nodeLabel" style="color:#4b2e83;">Analyze data<br>(calculate statistics)</span>
+</foreignobject></g></g><g transform="translate(123, 279)" id="flowchart-id3-2" class="node default"><rect height="78" width="230" y="-39" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="fill:#aadb1e !important" class="basic label-container"></rect><g transform="translate(-100, -24)" style="color:#4b2e83 !important" class="label"><rect></rect><foreignobject height="48" width="200">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(75, 46, 131) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;">
+<span class="nodeLabel" style="color:#4b2e83 !important">
+<p>
+Analyze data(calculate statistics)
+</p>
+</span>
 </div>
-</foreignobject></g></g><g transform="translate(138.54296875, 295)" id="flowchart-id4-19" class="node default default flowchart-label"><rect height="52" width="226.1953125" y="-26" x="-113.09765625" ry="5" rx="5" style="fill:#aadb1e;" class="basic label-container"></rect><g transform="translate(-105.59765625, -18.5)" style="color:#4b2e83;" class="label"><rect></rect><foreignobject height="37" width="211.1953125">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(75, 46, 131); display: inline-block; white-space: nowrap;">
-<span class="nodeLabel" style="color:#4b2e83;">Develop an answer to your<br>question (interpret statistics)</span>
+</foreignobject></g></g><g transform="translate(198, 419)" id="flowchart-id4-3" class="node default"><rect height="102" width="230" y="-51" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="fill:#aadb1e !important" class="basic label-container"></rect><g transform="translate(-100, -36)" style="color:#4b2e83 !important" class="label"><rect></rect><foreignobject height="72" width="200">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(75, 46, 131) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;">
+<span class="nodeLabel" style="color:#4b2e83 !important">
+<p>
+Develop an answer to your(interpret statistics)
+</p>
+</span>
 </div>
 </foreignobject></g></g></g></g></g>
 </svg>
@@ -693,11 +536,15 @@ named Lemon (aka Clementine)</li>
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="-8 -8 151.84375 68" style="; display: block; margin: auto 0 auto auto" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-4" height="240">
-<style>#mermaid-figure-4{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#4b2e83;}#mermaid-figure-4 .error-icon{fill:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);}#mermaid-figure-4 .error-text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);stroke:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-4 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-4 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-4 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-4 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-4 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-4 .marker.cross{stroke:#171c2c;}#mermaid-figure-4 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-4 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-4 .cluster-label text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 .cluster-label span,#mermaid-figure-4 p{color:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 .label text,#mermaid-figure-4 span,#mermaid-figure-4 p{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-4 .node rect,#mermaid-figure-4 .node circle,#mermaid-figure-4 .node ellipse,#mermaid-figure-4 .node polygon,#mermaid-figure-4 .node path{fill:#aadb1e;stroke:hsl(75.5555555556, 35.9036144578%, 38.8235294118%);stroke-width:1px;}#mermaid-figure-4 .flowchart-label text{text-anchor:middle;}#mermaid-figure-4 .node .label{text-align:center;}#mermaid-figure-4 .node.clickable{cursor:pointer;}#mermaid-figure-4 .arrowheadPath{fill:#171c2c;}#mermaid-figure-4 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-4 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-4 .edgeLabel{background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);text-align:center;}#mermaid-figure-4 .edgeLabel rect{opacity:0.5;background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);fill:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);}#mermaid-figure-4 .cluster rect{fill:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);stroke:hsl(255.5555555556, 35.9036144578%, 43.8235294118%);stroke-width:1px;}#mermaid-figure-4 .cluster text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 .cluster span,#mermaid-figure-4 p{color:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);border:1px solid hsl(255.5555555556, 35.9036144578%, 43.8235294118%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-4 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-4 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="10" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g transform="translate(67.921875, 26)" id="flowchart-id1-2" class="node default default flowchart-label"><polygon style="" transform="translate(-67.921875,26)" class="label-container" points="13,0 122.84375,0 135.84375,-26 122.84375,-52 13,-52 0,-26"></polygon><g transform="translate(-47.421875, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="94.84375">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">Main focus of<br>our course</span>
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="0 0 234.8125 55" style="; display: block; margin: auto 0 auto auto" class="flowchart" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-4" height="240">
+<style>#mermaid-figure-4{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#4b2e83;}#mermaid-figure-4 .error-icon{fill:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);}#mermaid-figure-4 .error-text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);stroke:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-4 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-4 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-4 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-4 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-4 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-4 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-4 .marker.cross{stroke:#171c2c;}#mermaid-figure-4 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-4 p{margin:0;}#mermaid-figure-4 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-4 .cluster-label text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 .cluster-label span{color:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 .cluster-label span p{background-color:transparent;}#mermaid-figure-4 .label text,#mermaid-figure-4 span{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-4 .node rect,#mermaid-figure-4 .node circle,#mermaid-figure-4 .node ellipse,#mermaid-figure-4 .node polygon,#mermaid-figure-4 .node path{fill:#aadb1e;stroke:hsl(75.5555555556, 35.9036144578%, 38.8235294118%);stroke-width:1px;}#mermaid-figure-4 .rough-node .label text,#mermaid-figure-4 .node .label text{text-anchor:middle;}#mermaid-figure-4 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-figure-4 .node .label{text-align:center;}#mermaid-figure-4 .node.clickable{cursor:pointer;}#mermaid-figure-4 .arrowheadPath{fill:#171c2c;}#mermaid-figure-4 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-4 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-4 .edgeLabel{background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);text-align:center;}#mermaid-figure-4 .edgeLabel p{background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);}#mermaid-figure-4 .edgeLabel rect{opacity:0.5;background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);fill:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);}#mermaid-figure-4 .labelBkg{background-color:rgba(219.0000000001, 30.0000000001, 170, 0.5);}#mermaid-figure-4 .cluster rect{fill:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);stroke:hsl(255.5555555556, 35.9036144578%, 43.8235294118%);stroke-width:1px;}#mermaid-figure-4 .cluster text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 .cluster span{color:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-4 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);border:1px solid hsl(255.5555555556, 35.9036144578%, 43.8235294118%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-4 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-4 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688071070_flowchart-v2-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="4.5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688071070_flowchart-v2-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688071070_flowchart-v2-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688071070_flowchart-v2-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1750688071070_flowchart-v2-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1750688071070_flowchart-v2-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g transform="translate(117.40625, 27.5)" id="flowchart-id1-0" class="node default"><polygon transform="translate(-109.40625,19.5)" class="label-container" points="9.75,0 209.0625,0 218.8125,-19.5 209.0625,-39 9.75,-39 0,-19.5"></polygon><g transform="translate(-92.15625, -12)" style="" class="label"><rect></rect><foreignobject height="24" width="184.3125">
+<div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Main focus ofcourse
+</p>
+</span>
 </div>
 </foreignobject></g></g></g></g></g>
 </svg>
@@ -706,8 +553,7 @@ named Lemon (aka Clementine)</li>
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section class="slide level2">
 
@@ -719,39 +565,55 @@ named Lemon (aka Clementine)</li>
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="-8 -8 273.23828125 337" style="; display: block; margin: auto auto auto 0" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-3" height="576">
-<style>#mermaid-figure-3{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#4b2e83;}#mermaid-figure-3 .error-icon{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);}#mermaid-figure-3 .error-text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);stroke:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-3 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-3 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-3 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-3 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-3 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-3 .marker.cross{stroke:#171c2c;}#mermaid-figure-3 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-3 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-3 .cluster-label text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 .cluster-label span,#mermaid-figure-3 p{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 .label text,#mermaid-figure-3 span,#mermaid-figure-3 p{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-3 .node rect,#mermaid-figure-3 .node circle,#mermaid-figure-3 .node ellipse,#mermaid-figure-3 .node polygon,#mermaid-figure-3 .node path{fill:#c5b4e3;stroke:hsl(261.7021276596, 5.6310679612%, 69.8039215686%);stroke-width:1px;}#mermaid-figure-3 .flowchart-label text{text-anchor:middle;}#mermaid-figure-3 .node .label{text-align:center;}#mermaid-figure-3 .node.clickable{cursor:pointer;}#mermaid-figure-3 .arrowheadPath{fill:#171c2c;}#mermaid-figure-3 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-3 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-3 .edgeLabel{background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);text-align:center;}#mermaid-figure-3 .edgeLabel rect{opacity:0.5;background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);fill:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);}#mermaid-figure-3 .cluster rect{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);stroke:hsl(81.7021276596, 5.6310679612%, 74.8039215686%);stroke-width:1px;}#mermaid-figure-3 .cluster text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 .cluster span,#mermaid-figure-3 p{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);border:1px solid hsl(81.7021276596, 5.6310679612%, 74.8039215686%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-3 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-3 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="10" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id1 LE-id2" id="L-id1-id2-0" d="M115.33462761976048,33.5L109.56140843313374,37.666666666666664C103.78818924650699,41.833333333333336,92.24175087325348,50.166666666666664,86.46853168662675,58.5C80.6953125,66.83333333333333,80.6953125,75.16666666666667,80.6953125,79.33333333333333L80.6953125,83.5"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id2 LE-id3" id="L-id2-id3-0" d="M80.6953125,117L80.6953125,121.16666666666667C80.6953125,125.33333333333333,80.6953125,133.66666666666666,80.6953125,142C80.6953125,150.33333333333334,80.6953125,158.66666666666666,80.6953125,162.83333333333334L80.6953125,167"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id3 LE-id4" id="L-id3-id4-0" d="M80.6953125,219L80.6953125,223.16666666666666C80.6953125,227.33333333333334,80.6953125,235.66666666666666,85.42142820669933,244C90.14754391339869,252.33333333333334,99.59977532679738,260.6666666666667,104.32589103349672,264.8333333333333L109.05200674019608,269"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-id4 LE-id1" id="L-id4-id1-0" d="M168.03393075980392,269L172.76004646650327,264.8333333333333C177.48616217320262,260.6666666666667,186.93839358660134,252.33333333333334,191.66450929330065,239.66666666666666C196.390625,227,196.390625,210,196.390625,193C196.390625,176,196.390625,159,196.390625,143.54166666666666C196.390625,128.08333333333334,196.390625,114.16666666666667,196.390625,100.25C196.390625,86.33333333333333,196.390625,72.41666666666667,190.61740581337324,61.291666666666664C184.8441866267465,50.166666666666664,173.29774825349304,41.833333333333336,167.52452906686628,37.666666666666664L161.75130988023952,33.5"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="0 0 321 478" style="; display: block; margin: auto auto auto 0" class="flowchart" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="480" id="mermaid-figure-3" height="576">
+<style>#mermaid-figure-3{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#4b2e83;}#mermaid-figure-3 .error-icon{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);}#mermaid-figure-3 .error-text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);stroke:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-3 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-3 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-3 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-3 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-3 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-3 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-3 .marker.cross{stroke:#171c2c;}#mermaid-figure-3 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-3 p{margin:0;}#mermaid-figure-3 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-3 .cluster-label text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 .cluster-label span{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 .cluster-label span p{background-color:transparent;}#mermaid-figure-3 .label text,#mermaid-figure-3 span{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-3 .node rect,#mermaid-figure-3 .node circle,#mermaid-figure-3 .node ellipse,#mermaid-figure-3 .node polygon,#mermaid-figure-3 .node path{fill:#c5b4e3;stroke:hsl(261.7021276596, 5.6310679612%, 69.8039215686%);stroke-width:1px;}#mermaid-figure-3 .rough-node .label text,#mermaid-figure-3 .node .label text{text-anchor:middle;}#mermaid-figure-3 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-figure-3 .node .label{text-align:center;}#mermaid-figure-3 .node.clickable{cursor:pointer;}#mermaid-figure-3 .arrowheadPath{fill:#171c2c;}#mermaid-figure-3 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-3 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-3 .edgeLabel{background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);text-align:center;}#mermaid-figure-3 .edgeLabel p{background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);}#mermaid-figure-3 .edgeLabel rect{opacity:0.5;background-color:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);fill:hsl(141.7021276596, 45.6310679612%, 79.8039215686%);}#mermaid-figure-3 .labelBkg{background-color:rgba(179.9999999999, 227, 196.9999999999, 0.5);}#mermaid-figure-3 .cluster rect{fill:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);stroke:hsl(81.7021276596, 5.6310679612%, 74.8039215686%);stroke-width:1px;}#mermaid-figure-3 .cluster text{fill:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 .cluster span{color:rgb(33.859223301, 21.0679611651, 56.4320388351);}#mermaid-figure-3 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(81.7021276596, 45.6310679612%, 84.8039215686%);border:1px solid hsl(81.7021276596, 5.6310679612%, 74.8039215686%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-3 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-3 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688070923_flowchart-v2-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="4.5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688070923_flowchart-v2-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688070923_flowchart-v2-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688070923_flowchart-v2-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1750688070923_flowchart-v2-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1750688070923_flowchart-v2-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#mermaid-1750688070923_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id1_id2_0" d="M152.297,86L147.414,90.167C142.531,94.333,132.766,102.667,127.883,108.917C123,115.167,123,119.333,123,122.833C123,126.333,123,129.167,123,130.583L123,132"></path><path marker-end="url(#mermaid-1750688070923_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id2_id3_1" d="M123,190L123,194.167C123,198.333,123,206.667,123,212.917C123,219.167,123,223.333,123,226.833C123,230.333,123,233.167,123,234.583L123,236"></path><path marker-end="url(#mermaid-1750688070923_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id3_id4_2" d="M123,318L123,322.167C123,326.333,123,334.667,125.056,340.917C127.112,347.167,131.224,351.333,134.867,355.025C138.511,358.718,141.686,361.935,143.274,363.544L144.861,365.153"></path><path marker-end="url(#mermaid-1750688070923_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_id4_id1_3" d="M248.329,368L252.441,363.833C256.553,359.667,264.776,351.333,268.888,336.5C273,321.667,273,300.333,273,279C273,257.667,273,236.333,273,217C273,197.667,273,180.333,273,163C273,145.667,273,128.333,270.559,117.583C268.117,106.833,263.234,102.667,258.859,98.933C254.483,95.199,250.614,91.898,248.68,90.247L246.746,88.596"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
 </foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
 </foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
 </foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
-</foreignobject></g></g></g><g class="nodes"><g transform="translate(138.54296875, 16.75)" id="flowchart-id1-16" class="node default default flowchart-label"><rect height="33.5" width="237.390625" y="-16.75" x="-118.6953125" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-111.1953125, -9.25)" style="" class="label"><rect></rect><foreignobject height="18.5" width="222.390625">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">Interesting real-world question</span>
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(198, 47)" id="flowchart-id1-0" class="node default"><rect height="78" width="230" y="-39" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="" class="basic label-container"></rect><g transform="translate(-100, -24)" style="" class="label"><rect></rect><foreignobject height="48" width="200">
+<div style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Interesting real-world question
+</p>
+</span>
 </div>
-</foreignobject></g></g><g transform="translate(80.6953125, 100.25)" id="flowchart-id2-17" class="node default default flowchart-label"><rect height="33.5" width="102.4765625" y="-16.75" x="-51.23828125" ry="5" rx="5" style="fill:#aadb1e;" class="basic label-container"></rect><g transform="translate(-43.73828125, -9.25)" style="color:#4b2e83;" class="label"><rect></rect><foreignobject height="18.5" width="87.4765625">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(75, 46, 131); display: inline-block; white-space: nowrap;">
-<span class="nodeLabel" style="color:#4b2e83;">Collect data</span>
+</foreignobject></g></g><g transform="translate(123, 163)" id="flowchart-id2-1" class="node default"><rect height="54" width="117.4765625" y="-27" x="-58.73828125" ry="5" data-et="node" data-id="abc" rx="5" style="fill:#aadb1e !important" class="basic label-container"></rect><g transform="translate(-43.73828125, -12)" style="color:#4b2e83 !important" class="label"><rect></rect><foreignobject height="24" width="87.4765625">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(75, 46, 131) !important; display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+<span class="nodeLabel" style="color:#4b2e83 !important">
+<p>
+Collect data
+</p>
+</span>
 </div>
-</foreignobject></g></g><g transform="translate(80.6953125, 193)" id="flowchart-id3-18" class="node default default flowchart-label"><rect height="52" width="161.390625" y="-26" x="-80.6953125" ry="5" rx="5" style="fill:#aadb1e;" class="basic label-container"></rect><g transform="translate(-73.1953125, -18.5)" style="color:#4b2e83;" class="label"><rect></rect><foreignobject height="37" width="146.390625">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(75, 46, 131); display: inline-block; white-space: nowrap;">
-<span class="nodeLabel" style="color:#4b2e83;">Analyze data<br>(calculate statistics)</span>
+</foreignobject></g></g><g transform="translate(123, 279)" id="flowchart-id3-2" class="node default"><rect height="78" width="230" y="-39" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="fill:#aadb1e !important" class="basic label-container"></rect><g transform="translate(-100, -24)" style="color:#4b2e83 !important" class="label"><rect></rect><foreignobject height="48" width="200">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(75, 46, 131) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;">
+<span class="nodeLabel" style="color:#4b2e83 !important">
+<p>
+Analyze data(calculate statistics)
+</p>
+</span>
 </div>
-</foreignobject></g></g><g transform="translate(138.54296875, 295)" id="flowchart-id4-19" class="node default default flowchart-label"><rect height="52" width="226.1953125" y="-26" x="-113.09765625" ry="5" rx="5" style="" class="basic label-container"></rect><g transform="translate(-105.59765625, -18.5)" style="" class="label"><rect></rect><foreignobject height="37" width="211.1953125">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">Develop an answer to your<br>question (interpret statistics)</span>
+</foreignobject></g></g><g transform="translate(198, 419)" id="flowchart-id4-3" class="node default"><rect height="102" width="230" y="-51" x="-115" ry="5" data-et="node" data-id="abc" rx="5" style="" class="basic label-container"></rect><g transform="translate(-100, -36)" style="" class="label"><rect></rect><foreignobject height="72" width="200">
+<div style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Develop an answer to your(interpret statistics)
+</p>
+</span>
 </div>
 </foreignobject></g></g></g></g></g>
 </svg>
@@ -768,11 +630,15 @@ named Lemon (aka Clementine)</li>
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="-8 -8 105.109375 59" style="; display: block; margin: auto 0 auto auto" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="528" id="mermaid-figure-2" height="384">
-<style>#mermaid-figure-2{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:.225em;fill:#4b2e83;}#mermaid-figure-2 .error-icon{fill:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);}#mermaid-figure-2 .error-text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);stroke:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-2 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-2 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-2 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-2 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-2 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-2 .marker.cross{stroke:#171c2c;}#mermaid-figure-2 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:.225em;}#mermaid-figure-2 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-2 .cluster-label text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 .cluster-label span,#mermaid-figure-2 p{color:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 .label text,#mermaid-figure-2 span,#mermaid-figure-2 p{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-2 .node rect,#mermaid-figure-2 .node circle,#mermaid-figure-2 .node ellipse,#mermaid-figure-2 .node polygon,#mermaid-figure-2 .node path{fill:#aadb1e;stroke:hsl(75.5555555556, 35.9036144578%, 38.8235294118%);stroke-width:1px;}#mermaid-figure-2 .flowchart-label text{text-anchor:middle;}#mermaid-figure-2 .node .label{text-align:center;}#mermaid-figure-2 .node.clickable{cursor:pointer;}#mermaid-figure-2 .arrowheadPath{fill:#171c2c;}#mermaid-figure-2 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-2 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-2 .edgeLabel{background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);text-align:center;}#mermaid-figure-2 .edgeLabel rect{opacity:0.5;background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);fill:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);}#mermaid-figure-2 .cluster rect{fill:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);stroke:hsl(255.5555555556, 35.9036144578%, 43.8235294118%);stroke-width:1px;}#mermaid-figure-2 .cluster text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 .cluster span,#mermaid-figure-2 p{color:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);border:1px solid hsl(255.5555555556, 35.9036144578%, 43.8235294118%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-2 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-2 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="10" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g transform="translate(44.5546875, 21.5)" id="flowchart-id1-2" class="node default default flowchart-label"><rect height="43" width="89.109375" y="-21.5" x="-44.5546875" ry="0" rx="0" style="" class="basic label-container"></rect><g transform="translate(-37.0546875, -14)" style="" class="label"><rect></rect><foreignobject height="28" width="74.109375">
-<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span class="nodeLabel">In order to use and<br>interpret statistics<br>we need to understand<br>where our data come from.</span>
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="0 0 276 73" style="; display: block; margin: auto 0 auto auto" class="flowchart" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="528" id="mermaid-figure-2" height="384">
+<style>#mermaid-figure-2{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:.225em;fill:#4b2e83;}#mermaid-figure-2 .error-icon{fill:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);}#mermaid-figure-2 .error-text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);stroke:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-2 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-2 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-2 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-2 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-2 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-2 .marker{fill:#171c2c;stroke:#171c2c;}#mermaid-figure-2 .marker.cross{stroke:#171c2c;}#mermaid-figure-2 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:.225em;}#mermaid-figure-2 p{margin:0;}#mermaid-figure-2 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#4b2e83;}#mermaid-figure-2 .cluster-label text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 .cluster-label span{color:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 .cluster-label span p{background-color:transparent;}#mermaid-figure-2 .label text,#mermaid-figure-2 span{fill:#4b2e83;color:#4b2e83;}#mermaid-figure-2 .node rect,#mermaid-figure-2 .node circle,#mermaid-figure-2 .node ellipse,#mermaid-figure-2 .node polygon,#mermaid-figure-2 .node path{fill:#aadb1e;stroke:hsl(75.5555555556, 35.9036144578%, 38.8235294118%);stroke-width:1px;}#mermaid-figure-2 .rough-node .label text,#mermaid-figure-2 .node .label text{text-anchor:middle;}#mermaid-figure-2 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-figure-2 .node .label{text-align:center;}#mermaid-figure-2 .node.clickable{cursor:pointer;}#mermaid-figure-2 .arrowheadPath{fill:#171c2c;}#mermaid-figure-2 .edgePath .path{stroke:#171c2c;stroke-width:2.0px;}#mermaid-figure-2 .flowchart-link{stroke:#171c2c;fill:none;}#mermaid-figure-2 .edgeLabel{background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);text-align:center;}#mermaid-figure-2 .edgeLabel p{background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);}#mermaid-figure-2 .edgeLabel rect{opacity:0.5;background-color:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);fill:hsl(-44.4444444444, 75.9036144578%, 48.8235294118%);}#mermaid-figure-2 .labelBkg{background-color:rgba(219.0000000001, 30.0000000001, 170, 0.5);}#mermaid-figure-2 .cluster rect{fill:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);stroke:hsl(255.5555555556, 35.9036144578%, 43.8235294118%);stroke-width:1px;}#mermaid-figure-2 .cluster text{fill:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 .cluster span{color:rgb(160.7831325298, 207.1265060239, 28.3734939759);}#mermaid-figure-2 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(255.5555555556, 75.9036144578%, 53.8235294118%);border:1px solid hsl(255.5555555556, 35.9036144578%, 43.8235294118%);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-2 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#4b2e83;}#mermaid-figure-2 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688070800_flowchart-v2-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="4.5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688070800_flowchart-v2-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688070800_flowchart-v2-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1750688070800_flowchart-v2-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1750688070800_flowchart-v2-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1750688070800_flowchart-v2-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g transform="translate(138, 36.5)" id="flowchart-id1-0" class="node default"><rect height="57" width="260" y="-28.5" x="-130" data-et="node" data-id="abc" style="" class="basic label-container"></rect><g transform="translate(-100, -13.5)" style="" class="label"><rect></rect><foreignobject height="27" width="200">
+<div style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+In order to use andstatisticsneed to understandour data come from.
+</p>
+</span>
 </div>
 </foreignobject></g></g></g></g></g>
 </svg>
@@ -781,8 +647,7 @@ named Lemon (aka Clementine)</li>
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section></section>
 <section id="break" class="title-slide slide level1 section-title center" data-background-color="#2ad2c9">
 <h1>Break!</h1>
@@ -831,8 +696,7 @@ named Lemon (aka Clementine)</li>
 <p><img data-src="images/survey1.jpeg" class="fragment absolute" style="bottom: 10px; right: -50px; width: 600px; "></p>
 <p><img data-src="images/survey2.jpeg" class="fragment"></p>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="examples-of-survey-questions" class="slide level2">
 <h2>Examples of survey questions</h2>
@@ -872,8 +736,7 @@ named Lemon (aka Clementine)</li>
 ☐ Middle Eastern or North African</li>
 </ol>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="what-do-we-do-with-the-results-of-a-survey" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">What do we do with the results of a survey?</h2>
@@ -890,23 +753,23 @@ named Lemon (aka Clementine)</li>
 <div class="fragment" data-fragment-index="1">
 <div class="cell">
 <div class="cell-output-display">
-<div id="jzddoypmki" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jzddoypmki table {
+<div id="iizxeberov" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#iizxeberov table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jzddoypmki thead, #jzddoypmki tbody, #jzddoypmki tfoot, #jzddoypmki tr, #jzddoypmki td, #jzddoypmki th {
+#iizxeberov thead, #iizxeberov tbody, #iizxeberov tfoot, #iizxeberov tr, #iizxeberov td, #iizxeberov th {
   border-style: none;
 }
 
-#jzddoypmki p {
+#iizxeberov p {
   margin: 0;
   padding: 0;
 }
 
-#jzddoypmki .gt_table {
+#iizxeberov .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -932,12 +795,12 @@ named Lemon (aka Clementine)</li>
   border-left-color: #D3D3D3;
 }
 
-#jzddoypmki .gt_caption {
+#iizxeberov .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jzddoypmki .gt_title {
+#iizxeberov .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -949,7 +812,7 @@ named Lemon (aka Clementine)</li>
   border-bottom-width: 0;
 }
 
-#jzddoypmki .gt_subtitle {
+#iizxeberov .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -961,7 +824,7 @@ named Lemon (aka Clementine)</li>
   border-top-width: 0;
 }
 
-#jzddoypmki .gt_heading {
+#iizxeberov .gt_heading {
   background-color: #F2F2F2;
   text-align: center;
   border-bottom-color: #F2F2F2;
@@ -973,13 +836,13 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#jzddoypmki .gt_bottom_border {
+#iizxeberov .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jzddoypmki .gt_col_headings {
+#iizxeberov .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -994,7 +857,7 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#jzddoypmki .gt_col_heading {
+#iizxeberov .gt_col_heading {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -1014,7 +877,7 @@ named Lemon (aka Clementine)</li>
   overflow-x: hidden;
 }
 
-#jzddoypmki .gt_column_spanner_outer {
+#iizxeberov .gt_column_spanner_outer {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -1026,15 +889,15 @@ named Lemon (aka Clementine)</li>
   padding-right: 4px;
 }
 
-#jzddoypmki .gt_column_spanner_outer:first-child {
+#iizxeberov .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jzddoypmki .gt_column_spanner_outer:last-child {
+#iizxeberov .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jzddoypmki .gt_column_spanner {
+#iizxeberov .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1046,11 +909,11 @@ named Lemon (aka Clementine)</li>
   width: 100%;
 }
 
-#jzddoypmki .gt_spanner_row {
+#iizxeberov .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jzddoypmki .gt_group_heading {
+#iizxeberov .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1076,7 +939,7 @@ named Lemon (aka Clementine)</li>
   text-align: left;
 }
 
-#jzddoypmki .gt_empty_group_heading {
+#iizxeberov .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F2F2F2;
@@ -1091,15 +954,15 @@ named Lemon (aka Clementine)</li>
   vertical-align: middle;
 }
 
-#jzddoypmki .gt_from_md > :first-child {
+#iizxeberov .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jzddoypmki .gt_from_md > :last-child {
+#iizxeberov .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jzddoypmki .gt_row {
+#iizxeberov .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1118,7 +981,7 @@ named Lemon (aka Clementine)</li>
   overflow-x: hidden;
 }
 
-#jzddoypmki .gt_stub {
+#iizxeberov .gt_stub {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -1131,7 +994,7 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#jzddoypmki .gt_stub_row_group {
+#iizxeberov .gt_stub_row_group {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -1145,15 +1008,15 @@ named Lemon (aka Clementine)</li>
   vertical-align: top;
 }
 
-#jzddoypmki .gt_row_group_first td {
+#iizxeberov .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jzddoypmki .gt_row_group_first th {
+#iizxeberov .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jzddoypmki .gt_summary_row {
+#iizxeberov .gt_summary_row {
   color: #333333;
   background-color: #F2F2F2;
   text-transform: inherit;
@@ -1163,16 +1026,16 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#jzddoypmki .gt_first_summary_row {
+#iizxeberov .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jzddoypmki .gt_first_summary_row.thick {
+#iizxeberov .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jzddoypmki .gt_last_summary_row {
+#iizxeberov .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1182,7 +1045,7 @@ named Lemon (aka Clementine)</li>
   border-bottom-color: #D3D3D3;
 }
 
-#jzddoypmki .gt_grand_summary_row {
+#iizxeberov .gt_grand_summary_row {
   color: #333333;
   background-color: #F2F2F2;
   text-transform: inherit;
@@ -1192,7 +1055,7 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#jzddoypmki .gt_first_grand_summary_row {
+#iizxeberov .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1202,7 +1065,7 @@ named Lemon (aka Clementine)</li>
   border-top-color: #D3D3D3;
 }
 
-#jzddoypmki .gt_last_grand_summary_row_top {
+#iizxeberov .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1212,11 +1075,11 @@ named Lemon (aka Clementine)</li>
   border-bottom-color: #D3D3D3;
 }
 
-#jzddoypmki .gt_striped {
+#iizxeberov .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jzddoypmki .gt_table_body {
+#iizxeberov .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1225,7 +1088,7 @@ named Lemon (aka Clementine)</li>
   border-bottom-color: #D3D3D3;
 }
 
-#jzddoypmki .gt_footnotes {
+#iizxeberov .gt_footnotes {
   color: #333333;
   background-color: #F2F2F2;
   border-bottom-style: none;
@@ -1239,7 +1102,7 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#jzddoypmki .gt_footnote {
+#iizxeberov .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1248,7 +1111,7 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#jzddoypmki .gt_sourcenotes {
+#iizxeberov .gt_sourcenotes {
   color: #333333;
   background-color: #F2F2F2;
   border-bottom-style: none;
@@ -1262,7 +1125,7 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#jzddoypmki .gt_sourcenote {
+#iizxeberov .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1270,71 +1133,80 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#jzddoypmki .gt_left {
+#iizxeberov .gt_left {
   text-align: left;
 }
 
-#jzddoypmki .gt_center {
+#iizxeberov .gt_center {
   text-align: center;
 }
 
-#jzddoypmki .gt_right {
+#iizxeberov .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jzddoypmki .gt_font_normal {
+#iizxeberov .gt_font_normal {
   font-weight: normal;
 }
 
-#jzddoypmki .gt_font_bold {
+#iizxeberov .gt_font_bold {
   font-weight: bold;
 }
 
-#jzddoypmki .gt_font_italic {
+#iizxeberov .gt_font_italic {
   font-style: italic;
 }
 
-#jzddoypmki .gt_super {
+#iizxeberov .gt_super {
   font-size: 65%;
 }
 
-#jzddoypmki .gt_footnote_marks {
+#iizxeberov .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jzddoypmki .gt_asterisk {
+#iizxeberov .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jzddoypmki .gt_indent_1 {
+#iizxeberov .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jzddoypmki .gt_indent_2 {
+#iizxeberov .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jzddoypmki .gt_indent_3 {
+#iizxeberov .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jzddoypmki .gt_indent_4 {
+#iizxeberov .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jzddoypmki .gt_indent_5 {
+#iizxeberov .gt_indent_5 {
   text-indent: 25px;
+}
+
+#iizxeberov .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#iizxeberov div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
 }
 </style>
 
 <table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="header gt_col_headings">
-<th id="Person #" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Person #</th>
+<tr class="gt_col_headings header">
+<th id="Person-#" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Person #</th>
 <th id="birth_year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">birth_year</th>
 <th id="gender" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">gender</th>
 <th id="ethnicity" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ethnicity</th>
@@ -1451,23 +1323,23 @@ named Lemon (aka Clementine)</li>
 <p>A survey will produce a dataset for analyses</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="nnrruasooo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#nnrruasooo table {
+<div id="ircrriencr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ircrriencr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#nnrruasooo thead, #nnrruasooo tbody, #nnrruasooo tfoot, #nnrruasooo tr, #nnrruasooo td, #nnrruasooo th {
+#ircrriencr thead, #ircrriencr tbody, #ircrriencr tfoot, #ircrriencr tr, #ircrriencr td, #ircrriencr th {
   border-style: none;
 }
 
-#nnrruasooo p {
+#ircrriencr p {
   margin: 0;
   padding: 0;
 }
 
-#nnrruasooo .gt_table {
+#ircrriencr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1493,12 +1365,12 @@ named Lemon (aka Clementine)</li>
   border-left-color: #D3D3D3;
 }
 
-#nnrruasooo .gt_caption {
+#ircrriencr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#nnrruasooo .gt_title {
+#ircrriencr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1510,7 +1382,7 @@ named Lemon (aka Clementine)</li>
   border-bottom-width: 0;
 }
 
-#nnrruasooo .gt_subtitle {
+#ircrriencr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1522,7 +1394,7 @@ named Lemon (aka Clementine)</li>
   border-top-width: 0;
 }
 
-#nnrruasooo .gt_heading {
+#ircrriencr .gt_heading {
   background-color: #F2F2F2;
   text-align: center;
   border-bottom-color: #F2F2F2;
@@ -1534,13 +1406,13 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#nnrruasooo .gt_bottom_border {
+#ircrriencr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#nnrruasooo .gt_col_headings {
+#ircrriencr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1555,7 +1427,7 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#nnrruasooo .gt_col_heading {
+#ircrriencr .gt_col_heading {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -1575,7 +1447,7 @@ named Lemon (aka Clementine)</li>
   overflow-x: hidden;
 }
 
-#nnrruasooo .gt_column_spanner_outer {
+#ircrriencr .gt_column_spanner_outer {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -1587,15 +1459,15 @@ named Lemon (aka Clementine)</li>
   padding-right: 4px;
 }
 
-#nnrruasooo .gt_column_spanner_outer:first-child {
+#ircrriencr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#nnrruasooo .gt_column_spanner_outer:last-child {
+#ircrriencr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#nnrruasooo .gt_column_spanner {
+#ircrriencr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1607,11 +1479,11 @@ named Lemon (aka Clementine)</li>
   width: 100%;
 }
 
-#nnrruasooo .gt_spanner_row {
+#ircrriencr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#nnrruasooo .gt_group_heading {
+#ircrriencr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1637,7 +1509,7 @@ named Lemon (aka Clementine)</li>
   text-align: left;
 }
 
-#nnrruasooo .gt_empty_group_heading {
+#ircrriencr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F2F2F2;
@@ -1652,15 +1524,15 @@ named Lemon (aka Clementine)</li>
   vertical-align: middle;
 }
 
-#nnrruasooo .gt_from_md > :first-child {
+#ircrriencr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#nnrruasooo .gt_from_md > :last-child {
+#ircrriencr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#nnrruasooo .gt_row {
+#ircrriencr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1679,7 +1551,7 @@ named Lemon (aka Clementine)</li>
   overflow-x: hidden;
 }
 
-#nnrruasooo .gt_stub {
+#ircrriencr .gt_stub {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -1692,7 +1564,7 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#nnrruasooo .gt_stub_row_group {
+#ircrriencr .gt_stub_row_group {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -1706,15 +1578,15 @@ named Lemon (aka Clementine)</li>
   vertical-align: top;
 }
 
-#nnrruasooo .gt_row_group_first td {
+#ircrriencr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#nnrruasooo .gt_row_group_first th {
+#ircrriencr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#nnrruasooo .gt_summary_row {
+#ircrriencr .gt_summary_row {
   color: #333333;
   background-color: #F2F2F2;
   text-transform: inherit;
@@ -1724,16 +1596,16 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#nnrruasooo .gt_first_summary_row {
+#ircrriencr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#nnrruasooo .gt_first_summary_row.thick {
+#ircrriencr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#nnrruasooo .gt_last_summary_row {
+#ircrriencr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1743,7 +1615,7 @@ named Lemon (aka Clementine)</li>
   border-bottom-color: #D3D3D3;
 }
 
-#nnrruasooo .gt_grand_summary_row {
+#ircrriencr .gt_grand_summary_row {
   color: #333333;
   background-color: #F2F2F2;
   text-transform: inherit;
@@ -1753,7 +1625,7 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#nnrruasooo .gt_first_grand_summary_row {
+#ircrriencr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1763,7 +1635,7 @@ named Lemon (aka Clementine)</li>
   border-top-color: #D3D3D3;
 }
 
-#nnrruasooo .gt_last_grand_summary_row_top {
+#ircrriencr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1773,11 +1645,11 @@ named Lemon (aka Clementine)</li>
   border-bottom-color: #D3D3D3;
 }
 
-#nnrruasooo .gt_striped {
+#ircrriencr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#nnrruasooo .gt_table_body {
+#ircrriencr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1786,7 +1658,7 @@ named Lemon (aka Clementine)</li>
   border-bottom-color: #D3D3D3;
 }
 
-#nnrruasooo .gt_footnotes {
+#ircrriencr .gt_footnotes {
   color: #333333;
   background-color: #F2F2F2;
   border-bottom-style: none;
@@ -1800,7 +1672,7 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#nnrruasooo .gt_footnote {
+#ircrriencr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1809,7 +1681,7 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#nnrruasooo .gt_sourcenotes {
+#ircrriencr .gt_sourcenotes {
   color: #333333;
   background-color: #F2F2F2;
   border-bottom-style: none;
@@ -1823,7 +1695,7 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#nnrruasooo .gt_sourcenote {
+#ircrriencr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1831,71 +1703,80 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#nnrruasooo .gt_left {
+#ircrriencr .gt_left {
   text-align: left;
 }
 
-#nnrruasooo .gt_center {
+#ircrriencr .gt_center {
   text-align: center;
 }
 
-#nnrruasooo .gt_right {
+#ircrriencr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#nnrruasooo .gt_font_normal {
+#ircrriencr .gt_font_normal {
   font-weight: normal;
 }
 
-#nnrruasooo .gt_font_bold {
+#ircrriencr .gt_font_bold {
   font-weight: bold;
 }
 
-#nnrruasooo .gt_font_italic {
+#ircrriencr .gt_font_italic {
   font-style: italic;
 }
 
-#nnrruasooo .gt_super {
+#ircrriencr .gt_super {
   font-size: 65%;
 }
 
-#nnrruasooo .gt_footnote_marks {
+#ircrriencr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#nnrruasooo .gt_asterisk {
+#ircrriencr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#nnrruasooo .gt_indent_1 {
+#ircrriencr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#nnrruasooo .gt_indent_2 {
+#ircrriencr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#nnrruasooo .gt_indent_3 {
+#ircrriencr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#nnrruasooo .gt_indent_4 {
+#ircrriencr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#nnrruasooo .gt_indent_5 {
+#ircrriencr .gt_indent_5 {
   text-indent: 25px;
+}
+
+#ircrriencr .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ircrriencr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
 }
 </style>
 
 <table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="header gt_col_headings">
-<th id="Person #" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Person #</th>
+<tr class="gt_col_headings header">
+<th id="Person-#" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Person #</th>
 <th id="birth_year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">birth_year</th>
 <th id="gender" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">gender</th>
 <th id="ethnicity" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ethnicity</th>
@@ -2014,23 +1895,23 @@ named Lemon (aka Clementine)</li>
 <p>A survey will produce a dataset for analyses</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="uehofsktxm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#uehofsktxm table {
+<div id="ugoteydhbz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ugoteydhbz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#uehofsktxm thead, #uehofsktxm tbody, #uehofsktxm tfoot, #uehofsktxm tr, #uehofsktxm td, #uehofsktxm th {
+#ugoteydhbz thead, #ugoteydhbz tbody, #ugoteydhbz tfoot, #ugoteydhbz tr, #ugoteydhbz td, #ugoteydhbz th {
   border-style: none;
 }
 
-#uehofsktxm p {
+#ugoteydhbz p {
   margin: 0;
   padding: 0;
 }
 
-#uehofsktxm .gt_table {
+#ugoteydhbz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2056,12 +1937,12 @@ named Lemon (aka Clementine)</li>
   border-left-color: #D3D3D3;
 }
 
-#uehofsktxm .gt_caption {
+#ugoteydhbz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#uehofsktxm .gt_title {
+#ugoteydhbz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2073,7 +1954,7 @@ named Lemon (aka Clementine)</li>
   border-bottom-width: 0;
 }
 
-#uehofsktxm .gt_subtitle {
+#ugoteydhbz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2085,7 +1966,7 @@ named Lemon (aka Clementine)</li>
   border-top-width: 0;
 }
 
-#uehofsktxm .gt_heading {
+#ugoteydhbz .gt_heading {
   background-color: #F2F2F2;
   text-align: center;
   border-bottom-color: #F2F2F2;
@@ -2097,13 +1978,13 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#uehofsktxm .gt_bottom_border {
+#ugoteydhbz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#uehofsktxm .gt_col_headings {
+#ugoteydhbz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2118,7 +1999,7 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#uehofsktxm .gt_col_heading {
+#ugoteydhbz .gt_col_heading {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -2138,7 +2019,7 @@ named Lemon (aka Clementine)</li>
   overflow-x: hidden;
 }
 
-#uehofsktxm .gt_column_spanner_outer {
+#ugoteydhbz .gt_column_spanner_outer {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -2150,15 +2031,15 @@ named Lemon (aka Clementine)</li>
   padding-right: 4px;
 }
 
-#uehofsktxm .gt_column_spanner_outer:first-child {
+#ugoteydhbz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#uehofsktxm .gt_column_spanner_outer:last-child {
+#ugoteydhbz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#uehofsktxm .gt_column_spanner {
+#ugoteydhbz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2170,11 +2051,11 @@ named Lemon (aka Clementine)</li>
   width: 100%;
 }
 
-#uehofsktxm .gt_spanner_row {
+#ugoteydhbz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#uehofsktxm .gt_group_heading {
+#ugoteydhbz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2200,7 +2081,7 @@ named Lemon (aka Clementine)</li>
   text-align: left;
 }
 
-#uehofsktxm .gt_empty_group_heading {
+#ugoteydhbz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F2F2F2;
@@ -2215,15 +2096,15 @@ named Lemon (aka Clementine)</li>
   vertical-align: middle;
 }
 
-#uehofsktxm .gt_from_md > :first-child {
+#ugoteydhbz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#uehofsktxm .gt_from_md > :last-child {
+#ugoteydhbz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#uehofsktxm .gt_row {
+#ugoteydhbz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2242,7 +2123,7 @@ named Lemon (aka Clementine)</li>
   overflow-x: hidden;
 }
 
-#uehofsktxm .gt_stub {
+#ugoteydhbz .gt_stub {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -2255,7 +2136,7 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#uehofsktxm .gt_stub_row_group {
+#ugoteydhbz .gt_stub_row_group {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -2269,15 +2150,15 @@ named Lemon (aka Clementine)</li>
   vertical-align: top;
 }
 
-#uehofsktxm .gt_row_group_first td {
+#ugoteydhbz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#uehofsktxm .gt_row_group_first th {
+#ugoteydhbz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#uehofsktxm .gt_summary_row {
+#ugoteydhbz .gt_summary_row {
   color: #333333;
   background-color: #F2F2F2;
   text-transform: inherit;
@@ -2287,16 +2168,16 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#uehofsktxm .gt_first_summary_row {
+#ugoteydhbz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#uehofsktxm .gt_first_summary_row.thick {
+#ugoteydhbz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#uehofsktxm .gt_last_summary_row {
+#ugoteydhbz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2306,7 +2187,7 @@ named Lemon (aka Clementine)</li>
   border-bottom-color: #D3D3D3;
 }
 
-#uehofsktxm .gt_grand_summary_row {
+#ugoteydhbz .gt_grand_summary_row {
   color: #333333;
   background-color: #F2F2F2;
   text-transform: inherit;
@@ -2316,7 +2197,7 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#uehofsktxm .gt_first_grand_summary_row {
+#ugoteydhbz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2326,7 +2207,7 @@ named Lemon (aka Clementine)</li>
   border-top-color: #D3D3D3;
 }
 
-#uehofsktxm .gt_last_grand_summary_row_top {
+#ugoteydhbz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2336,11 +2217,11 @@ named Lemon (aka Clementine)</li>
   border-bottom-color: #D3D3D3;
 }
 
-#uehofsktxm .gt_striped {
+#ugoteydhbz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#uehofsktxm .gt_table_body {
+#ugoteydhbz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2349,7 +2230,7 @@ named Lemon (aka Clementine)</li>
   border-bottom-color: #D3D3D3;
 }
 
-#uehofsktxm .gt_footnotes {
+#ugoteydhbz .gt_footnotes {
   color: #333333;
   background-color: #F2F2F2;
   border-bottom-style: none;
@@ -2363,7 +2244,7 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#uehofsktxm .gt_footnote {
+#ugoteydhbz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2372,7 +2253,7 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#uehofsktxm .gt_sourcenotes {
+#ugoteydhbz .gt_sourcenotes {
   color: #333333;
   background-color: #F2F2F2;
   border-bottom-style: none;
@@ -2386,7 +2267,7 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#uehofsktxm .gt_sourcenote {
+#ugoteydhbz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2394,71 +2275,80 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#uehofsktxm .gt_left {
+#ugoteydhbz .gt_left {
   text-align: left;
 }
 
-#uehofsktxm .gt_center {
+#ugoteydhbz .gt_center {
   text-align: center;
 }
 
-#uehofsktxm .gt_right {
+#ugoteydhbz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#uehofsktxm .gt_font_normal {
+#ugoteydhbz .gt_font_normal {
   font-weight: normal;
 }
 
-#uehofsktxm .gt_font_bold {
+#ugoteydhbz .gt_font_bold {
   font-weight: bold;
 }
 
-#uehofsktxm .gt_font_italic {
+#ugoteydhbz .gt_font_italic {
   font-style: italic;
 }
 
-#uehofsktxm .gt_super {
+#ugoteydhbz .gt_super {
   font-size: 65%;
 }
 
-#uehofsktxm .gt_footnote_marks {
+#ugoteydhbz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#uehofsktxm .gt_asterisk {
+#ugoteydhbz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#uehofsktxm .gt_indent_1 {
+#ugoteydhbz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#uehofsktxm .gt_indent_2 {
+#ugoteydhbz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#uehofsktxm .gt_indent_3 {
+#ugoteydhbz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#uehofsktxm .gt_indent_4 {
+#ugoteydhbz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#uehofsktxm .gt_indent_5 {
+#ugoteydhbz .gt_indent_5 {
   text-indent: 25px;
+}
+
+#ugoteydhbz .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ugoteydhbz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
 }
 </style>
 
 <table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="header gt_col_headings">
-<th id="Person #" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Person #</th>
+<tr class="gt_col_headings header">
+<th id="Person-#" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Person #</th>
 <th id="birth_year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">birth_year</th>
 <th id="gender" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">gender</th>
 <th id="ethnicity" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ethnicity</th>
@@ -2573,7 +2463,6 @@ named Lemon (aka Clementine)</li>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h4 id="this-includes">This includes:<br>
 </h4>
 <ul>
@@ -2583,7 +2472,6 @@ named Lemon (aka Clementine)</li>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h4 id="usually-determined-by">Usually determined by:<br>
 </h4>
 <ol type="1">
@@ -2591,8 +2479,7 @@ named Lemon (aka Clementine)</li>
 <li>How we ask the question.</li>
 </ol>
 </div>
-</div>
-</div>
+</div></div>
 <div class="fragment" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #2ad2c9;  width: 470px; height: 65px; padding: 0px 0px 10px 10px; position: absolute; top: 250px; right: 35px">
 
 </div>
@@ -2718,8 +2605,7 @@ named Lemon (aka Clementine)</li>
 <li>The nature of the characteristic we are trying to measure.</li>
 <li>How we ask the question.</li>
 </ol>
-</div>
-</div>
+</div></div>
 <div class="fragment" data-fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #2ad2c9;  width: 330px; height: 35px; padding: 0px 0px 10px 10px; position: absolute; top: 325px; right: 188px">
 
 </div>
@@ -2735,23 +2621,23 @@ named Lemon (aka Clementine)</li>
 <p>A survey will produce a dataset for analyses</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="brwsjvwjfk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#brwsjvwjfk table {
+<div id="dzzieicdwc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dzzieicdwc table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#brwsjvwjfk thead, #brwsjvwjfk tbody, #brwsjvwjfk tfoot, #brwsjvwjfk tr, #brwsjvwjfk td, #brwsjvwjfk th {
+#dzzieicdwc thead, #dzzieicdwc tbody, #dzzieicdwc tfoot, #dzzieicdwc tr, #dzzieicdwc td, #dzzieicdwc th {
   border-style: none;
 }
 
-#brwsjvwjfk p {
+#dzzieicdwc p {
   margin: 0;
   padding: 0;
 }
 
-#brwsjvwjfk .gt_table {
+#dzzieicdwc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2777,12 +2663,12 @@ named Lemon (aka Clementine)</li>
   border-left-color: #D3D3D3;
 }
 
-#brwsjvwjfk .gt_caption {
+#dzzieicdwc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#brwsjvwjfk .gt_title {
+#dzzieicdwc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2794,7 +2680,7 @@ named Lemon (aka Clementine)</li>
   border-bottom-width: 0;
 }
 
-#brwsjvwjfk .gt_subtitle {
+#dzzieicdwc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2806,7 +2692,7 @@ named Lemon (aka Clementine)</li>
   border-top-width: 0;
 }
 
-#brwsjvwjfk .gt_heading {
+#dzzieicdwc .gt_heading {
   background-color: #F2F2F2;
   text-align: center;
   border-bottom-color: #F2F2F2;
@@ -2818,13 +2704,13 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#brwsjvwjfk .gt_bottom_border {
+#dzzieicdwc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#brwsjvwjfk .gt_col_headings {
+#dzzieicdwc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2839,7 +2725,7 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#brwsjvwjfk .gt_col_heading {
+#dzzieicdwc .gt_col_heading {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -2859,7 +2745,7 @@ named Lemon (aka Clementine)</li>
   overflow-x: hidden;
 }
 
-#brwsjvwjfk .gt_column_spanner_outer {
+#dzzieicdwc .gt_column_spanner_outer {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -2871,15 +2757,15 @@ named Lemon (aka Clementine)</li>
   padding-right: 4px;
 }
 
-#brwsjvwjfk .gt_column_spanner_outer:first-child {
+#dzzieicdwc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#brwsjvwjfk .gt_column_spanner_outer:last-child {
+#dzzieicdwc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#brwsjvwjfk .gt_column_spanner {
+#dzzieicdwc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2891,11 +2777,11 @@ named Lemon (aka Clementine)</li>
   width: 100%;
 }
 
-#brwsjvwjfk .gt_spanner_row {
+#dzzieicdwc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#brwsjvwjfk .gt_group_heading {
+#dzzieicdwc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2921,7 +2807,7 @@ named Lemon (aka Clementine)</li>
   text-align: left;
 }
 
-#brwsjvwjfk .gt_empty_group_heading {
+#dzzieicdwc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F2F2F2;
@@ -2936,15 +2822,15 @@ named Lemon (aka Clementine)</li>
   vertical-align: middle;
 }
 
-#brwsjvwjfk .gt_from_md > :first-child {
+#dzzieicdwc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#brwsjvwjfk .gt_from_md > :last-child {
+#dzzieicdwc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#brwsjvwjfk .gt_row {
+#dzzieicdwc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2963,7 +2849,7 @@ named Lemon (aka Clementine)</li>
   overflow-x: hidden;
 }
 
-#brwsjvwjfk .gt_stub {
+#dzzieicdwc .gt_stub {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -2976,7 +2862,7 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#brwsjvwjfk .gt_stub_row_group {
+#dzzieicdwc .gt_stub_row_group {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -2990,15 +2876,15 @@ named Lemon (aka Clementine)</li>
   vertical-align: top;
 }
 
-#brwsjvwjfk .gt_row_group_first td {
+#dzzieicdwc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#brwsjvwjfk .gt_row_group_first th {
+#dzzieicdwc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#brwsjvwjfk .gt_summary_row {
+#dzzieicdwc .gt_summary_row {
   color: #333333;
   background-color: #F2F2F2;
   text-transform: inherit;
@@ -3008,16 +2894,16 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#brwsjvwjfk .gt_first_summary_row {
+#dzzieicdwc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#brwsjvwjfk .gt_first_summary_row.thick {
+#dzzieicdwc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#brwsjvwjfk .gt_last_summary_row {
+#dzzieicdwc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3027,7 +2913,7 @@ named Lemon (aka Clementine)</li>
   border-bottom-color: #D3D3D3;
 }
 
-#brwsjvwjfk .gt_grand_summary_row {
+#dzzieicdwc .gt_grand_summary_row {
   color: #333333;
   background-color: #F2F2F2;
   text-transform: inherit;
@@ -3037,7 +2923,7 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#brwsjvwjfk .gt_first_grand_summary_row {
+#dzzieicdwc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3047,7 +2933,7 @@ named Lemon (aka Clementine)</li>
   border-top-color: #D3D3D3;
 }
 
-#brwsjvwjfk .gt_last_grand_summary_row_top {
+#dzzieicdwc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3057,11 +2943,11 @@ named Lemon (aka Clementine)</li>
   border-bottom-color: #D3D3D3;
 }
 
-#brwsjvwjfk .gt_striped {
+#dzzieicdwc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#brwsjvwjfk .gt_table_body {
+#dzzieicdwc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3070,7 +2956,7 @@ named Lemon (aka Clementine)</li>
   border-bottom-color: #D3D3D3;
 }
 
-#brwsjvwjfk .gt_footnotes {
+#dzzieicdwc .gt_footnotes {
   color: #333333;
   background-color: #F2F2F2;
   border-bottom-style: none;
@@ -3084,7 +2970,7 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#brwsjvwjfk .gt_footnote {
+#dzzieicdwc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3093,7 +2979,7 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#brwsjvwjfk .gt_sourcenotes {
+#dzzieicdwc .gt_sourcenotes {
   color: #333333;
   background-color: #F2F2F2;
   border-bottom-style: none;
@@ -3107,7 +2993,7 @@ named Lemon (aka Clementine)</li>
   border-right-color: #D3D3D3;
 }
 
-#brwsjvwjfk .gt_sourcenote {
+#dzzieicdwc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3115,71 +3001,80 @@ named Lemon (aka Clementine)</li>
   padding-right: 5px;
 }
 
-#brwsjvwjfk .gt_left {
+#dzzieicdwc .gt_left {
   text-align: left;
 }
 
-#brwsjvwjfk .gt_center {
+#dzzieicdwc .gt_center {
   text-align: center;
 }
 
-#brwsjvwjfk .gt_right {
+#dzzieicdwc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#brwsjvwjfk .gt_font_normal {
+#dzzieicdwc .gt_font_normal {
   font-weight: normal;
 }
 
-#brwsjvwjfk .gt_font_bold {
+#dzzieicdwc .gt_font_bold {
   font-weight: bold;
 }
 
-#brwsjvwjfk .gt_font_italic {
+#dzzieicdwc .gt_font_italic {
   font-style: italic;
 }
 
-#brwsjvwjfk .gt_super {
+#dzzieicdwc .gt_super {
   font-size: 65%;
 }
 
-#brwsjvwjfk .gt_footnote_marks {
+#dzzieicdwc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#brwsjvwjfk .gt_asterisk {
+#dzzieicdwc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#brwsjvwjfk .gt_indent_1 {
+#dzzieicdwc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#brwsjvwjfk .gt_indent_2 {
+#dzzieicdwc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#brwsjvwjfk .gt_indent_3 {
+#dzzieicdwc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#brwsjvwjfk .gt_indent_4 {
+#dzzieicdwc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#brwsjvwjfk .gt_indent_5 {
+#dzzieicdwc .gt_indent_5 {
   text-indent: 25px;
+}
+
+#dzzieicdwc .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#dzzieicdwc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
 }
 </style>
 
 <table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="header gt_col_headings">
-<th id="Person #" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Person #</th>
+<tr class="gt_col_headings header">
+<th id="Person-#" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Person #</th>
 <th id="birth_year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">birth_year</th>
 <th id="gender" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">gender</th>
 <th id="ethnicity" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ethnicity</th>
@@ -3310,8 +3205,7 @@ named Lemon (aka Clementine)</li>
 </blockquote>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="population-versus-sample" class="slide level2">
 <h2>Population versus Sample</h2>
@@ -3335,8 +3229,7 @@ named Lemon (aka Clementine)</li>
 <div class="fragment" data-fragment-index="4">
 <p><strong>Answer</strong>: American adults.</p>
 </div>
-</div>
-</div>
+</div></div>
 <div class="fragment" data-fragment-index="5" data-id="box1" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 370px; height: 150px; padding: 0px 0px 10px 10px; position: absolute; top: 50px; right: -10px">
 <p>Unfortunately, we rarely have the time, energy, or money to study the entire population of interest!</p>
 </div>
@@ -3387,8 +3280,7 @@ named Lemon (aka Clementine)</li>
 <p><span style="color:#e93cac"><strong>Population parameter</strong></span><br>The characteristic of the population<br>that we are interested in knowing.</p>
 </blockquote>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="inference" class="slide level2">
 <h2>Inference</h2>
@@ -3579,7 +3471,6 @@ named Lemon (aka Clementine)</li>
 <p><em>Even with a representative sample</em> there are additional sources of bias to be aware of</p>
 <p><br></p>
 <div class="fragment">
-<!-- -->
 <h4 id="non-response">Non-response</h4>
 <ul>
 <li>Survey non-response –&gt; individuals refuse to take the survey</li>
@@ -3641,7 +3532,6 @@ named Lemon (aka Clementine)</li>
 </div>
 <p><br></p>
 <div class="fragment" data-fragment-index="2">
-<!-- -->
 <h4 id="the-following-questions-are-asked-routinely-on-national-surveys">The following questions are asked routinely on national surveys:</h4>
 <ul>
 <li>How many times did you have sex last month?</li>
@@ -3675,14 +3565,14 @@ named Lemon (aka Clementine)</li>
 <section id="section-2" class="slide level2" data-menu-title="Homework 1" data-background-iframe="https://vsass.github.io/SOC221/homework/homework1.html" data-background-interactive="TRUE">
 <h2></h2>
 
-<div class="quarto-auto-generated-content">
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
 
 </div>
-</div>
-</section></section>
-    </div>
-  </div>
+</div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="../site_libs/revealjs/dist/reveal.js"></script>
@@ -3712,7 +3602,8 @@ named Lemon (aka Clementine)</li>
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
 'smaller': true,
  
@@ -3867,7 +3758,7 @@ named Lemon (aka Clementine)</li>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -4010,8 +3901,6 @@ named Lemon (aka Clementine)</li>
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')

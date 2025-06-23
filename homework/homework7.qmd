@@ -7,10 +7,25 @@ citation-location: margin
 ---
 
 ## Instructions 
-(@) Download a printable version of this assignment [here](pdfs/homework7.pdf). Print it out and record your answers directly in the space provided.
+(@) Download the printable version of this assignment [here](pdfs/homework1.pdf). Print it out and record your answers directly in the space provided. 
 (@) Write your **name** and **student number** on the top of the assignment. 
 (@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
-(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment shown below.\
+(@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment.\
+
+::: {.content-hidden when-format="html"}
+:::{.column-screen-inset-shaded} 
+::: {#fig-confidence layout-ncol=3}
+
+![I knew the answer to that question](../images/confidence_level_assessment1.png){width="75%"}
+
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){width="75%"}
+
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){width="75%"}
+
+Confidence Level Assessment
+:::
+:::
+:::
 
 ::: {.panel-tabset}
 
@@ -33,8 +48,8 @@ citation-location: margin
 :::
 
 (@) Turn in your assignment in class on the due date. 
+<br> 
 
-<br>
 
 ### Questions
 
@@ -64,7 +79,7 @@ citation-location: margin
 a. Draw a scatter plot of the data.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -80,7 +95,7 @@ a. Draw a scatter plot of the data.
 b. Calculate and interpret the correlation between education and number of children.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -90,7 +105,7 @@ b. Calculate and interpret the correlation between education and number of child
 c. Is the association between education and number of children statistically significant? Explain the basis of your answer and the implications for the association in the population.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -101,7 +116,7 @@ c. Is the association between education and number of children statistically sig
 d. Calculate and interpret the meaning of the regression slope.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -111,7 +126,7 @@ d. Calculate and interpret the meaning of the regression slope.
 e. Calculate and interpret the meaning of the Y-intercept for the regression line.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -121,7 +136,7 @@ e. Calculate and interpret the meaning of the Y-intercept for the regression lin
 f. Predict the number of children for an adult with 11 years of education.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -131,11 +146,9 @@ f. Predict the number of children for an adult with 11 years of education.
 g. Calculate and interpret the coefficient of determination.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
-<br>
-<br>
 <br>
 <br>
 <br>
@@ -144,7 +157,6 @@ g. Calculate and interpret the coefficient of determination.
 
 **The same researcher collected at random one child from each of the eight families in which there was at least one child.  She calculated the following statistics to study the effects of number of siblings (X) on happiness of the child (Y), measured on an interval scale in which low scores indicate a low level of happiness and high scores indicate a high level of happiness.**
 
-{{< pagebreak >}}
 
 | Happiness points (Y) | Number of siblings (X) |   |
 |:--------:|:------:|:---:|
@@ -159,7 +171,7 @@ g. Calculate and interpret the coefficient of determination.
 a. Is the association between number of siblings and happiness statistically significant? Explain the basis of your answer and the implications for the association in the population.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -171,7 +183,7 @@ a. Is the association between number of siblings and happiness statistically sig
 b. Calculate and interpret the meaning of the regression slope.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -181,7 +193,7 @@ b. Calculate and interpret the meaning of the regression slope.
 c. Calculate and interpret the meaning of the Y-intercept for the regression line.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -191,15 +203,20 @@ c. Calculate and interpret the meaning of the Y-intercept for the regression lin
 d. Predict the level of happiness for an only child and for a kid with two siblings.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
-{{< pagebreak >}}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
 
 e. Calculate and interpret the coefficient of determination.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -227,7 +244,7 @@ e. Calculate and interpret the coefficient of determination.
 a. Is the association statistically significant? Explain your answer.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -239,7 +256,7 @@ a. Is the association statistically significant? Explain your answer.
 b. Calculate and interpret the meaning of the regression slope.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -249,7 +266,7 @@ b. Calculate and interpret the meaning of the regression slope.
 c. Calculate and interpret the meaning of the Y-intercept for the regression line.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -259,7 +276,7 @@ c. Calculate and interpret the meaning of the Y-intercept for the regression lin
 d. Predict the hourly wage of a randomly selected worker who has been with the company for 4 years.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -269,7 +286,7 @@ d. Predict the hourly wage of a randomly selected worker who has been with the c
 e. Calculate and interpret the coefficient of determination.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -280,7 +297,7 @@ e. Calculate and interpret the coefficient of determination.
 f. Based on these results, what is the typical starting wage per hour, and what is the typical increase in wage for each additional year on the job? (*not a trick question!*)
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -341,6 +358,8 @@ ols_table |>
 
 :::
 
+{{< pagebreak >}}
+
 #### Question 5
 
 **Interpretation of Model 1**
@@ -348,7 +367,7 @@ ols_table |>
 a. Write out the regression equation implied in the results for Model 1.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -358,7 +377,7 @@ a. Write out the regression equation implied in the results for Model 1.
 b. Predict the life expectancy for a country in which 75% of the population can read and write.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -368,7 +387,7 @@ b. Predict the life expectancy for a country in which 75% of the population can 
 c. Interpret the meaning of the constant in Model 1.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -378,7 +397,7 @@ c. Interpret the meaning of the constant in Model 1.
 d. Interpret the slope coefficient for the effect of % Literate in Model 1.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -389,7 +408,7 @@ d. Interpret the slope coefficient for the effect of % Literate in Model 1.
 e. Is the association between literacy and life expectancy statistically significant? Explain how you reached your conclusion.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -401,7 +420,7 @@ e. Is the association between literacy and life expectancy statistically signifi
 f. Interpret the coefficient of determination in Model 1.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -412,7 +431,7 @@ f. Interpret the coefficient of determination in Model 1.
 g. Do these results support the idea that population health (as measured by life expectancy) is affected by education levels (as measured by % literate)? Explain your answer.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -427,7 +446,7 @@ g. Do these results support the idea that population health (as measured by life
 a. Write out the regression equation implied in the results for Model 2.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -437,7 +456,7 @@ a. Write out the regression equation implied in the results for Model 2.
 b. Predict the life expectancy for a country in which 75% of the population can read and write and 50% of the population lives in cities.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -447,7 +466,7 @@ b. Predict the life expectancy for a country in which 75% of the population can 
 c. Interpret the meaning of the constant in Model 2.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -458,7 +477,7 @@ c. Interpret the meaning of the constant in Model 2.
 d. Interpret the slope coefficient for the effect of % Literate in Model 2.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -471,7 +490,7 @@ d. Interpret the slope coefficient for the effect of % Literate in Model 2.
 e. Interpret the slope coefficient for the effect of % Urban in Model 2.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -484,7 +503,7 @@ e. Interpret the slope coefficient for the effect of % Urban in Model 2.
 f. Interpret the coefficient of multiple determination in Model 2
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
@@ -497,7 +516,7 @@ f. Interpret the coefficient of multiple determination in Model 2
 g. Do these results support the argument that the association between life expectancy and % literate is spurious? Explain your answer.
 
 ::: {.column-margin}
-![](../images/confidence_level_assessment.png)
+![](../images/confidence_level_assessment.png){width="75%"}
 :::
 
 <br>
