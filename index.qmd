@@ -8,15 +8,16 @@ about:
   image-shape: rectangle
   image-width: 650px
   links: 
-    - text: Canvas
-      icon: upload
-      href: https://canvas.uw.edu/courses/1729249
     - text: Slack
       icon: slack
-      href: https://soc-221-summer-2024.slack.com
+      href: https://soc-221-summer-2025.slack.com
     - text: Message me
       icon: chat-dots
-      href: https://soc-221-summer-2024.slack.com/archives/D0727GMUKEE
+      href: https://soc-221-summer-2025.slack.com/archives/D092HCPN329
+    - text: Feedback
+      icon: pencil-square
+      href: https://docs.google.com/forms/d/e/1FAIpQLSeJWYz6uJ4BKxN8QndvNf2uaHpSqN43rm1eSGsx01DHSI7pKQ/viewform?usp=sharing&ouid=109431563208398224321
+      
 ---
 
 #### Instructor:
