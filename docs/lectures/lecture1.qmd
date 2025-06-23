@@ -1147,6 +1147,20 @@ Which do you think people found [*most*]{style="color:#e93cac"} sensitive?
 - [We need to be cognizant of these potential sources of [BIAS]{style="color:#e93cac"} as we analyze data]{style="font-size:1.5em"}
 :::
 
+## Group Activity 
+
+<br>
+
+::: incremental
+1. Come up with five (5) examples of the following types of variables:
+  a. nominal (include at least one binary variable)
+  b. ordinal
+  c. interval
+  d. ratio
+2. Categorize your examples from the previous question into qualitative or quantitative variables. What helps you make this determination? 
+3. Can you think of a survey you've taken recently? What do you think the sampling strategy was for that survey? Why? 
+:::
+
 # Homework{.section-title background-color="#e8e3d3"}
 
 ## {data-menu-title="Homework 1" background-iframe="https://vsass.github.io/SOC221/homework/homework1.html" background-interactive=TRUE}
