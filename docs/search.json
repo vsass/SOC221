@@ -2798,5 +2798,12 @@
     "title": "",
     "section": "Confidence intervals",
     "text": "Confidence intervals\n\n\\[\n\\bar{X}\n\\]\n\n\n\n\n\n\n\n\nCreate a range of scores, centered on the sample mean, in which we think the population mean is likely to be located\n\n\nBuilding a margin of error around our sample mean\n\n\nConfidence interval: \\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n⬅️\n\n\nAll confidence intervals take this form"
+  },
+  {
+    "objectID": "Lectures/lecture1.html#group-activity",
+    "href": "Lectures/lecture1.html#group-activity",
+    "title": "",
+    "section": "Group Activity",
+    "text": "Group Activity\n\n\n\nCome up with five (5) examples of the following types of variables:\n\n\nnominal (include at least one binary variable)\nordinal\ninterval\nratio\n\n\nCategorize your examples from the previous question into qualitative or quantitative variables. What helps you make this determination?\nCan you think of a survey you’ve taken recently? What do you think the sampling strategy was for that survey? Why?"
   }
 ]
