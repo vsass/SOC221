@@ -57,7 +57,7 @@ Confidence Level Assessment
 
 #### Question 1
 
-**Complete the class survey and ask [**at least three (3)**]{style="color:#e93cac"} other people to do the same. The class survey can be accessed [here](survey.qmd). You are free to invite anyone else – friends, family members, co-workers, etc. – to complete the survey but every respondent (including you!) should complete the survey only once. [You will receive credit for this problem if you complete the survey yourself and at least **three (3) others** enter your **student number** at the end of the survey]{style="color:#e93cac"}. Here is an email invitation that you can send out to get your people to complete the survey:**
+**Complete the class survey and ask [**at least three (3)**]{style="color:#e93cac"} other people to do the same. The class survey can be accessed [here](https://vsass.github.io/SOC221/homework/survey.html). You are free to invite anyone else – friends, family members, co-workers, etc. – to complete the survey but every respondent (including you!) should complete the survey only once. [You will receive credit for this problem if you complete the survey yourself and at least **three (3) others** enter your **student number** at the end of the survey]{style="color:#e93cac"}. Here is an email invitation that you can send out to get your people to complete the survey:**
 
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png){width="75%"}
