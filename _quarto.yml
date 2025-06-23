@@ -27,25 +27,25 @@ website:
       - text: "Lectures"
         menu: 
           - text: "Lecture 1:<br>Introductions; Overview of statistics; Producting data: surveys and sampling"
-            href: lectures/lecture1.qmd
+            href: Lectures/lecture1.qmd
           - text: "Lecture 2:<br>Frequency tables; Graphical techniques"
-            href: lectures/lecture2.qmd
+            href: Lectures/lecture2.qmd
           - text: "Lecture 3:<br>Measures of central tendency; Measures of variability"
-            href: lectures/lecture3.qmd
+            href: Lectures/lecture3.qmd
           - text: "Lecture 4:<br>Probability and probability distributions; Normal distributions"
-            href: lectures/lecture4.qmd
+            href: Lectures/lecture4.qmd
           - text: "Lecture 5:<br>Sampling distributions<br>Central limit theorem; Logic of inference"
-            href: lectures/lecture5.qmd
+            href: Lectures/lecture5.qmd
           - text: "Lecture 6:<br>Estimation: confidence intervals for means; Estimation: confidence intervals for proportions"
-            href: lectures/lecture6.qmd
+            href: Lectures/lecture6.qmd
           - text: "Lecture 7:<br>Hypothesis testing for one sample; Hypothesis testing for two samples"
-            href: lectures/lecture7.qmd
+            href: Lectures/lecture7.qmd
           - text: "Lecture 8:<br>Two-way tables and chi-square; Scatterplots and correlation"
-            href: lectures/lecture8.qmd
+            href: Lectures/lecture8.qmd
           - text: "Lecture 9:<br>Bivariate regression; Inference for regression"
-            href: lectures/lecture9.qmd
+            href: Lectures/lecture9.qmd
           - text: "Lecture 10:<br>Multivariate regression"
-            href: lectures/lecture10.qmd
+            href: Lectures/lecture10.qmd
       - text: "Homework"
         menu: 
           - text: "Homework 1"
