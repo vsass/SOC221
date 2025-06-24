@@ -7,7 +7,7 @@ citation-location: margin
 ---
 
 ## Instructions 
-(@) Download the printable version of this assignment [here](pdfs/homework2.pdf). Print it out and record your answers directly in the space provided. 
+(@) Download the printable version of this assignment [here](https://vsass.github.io/SOC221/homework/pdfs/homework2.pdf). Print it out and record your answers directly in the space provided. 
 (@) Write your **name** and **student number** on the top of the assignment. 
 (@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
 (@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment.\
@@ -46,6 +46,7 @@ Confidence Level Assessment
 ![I don’t know the answer for this question](../images/confidence_level_assessment3.png){fig-align="center" width="25%"}
 
 :::
+
 
 (@) Turn in your assignment in class on the due date. 
 <br> 
@@ -244,7 +245,7 @@ case].
 
 d. What do your calculations indicate about the shape (symmetrical, negatively/left skewed, or positively/right skewed) of the distributions for the two groups?
 
-{{< pagebreak >}}
+<br>
 
 [Answer:]{.underline} 
 
@@ -262,7 +263,7 @@ e. If you removed the most extreme case (the person with the most text messages)
 
 :::
 
-{{< pagebreak >}}
+<br>
 
 #### Question 3
 

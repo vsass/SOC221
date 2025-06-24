@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Homework 2</title>
+<title>Primer for Multivariate Regression</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -192,14 +192,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Primer-for-multivariate-regression.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homework 2</h1>
+<h1 class="title">Primer for Multivariate Regression</h1>
 </div>
 
 
@@ -216,370 +216,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="instructions" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<ol class="example" type="1">
-<li>Download the printable version of this assignment <a href="https://vsass.github.io/SOC221/homework/pdfs/homework2.pdf">here</a>. Print it out and record your answers directly in the space provided.</li>
-<li>Write your <strong>name</strong> and <strong>student number</strong> on the top of the assignment.</li>
-<li>For problems requiring additional written work, use the allotted work space and/or margins of the page.</li>
-<li>Once you’re done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment.<br>
-</li>
-</ol>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Confidence-level assessment</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><span style="color: #e93cac">Confident</span></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><span style="color: #e93cac">Unsure</span></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false"><span style="color: #e93cac">Don’t Know</span></a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/confidence_level_assessment.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
-</figure>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/confidence_level_assessment1.png" class="img-fluid figure-img" style="width:25.0%"></p>
-<figcaption>I knew the answer to that question</figcaption>
-</figure>
-</div>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/confidence_level_assessment2.png" class="img-fluid figure-img" style="width:25.0%"></p>
-<figcaption>I’m not sure whether I got this question correct</figcaption>
-</figure>
-</div>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/confidence_level_assessment3.png" class="img-fluid figure-img" style="width:25.0%"></p>
-<figcaption>I don’t know the answer for this question</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<ol start="5" class="example" type="1">
-<li>Turn in your assignment in class on the due date. <br></li>
-</ol>
-<section id="questions" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="questions">Questions</h3>
-<section id="question-1" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="question-1">Question 1</h4>
-<p><strong>The following table provides chart data for the patients in a particular hospital ward:</strong></p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><img src="../images/confidence_level_assessment.png" class="img-fluid" style="width:75.0%"></p>
-</div></div><p><br></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Patient</th>
-<th style="text-align: center;">Room</th>
-<th style="text-align: center;">Physician</th>
-<th style="text-align: center;">Condition</th>
-<th style="text-align: center;">Length of stay</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Carter, M.</td>
-<td style="text-align: center;">202</td>
-<td style="text-align: center;">Pollock</td>
-<td style="text-align: center;">Critical</td>
-<td style="text-align: center;">8 days</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Levin, J.</td>
-<td style="text-align: center;">203</td>
-<td style="text-align: center;">McClare</td>
-<td style="text-align: center;">Fair</td>
-<td style="text-align: center;">4 days</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Fox, J.</td>
-<td style="text-align: center;">203</td>
-<td style="text-align: center;">Lench</td>
-<td style="text-align: center;">Good</td>
-<td style="text-align: center;">5 days</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Garcia, L.</td>
-<td style="text-align: center;">205</td>
-<td style="text-align: center;">Lench</td>
-<td style="text-align: center;">Fair</td>
-<td style="text-align: center;">7 days</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Arluke, A.</td>
-<td style="text-align: center;">201</td>
-<td style="text-align: center;">Pollock</td>
-<td style="text-align: center;">Serious</td>
-<td style="text-align: center;">2 days</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Parodi, A.</td>
-<td style="text-align: center;">203</td>
-<td style="text-align: center;">McClare</td>
-<td style="text-align: center;">Good</td>
-<td style="text-align: center;">9 days</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Stark, D.</td>
-<td style="text-align: center;">204</td>
-<td style="text-align: center;">Lench</td>
-<td style="text-align: center;">Fair</td>
-<td style="text-align: center;">5 days</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Chow, F.</td>
-<td style="text-align: center;">202</td>
-<td style="text-align: center;">Pollock</td>
-<td style="text-align: center;">Critical</td>
-<td style="text-align: center;">1 day</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">McDevitt, J.</td>
-<td style="text-align: center;">204</td>
-<td style="text-align: center;">Loftus</td>
-<td style="text-align: center;">Serious</td>
-<td style="text-align: center;">2 days</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<p><strong>Name and calculate the most appropriate measure of central tendency and variability for each of the following variables. Feel free to provide a justification for your choice of measure as you see fit.</strong></p>
-<p><br></p>
-<p><u><strong>Room number</strong></u> <br> <br> Measure of central tendency: _____________________________________ <br> <br> Measure of variability: ____________________________________________ <br> <br> <u><strong>Physician</strong></u> <br> <br> Measure of central tendency: _____________________________________ <br> <br> Measure of variability: ____________________________________________ <br> <br> <u><strong>Patient condition</strong></u> <br> <br> Measure of central tendency: _____________________________________ <br> <br> Measure of variability: ____________________________________________ <br> <br> <u><strong>Length of hospital stay</strong></u> <br> <br> Measure of central tendency: _____________________________________ <br> <br> Measure of variability: ____________________________________________ <br> <br></p>
-</section>
-<section id="question-2" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="question-2">Question 2</h4>
-<p><strong>A researcher collected information on the number of text messages sent over an 8-hour period by a group of teenagers and a group of parents. The data collected are as follows:</strong></p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><img src="../images/confidence_level_assessment.png" class="img-fluid" style="width:75.0%"></p>
-</div></div><div class="columns">
-<div class="column" style="width:45%;">
-<table class="caption-top table">
-<caption>TEENAGERS</caption>
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Case #</th>
-<th style="text-align: center;">Number of Texts</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">27</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">10</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">8</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">5</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">11</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">9</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">5</td>
-</tr>
-</tbody>
-</table>
-</div><div class="column" style="width:10%;">
-
-</div><div class="column" style="width:45%;">
-<table class="caption-top table">
-<caption>PARENTS</caption>
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Case #</th>
-<th style="text-align: center;">Number of Texts</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">5</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">9</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">10</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">7</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">9</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">6</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p><br></p>
-<ol type="a">
-<li>Find the mode, median, mean, range, and standard deviation for the number of texts sent by each group (teenagers and parents).</li>
-</ol>
-<div class="columns">
-<div class="column" style="width:45%;">
-<p><u><strong>TEENAGERS</strong></u> <br> <br> MEAN ____________________ <br> <br> MEDIAN ____________________ <br> <br> MODE ____________________ <br> <br> RANGE ____________________ <br> <br> STANDARD<br> DEVIATION ____________________</p>
-</div><div class="column" style="width:10%;">
-
-</div><div class="column" style="width:45%;">
-<p><u><strong>PARENTS</strong></u> <br> <br> MEAN ____________________ <br> <br> MEDIAN ____________________ <br> <br> MODE ____________________ <br> <br> RANGE ____________________ <br> <br> STANDARD<br> DEVIATION ____________________</p>
-</div>
-</div>
-<p><br></p>
-<ol start="2" type="a">
-<li>Which group – teenagers or parents – tended to send more texts? Support your answer using statistics you calculated for Part a. [Choose the most useful statistics for making your case].</li>
-</ol>
-<p><u>Answer:</u></p>
-<div style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 300px; height: 50px; position: static">
-
-</div>
-<p><br></p>
-<ol start="3" type="a">
-<li>Which group – teenagers or parents – had the greatest diversity in the number of texts sent? Support your answer using statistics you calculated for Part a. [Choose the most useful statistics for making your case].</li>
-</ol>
-<p><u>Answer:</u></p>
-<div style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 300px; height: 50px; position: static">
-
-</div>
-<p><br></p>
-<ol start="4" type="a">
-<li>What do your calculations indicate about the shape (symmetrical, negatively/left skewed, or positively/right skewed) of the distributions for the two groups?</li>
-</ol>
-<p><br></p>
-<p><u>Answer:</u></p>
-<div style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 700px; height: 300px; position: static">
-
-</div>
-<p><br></p>
-<ol start="5" type="a">
-<li>If you removed the most extreme case (the person with the most text messages) from each of the distributions, would your answers to Parts b and c change?</li>
-</ol>
-<p><u>Answer:</u></p>
-<div style="background: rgba(255, 255, 255, 0); border: 1px solid black; width: 700px; height: 300px; position: static">
-
-</div>
-<p><br></p>
-</section>
-<section id="question-3" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="question-3">Question 3</h4>
-<p><strong>A teacher asked a sample of 18 junior high school students how many hours of television they watched during the previous weekend. The results of the survey are summarized in the following frequency distribution.</strong></p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><img src="../images/confidence_level_assessment.png" class="img-fluid" style="width:75.0%"></p>
-</div></div><p><br></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Hours of TV</th>
-<th style="text-align: center;">Frequency</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">6</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<p><strong>Calculate the following statistics to describe these data:</strong></p>
-<p><br> MEAN ____________________ <br> <br> MEDIAN ____________________ <br> <br> MODE ____________________ <br> <br> RANGE ____________________ <br> <br> STANDARD DEVIATION ____________________</p>
+<p><em>Regression analysis represents a key tool for assessing the nature of a focal association, checking for the statistical significance of a focal association and, most importantly, elaborating on a bivariate association to test theoretical arguments about the relationship between two variables. This document provides a brief refresher on the purpose and meaning of bivariate regression analysis and an overview of multivariate regression analysis. Rather than focus on the mathematics of multivariate regression (which are really a straightforward extension of those for bivariate regression), this introduction will focus on the practical application of these regression tools. Specifically, it demonstrates the creation and interpretation of output from an SPSS estimation of a bivariate regression model and a few multivariate models to exemplify a typical elaboration process. Please note that the example here is meant to demonstrate the mechanics of multivariate regression as a tool for assessing and elaborating on basic associations; it, by no means, represents a complete treatment of the topic of multivariate regression.</em></p>
+<p>The example uses data from the General Social Survey to explore the simple hypothesis that individual income is positively related to formal educational attainment. Note that the GSS subsample used here includes only adults who earned income from salary or wages in the previous year.</p>
+<section id="bivariate-regression-model" class="level2">
+<h2 class="anchored" data-anchor-id="bivariate-regression-model">Bivariate regression model</h2>
+<ul>
+<li>The first step in exploring any focal relationship is the test of whether the two variables are associated with one another in a theoretically predicted way. A simple bivariate regression model does the trick in many situations.</li>
+<li>In SPSS, choose the Analyze menu, then Regression, and then Linear. Select r_income, “Rs annual income in dollars” as the dependent variable and educ, “Highest year of school completed” as the independent variable.</li>
+<li>Partial output:</li>
+</ul>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->

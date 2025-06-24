@@ -7,11 +7,12 @@ citation-location: margin
 ---
 
 ## Instructions 
-(@) Download the printable version of this assignment [here](pdfs/homework5.pdf). Print it out and record your answers directly in the space provided. 
+(@) Download the printable version of this assignment [here](https://vsass.github.io/SOC221/homework/pdfs/homework5.pdf). Print it out and record your answers directly in the space provided. 
 (@) Write your **name** and **student number** on the top of the assignment. 
 (@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
 (@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment.\
 
+::: {.content-hidden when-format="html"}
 :::{.column-screen-inset-shaded} 
 ::: {#fig-confidence layout-ncol=3}
 
@@ -23,6 +24,27 @@ citation-location: margin
 
 Confidence Level Assessment
 :::
+:::
+:::
+
+::: {.panel-tabset}
+
+### Confidence-level assessment
+
+![](../images/confidence_level_assessment.png){fig-align="center" width="25%"}
+
+### [Confident]{style="color: #e93cac"}
+
+![I knew the answer to that question](../images/confidence_level_assessment1.png){fig-align="center" width="25%"}
+
+### [Unsure]{style="color: #e93cac"}
+
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){fig-align="center" width="25%"}
+
+### [Don't Know]{style="color: #e93cac"}
+
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){fig-align="center" width="25%"}
+
 :::
 
 (@) Turn in your assignment in class on the due date. 
@@ -46,12 +68,15 @@ a. What is the null hypothesis for this test?
 <br>
 <br>
 <br>
+<br>
 b. What is the alternative hypothesis for this test?
 <br>
 <br>
 <br>
 <br>
+<br>
 c. Is this a one-sided or two-sided test? How do you know?
+<br>
 <br>
 <br>
 <br>
@@ -90,8 +115,6 @@ h. What does this indicate about the intelligence of Seahawks fans relative to t
 <br>
 <br>
 i. Would your decision be different if you used an alpha level of .01? Explain.
-<br>
-<br>
 <br>
 <br>
 <br>
@@ -165,6 +188,8 @@ i. Would your decision be different if you used an alpha level of .01? Explain.
 <br>
 <br>
 
+{{< pagebreak >}}
+
 #### Question 3
 
 **A criminologist is interested in whether there was any disparity in sentencing based on the race of the defendant. She selected a random sample of 18 burglary convictions and recorded the prison terms given to the 10 white defendants and the 8 black defendants sampled. The sentence lengths (in years) for individuals in the two groups are shown below. Using these data and a .05 alpha level, test the null hypothesis that whites and blacks convicted of burglary in this jurisdiction do not differ with respect to prison sentence length.**
@@ -172,8 +197,6 @@ i. Would your decision be different if you used an alpha level of .01? Explain.
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png){width="75%"}
 :::
-
-{{< pagebreak >}}
 
 | White defendants | Black defendants | 
 |:--------:|:------:|

@@ -7,7 +7,7 @@ citation-location: margin
 ---
 
 ## Instructions 
-(@) Download the printable version of this assignment [here](pdfs/homework4.pdf). Print it out and record your answers directly in the space provided. 
+(@) Download the printable version of this assignment [here](https://vsass.github.io/SOC221/homework/pdfs/homework4.pdf). Print it out and record your answers directly in the space provided. 
 (@) Write your **name** and **student number** on the top of the assignment. 
 (@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
 (@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment.\
@@ -47,6 +47,7 @@ Confidence Level Assessment
 
 :::
 
+
 (@) Turn in your assignment in class on the due date. 
 <br> 
 
@@ -60,8 +61,6 @@ Confidence Level Assessment
 ::: {.column-margin}
 ![](../images/confidence_level_assessment.png){width="75%"}
 :::
-
-{{< pagebreak >}}
 
 a. What is the population of interest in this example?
 <br>
@@ -89,6 +88,10 @@ _____________________________________
 <br>
 e. Name at least two factors that might help to explain the high precision (i.e., small margin of error) for the confidence interval.
 
+<br>
+<br>
+<br>
+
 #### Question 2
 
 **A social researcher is interested in estimating the number of friends that college students typically made during their first year of school. Questioning a random sample of 50 students at the end of their freshman year, he finds a mean of 3 friends. Assume that the sample comes from a population with a standard deviation of 1.0.**
@@ -111,7 +114,9 @@ _____________________________________
 <br>
 c. Provide an interpretation of the confidence interval.
 
-{{< pagebreak >}}
+<br>
+<br>
+<br>
 
 #### Question 3
 
@@ -124,8 +129,6 @@ c. Provide an interpretation of the confidence interval.
 &emsp;&emsp;6&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;12&emsp;&emsp;5&emsp;&emsp;10&emsp;&emsp;11&emsp;&emsp;13
 <br>
 &ensp;&emsp;12&emsp;&emsp;10&emsp;&emsp;9&emsp;&emsp;20&emsp;&emsp;23&emsp;&emsp;20&emsp;&emsp;28&emsp;&emsp;18
-
-<br>
 
 **Assume that the sample is drawn from a population with a standard deviation $\sigma = 7.20$.**
 

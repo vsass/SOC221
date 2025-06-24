@@ -7,7 +7,7 @@ citation-location: margin
 ---
 
 ## Instructions 
-(@) Download the printable version of this assignment [here](pdfs/homework3.pdf). Print it out and record your answers directly in the space provided. 
+(@) Download the printable version of this assignment [here](https://vsass.github.io/SOC221/homework/pdfs/homework3.pdf). Print it out and record your answers directly in the space provided. 
 (@) Write your **name** and **student number** on the top of the assignment. 
 (@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
 (@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment.\
@@ -106,7 +106,7 @@ d. a student who is not a freshman?
 <br>
 _____________________________________
 
-{{< pagebreak >}}
+<br>
 
 #### Question 2
 
