@@ -213,7 +213,7 @@ We try to make the math easy<br>so we can focus on the concepts,<br>interpretati
   }
 }%%
 flowchart TB
-    id1(Interesting real-world question) --> id2(Collect data) --> id3("Analyze data\n(calculate statistics)") --> id4("Develop an answer to your\nquestion (interpret statistics)")
+    id1(Interesting real-<br>world question) --> id2(Collect data) --> id3("Analyze data<br>(calculate statistics)") --> id4("Develop an answer <br> to your question <br> (interpret statistics)")
     id4 --> id1
 ```
 :::
@@ -236,7 +236,7 @@ flowchart TB
   }
 }%%
 flowchart TB
-    id1("How does access to healthcare affect\nlevels of stress") --> id2("Collect information about individuals'\naccess to healthcare & level of stress") --> id3("Quantify levels of stress for those\nwith and without healthcare") --> id4("Draw a conclusion about relationship\nbetween healthcare access and stress")
+    id1("How does access to<br>healthcare affect<br>levels of stress") --> id2("Collect information about<br>individuals' access to<br>healthcare & level<br>of stress") --> id3("Quantify levels of stress<br>for those with and<br>without healthcare") --> id4("Draw a conclusion about<br>relationship between<br>healthcare access<br>and stress")
 ```
 :::
 
@@ -269,7 +269,7 @@ flowchart TB
   }
 }%%
 flowchart TB
-    id1(Interesting real-world question) --> id2(Collect data) --> id3("Analyze data\n(calculate statistics)") --> id4("Develop an answer to your\nquestion (interpret statistics)")
+    id1(Interesting real-<br>world question) --> id2(Collect data) --> id3("Analyze data<br>(calculate statistics)") --> id4("Develop an answer <br> to your question <br> (interpret statistics)")
     id4 --> id1
     style id3 fill:#aadb1e,color:#4b2e83
     style id4 fill:#aadb1e,color:#4b2e83
@@ -306,7 +306,7 @@ flowchart TB
   }
 }%%
 flowchart TB
-    id1{{"Main focus of\nour course"}}
+    id1{{"Main focus of our course"}}
 ```
 
 :::
@@ -336,7 +336,7 @@ flowchart TB
   }
 }%%
 flowchart TB
-      id1(Interesting real-world question) --> id2(Collect data) --> id3("Analyze data\n(calculate statistics)") --> id4("Develop an answer to your\nquestion (interpret statistics)")
+      id1(Interesting real-<br>world question) --> id2(Collect data) --> id3("Analyze data<br>(calculate statistics)") --> id4("Develop an answer <br> to your question <br> (interpret statistics)")
       id4 --> id1
       style id2 fill:#aadb1e,color:#4b2e83
       style id3 fill:#aadb1e,color:#4b2e83
@@ -360,13 +360,12 @@ flowchart TB
     'themeVariables': {
       'background': '#e8e3d3',
       'primaryColor': '#aadb1e',
-      'primaryTextColor': '#4b2e83', 
-      'fontSize': '.225em'
+      'primaryTextColor': '#4b2e83'
       }
   }
 }%%
 flowchart TB
-    id1["In order to use and\ninterpret statistics\nwe need to understand\nwhere our data come from."]
+    id1[In order to use and<br>interpret statistics we<br>need to understand<br>where our data come from.]
 ```
 
 :::
