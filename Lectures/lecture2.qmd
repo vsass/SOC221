@@ -6,7 +6,7 @@ title-slide-attributes:
   data-background-opacity: "0.33"
 subtitle: "SOC 221 • Lecture 2"
 author: "Victoria Sass"
-date: "June 24, 2024"
+date: "June 25, 2025"
 date-format: full
 execute: 
   echo: true
@@ -374,11 +374,11 @@ Frequency Distribution of Movie Ratings by Gender
 :::
 :::
 
-::: {.fragment .fade-in-then-out fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #aadb1e; width: 125px; height: 25px; margin: 10px; position: absolute; bottom: 34px; left: 235px"}
+::: {.fragment .fade-in-then-out fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #aadb1e; width: 125px; height: 25px; margin: 10px; position: absolute; bottom: 34px; right: 130px"}
 
 :::
 
-::: {.fragment fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #aadb1e; width: 125px; height: 25px; margin: 10px; position: absolute; bottom: 34px; right: 275px"}
+::: {.fragment fragment-index="1" data-id="box1" style="background: rgba(255, 255, 255, 0); border: 3px solid #aadb1e; width: 125px; height: 25px; margin: 10px; position: absolute; bottom: 34px; right: 580px"}
 
 :::
 
@@ -649,6 +649,106 @@ Frequency or % “above” or “below” makes no sense without inherent orderi
 Best practice:
 Calculate all statistics based on information from those cases with valid (known) information on the variables of interest.
 :::
+
+# Practice {.section-title background-color="#aadb1e"}
+
+---
+
+:::: {.columns}
+
+::: {.column width="60%"}
+The following table contains the total number of deaths worldwide as a result of earthquakes for the period from 2000 to 2012.
+
+::: {.smaller}
+| Year  | Total Number of Deaths | 
+|:--------|:------:|
+| 2000 | 231 | 
+| 2001 | 21,357 | 
+| 2002 | 11,685 |
+| 2003 | 33,819 | 
+| 2004 | 228,802 | 
+| 2005 | 88,003 | 
+| 2006 | 6,605 | 
+| 2007 | 712 | 
+| 2008 | 88, 011 | 
+| 2009 | 1,790 | 
+| 2010 | 320,120 | 
+| 2011 | 21,953 | 
+| 2012 | 768 | 
+| **Total (N)** | **823,856** | 
+
+: Deaths Worldwide due to Earthquakes {tbl-colwidths="[25, 50]"}
+:::
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+Answer the following questions: 
+
+:::
+
+<br>
+
+::: {.incremental .smaller}
+a. What is the frequency of deaths measured from 2006 through 2009? (inclusive) <br>
+b. What percentage of deaths occurred after 2009? <br>
+c. What is the relative frequency of deaths that occurred in 2003 or earlier? <br>
+d. What is the percentage of deaths that occurred in 2004? <br>
+e. What kind of data are the numbers of deaths? <br>
+f. The Richter scale is used to quantify the energy produced by an earthquake. Examples of Richter scale numbers are 2.3, 4.0, 6.1, and 7.0. What kind of data are these numbers? <br>
+:::
+:::
+
+::::
+
+## {visibility="hidden"}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+The following table contains the total number of deaths worldwide as a result of earthquakes for the period from 2000 to 2012.
+
+::: {.smaller}
+| Year  | Total Number of Deaths | 
+|:--------|:------:|
+| 2000 | 231 | 
+| 2001 | 21,357 | 
+| 2002 | 11,685 |
+| 2003 | 33,819 | 
+| 2004 | 228,802 | 
+| 2005 | 88,003 | 
+| 2006 | 6,605 | 
+| 2007 | 712 | 
+| 2008 | 88, 011 | 
+| 2009 | 1,790 | 
+| 2010 | 320,120 | 
+| 2011 | 21,953 | 
+| 2012 | 768 | 
+| **Total (N)** | **823,856** | 
+
+: Deaths Worldwide due to Earthquakes {tbl-colwidths="[25, 50]"}
+:::
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+Answer the following questions: 
+
+:::
+
+<br>
+
+::: {.incremental .smaller}
+a. What is the frequency of deaths measured from 2006 through 2009? (inclusive) <br> [97,118 (11.8%)]{style="color:#e93cac"}
+b. What percentage of deaths occurred after 2009? <br> [41.6%]{style="color:#e93cac"}
+c. What is the relative frequency of deaths that occurred in 2003 or earlier? <br> [67,092/823,356 or 0.081 or 8.1 %]{style="color:#e93cac"}
+d. What is the percentage of deaths that occurred in 2004? <br> [27.8%]{style="color:#e93cac"}
+e. What kind of data are the numbers of deaths? <br> [Ratio, quantitative, discrete]{style="color:#e93cac"}
+f. The Richter scale is used to quantify the energy produced by an earthquake. Examples of Richter scale numbers are 2.3, 4.0, 6.1, and 7.0. What kind of data are these numbers? <br> [Ratio, quantitative, continuous ]{style="color:#e93cac"}
+:::
+:::
+
+::::
 
 # Break! {.section-title background-color="#2ad2c9"}
 
@@ -1112,6 +1212,30 @@ theme(panel.background = element_rect(fill = "white"),
       plot.background=element_rect(fill = "white"))
 ```
 
+:::
+
+# Practice {.section-title background-color="#aadb1e"}
+
+## Seeing is believing 👀
+
+::: fragment
+1. Find a data visualization on the internet that you find to be misleading or confusing. Send the link to our class slack channel #badviz. 
+
+::: {.callout-tip appearance="simple"}
+If you need help sourcing bad data visualizations, try the subreddit [r/dataisugly](https://www.reddit.com/r/dataisugly/)
+:::
+:::
+
+::: fragment
+2. Find a data visualization on the internet that you think conveying information efficiently and follows all five (5) responsible graph rules. Send the link to our class slack channel #goodviz. 
+
+::: {.callout-tip appearance="simple"}
+If you need help sourcing good data visualizations, try the subreddit [r/dataisbeautiful](https://www.reddit.com/r/dataisbeautiful/)
+:::
+:::
+
+::: aside
+**Note:** *If someone has already posted the visualization you wanted to share, just pick another one!*
 :::
 
 # Fin! {.section-title background-color="#2ad2c9"}

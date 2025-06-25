@@ -137,8 +137,8 @@ schedule_summer <- tribble(
 "6", "Monday<br>July 28th", "✍️🙋💡", "Quiz  2", "Homework 5",
 "6", "Wednesday<br>July 30th", "▪ Two-way tables and chi-square", "Chapter 11 (sections 11.1 to 11.3)", " ",
 # week 7
-"7", "Monday<br>August 4th", "▪ Scatterplots and correlation", "Chapter 12 (sections 12.1 to 12.3)","Homework 6", 
-"7", "Wednesday<br>August 6th", "▪ Bivariate regression<br>▪ Inference for regression", "Chapter 12 (section 12.4 and 12.5)", " ",
+"7", "Monday<br>August 4th", "▪ Scatterplots and correlation", "Chapter 12 (sections 12.1 to 12.3)"," ", 
+"7", "Wednesday<br>August 6th", "▪ Bivariate regression<br>▪ Inference for regression", "Chapter 12 (section 12.4 and 12.5)", "Homework 6",
 # week 8 
 "8", "Monday<br>August 11th", "▪ Multivariate regression", "[Primer for multivariate regression](handouts/Primer.pdf)", " ",
 "8", "Wednesday<br>August 13th", "▪ Review Session", " ", "Homework 7",
@@ -170,7 +170,7 @@ cols_width(week ~ px(125),
 tab_style(style = cell_fill(color = "#ccebc5"), # homework due
               locations = list(cells_body(columns = c(due),
                                           rows = date %in% c("Monday<br>June 30th", "Monday<br>July 7th", "Monday<br>July 14th", "Monday<br>July 21st", "Monday<br>July 28th",
-                                                             "Monday<br>August 4th", "Wednesday<br>August 13th", "Monday<br>August 18th")))) |> 
+                                                             "Wednesday<br>August 6th", "Wednesday<br>August 13th", "Monday<br>August 18th")))) |> 
 # quiz & review day
 tab_style(style = cell_fill(color = "#b3cde3"),
               locations = list(cells_body(columns = c(topic, reading),
@@ -191,7 +191,7 @@ tab_style(style = cell_text(stretch = "ultra-expanded", align = "right", style =
 tab_style(style = cell_text(stretch = "ultra-expanded", align = "center", style = "normal", weight = "bolder"),
               locations = list(cells_body(columns = c(due),
                                           rows = date %in% c("Monday<br>June 30th", "Monday<br>July 7th", "Monday<br>July 14th", "Monday<br>July 21st", "Monday<br>July 28th",
-                                                             "Monday<br>August 4th", "Wednesday<br>August 13th", "Monday<br>August 18th")))) |>   
+                                                             "Wednesday<br>August 6th", "Wednesday<br>August 13th", "Monday<br>August 18th")))) |>   
 # oblique, bold, and left-aligned for learning assessment and quiz days (reading column only)
 tab_style(style = cell_text(stretch = "ultra-expanded", align = "left", style = "oblique", weight = "bolder"),
               locations = list(cells_body(columns = c(reading),
@@ -205,18 +205,19 @@ tab_style(style = cell_text(stretch = "ultra-expanded", align = "right", style =
 tab_style(style = cell_fill(color = "#f2f2f2"),
           locations = list(cells_body(columns = c(week, date, topic, reading, due), # regular day - no hw due, no quiz, no assessment
                                       rows = date %in% c("Monday<br>June 23rd", "Wednesday<br>June 25th",  "Wednesday<br>July 2nd", "Wednesday<br>July 16th",
-                                                         "Wednesday<br>July 30th", "Wednesday<br>August 6th", "Monday<br>August 11th")),
+                                                         "Wednesday<br>July 30th", "Monday<br>August 4th", "Monday<br>August 11th")),
                            cells_body(columns = c(week, date, topic, reading), # homework due (no quiz/assessment)
                                       rows = date %in% c("Monday<br>June 30th", "Monday<br>July 7th", "Monday<br>July 14th", "Monday<br>July 21st", 
-                                                         "Monday<br>August 4th", "Wednesday<br>August 13th")), 
+                                                         "Wednesday<br>August 6th", "Wednesday<br>August 13th")), 
                            cells_body(columns = c(week, date), # homework due AND a quiz day
                                       rows = date %in% c("Monday<br>July 28th", "Monday<br>August 18th")), 
                            cells_body(columns = c(week, date, due), # quiz/assessment day (no hw due)
                                           rows = date %in% c("Wednesday<br>July 9th", "Wednesday<br>July 23rd", "Wednesday<br>August 20th")))) |> 
 tab_style(style = cell_borders(sides = "bottom", color = "#cccccc", weight = px(2)), 
           locations = list(cells_body(columns = c(week, date, topic, reading, due), 
-                                      rows = date %in% c("Wednesday<br>June 25th", "Wednesday<br>July 2nd", "Wednesday<br>July 9th", "Wednesday<br>July 16th", "Wednesday<br>July 23rd",
-                                                         "Wednesday<br>July 30th", "Wednesday<br>August 6th", "Wednesday<br>August 13th",  "Wednesday<br>August 20th")))) |> 
+                                      rows = date %in% c("Wednesday<br>June 25th", "Wednesday<br>July 2nd", "Wednesday<br>July 9th", "Wednesday<br>July 16th",
+                                                         "Wednesday<br>July 23rd", "Wednesday<br>July 30th", "Wednesday<br>August 6th", "Wednesday<br>August 13th", 
+                                                         "Wednesday<br>August 20th")))) |> 
 opt_table_font(font = "PT Sans") |> 
 tab_options(column_labels.background.color = "#fbb4ae", column_labels.font.size = "20px", column_labels.font.weight = "bold", 
             column_labels.border.bottom.color = "#e41a1c", column_labels.border.top.color = "#e41a1c", 
