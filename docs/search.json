@@ -745,36 +745,36 @@
     "objectID": "lectures/lecture1.html#welcome-to-socstatcsss-221",
     "href": "lectures/lecture1.html#welcome-to-socstatcsss-221",
     "title": "",
-    "section": "",
-    "text": "Introductions\nSyllabus & course overview\nOverview of statistics\nProducing data: surveys and sampling"
+    "section": "Welcome to SOC/STAT/CSSS 221!",
+    "text": "Welcome to SOC/STAT/CSSS 221!\n\n\nPlan for today:\n\nIntroductions\nSyllabus & course overview\nOverview of statistics\nProducing data: surveys and sampling"
   },
   {
     "objectID": "lectures/lecture1.html#who-are-you",
     "href": "lectures/lecture1.html#who-are-you",
     "title": "",
-    "section": "",
-    "text": "I’m the instructor for this course and a PhD Candidate in the Sociology department\nI employ statistical methods in my own research on health disparities and the relationship between mental and physical health outcomes\nI use any/all pronouns\nI parent a very sweet & silly pitbull named Margo (aka Marigold)"
+    "section": "Who are you??",
+    "text": "Who are you??\n\nHi! 👋🏻 I’m Vic!\n\nI’m the instructor for this course and a PhD Candidate in the Sociology department\nI employ statistical methods in my own research on health disparities and the relationship between mental and physical health outcomes\nI use any/all pronouns\nI parent a very sweet & silly pitbull named Margo (aka Marigold)"
   },
   {
     "objectID": "lectures/lecture1.html#who-are-you-1",
     "href": "lectures/lecture1.html#who-are-you-1",
     "title": "",
-    "section": "",
-    "text": "I’m the instructor for this course and a PhD Candidate in the Sociology department\nI employ statistical methods in my own research on health disparities and the relationship between mental and physical health outcomes\nI use any/all pronouns\nI also step-parent an easy-going but goofy golden retriever\nnamed Lemon (aka Clementine)"
+    "section": "Who are you??",
+    "text": "Who are you??\nHi! 👋🏻 I’m Vic!\n\nI’m the instructor for this course and a PhD Candidate in the Sociology department\nI employ statistical methods in my own research on health disparities and the relationship between mental and physical health outcomes\nI use any/all pronouns\nI also step-parent an easy-going but goofy golden retriever\nnamed Lemon (aka Clementine)"
   },
   {
     "objectID": "lectures/lecture1.html#who-are-you-2",
     "href": "lectures/lecture1.html#who-are-you-2",
     "title": "",
-    "section": "",
-    "text": "Name\nMajor/interest if undecided\nPronouns\nOne-word description of how you feel about taking this class\nFavorite summer activity/food/memory"
+    "section": "Who are you??",
+    "text": "Who are you??\nGet in pairs! 👩🏼‍🤝‍👨🏽 👩🏿‍🤝‍👩🏽 👨🏾‍🤝‍👨🏻\n\n\nName\nMajor/interest if undecided\nPronouns\nOne-word description of how you feel about taking this class\nFavorite summer activity/food/memory"
   },
   {
     "objectID": "lectures/lecture1.html#some-things-we-know-about-this-class",
     "href": "lectures/lecture1.html#some-things-we-know-about-this-class",
     "title": "",
     "section": "Some things we know about this class",
-    "text": "Some things we know about this class\n\n\n\n\n\nNot a class that most students look forward to\n\nStudents sometimes have a lot of anxiety about the course\nAnxiety is often rooted in apprehension about math\n\n\n\n\n\n\nGood news!\nStatistics is NOT math…\n\n\n\n\n\n    …but it looks a lot like math 😑\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe try to make the math easyso we can focus on the concepts,interpretation, and implications!\n\n\n\n\n\n\nSocialstatisticsare tools that allow us toquantifyobservations(data) aboutthe world\n\n\n\n\n\n\n\n\n\n\n\n \nWhat is the relative number of red, blue, green, and yellow M&Ms in a bag?\n\n\n \nWhat is the probability of pulling 2 red M&Ms in a row out of a bag of 100 M&Ms?\n\n\n \nAre there gender differences in preference for red M&Ms?\n\n\n\n\n\n\n\n\n\n\n\n\n\n \nWhat percentage of people have access to health insurance through work?\n\n\n \nHow did access to health care affect levels of stress during the coronavirus pandemic?\n\n\n \nWhat percentage of Americans approved of Biden’s handling of the vaccine rollout?\n\n\n\n\n\n\n\n\nStatistics are tools that allow us to quantify observations about the world\n\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'background': '#e8e3d3',\n      'primaryColor': '#c5b4e3',\n      'primaryTextColor': '#4b2e83'\n    }\n  }\n}%%\nflowchart TB\n    id1(Interesting real-&lt;br&gt;world question) --&gt; id2(Collect data) --&gt; id3(\"Analyze data&lt;br&gt;(calculate statistics)\") --&gt; id4(\"Develop an answer &lt;br&gt; to your question &lt;br&gt; (interpret statistics)\")\n    id4 --&gt; id1\n\n\n\n\n\n\n\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'background': '#e8e3d3',\n      'primaryColor': '#85754d',\n      'primaryTextColor': '#e8e3d3'\n    }\n  }\n}%%\nflowchart TB\n    id1(\"How does access to&lt;br&gt;healthcare affect&lt;br&gt;levels of stress\") --&gt; id2(\"Collect information about&lt;br&gt;individuals' access to&lt;br&gt;healthcare & level&lt;br&gt;of stress\") --&gt; id3(\"Quantify levels of stress&lt;br&gt;for those with and&lt;br&gt;without healthcare\") --&gt; id4(\"Draw a conclusion about&lt;br&gt;relationship between&lt;br&gt;healthcare access&lt;br&gt;and stress\")\n\n\n\n\n\n\n\n\n\n\n\n\nStatistics are tools that allow us to quantify observations about the world\n\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'background': '#e8e3d3',\n      'primaryColor': '#c5b4e3',\n      'primaryTextColor': '#4b2e83'\n    }\n  }\n}%%\nflowchart TB\n    id1(Interesting real-&lt;br&gt;world question) --&gt; id2(Collect data) --&gt; id3(\"Analyze data&lt;br&gt;(calculate statistics)\") --&gt; id4(\"Develop an answer &lt;br&gt; to your question &lt;br&gt; (interpret statistics)\")\n    id4 --&gt; id1\n    style id3 fill:#aadb1e,color:#4b2e83\n    style id4 fill:#aadb1e,color:#4b2e83\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'background': '#e8e3d3',\n      'primaryColor': '#aadb1e',\n      'primaryTextColor': '#4b2e83'\n    }\n  }\n}%%\nflowchart TB\n    id1{{\"Main focus of our course\"}}\n\n\n\n\n\n\n\n\n\n\n\nStatistics are tools that allow us to quantify observations about the world\n\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'background': '#e8e3d3',\n      'primaryColor': '#c5b4e3',\n      'primaryTextColor': '#4b2e83'\n    }\n  }\n}%%\nflowchart TB\n      id1(Interesting real-&lt;br&gt;world question) --&gt; id2(Collect data) --&gt; id3(\"Analyze data&lt;br&gt;(calculate statistics)\") --&gt; id4(\"Develop an answer &lt;br&gt; to your question &lt;br&gt; (interpret statistics)\")\n      id4 --&gt; id1\n      style id2 fill:#aadb1e,color:#4b2e83\n      style id3 fill:#aadb1e,color:#4b2e83\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'background': '#e8e3d3',\n      'primaryColor': '#aadb1e',\n      'primaryTextColor': '#4b2e83'\n      }\n  }\n}%%\nflowchart TB\n    id1[In order to use and&lt;br&gt;interpret statistics we&lt;br&gt;need to understand&lt;br&gt;where our data come from.]"
+    "text": "Some things we know about this class\n\n\n\n\n\nNot a class that most students look forward to\n\nStudents sometimes have a lot of anxiety about the course\nAnxiety is often rooted in apprehension about math\n\n\n\n\n\nGood news!\nStatistics is NOT math…\n\n\n\n\n    …but it looks a lot like math 😑"
   },
   {
     "objectID": "lectures/lecture1.html#what-are-datawhere-do-they-come-from",
@@ -837,7 +837,7 @@
     "href": "lectures/lecture1.html#levels-of-measurement",
     "title": "",
     "section": "Levels of Measurement",
-    "text": "Levels of Measurement\nThe level of measurement of a variable refers to the type of information represented in the VALUES of that variable.\n\n\n\n\n\nThis includes:\n\n\nThe level of DETAIL conveyed by the potential values\nThe extent to which the values refer to QUANTIFIABLE differences between cases with different values\n\n\n\n\n\n\nUsually determined by:\n\n\nThe nature of the characteristic we are trying to measure.\nHow we ask the question."
+    "text": "Levels of Measurement\nThe level of measurement of a variable refers to the type of information represented in the VALUES of that variable.\n\n\n\n\nThis includes:\n\n\nThe level of DETAIL conveyed by the potential values\nThe extent to which the values refer to QUANTIFIABLE differences between cases with different values\n\n\n\n\nUsually determined by:\n\n\nThe nature of the characteristic we are trying to measure.\nHow we ask the question."
   },
   {
     "objectID": "lectures/lecture1.html#levels-of-measurement-1",
@@ -900,14 +900,14 @@
     "href": "lectures/lecture1.html#qualitative-versus-quantitative-3",
     "title": "",
     "section": "Qualitative versus Quantitative",
-    "text": "Qualitative versus Quantitative\n\n\n\n\n\n\nQuantitative measurements\n\n\n\n\n\n\n\n Question to ask yourself\n\n\n\nCan the values of this variablebe broken up into sub-units?"
+    "text": "Qualitative versus Quantitative\n\n\n\n\n\n\nQuantitative measurements\n\n\n\n\n\n Question to ask yourself\n\n\nCan the values of this variablebe broken up into sub-units?"
   },
   {
     "objectID": "lectures/lecture1.html#levels-of-measurement-2",
     "href": "lectures/lecture1.html#levels-of-measurement-2",
     "title": "",
     "section": "Levels of Measurement",
-    "text": "Levels of Measurement\nThe level of measurement of a variable refers to the type of information represented in the VALUES of that variable.\n\n\n\n\nThis includes:\n\n\nThe level of DETAIL conveyed by the potential values\nThe extent to which the values refer to QUANTIFIABLE differences between cases with different values\n\n\n\n\nUsually determined by:\n\n\nThe nature of the characteristic we are trying to measure.\nHow we ask the question.\n\n\n\n\n\n\n\n\nHow many hours did you spend studying yesterday(in hours)?  ______________\n\n\nHow much did you study yesterday?  ☐ a lot  ☐ a moderate amount  ☐ a little  ☐ none"
+    "text": "Levels of Measurement\nThe level of measurement of a variable refers to the type of information represented in the VALUES of that variable.\n\n\n\nThis includes:\n\n\nThe level of DETAIL conveyed by the potential values\nThe extent to which the values refer to QUANTIFIABLE differences between cases with different values\n\n\nUsually determined by:\n\n\nThe nature of the characteristic we are trying to measure.\nHow we ask the question.\n\n\n\n\n\n\nHow many hours did you spend studying yesterday(in hours)?  ______________\n\n\nHow much did you study yesterday?  ☐ a lot  ☐ a moderate amount  ☐ a little  ☐ none"
   },
   {
     "objectID": "lectures/lecture1.html#survey-data-3",
@@ -928,7 +928,7 @@
     "href": "lectures/lecture1.html#population-versus-sample",
     "title": "",
     "section": "Population versus Sample",
-    "text": "Population versus Sample\n\n\n\nPopulationThe entire group of people (or other units) that wewant to know about.\n\n\n\n\n\n\nExample: Want to know attitudes about climate change among American adults.\n\n\n\nQuestion: What is the population of interest?\n\n\n\nAnswer: American adults.\n\n\n\n\nUnfortunately, we rarely have the time, energy, or money to study the entire population of interest!\n\n\nSo we collect information about the sample instead…"
+    "text": "Population versus Sample\n\n\n\nPopulationThe entire group of people (or other units) that wewant to know about.\n\n\n\n\n\n\nExample: Want to know attitudes about climate change among American adults.\n\n\n\nQuestion: What is the population of interest?\n\n\n\nAnswer: American adults.\n\n\n\nUnfortunately, we rarely have the time, energy, or money to study the entire population of interest!\n\n\nSo we collect information about the sample instead…"
   },
   {
     "objectID": "lectures/lecture1.html#population-versus-sample-1",
@@ -1012,21 +1012,21 @@
     "href": "lectures/lecture1.html#others-sources-of-bias",
     "title": "",
     "section": "Others sources of bias",
-    "text": "Others sources of bias\nEven with a representative sample there are additional sources of bias to be aware of\n\n\n\nNon-response\n\nSurvey non-response –&gt; individuals refuse to take the survey\nItem non-response –&gt; individuals refuse to answer specific questions on the survey\n\n\n\n\n\n\n\n\n\n BIAS\n\n\n\nThis is a problem because those refusing to answer might differ from those who do answer. Therefore, the information from the sample does not reflect the reality of the population.\n\n\n\n\n\n\n\n\n  Example\n\n\n\nThose who are least concerned about climate change might be less likely to respond."
+    "text": "Others sources of bias\nEven with a representative sample there are additional sources of bias to be aware of\n\n\nNon-response\n\nSurvey non-response –&gt; individuals refuse to take the survey\nItem non-response –&gt; individuals refuse to answer specific questions on the survey\n\n\n\n\n\n\n BIAS\n\n\nThis is a problem because those refusing to answer might differ from those who do answer. Therefore, the information from the sample does not reflect the reality of the population.\n\n\n\n\n\n\n\n\n  Example\n\n\nThose who are least concerned about climate change might be less likely to respond."
   },
   {
     "objectID": "lectures/lecture1.html#others-sources-of-bias-1",
     "href": "lectures/lecture1.html#others-sources-of-bias-1",
     "title": "",
     "section": "Others sources of bias",
-    "text": "Others sources of bias\nEven with a representative sample there are additional sources of bias to be aware of\n\n\nResponse bias\n\nTendency for survey respondents to not provide truthful or accurate responses to some questions\n\n\n\n\n\n\n\n  Example: social desirability bias\n\n\n\nRespondent overstates or understates their level of concern about the environment to match what they think the research wants to hear"
+    "text": "Others sources of bias\nEven with a representative sample there are additional sources of bias to be aware of\n\nResponse bias\n\nTendency for survey respondents to not provide truthful or accurate responses to some questions\n\n\n\n\n\n  Example: social desirability bias\n\n\nRespondent overstates or understates their level of concern about the environment to match what they think the research wants to hear"
   },
   {
     "objectID": "lectures/lecture1.html#sensitive-questions",
     "href": "lectures/lecture1.html#sensitive-questions",
     "title": "",
     "section": "Sensitive questions",
-    "text": "Sensitive questions\nA common reason for response bias or non-response is the nature of the question.\n\n\nWhat counts as a sensitive question?\n\n\n\n\nThe following questions are asked routinely on national surveys:\n\nHow many times did you have sex last month?\nWhat was your total income last year?\nHow many times did you use cocaine, crack, or crank last year?\n\n\n\n\n\nWhich do you think people found most sensitive?"
+    "text": "Sensitive questions\nA common reason for response bias or non-response is the nature of the question.\n\n\nWhat counts as a sensitive question?\n\n\n\nThe following questions are asked routinely on national surveys:\n\nHow many times did you have sex last month?\nWhat was your total income last year?\nHow many times did you use cocaine, crack, or crank last year?\n\n\n\n\nWhich do you think people found most sensitive?"
   },
   {
     "objectID": "lectures/lecture1.html#key-takeways",
