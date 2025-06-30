@@ -2223,14 +2223,14 @@
     "href": "lectures/lecture3.html#example-calculation-with-an-odd-number-of-cases",
     "title": "",
     "section": "Example calculation (with an odd number of cases)",
-    "text": "Example calculation (with an odd number of cases)\n\n\nHours of TV watch for a group of inmates\n4, 2, 7, 6, 0, 6, 1, 3, 5\n\n\nOrder the scores\n0, 1, 2, 3, 4, 5, 6, 6, 7\n\n\nMedian case\n\\(\\frac{N + 1}{2} = \\frac{9 + 1}{2} =\\) 5th case\n\n\n\n\n\nNote that there are four cases with scores higher than the median and four with scores lower than the median\n\n\nThe median for this distribution is the score for the case in the fifth ordered position"
+    "text": "Example calculation (with an odd number of cases)\n\n\nHours of TV watched for a group of inmates\n4, 2, 7, 6, 0, 6, 1, 3, 5\n\n\nOrder the scores\n0, 1, 2, 3, 4, 5, 6, 6, 7\n\n\nMedian case\n\\(\\frac{N + 1}{2} = \\frac{9 + 1}{2} =\\) 5th case\n\n\n\n\n\nNote that there are four cases with scores higher than the median and four with scores lower than the median\n\n\nThe median for this distribution is the score for the case in the fifth ordered position"
   },
   {
     "objectID": "lectures/lecture3.html#example-calculation-with-an-even-number-of-cases",
     "href": "lectures/lecture3.html#example-calculation-with-an-even-number-of-cases",
     "title": "",
     "section": "Example calculation (with an even number of cases)",
-    "text": "Example calculation (with an even number of cases)\n\n\nHours of TV watch for a group of inmates\n4, 2, 7, 6, 0, 6, 1, 3, 5, 0\n\n\nOrder the scores\n0, 0, 1, 2, 3,|4, 5, 6, 6, 7\n\n\nMedian case\n\\(\\frac{N + 1}{2} = \\frac{10 + 1}{2} =\\) 5.5th case\n\n\n\n\n\nNote that there are five cases with scores higher than the median and five with scores lower than the median\n\n\nMedian = score for the point halfwaybetween the 5th and 6th case.  Score for 5th case = 3  Score for 6th case = 4  halfway between = \\(\\frac{3 + 4}{2} = 3.5\\)"
+    "text": "Example calculation (with an even number of cases)\n\n\nHours of TV watched for a group of inmates\n4, 2, 7, 6, 0, 6, 1, 3, 5, 0\n\n\nOrder the scores\n0, 0, 1, 2, 3,|4, 5, 6, 6, 7\n\n\nMedian case\n\\(\\frac{N + 1}{2} = \\frac{10 + 1}{2} =\\) 5.5th case\n\n\n\n\n\nNote that there are five cases with scores higher than the median and five with scores lower than the median\n\n\nMedian = score for the point halfwaybetween the 5th and 6th case.  Score for 5th case = 3  Score for 6th case = 4  halfway between = \\(\\frac{3 + 4}{2} = 3.5\\)"
   },
   {
     "objectID": "lectures/lecture3.html#important-properties-of-the-median",
@@ -2433,42 +2433,42 @@
     "href": "lectures/lecture3.html#practice-7",
     "title": "",
     "section": "Practice",
-    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\n\nAge at 1st birth:\n\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27"
+    "text": "Practice\nSixty-five randomly selected car salespersons were asked the number of cars they generally sell in one week. Fourteen people answered that they generally sell three cars; nineteen generally sell four cars; twelve generally sell five cars; nine generally sell six cars; eleven generally sell seven cars. Calculate the following:\n\nsample mean = \\(\\bar{X}\\) =\nmedian =\nmode ="
   },
   {
     "objectID": "lectures/lecture3.html#practice-8",
     "href": "lectures/lecture3.html#practice-8",
     "title": "",
     "section": "Practice",
-    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\nAre the values of 13 or 27 outliers in this distribution?\n\n\n\nCall an observation an outlier if it falls more than 1.5 × IQR above the third quartile or below the first quartile"
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\n\nAge at 1st birth:\n\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27"
   },
   {
     "objectID": "lectures/lecture3.html#practice-9",
     "href": "lectures/lecture3.html#practice-9",
     "title": "",
     "section": "Practice",
-    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\n\n\n\nStart by finding the median:  Median case = \\[\n\\frac{N + 1}{2} = \\frac{10 + 1}{5} = 5.5\n\\]  Median = value halfway betweenvalues for the 5th and 6th cases\n\n\n\n\n\n\n\\(M = 21\\)"
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\nAre the values of 13 or 27 outliers in this distribution?\n\n\n\nCall an observation an outlier if it falls more than 1.5 × IQR above the third quartile or below the first quartile"
   },
   {
     "objectID": "lectures/lecture3.html#practice-10",
     "href": "lectures/lecture3.html#practice-10",
     "title": "",
     "section": "Practice",
-    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\n\n\n\\(M = 21\\)\n\n\n\n\n\n\nFind the first quartile (\\(X_{25th}\\))and third quartile (\\(X_{75th}\\))   Find the Interquartile Range =\\(X_{75th}\\) - \\(X_{25th}\\) = 24 – 17 = 7   Multiply the Interquartile Range by 1.5 to get outlier-defining distance: (7)(1.5) = 10.5"
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\n\n\n\nStart by finding the median:  Median case = \\[\n\\frac{N + 1}{2} = \\frac{10 + 1}{5} = 5.5\n\\]  Median = value halfway betweenvalues for the 5th and 6th cases\n\n\n\n\n\n\n\\(M = 21\\)"
   },
   {
     "objectID": "lectures/lecture3.html#practice-11",
     "href": "lectures/lecture3.html#practice-11",
     "title": "",
     "section": "Practice",
-    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\n\n\n\\(M = 21\\)\n\n\n\n\n\n\nFind the first quartile (\\(X_{25th}\\))and third quartile (\\(X_{75th}\\))   Find the Interquartile Range =\\(X_{75th}\\) - \\(X_{25th}\\) = 24 – 17 = 7   Multiply the Interquartile Range by 1.5 to get outlier-defining distance: (7)(1.5) = 10.5\n\n\n\n\\(X_{25th} = 17\\)  \\(X_{25th} =\\) midpoint of  the lower half\n\n\n\\(X_{75th} = 24\\)  \\(X_{75th} =\\) midpoint of  the upper half"
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\n\n\n\\(M = 21\\)\n\n\n\n\n\n\nFind the first quartile (\\(X_{25th}\\))and third quartile (\\(X_{75th}\\))   Find the Interquartile Range =\\(X_{75th}\\) - \\(X_{25th}\\) = 24 – 17 = 7   Multiply the Interquartile Range by 1.5 to get outlier-defining distance: (7)(1.5) = 10.5"
   },
   {
     "objectID": "lectures/lecture3.html#practice-12",
     "href": "lectures/lecture3.html#practice-12",
     "title": "",
     "section": "Practice",
-    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\nValues of 13 and 27 are NOToutliers in this distribution\n\n\n\n\n\n\nFind outlier thresholds:values 10.5 units below \\(X_{25th}\\)and 10.5 units above \\(X_{75th}\\)   \\(X_{25th}\\) - 10.5 = 17 - 10.5 = 6.5  \\(X_{75th}\\) + 10.5 = 24 + 10.5 = 34.5   First births at age 6.5 or younger and 34.5 or older wouldbe considered outliers\n\n\n\n\\(X_{25th} = 17\\)  \\(X_{25th} =\\) midpoint of  the lower half\n\n\n\\(X_{75th} = 24\\)  \\(X_{75th} =\\) midpoint of  the upper half"
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\n\n\n\\(M = 21\\)\n\n\n\n\n\n\nFind the first quartile (\\(X_{25th}\\))and third quartile (\\(X_{75th}\\))   Find the Interquartile Range =\\(X_{75th}\\) - \\(X_{25th}\\) = 24 – 17 = 7   Multiply the Interquartile Range by 1.5 to get outlier-defining distance: (7)(1.5) = 10.5\n\n\n\n\\(X_{25th} = 17\\)  \\(X_{25th} =\\) midpoint of  the lower half\n\n\n\\(X_{75th} = 24\\)  \\(X_{75th} =\\) midpoint of  the upper half"
   },
   {
     "objectID": "lectures/lecture3.html#variance",
@@ -2833,5 +2833,19 @@
     "title": "",
     "section": "Seeing is believing 👀",
     "text": "Seeing is believing 👀\n\n\nFind a data visualization on the internet that you find to be misleading or confusing. Send the link to our class slack channel #badviz.\n\n\n\n\n\n\n\nIf you need help sourcing bad data visualizations, try the subreddit r/dataisugly\n\n\n\n\n\n\nFind a data visualization on the internet that you think conveying information efficiently and follows all five (5) responsible graph rules. Send the link to our class slack channel #goodviz.\n\n\n\n\n\n\n\nIf you need help sourcing good data visualizations, try the subreddit r/dataisbeautiful\n\n\n\n\n\n\nNote: If someone has already posted the visualization you wanted to share, just pick another one!"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-13",
+    "href": "lectures/lecture3.html#practice-13",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\nValues of 13 and 27 are NOToutliers in this distribution\n\n\n\n\n\n\nFind outlier thresholds:values 10.5 units below \\(X_{25th}\\)and 10.5 units above \\(X_{75th}\\)   \\(X_{25th}\\) - 10.5 = 17 - 10.5 = 6.5  \\(X_{75th}\\) + 10.5 = 24 + 10.5 = 34.5   First births at age 6.5 or younger and 34.5 or older wouldbe considered outliers\n\n\n\n\\(X_{25th} = 17\\)  \\(X_{25th} =\\) midpoint of  the lower half\n\n\n\\(X_{75th} = 24\\)  \\(X_{75th} =\\) midpoint of  the upper half"
+  },
+  {
+    "objectID": "lectures/lecture3.html#practice-14",
+    "href": "lectures/lecture3.html#practice-14",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nThe following data are the distances between 20 retail stores and a large distribution center. The distances are in miles. 29; 37; 38; 40; 58; 67; 68; 69; 76; 86; 87; 95; 96; 96; 99; 106; 112; 127; 145; 150\n\n\nCalculate the standard deviation and round to the nearest tenth\nFind the value that is one standard deviation below the mean"
   }
 ]
