@@ -2391,7 +2391,7 @@
     "href": "lectures/lecture3.html#iqr-example-1-15.75---5-10",
     "title": "",
     "section": "IQR example 1 (15.75 - 5 = 10)",
-    "text": "IQR example 1 (15.75 - 5 = 10)\n\n\nScore at 25th percentile = 5"
+    "text": "IQR example 1 (15.75 - 5 = 10)\n\n\nScore at 25th percentile = 5\n\n\nScore at 75th percentile = 15.75"
   },
   {
     "objectID": "lectures/lecture3.html#iqr-example-1-15.75---5-10-1",
@@ -2412,7 +2412,7 @@
     "href": "lectures/lecture3.html#iqr-example-2-13---9-4",
     "title": "",
     "section": "IQR example 2 (13 - 9 = 4)",
-    "text": "IQR example 2 (13 - 9 = 4)\n\n\nScore at 25th percentile = 5"
+    "text": "IQR example 2 (13 - 9 = 4)\n\n\nScore at 25th percentile = 9\n\n\nScore at 75th percentile = 13"
   },
   {
     "objectID": "lectures/lecture3.html#iqr-example-2-13---9-4-1",
@@ -2454,7 +2454,7 @@
     "href": "lectures/lecture3.html#practice-10",
     "title": "",
     "section": "Practice",
-    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\n\n\n\nStart by finding the median:  Median case = \\[\n\\frac{N + 1}{2} = \\frac{10 + 1}{5} = 5.5\n\\]  Median = value halfway betweenvalues for the 5th and 6th cases\n\n\n\n\n\n\n\\(M = 21\\)"
+    "text": "Practice\nCalculate the IQR and identify any outliers in the age at first birth data for a sample of women in rural India.\nAge at 1st birth:\n\n13, 17, 17, 18, 20, 22, 22, 24, 24, 27\n\n\n\n\n\n\nStart by finding the median:  Median case = \\[\n\\frac{N + 1}{2} = \\frac{10 + 1}{2} = 5.5\n\\]  Median = value halfway betweenvalues for the 5th and 6th cases\n\n\n\n\n\n\n\\(M = 21\\)"
   },
   {
     "objectID": "lectures/lecture3.html#practice-11",
@@ -2854,5 +2854,33 @@
     "title": "",
     "section": "Practice {visibility = “hidden”}",
     "text": "Practice {visibility = “hidden”}\nThe following data are the distances between 20 retail stores and a large distribution center. The distances are in miles. 29; 37; 38; 40; 58; 67; 68; 69; 76; 86; 87; 95; 96; 96; 99; 106; 112; 127; 145; 150. Create a frequency table and do the following:\n\n\nCalculate the standard deviation and round to the nearest tenth\nFind the value that is one standard deviation below the mean"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-1-1",
+    "href": "lectures/lecture3.html#iqr-example-1-1",
+    "title": "",
+    "section": "IQR example 1",
+    "text": "IQR example 1\n\n\nScore at 25th percentile = 5"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-2-1",
+    "href": "lectures/lecture3.html#iqr-example-2-1",
+    "title": "",
+    "section": "IQR example 2",
+    "text": "IQR example 2\n\n\nScore at 25th percentile = 9"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-1-2",
+    "href": "lectures/lecture3.html#iqr-example-1-2",
+    "title": "",
+    "section": "IQR example 1",
+    "text": "IQR example 1\n\n\nScore at 25th percentile = 5\n\n\nScore at 75th percentile = 15.75"
+  },
+  {
+    "objectID": "lectures/lecture3.html#iqr-example-2-2",
+    "href": "lectures/lecture3.html#iqr-example-2-2",
+    "title": "",
+    "section": "IQR example 2",
+    "text": "IQR example 2\n\n\nScore at 25th percentile = 9\n\n\nScore at 75th percentile = 13"
   }
 ]

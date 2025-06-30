@@ -1373,7 +1373,7 @@ geom_col() +
 theme_tufte(base_size = 10) 
 ```
 
-## IQR example 1 ([15.75]{style="color:#e93cac"}  - [5]{style="color:#2ad2c9"}  = 10)
+## IQR example 1 
 
 ```{r}
 #| echo: false
@@ -1388,6 +1388,28 @@ theme_tufte(base_size = 10)
 
 ::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 340px; height: 35px; padding: 0px 0px 20px 20px; position: absolute; bottom: -25px; left: 75px"}
 Score at 25th percentile = 5
+:::
+
+## IQR example 1
+
+```{r}
+#| echo: false
+#| fig-height: 4
+#| fig-width: 5
+#| fig-align: center
+ggplot(score1, aes(x = Score, y = Frequency)) + 
+geom_col() +
+geom_vline(data = score1_full, aes(xintercept = quantile(Score, probs = 0.25)), size = 1, color = "#2ad2c9", linetype = 2) +
+geom_vline(data = score1_full, aes(xintercept = quantile(Score, probs = 0.75)), size = 1, color = "#e93cac", linetype = 2) +
+theme_tufte(base_size = 10) 
+```
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 340px; height: 35px; padding: 0px 0px 20px 20px; position: absolute; bottom: -25px; left: 75px"}
+Score at 25th percentile = 5
+:::
+
+::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 360px; height: 35px; padding: 0px 0px 20px 20px; position: absolute; bottom: -25px; right: 75px"}
+Score at 75th percentile = 15.75
 :::
 
 ## IQR example 1 ([15.75]{style="color:#e93cac"}  - [5]{style="color:#2ad2c9"}  = 10)
@@ -1424,7 +1446,7 @@ geom_col() +
 theme_tufte(base_size = 10) 
 ```
 
-## IQR example 2 ([13]{style="color:#2ad2c9"}  - [9]{style="color:#e93cac"}  = 4)
+## IQR example 2 
 
 ```{r}
 #| echo: false
@@ -1439,10 +1461,32 @@ theme_tufte(base_size = 10)
 ```
 
 ::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 340px; height: 35px; padding: 0px 0px 20px 20px; position: absolute; bottom: -25px; left: 75px"}
-Score at 25th percentile = 5
+Score at 25th percentile = 9
 :::
 
-## IQR example 2 ([13]{style="color:#2ad2c9"}  - [9]{style="color:#e93cac"}  = 4)
+## IQR example 2 
+
+```{r}
+#| echo: false
+#| fig-height: 4
+#| fig-width: 5
+#| fig-align: center
+ggplot(score2, aes(x = Score, y = Frequency)) + 
+geom_col() +
+geom_vline(data = score2_full, aes(xintercept = quantile(Score, probs = 0.25)), size = 1, color = "#2ad2c9", linetype = 2) +
+geom_vline(data = score2_full, aes(xintercept = quantile(Score, probs = 0.75)), size = 1, color = "#e93cac", linetype = 2) +
+theme_tufte(base_size = 10) 
+```
+
+::: {data-id="box2" style="background: #2ad2c9; border: 4px solid #1b8883; border-radius: 15px; width: 340px; height: 35px; padding: 0px 0px 20px 20px; position: absolute; bottom: -25px; left: 75px"}
+Score at 25th percentile = 9
+:::
+
+::: {data-id="box2" style="background: #e93cac; border: 4px solid #690c48; border-radius: 15px; width: 340px; height: 35px; padding: 0px 0px 20px 20px; position: absolute; bottom: -25px; right: 75px"}
+Score at 75th percentile = 13
+:::
+
+## IQR example 2 ([13]{style="color:#e93cac"}  - [9]{style="color:#2ad2c9"}  = 4)
 
 ```{r}
 #| echo: false
@@ -1554,7 +1598,7 @@ Calculate the IQR and identify any [outliers]{style="color:#e93cac"} in the age 
 <br>
 [**Median case**]{style="color:#e93cac"} = 
 $$
-\frac{N + 1}{2} = \frac{10 + 1}{5} = 5.5
+\frac{N + 1}{2} = \frac{10 + 1}{2} = 5.5
 $$
 <br>
 Median = value halfway between<br>values for the 5th and 6th cases
@@ -2408,7 +2452,7 @@ $$
 [**Interpretation**]{.underline}: On average, the number of cups used by the students in the sample differed from the average (mean) by almost 2.6 cups.
 :::
 
-## Practice {visibility = "hidden"}
+## Practice {visibility="hidden"}
 
 The following data are the distances between 20 retail stores and a large distribution center. The distances are in miles.
 29; 37; 38; 40; 58; 67; 68; 69; 76; 86; 87; 95; 96; 96; 99; 106; 112; 127; 145; 150. Create a frequency table and do the following:
