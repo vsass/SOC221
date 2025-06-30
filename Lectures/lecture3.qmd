@@ -2411,7 +2411,7 @@ $$
 ## Practice 
 
 The following data are the distances between 20 retail stores and a large distribution center. The distances are in miles.
-29; 37; 38; 40; 58; 67; 68; 69; 76; 86; 87; 95; 96; 96; 99; 106; 112; 127; 145; 150
+29; 37; 38; 40; 58; 67; 68; 69; 76; 86; 87; 95; 96; 96; 99; 106; 112; 127; 145; 150. Create a frequency table and do the following:
 
 ::: {.incremental}
 * Calculate the standard deviation and round to the nearest tenth 
