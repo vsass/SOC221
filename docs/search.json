@@ -2909,63 +2909,63 @@
     "href": "lectures/lecture4.html#section-2",
     "title": "",
     "section": "",
-    "text": "Smoking Levels by Ethnicity\n\n\n\n\n\n\n\n\n\n\n\nSmoking Level(X)\nAfricanAmerican\nNativeHawaiian\nLatino/a\nJapanese\nWhite\nTotals(n)\n\n\n\n\n1-10\n9,886\n2,745\n12,831\n8,378\n7,650\n41,490\n\n\n11-20\n6,514\n3,062\n4,932\n10,680\n9,877\n35,065\n\n\n21-30\n1,671\n1,419\n1,406\n4,715\n6,062\n15,273\n\n\n31+\n759\n788\n800\n2,305\n3,970\n8,622\n\n\nTotals (n)\n18,830\n8,014\n19,969\n26,078\n27,559\n100,450\n\n\n\n\n\n\n\nExplain the difference between the following random selections and find their associated probabilities:\n\nPicking a person who is Latino/a AND smokes 1 to 10 cigarettes per day.\nPicking a person who is Latino/a OR smokes 1 to 10 cigarettes per day.\nPicking a person who is Latino/a GIVEN that person smokes 1 to 10 cigarettes per day.\n\n\n\n\nTo pick one person from the study who is Latino/a GUVEN that person smokes 1 to 10 cigarettes per day means that the person must fulfill both criteria and the sample space is reduced to those who smoke 1-10 cigarettes per day.\n\n\n\\[\nP(L|1-10) = \\frac{12,831}{41,490} = \\text{0.3092552 or 0.309}\n\\]"
+    "text": "Smoking Levels by Ethnicity\n\n\n\n\n\n\n\n\n\n\n\nSmoking Level(X)\nAfricanAmerican\nNativeHawaiian\nLatino/a\nJapanese\nWhite\nTotals(n)\n\n\n\n\n1-10\n9,886\n2,745\n12,831\n8,378\n7,650\n41,490\n\n\n11-20\n6,514\n3,062\n4,932\n10,680\n9,877\n35,065\n\n\n21-30\n1,671\n1,419\n1,406\n4,715\n6,062\n15,273\n\n\n31+\n759\n788\n800\n2,305\n3,970\n8,622\n\n\nTotals (n)\n18,830\n8,014\n19,969\n26,078\n27,559\n100,450\n\n\n\n\n\n\n\nExplain the difference between the following random selections and find their associated probabilities:\n\nPicking a person who is Latino/a AND smokes 1 to 10 cigarettes per day.\nPicking a person who is Latino/a OR smokes 1 to 10 cigarettes per day.\nPicking a person who is Latino/a GIVEN that person smokes 1 to 10 cigarettes per day.\n\n\n\n\nTo pick one person from the study who is Latino/a GIVEN that person smokes 1 to 10 cigarettes per day means that the person must fulfill both criteria and the sample space is reduced to those who smoke 1-10 cigarettes per day.\n\n\n\\[\nP(L|1-10) = \\frac{12,831}{41,490} = \\text{0.3092552 or 0.309}\n\\]"
   },
   {
     "objectID": "lectures/lecture4.html#section-4",
     "href": "lectures/lecture4.html#section-4",
     "title": "",
     "section": "",
-    "text": "3. Probability of randomly selecting a woman who is 69 inches or taller?\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\\[\nz = \\frac{69 - 65}{3.5} = 1.14\n\\]\n\n\n69 inches is 1.14 standard deviations above the mean."
+    "text": "1. Percentage of women shorter than 55 inches?\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\\[\nz = \\frac{55 - 65}{3.5} = -2.86\n\\]\n\n\n55 inches is 2.86 standard deviations below the mean.\n\n\nNow we look up the associated probability for our z-score"
   },
   {
     "objectID": "lectures/lecture4.html#section-5",
     "href": "lectures/lecture4.html#section-5",
     "title": "",
     "section": "",
-    "text": "3. Probability of randomly selecting a woman who is 69 inches or taller?\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\\[\nz = \\frac{69 - 65}{3.5} = 1.14\n\\]\n\n\n69 inches is 1.14 standard deviations above the mean.\n\n\nThis area is \\(0.50 + 0.37286 = 0.87286\\) i.e. left half of the distribution plus the area between the mean and z-score of \\(1.14\\)\n\n\n\\[\n  P(\\ge69) =\n\\] \\[\n  1 - 0.87286 =\n\\] \\[\n  0.12714\n\\]"
+    "text": "1. Percentage of women shorter than 55 inches?\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\\[\nz = \\frac{55 - 65}{3.5} = -2.86\n\\]\n\n\nThis area is \\(.49711\\)\n\n\nProportion of cases under this shaded part of the curve is \\(.50 - 0.49786 = 0.0021374\\)\n\n\n\\[\n\\text{Percentage}(&lt;55) =\n\\] \\[\n0.0021374(100) =\n\\] \\[\n.214\\%\n\\]"
   },
   {
     "objectID": "lectures/lecture4.html#section-6",
     "href": "lectures/lecture4.html#section-6",
     "title": "",
     "section": "",
-    "text": "4. Probability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\\[\nz = \\frac{69 - 65}{3.5} = 1.14\n\\]\n\n\n\\[\n  P(\\ge69) =\n\\] \\[\n  1 - 0.87286 =\n\\] \\[\n  0.12714\n\\]\n\n\nSince BOTH events must happen, use the multiplication rule\n\n\n\\[\n  P(\\ge69, \\ge69) =\n\\] \\[\n  (0.12714)(0.12714) =\n\\] \\[\n  0.01616\n\\]"
+    "text": "2. Percentage of women 55 inches or taller?\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\\[\nz = \\frac{55 - 65}{3.5} = -2.86\n\\]\n\n\n55 inches is 2.86 standard deviations below the mean.\n\n\n\\[\n\\text{Percentage}(\\ge55) =\n\\] \\[\n100- 0.214 =\n\\] \\[\n99.786\\%\n\\]"
   },
   {
     "objectID": "lectures/lecture4.html#section-7",
     "href": "lectures/lecture4.html#section-7",
     "title": "",
     "section": "",
-    "text": "5. Find the score at the 10th percentile in the distribution.\n\nHeight for women is  \\(N(65,3.5)\\)\n\n   \n\n\nWe need to take a BACKWARDS APPROACH"
+    "text": "3. Probability of randomly selecting a woman who is 69 inches or taller?\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\\[\nz = \\frac{69 - 65}{3.5} = 1.14\n\\]\n\n\n69 inches is 1.14 standard deviations above the mean."
   },
   {
     "objectID": "lectures/lecture4.html#section-8",
     "href": "lectures/lecture4.html#section-8",
     "title": "",
     "section": "",
-    "text": "5. Find the score at the 10th percentile in the distribution.\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\nNow we look up the associated probability (\\(0.10\\)) to find our z-score\n\n\nThis shaded area represents the 10th percentile"
+    "text": "3. Probability of randomly selecting a woman who is 69 inches or taller?\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\\[\nz = \\frac{69 - 65}{3.5} = 1.14\n\\]\n\n\n69 inches is 1.14 standard deviations above the mean.\n\n\nThis area is \\(0.50 + 0.37345 = 0.87345\\) i.e. left half of the distribution plus the area between the mean and z-score of \\(1.14\\)\n\n\n\\[\n  P(\\ge69) =\n\\] \\[\n  1 - 0.87345 =\n\\] \\[\n  0.12655\n\\]"
   },
   {
     "objectID": "lectures/lecture4.html#section-9",
     "href": "lectures/lecture4.html#section-9",
     "title": "",
     "section": "",
-    "text": "5. Find the score at the 10th percentile in the distribution.\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\nThe 10th percentile is associated with a z-score of \\(-1.28\\)\n\n\nInstead of converting a value ofinterest into a z-score . . . \\[\nz = \\frac{X - \\mu}{\\sigma}\n\\]\n\n\n. . . we need to convert our z-scoreof interest into a value \\[\nX = \\mu + z(\\sigma)\n\\]\n\n\n\\[\n  X = 65 + (-1.28)(3.5) = 60.52\n\\]\n\n\nInterpretation: The 10th percentile is at 60.52 inches. About 10% of women are 5 ft. ½ inch or shorter, and about 90% are taller."
+    "text": "4. Probability of randomly selecting two women, on consecutive draws, who are 69 inches or taller?\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\\[\nz = \\frac{69 - 65}{3.5} = 1.14\n\\]\n\n\n\\[\n  P(\\ge69) =\n\\] \\[\n  1 - 0.87345 =\n\\] \\[\n  0.12655\n\\]\n\n\nSince BOTH events must happen, use the multiplication rule\n\n\n\\[\n  P(\\ge69, \\ge69) =\n\\] \\[\n  (0.12655)(0.12655) =\n\\] \\[\n  0.016\n\\]"
   },
   {
     "objectID": "lectures/lecture4.html#section-10",
     "href": "lectures/lecture4.html#section-10",
     "title": "",
     "section": "",
-    "text": "6. Find the two heights that define the middle 95% of cases in the distribution.\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\nSince capturing MIDDLE \\(95\\%\\), we need to go the same direction above and below the mean\nHow far on either side of the mean do we need to go in order tocapture \\(\\frac{95}{2} = 47.5\\%\\) of the cases?\n\n\n\nScores defining the middle 95% of cases (in any normal distribution) are at \\(Z = -1.96\\) and \\(Z = 1.96\\)"
+    "text": "5. Find the score at the 10th percentile in the distribution.\n\nHeight for women is  \\(N(65,3.5)\\)\n\n   \n\n\nWe need to take a BACKWARDS APPROACH"
   },
   {
     "objectID": "lectures/lecture4.html#section-11",
     "href": "lectures/lecture4.html#section-11",
     "title": "",
     "section": "",
-    "text": "6. Find the two heights that define the middle 95% of cases in the distribution.\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\nSince capturing MIDDLE \\(95\\%\\), we need to go the same direction above and below the mean\nHow far on either side of the mean do we need to go in order tocapture \\(\\frac{95}{2} = 47.5\\%\\) of the cases?\n\n\n\nScores defining the middle 95% of cases (in any normal distribution) are at \\(Z = -1.96\\) and \\(Z = 1.96\\)\n\n\n\\[\n  X = \\mu + z(\\sigma)\n\\] \\[\nX = 65 + (-1.96)(3.5) = 58.14\n\\] \\[\nX = 65 + (1.96)(3.5) = 71.86\n\\]"
+    "text": "5. Find the score at the 10th percentile in the distribution.\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\nNow we look up the associated probability (\\(0.10\\)) to find our z-score\n\n\nThis shaded area represents the 10th percentile"
   },
   {
     "objectID": "lectures/lecture4.html#practice",
@@ -2994,5 +2994,26 @@
     "title": "",
     "section": "Practice",
     "text": "Practice\n\n\nSmoking Levels by Ethnicity\n\n\n\n\n\n\n\n\n\n\n\nSmoking Level(X)\nAfricanAmerican\nNativeHawaiian\nLatino/a\nJapanese\nWhite\nTotals(n)\n\n\n\n\n1-10\n9,886\n2,745\n12,831\n8,378\n7,650\n41,490\n\n\n11-20\n6,514\n3,062\n4,932\n10,680\n9,877\n35,065\n\n\n21-30\n1,671\n1,419\n1,406\n4,715\n6,062\n15,273\n\n\n31+\n759\n788\n800\n2,305\n3,970\n8,622\n\n\nTotals (n)\n18,830\n8,014\n19,969\n26,078\n27,559\n100,450\n\n\n\n\n\n\n\nExplain the difference between the following random selections and find their associated probabilities:\n\nPicking a person who is Latino/a AND smokes 1 to 10 cigarettes per day.\nPicking a person who is Latino/a OR smokes 1 to 10 cigarettes per day.\nPicking a person who is Latino/a GIVEN that person smokes 1 to 10 cigarettes per day.\n\n\n\n\nTo pick one person from the study who is Latino/a GUVEN that person smokes 1 to 10 cigarettes per day means that the person must fulfill both criteria and the sample space is reduced to those who smoke 1-10 cigarettes per day.\n\n\n\\[\nP(L|1-10) = \\frac{12,831}{41,490} = \\text{0.3092552 or 0.309}\n\\]"
+  },
+  {
+    "objectID": "lectures/lecture4.html#section-12",
+    "href": "lectures/lecture4.html#section-12",
+    "title": "",
+    "section": "",
+    "text": "5. Find the score at the 10th percentile in the distribution.\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\nThe 10th percentile is associated with a z-score of \\(-1.28\\)\n\n\nInstead of converting a value ofinterest into a z-score . . . \\[\nz = \\frac{X - \\mu}{\\sigma}\n\\]\n\n\n. . . we need to convert our z-scoreof interest into a value \\[\nX = \\mu + z(\\sigma)\n\\]\n\n\n\\[\n  X = 65 + (-1.28)(3.5) = 60.52\n\\]\n\n\nInterpretation: The 10th percentile is at 60.52 inches. About 10% of women are 5 ft. ½ inch or shorter, and about 90% are taller."
+  },
+  {
+    "objectID": "lectures/lecture4.html#section-13",
+    "href": "lectures/lecture4.html#section-13",
+    "title": "",
+    "section": "",
+    "text": "6. Find the two heights that define the middle 95% of cases in the distribution.\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\nSince capturing MIDDLE \\(95\\%\\), we need to go the same direction above and below the mean\nHow far on either side of the mean do we need to go in order tocapture \\(\\frac{95}{2} = 47.5\\%\\) of the cases?\n\n\n\nScores defining the middle 95% of cases (in any normal distribution) are at \\(Z = -1.96\\) and \\(Z = 1.96\\)"
+  },
+  {
+    "objectID": "lectures/lecture4.html#section-14",
+    "href": "lectures/lecture4.html#section-14",
+    "title": "",
+    "section": "",
+    "text": "6. Find the two heights that define the middle 95% of cases in the distribution.\n\nHeight for women is  \\(N(65,3.5)\\)\n\n \n\n\n\nSince capturing MIDDLE \\(95\\%\\), we need to go the same direction above and below the mean\nHow far on either side of the mean do we need to go in order tocapture \\(\\frac{95}{2} = 47.5\\%\\) of the cases?\n\n\n\nScores defining the middle 95% of cases (in any normal distribution) are at \\(Z = -1.96\\) and \\(Z = 1.96\\)\n\n\n\\[\n  X = \\mu + z(\\sigma)\n\\] \\[\nX = 65 + (-1.96)(3.5) = 58.14\n\\] \\[\nX = 65 + (1.96)(3.5) = 71.86\n\\]"
   }
 ]
