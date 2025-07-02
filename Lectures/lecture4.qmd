@@ -59,7 +59,7 @@ options(width=80, show.signif.stars=FALSE)
 ::: {.column width="50%"}
 
 ::: {.fragment fragment-index=1}
-#### Where are we?
+#### Where are we? 
 
 * So far: Worked on descriptive statistics – tools to describe distributions
 * NEXT: Building the tools for [**inferential statistics**]{.underline}

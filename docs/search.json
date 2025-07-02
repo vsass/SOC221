@@ -46,7 +46,7 @@
     "href": "lectures/lecture4.html#myths-about-randomness-and-probability",
     "title": "",
     "section": "Myths about randomness and probability",
-    "text": "Myths about randomness and probability\nThe myth of short-run regularity\n\n\n\nMyth: If I flip a coin 10 times I should get 5 heads.\n\n\nReality: Over a short number of flips, you might get lots of heads or lots of tails. Probabilities express expectations only over the long run.\n\n\n\n\n\n\n\nExample: Tossing a die to get a 3 • In the short-run, might get very few or very many 3s • In the long-run 1/6 of the observations will be 3s"
+    "text": "Myths about randomness and probability\nThe myth of short-run regularity\n\n\n\nMyth: If I flip a coin 10 times I should get 5 heads.\n\n\nReality: Over a short number of flips, you might get lots of heads or lots of tails. Probabilities express expectations only over the long run.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample: Tossing a die to get a 3 • In the short-run, might get very few or very many 3s • In the long-run 1/6 of the observations will be 3s"
   },
   {
     "objectID": "lectures/lecture4.html#myths-about-randomness-and-probability-1",
