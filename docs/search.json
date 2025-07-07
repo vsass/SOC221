@@ -2664,21 +2664,21 @@
     "href": "lectures/lecture5.html#descriptive-inferential-statistics",
     "title": "",
     "section": "Descriptive –> Inferential statistics",
-    "text": "Descriptive –&gt; Inferential statistics\n\n\n\n\nWhere are we?\n\nSo far: Worked on descriptive statistics – tools to describe distributions\nNEXT: Building the tools for inferential statistics\n\n\n\n\n\nExample: Want to know about the average study time for the population of UW students.\nNEXT: Building the tools for inferential statistics\n\n\n\n\n\nInferential statisticsStatistical procedures usedto draw conclusions(or inferences) abouta population based ondata drawn from a sample\n\n\n\n\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)"
+    "text": "Descriptive –&gt; Inferential statistics\n\n\n\nWhere are we?\n\nSo far: Worked on descriptive statistics – tools to describe distributions\nNEXT: Building the tools for inferential statistics\n\n\n\n\n\nExample: Want to know about the average study time for the population of UW students.\nNEXT: Building the tools for inferential statistics\n\n\n\n\n\nInferential statisticsStatistical procedures usedto draw conclusions(or inferences) abouta population based ondata drawn from a sample\n\n\n\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)"
   },
   {
     "objectID": "lectures/lecture5.html#descriptive-inferential-statistics-1",
     "href": "lectures/lecture5.html#descriptive-inferential-statistics-1",
     "title": "",
     "section": "Descriptive –> Inferential statistics",
-    "text": "Descriptive –&gt; Inferential statistics\n\n\nWhere are we?\n\nSo far: Worked on descriptive statistics – tools to describe distributions\nNEXT: Building the tools for inferential statistics\n\n\n\nExample: Want to know about the average study time for the population of UW students.\nNEXT: Building the tools for inferential statistics\n\n\n\n\nInferential statisticsStatistical procedures usedto draw conclusions(or inferences) abouta population based ondata drawn from a sample\n\n\n\n\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)\n\n\nPopulation parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)\n\n\nSample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)"
+    "text": "Descriptive –&gt; Inferential statistics\n\n\nWhere are we?\n\nSo far: Worked on descriptive statistics – tools to describe distributions\nNEXT: Building the tools for inferential statistics\n\n\n\nExample: Want to know about the average study time for the population of UW students.\nNEXT: Building the tools for inferential statistics\n\n\n\n\nInferential statisticsStatistical procedures usedto draw conclusions(or inferences) abouta population based ondata drawn from a sample\n\n\n\n\n\\(\\bar{X}\\) —INFERENCE–&gt; \\(\\mu_x\\)\n\n\nPopulation parameter: The characteristic of the population that we are interested in knowing (i.e. the mean study time of all UW students)\n\n\nSample statistic: The characteristic of the sample that we actually observe (i.e. the mean study time of a SAMPLE of UW students)"
   },
   {
     "objectID": "lectures/lecture5.html#the-challenge-of-making-inferences",
     "href": "lectures/lecture5.html#the-challenge-of-making-inferences",
     "title": "",
     "section": "The challenge of making inferences",
-    "text": "The challenge of making inferences\n\n\nDrawing inferences entails uncertainty\nEven with a good sample, the sample is likely to differ from the population (sample statistic is likely to be different from our population parameter, just by chance)\n\n\n\n\nChallenge\nAssessing the risk of being wrong (being way off) in making an inference from observed sample statistics to unknown population parameters.\n\n\n\n\nKey questions\n\nHow often would this procedure (drawing a sample, inferring about the population) give us something close to the correct answer if I used it over and over? or\nWhat is the probability that the inference I draw from one sample is wrong (way off from the population characteristic of interest)?"
+    "text": "The challenge of making inferences\n\nDrawing inferences entails uncertainty\nEven with a good sample, the sample is likely to differ from the population (sample statistic is likely to be different from our population parameter, just by chance)\n\n\n\nChallenge\nAssessing the risk of being wrong (being way off) in making an inference from observed sample statistics to unknown population parameters.\n\n\n\nKey questions\n\nHow often would this procedure (drawing a sample, inferring about the population) give us something close to the correct answer if I used it over and over? or\nWhat is the probability that the inference I draw from one sample is wrong (way off from the population characteristic of interest)?"
   },
   {
     "objectID": "lectures/lecture5.html#using-these-tools-for-inference",
@@ -2692,7 +2692,7 @@
     "href": "lectures/lecture5.html#estimating-population-parameters-two-options",
     "title": "",
     "section": "Estimating Population Parameters: TWO OPTIONS",
-    "text": "Estimating Population Parameters: TWO OPTIONS\n\n\n\nOne option: Just assume that the population mean is equal to the sample mean\n\\[\n\\mu_x = \\bar{X} = 14.5\n\\]\n\nCalled a point estimate\n\n\n\n\nPotential problems with this strategy?\n\n\n\nVery likely to be wrong!\n\nEven with a random sample, the sample statistic is like to miss the true population parameter by at least a little\n\nReflects chance sampling error\n\nIn reality:\n\n\n\\[\n\\mu_x \\neq \\bar{X}\n\\]\n\n\n\n\n\n\nSAMPLING ERROR The differencebetween a samplestatistic used toestimate a populationparameter and theactual (but unknown)value of thepopulationparameter."
+    "text": "Estimating Population Parameters: TWO OPTIONS\n\n\n\nOne option: Just assume that the population mean is equal to the sample mean\n\\[\n\\mu_x = \\bar{X} = 14.5\n\\]\n\nCalled a point estimate\n\n\n\nPotential problems with this strategy?\n\n\n\nVery likely to be wrong!\n\nEven with a random sample, the sample statistic is like to miss the true population parameter by at least a little\n\nReflects chance sampling error\n\nIn reality:\n\n\n\\[\n\\mu_x \\neq \\bar{X}\n\\]\n\n\n\n\n\n\nSAMPLING ERROR The differencebetween a samplestatistic used toestimate a populationparameter and theactual (but unknown)value of thepopulationparameter."
   },
   {
     "objectID": "lectures/lecture5.html#estimating-population-parameters-two-options-1",
@@ -2720,7 +2720,7 @@
     "href": "lectures/lecture5.html#sampling-distribution",
     "title": "",
     "section": "Sampling distribution",
-    "text": "Sampling distribution\n\n\n \n\n\nSampling Distribution A theoretical probability distribution of all possible sample values for the statistic in which we are interested.\n\n\n\n\n\n\nKey tool for inferential statistics\n\nAllows us to think about how our one single sample result relates to all possible sample results and, by extension, the population we are interested in drawing inferences about."
+    "text": "Sampling distribution\n\n\n \n\n\nSampling Distribution A theoretical probability distribution of all possible sample values for the statistic in which we are interested.\n\n\n\n\n\nKey tool for inferential statistics\n\nAllows us to think about how our one single sample result relates to all possible sample results and, by extension, the population we are interested in drawing inferences about."
   },
   {
     "objectID": "lectures/lecture5.html#sampling-distribution-1",
@@ -2783,7 +2783,7 @@
     "href": "lectures/lecture5.html#how-does-this-help-us",
     "title": "",
     "section": "How does this help us?",
-    "text": "How does this help us?\n\n\nSAMPLING DISTRIBUTION of sample means"
+    "text": "How does this help us?\n\nSAMPLING DISTRIBUTION of sample means"
   },
   {
     "objectID": "lectures/lecture5.html#confidence-intervals",
@@ -3022,5 +3022,82 @@
     "title": "",
     "section": "Implication of central limit theorem",
     "text": "Implication of central limit theorem\n\nCentral limit theorem tells us that if the size of our random sample is large enough, we can assume that the sampling distribution of all such possible samples is:\n\nNormally distributed\nMean: \\(\\mu_\\bar{X}\\) \\(= \\mu_X\\)\nStandard Error = \\(\\sigma_\\bar{X}\\) \\(= \\frac{\\sigma}{\\sqrt{n}}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(99.73\\%\\) of sample means will be within \\(\\pm3\\) standard errors of the true population mean"
+  },
+  {
+    "objectID": "quizzes/survey.html",
+    "href": "quizzes/survey.html",
+    "title": "Template - Question Types",
+    "section": "",
+    "text": "Hi! This is a showcase of different question types and question formatting that surveydown supports.\nPlease make your choice below.\n\n\n\n\nWhere do you want to go to?\n\n\n\n\n\nTake me to the page on Question Types (the next page)\n\n\n\n\n\nTake me to the page on Question Formatting\n\n\n\n\n\nSkip to the end\n\n\n\n\n*\n\n\n\n\nNext"
+  },
+  {
+    "objectID": "quizzes/survey.html#thanks-for-taking-our-survey",
+    "href": "quizzes/survey.html#thanks-for-taking-our-survey",
+    "title": "Template - Question Types",
+    "section": "Thanks for taking our survey!",
+    "text": "Thanks for taking our survey!\n\n\n\nExit This Survey"
+  },
+  {
+    "objectID": "lectures/lecture5.html#summary",
+    "href": "lectures/lecture5.html#summary",
+    "title": "",
+    "section": "Summary",
+    "text": "Summary"
+  },
+  {
+    "objectID": "lectures/lecture5.html#summary-background-interactive-background-iframehttpswww.youtube.comembedivd8wehnmcgsip5sc4yqcn8hojarcstart5end385",
+    "href": "lectures/lecture5.html#summary-background-interactive-background-iframehttpswww.youtube.comembedivd8wehnmcgsip5sc4yqcn8hojarcstart5end385",
+    "title": "",
+    "section": "Summary {background-interactive background-iframe=“https://www.youtube.com/embed/ivd8wEHnMCg?si=P5sc4yQCn8hoJaRc&start=5&end=385”}",
+    "text": "Summary {background-interactive background-iframe=“https://www.youtube.com/embed/ivd8wEHnMCg?si=P5sc4yQCn8hoJaRc&start=5&end=385”}"
+  },
+  {
+    "objectID": "lectures/lecture5.html#practice",
+    "href": "lectures/lecture5.html#practice",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nProblem 1: Sampling Distributions\nA researcher is studying weekly TV viewing habits of college students. The population mean is unknown, but the population standard deviation is \\(\\sigma = 5\\) hours.\nSuppose a simple random sample of \\(n = 100\\) students is taken, and the sample mean viewing time is \\(\\bar{X}\\) = 12 hours.\n\nWhat is the standard error of the sample mean?\nAccording to the Central Limit Theorem, what is the shape of the sampling distribution of \\(\\bar{X}\\)? Why?\nWould the standard error be larger, smaller, or the same if the sample size were only 25? Explain your reasoning.\n\n\nProblem 2: Central Limit Theorem\nImagine a population where the distribution of individual income is strongly skewed right with a mean of $50,000 and a standard deviation of $10,000.\n\nIf we take a random sample of 5 people, will the distribution of the sample mean look approximately normal? Why or why not?\nWhat about a sample of 50 people?\nExplain why the CLT is important for making inferences using sample means, even when the population distribution is not normal.\n\n\nProblem 3: Comparing Sample Means\nTwo different researchers each take a simple random sample from the same population of high school students. • Researcher A: \\(n = 30\\), gets ${X}_A = 7 $ hours of sleep per night • Researcher B: n = 90, gets \\(\\bar{X}_B = 7.2\\) hours of sleep per night • The population standard deviation is known to be = 1.8 hours\n\nWho would have a smaller standard error, and why?\nWithout calculating exact probabilities, which researcher is more likely to have a sample mean close to the true population mean?\nWhat does this example illustrate about the relationship between sample size and variability in sample statistics?"
+  },
+  {
+    "objectID": "lectures/lecture5.html#problem-1-sampling-distributions-1",
+    "href": "lectures/lecture5.html#problem-1-sampling-distributions-1",
+    "title": "",
+    "section": "Problem 1: Sampling Distributions",
+    "text": "Problem 1: Sampling Distributions\n\n\nStandard Error:\n\\[\nSE = \\frac{\\sigma}{\\sqrt{n}} = \\frac{5}{\\sqrt{100}} = 0.5 \\text{ hours}\n\\]\n\nb Shape of Sampling Distribution:\nSince \\(n = 100\\) is large, by the Central Limit Theorem, the sampling distribution of \\(\\bar{X}\\) is approximately normal, regardless of population shape.\n\nWhat if \\(n = 25\\)?\n\\[\nSE = \\frac{5}{\\sqrt{25}} = 1.0\n\\]\nSo the standard error increases when sample size decreases."
+  },
+  {
+    "objectID": "lectures/lecture5.html#problem-2-central-limit-theorem-1",
+    "href": "lectures/lecture5.html#problem-2-central-limit-theorem-1",
+    "title": "",
+    "section": "Problem 2: Central Limit Theorem",
+    "text": "Problem 2: Central Limit Theorem\n\n\n\\(n = 5\\): The sampling distribution of \\(\\bar{X}\\) is not approximately normal — small sample from a strongly skewed population.\n\\(n = 50\\): Sampling distribution is approximately normal — CLT applies for large enough \\(n\\) (typically \\(n \\geq 30\\)).\nWhy is CLT useful?\nIt allows us to use the normal model for sample means even when the population is not normal, as long as \\(n\\) is large."
+  },
+  {
+    "objectID": "lectures/lecture5.html#problem-3-comparing-sample-means-1",
+    "href": "lectures/lecture5.html#problem-3-comparing-sample-means-1",
+    "title": "",
+    "section": "Problem 3: Comparing Sample Means",
+    "text": "Problem 3: Comparing Sample Means\n\n\nStandard Errors: \\[\nSE_A = \\frac{1.8}{\\sqrt{30}} \\approx 0.33 \\qquad SE_B = \\frac{1.8}{\\sqrt{90}} \\approx 0.19\n\\]\nSo Researcher B has a smaller standard error.\nWho is closer to \\(\\mu\\)?\nResearcher B — lower SE means their estimate is more precise.\nWhat does this show?\nLarger sample sizes → smaller SE → less variability in sample means."
+  },
+  {
+    "objectID": "lectures/lecture5.html#section-2",
+    "href": "lectures/lecture5.html#section-2",
+    "title": "",
+    "section": "",
+    "text": "Problem 1: Sampling Distributions\n\n\nStandard Error:\n\\[\nSE = \\frac{\\sigma}{\\sqrt{n}} = \\frac{5}{\\sqrt{100}} = 0.5 \\text{ hours}\n\\]\n\nShape of Sampling Distribution:\nSince \\(n = 100\\) is large, by the Central Limit Theorem, the sampling distribution of \\(\\bar{X}\\) is approximately normal, regardless of population shape.\n\nWhat if \\(n = 25\\)?\n\\[\nSE = \\frac{5}{\\sqrt{25}} = 1.0\n\\]\nSo the standard error increases when sample size decreases."
+  },
+  {
+    "objectID": "lectures/lecture5.html#section-3",
+    "href": "lectures/lecture5.html#section-3",
+    "title": "",
+    "section": "",
+    "text": "Problem 2: Central Limit Theorem\n\n\n\\(n = 5\\): The sampling distribution of \\(\\bar{X}\\) is not approximately normal — small sample from a strongly skewed population.\n\n\\(n = 50\\): Sampling distribution is approximately normal — CLT applies for large enough \\(n\\) (typically \\(n \\geq 30\\)).\n\nWhy is CLT useful?\nIt allows us to use the normal model for sample means even when the population is not normal, as long as \\(n\\) is large."
+  },
+  {
+    "objectID": "lectures/lecture5.html#section-4",
+    "href": "lectures/lecture5.html#section-4",
+    "title": "",
+    "section": "",
+    "text": "Problem 3: Comparing Sample Means\n\n\nStandard Errors: \\[\nSE_A = \\frac{1.8}{\\sqrt{30}} \\approx 0.33 \\qquad SE_B = \\frac{1.8}{\\sqrt{90}} \\approx 0.19\n\\]\nSo Researcher B has a smaller standard error.\n\nWho is closer to \\(\\mu\\)?\nResearcher B — lower SE means their estimate is more precise.\n\nWhat does this show?\nLarger sample sizes → smaller SE → less variability in sample means."
   }
 ]
