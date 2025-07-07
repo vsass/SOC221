@@ -1428,7 +1428,7 @@ a. What is the standard error of the sample mean?
 b. According to the Central Limit Theorem, what is the shape of the sampling distribution of $\bar{X}$? Why?
 c. Would the standard error be larger, smaller, or the same if the sample size were only 25? Explain your reasoning.
 
-## {visibility="hidden"}
+--- 
 
 ### Problem 1: Sampling Distributions  
 
@@ -1458,7 +1458,7 @@ a.	If we take a random sample of 5 people, will the distribution of the sample m
 b.	What about a sample of 50 people?
 c.	Explain why the CLT is important for making inferences using sample means, even when the population distribution is not normal.
 
-## {visibility="hidden"}
+--- 
 
 ### Problem 2: Central Limit Theorem  
 
@@ -1486,7 +1486,7 @@ a. Who would have a smaller standard error, and why?
 b. Without calculating exact probabilities, which researcher is more likely to have a sample mean close to the true population mean?
 c. What does this example illustrate about the relationship between sample size and variability in sample statistics?
 
-## {visibility="hidden"}
+--- 
 
 ### Problem 3: Comparing Sample Means  
 

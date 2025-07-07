@@ -735,7 +735,27 @@ Victoria Sass
 <li>Would the standard error be larger, smaller, or the same if the sample size were only 25? Explain your reasoning.</li>
 </ol>
 </section>
+<section class="slide level2">
 
+<h3 id="problem-1-sampling-distributions-1">Problem 1: Sampling Distributions</h3>
+<div>
+<ol type="a">
+<li class="fragment"><p>Standard Error:<br>
+<span class="math display">\[
+SE = \frac{\sigma}{\sqrt{n}} = \frac{5}{\sqrt{100}} = 0.5 \text{ hours}
+\]</span><br>
+</p></li>
+<li class="fragment"><p>Shape of Sampling Distribution:<br>
+Since <span class="math inline">\(n = 100\)</span> is large, by the <strong>Central Limit Theorem</strong>, the sampling distribution of <span class="math inline">\(\bar{X}\)</span> is approximately <strong>normal</strong>, regardless of population shape.<br>
+</p></li>
+<li class="fragment"><p>What if <span class="math inline">\(n = 25\)</span>?<br>
+<span class="math display">\[
+SE = \frac{5}{\sqrt{25}} = 1.0
+\]</span><br>
+So the standard error <strong>increases</strong> when sample size <strong>decreases</strong>.</p></li>
+</ol>
+</div>
+</section>
 <section class="slide level2">
 
 <h3 id="practice-1">Practice</h3>
@@ -747,7 +767,20 @@ Victoria Sass
 <li>Explain why the CLT is important for making inferences using sample means, even when the population distribution is not normal.</li>
 </ol>
 </section>
+<section class="slide level2">
 
+<h3 id="problem-2-central-limit-theorem-1">Problem 2: Central Limit Theorem</h3>
+<div>
+<ol type="a">
+<li class="fragment"><p><span class="math inline">\(n = 5\)</span>: The sampling distribution of <span class="math inline">\(\bar{X}\)</span> is <strong>not</strong> approximately normal — small sample from a strongly skewed population.<br>
+</p></li>
+<li class="fragment"><p><span class="math inline">\(n = 50\)</span>: Sampling distribution <strong>is approximately normal</strong> — CLT applies for large enough <span class="math inline">\(n\)</span> (typically <span class="math inline">\(n \geq 30\)</span>).<br>
+</p></li>
+<li class="fragment"><p>Why is CLT useful?<br>
+It allows us to use the <strong>normal model for sample means</strong> even when the population is not normal, <strong>as long as <span class="math inline">\(n\)</span> is large</strong>.</p></li>
+</ol>
+</div>
+</section>
 <section class="slide level2">
 
 <h3 id="practice-2">Practice</h3>
@@ -764,7 +797,26 @@ Victoria Sass
 <li>What does this example illustrate about the relationship between sample size and variability in sample statistics?</li>
 </ol>
 </section>
-</section>
+<section class="slide level2">
+
+<h3 id="problem-3-comparing-sample-means-1">Problem 3: Comparing Sample Means</h3>
+<div>
+<ol type="a">
+<li class="fragment"><p>Standard Errors: <span class="math display">\[
+SE_A = \frac{1.8}{\sqrt{30}} \approx 0.33 \qquad SE_B = \frac{1.8}{\sqrt{90}} \approx 0.19
+\]</span><br>
+So <strong>Researcher B</strong> has a smaller standard error.<br>
+</p></li>
+<li class="fragment"><p>Who is closer to <span class="math inline">\(\mu\)</span>?<br>
+Researcher B — lower SE means their estimate is <strong>more precise</strong>.<br>
+</p></li>
+<li class="fragment"><p>What does this show?<br>
+<strong>Larger sample sizes</strong> → <strong>smaller SE</strong> → <strong>less variability</strong> in sample means.</p></li>
+</ol>
+</div>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
