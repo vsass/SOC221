@@ -589,7 +589,7 @@ We are [**$95\%$ confident**]{style="color: #e93cac"} that the true average numb
 
 ::::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### [Mean texts per hour]{.underline}
 
@@ -641,7 +641,7 @@ $$
 $\text{sample statistic} \pm \text{margin of error}$
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### [Mean texts per hour]{.underline}
 
@@ -684,7 +684,7 @@ $4.09$ to $4.91$ hours
 
 : Z-scores come from Standard Normal Table {tbl-colwidths="[8.333]"}
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### [Mean texts per hour]{.underline}
 
@@ -975,6 +975,77 @@ $0.351$ to $0.489$
 We are [**$95\%$ confident**]{style="color: #e93cac"} that between [**$35.1\%$ and $48.9\%$**]{style="color: #e93cac"} of the [**population of students**]{style="color: #e93cac"} are employed during the school year.
 :::
 
+## Practice
+
+#### [Household Purchasing Decisions]{.underline}
+
+*Suppose a marketing company did a survey of 200 randomly selected households and found that in 120 of them, the woman made the majority of the purchasing decisions. We are interested in the population proportion of households where women make the majority of the purchasing decisions.*
+
+- Construct a 95% confidence interval for the population proportion of households where the women make the majority of the purchasing decisions.
+- List two difficulties the company might have in obtaining random results, if this survey were done by email.
+
+## Practice
+
+*Construct a 95% confidence interval for the population proportion of households where the women make the majority of the purchasing decisions.*
+
+::: {.fragment}
+
+#### [Identify the sample proportion]{.underline}
+
+$$
+\hat{p} = \frac{120}{200} = 0.60
+$$
+
+This is our sample proportion — the best estimate of the true population proportion.
+
+:::
+
+::: {.fragment}
+
+#### [Compute the standard error]{.underline}
+
+$$
+\sigma_{\widehat{p}} = \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}} = \sqrt{\frac{0.60(1 - 0.60)}{200}} = \sqrt{\frac{0.60 \cdot 0.40}{200}} = \sqrt{\frac{0.24}{200}} = \sqrt{0.0012} \approx 0.0346
+$$
+:::
+
+::: {.fragment}
+
+#### [Compute the margin of error]{.underline}
+
+$$
+\text{margin of error} = z(\sigma_{\widehat{p}}) = 1.96(0.0346) \approx 0.0678
+$$
+:::
+
+::: {.fragment}
+
+#### [Compute the confidence interval]{.underline}
+
+$$
+\text{CI} = 0.60 \pm 0.0678 = (0.5322, 0.6678)
+$$
+:::
+
+## Practice
+
+*Construct a 95% confidence interval for the population proportion of households where the women make the majority of the purchasing decisions.*
+
+<br>
+
+#### [Interpretation]{.underline}
+
+We are [95% confident]{.underline} that between [53.2% and 66.8%]{.underline} of [the population of all households]{.underline} have women making the majority of purchasing decisions.
+
+## Practice
+
+*List two difficulties the company might have in obtaining random results, if this survey were done by email.*
+
+::: {.incremental}
+- **Selection/Coverage Bias**: Not all households have equal access to or use email regularly. Households with older adults, that are low-income, or have limited internet access may be underrepresented, making the sample non-random.
+- **Non-response Bias**: People who ignore survey emails may differ in important ways from those who respond. For example, more engaged, time-rich individuals may reply, skewing results. 
+- **Sampling Frame Challenges**: How will the study create the sampling frame needed to randomly sample households using emails addresses? Many people have multiple email addresses - how will that be accounted for? How will selection within households be done? Given the complexity of conducting an unbiased sample using email addresses, the resulting sample is likely going to be collected using non-probabalistic methods (i.e. convenience sampling) which is not random
+:::
 
 # Homework{.section-title background-color="#e8e3d3"}
 

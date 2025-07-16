@@ -3176,5 +3176,54 @@
     "title": "",
     "section": "Practice",
     "text": "Practice\nMean texts per hour\n\n\n\n\nSuppose that the number of text messages sent per hour by the population of teenagers has a standard deviation of 3\nYou take a random sample of 144 teenagers and find that the mean number of text messages per hour is 4.5\nCalculate a 90% confidence interval to estimate the average number of text messages per hour in the population"
+  },
+  {
+    "objectID": "lectures/lecture6.html#practice-4",
+    "href": "lectures/lecture6.html#practice-4",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nHousehold Purchasing Decisions\nSuppose a marketing company did a survey of 200 randomly selected households and found that in 120 of them, the woman made the majority of the purchasing decisions. We are interested in the population proportion of households where women make the majority of the purchasing decisions.\n\nConstruct a 95% confidence interval for the population proportion of households where the women make the majority of the purchasing decisions.\nList two difficulties the company might have in obtaining random results, if this survey were done by email."
+  },
+  {
+    "objectID": "lectures/lecture6.html#practice-1",
+    "href": "lectures/lecture6.html#practice-1",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nMean texts per hour\n\n\n\nSuppose that the number of text messages sent per hour by the population of teenagers has a standard deviation of 3\nYou take a random sample of 144 teenagers and find that the mean number of text messages per hour is 4.5\nCalculate a 90% confidence interval to estimate the average number of text messages per hour in the population\n\n\n\n\nStep 1: Use z = 1.645\n\n\n\n\nStep 2: Calculate standard error \\[\n\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}} = \\frac{3.0}{\\sqrt{144}} = 0.25\n\\]\n\n\n\n\nStep 3: Calculate the margin of error \\[\nz(\\frac{\\sigma}{\\sqrt{n}}) = (1.645)(0.25)= 0.411\n\\]\n\n\n\n\n\nZ-scores come from Standard Normal Table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n50%\n60%\n70%\n80%\n90%\n95%\n96%\n98%\n99%\n99.5%\n99.9%\n\n\n\n\nZ*\n0.674\n0.841\n1.036\n1.282\n1.645\n1.960\n2.054\n2.326\n2.576\n2.807\n3.291\n\n\n\n\n\n\\(\\text{sample statistic} \\pm \\text{margin of error}\\)"
+  },
+  {
+    "objectID": "lectures/lecture6.html#practice-2",
+    "href": "lectures/lecture6.html#practice-2",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nMean texts per hour\n\n\\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n\n\nSuppose that the number of text messages sent per hour by the population of teenagers has a standard deviation of 3\nYou take a random sample of 144 teenagers and find that the mean number of text messages per hour is 4.5\nCalculate a 90% confidence interval to estimate the average number of text messages per hour in the population\n\n\n\nStep 4: Calculate the confidence interval \\[\n4.5 + 0.411 = 4.911\n\\] \\[\n4.5 - 0.411 = 4.089\n\\]\n\n\n\\(90\\%\\) confidence interval: \\(4.09\\) to \\(4.91\\) hours\n\n\n\nZ-scores come from Standard Normal Table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n50%\n60%\n70%\n80%\n90%\n95%\n96%\n98%\n99%\n99.5%\n99.9%\n\n\n\n\nZ*\n0.674\n0.841\n1.036\n1.282\n1.645\n1.960\n2.054\n2.326\n2.576\n2.807\n3.291"
+  },
+  {
+    "objectID": "lectures/lecture6.html#practice-3",
+    "href": "lectures/lecture6.html#practice-3",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nMean texts per hour\n\n\\(\\text{sample statistic} \\pm \\text{margin of error}\\)\n\n\n\n\nSuppose that the number of text messages sent per hour by the population of teenagers has a standard deviation of 3\nYou take a random sample of 144 teenagers and find that the mean number of text messages per hour is 4.5\nCalculate a 90% confidence interval to estimate the average number of text messages per hour in the population\n\n\n\nStep 5: Interpret the results   We are 90% confident that the average number of texts sent per hour for the population of teenagers is between 4.09 and 4.91\n\n\n\nZ-scores come from Standard Normal Table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n50%\n60%\n70%\n80%\n90%\n95%\n96%\n98%\n99%\n99.5%\n99.9%\n\n\n\n\nZ*\n0.674\n0.841\n1.036\n1.282\n1.645\n1.960\n2.054\n2.326\n2.576\n2.807\n3.291"
+  },
+  {
+    "objectID": "lectures/lecture6.html#practice-5",
+    "href": "lectures/lecture6.html#practice-5",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nConstruct a 95% confidence interval for the population proportion of households where the women make the majority of the purchasing decisions.\n\nIdentify the sample proportion\n\\[\n\\hat{p} = \\frac{120}{200} = 0.60\n\\]\nThis is our sample proportion — the best estimate of the true population proportion.\n\n\nCompute the standard error\n\\[\n\\sigma_{\\widehat{p}} = \\sqrt{\\frac{\\widehat{p}(1-\\widehat{p})}{n}} = \\sqrt{\\frac{0.60(1 - 0.60)}{200}} = \\sqrt{\\frac{0.60 \\cdot 0.40}{200}} = \\sqrt{\\frac{0.24}{200}} = \\sqrt{0.0012} \\approx 0.0346\n\\]\n\n\nCompute the margin of error\n\\[\n\\text{margin of error} = z(\\sigma_{\\widehat{p}}) = 1.96(0.0346) \\approx 0.0678\n\\]\n\n\nCompute the confidence interval\n\\[\n\\text{CI} = 0.60 \\pm 0.0678 = (0.5322, 0.6678)\n\\]"
+  },
+  {
+    "objectID": "lectures/lecture6.html#practice-6",
+    "href": "lectures/lecture6.html#practice-6",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nConstruct a 95% confidence interval for the population proportion of households where the women make the majority of the purchasing decisions.\n\nInterpretation\nWe are 95% confident that between 53.2% and 66.8% of the population of all households have women making the majority of purchasing decisions."
+  },
+  {
+    "objectID": "lectures/lecture6.html#practice-7",
+    "href": "lectures/lecture6.html#practice-7",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nList two difficulties the company might have in obtaining random results, if this survey were done by email.\n\n\nSelection/Coverage Bias: Not all households have equal access to or use email regularly. Households with older adults, that are low-income, or have limited internet access may be underrepresented, making the sample non-random.\nNon-response Bias: People who ignore survey emails may differ in important ways from those who respond. For example, more engaged, time-rich individuals may reply, skewing results.\nSampling Frame Challenges: How will the study create the sampling frame needed to randomly sample households using emails addresses? Many people have multiple email addresses - how will that be accounted for? How will selection within households be done? Given the complexity of conducting an unbiased sample using email addresses, the resulting sample is likely going to be collected using non-probabalistic methods (i.e. convenience sampling) which is not random"
   }
 ]

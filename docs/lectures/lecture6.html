@@ -547,9 +547,235 @@ z(\frac{\sigma}{\sqrt{n}}) = (1.96)(0.8)= 1.57
 
 </div></div>
 </section>
-
-
-
+<section id="practice-1" class="slide level2">
+<h2>Practice</h2>
+<h4 id="mean-texts-per-hour-1"><u>Mean texts per hour</u></h4>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Suppose that the number of text messages sent per hour by the <strong>population of teenagers</strong> has a <strong>standard deviation of 3</strong></li>
+<li>You take a <u>random sample</u> of 144 teenagers and find that the <strong>mean</strong> number of <strong>text messages</strong> per hour is <strong>4.5</strong></li>
+<li>Calculate a <span style="color: #754cbc;"><strong>90% confidence interval</strong></span> to estimate the average number of text messages per hour in the population</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="fragment" data-fragment-index="2">
+<ul>
+<li><u>Step 1</u>: Use <span style="color: #754cbc;">z = 1.645</span></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="3">
+<ul>
+<li><u>Step 2</u>: Calculate standard error <span class="math display">\[
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{3.0}{\sqrt{144}} = 0.25
+\]</span></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="4">
+<ul>
+<li><u>Step 3</u>: Calculate the margin of error <span class="math display">\[
+z(\frac{\sigma}{\sqrt{n}}) = (1.645)(0.25)= 0.411
+\]</span></li>
+</ul>
+</div>
+</div></div>
+<div class="fragment" data-fragment-index="1">
+<table class="caption-top" style="width:96%;">
+<caption>Z-scores come from Standard Normal Table</caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">50%</th>
+<th style="text-align: center;">60%</th>
+<th style="text-align: center;">70%</th>
+<th style="text-align: center;">80%</th>
+<th style="text-align: center;">90%</th>
+<th style="text-align: center;">95%</th>
+<th style="text-align: center;">96%</th>
+<th style="text-align: center;">98%</th>
+<th style="text-align: center;">99%</th>
+<th style="text-align: center;">99.5%</th>
+<th style="text-align: center;">99.9%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Z*</strong></td>
+<td style="text-align: center;">0.674</td>
+<td style="text-align: center;">0.841</td>
+<td style="text-align: center;">1.036</td>
+<td style="text-align: center;">1.282</td>
+<td style="text-align: center;"><span style="background: #c5b4e3;">1.645</span></td>
+<td style="text-align: center;"><span style="background: #ffc700;">1.960</span></td>
+<td style="text-align: center;">2.054</td>
+<td style="text-align: center;">2.326</td>
+<td style="text-align: center;"><span style="background: #2ad2c9;">2.576</span></td>
+<td style="text-align: center;">2.807</td>
+<td style="text-align: center;">3.291</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment" data-fragment-index="1" data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 350px; padding: 0px 0px 0px 0px; position: absolute; top: 70px; right: -75px; font-size: 0.85em; text-align: center">
+<p><span class="math inline">\(\text{sample statistic} \pm \text{margin of error}\)</span></p>
+</div>
+</section>
+<section id="practice-2" class="slide level2">
+<h2>Practice</h2>
+<h4 id="mean-texts-per-hour-2"><u>Mean texts per hour</u></h4>
+<div data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 350px; padding: 0px 0px 0px 0px; position: absolute; top: 70px; right: -75px; font-size: 0.85em; text-align: center">
+<p><span class="math inline">\(\text{sample statistic} \pm \text{margin of error}\)</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Suppose that the number of text messages sent per hour by the <strong>population of teenagers</strong> has a <strong>standard deviation of 3</strong></li>
+<li>You take a <u>random sample</u> of 144 teenagers and find that the <strong>mean</strong> number of <strong>text messages</strong> per hour is <strong>4.5</strong></li>
+<li>Calculate a <span style="color: #754cbc;"><strong>90% confidence interval</strong></span> to estimate the average number of text messages per hour in the population</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><u>Step 4</u>: Calculate the confidence interval <span class="math display">\[
+4.5 + 0.411 = 4.911
+\]</span> <span class="math display">\[
+4.5 - 0.411 = 4.089
+\]</span></li>
+</ul>
+<div class="fragment" data-fragment-index="1" data-id="box2" style="color: #1b8883; border: 4px solid #1b8883; border-radius: 15px; width: 500px; padding: 5px 5px 5px 5px; position: static; text-align: center">
+<p><span class="math inline">\(90\%\)</span> confidence interval:<br> <span class="math inline">\(4.09\)</span> to <span class="math inline">\(4.91\)</span> hours</p>
+</div>
+</div></div>
+<table class="caption-top" style="width:96%;">
+<caption>Z-scores come from Standard Normal Table</caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">50%</th>
+<th style="text-align: center;">60%</th>
+<th style="text-align: center;">70%</th>
+<th style="text-align: center;">80%</th>
+<th style="text-align: center;">90%</th>
+<th style="text-align: center;">95%</th>
+<th style="text-align: center;">96%</th>
+<th style="text-align: center;">98%</th>
+<th style="text-align: center;">99%</th>
+<th style="text-align: center;">99.5%</th>
+<th style="text-align: center;">99.9%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Z*</strong></td>
+<td style="text-align: center;">0.674</td>
+<td style="text-align: center;">0.841</td>
+<td style="text-align: center;">1.036</td>
+<td style="text-align: center;">1.282</td>
+<td style="text-align: center;"><span style="background: #c5b4e3;">1.645</span></td>
+<td style="text-align: center;"><span style="background: #ffc700;">1.960</span></td>
+<td style="text-align: center;">2.054</td>
+<td style="text-align: center;">2.326</td>
+<td style="text-align: center;"><span style="background: #2ad2c9;">2.576</span></td>
+<td style="text-align: center;">2.807</td>
+<td style="text-align: center;">3.291</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="practice-3" class="slide level2">
+<h2>Practice</h2>
+<h4 id="mean-texts-per-hour-3"><u>Mean texts per hour</u></h4>
+<div data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 350px; padding: 0px 0px 0px 0px; position: absolute; top: 70px; right: -75px; font-size: 0.85em; text-align: center">
+<p><span class="math inline">\(\text{sample statistic} \pm \text{margin of error}\)</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Suppose that the number of text messages sent per hour by the <strong>population of teenagers</strong> has a <strong>standard deviation of 3</strong></li>
+<li>You take a <u>random sample</u> of 144 teenagers and find that the <strong>mean</strong> number of <strong>text messages</strong> per hour is <strong>4.5</strong></li>
+<li>Calculate a <span style="color: #754cbc;"><strong>90% confidence interval</strong></span> to estimate the average number of text messages per hour in the population</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><u>Step 5</u>: Interpret the results <br> <br> <span style="text-align: center;">We are <span style="color: #e93cac;"><u>90% confident</u></span> that the average number of texts sent per hour for the <span style="color: #e93cac;"><u>population of teenagers</u></span> is between <span style="color: #e93cac;"><u>4.09 and 4.91</u></span></span></li>
+</ul>
+</div></div>
+<table class="caption-top" style="width:96%;">
+<caption>Z-scores come from Standard Normal Table</caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">50%</th>
+<th style="text-align: center;">60%</th>
+<th style="text-align: center;">70%</th>
+<th style="text-align: center;">80%</th>
+<th style="text-align: center;">90%</th>
+<th style="text-align: center;">95%</th>
+<th style="text-align: center;">96%</th>
+<th style="text-align: center;">98%</th>
+<th style="text-align: center;">99%</th>
+<th style="text-align: center;">99.5%</th>
+<th style="text-align: center;">99.9%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Z*</strong></td>
+<td style="text-align: center;">0.674</td>
+<td style="text-align: center;">0.841</td>
+<td style="text-align: center;">1.036</td>
+<td style="text-align: center;">1.282</td>
+<td style="text-align: center;"><span style="background: #c5b4e3;">1.645</span></td>
+<td style="text-align: center;"><span style="background: #ffc700;">1.960</span></td>
+<td style="text-align: center;">2.054</td>
+<td style="text-align: center;">2.326</td>
+<td style="text-align: center;"><span style="background: #2ad2c9;">2.576</span></td>
+<td style="text-align: center;">2.807</td>
+<td style="text-align: center;">3.291</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="factors-affecting-precision-width-of-the-confidence-interval" class="slide level2">
 <h2><span style="font-size: 0.75em">Factors affecting precision (width) of the confidence interval</span></h2>
 <div class="fragment" data-fragment-index="1">
@@ -872,6 +1098,62 @@ z(\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}) = (1.96)(0.035) = 0.069
 </div>
 <div class="fragment" data-fragment-index="3" data-id="box2" style="border: 4px solid #e93cac; border-radius: 15px; width: 800px; padding: 5px 5px 5px 5px; position: absolute; bottom: 50px; right: 0px; font-size: 1.25em; text-align: center">
 <p>We are <span style="color: #e93cac"><strong><span class="math inline">\(95\%\)</span> confident</strong></span> that between <span style="color: #e93cac"><strong><span class="math inline">\(35.1\%\)</span> and <span class="math inline">\(48.9\%\)</span></strong></span> of the <span style="color: #e93cac"><strong>population of students</strong></span> are employed during the school year.</p>
+</div>
+</section>
+<section id="practice-4" class="slide level2">
+<h2>Practice</h2>
+<h4 id="household-purchasing-decisions"><u>Household Purchasing Decisions</u></h4>
+<p><em>Suppose a marketing company did a survey of 200 randomly selected households and found that in 120 of them, the woman made the majority of the purchasing decisions. We are interested in the population proportion of households where women make the majority of the purchasing decisions.</em></p>
+<ul>
+<li>Construct a 95% confidence interval for the population proportion of households where the women make the majority of the purchasing decisions.</li>
+<li>List two difficulties the company might have in obtaining random results, if this survey were done by email.</li>
+</ul>
+</section>
+<section id="practice-5" class="slide level2">
+<h2>Practice</h2>
+<p><em>Construct a 95% confidence interval for the population proportion of households where the women make the majority of the purchasing decisions.</em></p>
+<div class="fragment">
+<h4 id="identify-the-sample-proportion"><u>Identify the sample proportion</u></h4>
+<p><span class="math display">\[
+\hat{p} = \frac{120}{200} = 0.60
+\]</span></p>
+<p>This is our sample proportion — the best estimate of the true population proportion.</p>
+</div>
+<div class="fragment">
+<h4 id="compute-the-standard-error"><u>Compute the standard error</u></h4>
+<p><span class="math display">\[
+\sigma_{\widehat{p}} = \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}} = \sqrt{\frac{0.60(1 - 0.60)}{200}} = \sqrt{\frac{0.60 \cdot 0.40}{200}} = \sqrt{\frac{0.24}{200}} = \sqrt{0.0012} \approx 0.0346
+\]</span></p>
+</div>
+<div class="fragment">
+<h4 id="compute-the-margin-of-error"><u>Compute the margin of error</u></h4>
+<p><span class="math display">\[
+\text{margin of error} = z(\sigma_{\widehat{p}}) = 1.96(0.0346) \approx 0.0678
+\]</span></p>
+</div>
+<div class="fragment">
+<h4 id="compute-the-confidence-interval"><u>Compute the confidence interval</u></h4>
+<p><span class="math display">\[
+\text{CI} = 0.60 \pm 0.0678 = (0.5322, 0.6678)
+\]</span></p>
+</div>
+</section>
+<section id="practice-6" class="slide level2">
+<h2>Practice</h2>
+<p><em>Construct a 95% confidence interval for the population proportion of households where the women make the majority of the purchasing decisions.</em></p>
+<p><br></p>
+<h4 id="interpretation"><u>Interpretation</u></h4>
+<p>We are <u>95% confident</u> that between <u>53.2% and 66.8%</u> of <u>the population of all households</u> have women making the majority of purchasing decisions.</p>
+</section>
+<section id="practice-7" class="slide level2">
+<h2>Practice</h2>
+<p><em>List two difficulties the company might have in obtaining random results, if this survey were done by email.</em></p>
+<div>
+<ul>
+<li class="fragment"><strong>Selection/Coverage Bias</strong>: Not all households have equal access to or use email regularly. Households with older adults, that are low-income, or have limited internet access may be underrepresented, making the sample non-random.</li>
+<li class="fragment"><strong>Non-response Bias</strong>: People who ignore survey emails may differ in important ways from those who respond. For example, more engaged, time-rich individuals may reply, skewing results.</li>
+<li class="fragment"><strong>Sampling Frame Challenges</strong>: How will the study create the sampling frame needed to randomly sample households using emails addresses? Many people have multiple email addresses - how will that be accounted for? How will selection within households be done? Given the complexity of conducting an unbiased sample using email addresses, the resulting sample is likely going to be collected using non-probabalistic methods (i.e.&nbsp;convenience sampling) which is not random</li>
+</ul>
 </div>
 </section></section>
 <section>
