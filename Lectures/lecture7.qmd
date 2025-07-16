@@ -6,7 +6,7 @@ title-slide-attributes:
   data-background-opacity: "0.33"
 subtitle: "SOC 221 • Lecture 7"
 author: "Victoria Sass"
-date: "July 15, 2024"
+date: "July 21, 2025"
 date-format: full
 execute: 
   echo: true
@@ -1725,7 +1725,7 @@ Since our [test statistic]{style="color: #e93cac;"} ([$1.94$]{style="color: #e93
 
 ::::
 
-## Step 1: Plan 
+## Step 1: Plan {visibility="hidden"}
 
 #### State the null and alternative [hypotheses]{style="color: #e93cac;"}
 
@@ -1761,7 +1761,7 @@ $$
 Set up a test assuming that the null $H_0$ is true and see whether the facts of our sample contradict that assumption
 :::
 
-## Step 1: Plan 
+## Step 1: Plan {visibility="hidden"}
 
 #### Choose your [alpha]{style="color: #e93cac;"} level and find the [critical value]{style="color: #e93cac;"}
 
@@ -1828,7 +1828,7 @@ Critical value of<br>
 [$z = \pm 1.96$]{style="color: #e93cac;"}
 :::
 
-## Step 2: Calculate 
+## Step 2: Calculate {visibility="hidden"}
 
 #### Calculate [test statistic]{style="color: #e93cac;"} (and [p-value]{style="color: #e93cac;"})
 
@@ -1889,7 +1889,7 @@ $\frac{13.3-12.75}{0.267} =$ [$2.060$]{style="color: #e93cac;"}
 Mean education for immigrants is [2.06]{style="color: #e93cac;"} standard errors above the national average (assumed under $H_0$)
 :::
 
-## Step 3: Make a decision 
+## Step 3: Make a decision {visibility="hidden"}
 
 #### [Reject $H_0$ and support $H_a$]{style="color: #6e8e13;"}
 
@@ -2421,7 +2421,7 @@ Since [obtained t]{style="color: #1b8883"} is more extreme than [critical value]
 
 ::::
 
-## Practice
+## Practice {visibility="hidden"}
 
 #### Estimation: Confidence interval
 
@@ -2494,7 +2494,7 @@ $$
 We are [90% confident]{.underline} that the average number of visits to family for the [population]{.underline} of UW students is between [5.364 to 5.636]{.underline} hours
 :::
 
-## Practice 
+## Practice {visibility="hidden"}
 
 #### Hypothesis test
 
@@ -2545,7 +2545,7 @@ $$
 
 ::::
 
-## Practice
+## Practice {visibility="hidden"}
 
 #### Hypothesis test
 
@@ -2649,23 +2649,29 @@ Since [obtained t]{style="color: #1b8883"} is **NOT** more extreme than [critica
 
 ::: {.column width="30%"}
 ::: {.fragment}
-[$H_0: \mu_{UW} - \mu_{WSU} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"} 
+[$H_0: \mu_{UW} - \mu_{WSU} = 0$]{style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.15em"} 
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-[$H_a: \mu_{UW} - \mu_{WSU} \ne 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.25em"}
+[$H_a: \mu_{UW} - \mu_{WSU} \ne 0$]{style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; padding: 5px 5px 5px 5px; text-align: center; font-size: 1.15em"}
 :::
 :::
 
-::: {.column width="40%"}
-::: {.fragment style="border: 4px solid #754cbc; border-radius: 15px; padding: 1px 1px 1px 1px; text-align: center; width: 400px"}
+::: {.column width="5%"}
+
+:::
+
+::: {.column width="35%"}
+::: {.fragment style="border: 4px solid #754cbc; border-radius: 15px; padding: 1px 1px 1px 1px; text-align: center; width: 350px"}
 Observed difference between sample means reflects chance sampling error.
 :::
 
-::: {.fragment style="border: 4px solid #6e8e13; border-radius: 15px; padding: 1px 1px 1px 1px; text-align: center; width: 400px"}
+<br>
+
+::: {.fragment style="border: 4px solid #6e8e13; border-radius: 15px; padding: 1px 1px 1px 1px; text-align: center; width: 350px; margin: 10px"}
 Observed difference b/w sample means reflects a real difference b/w population means
 :::
 :::
@@ -2789,9 +2795,9 @@ A theoretical probability distribution that would be obtained by calculating all
 [*The DIFFERENCES between sample means drawn from every possible PAIR of samples create a SAMPLING DISTRIBUTION [OF DIFFERENCES BETWEEN (SAMPLE) MEANS]{.underline}*]{.center}
 
 ::: {.incremental style="color: #e93cac; position: absolute; top 200px; left: 0px; font-size: 1.25em"}
-* $\bar{X}_{UW1} - \bar{X}_{WSU1} = \bar{X}_{diff1}$ <br>
-* $\bar{X}_{UW2} - \bar{X}_{WSU2} = \bar{X}_{diff2}$ <br>
-* $\bar{X}_{UW3} - \bar{X}_{WSU3} = \bar{X}_{diff3}$ <br>
+* $\bar{X}_{UW1} - \bar{X}_{WSU1} = \bar{X}_\text{diff1}$ <br>
+* $\bar{X}_{UW2} - \bar{X}_{WSU2} = \bar{X}_\text{diff2}$ <br>
+* $\bar{X}_{UW3} - \bar{X}_{WSU3} = \bar{X}_\text{diff3}$ <br>
 * . . . 
 :::
 
@@ -3173,7 +3179,7 @@ $t = \frac{(14 - 12.5)-0}{1.134} = 1.764$
 
 *We want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90.  In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means.*
 
-## Practice 
+## Practice {visibility="hidden"}
 
 #### Two-sample hypothesis test
 
@@ -3224,7 +3230,7 @@ $$]{style="font-size: 0.90em"}
 
 ::::
 
-## Practice 
+## Practice {visibility="hidden"}
 
 #### Two-sample hypothesis test
 
