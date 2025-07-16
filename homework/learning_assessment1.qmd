@@ -1,0 +1,21 @@
+---
+title: "Mid-Quarter Learning Assessment"
+subtitle: "SOC 221 | Summer 2025"
+format: pdf
+---
+
+::: {.callout-note}
+
+## Directions
+
+*Reflect on your learning in the course thus far and answer the following questions. Responses to all questions should total about 1-2 pages in length. We will discuss them in person on July 23rd, 2025 (sign-up for a time slot [here](https://calendar.notion.so/meet/vsass/qo12sy4o9l))*
+
+:::
+
+\vspace{5mm}
+
+1.	What have been the most significant challenges you’ve faced in your learning so far, and how have you approached or worked through them?
+2.	What strategies, activities, or habits have helped you learn the material most effectively in this course?
+3.	What personal goals (academic, creative, or otherwise) are motivating your work in this course, and how do you feel you’re progressing toward them?
+4.	What changes would you like to make in your approach for the rest of the quarter to support your learning and engagement?
+5.	Based on your learning, effort, and progress so far, what grade would you give yourself at this point in the quarter? What grade would you like to achieve by the end, and what will help you get there?

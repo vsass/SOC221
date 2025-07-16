@@ -6,7 +6,7 @@ title-slide-attributes:
   data-background-opacity: "0.33"
 subtitle: "SOC 221 • Lecture 6"
 author: "Victoria Sass"
-date: "July 10, 2024"
+date: "July 16, 2025"
 date-format: full
 execute: 
   echo: true
@@ -568,7 +568,7 @@ $12.93$ to $16.07$ hours
 We are [**$95\%$ confident**]{style="color: #e93cac"} that the true average number of hours studied for the [**population**]{style="color: #e93cac"} of UW students is between [**$12.93$ to $16.07$**]{style="color: #e93cac"} hours
 :::
 
-## Another confidence interval example
+## Practice
 
 #### [Mean texts per hour]{.underline}
 
@@ -584,12 +584,32 @@ We are [**$95\%$ confident**]{style="color: #e93cac"} that the true average numb
 
 ::: {.column width="60%"}
 
-::: {.fragment fragment-index=3}
+
+:::
+
+::::
+
+## Practice {visibility="hidden"}
+
+#### [Mean texts per hour]{.underline}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+* Suppose that the number of text messages sent per hour by the **population of teenagers** has a **standard deviation of 3**
+* You take a [random sample]{.underline} of 144 teenagers and find that the **mean** number of **text messages** per hour is **4.5**
+* Calculate a [**90% confidence interval**]{style="color: #754cbc;"} to estimate the average number of text messages per hour in the population
+
+:::
+
+::: {.column width="60%"}
+
+::: {.fragment fragment-index=2}
 * [Step 1]{.underline}: Use [z = 1.645]{style="color: #754cbc;"}
 
 :::
 
-::: {.fragment fragment-index=4}
+::: {.fragment fragment-index=3}
 * [Step 2]{.underline}: Calculate standard error
 $$
 \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{3.0}{\sqrt{144}} = 0.25
@@ -597,7 +617,7 @@ $$
 
 :::
 
-::: {.fragment fragment-index=5}
+::: {.fragment fragment-index=4}
 * [Step 3]{.underline}: Calculate the margin of error
 $$
 z(\frac{\sigma}{\sqrt{n}}) = (1.645)(0.25)= 0.411
@@ -609,7 +629,7 @@ $$
 
 ::::
 
-::: {.fragment fragment-index=2}
+::: {.fragment fragment-index=1}
 |   | 50%  | 60%  | 70%  | 80%  | 90%  | 95%  | 96%  | 98%  | 99%  | 99.5%  | 99.9%  |
 |:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
 | **Z\*** | 0.674  | 0.841 | 1.036 | 1.282 | [1.645]{style="background: #c5b4e3;"} | [1.960]{style="background: #ffc700;"} | 2.054 | 2.326 | [2.576]{style="background: #2ad2c9;"} | 2.807 | 3.291 |
@@ -617,11 +637,11 @@ $$
 : Z-scores come from Standard Normal Table {tbl-colwidths="[8.333]"}
 :::
 
-::: {.fragment fragment-index=2 data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 350px; padding: 0px 0px 0px 0px; position: absolute; top: 70px; right: -75px; font-size: 0.85em; text-align: center"}
+::: {.fragment fragment-index=1 data-id="box2" style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 350px; padding: 0px 0px 0px 0px; position: absolute; top: 70px; right: -75px; font-size: 0.85em; text-align: center"}
 $\text{sample statistic} \pm \text{margin of error}$
 :::
 
-## Another confidence interval example
+## Practice {visibility="hidden"}
 
 #### [Mean texts per hour]{.underline}
 
@@ -664,7 +684,7 @@ $4.09$ to $4.91$ hours
 
 : Z-scores come from Standard Normal Table {tbl-colwidths="[8.333]"}
 
-## Another confidence interval example
+## Practice {visibility="hidden"}
 
 #### [Mean texts per hour]{.underline}
 
@@ -749,6 +769,8 @@ $$
 * [Level of variation in the population]{.underline}
     * More variation in population = more variation in possible sample results = larger standard error = bigger margin of error
 :::
+
+# Break! {.section-title background-color="#2ad2c9"}
 
 # Estimation: confidence intervals for proportions {.section-title background-color="#c5b4e3"}
 

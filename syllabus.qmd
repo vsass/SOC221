@@ -126,12 +126,12 @@ schedule_summer <- tribble(
 "2", "Wednesday<br>July 2nd", "▪ Probability and probability distributions<br>▪ Normal distributions", "Chapter 3 (sections 3.1 to 3.3)<br>Chapter 4 (section 4.1)<br>Chapter 5 (section 5.1)<br>Chapter 6 (sections 6.1 to 6.2)", " ",
 # week 3
 "3", "Monday<br>July 7th", "▪ Sampling distributions<br>▪ Central limit theorem<br>▪ Logic of inference", "Chapter 7 (sections 7.1 & 7.3)", "Homework 2",
-"3", "Wednesday<br>July 9th", "✍️🙋💡", " Quiz  1", " ",
+"3", "Wednesday<br>July 9th", " ", " ", " ",
 # week 4 
-"4", "Monday<br>July 14th", "▪ Estimation: confidence intervals for means<br>▪ Estimation: confidence intervals for proportions", "Chapter 8 (sections 8.1 to 8.2)<br>Chapter 8 (section 8.3)", "Homework 3",
-"4", "Wednesday<br>July 16th", "▪ Hypothesis testing for one sample", "Chapter 9 (sections 9.1 to 9.6)", " ",
+"4", "Monday<br>July 14th", "✍️🙋💡", "Quiz  1", "Homework 3",
+"4", "Wednesday<br>July 16th", "▪ Estimation: confidence intervals for means<br>▪ Estimation: confidence intervals for proportions", "Chapter 8 (sections 8.1 to 8.2)<br>Chapter 8 (section 8.3)", " ",
 # week 5
-"5", "Monday<br>July 21st", "▪ Hypothesis testing for two samples", "Chapter 10 (sections 10.1 to 10.3 plus 10.5)", "Homework 4<br>Learning Assessment Reflection",
+"5", "Monday<br>July 21st", "▪ Hypothesis testing for one sample<br>▪ Hypothesis testing for two samples", "Chapter 9 (sections 9.1 to 9.6)<br>Chapter 10 (sections 10.1 to 10.3 plus 10.5)", "Homework 4<br>Learning Assessment Reflection",
 "5", "Wednesday<br>July 23rd", "Individual  Learning", "Assessment  Meetings", " ",
 # week 6
 "6", "Monday<br>July 28th", "✍️🙋💡", "Quiz  2", "Homework 5",
@@ -174,7 +174,7 @@ tab_style(style = cell_fill(color = "#ccebc5"), # homework due
 # quiz & review day
 tab_style(style = cell_fill(color = "#b3cde3"),
               locations = list(cells_body(columns = c(topic, reading),
-                                          rows = date %in% c("Wednesday<br>July 9th", "Monday<br>July 28th", "Monday<br>August 18th")))) |> 
+                                          rows = date %in% c("Monday<br>July 14th", "Monday<br>July 28th", "Monday<br>August 18th")))) |> 
 tab_style(style = cell_fill(color = "#decbe4"),
               locations = list(cells_body(columns = c(topic, reading),
                                           rows = date %in% c("Wednesday<br>July 23rd", "Wednesday<br>August 20th")))) |> 
@@ -195,27 +195,27 @@ tab_style(style = cell_text(stretch = "ultra-expanded", align = "center", style 
 # oblique, bold, and left-aligned for learning assessment and quiz days (reading column only)
 tab_style(style = cell_text(stretch = "ultra-expanded", align = "left", style = "oblique", weight = "bolder"),
               locations = list(cells_body(columns = c(reading),
-                                          rows = date %in% c("Wednesday<br>July 9th", "Wednesday<br>July 23rd", "Monday<br>July 28th", 
+                                          rows = date %in% c("Monday<br>July 14th", "Wednesday<br>July 23rd", "Monday<br>July 28th", 
                                                              "Monday<br>August 18th", "Wednesday<br>August 20th")))) |> 
 # right-aligned quiz emojis (topic column only)
 tab_style(style = cell_text(stretch = "ultra-expanded", align = "right", style = "normal", weight = "bolder"),
               locations = list(cells_body(columns = c(topic),
-                                          rows = date %in% c("Wednesday<br>July 9th", "Monday<br>July 28th", "Monday<br>August 18th")))) |> 
+                                          rows = date %in% c("Monday<br>July 14th", "Monday<br>July 28th", "Monday<br>August 18th")))) |> 
   
 tab_style(style = cell_fill(color = "#f2f2f2"),
           locations = list(cells_body(columns = c(week, date, topic, reading, due), # regular day - no hw due, no quiz, no assessment
                                       rows = date %in% c("Monday<br>June 23rd", "Wednesday<br>June 25th",  "Wednesday<br>July 2nd", "Wednesday<br>July 16th",
                                                          "Wednesday<br>July 30th", "Monday<br>August 4th", "Monday<br>August 11th")),
                            cells_body(columns = c(week, date, topic, reading), # homework due (no quiz/assessment)
-                                      rows = date %in% c("Monday<br>June 30th", "Monday<br>July 7th", "Monday<br>July 14th", "Monday<br>July 21st", 
+                                      rows = date %in% c("Monday<br>June 30th", "Monday<br>July 7th", "Wednesday<br>July 9th", "Monday<br>July 21st", 
                                                          "Wednesday<br>August 6th", "Wednesday<br>August 13th")), 
                            cells_body(columns = c(week, date), # homework due AND a quiz day
-                                      rows = date %in% c("Monday<br>July 28th", "Monday<br>August 18th")), 
+                                      rows = date %in% c("Monday<br>July 14th", "Monday<br>July 28th", "Monday<br>August 18th")), 
                            cells_body(columns = c(week, date, due), # quiz/assessment day (no hw due)
-                                          rows = date %in% c("Wednesday<br>July 9th", "Wednesday<br>July 23rd", "Wednesday<br>August 20th")))) |> 
+                                          rows = date %in% c("Wednesday<br>July 23rd", "Wednesday<br>August 20th")))) |> 
 tab_style(style = cell_borders(sides = "bottom", color = "#cccccc", weight = px(2)), 
           locations = list(cells_body(columns = c(week, date, topic, reading, due), 
-                                      rows = date %in% c("Wednesday<br>June 25th", "Wednesday<br>July 2nd", "Wednesday<br>July 9th", "Wednesday<br>July 16th",
+                                      rows = date %in% c("Wednesday<br>June 25th", "Wednesday<br>July 2nd", "Wednesday<br>July 16th",
                                                          "Wednesday<br>July 23rd", "Wednesday<br>July 30th", "Wednesday<br>August 6th", "Wednesday<br>August 13th", 
                                                          "Wednesday<br>August 20th")))) |> 
 opt_table_font(font = "PT Sans") |> 

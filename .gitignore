@@ -6,3 +6,4 @@
 /.quarto/
 *.csv
 quizzes/
+homework/*key.qmd
