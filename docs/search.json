@@ -1250,7 +1250,7 @@
     "href": "lectures/lecture8.html#practice",
     "title": "",
     "section": "Practice",
-    "text": "Practice\n\nWhat type of correlations are the following?\n\n\nCorrelation (r) for education and income = 0.385  moderate and positive\nCorrelation (r) for education and stress = -0.615  strong and negative\nCorrelation (r) for hours studied and number of dates = 0.045  weak and positive\nCorrelation (r) for number of children and number of hours of sleep = -0.421  moderate and negative"
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\n\nIn this sample, is there an association between diet and feelings towards Thanksgiving? How do you know?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25   \n  \n80\n\n\nIndifferrent\n36   \n  \n111\n\n\nLikes\n100\n  \n184\n\n\nTOTAL\n25   \n275\n375"
   },
   {
     "objectID": "lectures/lecture8.html#practice-1",
@@ -1683,29 +1683,29 @@
     "objectID": "lectures/lecture10.html#bivariate-regression-1",
     "href": "lectures/lecture10.html#bivariate-regression-1",
     "title": "",
-    "section": "Bivariate regression",
-    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#000000}{a} + \\color{#000000}{b}\\color{#000000}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\nDraw a scatterplot\n\n\nUse a line to describe thepattern of points\n\n\n\n\n\n\n\n\n\nEducation\nIncome\n\n\n\n\n12\n26000\n\n\n16\n33000\n\n\n13\n27750\n\n\n14\n29500\n\n\n8\n19000\n\n\n15\n31250\n\n\n16\n33000\n\n\n16\n33000\n\n\n11\n24250\n\n\n20\n40000\n\n\n17\n34750\n\n\n2\n8500\n\n\n\n\n\n\n\n\n\nCan use this line to predict the level of income for a person with any level of education  (within the range that we observe)"
   },
   {
     "objectID": "lectures/lecture10.html#bivariate-regression-2",
     "href": "lectures/lecture10.html#bivariate-regression-2",
     "title": "",
-    "section": "Bivariate regression",
-    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#000000}{b}\\color{#000000}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\nDraw a scatterplot\n\n\nUse a line to describe thepattern of points\n\n\n\n\n\n\n\n\n\nEducation\nIncome\n\n\n\n\n12\n26000\n\n\n16\n33000\n\n\n13\n27750\n\n\n14\n29500\n\n\n8\n19000\n\n\n15\n31250\n\n\n16\n33000\n\n\n16\n33000\n\n\n11\n24250\n\n\n20\n40000\n\n\n17\n34750\n\n\n2\n8500\n\n\n\n\n\n\n\n\n\nCan use this line to predict the level of income for a person with any level of education  (within the range that we observe)"
   },
   {
     "objectID": "lectures/lecture10.html#bivariate-regression-3",
     "href": "lectures/lecture10.html#bivariate-regression-3",
     "title": "",
-    "section": "Bivariate regression",
-    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b}\\color{#000000}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\nDraw a scatterplot\n\n\nUse a line to describe thepattern of points\n\n\n\n\n\n\n\n\n\nEducation\nIncome\n\n\n\n\n12\n26000\n\n\n16\n33000\n\n\n13\n27750\n\n\n14\n29500\n\n\n8\n19000\n\n\n15\n31250\n\n\n16\n33000\n\n\n16\n33000\n\n\n11\n24250\n\n\n20\n40000\n\n\n17\n34750\n\n\n2\n8500\n\n\n\n\n\n\n\n\n\nCan use this line to predict the level of income for a person with any level of education  (within the range that we observe)"
   },
   {
     "objectID": "lectures/lecture10.html#bivariate-regression-4",
     "href": "lectures/lecture10.html#bivariate-regression-4",
     "title": "",
-    "section": "Bivariate regression",
-    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b}\\color{#1b8883}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
   },
   {
     "objectID": "lectures/lecture10.html#multivariate-regression-1",
@@ -3225,5 +3225,782 @@
     "title": "",
     "section": "Practice",
     "text": "Practice\nList two difficulties the company might have in obtaining random results, if this survey were done by email.\n\n\nSelection/Coverage Bias: Not all households have equal access to or use email regularly. Households with older adults, that are low-income, or have limited internet access may be underrepresented, making the sample non-random.\nNon-response Bias: People who ignore survey emails may differ in important ways from those who respond. For example, more engaged, time-rich individuals may reply, skewing results.\nSampling Frame Challenges: How will the study create the sampling frame needed to randomly sample households using emails addresses? Many people have multiple email addresses - how will that be accounted for? How will selection within households be done? Given the complexity of conducting an unbiased sample using email addresses, the resulting sample is likely going to be collected using non-probabalistic methods (i.e. convenience sampling) which is not random"
+  },
+  {
+    "objectID": "lectures/lecture9.html#overview-of-correlation",
+    "href": "lectures/lecture9.html#overview-of-correlation",
+    "title": "",
+    "section": "Overview of Correlation",
+    "text": "Overview of Correlation\n\n\n\nLooking at the association between variables\n\nThe statistical link between variables\nTendency for certain types of values of one variable to coincide with certain kinds of values of the other variable\n\n\n\nFIRST step in assessing arguments that one variable (independent variable) has a causal impact on another (dependent variable)\n\n\n\n\nWe’ve looked for associations between nominal and ordinal variables in bivariate tables\n\n\n\nNow we want to measure association for interval variables\n\n\n\n\nSTRENGTH  How strong is the tendency for certain values of Y to go with particular values of X?\n\n\nDIRECTION  Is the association positive or negative?\n\n\nSTATISTICAL SIGNIFICANCE  How certain can we be that the association exists in the population?"
+  },
+  {
+    "objectID": "lectures/lecture9.html#correlation-and-scatterplots",
+    "href": "lectures/lecture9.html#correlation-and-scatterplots",
+    "title": "",
+    "section": "Correlation and Scatterplots",
+    "text": "Correlation and Scatterplots\n\n\nScatterplot: A graph that uses points to simultaneously display the value on two variables for each case in the data\n\n\n\nAllows us to picture the association between variables\n\nExample: Association between hiker weight and weight of backpack carried\n\n\n\n\n\n\n\n\n\n\n\nbody\nbackpack\n\n\n\n\n120\n26\n\n\n187\n30\n\n\n109\n26\n\n\n103\n24\n\n\n131\n29\n\n\n165\n35\n\n\n158\n31\n\n\n116\n28"
+  },
+  {
+    "objectID": "lectures/lecture9.html#correlation-and-scatterplots-1",
+    "href": "lectures/lecture9.html#correlation-and-scatterplots-1",
+    "title": "",
+    "section": "Correlation and Scatterplots",
+    "text": "Correlation and Scatterplots\n\n\nScatterplot: A graph that uses points to simultaneously display the value on two variables for each case in the data\n\n\n\nAllows us to picture the association between variables\n\nExample: Association between hiker weight and weight of backpack carried\n\n\n\n\n\n\n\n\n\n\nbody\nbackpack\n\n\n\n\n120\n26\n\n\n187\n30\n\n\n109\n26\n\n\n103\n24\n\n\n131\n29\n\n\n165\n35\n\n\n158\n31\n\n\n116\n28\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nX-axis (horizontal) displays all values in the IV\n\n\n\n\n\n\n\n\nY-axis (vertical) displays all values on the DV\n\n\n\n\n\n\nEach dot represents a case, positioned along the X and Y axes"
+  },
+  {
+    "objectID": "lectures/lecture9.html#correlation-and-scatterplots-2",
+    "href": "lectures/lecture9.html#correlation-and-scatterplots-2",
+    "title": "",
+    "section": "Correlation and Scatterplots",
+    "text": "Correlation and Scatterplots\n\n\nScatterplot: A graph that uses points to simultaneously display the value on two variables for each case in the data\n\n\n\nAllows us to picture the association between variables\n\nExample: Association between hiker weight and weight of backpack carried\n\n\n\n\n\n\n\n\n\n\nbody\nbackpack\n\n\n\n\n120\n26\n\n\n187\n30\n\n\n109\n26\n\n\n103\n24\n\n\n131\n29\n\n\n165\n35\n\n\n158\n31\n\n\n116\n28\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCan see the (positive) association (high values on one variable tend to go with high values on the other)"
+  },
+  {
+    "objectID": "lectures/lecture9.html#practice",
+    "href": "lectures/lecture9.html#practice",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\nWhat type of correlations are the following?\n\n\nCorrelation (r) for education and income = 0.385  moderate and positive\nCorrelation (r) for education and stress = -0.615  strong and negative\nCorrelation (r) for hours studied and number of dates = 0.045  weak and positive\nCorrelation (r) for number of children and number of hours of sleep = -0.421  moderate and negative"
+  },
+  {
+    "objectID": "lectures/lecture9.html#practice-1",
+    "href": "lectures/lecture9.html#practice-1",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\nWhat type of correlations are the following?\n\nCorrelation (r) for education and income = 0.385  moderate and positive\nCorrelation (r) for education and stress = -0.615  strong and negative\nCorrelation (r) for hours studied and number of dates = 0.045  weak and positive\nCorrelation (r) for number of children and number of hours of sleep = -0.421  moderate and negative"
+  },
+  {
+    "objectID": "lectures/lecture9.html#making-a-scatterplot",
+    "href": "lectures/lecture9.html#making-a-scatterplot",
+    "title": "",
+    "section": "Making a scatterplot",
+    "text": "Making a scatterplot\nExample: Do people who study more have more or fewer dates?\n\n\n\n\n\n\n\n\n\nHours studied\nDates\n\n\n\n\n10\n1\n\n\n15\n2\n\n\n10\n5\n\n\n6\n1\n\n\n2\n0\n\n\n7\n3\n\n\n10\n4\n\n\n12\n3\n\n\n7\n1\n\n\n20\n3"
+  },
+  {
+    "objectID": "lectures/lecture9.html#making-a-scatterplot-1",
+    "href": "lectures/lecture9.html#making-a-scatterplot-1",
+    "title": "",
+    "section": "Making a scatterplot",
+    "text": "Making a scatterplot\nExample: Do people who study more have more or fewer dates?\n\n\n\n\n\n\n\n\n\nHours studied\nDates\n\n\n\n\n10\n1\n\n\n15\n2\n\n\n10\n5\n\n\n6\n1\n\n\n2\n0\n\n\n7\n3\n\n\n10\n4\n\n\n12\n3\n\n\n7\n1\n\n\n20\n3"
+  },
+  {
+    "objectID": "lectures/lecture9.html#making-a-scatterplot-2",
+    "href": "lectures/lecture9.html#making-a-scatterplot-2",
+    "title": "",
+    "section": "Making a scatterplot",
+    "text": "Making a scatterplot\nExample: Do people who study more have more or fewer dates?\n\n\n\n\n\n\n\n\n\nHours studied\nDates\n\n\n\n\n10\n1\n\n\n15\n2\n\n\n10\n5\n\n\n6\n1\n\n\n2\n0\n\n\n7\n3\n\n\n10\n4\n\n\n12\n3\n\n\n7\n1\n\n\n20\n3"
+  },
+  {
+    "objectID": "lectures/lecture9.html#making-a-scatterplot-3",
+    "href": "lectures/lecture9.html#making-a-scatterplot-3",
+    "title": "",
+    "section": "Making a scatterplot",
+    "text": "Making a scatterplot\nExample: Do people who study more have more or fewer dates?\n\n\n\n\n\n\n\n\n\nHours studied\nDates\n\n\n\n\n10\n1\n\n\n15\n2\n\n\n10\n5\n\n\n6\n1\n\n\n2\n0\n\n\n7\n3\n\n\n10\n4\n\n\n12\n3\n\n\n7\n1\n\n\n20\n3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCan see the association\n\n\nCorrelation coefficient allows us to quantify/summarize that association"
+  },
+  {
+    "objectID": "lectures/lecture9.html#calculating-correlation-coefficient-r",
+    "href": "lectures/lecture9.html#calculating-correlation-coefficient-r",
+    "title": "",
+    "section": "Calculating correlation coefficient (r)",
+    "text": "Calculating correlation coefficient (r)\n\n\\[\nr = \\frac{1}{n-1}\\Sigma(\\frac{x_i - \\bar{x}}{s_x})(\\frac{y_i - \\bar{y}}{s_y})\n\\]\n\n\n\n\n\nValue of x variablefor an individual\n\n\n\n\n\nMean ofx variable\n\n\n\n\n\nStandard deviationof x variable\n\n\n\n\n\nValue of y variablefor an individual\n\n\n\n\n\nMean of y variable\n\n\n\n\n\nStandard deviationof y variable\n\n\n\n\n\nAdd up for allindividuals\n\n\n\n\n\nDivide the whole  mess by n-1"
+  },
+  {
+    "objectID": "lectures/lecture9.html#calculating-correlation-coefficient-r-1",
+    "href": "lectures/lecture9.html#calculating-correlation-coefficient-r-1",
+    "title": "",
+    "section": "Calculating correlation coefficient (r)",
+    "text": "Calculating correlation coefficient (r)\n\n\\[\nr = \\frac{1}{n-1}\\Sigma(\\frac{x_i - \\bar{x}}{s_x})(\\frac{y_i - \\bar{y}}{s_y})\n\\]\n\n\n\n\n\nJust the standardized score on x (i.e. how many standard deviations the individual’s value on x is from the mean of x)\n\n\n\n\n\nJust the standardized score on y (i.e. how many standard deviations the individual’s value on y is from the mean of y)"
+  },
+  {
+    "objectID": "lectures/lecture9.html#hypothesis-test-for-correlation",
+    "href": "lectures/lecture9.html#hypothesis-test-for-correlation",
+    "title": "",
+    "section": "Hypothesis test for correlation",
+    "text": "Hypothesis test for correlation\n\n\nGOAL: We want to know if the association seen in the sample (as revealed by \\(r\\)) reflects\n\n\n\na real association between the two variables in the population\n\n\n\nOR\n\n\n\nchance sampling error when in reality the two variables arenot associated in the population"
+  },
+  {
+    "objectID": "lectures/lecture9.html#hypothesis-test-for-correlation-1",
+    "href": "lectures/lecture9.html#hypothesis-test-for-correlation-1",
+    "title": "",
+    "section": "Hypothesis test for correlation",
+    "text": "Hypothesis test for correlation\n\n\nCheck assumptions\n\nRandom sample, variables roughly normally distributed in the population, linear relationship, homoscedasticity"
+  },
+  {
+    "objectID": "lectures/lecture9.html#hypothesis-test-for-correlation-2",
+    "href": "lectures/lecture9.html#hypothesis-test-for-correlation-2",
+    "title": "",
+    "section": "Hypothesis test for correlation",
+    "text": "Hypothesis test for correlation\n\n\nCheck assumptions\n\nRandom sample, variables roughly normally distributed in the population, linear relationship, homoscedasticity\n\n\n\n\nSimilar error of prediction (similar spread around the line) at all values of X"
+  },
+  {
+    "objectID": "lectures/lecture9.html#hypothesis-test-for-correlation-3",
+    "href": "lectures/lecture9.html#hypothesis-test-for-correlation-3",
+    "title": "",
+    "section": "Hypothesis test for correlation",
+    "text": "Hypothesis test for correlation\n\n\nCheck assumptions\n\nRandom sample, variables roughly normally distributed in the population, linear relationship, homoscedasticity\n\n\n\n\n\nState the hypothesis\n\n\\(H_0: \\rho = 0\\) (correlation in the population is 0)\n\\(H_1: \\rho \\ne 0\\) (correlation in the population is statistically significantly different from 0)\n\nor \\(H_1: \\rho \\gt 0\\) (correlation in the population is statistically significantly greater than 0)\nor \\(H_1: \\rho \\lt 0\\) (correlation in the population is statistically significantly less than 0)\n\n\nIdentify alpha and the critical value of \\(r\\)\n\nUse this table to get the ciritical value of \\(r\\)\ndegrees of freedom \\((df) = n-2\\)\n\nCalculate the test statistic\n\nUse \\(r\\) calculated from the sample\n\nMake a decision\n\nReject or fail to reject null hypothesis\nMake a statement about the implications for the population"
+  },
+  {
+    "objectID": "lectures/lecture9.html#hypothesis-test-for-correlation-4",
+    "href": "lectures/lecture9.html#hypothesis-test-for-correlation-4",
+    "title": "",
+    "section": "Hypothesis test for correlation",
+    "text": "Hypothesis test for correlation\n\n\nCheck assumptions\n\nRandom sample, variables roughly normally distributed in the population, linear relationship, homoscedasticity\n\nState the hypothesis\n\n\\(H_0: \\rho = 0\\) (correlation in the population is 0)\n\\(H_1: \\rho \\ne 0\\) (correlation in the population is statistically significantly different from 0)\n\nor \\(H_1: \\rho \\gt 0\\) (correlation in the population is statistically significantly greater than 0)\nor \\(H_1: \\rho \\lt 0\\) (correlation in the population is statistically significantly less than 0)\n\n\nIdentify alpha and the critical value of \\(r\\)\n\nUse this table to get the ciritical value of \\(r\\)\ndegrees of freedom \\((df) = n-2\\)\n\nCalculate the test statistic\n\nUse \\(r\\) calculated from the sample\n\nMake a decision\n\nReject or fail to reject null hypothesis\nMake a statement about the implications for the population"
+  },
+  {
+    "objectID": "lectures/lecture9.html#practice-2",
+    "href": "lectures/lecture9.html#practice-2",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\nCalculate \\(r\\)\nInterpret \\(r\\)\nTest statistical significance of \\(r\\)\n\n\n\\[\nr = \\frac{1}{n-1}\\Sigma(\\frac{x_i - \\bar{x}}{s_x})(\\frac{y_i - \\bar{y}}{s_y})\n\\]\n\n\nExample 1 Association between hourson TikTok and # of dates?\n\n\nExample 2 Association between hours playingvideo games and # of dates?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMean\ns\n\n\n\n\nHours ofplaying video games\n10\n5\n0\n0\n5\n0\n0\n0\n0\n0\n2.00\n3.50\n\n\nHours onTikTok\n0\n3\n5\n15\n14\n25\n1\n1\n5\n22\n9.10\n9.21\n\n\n# ofdates\n1\n2\n5\n1\n0\n3\n4\n3\n1\n3\n2.30\n1.57"
+  },
+  {
+    "objectID": "lectures/lecture10.html#correlation-and-regression",
+    "href": "lectures/lecture10.html#correlation-and-regression",
+    "title": "",
+    "section": "Correlation and Regression",
+    "text": "Correlation and Regression\n\n\nThe two most common tool for measuring  associations between interval variables\n\n\n\n\nCORRELATION\n\n\nstandardized summary of association between our variables\n\ndoes not depend on the units of the variables\n\nalways 0 to |1.0|\n\nallows for comparison of associations between different pairs of variables\n\n\n\n\nREGRESSION\n\n\ncharacterizes the substantive effect of X on Y\n\nhow much Y differs across different values of X\nconveyed in units of our specific independent and dependent variables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBoth correlation and regression are based on a description of a line used to characterize data points in a scatterplot"
+  },
+  {
+    "objectID": "lectures/lecture10.html#correlation-vs.-bivariate-regression",
+    "href": "lectures/lecture10.html#correlation-vs.-bivariate-regression",
+    "title": "",
+    "section": "Correlation vs. bivariate regression",
+    "text": "Correlation vs. bivariate regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCorrelation:\n\nassess how tightly clustered points in the scatterplot around a line\n\n\n\n\nBivariate Regression:\n\ndescribe the line that characterizes the points in the scatterplot\ntells us how the dependent (Y) variable changes for a one-unit change in the independent (X) variable\nallows us to predict values of Y based on values of X"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-5",
+    "href": "lectures/lecture10.html#bivariate-regression-5",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)  (the dependent variable)\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-6",
+    "href": "lectures/lecture10.html#bivariate-regression-6",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)  (the dependent variable)\n\n\n\\(x\\) is the value of \\(X\\)  for the individual\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-7",
+    "href": "lectures/lecture10.html#bivariate-regression-7",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)  (the dependent variable)\n\n\n\\(x\\) is the value of \\(X\\)  for the individual\n\n\n\\(b = \\text{slope of the line}\\)  (i.e. how much \\(Y\\) changes with each one-unit difference in \\(X\\))\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-8",
+    "href": "lectures/lecture10.html#bivariate-regression-8",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)  (the dependent variable)\n\n\n\\(x\\) is the value of \\(X\\)  for the individual\n\n\n\\(b = \\text{slope of the line}\\)  (i.e. how much \\(Y\\) changes with each one-unit difference in \\(X\\))\n\n\n\\(a = \\text{Y-intercept}\\)  (the predicted value of \\(Y\\) when \\(X = 0\\); a.k.a. the constant)\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-9",
+    "href": "lectures/lecture10.html#bivariate-regression-9",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n   \n\n\\(\\widehat{y}\\) \\(=\\) \\(5000\\) \\(+\\) \\(1750\\)\\(x\\)\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-10",
+    "href": "lectures/lecture10.html#bivariate-regression-10",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n   \n\n\\(\\widehat{y}\\) \\(=\\) \\(5000\\) \\(+\\) \\(1750\\)\\(x\\)\n\n\n\nA person with \\(0\\) years of education is predicted to make \\(\\$5,000\\)\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-11",
+    "href": "lectures/lecture10.html#bivariate-regression-11",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n   \n\n\\(\\widehat{y}\\) \\(=\\) \\(5000\\) \\(+\\) \\(1750\\)\\(x\\)\n\n\n\nA person with \\(0\\) years of education is predicted to make \\(\\$5,000\\)\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah\n\n\n\n\n\n\n\n\n\n\n\n\nIncome is predicted to increase by \\(\\$1,750\\) for each additional year of education"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-12",
+    "href": "lectures/lecture10.html#bivariate-regression-12",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(5000\\) \\(+\\) \\(1750\\)\\(x\\)\n\n\n\n\nDeterministic association:   All of the points in the scatterplot fall on the line.  Perfectly predict\\(Y\\) based on \\(X\\).  \\(|r| = 1.0\\)\n\n\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-13",
+    "href": "lectures/lecture10.html#bivariate-regression-13",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\n\nNon-deterministic association:   Points in the scatterplot do not all fall on the line  Cannot perfectly predict \\(Y\\) based on \\(X\\).  \\(|r| \\lt 1.0\\)\n\n\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-14",
+    "href": "lectures/lecture10.html#bivariate-regression-14",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\n\nNon-deterministic association: \n\n\n\n\nA lot of different lines appear to characterize the points\n\n\n\nEach line comes close to some points but misses others by a lot.\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-15",
+    "href": "lectures/lecture10.html#bivariate-regression-15",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nWant the line that fits the data best - i.e. comes as close as possible, on average, to all points\n\n\n\nTechnically: Want the line that minimizes the (squared) errors we would make in predicting \\(Y\\) with the line\n\n\n\nLooking for the least squares regression line\n\n\n\nDescribe the line to describe the association and predict values of the dependent variable  Blah"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-16",
+    "href": "lectures/lecture10.html#bivariate-regression-16",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nWant the line that fits the data best - i.e. comes as close as possible, on average, to all points\n\n\n\nNeed two components of the regression line:\n\n\\(a\\) (y-intercept)\n\\(b\\) (slope)\n\n\n\n\nCalculating the least squares regression line\n\n\nStep 1: calculate the slope\n\n\n\\[\\begin{aligned}\n\\color{#e93cac}{b} = {r}(\\frac{{s_y}}{{s_x}})\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-17",
+    "href": "lectures/lecture10.html#bivariate-regression-17",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nWant the line that fits the data best - i.e. comes as close as possible, on average, to all points\n\n\n\nNeed two components of the regression line:\n\n\\(a\\) (y-intercept)\n\\(b\\) (slope)\n\n\n\n\nCalculating the least squares regression line\n\n\nStep 1: calculate the slope\n\n\n\\[\\begin{aligned}\n\\color{#e93cac}{b} = \\color{#a68100}{r}(\\frac{{s_y}}{{s_x}})\n\\end{aligned}\\]\n\n\nCorrelation coefficient"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-18",
+    "href": "lectures/lecture10.html#bivariate-regression-18",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nWant the line that fits the data best - i.e. comes as close as possible, on average, to all points\n\n\n\nNeed two components of the regression line:\n\n\\(a\\) (y-intercept)\n\\(b\\) (slope)\n\n\n\n\nCalculating the least squares regression line\n\n\nStep 1: calculate the slope\n\n\n\\[\\begin{aligned}\n\\color{#e93cac}{b} = \\color{#a68100}{r}(\\frac{\\color{#6e8e13}{s_y}}{{s_x}})\n\\end{aligned}\\]\n\n\nCorrelation coefficient\n\n\nStandard deviation ofthe dependent variable"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-19",
+    "href": "lectures/lecture10.html#bivariate-regression-19",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nWant the line that fits the data best - i.e. comes as close as possible, on average, to all points\n\n\n\nNeed two components of the regression line:\n\n\\(a\\) (y-intercept)\n\\(b\\) (slope)\n\n\n\n\nCalculating the least squares regression line\n\n\nStep 1: calculate the slope\n\n\n\\[\\begin{aligned}\n\\color{#e93cac}{b} = \\color{#a68100}{r}(\\frac{\\color{#6e8e13}{s_y}}{\\color{#1b8883}{s_x}})\n\\end{aligned}\\]\n\n\nCorrelation coefficient\n\n\nStandard deviation ofthe dependent variable\n\n\nStandard deviation ofthe independent variable"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-20",
+    "href": "lectures/lecture10.html#bivariate-regression-20",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\n\\(\\widehat{y}\\) \\(=\\) \\(a\\) \\(+\\) \\(b\\)\\(x\\)\n\n\n\nWant the line that fits the data best - i.e. comes as close as possible, on average, to all points\n\n\n\nNeed two components of the regression line:\n\n\\(a\\) (y-intercept)\n\\(b\\) (slope)\n\n\n\n\nCalculating the least squares regression line\n\n\nStep 2: calculate the Y-intercept\n\n\n\\[\\begin{aligned}\n\\color{#754cbc}{a} = \\color{#6e8e13}{\\bar{y}}-\\color{#e93cac}{b}\\color{#1b8883}{\\bar{x}}\n\\end{aligned}\\]\n\n\nMean of thedependent variable\n\n\nSlope\n\n\nMean of theindependent variable"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-21",
+    "href": "lectures/lecture10.html#bivariate-regression-21",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\nStep 1: calculate the slope\n\n\n\n\\[\\begin{aligned} \\color{#e93cac}b &= r(\\frac{s_y}{s_x}) \\\\ &= 0.857(\\frac{8655.131}{4.735}) \\\\ &= \\color{#e93cac}{1566.515} \\end{aligned}\\]\n\n\nIncome increases by \\(\\color{#e93cac}{\\$1,566.52}\\) for each additional year of education\n\n\n\n\\(\\bar{y} =\\) 22608.333       \\(\\bar{x} =\\) 13.333  \\(s_y =\\) 8655.131       \\(s_x =\\) 4.735  \\(r =\\) 0.857"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-22",
+    "href": "lectures/lecture10.html#bivariate-regression-22",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\n\n\nStep 2: calculate the Y-intercept\n\n\n\n\\[\\begin{aligned} \\color{#754cbc}a &= \\bar{y} - b\\bar{x} \\\\ &= 22608.333 - (1566.515)(13.333) \\\\ &= \\color{#754cbc}{1721.989} \\end{aligned}\\]\n\n\nA person with \\(0\\) years ofeducation is predicted tomake \\(\\color{#754cbc}{\\$1721.99}\\).\n\n\n\n\\(\\bar{y} =\\) 22608.333       \\(\\bar{x} =\\) 13.333  \\(s_y =\\) 8655.131       \\(s_x =\\) 4.735  \\(r =\\) 0.857"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-23",
+    "href": "lectures/lecture10.html#bivariate-regression-23",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\nOrdinary least squares regression line: \\(\\widehat{y} = a + bx\\)\n\n\n\\(\\widehat{\\text{Income}} = 1721.989 + 1566.515(\\text{Education})\\)\n\n\n\n\n\nThis is the line that fits the data best - i.e., comes as close as possible, on average, to all points.\n\n\nTechnically: The line that minimizes the (squared) errors we would make in predicting Y with the line"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-24",
+    "href": "lectures/lecture10.html#bivariate-regression-24",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\nOrdinary least squares regression line: \\(\\widehat{y} = a + bx\\)\n\n\n\\(\\widehat{\\text{Income}} = 1721.989 + 1566.515(\\text{Education})\\)\n\n\n\n\n\nCan use this line to predict values of Y (income) for any value of X (education)\n\n\nExample: What is the predicted level of income for a person with 14 years of education?"
+  },
+  {
+    "objectID": "lectures/lecture10.html#bivariate-regression-25",
+    "href": "lectures/lecture10.html#bivariate-regression-25",
+    "title": "",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\nOrdinary least squares regression line: \\(\\widehat{y} = a + bx\\)\n\n\n\\(\\widehat{\\text{Income}} = 1721.989 + 1566.515(\\text{Education})\\)\n\n\n\n\n\nCan use this line to predict values of Y (income) for any value of X (education)\n\n\nExample: What is the predicted level of income for a person with 14 years of education?\n\n\n\\(\\begin{aligned} \\widehat{\\text{Income}} &= 1721.989 + 1566.515(14) \\\\ &= 23653.20 \\end{aligned}\\)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#coefficient-of-determination",
+    "href": "lectures/lecture10.html#coefficient-of-determination",
+    "title": "",
+    "section": "Coefficient of Determination",
+    "text": "Coefficient of Determination\n\nAssessing the fit of the regression line\n\n\n\\(\\widehat{\\text{Income}} = 1721.989 + 1566.515(\\text{Education})\\)\n\n\n\n\n\nThis is the line that fits the data best - i.e., comes as close as possible, on average, to all points.\n\n\n\nBUT STILL DOES NOT “FIT”  THE DATA PERFECTLY  (misses some points)"
+  },
+  {
+    "objectID": "lectures/lecture10.html#coefficient-of-determination-1",
+    "href": "lectures/lecture10.html#coefficient-of-determination-1",
+    "title": "",
+    "section": "Coefficient of Determination",
+    "text": "Coefficient of Determination\n\nAssessing the fit of the regression line\n\n\n\\(\\widehat{\\text{Income}} = 1721.989 + 1566.515(\\text{Education})\\)\n\n\n\n\n\nCoefficient of determination (\\(R^2\\)) measures the level of model fit\n\n\n\\[\nR^2 = (\\color{#1b8883}{r})(\\color{#1b8883}{r})\n\\]\n\n\nSimply square thecorrelation coefficient\n\n\n\nRange of \\(R^2\\): \n\\(0.0 =\\) no association,  no predictive value of knowing X  \\(1.0 =\\) deterministic"
+  },
+  {
+    "objectID": "lectures/lecture11.html#where-are-we",
+    "href": "lectures/lecture11.html#where-are-we",
+    "title": "",
+    "section": "Where ARE WE?",
+    "text": "Where ARE WE?\n\n\nBivariate correlation and regression good for detecting and describing basic associations between two variables (e.g., X and Y)\nOften want to bring in additional variables\n\nBuild case for causality\n\nControl for alternative explanations for the main association\n\nDevelop better predictions\n\nPredict Y as a function of multiple variables, not just X\n\nExplain more\n\nUse multiple variables to explain more of the variation in Y\n\n\nMultivariate regression: A key tool for bringing additional variables into consideration"
+  },
+  {
+    "objectID": "lectures/lecture11.html#bivariate-regression",
+    "href": "lectures/lecture11.html#bivariate-regression",
+    "title": "",
+    "section": "Bivariate regression",
+    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#000000}{\\widehat{y}} = \\color{#000000}{a} + \\color{#000000}{b}\\color{#000000}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#bivariate-regression-1",
+    "href": "lectures/lecture11.html#bivariate-regression-1",
+    "title": "",
+    "section": "Bivariate regression",
+    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#000000}{a} + \\color{#000000}{b}\\color{#000000}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#bivariate-regression-2",
+    "href": "lectures/lecture11.html#bivariate-regression-2",
+    "title": "",
+    "section": "Bivariate regression",
+    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#000000}{b}\\color{#000000}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#bivariate-regression-3",
+    "href": "lectures/lecture11.html#bivariate-regression-3",
+    "title": "",
+    "section": "Bivariate regression",
+    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b}\\color{#000000}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#bivariate-regression-4",
+    "href": "lectures/lecture11.html#bivariate-regression-4",
+    "title": "",
+    "section": "Bivariate regression",
+    "text": "Bivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\n\\(b =\\) slope of the line;  how much \\(Y\\) changes with each one-unit difference in \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b}\\color{#1b8883}{x}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#multivariate-regression-1",
+    "href": "lectures/lecture11.html#multivariate-regression-1",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#000000}{\\widehat{y}} = \\color{#000000}{a} + \\color{#000000}{b_1}\\color{#000000}{x} + \\color{#000000}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture11.html#multivariate-regression-2",
+    "href": "lectures/lecture11.html#multivariate-regression-2",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#000000}{a} + \\color{#000000}{b_1}\\color{#000000}{x} + \\color{#000000}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture11.html#multivariate-regression-3",
+    "href": "lectures/lecture11.html#multivariate-regression-3",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#000000}{b_1}\\color{#000000}{x} + \\color{#000000}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture11.html#multivariate-regression-4",
+    "href": "lectures/lecture11.html#multivariate-regression-4",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b_1}\\color{#000000}{x} + \\color{#000000}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture11.html#multivariate-regression-5",
+    "href": "lectures/lecture11.html#multivariate-regression-5",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b_1}\\color{#1b8883}{x} + \\color{#000000}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture11.html#multivariate-regression-6",
+    "href": "lectures/lecture11.html#multivariate-regression-6",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b_1}\\color{#1b8883}{x} + \\color{#690c48}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture11.html#multivariate-regression-7",
+    "href": "lectures/lecture11.html#multivariate-regression-7",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b_1}\\color{#1b8883}{x} + \\color{#690c48}{b_2}\\color{#6e8e13}{z}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X = 0\\) and \\(Z = 0\\)\n\n\n\\(z\\) is the value of \\(Z\\) for the individual\n\n\nWhen we control for a variable, we are holding its effect constant (i.e., removing its influence)\n\n\nNote that we are ADDING variables to the model in order to REMOVE their influence from the effects of \\(X\\).\n\n\nWhen they are not in the model, we are ignoring their influence"
+  },
+  {
+    "objectID": "lectures/lecture11.html#multivariate-regression-8",
+    "href": "lectures/lecture11.html#multivariate-regression-8",
+    "title": "",
+    "section": "Multivariate regression",
+    "text": "Multivariate regression\n\n\\(x\\) is the value of \\(X\\) for the individual\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z_1\\) and \\(Z_k\\)\n\n\n\\(b_2 =\\) the effect of \\(Z_1\\) on \\(Y\\) after controlling for the effects of \\(X\\) and \\(Z_k\\)\n\n\n\\(b_k =\\) the effect of \\(Z_k\\) on \\(Y\\) after controlling for the effects of \\(X\\) and \\(Z_1\\)\n\n\n\n\\(\\color{#a68100}{\\widehat{y}} = \\color{#754cbc}{a} + \\color{#e93cac}{b_1}\\color{#1b8883}{x} + \\color{#690c48}{b_2}\\color{#6e8e13}{z} + \\text{. . . } + \\color{#bf5700}{b_k}\\color{#808080}{z_k}\\)\n\n\n\n\\(\\widehat{y}\\) is the predicted value of \\(Y\\)\n\n\n\\(a = Y-intercept\\) (i.e., constant);  predicted value of \\(Y\\) when \\(X\\), \\(Z_1\\), and \\(Z_k\\) all equal \\(0\\)\n\n\n\\(z_1\\) is the value of \\(Z_1\\) for the individual\n\n\n\\(z_k\\) is the value of \\(Z_k\\) for the individual"
+  },
+  {
+    "objectID": "lectures/lecture11.html#why-multivariate-regression",
+    "href": "lectures/lecture11.html#why-multivariate-regression",
+    "title": "",
+    "section": "Why multivariate regression?",
+    "text": "Why multivariate regression?\n\n\n\nPurpose 1: building the case for causality\n\nControl for alternate explanations for the main association\n\nPurpose 2: developing better predictions\n\nPredict \\(Y\\) as a function of multiple variables, not just \\(X\\)\n\nPurpose 3: explain more\n\nUse multiple variables to explain more of the variation in \\(Y\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\nCausality:  A situation in which  one condition, event,  or process contributes  to the production of  another condition, event,  process, or state\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n20  (83.3%)\n4  (33.3%)\n24  (66.7%)\n\n\nHigh violent crime\n4  (16.7%)\n8  (66.7%)\n12  (33.3%)\n\n\nTotal\n24\n12\n36\n\n\n\n\n\n\n\n\n\nIs there an association between  ice cream sales and crime?"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-1",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-1",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\nCausality:  A situation in which  one condition, event,  or process contributes  to the production of  another condition, event,  process, or state\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n20  (83.3%)\n4  (33.3%)\n24  (66.7%)\n\n\nHigh violent crime\n4  (16.7%)\n8  (66.7%)\n12  (33.3%)\n\n\nTotal\n24\n12\n36\n\n\n\n\n\n\n\n\n\nIs there an association between  ice cream sales and crime?\n\n\nYes! Differences in conditional distributions (column \\(\\%\\)s) show a positive association between ice cream sales and crime."
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-2",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-2",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\nCausality:  A situation in which  one condition, event,  or process contributes  to the production of  another condition, event,  process, or state\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n20  (83.3%)\n4  (33.3%)\n24  (66.7%)\n\n\nHigh violent crime\n4  (16.7%)\n8  (66.7%)\n12  (33.3%)\n\n\nTotal\n24\n12\n36\n\n\n\n\n\n\n\n\n\nDoes this mean that ice cream sales cause crime to increase?"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-3",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-3",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n3 Criteria for Causality (what we need to show to claim that \\(X\\) causes \\(Y\\)) \n\nThere is a statistical association between \\(X\\) and \\(Y\\)\n\\(X\\) happens before \\(Y\\)\n\n(correct time ordering)\n\nNo other variable accounts for the statistical link between \\(X\\) and \\(Y\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n20  (83.3%)\n4  (33.3%)\n24  (66.7%)\n\n\nHigh violent crime\n4  (16.7%)\n8  (66.7%)\n12  (33.3%)\n\n\nTotal\n24\n12\n36\n\n\n\n\n\n\n\n\n\nDoes this mean that ice cream sales cause crime to increase?"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-4",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-4",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n3 Criteria for Causality (what we need to show to claim that \\(X\\) causes \\(Y\\)) \n\nThere is a statistical association between \\(X\\) and \\(Y\\)\n\\(X\\) happens before \\(Y\\)\n\n(correct time ordering)\n\nNo other variable accounts for the statistical link between \\(X\\) and \\(Y\\)\n\n\n\nThird criterion motivates us to control for other variables  (i.e., account for their effects; remove their influence)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n20  (83.3%)\n4  (33.3%)\n24  (66.7%)\n\n\nHigh violent crime\n4  (16.7%)\n8  (66.7%)\n12  (33.3%)\n\n\nTotal\n24\n12\n36\n\n\n\n\n\n\n\n\n\nDoes this mean that ice cream sales cause crime to increase?"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-5",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-5",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n3 Criteria for Causality (what we need to show to claim that \\(X\\) causes \\(Y\\)) \n\nThere is a statistical association between \\(X\\) and \\(Y\\)\n\\(X\\) happens before \\(Y\\)\n\n(correct time ordering)\n\nNo other variable accounts for the statistical link between \\(X\\) and \\(Y\\)\n\n\n\nThird criterion motivates us to control for other variables  (i.e., account for their effects; remove their influence)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n20  (83.3%)\n4  (33.3%)\n24  (66.7%)\n\n\nHigh violent crime\n4  (16.7%)\n8  (66.7%)\n12  (33.3%)\n\n\nTotal\n24\n12\n36\n\n\n\n\n\n\n\n\n\nDoes this mean that ice cream sales cause crime to increase?\n\n\n\n\n\n\n\n\n\n\nOr is the association spurious?"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-6",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-6",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\nSpurious relationship:  A situation in which  two variables are  statistically associated  but not causally related,  due to their coincidence  of a certain third,  unseen factor.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n20  (83.3%)\n4  (33.3%)\n24  (66.7%)\n\n\nHigh violent crime\n4  (16.7%)\n8  (66.7%)\n12  (33.3%)\n\n\nTotal\n24\n12\n36\n\n\n\n\n\n\n\n\n\nDoes this mean that ice cream sales cause crime to increase?\n\n\n\n\n\n\n\n\n\n\nOr is the association spurious?"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-7",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-7",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\nSpurious relationship:  A situation in which  two variables are  statistically associated  but not causally related,  due to their coincidence  of a certain third,  unseen factor.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n20  (83.3%)\n4  (33.3%)\n24  (66.7%)\n\n\nHigh violent crime\n4  (16.7%)\n8  (66.7%)\n12  (33.3%)\n\n\nTotal\n24\n12\n36\n\n\n\n\n\n\n\n\n\nCertain values on one variable (\\(Y\\)) tend to correspond with certain values on the other (\\(X\\)) because both are affected by a third outside variable."
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-8",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-8",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n20  (83.3%)\n4  (33.3%)\n24  (66.7%)\n\n\nHigh violent crime\n4  (16.7%)\n8  (66.7%)\n12  (33.3%)\n\n\nTotal\n24\n12\n36\n\n\n\n\n\n\n\n\n\nCertain values on one variable (\\(Y\\)) tend to correspond with certain values on the other (\\(X\\)) because both are affected by a third outside variable."
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-9",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-9",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n20  (83.3%)\n4  (33.3%)\n24  (66.7%)\n\n\nHigh violent crime\n4  (16.7%)\n8  (66.7%)\n12  (33.3%)\n\n\nTotal\n24\n12\n36\n\n\n\n\n\n\n\n\n\nCertain values on one variable (\\(Y\\)) tend to correspond with certain values on the other (\\(X\\)) because both are affected by a third outside variable.\n\n\n\n\n\n\n\n\n\n\nNote: Weather might create a link between ice cream sales and crime. Failing to control for weather might make the association look causal even though that is false."
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-10",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-10",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (all months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n20  (83.3%)\n4  (33.3%)\n24  (66.7%)\n\n\nHigh violent crime\n4  (16.7%)\n8  (66.7%)\n12  (33.3%)\n\n\nTotal\n24\n12\n36\n\n\n\n\n\n\n\n\n\nTo control for weather, we look at the association between ice cream sales and crime among cases (months) with similar weather.\n\n\n\n\n\n\n\n\n\n\nAny association between ice cream sales and crime among cases (months) with similar weather cannot be attributed to the effects of differences in weather."
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-11",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-11",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (WARM months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n0  (0.0%)\n0  (0.0%)\n0  (0.0%)\n\n\nHigh violent crime\n3  (100.0%)\n8  (100.0%)\n11  (100.0%)\n\n\nTotal\n3\n8\n11\n\n\n\n\n\n\n\n\n\nIs there an association between ice cream sales and crime?\n\n\nNo differences in conditional distributions (column %s), indicating that there is no association between ice cream sales and crime among warm months.\n\n\nTo control for weather, we look at the association between ice cream sales and crime among cases (months) with similar weather.\n\n\nAny association between ice cream sales and crime among cases (months) with similar weather cannot be attributed to the effects of differences in weather."
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-12",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-12",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBivariate table (COOL months):\n\n\nViolent crime by ice cream sales\n\n\n\nLow ice cream sales\nHigh ice cream sales\nTotal\n\n\n\n\nLow violent crime\n20  (95.2%)\n4  (100.0%)\n24  (96.0%)\n\n\nHigh violent crime\n1  (4.8%)\n0  (0.0%)\n1  (4.0%)\n\n\nTotal\n21\n4\n25\n\n\n\n\n\n\n\n\n\nIs there an association between ice cream sales and crime?\n\n\nLittle differences in conditional distributions (column %s), indicating that there is little association between ice cream sales and crime among cool months.\n\n\nTo control for weather, we look at the association between ice cream sales and crime among cases (months) with similar weather.\n\n\nAny association between ice cream sales and crime among cases (months) with similar weather cannot be attributed to the effects of differences in weather."
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-13",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-13",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nSummary of logic\n\n\nTo build the case that \\(X\\) causes \\(Y\\), we have to show that no other variable accounts for the statistical association between \\(X\\) and \\(Y\\) (association is not spurious)\nWe need to see if the association between \\(X\\) and \\(Y\\) persists even after we control (remove the influence of) other explanatory variables (for example, \\(Z\\))\nIf the association between \\(X\\) and \\(Y\\) goes way when we control for \\(Z\\) then the association was probably spurious (i.e., false)\nThe part of the association between \\(X\\) and \\(Y\\) that remains after we control for \\(Z\\) MIGHT represent the causal effect of \\(X\\) on \\(Y\\) (but still other potential explanations)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-14",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-14",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\n\n\n\\(b_1\\) and \\(b_2\\) are called PARTIAL SLOPES\n\n\n\n\nPARTIAL SLOPES:  Slope coefficient from a multivariate regression model, representing the effects of one predictor on the dependent variable while controlling for all other predictors in the model.\n\n\n\n\n\nMultivariate regression is a convenient tool for assessing the association between two variables (\\(X \\text{ and } Y\\)) while controlling for others (\\(Z\\)))\n\n\n\n\\(\\color{#000000}{\\widehat{y}} = \\color{#000000}{a} + \\color{#e93cac}{b_1}\\color{#000000}{x} + \\color{#690c48}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-15",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-15",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\nBIVARIATE SLOPE: Association between \\(X\\) and \\(Y\\)\n\n\n\\[\nb = r_{yx}(\\frac{s_y}{s_x})\n\\]\n\n\nPARTIAL SLOPE: Association between \\(X\\) and \\(Y\\) after controlling for \\(Z\\)\n\n\n\\[\nb_1 = (\\frac{r_{yx}-r_{yz}r_{xz}}{1-r^2_{xz}})(\\frac{s_y}{s_x})\n\\]\n\n\n\n\n\n\n\n\n\n\n\\(r_{xz}\\)\n\n\n\\(r_{yz}\\)\n\n\n\\(r_{yx}\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-16",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-16",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\n\nBIVARIATE SLOPE: Association between \\(X\\) and \\(Y\\)\n\n\n\\[\nb = r_{yx}(\\frac{s_y}{s_x})\n\\]\n\n\nPARTIAL SLOPE: Association between \\(X\\) and \\(Y\\) after controlling for \\(Z\\)\n\n\n\\[\nb_1 = (\\frac{\\color{#4b2e83}{r_{yx}}-\\color{#85754d}{r_{yz}r_{xz}}}{1-r^2_{xz}})(\\frac{s_y}{s_x})\n\\]\n\n\nLooking at the correlationbetween \\(X\\) and \\(Y\\)…\n\n\n… and subtracting out  the common connection of  these variables to Z\n\n\n\n\n\n\n\n\n\n\n\\(r_{xz}\\)\n\n\n\\(r_{yz}\\)\n\n\n\\(r_{yx}\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-17",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-17",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\n\n\nDoes this mean that education causes income to increase?\n\n\n\n\n\n\n\n\n\n\n\n\nOr is the association at least partly spurious?"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-18",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-18",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\n\n\nDoes this mean that education causes income to increase?\n\n\n\n\n\n\n\n\n\n\nOr is the association at least partly spurious?"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-19",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-19",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\n\\[\nb = r_{yx}(\\frac{s_y}{s_x})\n\\]\n\n\n\n \n\nLook at the association  between education and income,  subtracting out their  common connection to parental wealth\n\n\n\n\\[\nb_1 = (\\frac{\\color{#4b2e83}{r_{yx}}-\\color{#85754d}{r_{yz}r_{xz}}}{1-r^2_{xz}})(\\frac{s_y}{s_x})\n\\]\n\n\n\n\nOr is the association at least partly spurious?"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-20",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-20",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-21",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-21",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\n\n\n\\(b_1\\): Controlling for parental wealth, each additional year of education is associated with \\(\\$623.35\\) in additional income"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-22",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-22",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + \\color{#754cbc}{0.31}(\\text{par_wealth})\\)\n\n\n\n\n\n\n\\(b_1\\): Controlling for parental wealth, each additional year of education is associated with \\(\\$623.35\\) in additional income\n\n\n\n\\(b_2\\): Controlling for education, each additional dollar of parental wealth is associated with \\(\\$0.31\\) in additional income"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-23",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-23",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\nASSOCIATION:  Each additional year of education  is associated with $1,582.58  in additional income\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = \\color{#a68100}{799.22} + \\color{#6e8e13}{623.35}(educ) + \\color{#754cbc}{0.31}(\\text{par_wealth})\\)\n\n\n\n\n\\(a\\): A person with 0 years of education and 0 dollars of parental wealth is predicted to have an income \\(\\$799.22\\)\n\n\n\n\\(b_1\\): Controlling for parental wealth, each additional year of education is associated with \\(\\$623.35\\) in additional income\n\n\n\n\\(b_2\\): Controlling for education, each additional dollar of parental wealth is associated with \\(\\$0.31\\) in additional income"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-24",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-24",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + \\color{#6e8e13}{1582.58}(educ)\\)\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\nApparent association between education and income is reduced after controlling for parental wealth."
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-25",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-25",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + \\color{#6e8e13}{1582.58}(educ)\\)\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\nApparent association between education and income is reduced after controlling for parental wealth.\n\n\n\nThe association between education and income appears to be at least PARTIALLY spurious."
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-26",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-26",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + \\color{#6e8e13}{1582.58}(educ)\\)\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + \\color{#754cbc}{0.31}(\\text{par_wealth})\\)\n\n\n\n\nApparent association between education and income is reduced after controlling for parental wealth.\n\n\n\nThe association between education and income appears to be at least PARTIALLY spurious.\n\n\n\nPart of the basic association between education and income is due to the fact that they are both affected by parental wealth."
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-27",
+    "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-27",
+    "title": "",
+    "section": "Purpose 1: building the case for causality",
+    "text": "Purpose 1: building the case for causality\nAnother example: Does education have a causal effect on income?\n\nBivariate regression model  \\(\\widehat{Income} = 1816.16 + \\color{#6e8e13}{1582.58}(educ)\\)\n\n\nNext step: Add other controls that might account for the remaining association.\n\n\n\nMultivariate regression model  \\(\\widehat{Income} = 799.22 + \\color{#6e8e13}{623.35}(educ) + \\color{#754cbc}{0.31}(\\text{par_wealth})\\)\n\n\n\n\nApparent association between education and income is reduced after controlling for parental wealth.\n\n\n\nThe association between education and income appears to be at least PARTIALLY spurious.\n\n\n\nPart of the basic association between education and income is due to the fact that they are both affected by parental wealth."
+  },
+  {
+    "objectID": "lectures/lecture11.html#why-multivariate-regression-1",
+    "href": "lectures/lecture11.html#why-multivariate-regression-1",
+    "title": "",
+    "section": "Why multivariate regression?",
+    "text": "Why multivariate regression?\n\n\n\nPurpose 1: building the case for causality\n\nControl for alternate explanations for the main association\n\nPurpose 2: developing better predictions\n\nPredict \\(Y\\) as a function of multiple variables, not just \\(X\\)\n\nPurpose 3: explain more\n\nUse multiple variables to explain more of the variation in \\(Y\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-2-developing-better-predictions",
+    "href": "lectures/lecture11.html#purpose-2-developing-better-predictions",
+    "title": "",
+    "section": "Purpose 2: developing better predictions",
+    "text": "Purpose 2: developing better predictions\nCan use the multivariate regression model to predict values of the dependent variable for any combination of values of the predictors.\n\n\\[\n\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\n\\]\n\n\nExample: What is the predicted level of income for a person with 14 years of education and whose parents have total wealth of $250,000?\n\n\n\\[\n\\begin{aligned}\n\\widehat{Income} &= 799.22 + 623.35(\\color{#e93cac}{14}) + 0.31(\\color{#e93cac}{250000}) \\\\\n&= \\$87,025.12\n\\end{aligned}\n\\]\n\n\nExample: What is the predicted level of income for a person with 16 years of education and whose parents have total wealth of $50,000?\n\n\n\\[\n\\begin{aligned}\n\\widehat{Income} &= 799.22 + 623.35(\\color{#1b8883}{16}) + 0.31(\\color{#1b8883}{50000}) \\\\\n&= \\$26,271.82\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "lectures/lecture11.html#why-multivariate-regression-2",
+    "href": "lectures/lecture11.html#why-multivariate-regression-2",
+    "title": "",
+    "section": "Why multivariate regression?",
+    "text": "Why multivariate regression?\n\n\n\nPurpose 1: building the case for causality\n\nControl for alternate explanations for the main association\n\nPurpose 2: developing better predictions\n\nPredict \\(Y\\) as a function of multiple variables, not just \\(X\\)\n\nPurpose 3: explain more\n\nUse multiple variables to explain more of the variation in \\(Y\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-3-explain-more",
+    "href": "lectures/lecture11.html#purpose-3-explain-more",
+    "title": "",
+    "section": "Purpose 3: explain more",
+    "text": "Purpose 3: explain more\nMultivariate regression allows for more complete explanation of the variation in the dependent variable.\n\nBivariate regression model\n\n\n\\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\n\n\n\nCoefficient of determination  (\\(R^2\\))\n\n\n\\[\nR_2 = 0.728\n\\]\n\n\n\nInterpretations: \n\nThe proportional reduction of prediction error achieved by using the independent variable (\\(X\\)) in the regression equation to predict the values of the dependent variable (\\(Y\\))\nThe proportion of the variance in the dependent variable (\\(Y\\)) explained by the independent variable (\\(X\\))"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-3-explain-more-1",
+    "href": "lectures/lecture11.html#purpose-3-explain-more-1",
+    "title": "",
+    "section": "Purpose 3: explain more",
+    "text": "Purpose 3: explain more\nMultivariate regression allows for more complete explanation of the variation in the dependent variable.\n\nBivariate regression model\n\n\n\\(\\widehat{Income} = 1816.16 + 1582.58(educ)\\)\n\n\n\n\n\nCoefficient of determination  (\\(R^2\\))\n\n\n\\[\nR_2 = 0.728\n\\]\n\n\n\nInterpretations: \n\nWe can reduce our errors by almost 73% if we take into consideration individuals’ education when we predict their income (i.e., use the regression line in our predictions).\nAlmost 73% of the variance in income is explained by differences in education."
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-3-explain-more-2",
+    "href": "lectures/lecture11.html#purpose-3-explain-more-2",
+    "title": "",
+    "section": "Purpose 3: explain more",
+    "text": "Purpose 3: explain more\nMultivariate regression allows for more complete explanation of the variation in the dependent variable.\n\nMultivariate regression model\n\n\n\\(\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\n\nCoefficient of MULTIPLE determination  (\\(R^2\\))\n\n\n\\[\nR_2 = 0.813\n\\]\n\n\n\nInterpretations: \n\nThe proportional reduction of prediction error achieved by using all of the predictors (\\(X\\), \\(Z\\), etc.) in the regression equation to predict the values of the dependent variable (\\(Y\\))\nThe proportion of the variance in the dependent variable (\\(Y\\)) explained by the combination of all of the predictors (\\(X\\), \\(Z\\), etc.)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#purpose-3-explain-more-3",
+    "href": "lectures/lecture11.html#purpose-3-explain-more-3",
+    "title": "",
+    "section": "Purpose 3: explain more",
+    "text": "Purpose 3: explain more\nMultivariate regression allows for more complete explanation of the variation in the dependent variable.\n\nMultivariate regression model\n\n\n\\(\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\\)\n\n\n\n\n\nCoefficient of MULTIPLE determination  (\\(R^2\\))\n\n\n\\[\nR_2 = 0.813\n\\]\n\n\n\nInterpretations: \n\nWe can reduce our errors by about 81% if we take into consideration individuals’ education and the wealth of their parents when we predict their income (i.e., use the regression line in our predictions).\nAbout 81% of the variance in income is explained by the combination of education and parental wealth."
+  },
+  {
+    "objectID": "lectures/lecture11.html#regression-tables",
+    "href": "lectures/lecture11.html#regression-tables",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\nEducation\n1582.58\n***\n623.35\n*\n\n\nParental wealth\n1816.16\n\n0.31\n**\n\n\n\n\n\nConstant\n0.73\n\n799.22\n\n\n\nModel \\(R^2\\)\n1582.58\n\n0.81\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nSame results in table form"
+  },
+  {
+    "objectID": "lectures/lecture11.html#regression-tables-1",
+    "href": "lectures/lecture11.html#regression-tables-1",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\nEducation\n1582.58\n***\n623.35\n*\n\n\nParental wealth\n1816.16\n\n0.31\n**\n\n\n\n\n\nConstant\n0.73\n\n799.22\n\n\n\nModel \\(R^2\\)\n1582.58\n\n0.81\n\n\n\n\n N = 12 \n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nTitle indicating the dependent variable, units of analysis.\n\n\nNumber of cases"
+  },
+  {
+    "objectID": "lectures/lecture11.html#regression-tables-2",
+    "href": "lectures/lecture11.html#regression-tables-2",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\nEducation\n1582.58\n***\n623.35\n*\n\n\nParental wealth\n1816.16\n\n0.31\n**\n\n\n\n\n\nConstant\n0.73\n\n799.22\n\n\n\nModel \\(R^2\\)\n1582.58\n\n0.81\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nSlope coefficient for effect ofeducation on income."
+  },
+  {
+    "objectID": "lectures/lecture11.html#regression-tables-3",
+    "href": "lectures/lecture11.html#regression-tables-3",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\nEducation\n1582.58\n***\n623.35\n*\n\n\nParental wealth\n1816.16\n\n0.31\n**\n\n\n\n\n\nConstant\n0.73\n\n799.22\n\n\n\nModel \\(R^2\\)\n1582.58\n\n0.81\n\n\n\n\nN = 12\n * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001 \n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nSlope coefficient for effect ofeducation on income.\n\n\nStatistical significance of the slope coefficient\n\n\n\nTesting the null hypothesis (\\(H_0\\)) that \\(\\beta = 0\\) (that the slope is zero in the population)\nNumber of stars indicates p-value for coefficient (probability of observing the sample coefficient if \\(H_0\\) where true).\nReject \\(H_0\\) if p-value &lt; alpha\nGiven ***, our model rejects \\(H_0\\) with \\(99.9\\%\\) confidence (alpha of \\(0.001\\))"
+  },
+  {
+    "objectID": "lectures/lecture11.html#regression-tables-4",
+    "href": "lectures/lecture11.html#regression-tables-4",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\nEducation\n1582.58\n***\n623.35\n*\n\n\nParental wealth\n1816.16\n\n0.31\n**\n\n\n\n\n\nConstant\n0.73\n\n799.22\n\n\n\nModel \\(R^2\\)\n1582.58\n\n0.81\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001 \n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nSlope coefficient for effect ofeducation on income.\n\n\nY-intercept (a.k.a, constant)\n\n\n\\[\n\\widehat{Income} = 1816.16 + 1582.58(educ)\n\\]"
+  },
+  {
+    "objectID": "lectures/lecture11.html#regression-tables-5",
+    "href": "lectures/lecture11.html#regression-tables-5",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\nEducation\n1582.58\n***\n623.35\n*\n\n\nParental wealth\n1816.16\n\n0.31\n**\n\n\n\n\n\nConstant\n0.73\n\n799.22\n\n\n\nModel \\(R^2\\)\n1582.58\n\n0.81\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001 \n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nSlope coefficient for effect ofeducation on income.\n\n\nY-intercept (a.k.a, constant)\n\n\n\\[\n\\widehat{Income} = 1816.16 + 1582.58(educ)\n\\]\n\n\nCoefficient of determination"
+  },
+  {
+    "objectID": "lectures/lecture11.html#regression-tables-6",
+    "href": "lectures/lecture11.html#regression-tables-6",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\nEducation\n1582.58\n***\n623.35\n*\n\n\nParental wealth\n1816.16\n\n0.31\n**\n\n\n\n\n\nConstant\n0.73\n\n799.22\n\n\n\nModel \\(R^2\\)\n1582.58\n\n0.81\n\n\n\n\nN = 12\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nPartial slope coefficient foreffect of education on income.\n\n\nPartial slope coefficient foreffect of parental wealth on income.\n\n\nY-intercept (a.k.a, constant)\n\n\n\\[\n\\widehat{Income} = 799.22 + 623.35(educ) + 0.31(\\text{par_wealth})\n\\]\n\n\nCoefficient of determination"
+  },
+  {
+    "objectID": "lectures/lecture11.html#regression-tables-7",
+    "href": "lectures/lecture11.html#regression-tables-7",
+    "title": "",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting annual income ($s)\n\n\nIndividual-level data\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\nEducation\n1582.58\n***\n623.35\n*\n\n\nParental wealth\n1816.16\n\n0.31\n**\n\n\n\n\n\nConstant\n0.73\n\n799.22\n\n\n\nModel \\(R^2\\)\n1582.58\n\n0.81\n\n\n\n\nN = 12\n * p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001 \n\n\n\n\n\n\n\n\n\n\nSame results in table form\n\n\nStatistical significance of the slope coefficients\n\n\n\nTesting the null hypothesis (\\(H_0\\)) that \\(\\beta = 0\\) (that the slope is zero in the population)\nNumber of stars indicates p-value for coefficient (probability of observing the sample coefficient if \\(H_0\\) where true).\nReject \\(H_0\\) if p-value &lt; alpha\nGiven * for the partial slope coefficient of education, our multivariate model rejects \\(H_0\\) with \\(95\\%\\) confidence (alpha of \\(0.05\\))\nGiven ** for the partial slope coefficient of parental wealth, our multivariate model rejects \\(H_0\\) with \\(99\\%\\) confidence (alpha of \\(0.01\\))"
+  },
+  {
+    "objectID": "lectures/lecture11.html#practice",
+    "href": "lectures/lecture11.html#practice",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n0.327\n***\n-0.247\n***\n\n\n\n61.284\n\n2.095\n***\n\n\n\n\n\nConstant\n0.015\n***\n48.216\n***\n\n\nModel \\(R^2\\)\n0.327\n\n0.071\n\n\n\n\nN = 6,935\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 1, is the level of crime in the neighborhood associated with the concentration of minorities in the area? Make sure to touch on the direction, magnitude, and statistical significance of the association.\nHow much of the variation in crime rates across neighborhoods can be explained by the racial composition of the neighborhood alone?"
+  },
+  {
+    "objectID": "lectures/lecture11.html#practice-1",
+    "href": "lectures/lecture11.html#practice-1",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n0.327\n***\n-0.247\n***\n\n\n\n61.284\n\n2.095\n***\n\n\n\n\n\nConstant\n0.015\n***\n48.216\n***\n\n\nModel \\(R^2\\)\n0.327\n\n0.071\n\n\n\n\nN = 6,935\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 1, is the level of crime in the neighborhood associated with the concentration of minorities in the area? Make sure to touch on the direction, magnitude, and statistical significance of the association.\n\n\n\n\nDirection: positive slope coefficient  = positive association \nMagnitude: A difference of one percentage point in the concentration of minorities is associated with an increase of 0.327 crimes per 100,000 \nStatistical significance: Coefficient is statistically significant even if we use alpha of \\(0.001\\). Therefore, the association in the sample is large enough to convince us that the association likely exists in the population of neighborhoods."
+  },
+  {
+    "objectID": "lectures/lecture11.html#practice-2",
+    "href": "lectures/lecture11.html#practice-2",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n0.327\n***\n-0.247\n***\n\n\n\n61.284\n\n2.095\n***\n\n\n\n\n\nConstant\n0.015\n***\n48.216\n***\n\n\nModel \\(R^2\\)\n0.327\n\n0.071\n\n\n\n\nN = 6,935\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nHow much of the variation in crime rates across neighborhoods can be explained by the racial composition of the neighborhood alone?\n\n\n\nCoefficient of determination indicates that about \\(1.5\\%\\) of the variation in crime rates can be explained by the racial composition."
+  },
+  {
+    "objectID": "lectures/lecture11.html#practice-3",
+    "href": "lectures/lecture11.html#practice-3",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n0.327\n***\n-0.247\n***\n\n\n\n61.284\n\n2.095\n***\n\n\n\n\n\nConstant\n0.015\n***\n48.216\n***\n\n\nModel \\(R^2\\)\n0.327\n\n0.071\n\n\n\n\nN = 6,935\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 2, how do the local poverty rate and concentration of minorities in the neighborhood affect local crime rates? Make sure to touch on the direction, magnitude, and statistical significance of the effects.\nHow would you explain the dramatic change in the slope coefficient for % Minority from Model 1 to Model 2? What does this change in coefficients imply about the causal effect of %Minority on crime rates?\nWhat is the predicted level of crime in a neighborhood in which 30% of the residents are poor and 60% are members of minority groups? How does this compare to the predicted crime rate in a neighborhood in which 30% of residents are poor and none are members of minority groups?"
+  },
+  {
+    "objectID": "lectures/lecture11.html#practice-4",
+    "href": "lectures/lecture11.html#practice-4",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n0.327\n***\n-0.247\n***\n\n\n\n61.284\n\n2.095\n***\n\n\n\n\n\nConstant\n0.015\n***\n48.216\n***\n\n\nModel \\(R^2\\)\n0.327\n\n0.071\n\n\n\n\nN = 6,935\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 2, how do the local poverty rate and concentration of minorities in the neighborhood affect local crime rates? Make sure to touch on the direction, magnitude, and statistical significance of the effects.\n\n\n\nControlling for % poverty, a one-unit increase in the local % minority is associated with an decrease in crime of \\(0.247\\) crimes per 100,000, and this effect is strong enough to convince us that there is an association in the population."
+  },
+  {
+    "objectID": "lectures/lecture11.html#practice-5",
+    "href": "lectures/lecture11.html#practice-5",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n0.327\n***\n-0.247\n***\n\n\n\n61.284\n\n2.095\n***\n\n\n\n\n\nConstant\n0.015\n***\n48.216\n***\n\n\nModel \\(R^2\\)\n0.327\n\n0.071\n\n\n\n\nN = 6,935\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nAccording to the results in Model 2, how do the local poverty rate and concentration of minorities in the neighborhood affect local crime rates? Make sure to touch on the direction, magnitude, and statistical significance of the effects.\n\n\n\nControlling for % minority, a one-unit increase in the local poverty rate is associated with an increase in crime of \\(2.095\\) crimes per 100,000, and this effect is strong enough to convince us that there is an association in the population."
+  },
+  {
+    "objectID": "lectures/lecture11.html#practice-6",
+    "href": "lectures/lecture11.html#practice-6",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n0.327\n***\n-0.247\n***\n\n\n\n61.284\n\n2.095\n***\n\n\n\n\n\nConstant\n0.015\n***\n48.216\n***\n\n\nModel \\(R^2\\)\n0.327\n\n0.071\n\n\n\n\nN = 6,935\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nHow would you explain the dramatic change in the slope coefficient for % Minority from Model 1 to Model 2? What does this change in coefficients imply about the causal effect of % Minority on crime rates?\n\n\n\nIndicates that the positive association between % Minority and crime observed in Model 1 was not causal; it is actually due to the higher level of poverty in minority neighborhoods. Accounting for the poverty rate shows that higher minority concentrations are actually associatedwith lower crime."
+  },
+  {
+    "objectID": "lectures/lecture11.html#practice-7",
+    "href": "lectures/lecture11.html#practice-7",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n0.327\n***\n-0.247\n***\n\n\n\n61.284\n\n2.095\n***\n\n\n\n\n\nConstant\n0.015\n***\n48.216\n***\n\n\nModel \\(R^2\\)\n0.327\n\n0.071\n\n\n\n\nN = 6,935\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\nWhat is the predicted level of crime in a neighborhood in which 30% of the residents are poor and 60% are members of minority groups? How does this compare to the predicted crime rate in a neighborhood in which 30% of residents are poor and none are members of minority groups?\n\n\n\n\n\\(\\widehat{crime} = 48.216 - 0.247(\\text{% Minority}) + 2.095(\\text{% Poverty})\\)\n30% poverty, 60% minority: \\(\\widehat{crime} = 48.216 - 0.247(60) + 2.095(30) = 96.246\\)\n30% poverty, 0% minority: \\(\\widehat{crime} = 48.216 - 0.247(0) + 2.095(30) = 111.066\\)"
+  },
+  {
+    "objectID": "lectures/lecture11.html#practice-8",
+    "href": "lectures/lecture11.html#practice-8",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n0.327\n***\n-0.247\n***\n\n\n\n61.284\n\n2.095\n***\n\n\n\n\n\nConstant\n0.015\n***\n48.216\n***\n\n\nModel \\(R^2\\)\n0.327\n\n0.071\n\n\n\n\nN = 6,935\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nBONUS: What’s the interpretation for our Y-intercept?\n\n\nA neighborhood in which \\(\\text{% Minority} = 0\\) and \\(\\text{% Poverty} = 0\\) is predicted to have a crime rate of \\(48.216\\) crimes per 100,000 population."
+  },
+  {
+    "objectID": "lectures/lecture11.html#practice-9",
+    "href": "lectures/lecture11.html#practice-9",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n0.327\n***\n-0.247\n***\n\n\n\n61.284\n\n2.095\n***\n\n\n\n\n\nConstant\n0.015\n***\n48.216\n***\n\n\nModel \\(R^2\\)\n0.327\n\n0.071\n\n\n\n\nN = 6,935\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nBONUS BONUS: What’s the interpretation for our coefficient of multiple determination?\n\n\nCoefficient of determination indicates that about \\(7.1\\%\\) of the variation in crime rates can be explained by the racial composition and poverty combined."
   }
 ]

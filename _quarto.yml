@@ -40,12 +40,14 @@ website:
             href: lectures/lecture6.qmd
           - text: "Lecture 7:<br>Hypothesis testing for one sample; Hypothesis testing for two samples"
             href: lectures/lecture7.qmd
-          - text: "Lecture 8:<br>Two-way tables and chi-square; Scatterplots and correlation"
+          - text: "Lecture 8:<br>Two-way tables and chi-square"
             href: lectures/lecture8.qmd
-          - text: "Lecture 9:<br>Bivariate regression; Inference for regression"
+          - text: "Lecture 9:Scatterplots and correlation"
             href: lectures/lecture9.qmd
-          - text: "Lecture 10:<br>Multivariate regression"
+          - text: "Lecture 10:<br>Bivariate regression; Inference for regression"
             href: lectures/lecture10.qmd
+          - text: "Lecture 11:<br>Multivariate regression"
+            href: lectures/lecture11.qmd
       - text: "Homework"
         menu: 
           - text: "Homework 1"
