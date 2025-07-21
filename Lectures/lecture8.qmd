@@ -704,11 +704,11 @@ transportation_gender |>
 
 :::
 
-::: {.fragment fragment-index=2 style="border: 3px solid #a68100; width: 350px; height: 30px; margin: 10px; position: absolute; top: 425px; right: -5px"}
+::: {.fragment fragment-index=2 style="border: 3px solid #a68100; width: 350px; height: 30px; margin: 10px; position: absolute; top: 421px; right: -5px"}
 
 :::
 
-::: {.fragment fragment-index=2 style="border: 3px solid #a68100; width: 350px; height: 30px; margin: 10px; position: absolute; top: 500px; right: -5px"}
+::: {.fragment fragment-index=2 style="border: 3px solid #a68100; width: 350px; height: 30px; margin: 10px; position: absolute; top: 488px; right: -5px"}
 
 :::
 
@@ -764,7 +764,7 @@ crimes_educ |>
 
 
 
-::: {.fragment fragment-index=3 style="border: 3px solid #e93cac; width: 400px; height: 30px; margin: 10px; position: absolute; top: 290px; left: 200px"}
+::: {.fragment fragment-index=3 style="border: 3px solid #e93cac; width: 400px; height: 30px; margin: 10px; position: absolute; top: 286px; left: 200px"}
 
 :::
 
@@ -797,11 +797,11 @@ death_penalty_race |>
               table.width = pct(100), table.font.size = px(25L)) 
 ```
 
-::: {.fragment fragment-index=2 style="border: 3px solid #1b8883; width: 400px; height: 30px; margin: 10px; position: absolute; top: 347px; left: 310px"}
+::: {.fragment fragment-index=2 style="border: 3px solid #1b8883; width: 400px; height: 30px; margin: 10px; position: absolute; top: 345px; left: 310px"}
 
 :::
 
-::: {.fragment fragment-index=4 style="border: 3px solid #6e8e13; width: 150px; height: 30px; margin: 10px; position: absolute; top: 347px; right: 50px"}
+::: {.fragment fragment-index=4 style="border: 3px solid #6e8e13; width: 150px; height: 30px; margin: 10px; position: absolute; top: 345px; right: 50px"}
 
 :::
 
@@ -1007,7 +1007,7 @@ crimes_educ |>
 
 <br>
 
-::: {.fragment fragment-index=1 style="border: 3px solid #e93cac; width: 175px; height: 370px; margin: 10px; position: absolute; top: 202px; right: 435px"}
+::: {.fragment fragment-index=1 style="border: 3px solid #e93cac; width: 175px; height: 349px; margin: 10px; position: absolute; top: 202px; right: 432px"}
 :::
 
 ::: {style="font-size:1.25em; text-align: center"}
@@ -1206,11 +1206,11 @@ death_penalty_race |>
 Chi-square test is based on comparison of the counts/frequencies we actually observe in the sample to what the table would look like if there were no association between the variables
 :::
 
-::: {style="border: 3px solid #e93cac; width: 700px; height: 30px; margin: 10px; position: absolute; top: 347px; left: 310px"}
+::: {style="border: 3px solid #e93cac; width: 700px; height: 30px; margin: 10px; position: absolute; top: 345px; left: 310px"}
 
 :::
 
-::: {style="border: 3px solid #e93cac; width: 700px; height: 30px; margin: 10px; position: absolute; top: 427px; left: 310px"}
+::: {style="border: 3px solid #e93cac; width: 700px; height: 30px; margin: 10px; position: absolute; top: 420px; left: 310px"}
 
 :::
 
@@ -1247,11 +1247,11 @@ death_penalty_race |>
 Chi-square test is based on comparison of the counts/frequencies we actually observe in the sample to what the table would look like if there were no association between the variables
 :::
 
-::: {style="border: 3px solid #e93cac; width: 400px; height: 30px; margin: 10px; position: absolute; top: 315px; left: 310px"}
+::: {style="border: 3px solid #e93cac; width: 400px; height: 30px; margin: 10px; position: absolute; top: 313px; left: 310px"}
 
 :::
 
-::: {style="border: 3px solid #e93cac; width: 400px; height: 30px; margin: 10px; position: absolute; top: 395px; left: 310px"}
+::: {style="border: 3px solid #e93cac; width: 400px; height: 30px; margin: 10px; position: absolute; top: 387px; left: 310px"}
 
 :::
 
@@ -1379,7 +1379,7 @@ $$
 [$\Sigma$]{style="color: #1b8883"}  $= 37.31$
 :::
 
-::: {.fragment fragment-index=1 style="border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 150px; position: absolute; bottom: -12px; right: 195px; text-align: center"}
+::: {.fragment fragment-index=1 style="border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 150px; position: absolute; bottom: -2px; right: 200px; text-align: center"}
 
 :::
 
@@ -1527,7 +1527,7 @@ $$
 [$\Sigma$]{style="color: #1b8883"}  $= 37.31$
 :::
 
-::: {style="border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 150px; position: absolute; bottom: -12px; right: 195px; text-align: center"}
+::: {style="border: 3px solid #1b8883; border-radius: 15px; padding: 5px 5px 5px 5px; width: 75px; height: 150px; position: absolute; bottom: -2px; right: 200px; text-align: center"}
 
 :::
 
@@ -1755,15 +1755,15 @@ Difference in [conditional distributions]{.underline style="color: #e93cac"} ind
 
 ::::
 
-::: {style="border: 3px solid #e93cac; width: 350px; height: 35px; margin: 10px; position: absolute; top: 240px; right: 175px"}
+::: {style="border: 3px solid #e93cac; width: 350px; height: 35px; margin: 10px; position: absolute; top: 235px; right: 175px"}
 
 :::
 
-::: {style="border: 3px solid #e93cac; width: 350px; height: 35px; margin: 10px; position: absolute; top: 355px; right: 175px"}
+::: {style="border: 3px solid #e93cac; width: 350px; height: 35px; margin: 10px; position: absolute; top: 339px; right: 175px"}
 
 :::
 
-::: {style="border: 3px solid #e93cac; width: 350px; height: 35px; margin: 10px; position: absolute; top: 470px; right: 175px"}
+::: {style="border: 3px solid #e93cac; width: 350px; height: 35px; margin: 10px; position: absolute; top: 444px; right: 175px"}
 
 :::
 
@@ -1822,7 +1822,7 @@ Use risk ratios to quantify the association. For example, the *probability of li
 ::::
 
 
-::: {style="border: 3px solid #e93cac; width: 350px; height: 35px; margin: 10px; position: absolute; top: 470px; right: 175px"}
+::: {style="border: 3px solid #e93cac; width: 350px; height: 35px; margin: 10px; position: absolute; top: 444px; right: 175px"}
 
 :::
 
@@ -1948,7 +1948,7 @@ $f_e = \frac{\text{(row marginal)(column marginal)}}{n}$
 For example: $f_e$ for [Cell 5]{style="color: #e93cac"} = $\frac{(184)(100)}{375} =$ [$49.07$]{style="color: #e93cac"}
 :::
 
-::: {.fragment fragment-index=1 style="border: 3px solid #e93cac; width: 150px; height: 100px; margin: 10px; position: absolute; bottom: 169px; left: 510px"}
+::: {.fragment fragment-index=1 style="border: 3px solid #e93cac; width: 150px; height: 100px; margin: 10px; position: absolute; bottom: 186px; left: 510px"}
 
 :::
 
