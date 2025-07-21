@@ -1367,7 +1367,7 @@ Both of these areas contain strong results consistent with our research hypothes
 
 ::::
 
-## One-sided or two-sided? {visibility="hidden"}
+## One-sided or two-sided? 
 
 <br>
 
@@ -1725,7 +1725,7 @@ Since our [test statistic]{style="color: #e93cac;"} ([$1.94$]{style="color: #e93
 
 ::::
 
-## Step 1: Plan {visibility="hidden"}
+## Step 1: Plan 
 
 #### State the null and alternative [hypotheses]{style="color: #e93cac;"}
 
@@ -1761,7 +1761,7 @@ $$
 Set up a test assuming that the null $H_0$ is true and see whether the facts of our sample contradict that assumption
 :::
 
-## Step 1: Plan {visibility="hidden"}
+## Step 1: Plan 
 
 #### Choose your [alpha]{style="color: #e93cac;"} level and find the [critical value]{style="color: #e93cac;"}
 
@@ -1828,7 +1828,7 @@ Critical value of<br>
 [$z = \pm 1.96$]{style="color: #e93cac;"}
 :::
 
-## Step 2: Calculate {visibility="hidden"}
+## Step 2: Calculate 
 
 #### Calculate [test statistic]{style="color: #e93cac;"} (and [p-value]{style="color: #e93cac;"})
 
@@ -1889,7 +1889,7 @@ $\frac{13.3-12.75}{0.267} =$ [$2.060$]{style="color: #e93cac;"}
 Mean education for immigrants is [2.06]{style="color: #e93cac;"} standard errors above the national average (assumed under $H_0$)
 :::
 
-## Step 3: Make a decision {visibility="hidden"}
+## Step 3: Make a decision 
 
 #### [Reject $H_0$ and support $H_a$]{style="color: #6e8e13;"}
 
@@ -2421,7 +2421,7 @@ Since [obtained t]{style="color: #1b8883"} is more extreme than [critical value]
 
 ::::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Estimation: Confidence interval
 
@@ -2494,7 +2494,7 @@ $$
 We are [90% confident]{.underline} that the average number of visits to family for the [population]{.underline} of UW students is between [5.364 to 5.636]{.underline} hours
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Hypothesis test
 
@@ -2545,7 +2545,7 @@ $$
 
 ::::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Hypothesis test
 
@@ -3179,7 +3179,7 @@ $t = \frac{(14 - 12.5)-0}{1.134} = 1.764$
 
 *We want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90.  In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means.*
 
-## Practice {visibility="hidden"}
+## Practice  {visibility="hidden"}
 
 #### Two-sample hypothesis test
 

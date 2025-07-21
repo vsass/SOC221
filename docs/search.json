@@ -3735,7 +3735,7 @@
     "href": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-14",
     "title": "",
     "section": "Purpose 1: building the case for causality",
-    "text": "Purpose 1: building the case for causality\n\n\n\n\\(b_1\\) and \\(b_2\\) are called PARTIAL SLOPES\n\n\n\n\nPARTIAL SLOPES:  Slope coefficient from a multivariate regression model, representing the effects of one predictor on the dependent variable while controlling for all other predictors in the model.\n\n\n\n\n\nMultivariate regression is a convenient tool for assessing the association between two variables (\\(X \\text{ and } Y\\)) while controlling for others (\\(Z\\)))\n\n\n\n\\(\\color{#000000}{\\widehat{y}} = \\color{#000000}{a} + \\color{#e93cac}{b_1}\\color{#000000}{x} + \\color{#690c48}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)"
+    "text": "Purpose 1: building the case for causality\n\n\n\n\\(b_1\\) and \\(b_2\\) are called PARTIAL SLOPES\n\n\n\n\nPARTIAL SLOPE:  Slope coefficient from a multivariate regression model, representing the effects of one predictor on the dependent variable while controlling for all other predictors in the model.\n\n\n\n\n\nMultivariate regression is a convenient tool for assessing the association between two variables (\\(X \\text{ and } Y\\)) while controlling for others (\\(Z\\)))\n\n\n\n\\(\\color{#000000}{\\widehat{y}} = \\color{#000000}{a} + \\color{#e93cac}{b_1}\\color{#000000}{x} + \\color{#690c48}{b_2}\\color{#000000}{z}\\)\n\n\n\n\\(b_1 =\\) the effect of \\(X\\) on \\(Y\\) after controlling for the effects of \\(Z\\)\n\n\n\\(b_2 =\\) the effect of \\(Z\\) on \\(Y\\) after controlling for the effects of \\(X\\)"
   },
   {
     "objectID": "lectures/lecture11.html#purpose-1-building-the-case-for-causality-15",
@@ -4002,5 +4002,12 @@
     "title": "",
     "section": "Practice",
     "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults of OLS regression models predicting crimes per 100,000 population in U.S. neighborhoods\n\n\n\nModel 1\nstars1\nModel 2\nstars2\n\n\n\n\nPredictor\n\n\n\n0.327\n***\n-0.247\n***\n\n\n\n61.284\n\n2.095\n***\n\n\n\n\n\nConstant\n0.015\n***\n48.216\n***\n\n\nModel \\(R^2\\)\n0.327\n\n0.071\n\n\n\n\nN = 6,935\n* p &lt; 0.05   ** p &lt; 0.01   *** p &lt; 0.001\n\n\n\n\n\n\n\n\n\n\nBONUS BONUS: What’s the interpretation for our coefficient of multiple determination?\n\n\nCoefficient of determination indicates that about \\(7.1\\%\\) of the variation in crime rates can be explained by the racial composition and poverty combined."
+  },
+  {
+    "objectID": "lectures/lecture7.html#one-sided-or-two-sided",
+    "href": "lectures/lecture7.html#one-sided-or-two-sided",
+    "title": "",
+    "section": "One-sided or two-sided?",
+    "text": "One-sided or two-sided?\n\n\n\nAre Friday classes, on average, shorter than the standard 50 minutes?\n\nOne-sided\n\nAre bars with pool tables different from bars without pool tables different in terms of average cover charge?\n\nTwo-sided\n\nIs the average education of immigrants lower than the national average?\n\nOne-sided\n\nDo professors drink more coffee than do students?\n\nOne-sided"
   }
 ]

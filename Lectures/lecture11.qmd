@@ -1218,7 +1218,7 @@ $b_1$ and $b_2$ are called [**PARTIAL SLOPES**]{.underline}
 <br>
 
 ::: {.fragment fragment-index=2 style="font-size: 1.5em"}
-> [**PARTIAL SLOPES**]{style="color: #e93cac"}: <br>
+> [**PARTIAL SLOPE**]{style="color: #e93cac"}: <br>
 Slope coefficient from a multivariate regression model, representing the effects of one predictor on the dependent variable while controlling for all other predictors in the model. 
 :::
 
@@ -2296,7 +2296,7 @@ educ_income |>
   tab_source_note(html("N = 12 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
   tab_style(style = list(cell_text(color = "#e8e3d3")), 
             locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = c(model2, stars2))))  |> 
-  tab_style(style = list(cell_text(color = "#1b8883")), locations = list(cells_body(rows = "Education", column = model1)))  |> 
+  tab_style(style = list(cell_text(color = "#1b8883", weight = "bold")), locations = list(cells_body(rows = "Education", column = model1)))  |> 
   tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
   cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
   tab_options(table.background.color = "#e8e3d3") |> # change background color
@@ -2327,11 +2327,11 @@ educ_income |>
   cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
   cols_label(model1 = "Model 1", model2 = "Model 2") |> 
   tab_row_group(label = "Predictor", rows = c("Education", "Parental wealth")) |> 
-  tab_source_note(html("N = 12 <br> <span style='color: #e93cac'> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001 </span>")) |> 
+  tab_source_note(html("N = 12 <br> <span style='color: #e93cac; font-weight:bold;'> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001 </span>")) |> 
   tab_style(style = list(cell_text(color = "#e8e3d3")), 
             locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = c(model2, stars2))))  |> 
   tab_style(style = list(cell_text(color = "#1b8883")), locations = list(cells_body(rows = "Education", column = model1)))  |> 
-  tab_style(style = list(cell_text(color = "#e93cac")), locations = list(cells_body(rows = "Education", column = stars1)))  |> 
+  tab_style(style = list(cell_text(color = "#e93cac", weight = "bold")), locations = list(cells_body(rows = "Education", column = stars1)))  |> 
   tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
   cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
   tab_options(table.background.color = "#e8e3d3") |> # change background color
@@ -2377,7 +2377,7 @@ educ_income |>
   tab_style(style = list(cell_text(color = "#e8e3d3")), 
             locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = c(model2, stars2))))  |> 
   tab_style(style = list(cell_text(color = "#1b8883")), locations = list(cells_body(rows = "Education", column = model1)))  |>
-  tab_style(style = list(cell_text(color = "#754cbc")), locations = list(cells_body(rows = "Constant", column = model1)))  |> 
+  tab_style(style = list(cell_text(color = "#754cbc", weight = "bold")), locations = list(cells_body(rows = "Constant", column = model1)))  |> 
   tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
   cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
   tab_options(table.background.color = "#e8e3d3") |> # change background color
@@ -2423,7 +2423,7 @@ educ_income |>
             locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = c(model2, stars2))))  |> 
   tab_style(style = list(cell_text(color = "#1b8883")), locations = list(cells_body(rows = "Education", column = model1)))  |>
   tab_style(style = list(cell_text(color = "#754cbc")), locations = list(cells_body(rows = "Constant", column = model1)))  |> 
-    tab_style(style = list(cell_text(color = "#a68100")), locations = list(cells_body(rows = "Model $R^2$", column = model1)))  |> 
+    tab_style(style = list(cell_text(color = "#a68100", weight = "bold")), locations = list(cells_body(rows = "Model $R^2$", column = model1)))  |> 
   tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
   cols_width(stub() ~ pct(30), model1 ~ pct(25), stars1 ~ pct(10), model2 ~ pct(25),  stars2 ~ pct(10)) |> 
   tab_options(table.background.color = "#e8e3d3") |> # change background color
@@ -2474,10 +2474,10 @@ educ_income |>
   cols_label(model1 = "Model 1", model2 = "Model 2") |> 
   tab_row_group(label = "Predictor", rows = c("Education", "Parental wealth")) |> 
   tab_source_note(html("N = 12 <br> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001")) |> 
-  tab_style(style = list(cell_text(color = "#1b8883")), locations = list(cells_body(rows = "Education", column = model2)))  |>
-  tab_style(style = list(cell_text(color = "#6e8e13")), locations = list(cells_body(rows = "Parental wealth", column = model2)))  |>
-  tab_style(style = list(cell_text(color = "#754cbc")), locations = list(cells_body(rows = "Constant", column = model2)))  |> 
-  tab_style(style = list(cell_text(color = "#a68100")), locations = list(cells_body(rows = "Model $R^2$", column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#1b8883", weight = "bold")), locations = list(cells_body(rows = "Education", column = model2)))  |>
+  tab_style(style = list(cell_text(color = "#6e8e13", weight = "bold")), locations = list(cells_body(rows = "Parental wealth", column = model2)))  |>
+  tab_style(style = list(cell_text(color = "#754cbc", weight = "bold")), locations = list(cells_body(rows = "Constant", column = model2)))  |> 
+  tab_style(style = list(cell_text(color = "#a68100", weight = "bold")), locations = list(cells_body(rows = "Model $R^2$", column = model2)))  |> 
   #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
   tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
   tab_stub_indent(rows = c("Education", "Parental wealth"), indent = 5) |> 
@@ -2528,8 +2528,8 @@ educ_income |>
   cols_align(align = "left", columns = c(stars1, stars2)) |> # center columns
   cols_label(model1 = "Model 1", model2 = "Model 2") |> 
   tab_row_group(label = "Predictor", rows = c("Education", "Parental wealth")) |> 
-  tab_source_note(html("N = 12 <br> <span style='color: #e93cac'> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001 </span>")) |> 
-  tab_style(style = list(cell_text(color = "#e93cac")), locations = list(cells_body(rows = c("Education", "Parental wealth"), column = stars2)))  |> 
+  tab_source_note(html("N = 12 <br> <span style='color: #e93cac; font-weight:bold;'> * p < 0.05 &emsp; ** p < 0.01 &emsp; *** p < 0.001 </span>")) |> 
+  tab_style(style = list(cell_text(color = "#e93cac", weight = "bold")), locations = list(cells_body(rows = c("Education", "Parental wealth"), column = stars2)))  |> 
   
   #tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, model2, stars2)), cells_body(column = model2)))  |> 
   tab_style(style = list(cell_text(color = "#e8e3d3")), locations = list(cells_column_labels(c(stars1, stars2))))  |> 
@@ -2799,7 +2799,7 @@ minority_poverty |>
 Indicates that the positive association between % Minority and crime observed in Model 1 was not causal; it is actually due to the higher level of poverty in minority neighborhoods. Accounting for the poverty rate shows that higher minority concentrations are actually associated<br>with lower crime.
 :::
 
-## Practice 
+## Practice {visibility="hidden"}
 
 ::: {style="position: absolute; left: -75px; width: 640px"}
 ```{r}
