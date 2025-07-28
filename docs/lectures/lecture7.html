@@ -2131,8 +2131,73 @@ s_\bar{X} = \frac{s_x}{\sqrt{n}} = \frac{90}{\sqrt{30}} = 16.432
 <h4 id="two-sample-hypothesis-test-9">Two-sample hypothesis test</h4>
 <p><em>We want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90. In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means.</em></p>
 </section>
-
-</section>
+<section id="practice-6" class="slide level2">
+<h2>Practice</h2>
+<h4 id="two-sample-hypothesis-test-10">Two-sample hypothesis test</h4>
+<p><em>We want to know if high school students have <span style="color: #1b8883;">more</span> Facebook (FB) friends than do senior citizens. A random sample of <span style="color: #a68100;">30</span> high school students shows a mean number of FB friends of 245 with a standard deviation of 90. In contrast, a random sample of <span style="color: #a68100;">40</span> senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a <span style="color: #e93cac;">.05 alpha level</span> to test the statistical significance of the observed difference between means.</em></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="fragment" data-fragment-index="1">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 125px; padding: 5px 5px 5px 5px; text-align: center; font-size: 0.8em"><span class="math inline">\(H_0: \mu_{HS} - \mu_{SC} = 0\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 125px; padding: 5px 5px 5px 5px; text-align: center; font-size: 0.8em"><span class="math inline">\(H_a: \mu_{HS} - \mu_{SC} \gt 0\)</span></span></p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="2" style="text-align: center;">
+<p>Critical value of t?</p>
+</div>
+<p><br></p>
+</div><div class="column" style="width:60%;">
+<div class="fragment" data-fragment-index="1">
+<ul>
+<li><p>Population standard deviation is unknown</p></li>
+<li><p>Use the sample standard deviation to estimate the standard error</p></li>
+</ul>
+<p><span style="font-size: 0.90em"><span class="math display">\[
+s_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{90^2}{30} + \frac{65^2}{40}} = \sqrt{270 + 105.625} = 19.381
+\]</span></span></p>
+<ul>
+<li>Use the t-distribution<sup>1</sup> with <span class="math inline">\(df = n - 1\)</span></li>
+</ul>
+<p><span class="center"><span class="math inline">\(df = 30 - 1 = 29\)</span></span></p>
+</div>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn8"><p><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm">Table</a> from your textbook or an <a href="https://goodcalculators.com/student-t-value-calculator/">online calculator</a></p></li></ol></aside></section>
+<section id="practice-7" class="slide level2">
+<h2>Practice</h2>
+<h4 id="two-sample-hypothesis-test-11">Two-sample hypothesis test</h4>
+<p><em>We want to know if high school students have <span style="color: #1b8883;">more</span> Facebook (FB) friends than do senior citizens. A random sample of <span style="color: #a68100;">30</span> high school students shows a mean number of FB friends of 245 with a standard deviation of 90. In contrast, a random sample of <span style="color: #a68100;">40</span> senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a <span style="color: #e93cac;">.05 alpha level</span> to test the statistical significance of the observed difference between means.</em></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><span style="background: #c5b4e3; border: 4px solid #754cbc; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 0.8em"><span class="math inline">\(H_0: \mu_{HS} - \mu_{SC} = 0\)</span></span> <span style="background: #aadb1e; border: 4px solid #6e8e13; border-radius: 15px; width: 150px; padding: 5px 5px 5px 5px; text-align: center; font-size: 0.8em"><span class="math inline">\(H_a: \mu_{HS} - \mu_{SC} \gt 0\)</span></span></p>
+<p><br></p>
+<div style="text-align: center;">
+<p>Critical value of t = <span style="color: #e93cac">1.699</span></p>
+</div>
+<p><br></p>
+<div class="fragment" data-fragment-index="1" style="font-size: 1em">
+<p>Test statistic from the sample:<br></p>
+</div>
+<div class="fragment" data-fragment-index="1" style="font-size: 1.25em; text-align: center">
+<p><span class="math inline">\(t = \frac{\bar{X}-\mu_0}{s_\bar{X}} = \frac{(245-185)-0}{19.381} =\)</span><br><br><span style="color: #1b8883; border: solid #1b8883; padding: 5px 5px 5px 5px"><span class="math inline">\(3.096\)</span></span></p>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="fragment fade-out" data-fragment-index="2">
+<ul>
+<li><p>Population standard deviation is unknown</p></li>
+<li><p>Use the sample standard deviation to estimate the standard error</p></li>
+</ul>
+<p><span style="font-size: 0.90em"><span class="math display">\[
+s_{\bar{X_1} - \bar{X_2}} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{90^2}{30} + \frac{65^2}{40}} = \sqrt{270 + 105.625} = 19.381
+\]</span></span></p>
+<ul>
+<li>Use the t-distribution with <span class="math inline">\(df = n - 1\)</span></li>
+</ul>
+<p><span class="center"><span class="math inline">\(df = 30 - 1 = 29\)</span></span></p>
+</div>
+</div></div>
+<div class="fragment" data-fragment-index="2" style="border: 4px solid black; border-radius: 15px; width: 550px; padding: 5px 5px 5px 5px; position: absolute; top: 350px; right: 0px; text-align: center">
+<p>Since <span style="color: #1b8883">obtained t</span> is MORE extreme than the <span style="color: #e93cac">critical value</span>, we <strong>REJECT</strong> <span class="math inline">\(H_0\)</span>. Based on this evidence, we are reasonably confidence that the population of high schoolers have a <span style="color: #6e8e13">higher average number</span> of FB friends than do senior citizens. The observed difference between sample means is <strong>statistically significant</strong>.</p>
+</div>
+</section></section>
 <section>
 <section id="homework" class="title-slide slide level1 section-title center" data-background-color="#e8e3d3">
 <h1>Homework</h1>

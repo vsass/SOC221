@@ -3179,7 +3179,7 @@ $t = \frac{(14 - 12.5)-0}{1.134} = 1.764$
 
 *We want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90.  In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means.*
 
-## Practice  {visibility="hidden"}
+## Practice  
 
 #### Two-sample hypothesis test
 
@@ -3230,7 +3230,7 @@ $$]{style="font-size: 0.90em"}
 
 ::::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 #### Two-sample hypothesis test
 

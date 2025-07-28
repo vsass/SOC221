@@ -1201,7 +1201,7 @@
     "href": "lectures/lecture8.html#practice",
     "title": "",
     "section": "Practice",
-    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\n\nIn this sample, is there an association between diet and feelings towards Thanksgiving? How do you know?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25   \n  \n80\n\n\nIndifferrent\n36   \n  \n111\n\n\nLikes\n100\n  \n184\n\n\nTOTAL\n25   \n275\n375"
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\n\nIn this sample, is there an association between diet and feelings towards Thanksgiving? How do you know?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25   \n  \n80\n\n\nIndifferrent\n36   \n  \n111\n\n\nLikes\n\n  \n184\n\n\nTOTAL\n100\n275\n375"
   },
   {
     "objectID": "lectures/lecture8.html#chi-square-and-strength-of-an-association",
@@ -2847,5 +2847,124 @@
     "title": "Primer for Multivariate Regression",
     "section": "Bivariate regression model",
     "text": "Bivariate regression model\n\nThe first step in exploring any focal relationship is the test of whether the two variables are associated with one another in a theoretically predicted way. A simple bivariate regression model does the trick in many situations.\nIn SPSS, choose the Analyze menu, then Regression, and then Linear. Select r_income, “Rs annual income in dollars” as the dependent variable and educ, “Highest year of school completed” as the independent variable.\nPartial output:"
+  },
+  {
+    "objectID": "lectures/lecture7.html#practice-6",
+    "href": "lectures/lecture7.html#practice-6",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nTwo-sample hypothesis test\nWe want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90. In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\n\n\\(H_0: \\mu_{HS} - \\mu_{SC} = 0\\) \\(H_a: \\mu_{HS} - \\mu_{SC} \\gt 0\\)\n\n\n\nCritical value of t?\n\n\n\n\n\nPopulation standard deviation is unknown\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_{\\bar{X_1} - \\bar{X_2}} = \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}} = \\sqrt{\\frac{90^2}{30} + \\frac{65^2}{40}} = \\sqrt{270 + 105.625} = 19.381\n\\]\n\nUse the t-distribution1 with \\(df = n - 1\\)\n\n\\(df = 30 - 1 = 29\\)\n\n\nTable from your textbook or an online calculator"
+  },
+  {
+    "objectID": "lectures/lecture7.html#practice-7",
+    "href": "lectures/lecture7.html#practice-7",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\nTwo-sample hypothesis test\nWe want to know if high school students have more Facebook (FB) friends than do senior citizens. A random sample of 30 high school students shows a mean number of FB friends of 245 with a standard deviation of 90. In contrast, a random sample of 40 senior citizens (age 65+) has a mean of 185 FB friends with a standard deviation of 65. Use a .05 alpha level to test the statistical significance of the observed difference between means.\n\n\n\\(H_0: \\mu_{HS} - \\mu_{SC} = 0\\) \\(H_a: \\mu_{HS} - \\mu_{SC} \\gt 0\\)\n\n\nCritical value of t = 1.699\n\n\n\nTest statistic from the sample:\n\n\n\\(t = \\frac{\\bar{X}-\\mu_0}{s_\\bar{X}} = \\frac{(245-185)-0}{19.381} =\\)\\(3.096\\)\n\n\n\n\nPopulation standard deviation is unknown\nUse the sample standard deviation to estimate the standard error\n\n\\[\ns_{\\bar{X_1} - \\bar{X_2}} = \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}} = \\sqrt{\\frac{90^2}{30} + \\frac{65^2}{40}} = \\sqrt{270 + 105.625} = 19.381\n\\]\n\nUse the t-distribution with \\(df = n - 1\\)\n\n\\(df = 30 - 1 = 29\\)\n\n\n\nSince obtained t is MORE extreme than the critical value, we REJECT \\(H_0\\). Based on this evidence, we are reasonably confidence that the population of high schoolers have a higher average number of FB friends than do senior citizens. The observed difference between sample means is statistically significant."
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-1",
+    "href": "lectures/lecture8.html#practice-1",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIn this sample, is there an association between diet and feelings towards Thanksgiving? How do you know?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25   \n55   \n80\n\n\nIndifferrent\n36   \n75   \n111\n\n\nLikes\n39   \n145   \n184\n\n\nTOTAL\n100\n275\n375\n\n\n\n\n\n\n\n\nFill in the missing observed frequencies\n\n\n\n(note that once two cells are completed (and you have the marginals) you can complete the table)"
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-2",
+    "href": "lectures/lecture8.html#practice-2",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIn this sample, is there an association between diet and feelings towards Thanksgiving? How do you know?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25   (25.00%)\n55   (20.00%)\n80\n\n\nIndifferrent\n36   (36.00%)\n75   (27.27%)\n111\n\n\nLikes\n39   (39.00%)\n145   (52.73%)\n184\n\n\nTOTAL\n100\n275\n375\n\n\n\n\n\n\n\n\nAdd column percentages to better understand conditional distributions"
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-3",
+    "href": "lectures/lecture8.html#practice-3",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIn this sample, is there an association between diet and feelings towards Thanksgiving? How do you know?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25   (25.00%)\n55   (20.00%)\n80\n\n\nIndifferrent\n36   (36.00%)\n75   (27.27%)\n111\n\n\nLikes\n39   (39.00%)\n145   (52.73%)\n184\n\n\nTOTAL\n100\n275\n375\n\n\n\n\n\n\n\n\nDifference in conditional distributions indicate that there IS an association in the sample"
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-4",
+    "href": "lectures/lecture8.html#practice-4",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIn this sample, is there an association between diet and feelings towards Thanksgiving? How do you know?\n\n\\(\\frac{0.53}{0.39} = 1.\\)\\(36\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25   (25.00%)\n55   (20.00%)\n80\n\n\nIndifferrent\n36   (36.00%)\n75   (27.27%)\n111\n\n\nLikes\n39   (39.00%)\n145   (52.73%)\n184\n\n\nTOTAL\n100\n275\n375\n\n\n\n\n\n\n\n\nUse risk ratios to quantify the association. For example, the probability of liking Thanksgiving is 36% higher for carnivores than for vegetarians"
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-5",
+    "href": "lectures/lecture8.html#practice-5",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIs this association statistically significant?\n\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25   (25.00%)\n55   (20.00%)\n80\n\n\nIndifferrent\n36   (36.00%)\n75   (27.27%)\n111\n\n\nLikes\n39   (39.00%)\n145   (52.73%)\n184\n\n\nTOTAL\n100\n275\n375\n\n\n\n\n\n\n\n\n\n\\(H_a\\): IN THE POPULATION, there is an associationbetween diet and attitudes towards Thanksgiving.\n\n\n\\(H_0\\): There is no association between diet andattitudes towards Thanksgiving IN THE POPULATION."
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-6",
+    "href": "lectures/lecture8.html#practice-6",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIs this association statistically significant?\n\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25  \\(f_e = 21.33\\)  (25.00%)\n55  \\(f_e = 58.67\\)  (20.00%)\n80\n\n\nIndifferrent\n36  \\(f_e = 29.60\\)  (36.00%)\n75  \\(f_e = 81.40\\)  (27.27%)\n111\n\n\nLikes\n39  \\(f_e = 49.07\\)  (39.00%)\n145  \\(f_e = 134.93\\)  (52.73%)\n184\n\n\nTOTAL\n100\n275\n375\n\n\n\n\n\n\n\n\n\nFind EXPECTED FREQUENCIES:\n\n\n\\(f_e = \\frac{\\text{(row marginal)(column marginal)}}{n}\\)\n\n\nFor example: \\(f_e\\) for Cell 5 = \\(\\frac{(184)(100)}{375} =\\) \\(49.07\\)"
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-7",
+    "href": "lectures/lecture8.html#practice-7",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIs this association statistically significant?\n\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25  \\(f_e = 21.33\\)  (25.00%)\n55  \\(f_e = 58.67\\)  (20.00%)\n80\n\n\nIndifferrent\n36  \\(f_e = 29.60\\)  (36.00%)\n75  \\(f_e = 81.40\\)  (27.27%)\n111\n\n\nLikes\n39  \\(f_e = 49.07\\)  (39.00%)\n145  \\(f_e = 134.93\\)  (52.73%)\n184\n\n\nTOTAL\n100\n275\n375\n\n\n\n\n\n\n\n\n\nExpected frequencies reflect how the table would look if there were no association between the variables (i.e., if the null hypothesis were true)"
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-8",
+    "href": "lectures/lecture8.html#practice-8",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIs this association statistically significant?\n\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(f_0\\)\n\\(f_e\\)\n\\((f_0 - f_e)\\)\n\\((f_0 - f_e)^2\\)\n\\(\\frac{(f_0 - f_e)^2}{f_e}\\)\n\n\n\n\nCell 1\n25\n21.33\n3.67\n13.44\n0.63\n\n\nCell 2\n55\n58.67\n-3.67\n13.44\n0.23\n\n\nCell 3\n36\n29.60\n6.40\n40.96\n1.38\n\n\nCell 4\n75\n81.40\n-6.40\n40.96\n0.50\n\n\nCell 5\n39\n49.07\n-10.07\n101.34\n2.07\n\n\nCell 6\n145\n134.93\n10.07\n101.34\n0.75\n\n\n\n\n\n\n\n\n\n\n\n\n\nExpected frequencies reflect how the table would look if there were no association between the variables (i.e., if the null hypothesis were true)"
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-9",
+    "href": "lectures/lecture8.html#practice-9",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nIs this association statistically significant?\n\n\n\\[\n\\chi^2 = \\Sigma\\frac{(f_o - f_e)^2}{f_e}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(f_0\\)\n\\(f_e\\)\n\\((f_0 - f_e)\\)\n\\((f_0 - f_e)^2\\)\n\\(\\frac{(f_0 - f_e)^2}{f_e}\\)\n\n\n\n\nCell 1\n25\n21.33\n3.67\n13.44\n0.63\n\n\nCell 2\n55\n58.67\n-3.67\n13.44\n0.23\n\n\nCell 3\n36\n29.60\n6.40\n40.96\n1.38\n\n\nCell 4\n75\n81.40\n-6.40\n40.96\n0.50\n\n\nCell 5\n39\n49.07\n-10.07\n101.34\n2.07\n\n\nCell 6\n145\n134.93\n10.07\n101.34\n0.75\n\n\n\n\n\n\n\\(\\chi^2 =\\)\n5.56\n\n\n\n\n\nNeed to compare our obtained \\(\\chi^2\\) value of 5.56 with the critical value of \\(\\chi^2\\)\nBy default we use an alpha level of 0.05\n\\(df = (R-1)(C-1) = (3-1)(2-1) = 2\\)\n\n\n\n\nExpected frequencies reflect how the table would look if there were no association between the variables (i.e., if the null hypothesis were true)"
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-10",
+    "href": "lectures/lecture8.html#practice-10",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\n\\[\n\\text{obtained } \\chi^2 = 5.56\n\\]\n\n\n\\(\\text{critical value of }\\)\n\n\n\\(\\chi^2 = 5.99\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25  \\(f_e = 21.33\\)  (25.00%)\n55  \\(f_e = 58.67\\)  (20.00%)\n80\n\n\nIndifferrent\n36  \\(f_e = 29.60\\)  (36.00%)\n75  \\(f_e = 81.40\\)  (27.27%)\n111\n\n\nLikes\n39  \\(f_e = 49.07\\)  (39.00%)\n145  \\(f_e = 134.93\\)  (52.73%)\n184\n\n\nTOTAL\n100\n275\n375\n\n\n\n\n\n\n\n\nSince obtained value of chi-square is LESS EXTREME than the critical value we FAIL TO REJECT THE NULL HYPOTHESIS. The association observed is NOT statistically significant. Cannot be confident that the association exists in the population."
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-11",
+    "href": "lectures/lecture8.html#practice-11",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n25  \\(f_e = 21.33\\)  (25.00%)\n55  \\(f_e = 58.67\\)  (20.00%)\n80\n\n\nIndifferrent\n36  \\(f_e = 29.60\\)  (36.00%)\n75  \\(f_e = 81.40\\)  (27.27%)\n111\n\n\nLikes\n39  \\(f_e = 49.07\\)  (39.00%)\n145  \\(f_e = 134.93\\)  (52.73%)\n184\n\n\nTOTAL\n100\n275\n375\n\n\n\n\n\n\n\n\n\nWhat happens if the sample is doubled, with the same conditional distributions?"
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-12",
+    "href": "lectures/lecture8.html#practice-12",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nSince the conditional distributions are the same, and do not match, there still appears to be an association IN THE SAMPLE.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n50   (25.00%)\n110   (20.00%)\n160\n\n\nIndifferrent\n72   (36.00%)\n150   (27.27%)\n222\n\n\nLikes\n78   (39.00%)\n290   (52.73%)\n368\n\n\nTOTAL\n200\n550\n750\n\n\n\n\n\n\n\n\n\nWhat happens if the sample is doubled, with the same conditional distributions?"
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-13",
+    "href": "lectures/lecture8.html#practice-13",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\nSince the conditional distributions are the same, and do not match, there still appears to be an association IN THE SAMPLE.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeelings about Thanksgiving\n\n\n\nVegetarian\nCarnivore\nTOTAL\n\n\n\n\nDislikes\n50  \\(f_e = 42.67\\)  (25.00%)\n110  \\(f_e = 117.33\\)  (20.00%)\n160\n\n\nIndifferrent\n72  \\(f_e = 59.2\\)  (36.00%)\n150  \\(f_e = 162.8\\)  (27.27%)\n222\n\n\nLikes\n78  \\(f_e = -98.13\\)  (39.00%)\n290  \\(f_e = 269.87\\)  (52.73%)\n368\n\n\nTOTAL\n200\n550\n750\n\n\n\n\n\n\n\n\n\nWhat happens if the sample is doubled, with the same conditional distributions?"
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-14",
+    "href": "lectures/lecture8.html#practice-14",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(f_0\\)\n\\(f_e\\)\n\\((f_0 - f_e)\\)\n\\((f_0 - f_e)^2\\)\n\\(\\frac{(f_0 - f_e)^2}{f_e}\\)\n\n\n\n\nCell 1\n50\n42.67\n7.33\n53.73\n1.26\n\n\nCell 2\n110\n117.33\n-7.33\n53.73\n0.46\n\n\nCell 3\n72\n59.2\n12.8\n163.84\n2.77\n\n\nCell 4\n150\n162.8\n-12.8\n163.84\n1.01\n\n\nCell 5\n78\n98.13\n-20.13\n405.22\n4.13\n\n\nCell 6\n290\n269.87\n20.13\n405.22\n1.5\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat happens if the sample is doubled, with the same conditional distributions?"
+  },
+  {
+    "objectID": "lectures/lecture8.html#practice-15",
+    "href": "lectures/lecture8.html#practice-15",
+    "title": "",
+    "section": "Practice",
+    "text": "Practice\n\n\nYou collect data from a random sample of 375 individuals to look at whether feelings toward Thanksgiving differ by dietary preferences. The partial data are in the table to the right.\n\n\\[\n\\text{obtained } \\chi^2 = 11.13\n\\]\n\n\n\\(\\text{critical value of }\\)\n\n\n\\(\\chi^2 = 5.99\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(f_0\\)\n\\(f_e\\)\n\\((f_0 - f_e)\\)\n\\((f_0 - f_e)^2\\)\n\\(\\frac{(f_0 - f_e)^2}{f_e}\\)\n\n\n\n\nCell 1\n50\n42.67\n7.33\n53.73\n1.26\n\n\nCell 2\n110\n117.33\n-7.33\n53.73\n0.46\n\n\nCell 3\n72\n59.2\n12.8\n163.84\n2.77\n\n\nCell 4\n150\n162.8\n-12.8\n163.84\n1.01\n\n\nCell 5\n78\n98.13\n-20.13\n405.22\n4.13\n\n\nCell 6\n290\n269.87\n20.13\n405.22\n1.5\n\n\n\n\n\n\n\\(\\chi^2 =\\)\n11.13\n\n\n\nThe obtained value of the chi-square goes way up. Now, the obtained value of chi-square \\(\\gt\\) critical value of chi-square. The association observed in the sample IS statistically significant. We REJECT THE NULL HYPOTHESIS and find SUPPORT FOR THE ALTERNATIVE HYPOTHESIS that there is an association in the population.\n\n\nWhat happens if the sample is doubled, with the same conditional distributions?"
   }
 ]

@@ -14,7 +14,7 @@ execute:
   warning: false
 format: 
   revealjs:
-    cache: true
+    cache: false
     reference-location: margin
     theme: lecture_styles.scss
     controls: true
@@ -1570,7 +1570,7 @@ In this sample, is there an [**association**]{style="color: #e93cac"} between di
 
 thanksgiving <- data.frame(Vegetarian = c("25 <br>   <br>   <br>", 
                                           "36 <br>   <br>   <br>",
-                                          "",
+                                          " ",
                                           "100"), 
                                 Carnivore = c("   <br>   <br>   <br>", 
                                           "   <br>   <br>   <br>", 
@@ -1596,7 +1596,7 @@ thanksgiving |>
 
 ::::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 
 :::: {.columns}
@@ -1653,7 +1653,7 @@ Fill in the missing observed frequencies
 *(note that once two cells are completed (and you have the marginals) you can complete the table)*
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -1704,7 +1704,7 @@ Add column percentages to better understand conditional distributions
 
 ::::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -1767,7 +1767,7 @@ Difference in [conditional distributions]{.underline style="color: #e93cac"} ind
 
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -1826,7 +1826,7 @@ Use risk ratios to quantify the association. For example, the *probability of li
 
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -1885,7 +1885,7 @@ $H_a$: IN THE POPULATION, there is an association<br>between diet and attitudes 
 $H_0$: There is no association between diet and<br>attitudes towards Thanksgiving IN THE POPULATION.
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -1952,7 +1952,7 @@ For example: $f_e$ for [Cell 5]{style="color: #e93cac"} = $\frac{(184)(100)}{375
 
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -1996,7 +1996,7 @@ thanksgiving |>
 [Expected frequencies]{style="color: #e93cac"} reflect how the table would look if there were [no association]{style="color: #e93cac"} between the variables (i.e., if the [null hypothesis were true]{style="color: #e93cac"})
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -2038,7 +2038,7 @@ $$
 [Expected frequencies]{style="color: #e93cac"} reflect how the table would look if there were [no association]{style="color: #e93cac"} between the variables (i.e., if the [null hypothesis were true]{style="color: #e93cac"})
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -2086,7 +2086,7 @@ $$
 [Expected frequencies]{style="color: #e93cac"} reflect how the table would look if there were [no association]{style="color: #e93cac"} between the variables (i.e., if the [null hypothesis were true]{style="color: #e93cac"})
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -2134,7 +2134,7 @@ thanksgiving |>
 
 [Since [obtained value]{style="color: #1b8883"} of chi-square is LESS EXTREME than the [critical value]{style="color: #e93cac"} we [**FAIL TO REJECT THE NULL HYPOTHESIS**]{style="color: #754cbc"}.]{.fragment} [The association observed is **NOT** statistically significant.]{.fragment} [Cannot be confident that the association exists in the population.]{.fragment}
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -2169,7 +2169,7 @@ thanksgiving |>
 What happens if the sample is doubled, with the same conditional distributions?
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -2220,7 +2220,7 @@ thanksgiving |>
 What happens if the sample is doubled, with the same conditional distributions?
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -2270,7 +2270,7 @@ thanksgiving |>
 What happens if the sample is doubled, with the same conditional distributions?
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
@@ -2303,7 +2303,7 @@ What happens if the sample is doubled, with the same conditional distributions?
 What happens if the sample is doubled, with the same conditional distributions?
 :::
 
-## Practice {visibility="hidden"}
+## Practice 
 
 :::: {.columns}
 
