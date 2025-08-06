@@ -690,7 +690,7 @@ Does this mean that ice cream sales *cause* crime to increase?
 ::: {style="position: absolute; bottom: -35px; right: 25px;"}
 ```{r}
 #| echo: false
-#| fig-width: 4
+#| fig-width: 4 # change these
 #| fig-height: 4
 
 icecream_crime <- create_graph() |> 
@@ -2208,10 +2208,10 @@ $$
 ```{r}
 #| echo: false
 
-educ_income <- data.frame(model1 = c("1582.58", "", "1816.16", "0.73"), 
-                          stars1 = c("***", "", "", ""), 
+educ_income <- data.frame(model1 = c("1582.58", " ", "1816.16", "0.73"), 
+                          stars1 = c("***", " ", " ", " "), 
                           model2 = c("623.35", "0.31", "799.22", "0.81"),
-                          stars2 = c("*", "**", "", ""))
+                          stars2 = c("*", "**", " ", " "))
 rownames(educ_income) <- c("Education", "Parental wealth", "Constant", "Model $R^2$")
 
 
@@ -2563,10 +2563,10 @@ Statistical significance of the slope coefficients
 ```{r}
 #| echo: false
 
-minority_poverty <- data.frame(model1 = c("0.327", "", "61.284", "0.015"), 
-                          stars1 = c("***", "", "***", ""), 
+minority_poverty <- data.frame(model1 = c("0.327", " ", "61.284", "0.015"), 
+                          stars1 = c("***", " ", "***", " "), 
                           model2 = c("-0.247", "2.095", "48.216", "0.071"),
-                          stars2 = c("***", "***", "***", ""))
+                          stars2 = c("***", "***", "***", " "))
 rownames(minority_poverty) <- c("% Minority", "% Poverty", "Constant", "Model $R^2$")
 
 minority_poverty |> 
