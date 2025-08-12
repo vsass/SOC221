@@ -12,7 +12,8 @@ citation-location: margin
 (@) For problems requiring additional written work, use the allotted work space and/or margins of the page. 
 (@) Once you're done with a problem, reflect on how you well-equipped you felt answering that particular problem using the confidence level assessment.\
 
-:::{.column-page-inset-shaded} 
+::: {.content-hidden when-format="html"}
+:::{.column-screen-inset-shaded} 
 ::: {#fig-confidence layout-ncol=3}
 
 ![I knew the answer to that question](../images/confidence_level_assessment1.png){width="75%"}
@@ -24,10 +25,32 @@ citation-location: margin
 Confidence Level Assessment
 :::
 :::
+:::
+
+::: {.panel-tabset}
+
+### Confidence-level assessment
+
+![](../images/confidence_level_assessment.png){fig-align="center" width="25%"}
+
+### [Confident]{style="color: #e93cac"}
+
+![I knew the answer to that question](../images/confidence_level_assessment1.png){fig-align="center" width="25%"}
+
+### [Unsure]{style="color: #e93cac"}
+
+![I’m not sure whether I got this question correct](../images/confidence_level_assessment2.png){fig-align="center" width="25%"}
+
+### [Don't Know]{style="color: #e93cac"}
+
+![I don’t know the answer for this question](../images/confidence_level_assessment3.png){fig-align="center" width="25%"}
+
+:::
 
 
 (@) Turn in your assignment in class on the due date. 
 <br> 
+
 
 
 ### Questions

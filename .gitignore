@@ -7,3 +7,4 @@
 *.csv
 quizzes/
 homework/*key.qmd
+save_to_pdf_code.qmd
